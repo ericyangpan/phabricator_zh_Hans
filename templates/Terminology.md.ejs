@@ -1,0 +1,6 @@
+## 术语表
+
+词 | 翻译
+-- | -----------
+<% for (let key in terminology) { %><%- this.escapeMarkdown(key) %> | <%- this.escapeMarkdown(terminology[key]) %>
+<% } %>

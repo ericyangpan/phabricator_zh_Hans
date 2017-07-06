@@ -5,10 +5,12 @@
 * [启动翻译工具](#启动翻译工具)
 * [编译翻译文件和 README 文件](#编译翻译文件和-readme-文件)
 * [本地化 Phabricator](#本地化-phabricator)
-* [翻译规则列表](#翻译规则列表)
-* [术语表](#术语表)
 * [提取 Phabricator 中的国际化字典](#提取-phabricator-中的国际化字典)
 * [附带的工具](#附带的工具)
+* [附录](#附录)
+  * [翻译规则列表](https://github.com/arielyang/phabricator_zh_Hans/blob/master/rules.md)
+  * [术语表](https://github.com/arielyang/phabricator_zh_Hans/blob/master/terminology.md)
+  * [Phabricator 官方国际化文档](https://secure.phabricator.com/book/phabcontrib/article/internationalization/)
 
 当前词条总数量：16353 条。
 
@@ -131,87 +133,6 @@ $ bin/compile
 
 然后调整个人设置，进入 `Personal Settings` 的 `Account`，在 `Translation` 选项中选择 `Chinese (Simplified)`，保存后界面即切换为简体中文。
 
-## 翻译规则列表
-
-总共有三种规则：
-
-1. 参数规则：检查翻译前后 `%s` 和 `%d` 参数的数量是否匹配；
-2. 术语表规则：检查翻译内容是否符合术语表；
-3. 正则表达式规则：用正则表达式检查翻译内容是否符合规则。
-
-**正则表达式规则列表**
-
-词 | 翻译
----- | -----------
-! | !
-, | ,\\s
-: | :\\s\|:\$\|:\\d\|:"\|:
-; | ;\\s
-\. | \.
-< | <
-\> | \>
-\\\*\\\*\[\\S\\s\]\+\?\\\*\\\* | \\\*\\\*\[\\S\\s\]\+\?\\\*\\\*
-\\\. | \\\.
-\n | \n
-\\\.\{3\} | \\\.\{3\}
-\\\? | \\\?
-no \\w\+ found | \^没有找到
-« | «
-» | »
-"\\w\+" | "\\w\+\|\[\u4e00\-\u9fa5\]\+"
-'\\w\+' | '\\w\+\|\[\u4e00\-\u9fa5\]\+'
-
-## 术语表
-
-词 | 翻译
----- | -----------
-Differential | Differential
-MFA | 多因素认证
-Phabricator | Phabricator
-Phame | Phame
-Phortune | Phortune
-Phriction | Phriction
-Phurl | Phurl
-Remarkup | Remarkup
-account | 帐户
-action | 操作
-allow | 允许
-approve | 批准
-author | 作者
-authored | 创建
-award | 授予
-badge | 徽章
-collation | 字符序
-config | 配置
-daemon | 守护进程
-default | 默认
-delete | 删除
-email | 邮件
-enable | 启用
-guide | 指南
-hashtag | 唯一标签
-include | 包含
-invitee | 被邀请人
-is required | 是必填的
-monogram | 花押字
-multi-factor | 多因素
-notification | 通知
-open status | 开放状态
-permission | 权限
-post | 帖子|发送|发布
-preference | 偏好
-priority | 优先级
-profile | 档案
-remove | 移除
-revert | 恢复
-save | 保存
-serve | 服务于
-session | 会话
-setting | 设置
-setup | 安装设置
-token | 令牌|符记|符号|语素
-update | 更新
-
 ## 提取 Phabricator 中的国际化字典
 
 首先拉取最新的 Phabricator 源码。在 **Phabricator** 项目路径，执行如下命令：
@@ -246,4 +167,6 @@ $ bin/sortjson file selector
 
 ## 附录
 
-[Phabricator 官方国际化文档](https://secure.phabricator.com/book/phabcontrib/article/internationalization/)
+* [翻译规则列表](https://github.com/arielyang/phabricator_zh_Hans/blob/master/rules.md)
+* [术语表](https://github.com/arielyang/phabricator_zh_Hans/blob/master/terminology.md)
+* [Phabricator 官方国际化文档](https://secure.phabricator.com/book/phabcontrib/article/internationalization/)

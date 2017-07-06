@@ -1,29 +1,16 @@
-<%
-function escapeMarkdown(text) {
-  return (text + '').replace(/[>_]/g, "\\$&")
-}
-function escapeRegExp(text) {
-  return (text + '').replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&")
-}
-function escapeUnicode(text) {
-  return text.replace(/\u4e00|\u9fa5/g, function(escape) {
-    return '\\u' + escape.charCodeAt().toString(16)
-  })
-}
-function escape(text) {
-  return escapeMarkdown(escapeUnicode(escapeRegExp(text))).replace(/\n/g, '\\n')
-}
-%># Phabricator 简体中文翻译和工具
+# Phabricator 简体中文翻译和工具
 
 目录
 
 * [启动翻译工具](#启动翻译工具)
 * [编译翻译文件和 README 文件](#编译翻译文件和-readme-文件)
 * [本地化 Phabricator](#本地化-phabricator)
-* [翻译规则列表](#翻译规则列表)
-* [术语表](#术语表)
 * [提取 Phabricator 中的国际化字典](#提取-phabricator-中的国际化字典)
 * [附带的工具](#附带的工具)
+* [附录](#附录)
+  * [翻译规则列表](https://github.com/arielyang/phabricator_zh_Hans/blob/master/rules.md)
+  * [术语表](https://github.com/arielyang/phabricator_zh_Hans/blob/master/terminology.md)
+  * [Phabricator 官方国际化文档](https://secure.phabricator.com/book/phabcontrib/article/internationalization/)
 
 当前词条总数量：<%- totalItems %> 条。
 
@@ -33,7 +20,7 @@ function escape(text) {
 
 分类 | 短词条翻译百分比 | 短词条翻译进度条 | 整体翻译百分比 | 整体翻译进度条
 --- | ------------ | ----------- | ------------ | -----------
-<% for (let category in categories) { %><%- escapeMarkdown(category) + (categories[category].isPrototype ? ' `原型`' : '') %> | <%- categories[category].percentOfShortItems %> | <%- categories[category].percentOfShortItemsBar %> | <%- categories[category].percent %> | <%- categories[category].percentBar %>
+<% for (let category in categories) { %><%- this.escapeMarkdown(category) + (categories[category].isPrototype ? ' `原型`' : '') %> | <%- categories[category].percentOfShortItems %> | <%- categories[category].percentOfShortItemsBar %> | <%- categories[category].percent %> | <%- categories[category].percentBar %>
 <% } %>
 ## 启动翻译工具
 
@@ -65,26 +52,6 @@ $ bin/compile
 
 然后调整个人设置，进入 `Personal Settings` 的 `Account`，在 `Translation` 选项中选择 `Chinese (Simplified)`，保存后界面即切换为简体中文。
 
-## 翻译规则列表
-
-总共有三种规则：
-
-1. 参数规则：检查翻译前后 `%s` 和 `%d` 参数的数量是否匹配；
-2. 术语表规则：检查翻译内容是否符合术语表；
-3. 正则表达式规则：用正则表达式检查翻译内容是否符合规则。
-
-**正则表达式规则列表**
-
-词 | 翻译
----- | -----------
-<% for (let key in rules) { %><%- escape(key) %> | <%- escape(rules[key]) %>
-<% } %>
-## 术语表
-
-词 | 翻译
----- | -----------
-<% for (let key in terminology) { %><%- key %> | <%- terminology[key] %>
-<% } %>
 ## 提取 Phabricator 中的国际化字典
 
 首先拉取最新的 Phabricator 源码。在 **Phabricator** 项目路径，执行如下命令：
@@ -119,4 +86,6 @@ $ bin/sortjson file selector
 
 ## 附录
 
-[Phabricator 官方国际化文档](https://secure.phabricator.com/book/phabcontrib/article/internationalization/)
+* [翻译规则列表](https://github.com/arielyang/phabricator_zh_Hans/blob/master/rules.md)
+* [术语表](https://github.com/arielyang/phabricator_zh_Hans/blob/master/terminology.md)
+* [Phabricator 官方国际化文档](https://secure.phabricator.com/book/phabcontrib/article/internationalization/)

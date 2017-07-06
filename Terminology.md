@@ -1,0 +1,50 @@
+## 术语表
+
+词 | 翻译
+-- | -----------
+Differential | Differential
+MFA | 多因素认证
+Phabricator | Phabricator
+Phame | Phame
+Phortune | Phortune
+Phriction | Phriction
+Phurl | Phurl
+Remarkup | Remarkup
+account | 帐户
+action | 操作
+allow | 允许
+approve | 批准
+author | 作者
+authored | 创建
+award | 授予
+badge | 徽章
+collation | 字符序
+config | 配置
+daemon | 守护进程
+default | 默认
+delete | 删除
+email | 邮件
+enable | 启用
+guide | 指南
+hashtag | 唯一标签
+include | 包含
+invitee | 被邀请人
+is required | 是必填的
+monogram | 花押字
+multi-factor | 多因素
+notification | 通知
+open status | 开放状态
+permission | 权限
+post | 帖子|发送|发布
+preference | 偏好
+priority | 优先级
+profile | 档案
+remove | 移除
+revert | 恢复
+save | 保存
+serve | 服务于
+session | 会话
+setting | 设置
+setup | 安装设置
+token | 令牌|符记|符号|语素
+update | 更新

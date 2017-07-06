@@ -1,8 +1,4 @@
-<%
-function phpString(str) {
-  return str.replace(/'/g, "\\'")
-}
-%><?php
+<?php
 //-----------------------------------------------------
 //
 // Translation by Ariel Yang <arielyang@gmail.com>
@@ -20,7 +16,7 @@ final class PhabricatorSimplifiedChineseTranslation
 
   protected function getTranslations() {
     return array(<% for (let key in translations) { if (key !== translations[key]) {%>
-      '<%- phpString(key) %>' => '<%- phpString(translations[key]) %>',<% } } %>
+      '<%- this.phpString(key) %>' => '<%- this.phpString(translations[key]) %>',<% } } %>
     );
   }
 }

@@ -8,18 +8,26 @@ const phplint = require('phplint').lint
 const rules = require('../lib/rules')
 const sortKeys = require('../lib/sortkeys')
 
-// Initialize file paths.
-const phpTemplatePath = 'data/php_template.ejs'
-const readmeTemplatePath = 'data/readme_template.ejs'
+// Initialize data file paths.
+const i18nFilesPath = 'data/i18n_files.json'
+const prototypeApplicationsPath = 'data/prototype_applications.json'
+const rulesPath = 'data/rules.json'
+const terminologyPath = 'data/terminology.json'
 const translationsPath = 'data/translations.json'
-const phpFilePath = 'dist/PhabricatorSimplifiedChineseTranslation.php'
-const readmeFilePath = 'README.md'
 
-// Load translations data.
-let translations = jsonfile.readFileSync(translationsPath)
+// Initialize output file paths.
+const readmeFilePath = 'README.md'
+const rulesFilePath = 'Rules.md'
+const terminologyFilePath = 'Terminology.md'
+const translationsFilePath = 'dist/PhabricatorSimplifiedChineseTranslation.php'
+
+// Load data.
+const rulesData = jsonfile.readFileSync(rulesPath)
+const terminologyData = jsonfile.readFileSync(terminologyPath)
+let translationsData = jsonfile.readFileSync(translationsPath)
 
 // Check rules.
-const hasError = rules.check(translations, error => {
+const hasError = rules.check(translationsData, error => {
   console.log('Error: ' + error.type)
   console.log('Rule: ' + error.rule)
   console.log('Translation: ' + error.translation)
@@ -36,26 +44,23 @@ if (hasError) {
   console.log('Rules passed.')
 }
 
-// Set translations JSON file indent.
+// Set output JSON file indent.
 jsonfile.spaces = 2
 
 // Sort keys of translations object.
-translations = sortKeys(translations)
+translationsData = sortKeys(translationsData)
 
-writeFile(translationsPath, translations, 'translation')
+// Write soted translations data to file.
+writeFile(translationsPath, translationsData)
 
-// Load readme template file.
-const readmeFileContent = renderFile(readmeTemplatePath, computeTranslationSummary(translations))
-
-writeFile(readmeFilePath, readmeFileContent, 'readme')
-
-// Render PHP template with data.
-const phpFileContent = renderFile(phpTemplatePath, { translations: sortKeys(translations) })
-
-writeFile(phpFilePath, phpFileContent, 'translation PHP')
+// Write all template files.
+writeTemplateFile(readmeFilePath, computeTranslationSummary(translationsData, rulesData, terminologyData))
+writeTemplateFile(rulesFilePath, { rules: rulesData })
+writeTemplateFile(terminologyFilePath, { terminology: terminologyData })
+writeTemplateFile(translationsFilePath, { translations: translationsData })
 
 // Run PHP Lint.
-phplint([phpFilePath], (err) => {
+phplint([translationsFilePath], (err) => {
   if (err) {
     console.log(err.toString())
   } else {
@@ -64,11 +69,29 @@ phplint([phpFilePath], (err) => {
   }
 })
 
-function computeTranslationSummary(translations) {
-  const i18nFilesPath = 'data/i18n_files.json'
-  const prototypeApplicationsPath = 'data/prototype_applications.json'
-  const rulesPath = 'data/rules.json'
-  const terminologyPath = 'data/terminology.json'
+function computeTranslationSummary(translations, rules, terminology) {
+  function buildCategory(
+    previousCategory,
+    categoryTranslationCount,
+    categoryTotalCount,
+    categoryTranslationCountOfShortItems,
+    categoryTotalCountOfShortItems
+  ) {
+    return {
+      percent: computePercent(categoryTranslationCount, categoryTotalCount),
+      percentBar: computeBar(categoryTranslationCount, categoryTotalCount),
+      percentOfShortItems: computePercent(categoryTranslationCountOfShortItems, categoryTotalCountOfShortItems),
+      percentOfShortItemsBar: computeBar(categoryTranslationCountOfShortItems, categoryTotalCountOfShortItems),
+      isPrototype: prototypeApplicationsData.indexOf(previousCategory.replace('applications/', '')) !== -1,
+      strings: {}
+    }
+  }
+
+  const i18nFilesData = jsonfile.readFileSync(i18nFilesPath)
+  const prototypeApplicationsData = jsonfile.readFileSync(prototypeApplicationsPath)
+
+  const lengthOfShortItems = 66
+  const categories = {}
 
   let totalCount = 0
   let totalCountOfShortItems = 0
@@ -80,12 +103,7 @@ function computeTranslationSummary(translations) {
   let categoryTranslationCountOfShortItems = 0
   let previousCategory = null
 
-  const lengthOfShortItems = 66
-  const categories = {}
-  const i18nFiles = jsonfile.readFileSync(i18nFilesPath)
-  const prototypeApplications = jsonfile.readFileSync(prototypeApplicationsPath)
-
-  for (let file in i18nFiles.files) {
+  for (let file in i18nFilesData.files) {
     const pathFragments = file.split('/')
 
     // Group category by applications.
@@ -98,14 +116,13 @@ function computeTranslationSummary(translations) {
       categories[category] = null
       
       if (previousCategory !== null) {
-        categories[previousCategory] = {
-          percent: computePercent(categoryTranslationCount, categoryTotalCount),
-          percentBar: computeBar(categoryTranslationCount, categoryTotalCount),
-          percentOfShortItems: computePercent(categoryTranslationCountOfShortItems, categoryTotalCountOfShortItems),
-          percentOfShortItemsBar: computeBar(categoryTranslationCountOfShortItems, categoryTotalCountOfShortItems),
-          isPrototype: prototypeApplications.indexOf(previousCategory.replace('applications/', '')) !== -1,
-          strings: {}
-        }
+        categories[previousCategory] = buildCategory(
+          previousCategory,
+          categoryTranslationCount,
+          categoryTotalCount,
+          categoryTranslationCountOfShortItems,
+          categoryTotalCountOfShortItems
+        )
       }
 
       categoryTotalCount = 0
@@ -117,8 +134,8 @@ function computeTranslationSummary(translations) {
     previousCategory = category
 
     // Get strings by file id.
-    const fileId = i18nFiles.files[file]
-    const strings = i18nFiles.strings[fileId] || []
+    const fileId = i18nFilesData.files[file]
+    const strings = i18nFilesData.strings[fileId] || []
 
     // Set strings to cateogries.
     strings.forEach(item => {
@@ -154,41 +171,57 @@ function computeTranslationSummary(translations) {
     })
   }
 
-  categories[previousCategory] = {
-    percent: computePercent(categoryTranslationCount, categoryTotalCount),
-    percentBar: computeBar(categoryTranslationCount, categoryTotalCount),
-    percentOfShortItems: computePercent(categoryTranslationCountOfShortItems, categoryTotalCountOfShortItems),
-    percentOfShortItemsBar: computeBar(categoryTranslationCountOfShortItems, categoryTotalCountOfShortItems),
-    isPrototype: prototypeApplications.indexOf(previousCategory.replace('applications/', '')) !== -1,
-    strings: {}
-  }
+  categories[previousCategory] = buildCategory(
+    previousCategory,
+    categoryTranslationCount,
+    categoryTotalCount,
+    categoryTranslationCountOfShortItems,
+    categoryTotalCountOfShortItems
+  )
 
   const data = {
     totalItems: totalCount,
     totalPercent: computePercent(totalTranslationCount, totalCount),
     totalPercentOfShortItems: computePercent(totalTranslationCountOfShortItems, totalCountOfShortItems),
-    terminology: jsonfile.readFileSync(terminologyPath),
-    rules: jsonfile.readFileSync(rulesPath),
-    prototypeApplications: prototypeApplications,
     categories: categories
   }
-
-  // console.log(data.categories)
 
   return data
 }
 
-function renderFile(templatePath, data) {
+function writeTemplateFile(filePath, data) {
+  const ejsContext = {
+    escapeMarkdown(text) {
+      return (text + '').replace(/[>_]/g, "\\$&")
+    },
+    escapeRegExp(text) {
+      return (text + '').replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&")
+    },
+    escapeUnicode(text) {
+      return (text + '').replace(/\u4e00|\u9fa5/g, replacement => {
+        return '\\u' + replacement.charCodeAt(0).toString(16)
+      })
+    },
+    escapeRule(text) {
+      return this.escapeMarkdown(this.escapeUnicode(this.escapeRegExp(text + ''))).replace(/\n/g, '\\n')
+    },
+    phpString(text) {
+      return (text + '').replace(/'/g, "\\'")
+    }
+  }
+
+  const templatePath = `templates/${filePath}.ejs`
+
   // Load template file.
   const template = fs.readFileSync(templatePath).toString()
 
   // Render template with data.
-  const fileContent = ejs.render(template, data)
+  const fileContent = ejs.render(template, data, { context: ejsContext })
 
-  return fileContent
+  writeFile(filePath, fileContent)
 }
 
-function writeFile(path, content, fileDescription) {
+function writeFile(path, content) {
   if (typeof content === 'string') {
     fs.writeFileSync(path, content)
   } else {
@@ -196,7 +229,7 @@ function writeFile(path, content, fileDescription) {
   }
 
   console.log('-'.repeat(30))
-  console.log(`Writing ${fileDescription} file to "${path}".`)
+  console.log(`Writing file to "${path}".`)
 }
 
 function computePercent(dividend, divisor) {
