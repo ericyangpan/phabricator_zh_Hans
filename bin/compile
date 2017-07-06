@@ -164,6 +164,7 @@ function computeTranslationSummary(translations) {
   }
 
   const data = {
+    totalItems: totalCount,
     totalPercent: computePercent(totalTranslationCount, totalCount),
     totalPercentOfShortItems: computePercent(totalTranslationCountOfShortItems, totalCountOfShortItems),
     terminology: jsonfile.readFileSync(terminologyPath),
@@ -202,7 +203,7 @@ function computePercent(dividend, divisor) {
   const percent = dividend / divisor * 100
 
   if (percent === 100) {
-    return '100%'
+    return '**100%**'
   } else if (Number.isNaN(percent)) {
     return '---'
   }
@@ -213,7 +214,9 @@ function computePercent(dividend, divisor) {
 function computeBar(dividend, divisor) {
   const percent = dividend / divisor * 100
 
-  if (Number.isNaN(percent)) {
+  if (percent === 100) {
+    return '✓'.repeat(10)
+  } else if (Number.isNaN(percent)) {
     return ''
   }
 
