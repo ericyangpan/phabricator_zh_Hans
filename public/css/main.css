@@ -1,0 +1,220 @@
+* {
+  font: 14px Tahoma;
+}
+
+a {
+  color: #2f6cb6;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2f6cb6;
+  text-decoration: underline;
+}
+
+body {
+  padding-top: 3em;
+}
+
+table,
+th,
+td {
+  border: solid 1px #e1e1e1;
+  border-collapse: collapse;
+  padding: 0.2em;
+}
+
+table {
+  width: 100%
+}
+
+th {
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+td span {
+  color: blue;
+}
+
+tr.highlight {
+  background-color: #f5f5f5;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.navbar-header {
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 1em;
+}
+
+.nav-right {
+  float: right;
+  margin-right: 1em;
+}
+
+.navbar-nav {
+  display: inline-block;
+  padding: 0;
+}
+
+.navbar-nav li {
+  display: inline-block;
+  margin: 0 0.7em;
+}
+
+.navbar-form {
+  display: inline-block;
+}
+
+.main {
+  margin: 0.5em;
+}
+
+.info {
+  margin: 0.8em 0.3em;
+}
+
+.info span {
+  color: #2f6cb6;
+  margin: 0.5em;
+}
+
+.dialog {
+  position: fixed;
+  top: 5em;
+  bottom: 2em;
+  left: 30%;
+  right: 30%;
+  z-index: 200;
+  display: block;
+  padding: 1em;
+  border: 1px solid #e1e1e1;
+  background-color: #fff;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.dialog .scroll {
+  position: fixed;
+  top: 8em;
+  bottom: 3em;
+  left: 30%;
+  right: 30%;
+  z-index: 300;
+  padding: 0 1.2em;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.dialog-title {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.dialog-title span {
+  font-weight: bold;
+}
+
+.dialog-title a {
+  float: right;
+}
+
+.dialog td {
+  text-align: center;
+}
+
+.dialog td input {
+  text-align: center;
+  width: 96%;
+}
+
+.sidebar {
+  position: fixed;
+  top: 3em;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: block;
+  padding: 1em;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-right: 1px solid #e1e1e1;
+  background-color: #f9f9f9;
+}
+
+.translation-percent {
+  text-align: center;
+  margin: 0.6em;
+}
+
+.category-list {
+  padding-left: 0;
+}
+
+.category-list li {
+  display: block;
+  margin: 0.6em;
+}
+
+.category-list li span {
+  float: right;
+  text-align: right;
+  width: 3em;
+}
+
+.prototype {
+  opacity: 0.5
+}
+
+.progressbar {
+  float: right;
+  width: 5em;
+  height: 1em;
+  margin-left: 1em;
+  display: inline-block;
+  border: 1px solid #e1e1e1;
+}
+
+.progressbar div {
+  float: right;
+  height: 1em;
+  background-color: dodgerblue;
+}
+
+.center {
+  text-align: center;
+}
+
+.action {
+  color: silver;
+}
+
+.changed {
+  color: red;
+}
+
+.updated {
+  color: green;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .3s
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
+}

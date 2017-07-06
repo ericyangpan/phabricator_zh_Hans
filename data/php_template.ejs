@@ -1,0 +1,26 @@
+<%
+function phpString(str) {
+  return str.replace(/'/g, "\\'")
+}
+%><?php
+//-----------------------------------------------------
+//
+// Translation by Ariel Yang <arielyang@gmail.com>
+//
+// Fork me on https://github.com/arielyang/phabricator_zh_Hans
+//
+//-----------------------------------------------------
+
+final class PhabricatorSimplifiedChineseTranslation
+  extends PhutilTranslation {
+
+  public function getLocaleCode() {
+    return 'zh_Hans';
+  }
+
+  protected function getTranslations() {
+    return array(<% for (let key in translations) { if (key !== translations[key]) {%>
+      '<%- phpString(key) %>' => '<%- phpString(translations[key]) %>',<% } } %>
+    );
+  }
+}

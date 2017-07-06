@@ -1,0 +1,221 @@
+#!/usr/bin/env node
+"use strict";
+
+const ejs = require('ejs')
+const fs = require('fs')
+const jsonfile = require('jsonfile')
+const phplint = require('phplint').lint
+const rules = require('../lib/rules')
+const sortKeys = require('../lib/sortkeys')
+
+// Initialize file paths.
+const phpTemplatePath = 'data/php_template.ejs'
+const readmeTemplatePath = 'data/readme_template.ejs'
+const translationsPath = 'data/translations.json'
+const phpFilePath = 'dist/PhabricatorSimplifiedChineseTranslation.php'
+const readmeFilePath = 'README.md'
+
+// Load translations data.
+let translations = jsonfile.readFileSync(translationsPath)
+
+// Check rules.
+const hasError = rules.check(translations, error => {
+  console.log('Error: ' + error.type)
+  console.log('Rule: ' + error.rule)
+  console.log('Translation: ' + error.translation)
+  console.log('-'.repeat(30))
+})
+
+if (hasError) {
+  console.log('-'.repeat(30))
+  console.log('Rules not passed.')
+
+  process.exit(1)
+} else {
+  console.log('-'.repeat(30))
+  console.log('Rules passed.')
+}
+
+// Set translations JSON file indent.
+jsonfile.spaces = 2
+
+// Sort keys of translations object.
+translations = sortKeys(translations)
+
+writeFile(translationsPath, translations, 'translation')
+
+// Load readme template file.
+const readmeFileContent = renderFile(readmeTemplatePath, computeTranslationSummary(translations))
+
+writeFile(readmeFilePath, readmeFileContent, 'readme')
+
+// Render PHP template with data.
+const phpFileContent = renderFile(phpTemplatePath, { translations: sortKeys(translations) })
+
+writeFile(phpFilePath, phpFileContent, 'translation PHP')
+
+// Run PHP Lint.
+phplint([phpFilePath], (err) => {
+  if (err) {
+    console.log(err.toString())
+  } else {
+    console.log('-'.repeat(30))
+    console.log('Lint passed.')
+  }
+})
+
+function computeTranslationSummary(translations) {
+  const i18nFilesPath = 'data/i18n_files.json'
+  const prototypeApplicationsPath = 'data/prototype_applications.json'
+  const rulesPath = 'data/rules.json'
+  const terminologyPath = 'data/terminology.json'
+
+  let totalCount = 0
+  let totalCountOfShortItems = 0
+  let totalTranslationCount = 0
+  let totalTranslationCountOfShortItems = 0
+  let categoryTotalCount = 0
+  let categoryTotalCountOfShortItems = 0
+  let categoryTranslationCount = 0
+  let categoryTranslationCountOfShortItems = 0
+  let previousCategory = null
+
+  const lengthOfShortItems = 66
+  const categories = {}
+  const i18nFiles = jsonfile.readFileSync(i18nFilesPath)
+  const prototypeApplications = jsonfile.readFileSync(prototypeApplicationsPath)
+
+  for (let file in i18nFiles.files) {
+    const pathFragments = file.split('/')
+
+    // Group category by applications.
+    const category = pathFragments[0] === 'applications' ?
+      pathFragments[0] + '/' + pathFragments[1] :
+      pathFragments[0]
+    
+    // Init empty category.
+    if (categories[category] === undefined) {
+      categories[category] = null
+      
+      if (previousCategory !== null) {
+        categories[previousCategory] = {
+          percent: computePercent(categoryTranslationCount, categoryTotalCount),
+          percentBar: computeBar(categoryTranslationCount, categoryTotalCount),
+          percentOfShortItems: computePercent(categoryTranslationCountOfShortItems, categoryTotalCountOfShortItems),
+          percentOfShortItemsBar: computeBar(categoryTranslationCountOfShortItems, categoryTotalCountOfShortItems),
+          isPrototype: prototypeApplications.indexOf(previousCategory.replace('applications/', '')) !== -1,
+          strings: {}
+        }
+      }
+
+      categoryTotalCount = 0
+      categoryTotalCountOfShortItems = 0
+      categoryTranslationCount = 0
+      categoryTranslationCountOfShortItems = 0
+    }
+
+    previousCategory = category
+
+    // Get strings by file id.
+    const fileId = i18nFiles.files[file]
+    const strings = i18nFiles.strings[fileId] || []
+
+    // Set strings to cateogries.
+    strings.forEach(item => {
+      if (categories[previousCategory] === null) {
+        categories[previousCategory] = {
+          strings: {}
+        }
+      }
+
+      if (categories[previousCategory].strings[item.string] === undefined) {
+        categories[previousCategory].strings[item.string] = ''
+
+        categoryTotalCount++
+        totalCount++
+
+        if (item.string.length <= lengthOfShortItems) {
+          totalCountOfShortItems++
+          categoryTotalCountOfShortItems++
+        }
+
+        const string = translations[item.string]
+
+        if (string !== undefined) {
+          categoryTranslationCount++
+          totalTranslationCount++
+
+          if (item.string.length <= lengthOfShortItems) {
+            categoryTranslationCountOfShortItems++
+            totalTranslationCountOfShortItems++
+          }
+        }
+      }
+    })
+  }
+
+  categories[previousCategory] = {
+    percent: computePercent(categoryTranslationCount, categoryTotalCount),
+    percentBar: computeBar(categoryTranslationCount, categoryTotalCount),
+    percentOfShortItems: computePercent(categoryTranslationCountOfShortItems, categoryTotalCountOfShortItems),
+    percentOfShortItemsBar: computeBar(categoryTranslationCountOfShortItems, categoryTotalCountOfShortItems),
+    isPrototype: prototypeApplications.indexOf(previousCategory.replace('applications/', '')) !== -1,
+    strings: {}
+  }
+
+  const data = {
+    totalPercent: computePercent(totalTranslationCount, totalCount),
+    totalPercentOfShortItems: computePercent(totalTranslationCountOfShortItems, totalCountOfShortItems),
+    terminology: jsonfile.readFileSync(terminologyPath),
+    rules: jsonfile.readFileSync(rulesPath),
+    prototypeApplications: prototypeApplications,
+    categories: categories
+  }
+
+  // console.log(data.categories)
+
+  return data
+}
+
+function renderFile(templatePath, data) {
+  // Load template file.
+  const template = fs.readFileSync(templatePath).toString()
+
+  // Render template with data.
+  const fileContent = ejs.render(template, data)
+
+  return fileContent
+}
+
+function writeFile(path, content, fileDescription) {
+  if (typeof content === 'string') {
+    fs.writeFileSync(path, content)
+  } else {
+    jsonfile.writeFileSync(path, content)
+  }
+
+  console.log('-'.repeat(30))
+  console.log(`Writing ${fileDescription} file to "${path}".`)
+}
+
+function computePercent(dividend, divisor) {
+  const percent = dividend / divisor * 100
+
+  if (percent === 100) {
+    return '100%'
+  } else if (Number.isNaN(percent)) {
+    return '---'
+  }
+
+  return percent.toPrecision(2) + '%'
+}
+
+function computeBar(dividend, divisor) {
+  const percent = dividend / divisor * 100
+
+  if (Number.isNaN(percent)) {
+    return ''
+  }
+
+  return '='.repeat(percent / 10)
+}

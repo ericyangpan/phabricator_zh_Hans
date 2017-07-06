@@ -1,0 +1,25 @@
+{
+  "name": "phabricator_zh_Hans",
+  "version": "1.0.0",
+  "description": "Phabricator zh_Hans Translation & Tools.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "bin": {
+    "compile": "bin/compile",
+    "sortjson": "bin/sortjson"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "jsonfile": "^2.4.0",
+    "phplint": "^1.7.1",
+    "pluralize": "^4.0.0",
+    "vue": "^2.3.0",
+    "whatwg-fetch": "^2.0.3"
+  }
+}

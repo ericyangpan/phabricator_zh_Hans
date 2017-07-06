@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Phabricator Translator</title>
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <div class="navbar">
+        <div class="navbar-header">
+          Phabricators Translator
+        </div>
+        <ul class="navbar-nav">
+          <li><a href="#" @click.prevent="showCategory">Category</a></li>
+        </ul>
+        <div class="navbar-form">
+          <input type="text" id="searchText" placeholder="Search..." size="40" v-model="form.searchText" @keyup.enter="search">
+          <input type="checkbox" v-model="form.isSearchWord" @click="form.searchType = form.isSearchWord ? 'text' : form.searchType"> Search
+          Word
+          <input type="radio" name="searchType" value="text" checked="checked" v-model="form.searchType"> Text
+          <input type="radio" name="searchType" value="regex" v-model="form.searchType" @click="form.isSearchWord = false"> RegExp
+          <input type="text" class="center" v-model="form.filterLength" size="3" @keyup.enter="search"> Length Filter
+          <button type="button" @click="saveAllValues">Save All Values</button>
+        </div>
+        <ul class="navbar-nav nav-right">
+          <li><a href="#" @click.prevent="showDialog">Dictionary</a></li>
+          <li><a href="#" @click.prevent="showDialog">Terminology</a></li>
+          <li><a href="#" @click.prevent="showDialog">Rules</a></li>
+        </ul>
+      </div>
+      <div class="sidebar" v-show="category.show">
+        <div class="translation-percent">
+          Total Translation Percent: {{ category.totalPercent }}
+        </div>
+        <ul class="category-list">
+          <li v-for="item in category.items" :class="item.isPrototype ? 'prototype' : ''">
+            <a :href="'#filter/' + item.group" @click.prevent="searchCategory" :title="item.isPrototype ? 'This is a prototype application.' : ''">{{ item.group }}</a>
+            <span>{{ item.percent }}</span>
+            <div class="progressbar">
+              <div :style="'width:' + item.percent + (item.percent === '100%' ? ';background-color:limegreen' : '')"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="main">
+        <div class="info">
+          Category: <span>{{ translation.category }}</span> Filtered: <span>{{ translation.filteredCount }}</span> Total:
+          <span>{{ translation.totalCount }}</span> Percent: <span>{{ translationPercent }}</span>
+        </div>
+        <table id="translationList">
+          <thead>
+            <th style="width:28%">Key</th>
+            <th style="width:29%">Value</th>
+            <th style="width:11%">Action</th>
+            <th style="width:28%">Suggestion</th>
+            <th style="width:4%">Status</th>
+          </thead>
+          <tbody>
+            <tr v-for="item in translation.items" :class="item.value ? '' : 'highlight'">
+              <td v-html="item.key" :title="item.category"></td>
+              <td class="center">
+                <input type="text" size="66" :value="item.value" :disabled="item.duplicated" @input="input" @keyup="processValueKey">
+              </td>
+              <td class="center action">
+                <a href="#" @click.prevent="revert">Revert</a> | <a :href="'https://translate.google.com/?#en/zh-CN/' + encodeURIComponent(decodeHTML(item.key))"
+                  target="_blank">Google</a> | <a href="#" @click.prevent="copy">Copy</a>
+              </td>
+              <td class="suggesstion"></td>
+              <td class="center"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <transition name="fade">
+        <div class="dialog" v-show="dialog.show">
+          <div class="dialog-title">
+            <span>{{ dialog.title }}</span>
+            <a href="#" @click.prevent="closeDialog">✕</a>
+          </div>
+          <div class="scroll">
+            <table id="dialogList">
+              <thead>
+                <th>Key</th>
+                <th>Value</th>
+                <th style="width:6%">Action</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <input type="text" id="newKey" size="25" class="changed" placeholder="Type key here..." v-model.trim="dialog.newKey">
+                  </td>
+                  <td>
+                    <input type="text" size="25" class="changed" placeholder="Type value here..." v-model="dialog.newValue" @keyup.enter="addRow">
+                  </td>
+                  <td>
+                    <a href="#" @click.prevent="addRow">Add</a>
+                  </td>
+                </tr>
+                <tr v-for="item in dialog.items">
+                  <td>{{ item.key }}</td>
+                  <td>
+                    <input type="text" size="25" :value="item.value" @input="input" @keyup="processValueKey">
+                  </td>
+                  <td>
+                    <a href="#" @click.prevent="deleteRow">✕</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </transition>
+    </div>
+  </body>
+  <script src="js/vue.min.js"></script>
+  <script src="js/pluralize.js"></script>
+  <script src="js/fetch.js"></script>
+  <script src="js/helper.js"></script>
+  <script src="js/main.js"></script>
+</html>
