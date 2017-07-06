@@ -1,9 +1,10 @@
 # Phabricator 简体中文翻译和工具
 
-当前翻译进度百分比：44%。
+当前整体翻译进度百分比：44%。
+
 当前短句翻译进度百分比：50%。注：短句为长度小于 66 个字符的句子。
 
-分类 | 翻译百分比 | 翻译进度条 | 短句翻译百分比 | 短句翻译进度条
+分类 | 整体翻译百分比 | 整体翻译进度条 | 短句翻译百分比 | 短句翻译进度条
 --- | -------- | -------- | ------------ | -----------
 \_\_tests\_\_ | 100% | ========== | 100% | ==========
 aphront | 70% | ======= | 92% | =========
@@ -110,8 +111,7 @@ $ bin/compile
 
 1. Phabricator 简体中文翻译文件：`dist/PhabricatorSimplifiedChineseTranslation.php`；
 2. 翻译数据文件：`data/translations.json`；
-3. 翻译数据备份文件：`data/translations.bak.json`；
-4. 包含最新摘要信息的 README 文件：`README.md`。
+3. 包含最新摘要信息的 README 文件：`README.md`。
 
 ## 本地化 Phabricator
 
@@ -137,7 +137,7 @@ $ bin/compile
 ; | ;\\s
 \. | \.
 < | <
-> | >
+\\> | \\>
 \\\*\\\*\[\\S\\s\]\+\?\\\*\\\* | \\\*\\\*\[\\S\\s\]\+\?\\\*\\\*
 \\\. | \\\.
 \n | \n
@@ -202,18 +202,18 @@ update | 更新
 
 ## 释放国际化资源
 
-在 **Phabricator** 项目路径，执行如下命令：
+首先拉取最新的 Phabricator 源码。在 **Phabricator** 项目路径，执行如下命令：
 
 ```sh
 $ bin/i18n extract
 ```
 
-然后你将在 Phabricator 项目的 `/src/.cache/` 目录中找到一个 `i18n_files.json` 文件。
+然后你将在 Phabricator 项目的 `/src/.cache/` 目录中找到 `i18n_files.json` 文件。
 拷贝 `i18n_files.json` 文件到本项目的 `data/` 目录。
 
 ## 附带的工具
 
- `sortjson.js` 是一个用来排序 JSON 文件内容的附带工具。
+ `sortjson` 是一个用来排序 JSON 文件内容的附带工具。
 
  在当前项目目录，执行如下命令：
 
