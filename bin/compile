@@ -82,9 +82,13 @@ function computeTranslationSummary(translations, rules, terminology) {
       percentBar: computeBar(categoryTranslationCount, categoryTotalCount),
       percentOfShortItems: computePercent(categoryTranslationCountOfShortItems, categoryTotalCountOfShortItems),
       percentOfShortItemsBar: computeBar(categoryTranslationCountOfShortItems, categoryTotalCountOfShortItems),
-      isPrototype: prototypeApplicationsData.indexOf(previousCategory.replace('applications/', '')) !== -1,
+      isPrototype: isPrototype(previousCategory),
       strings: {}
     }
+  }
+
+  function isPrototype(category) {
+    return prototypeApplicationsData.indexOf(category.replace('applications/', '')) !== -1
   }
 
   const i18nFilesData = jsonfile.readFileSync(i18nFilesPath)
@@ -92,8 +96,10 @@ function computeTranslationSummary(translations, rules, terminology) {
 
   const lengthOfShortItems = 66
   const categories = {}
+  const items = {}
 
   let totalCount = 0
+  let totalCountWithoutPrototype = 0
   let totalCountOfShortItems = 0
   let totalTranslationCount = 0
   let totalTranslationCountOfShortItems = 0
@@ -115,6 +121,7 @@ function computeTranslationSummary(translations, rules, terminology) {
     if (categories[category] === undefined) {
       categories[category] = null
       
+      // Buld a previous category.
       if (previousCategory !== null) {
         categories[previousCategory] = buildCategory(
           previousCategory,
@@ -125,13 +132,12 @@ function computeTranslationSummary(translations, rules, terminology) {
         )
       }
 
+      // Reset count.
       categoryTotalCount = 0
       categoryTotalCountOfShortItems = 0
       categoryTranslationCount = 0
       categoryTranslationCountOfShortItems = 0
     }
-
-    previousCategory = category
 
     // Get strings by file id.
     const fileId = i18nFilesData.files[file]
@@ -139,36 +145,47 @@ function computeTranslationSummary(translations, rules, terminology) {
 
     // Set strings to cateogries.
     strings.forEach(item => {
-      if (categories[previousCategory] === null) {
-        categories[previousCategory] = {
-          strings: {}
-        }
+      // For exception.
+      if (categories[category] === null) {
+        categories[category] = { strings: {} }
       }
 
-      if (categories[previousCategory].strings[item.string] === undefined) {
-        categories[previousCategory].strings[item.string] = ''
+      if (categories[category].strings[item.string] === undefined) {
+        categories[category].strings[item.string] = ''
 
         categoryTotalCount++
-        totalCount++
 
         if (item.string.length <= lengthOfShortItems) {
-          totalCountOfShortItems++
           categoryTotalCountOfShortItems++
         }
 
-        const string = translations[item.string]
+        const translation = translations[item.string]
 
-        if (string !== undefined) {
+        if (translation !== undefined) {
           categoryTranslationCount++
-          totalTranslationCount++
 
           if (item.string.length <= lengthOfShortItems) {
             categoryTranslationCountOfShortItems++
-            totalTranslationCountOfShortItems++
           }
         }
       }
+
+      if (items[item.string] === undefined) {
+        totalCount++
+
+        if (!isPrototype(category)) {
+          totalCountWithoutPrototype++
+        }
+
+        if (item.string.length <= lengthOfShortItems) {
+          totalCountOfShortItems++
+        }
+
+        items[item.string] = item.string
+      }
     })
+
+    previousCategory = category
   }
 
   categories[previousCategory] = buildCategory(
@@ -179,8 +196,17 @@ function computeTranslationSummary(translations, rules, terminology) {
     categoryTotalCountOfShortItems
   )
 
+  for (let key in translations) {
+    totalTranslationCount++
+
+    if (key.length <= lengthOfShortItems) {
+      totalTranslationCountOfShortItems++
+    }
+  }
+
   const data = {
-    totalItems: totalCount,
+    totalCount: totalCount,
+    totalCountWithoutPrototype: totalCountWithoutPrototype,
     totalPercent: computePercent(totalTranslationCount, totalCount),
     totalPercentOfShortItems: computePercent(totalTranslationCountOfShortItems, totalCountOfShortItems),
     categories: categories
@@ -221,10 +247,13 @@ function writeTemplateFile(filePath, data) {
   writeFile(filePath, fileContent)
 }
 
+// Write content to file.
 function writeFile(path, content) {
   if (typeof content === 'string') {
+    // Plain text file.
     fs.writeFileSync(path, content)
   } else {
+    // JSON file.
     jsonfile.writeFileSync(path, content)
   }
 
@@ -232,24 +261,31 @@ function writeFile(path, content) {
   console.log(`Writing file to "${path}".`)
 }
 
+// Compute percent string.
 function computePercent(dividend, divisor) {
   const percent = dividend / divisor * 100
 
   if (percent === 100) {
+    // Emphasize "100%" in markdown (**text**).
     return '**100%**'
   } else if (Number.isNaN(percent)) {
+    // Not available.
     return '---'
   }
 
   return percent.toPrecision(2) + '%'
 }
 
+// Compute percent bar string.
 function computeBar(dividend, divisor) {
   const percent = dividend / divisor * 100
 
   if (percent === 100) {
-    return '✓'.repeat(10)
+    // Use different style when 100%.
+    // Width of 8 '✓' = Width of 10 '='
+    return '✓'.repeat(8)
   } else if (Number.isNaN(percent)) {
+    // Not available.
     return ''
   }
 

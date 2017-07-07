@@ -1,25 +1,27 @@
 # Phabricator 简体中文翻译和工具
 
-目录
+## 目录
 
+* [翻译进度](#翻译进度)
 * [启动翻译工具](#启动翻译工具)
 * [编译翻译文件和 README 文件](#编译翻译文件和-readme-文件)
 * [本地化 Phabricator](#本地化-phabricator)
 * [提取 Phabricator 中的国际化字典](#提取-phabricator-中的国际化字典)
-* [附带的工具](#附带的工具)
 * [附录](#附录)
   * [翻译规则列表](Rules.md)
   * [术语表](Terminology.md)
   * [Phabricator 官方国际化文档](https://secure.phabricator.com/book/phabcontrib/article/internationalization/)
 
-当前词条总数量：<%- totalItems %> 条。
+## 翻译进度
+
+当前总词条数量：<%- totalCount %> 条，不包含原型应用的总词条数量：<%- totalCountWithoutPrototype %> 条。
 
 当前整体翻译进度百分比：<%- totalPercent %>。
 
 当前短词条翻译进度百分比：<%- totalPercentOfShortItems %>。注：短词条为长度小于 66 个字符的词条。
 
 分类 | 短词条翻译百分比 | 短词条翻译进度条 | 整体翻译百分比 | 整体翻译进度条
---- | ------------ | ----------- | ------------ | -----------
+--- | :-----------: | ------------- | :----------: | -----------
 <% for (let category in categories) { %><%- this.escapeMarkdown(category) + (categories[category].isPrototype ? ' `原型`' : '') %> | <%- categories[category].percentOfShortItems %> | <%- categories[category].percentOfShortItemsBar %> | <%- categories[category].percent %> | <%- categories[category].percentBar %>
 <% } %>
 ## 启动翻译工具
@@ -40,11 +42,13 @@ $ npm start
 $ bin/compile
 ```
 
-然后你将得到四份文件：
+然后你将得到五份文件：
 
 1. Phabricator 简体中文翻译文件：`dist/PhabricatorSimplifiedChineseTranslation.php`；
-2. 翻译数据文件：`data/translations.json`；
-3. 包含最新摘要信息的 README 文件：`README.md`。
+2. 重新排序后的翻译数据文件：`data/translations.json`；
+3. 包含最新摘要信息的 README 文件：`README.md`；
+4. 翻译规则列表文件：`Rules.md`；
+5. 术语表文件：`Terminology.md`。
 
 ## 本地化 Phabricator
 
@@ -54,6 +58,8 @@ $ bin/compile
 
 ## 提取 Phabricator 中的国际化字典
 
+当 Phabricator 项目更新时，会出现新的词条，这时需要提取新的国际化字典资源，方法如下：
+
 首先拉取最新的 Phabricator 源码。在 **Phabricator** 项目路径，执行如下命令：
 
 ```sh
@@ -62,27 +68,6 @@ $ bin/i18n extract
 
 然后你将在 Phabricator 项目的 `/src/.cache/` 目录中找到 `i18n_files.json` 文件。
 拷贝 `i18n_files.json` 文件到本项目的 `data/` 目录。
-
-## 附带的工具
-
- `sortjson` 是一个用来排序 JSON 文件内容的附带工具。
-
- 在当前项目目录，执行如下命令：
-
- ```sh
- $ bin/sortjson
- ```
-
-**帮助**
-
-```sh
-$ bin/sortjson file selector
-
-排序所有属性。举例：bin/sortjson ./data/example.json
-只排序根节点下的属性。举例：bin/sortjson ./data/example.json .
-只排序给定节点下的属性。举例：bin/sortjson ./data/example.json words.
-排序给定节点下的所有子节点属性。举例：bin/sortjson ./data/example.json words
-```
 
 ## 附录
 
