@@ -6,7 +6,8 @@
 * [启动翻译工具](#启动翻译工具)
 * [编译翻译文件和 README 文件](#编译翻译文件和-readme-文件)
 * [本地化 Phabricator](#本地化-phabricator)
-* [提取 Phabricator 中的国际化字典](#提取-phabricator-中的国际化字典)
+* [提取 Phabricator 国际化字典资源](#提取-phabricator-国际化字典资源)
+* [翻译指南](#翻译指南)
 * [附录](#附录)
   * [翻译规则列表](Rules.md)
   * [术语表](Terminology.md)
@@ -56,7 +57,7 @@ $ bin/compile
 
 然后调整个人设置，进入 `Personal Settings` 的 `Account`，在 `Translation` 选项中选择 `Chinese (Simplified)`，保存后界面即切换为简体中文。
 
-## 提取 Phabricator 中的国际化字典
+## 提取 Phabricator 国际化字典资源
 
 当 Phabricator 项目更新时，会出现新的词条，这时需要提取新的国际化字典资源，方法如下：
 
@@ -68,6 +69,17 @@ $ bin/i18n extract
 
 然后你将在 Phabricator 项目的 `/src/.cache/` 目录中找到 `i18n_files.json` 文件。
 拷贝 `i18n_files.json` 文件到本项目的 `data/` 目录。
+
+## 翻译指南
+
+* 是否翻译为中文的判断；
+  * 如果英文意思无法直接表达名称所代表的功能，则不予翻译，保留英文，如 Multimeter 翻译成中文为“万用表”，并不是模块的本意“性能取样器”，所以不予翻译；
+  * 开发术语，如：Pull 和 Push 等；
+* 相同的英文单词和词组在同一意思下，尽量使用相同的翻译；
+* 相同的英文单词和词组在不同意思下，避免使用相同的翻译；
+* 相同结构的英文组合，要使用相同的翻译方法；
+* 如果英文表达本身不准确，翻译过程中要予以校准；
+
 
 ## 附录
 

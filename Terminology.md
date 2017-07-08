@@ -1,9 +1,8 @@
-## 术语表
+# 术语表
 
 词 | 翻译
 -- | -----------
 Differential | Differential
-MFA | 多因素认证
 Phabricator | Phabricator
 Phame | Phame
 Phortune | Phortune
@@ -40,6 +39,7 @@ preference | 偏好
 priority | 优先级
 profile | 档案
 remove | 移除
+repository | 仓库|repository
 revert | 恢复
 save | 保存
 serve | 服务于
