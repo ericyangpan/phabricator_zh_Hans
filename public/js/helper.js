@@ -21,19 +21,18 @@ function toPascalCase (str) {
 }
 
 function replacePunctuation(text) {
+  console.log(text.replace(/\((?!s).*?\)/g, '（$1）'))
   return text
-    .replace(/！/g, '! ')
-    .replace(/？/g, '? ')
-    .replace(/（/g, ' (')
-    .replace(/）/g, ') ')
-    .replace(/“/g, ' "')
-    .replace(/”/g, '" ')
-    .replace(/：/g, ': ')
-    .replace(/；/g, '; ')
-    .replace(/、/g, ', ')
-    .replace(/，/g, ', ')
-    .replace(/。/g, '. ')
-    .replace(/％/g, '%')
+    .replace(/\.{3}/g, '…')
+    .replace(/! ?/g, '！')
+    .replace(/\? ?/g, '？')
+    .replace(/: ?/g, '：')
+    .replace(/; ?/g, '；')
+    .replace(/, ?/g, '，')
+    .replace(/\. ?/g, '。')
+    .replace(/\(((?!s).*?)\)/g, '（$1）')
+    .replace(/"(.+?)"/g, '“$1”')
+    .replace(/'(.+?)'/g, '‘$1’')
     .trim()
 }
 

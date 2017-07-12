@@ -54,7 +54,7 @@ translationsData = sortKeys(translationsData)
 writeFile(translationsPath, translationsData)
 
 // Write all template files.
-writeTemplateFile(readmeFilePath, computeTranslationSummary(translationsData, rulesData, terminologyData))
+writeTemplateFile(readmeFilePath, computeTranslationSummary(translationsData))
 writeTemplateFile(rulesFilePath, { rules: rulesData })
 writeTemplateFile(terminologyFilePath, { terminology: terminologyData })
 writeTemplateFile(translationsFilePath, { translations: translationsData })
@@ -69,7 +69,7 @@ phplint([translationsFilePath], (err) => {
   }
 })
 
-function computeTranslationSummary(translations, rules, terminology) {
+function computeTranslationSummary(translations) {
   function buildCategory(
     previousCategory,
     categoryTranslationCount,

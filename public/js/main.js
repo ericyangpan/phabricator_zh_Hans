@@ -211,8 +211,6 @@ const vm = new Vue({
               
               break
             }
-
-            ctx.valueTextBox.value = replacePunctuation(ctx.valueTextBox.value)
           }
 
           if (ctx.value !== globalData[this.section][ctx.key]) {
@@ -468,7 +466,7 @@ function deleteItem(section, key) {
 function saveItem(section, key, value) {
   const data = [{
     key: key,
-    value: replacePunctuation(value)
+    value: value
   }]
 
   console.log(`Save ${section} '${key}':`)
@@ -506,7 +504,7 @@ function saveAllTranslationValues() {
 
       data.push({
         key: key,
-        value: replacePunctuation(textBox.value)
+        value: textBox.value
       })
     }
   }
@@ -601,7 +599,7 @@ function getSuggestion(str) {
     }
   }
 
-  return results.join('').trim()
+  return replacePunctuation(results.join('').trim())
 }
 
 function refreshSuggestion() {

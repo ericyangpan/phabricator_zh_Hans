@@ -8,7 +8,6 @@ const sectionPaths = {
   dictionary: 'data/dictionary.json',
   i18nFiles: 'data/i18n_files.json',
   prototypeApplications: 'data/prototype_applications.json',
-  rules: 'data/rules.json',
   terminology: 'data/terminology.json',
   translations: 'data/translations.json'
 }
@@ -36,7 +35,7 @@ app.get('/data', (req, res) => {
 app.post('/save/:section', (req, res) => {
   const section = req.params.section
 
-  if (['dictionary', 'rules', 'terminology', 'translations'].indexOf(section) === -1) {
+  if (['dictionary', 'terminology', 'translations'].indexOf(section) === -1) {
     res.status(400).send('Invalid section parameter!')
 
     return
@@ -55,7 +54,7 @@ app.post('/save/:section', (req, res) => {
     }
   })
 
-  if (section === 'terminology' || section === 'dictionary' || section === 'rules') {
+  if (section === 'terminology' || section === 'dictionary') {
     sourceData = sortKeys(sourceData)
   }
 

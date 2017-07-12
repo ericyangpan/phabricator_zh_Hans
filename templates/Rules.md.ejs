@@ -1,14 +1,13 @@
 # 翻译规则列表
 
-共有三种规则：
+共有两种规则：
 
-1. 参数规则：检查翻译前后 `%s` 和 `%d` 参数的数量是否匹配；
-2. 术语表规则：检查翻译内容是否符合术语表；
-3. 正则表达式规则：用正则表达式检查翻译内容是否符合规则。
+1. 术语表规则：检查翻译内容是否符合术语表；
+2. 正则表达式规则：用正则表达式检查翻译内容是否符合规则。
 
 **正则表达式规则列表**
 
 词 | 翻译
 -- | -----------
-<% for (let key in rules) { %><%- this.escapeRule(key) %> | <%- this.escapeRule(rules[key]) %>
+<% for (let key in rules.items) { %><%- this.escapeRule(key) %> | <%- this.escapeRule(rules.items[key]) %>
 <% } %>
