@@ -5,7 +5,7 @@
     ",": "，",
     ":": "：",
     ";": "；",
-    "[^.]\\.(?!\\.|ics)": "。",
+    "[^.]\\.(?!\\.|ics|%s)": "。",
     "<": "<",
     ">": ">",
     "\\((?!s).*?\\)": "（.*?）|\\(\\)",
@@ -24,14 +24,16 @@
       "%s DIFF LINK(S)",
       "%s ERROR(S)"
     ],
-    "[^.]\\.(?!\\.|ics)": [
+    "[^.]\\.(?!\\.|ics|%s)": [
       "ldap.example.com",
       "ldaps://ldaps.example.com/",
       "ou=People, dc=example, dc=com",
-      "Replaced by 'phid.query'."
+      "Replaced by 'phid.query'.",
+      "Deprecated mysql.host Format"
     ],
     ":": [
-      "ldaps://ldaps.example.com/"
+      "ldaps://ldaps.example.com/",
+      "JIRA base URI should include protocol (like \"https://\")."
     ],
     ",": [
       "ou=People, dc=example, dc=com",
