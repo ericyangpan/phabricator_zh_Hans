@@ -25,20 +25,11 @@ const vm = new Vue({
       newKey: '',
       newValue: '',
       items: []
-    },
-    translation: {
-      category: 'N/A',
-      filteredCount: 0,
-      totalCount: 0,
-      items: []
     }
   },
   computed: {
     section() {
-      return this.dialog.show ? this.dialog.title.toLowerCase() : 'translations'
-    },
-    translationPercent() {
-      return computePercent(this.translation.filteredCount, this.translation.totalCount)
+      return this.dialog.title.toLowerCase()
     }
   },
   methods: {
@@ -56,10 +47,10 @@ const vm = new Vue({
         event.target.textContent,
         this.form.filterLength
       ).then(result => {
-        vm.translation.category = result.category
-        vm.translation.filteredCount = result.filteredCount
-        vm.translation.totalCount = result.totalCount
-        vm.translation.items = result.items
+        vmt.category = result.category
+        vmt.filteredCount = result.filteredCount
+        vmt.totalCount = result.totalCount
+        vmt.items = result.items
 
         refreshSuggestion()
       })
@@ -75,10 +66,10 @@ const vm = new Vue({
         this.form.searchType,
         this.form.filterLength
       ).then(result => {
-        vm.translation.category = result.category
-        vm.translation.filteredCount = result.filteredCount
-        vm.translation.totalCount = result.totalCount
-        vm.translation.items = result.items
+        vmt.category = result.category
+        vmt.filteredCount = result.filteredCount
+        vmt.totalCount = result.totalCount
+        vmt.items = result.items
 
         refreshSuggestion()
       })
@@ -150,84 +141,8 @@ const vm = new Vue({
           })
       }
     },
-    copy(event) {
-      const ctx = getRowContext(event.target)
-
-      if (ctx.suggestion === '') return
-      
-      ctx.valueTextBox.value = ctx.suggestion
-
-      if (ctx.suggestion !== globalData[this.section][ctx.key]) {
-        ctx.valueTextBox.classList.remove('updated')
-        ctx.valueTextBox.classList.add('changed')
-      } else {
-        ctx.valueTextBox.classList.remove('changed')
-      }
-    },
-    revert(event) {
-      const ctx = getRowContext(event.target)
-
-      if (globalData[this.section][ctx.key] === undefined) {
-        ctx.valueTextBox.value = ''
-      } else {
-        ctx.valueTextBox.value = globalData[this.section][ctx.key]
-        ctx.valueTextBox.classList.remove('changed')
-      }
-    },
-    input(event) {
-      const ctx = getRowContext(event.target)
-
-      if (ctx.value !== globalData[this.section][ctx.key]) {
-        ctx.valueTextBox.classList.remove('updated')
-        ctx.valueTextBox.classList.add('changed')
-      } else {
-        ctx.valueTextBox.classList.remove('changed')
-      }
-    },
-    processValueKey(event) {
-      switch (event.which) {
-        // Press down key.
-        case 40:
-          event.target.parentElement.parentElement.nextSibling.children[1].firstElementChild.focus()
-          break
-        // Press up key.
-        case 38:
-          event.target.parentElement.parentElement.previousSibling.children[1].firstElementChild.focus()
-          break
-        // Press enter key.
-        case 13:
-          const ctx = getRowContext(event.target)
-          const isTranslation = this.section === 'translations'
-
-          if (isTranslation) {
-            if (ctx.value === '') {
-              deleteItem(this.section, ctx.key)
-                .then(() => {
-                  updateStatusNode(ctx, isTranslation)
-                })
-                .catch(error => {
-                  console.error(error)
-                })
-              
-              break
-            }
-          }
-
-          if (ctx.value !== globalData[this.section][ctx.key]) {
-            saveItem(this.section, ctx.key, ctx.value)
-              .then(() => {
-                updateStatusNode(ctx, isTranslation)
-              })
-              .catch(error => {
-                console.error(error)
-              })
-          }
-
-          break
-      }
-    },
-    saveAllValues() {
-      saveAllTranslationValues()
+    saveAllTranslationValues() {
+      saveAllTranslationValuesInternal()
         .then(() => {
           const textBoxes = document.getElementById('translationList').getElementsByTagName('input')
 
@@ -253,6 +168,12 @@ const vm = new Vue({
         .catch(error => {
           console.error(error)
         })
+    },
+    input(event) {
+      inputInternal(event, this.section)
+    },
+    processValueKey(event) {
+      processValueKeyInternal(event, this.section)
     }
   },
   created() {
@@ -271,10 +192,114 @@ const vm = new Vue({
   }
 })
 
+const vmt = new Vue({
+  el: '#translation',
+  data: {
+    category: 'N/A',
+    filteredCount: 0,
+    totalCount: 0,
+    items: []
+  },
+  computed: {
+    section() {
+      return 'translations'
+    },
+    translationPercent() {
+      return computePercent(this.filteredCount, this.totalCount)
+    }
+  },
+  methods: {
+    copy(event) {
+      const ctx = getRowContext(event.target)
+
+      if (ctx.suggestion === '') return
+      
+      ctx.valueTextBox.value = ctx.suggestion
+
+      if (ctx.suggestion !== globalData[this.section][ctx.key]) {
+        ctx.valueTextBox.classList.remove('updated')
+        ctx.valueTextBox.classList.add('changed')
+      } else {
+        ctx.valueTextBox.classList.remove('changed')
+      }
+    },
+    revert(event) {
+      const ctx = getRowContext(event.target)
+
+      if (globalData[this.section][ctx.key] === undefined) {
+        ctx.valueTextBox.value = ''
+      } else {
+        ctx.valueTextBox.value = globalData[this.section][ctx.key]
+        ctx.valueTextBox.classList.remove('changed')
+      }
+    },
+    input(event) {
+      inputInternal(event, this.section)
+    },
+    processValueKey(event) {
+      processValueKeyInternal(event, this.section)
+    }
+  }
+})
+
 // window.onbeforeunload = event => {
 //   event.returnValue = true
 //   return true
 // }
+
+function inputInternal(event, section) {
+  const ctx = getRowContext(event.target)
+
+  if (ctx.value !== globalData[section][ctx.key]) {
+    ctx.valueTextBox.classList.remove('updated')
+    ctx.valueTextBox.classList.add('changed')
+  } else {
+    ctx.valueTextBox.classList.remove('changed')
+  }
+}
+
+function processValueKeyInternal(event, section) {
+  switch (event.which) {
+    // Press down key.
+    case 40:
+      event.target.parentElement.parentElement.nextSibling.children[1].firstElementChild.focus()
+      break
+    // Press up key.
+    case 38:
+      event.target.parentElement.parentElement.previousSibling.children[1].firstElementChild.focus()
+      break
+    // Press enter key.
+    case 13:
+      const ctx = getRowContext(event.target)
+      const isTranslation = section === 'translations'
+
+      if (isTranslation) {
+        if (ctx.value === '') {
+          deleteItem(section, ctx.key)
+            .then(() => {
+              updateStatusNode(ctx, isTranslation)
+            })
+            .catch(error => {
+              console.error(error)
+            })
+          
+          break
+        }
+      }
+
+      if (ctx.value !== globalData[section][ctx.key]) {
+        saveItem(section, ctx.key, ctx.value)
+          .then(() => {
+            updateStatusNode(ctx, isTranslation)
+          })
+          .catch(error => {
+            console.error(error)
+          })
+      }
+
+      break
+  }
+}
 
 function updateStatusNode(ctx, isTranslation) {
   ctx.valueTextBox.classList.remove('changed')
@@ -491,7 +516,7 @@ function saveItem(section, key, value) {
     })
 }
 
-function saveAllTranslationValues() {
+function saveAllTranslationValuesInternal() {
   const data = []
 
   const textBoxes = document.getElementById('translationList').getElementsByTagName('input')

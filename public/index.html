@@ -23,7 +23,7 @@
           <input type="radio" name="searchType" value="text" checked="checked" v-model="form.searchType"> Text
           <input type="radio" name="searchType" value="regex" v-model="form.searchType" @click="form.isSearchWord = false"> RegExp
           <input type="text" class="center" v-model="form.filterLength" size="3" @keyup.enter="search"> Length Filter
-          <button type="button" @click="saveAllValues">Save All Values</button>
+          <button type="button" @click="saveAllTranslationValues">Save All Values</button>
         </div>
         <ul class="navbar-nav nav-right">
           <li><a href="#" @click.prevent="showDialog">Dictionary</a></li>
@@ -43,35 +43,6 @@
             </div>
           </li>
         </ul>
-      </div>
-      <div class="main">
-        <div class="info">
-          Category: <span>{{ translation.category }}</span> Filtered: <span>{{ translation.filteredCount }}</span> Total:
-          <span>{{ translation.totalCount }}</span> Percent: <span>{{ translationPercent }}</span>
-        </div>
-        <table id="translationList">
-          <thead>
-            <th style="width:28%">Key</th>
-            <th style="width:29%">Value</th>
-            <th style="width:11%">Action</th>
-            <th style="width:28%">Suggestion</th>
-            <th style="width:4%">Status</th>
-          </thead>
-          <tbody>
-            <tr v-for="item in translation.items" :class="item.value ? '' : 'highlight'">
-              <td v-html="item.key" :title="item.category"></td>
-              <td class="center">
-                <input type="text" size="66" :value="item.value" :disabled="item.duplicated" @input="input" @keyup="processValueKey">
-              </td>
-              <td class="center action">
-                <a href="#" @click.prevent="revert">Revert</a> | <a :href="'https://translate.google.com/?#en/zh-CN/' + encodeURIComponent(decodeHTML(item.key))"
-                  target="_blank">Google</a> | <a href="#" @click.prevent="copy">Copy</a>
-              </td>
-              <td class="suggesstion"></td>
-              <td class="center"></td>
-            </tr>
-          </tbody>
-        </table>
       </div>
       <transition name="fade">
         <div class="dialog" v-show="dialog.show">
@@ -112,6 +83,35 @@
           </div>
         </div>
       </transition>
+    </div>
+    <div id="translation" class="main">
+      <div class="info">
+        Category: <span>{{ category }}</span> Filtered: <span>{{ filteredCount }}</span> Total:
+        <span>{{ totalCount }}</span> Percent: <span>{{ translationPercent }}</span>
+      </div>
+      <table id="translationList">
+        <thead>
+          <th style="width:28%">Key</th>
+          <th style="width:29%">Value</th>
+          <th style="width:11%">Action</th>
+          <th style="width:28%">Suggestion</th>
+          <th style="width:4%">Status</th>
+        </thead>
+        <tbody>
+          <tr v-for="item in items" :class="item.value ? '' : 'highlight'">
+            <td v-html="item.key" :title="item.category"></td>
+            <td class="center">
+              <input type="text" size="66" :value="item.value" :disabled="item.duplicated" @input="input" @keyup="processValueKey">
+            </td>
+            <td class="center action">
+              <a href="#" @click.prevent="revert">Revert</a> | <a :href="'https://translate.google.com/?#en/zh-CN/' + encodeURIComponent(decodeHTML(item.key))"
+                target="_blank">Google</a> | <a href="#" @click.prevent="copy">Copy</a>
+            </td>
+            <td class="suggesstion"></td>
+            <td class="center"></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </body>
   <script src="js/vue.min.js"></script>
