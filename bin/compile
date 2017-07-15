@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-"use strict";
 
+const crypto = require('crypto')
 const ejs = require('ejs')
 const fs = require('fs')
 const jsonfile = require('jsonfile')
@@ -205,6 +205,7 @@ function computeTranslationSummary(translations) {
   }
 
   const data = {
+    i18nFileHash: computeFileHash(i18nFilesPath),
     totalCount: totalCount,
     totalCountWithoutPrototype: totalCountWithoutPrototype,
     totalPercent: computePercent(totalTranslationCount, totalCount),
@@ -290,4 +291,14 @@ function computeBar(dividend, divisor) {
   }
 
   return '='.repeat(percent / 10)
+}
+
+// Compute sha1 hash value of specific file.
+function computeFileHash(path) {
+  const sha1 = crypto.createHash('sha1')
+  const buffer = fs.readFileSync(path)
+
+  sha1.update(buffer)
+
+  return sha1.digest('hex')
 }

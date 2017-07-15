@@ -1,5 +1,3 @@
-"use strict";
-
 const regexWholeWord = /^\w+$/i
 const globalDictionary = {}
 const globalPhrases = {}
@@ -567,29 +565,21 @@ function getSuggestion(str) {
   const regexReplace = /\w+\(s\)|\w+'s|%[ds]|\w+/gi
   const regexWord = /\w+/
   const regexChineseChar = /[\u4e00-\u9fa5]/
-
   const matches = str.match(regexReplace)
 
   if (matches === null) return str
 
   str = ' ' + str + ' '
-  // console.log(str)
-  // console.log(matches)
+
   // Replace translations and dictionaries.
   for (let match of matches) {
     const regexMatch = new RegExp(`[ \\W]{1}${escapeRegExp(match)}[ \\W]{1}`, 'i')
-    // console.log(regexMatch)
     const word = match.match(regexWord)[0]
-    // console.log(word)
+
     if (str.match(regexMatch) === null) continue
 
     const fragment = str.match(regexMatch)[0]
-    // console.log(fragment)
     const value = getValueByKey(globalDictionary, word)
-    // const target = value === undefined ? fragment : word === match ? fragment.replace(word, value) : match.endsWith('\'s') ? value + '的' : value
-    // const wordEndsWithIs = match.endsWith('\'s') ? value + '的' : value
-    // const replaceWord = word === match ? fragment.replace(word, value) : wordEndsWithIs
-    // const target = value === undefined ? fragment : replaceWord
 
     const target = (((value) => {
       if (value === undefined) return fragment
@@ -598,8 +588,6 @@ function getSuggestion(str) {
 
       return value
     })(value))
-
-    // console.log(target)
 
     if (target !== undefined) {
       str = str.replace(regexMatch, target)

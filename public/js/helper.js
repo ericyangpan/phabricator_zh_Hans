@@ -30,9 +30,9 @@ function replacePunctuation(text) {
     .replace(/; ?/g, '；')
     .replace(/, ?/g, '，')
     .replace(/\. ?/g, '。')
-    .replace(/\(((?!s).*?)\)/g, '（$1）')
-    .replace(/"(.+?)"/g, '“$1”')
-    .replace(/'(.+?)'/g, '‘$1’')
+    .replace(/ ?\(((?!s).*?)\) ?/g, '（$1）')
+    .replace(/ ?"(.+?)" ?/g, '“$1”')
+    .replace(/ ?'(.+?)' ?/g, '‘$1’')
     .trim()
 }
 
