@@ -21,11 +21,13 @@
   "delete": "删除",
   "email": "邮件",
   "enable": "启用",
+  "full domain": "完整域名",
   "guide": "指南",
   "hashtag": "唯一标签",
   "include": "包含",
   "invitee": "受邀人",
   "is required": "是必填的",
+  "job": "作业",
   "monogram": "花押字",
   "multi-factor": "多因素",
   "notification": "通知",
@@ -43,6 +45,6 @@
   "session": "会话",
   "setting": "设置",
   "setup": "安装设置",
-  "token": "令牌|符记|符号|语素",
+  "token": "令牌|符记|符号|语素|token",
   "update": "更新"
 }
