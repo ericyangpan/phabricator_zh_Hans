@@ -58,6 +58,10 @@ const vm = new Vue({
 
       resetTextBoxStyle('translationList')
 
+      if (!Number.isInteger(this.form.filterLength)) {
+        this.form.filterLength = 66
+      }
+
       search(
         this.form.searchText,
         this.form.isSearchWord,
@@ -186,6 +190,10 @@ const vm = new Vue({
 
         vm.category.totalPercent = totalPercent
         vm.category.items = items
+
+        window.onhashchange = locationHashChanged
+
+        locationHashChanged()
       })
   }
 })
@@ -244,6 +252,38 @@ const vmt = new Vue({
 //   event.returnValue = true
 //   return true
 // }
+
+function locationHashChanged() {
+  const options = parseLocationHash(window.location.hash)
+
+  vm.form.searchText = options.text
+  vm.form.isSearchWord = options.isWord
+  vm.form.searchType = options.type
+  vm.form.filterLength = options.filterLength
+
+  let promise
+
+  if (options.category !== 'all') {
+    promise = searchCategory(
+      options.category,
+      options.filterLength
+    )
+  } else {
+    promise = search(
+      vm.form.searchText,
+      vm.form.isSearchWord,
+      vm.form.searchType,
+      vm.form.filterLength
+    )
+  }
+
+  promise.then(result => {
+    vmt.category = result.category
+    vmt.filteredCount = result.filteredCount
+    vmt.totalCount = result.totalCount
+    vmt.items = result.items
+  })
+}
 
 function inputInternal(event, section) {
   const ctx = getRowContext(event.target)
@@ -393,7 +433,14 @@ function search(searchText, isSearchWord, searchType, filterLength) {
   const escapedText = searchType === 'regex' ? searchText : escapeRegExp(searchText)
   const regexSearch = isSearchWord ? new RegExp(`^(${pluralize(escapedText, 1)}|${pluralize(escapedText)})$`, 'gi') : new RegExp(escapedText, 'gi')
 
-  if (searchText.length < 2) return
+  if (searchText.length < 2) {
+    return Promise.resolve({
+      category: 'All',
+      filteredCount: 0,
+      totalCount: 0,
+      items: []
+    })
+  }
 
   const results = []
   const resultIndexes = {}
@@ -401,7 +448,13 @@ function search(searchText, isSearchWord, searchType, filterLength) {
   let totalResultCount = 0
   let resultCount = 0
 
-  // setLocationHash(searchOptions)
+  setLocationHash({
+    category: 'all',
+    text: searchText,
+    isWord: isSearchWord,
+    type: searchType,
+    filterLength: filterLength
+  })
 
   for (let category in globalData.categories) {
     for (let key in globalData.categories[category]) {
@@ -442,6 +495,11 @@ function search(searchText, isSearchWord, searchType, filterLength) {
 function searchCategory(category, filterLength) {
   const stringsInCateogry = globalData.categories[category]
   const results = []
+
+  setLocationHash({
+    category: category,
+    filterLength: filterLength
+  })
 
   for (let key in stringsInCateogry) {
     if (key.length > filterLength) continue

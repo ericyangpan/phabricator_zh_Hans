@@ -22,7 +22,7 @@
           Word
           <input type="radio" name="searchType" value="text" checked="checked" v-model="form.searchType"> Text
           <input type="radio" name="searchType" value="regex" v-model="form.searchType" @click="form.isSearchWord = false"> RegExp
-          <input type="text" class="center" v-model="form.filterLength" size="3" @keyup.enter="search"> Length Filter
+          <input type="text" class="center" v-model.number="form.filterLength" size="3" @keyup.enter="search"> Length Filter
           <button type="button" @click="saveAllTranslationValues">Save All Values</button>
         </div>
         <ul class="navbar-nav nav-right">

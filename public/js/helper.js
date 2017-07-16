@@ -21,7 +21,6 @@ function toPascalCase (str) {
 }
 
 function replacePunctuation(text) {
-  console.log(text.replace(/\((?!s).*?\)/g, '（$1）'))
   return text
     .replace(/\.{3}/g, '…')
     .replace(/! ?/g, '！')
@@ -91,9 +90,26 @@ function computePercent(dividend, divisor) {
   return percent.toPrecision(2) + '%'
 }
 
-// function setLocationHash(searchOptions) {
-//   window.location.hash = `#${searchOptions.isWord ? 'word' : 'any'}/${searchOptions.type}/${searchOptions.filterLength}/${searchOptions.text}`
-// }
+function setLocationHash(options) {
+  options.type = options.type || 'text'
+  options.text = options.text || ''
+
+  window.location.hash = `#${options.category}|${options.isWord ? 'word' : 'any'}|${options.type}|${options.filterLength}|${options.text}`
+}
+
+function parseLocationHash(hash) {
+  const regex = /^#(all|.+)\|(any|word)\|(text|regex)\|(\d+)\|(.*)$/g
+  const defaultMatches = [ null, 'all', 'word', 'text', '66', '']
+  const matches = regex.exec(hash) || defaultMatches
+
+  return {
+    category: matches[1],
+    isWord: matches[2] === 'word',
+    type: matches[3],
+    filterLength: parseInt(matches[4]),
+    text: matches[5]
+  }
+}
 
 function checkStatus(response) {
   if (response.status >= 200 && response.status < 300) {
