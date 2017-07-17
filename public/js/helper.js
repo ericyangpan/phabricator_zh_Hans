@@ -99,7 +99,7 @@ function setLocationHash(options) {
 
 function parseLocationHash(hash) {
   const regex = /^#(all|.+)\|(any|word)\|(text|regex)\|(\d+)\|(.*)$/g
-  const defaultMatches = [ null, 'all', 'word', 'text', '66', '']
+  const defaultMatches = [ null, 'all', 'any', 'text', '66', '']
   const matches = regex.exec(hash) || defaultMatches
 
   return {

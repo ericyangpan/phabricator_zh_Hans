@@ -254,12 +254,14 @@ const vmt = new Vue({
 // }
 
 function locationHashChanged() {
-  const options = parseLocationHash(window.location.hash)
+  const options = parseLocationHash(decodeURI(window.location.hash))
 
   vm.form.searchText = options.text
   vm.form.isSearchWord = options.isWord
   vm.form.searchType = options.type
   vm.form.filterLength = options.filterLength
+
+  resetTextBoxStyle('translationList')
 
   let promise
 
@@ -282,6 +284,8 @@ function locationHashChanged() {
     vmt.filteredCount = result.filteredCount
     vmt.totalCount = result.totalCount
     vmt.items = result.items
+
+    refreshSuggestion()
   })
 }
 
