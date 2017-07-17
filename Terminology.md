@@ -42,7 +42,7 @@ priority | 优先级
 profile | 档案
 remove | 移除
 repository | 仓库|repository
-revert | 恢复
+revert | 回复
 save | 保存
 serve | 服务于
 session | 会话
