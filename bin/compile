@@ -9,7 +9,7 @@ const rules = require('../lib/rules')
 const sortKeys = require('../lib/sortkeys')
 
 // Initialize data file paths.
-const i18nFilesPath = 'data/i18n_files.json'
+const i18nFilesPath = 'data/phabricator/i18n_files.json'
 const prototypeApplicationsPath = 'data/prototype_applications.json'
 const rulesPath = 'data/rules.json'
 const terminologyPath = 'data/terminology.json'
