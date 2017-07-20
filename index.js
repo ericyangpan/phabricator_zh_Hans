@@ -6,11 +6,14 @@ const app = express()
 
 const sectionPaths = {
   dictionary: 'data/dictionary.json',
-  i18nFiles: 'data/i18n_files.json',
+  i18nFiles: ['data/phabricator/i18n_files.json', 'data/libphutil/i18n_files.json'],
   prototypeApplications: 'data/prototype_applications.json',
   terminology: 'data/terminology.json',
   translations: 'data/translations.json'
 }
+
+// If show libphutil translation in the UI.
+const showLibphutil = false
 
 app.use(bodyParser.json())
 app.use(express.static('public'))
@@ -23,7 +26,10 @@ app.get('/data', (req, res) => {
   // Load all data.
   for (let section in sectionPaths) {
     if (section === 'i18nFiles') {
-      data.categories = sortKeys(getCategories(jsonfile.readFileSync(sectionPaths[section])))
+      const phabricatori18nFiles = jsonfile.readFileSync(sectionPaths[section][0])
+      const libphutili18nFiles = jsonfile.readFileSync(sectionPaths[section][1])
+
+      data.categories = sortKeys(getCategories(phabricatori18nFiles, libphutili18nFiles))
     } else {
       data[section] = sortKeys(jsonfile.readFileSync(sectionPaths[section]))
     }
@@ -71,16 +77,26 @@ app.listen(3000, () => {
   console.log('App listening on port 3000.')
 })
 
-function getCategories(i18nFiles) {
+function getCategories(phabricatori18nFiles, libphutili18nFiles) {
   const categories = {}
 
+  buildCategories(categories, phabricatori18nFiles, '')
+
+  if (showLibphutil) {
+    buildCategories(categories, libphutili18nFiles, '[libphutil]')
+  }
+
+  return categories
+}
+
+function buildCategories(categories, i18nFiles, prefix) {
   for (let file in i18nFiles.files) {
     const pathFragments = file.split('/')
 
     // Group category by applications.
-    const category = pathFragments[0] === 'applications' ?
+    const category = prefix + (pathFragments[0] === 'applications' ?
       pathFragments[0] + '/' + pathFragments[1] :
-      pathFragments[0]
+      pathFragments[0])
 
     // Init empty category.
     if (categories[category] === undefined) {
@@ -96,6 +112,4 @@ function getCategories(i18nFiles) {
       categories[category][item.string] = ''
     })
   }
-
-  return categories
 }

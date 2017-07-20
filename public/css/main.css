@@ -145,6 +145,7 @@ tr.highlight {
   top: 3em;
   bottom: 0;
   left: 0;
+  width: 23em;
   z-index: 10;
   display: block;
   padding: 1em;
