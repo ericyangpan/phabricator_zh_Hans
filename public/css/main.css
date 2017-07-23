@@ -41,6 +41,10 @@ tr.highlight {
   background-color: #f5f5f5;
 }
 
+textarea {
+  padding: 6px;
+}
+
 .navbar {
   position: fixed;
   z-index: 100;

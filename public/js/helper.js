@@ -22,6 +22,7 @@ function toPascalCase (str) {
 
 function replacePunctuation(text) {
   return text
+    .replace(/％/g, '%')
     .replace(/\.{3}/g, '…')
     .replace(/! ?/g, '！')
     .replace(/\? ?/g, '？')
@@ -97,7 +98,8 @@ function setLocationHash(options) {
   window.location.hash = `#${options.category}|${options.isWord ? 'word' : 'any'}|${options.type}|${options.filterLength}|${options.text}`
 }
 
-function parseLocationHash(hash) {
+function parseLocationHash() {
+  const hash = decodeURI(window.location.hash)
   const regex = /^#(all|.+)\|(any|word)\|(text|regex)\|(\d+)\|(.*)$/g
   const defaultMatches = [ null, 'all', 'any', 'text', '66', '']
   const matches = regex.exec(hash) || defaultMatches
@@ -163,18 +165,18 @@ function getValueByKey(object, key) {
 // Get context info about key, value, suggestion and tr element, textbox element.
 function getRowContext(target) {
   const row = target.parentElement.parentElement
-  const key = row.firstChild.textContent
+  const key = row.firstElementChild.textContent
   let valueTextBox = null
   let value = null
   let suggestion = null
 
   // Target is textbox.
-  if (target.tagName === 'INPUT' && target.getAttribute('type') === 'text') {
+  if ((target.tagName === 'INPUT' && target.getAttribute('type') === 'text') || target.tagName === 'TEXTAREA') {
     valueTextBox = target
     value = target.value
   // Target is action links.
   } else if (target.textContent !== '✕') {
-    valueTextBox = target.parentElement.parentElement.children[1].firstChild
+    valueTextBox = target.parentElement.parentElement.children[1].firstElementChild
     suggestion = target.parentElement.parentElement.children[3].textContent
   }
 

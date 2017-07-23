@@ -39,41 +39,27 @@ const vm = new Vue({
       this.dialog.show = false
       this.form.searchText = ''
 
-      resetTextBoxStyle('translationList')
-
-      searchCategory(
-        event.target.textContent,
-        this.form.filterLength
-      ).then(result => {
-        vmt.category = result.category
-        vmt.filteredCount = result.filteredCount
-        vmt.totalCount = result.totalCount
-        vmt.items = result.items
-
-        refreshSuggestion()
+      search({
+        category: event.target.textContent,
+        filterLength: this.form.filterLength
       })
     },
     search() {
       this.category.show = false
 
-      resetTextBoxStyle('translationList')
-
       if (!Number.isInteger(this.form.filterLength)) {
         this.form.filterLength = 66
       }
 
-      search(
-        this.form.searchText,
-        this.form.isSearchWord,
-        this.form.searchType,
-        this.form.filterLength
-      ).then(result => {
-        vmt.category = result.category
-        vmt.filteredCount = result.filteredCount
-        vmt.totalCount = result.totalCount
-        vmt.items = result.items
+      const options = parseLocationHash()
+      const category = this.form.searchText.trim() === '' ? options.category : 'all'
 
-        refreshSuggestion()
+      search({
+        category: category,
+        text: this.form.searchText,
+        isWord: this.form.isSearchWord,
+        type: this.form.searchType,
+        filterLength: this.form.filterLength
       })
     },
     showDialog(event) {
@@ -191,9 +177,9 @@ const vm = new Vue({
         vm.category.totalPercent = totalPercent
         vm.category.items = items
 
-        window.onhashchange = locationHashChanged
-
         locationHashChanged()
+
+        window.onhashchange = locationHashChanged
       })
   }
 })
@@ -254,39 +240,14 @@ const vmt = new Vue({
 // }
 
 function locationHashChanged() {
-  const options = parseLocationHash(decodeURI(window.location.hash))
+  const options = parseLocationHash()
 
   vm.form.searchText = options.text
   vm.form.isSearchWord = options.isWord
   vm.form.searchType = options.type
   vm.form.filterLength = options.filterLength
 
-  resetTextBoxStyle('translationList')
-
-  let promise
-
-  if (options.category !== 'all') {
-    promise = searchCategory(
-      options.category,
-      options.filterLength
-    )
-  } else {
-    promise = search(
-      vm.form.searchText,
-      vm.form.isSearchWord,
-      vm.form.searchType,
-      vm.form.filterLength
-    )
-  }
-
-  promise.then(result => {
-    vmt.category = result.category
-    vmt.filteredCount = result.filteredCount
-    vmt.totalCount = result.totalCount
-    vmt.items = result.items
-
-    refreshSuggestion()
-  })
+  search(options)
 }
 
 function inputInternal(event, section) {
@@ -369,7 +330,6 @@ function resetTextBoxStyle(containerId) {
     textBox.classList.remove('changed')
     textBox.classList.remove('updated')
   }
-
 }
 
 function setGlobalDictionary(translations, dictionary) {
@@ -433,13 +393,55 @@ function getCategories(categories, translations) {
   return {totalPercent, items}
 }
 
-function search(searchText, isSearchWord, searchType, filterLength) {
-  const escapedText = searchType === 'regex' ? searchText : escapeRegExp(searchText)
-  const regexSearch = isSearchWord ? new RegExp(`^(${pluralize(escapedText, 1)}|${pluralize(escapedText)})$`, 'gi') : new RegExp(escapedText, 'gi')
+function search(options) {
+  resetTextBoxStyle('translationList')
 
-  if (searchText.length < 2) {
+  let promise
+
+  if (options.category !== 'all') {
+    setLocationHash({
+      category: options.category,
+      filterLength: options.filterLength
+    })
+
+    promise = searchCategory(
+      options.category,
+      options.filterLength
+    )
+  } else {
+    setLocationHash({
+      category: 'all',
+      text: options.text,
+      isWord: options.isWord,
+      type: options.type,
+      filterLength: options.filterLength
+    })
+
+    promise = searchText(
+      options.text,
+      options.isWord,
+      options.type,
+      options.filterLength
+    )
+  }
+
+  promise.then(result => {
+    vmt.category = result.category
+    vmt.filteredCount = result.filteredCount
+    vmt.totalCount = result.totalCount
+    vmt.items = result.items
+
+    refreshSuggestion()
+  })
+}
+
+function searchText(text, isWord, type, filterLength) {
+  const escapedText = type === 'regex' ? text : escapeRegExp(text)
+  const regexSearch = isWord ? new RegExp(`^(${pluralize(escapedText, 1)}|${pluralize(escapedText)})$`, 'gi') : new RegExp(escapedText, 'gi')
+
+  if (text.length < 2) {
     return Promise.resolve({
-      category: 'All',
+      category: 'all',
       filteredCount: 0,
       totalCount: 0,
       items: []
@@ -452,14 +454,6 @@ function search(searchText, isSearchWord, searchType, filterLength) {
   let totalResultCount = 0
   let resultCount = 0
 
-  setLocationHash({
-    category: 'all',
-    text: searchText,
-    isWord: isSearchWord,
-    type: searchType,
-    filterLength: filterLength
-  })
-
   for (let category in globalData.categories) {
     for (let key in globalData.categories[category]) {
       if (regexSearch.test(key)) {
@@ -469,12 +463,17 @@ function search(searchText, isSearchWord, searchType, filterLength) {
 
         // New item.
         if (resultIndexes[key] === undefined) {
-          results.push({
+          const item = {
             key: encodeHTML(key).replace(regexSearch, '<span>$&</span>'),
             value: globalData.translations[key],
             category: category,
-            suggestion: isSearchWord ? '' : getSuggestion(key)
-          })
+            suggestion: isWord ? '' : getSuggestion(key)
+          }
+
+          item.isTextarea = isTextarea(item)
+          item.textareaRows = getTextareaRows(item)
+
+          results.push(item)
 
           resultIndexes[key] = resultIndex
           resultIndex++
@@ -489,7 +488,7 @@ function search(searchText, isSearchWord, searchType, filterLength) {
   }
 
   return Promise.resolve({
-    category: 'All',
+    category: 'all',
     filteredCount: resultCount,
     totalCount: totalResultCount,
     items: sortByItemKey(results)
@@ -500,19 +499,19 @@ function searchCategory(category, filterLength) {
   const stringsInCateogry = globalData.categories[category]
   const results = []
 
-  setLocationHash({
-    category: category,
-    filterLength: filterLength
-  })
-
   for (let key in stringsInCateogry) {
     if (key.length > filterLength) continue
 
-    results.push({
+    const item = {
       key: encodeHTML(key),
       value: globalData.translations[key],
       suggestion: getSuggestion(key)
-    })
+    }
+
+    item.isTextarea = isTextarea(item)
+    item.textareaRows = getTextareaRows(item)
+
+    results.push(item)
   }
   
   return Promise.resolve({
@@ -686,4 +685,20 @@ function refreshSuggestion() {
       rows[i].children[3].textContent = getSuggestion(key)
     }
   })
+}
+
+function isTextarea(item) {
+  if (item.value !== undefined) {
+    return item.value.length > 30
+  } else {
+    return item.key.length > 66
+  }
+}
+
+function getTextareaRows(item) {
+  if (item.value !== undefined) {
+    return Math.ceil(item.value.length / 30)
+  } else {
+    return Math.ceil(item.key.length / 66)
+  }
 }

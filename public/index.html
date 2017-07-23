@@ -21,8 +21,8 @@
           <input type="checkbox" v-model="form.isSearchWord" @click="form.searchType = form.isSearchWord ? 'text' : form.searchType"> Search
           Word
           <input type="radio" name="searchType" value="text" checked="checked" v-model="form.searchType"> Text
-          <input type="radio" name="searchType" value="regex" v-model="form.searchType" @click="form.isSearchWord = false"> RegExp
-          <input type="text" class="center" v-model.number="form.filterLength" size="3" @keyup.enter="search"> Length Filter
+          <input type="radio" name="searchType" value="regex" v-model="form.searchType"> RegExp
+          <input type="text" class="center" size="3" v-model.number="form.filterLength" @keyup.enter="search"> Length Filter
           <button type="button" @click="saveAllTranslationValues">Save All Values</button>
         </div>
         <ul class="navbar-nav nav-right">
@@ -101,7 +101,8 @@
           <tr v-for="item in items" :class="item.value ? '' : 'highlight'">
             <td v-html="item.key" :title="item.category"></td>
             <td class="center">
-              <input type="text" size="66" :value="item.value" :disabled="item.duplicated" @input="input" @keyup="processValueKey">
+              <input v-if="!item.isTextarea" type="text" size="66" :value="item.value" @input="input" @keyup="processValueKey">
+              <textarea v-if="item.isTextarea" cols="66" :rows="item.textareaRows" @input="input" @keyup="processValueKey">{{ item.value }}</textarea>
             </td>
             <td class="center action">
               <a href="#" @click.prevent="revert">Revert</a> | <a :href="'https://translate.google.com/?#en/zh-CN/' + encodeURIComponent(decodeHTML(item.key))"
