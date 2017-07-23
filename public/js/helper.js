@@ -188,3 +188,7 @@ function getRowContext(target) {
     suggestion: suggestion
   }
 }
+
+function isMac() {
+  return navigator.appVersion.indexOf('Macintosh') > 0
+}

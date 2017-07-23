@@ -72,7 +72,7 @@
                 <tr v-for="item in dialog.items">
                   <td>{{ item.key }}</td>
                   <td>
-                    <input type="text" size="25" :value="item.value" @input="input" @keyup="processValueKey">
+                    <input type="text" size="25" :value="item.value" @input="input" @keydown="processValueKey">
                   </td>
                   <td>
                     <a href="#" @click.prevent="deleteRow">✕</a>
@@ -101,8 +101,8 @@
           <tr v-for="item in items" :class="item.value ? '' : 'highlight'">
             <td v-html="item.key" :title="item.category"></td>
             <td class="center">
-              <input v-if="!item.isTextarea" type="text" size="66" :value="item.value" @input="input" @keyup="processValueKey">
-              <textarea v-if="item.isTextarea" cols="66" :rows="item.textareaRows" @input="input" @keyup="processValueKey">{{ item.value }}</textarea>
+              <input v-if="!item.isTextarea" type="text" size="66" :value="item.value" @input="input" @keydown="processValueKey">
+              <textarea v-if="item.isTextarea" cols="66" :rows="item.textareaRows" @input="input" @keydown="processValueKey">{{ item.value }}</textarea>
             </td>
             <td class="center action">
               <a href="#" @click.prevent="revert">Revert</a> | <a :href="'https://translate.google.com/?#en/zh-CN/' + encodeURIComponent(decodeHTML(item.key))"

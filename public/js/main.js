@@ -262,37 +262,31 @@ function inputInternal(event, section) {
 }
 
 function processValueKeyInternal(event, section) {
-  switch (event.which) {
-    // Press down key.
-    case 40:
-      event.target.parentElement.parentElement.nextSibling.children[1].firstElementChild.focus()
-      break
-    // Press up key.
-    case 38:
-      event.target.parentElement.parentElement.previousSibling.children[1].firstElementChild.focus()
-      break
-    // Press enter key.
-    case 13:
-      const ctx = getRowContext(event.target)
-      const isTranslation = section === 'translations'
-
-      if (isTranslation) {
-        if (ctx.value === '') {
-          deleteItem(section, ctx.key)
-            .then(() => {
-              updateStatusNode(ctx, isTranslation)
-            })
-            .catch(error => {
-              console.error(error)
-            })
-          
-          break
-        }
+  switch (event.key) {
+    case 'ArrowDown':
+      if (event.target.parentElement.parentElement.nextSibling) {
+        event.target.parentElement.parentElement.nextSibling.children[1].firstElementChild.focus()
       }
+      break
+    case 'ArrowUp':
+      if (event.target.parentElement.parentElement.previousSibling) {
+        event.target.parentElement.parentElement.previousSibling.children[1].firstElementChild.focus()
+      }
+      break
+    case 'Enter':
+      if (isMac() && event.metaKey || event.ctrlKey) {
+        const ctx = getRowContext(event.target)
+        const isTranslation = section === 'translations'
 
-      if (ctx.value !== globalData[section][ctx.key]) {
-        saveItem(section, ctx.key, ctx.value)
-          .then(() => {
+        let promise
+
+        if (isTranslation && ctx.value === '') {
+          promise = deleteItem(section, ctx.key)
+        } else if (ctx.value !== globalData[section][ctx.key]) {
+          promise = saveItem(section, ctx.key, ctx.value)
+        }
+        
+        promise.then(() => {
             updateStatusNode(ctx, isTranslation)
           })
           .catch(error => {
@@ -696,9 +690,13 @@ function isTextarea(item) {
 }
 
 function getTextareaRows(item) {
+  const keyRows = Math.ceil(item.key.length / 66)
+
   if (item.value !== undefined) {
-    return Math.ceil(item.value.length / 30)
+    const valueRows = Math.ceil(item.value.length / 30)
+
+    return Math.max(keyRows, valueRows)
   } else {
-    return Math.ceil(item.key.length / 66)
+    return keyRows
   }
 }
