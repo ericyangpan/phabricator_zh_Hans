@@ -93,7 +93,7 @@ function computePercent(dividend, divisor) {
 
 function setLocationHash(options) {
   options.type = options.type || 'text'
-  options.text = options.text || ''
+  options.text = encodeURI(options.text || '')
 
   window.location.hash = `#${options.category}|${options.isWord ? 'word' : 'any'}|${options.type}|${options.filterLength}|${options.text}`
 }
@@ -191,4 +191,9 @@ function getRowContext(target) {
 
 function isMac() {
   return navigator.appVersion.indexOf('Macintosh') > 0
+}
+
+function dbcsByteLength(str) {
+  const m = encodeURIComponent(str).match(/%[89ABab]/g)
+  return str.length + (m ? m.length / 2 : 0)
 }

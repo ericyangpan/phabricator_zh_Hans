@@ -274,7 +274,7 @@ function processValueKeyInternal(event, section) {
       }
       break
     case 'Enter':
-      if (isMac() && event.metaKey || event.ctrlKey) {
+      if (event.target.tagName === 'INPUT' || isMac() && event.metaKey || event.ctrlKey) {
         const ctx = getRowContext(event.target)
         const isTranslation = section === 'translations'
 
@@ -683,17 +683,17 @@ function refreshSuggestion() {
 
 function isTextarea(item) {
   if (item.value !== undefined) {
-    return item.value.length > 30
+    return dbcsByteLength(item.value) > 64
   } else {
-    return item.key.length > 66
+    return decodeHTML(item.key).length > 66
   }
 }
 
 function getTextareaRows(item) {
-  const keyRows = Math.ceil(item.key.length / 66)
+  const keyRows = Math.ceil(decodeHTML(item.key).length / 66)
 
   if (item.value !== undefined) {
-    const valueRows = Math.ceil(item.value.length / 30)
+    const valueRows = Math.ceil(dbcsByteLength(item.value) / 64)
 
     return Math.max(keyRows, valueRows)
   } else {
