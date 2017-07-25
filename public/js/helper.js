@@ -84,6 +84,8 @@ function computePercent(dividend, divisor) {
 
   if (percent === 100) {
     return '100%'
+  } else if (percent > 99) {
+    return '99%'
   } else if (Number.isNaN(percent)) {
     return '---'
   }
