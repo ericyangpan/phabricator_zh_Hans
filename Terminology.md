@@ -23,6 +23,7 @@ config | 配置
 daemon | 守护进程
 default | 默认
 delete | 删除
+dictionary | 字典
 email | 邮件
 enable | 启用
 full domain | 完整域名
@@ -51,3 +52,4 @@ setting | 设置
 setup | 安装设置
 token | 令牌|符记|符号|语素|token
 update | 更新
+webserver | Web 服务器
