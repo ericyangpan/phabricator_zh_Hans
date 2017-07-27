@@ -21,6 +21,8 @@ const rulesFilePath = 'Rules.md'
 const terminologyFilePath = 'Terminology.md'
 const translationsFilePath = 'dist/PhabricatorSimplifiedChineseTranslation.php'
 
+const calculateTestCase = false
+
 // Load data.
 const rulesData = jsonfile.readFileSync(rulesPath)
 const terminologyData = jsonfile.readFileSync(terminologyPath)
@@ -110,6 +112,8 @@ function computeTranslationSummary(translations) {
   let previousCategory = null
 
   for (let file in i18nFilesData.files) {
+    if (!calculateTestCase && file.endsWith('TestCase.php')) continue
+
     const pathFragments = file.split('/')
 
     // Group category by applications.

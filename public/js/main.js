@@ -1,3 +1,5 @@
+const isSortByPercent = true
+
 const regexWholeWord = /^\w+$/i
 const globalDictionary = {}
 const globalPhrases = {}
@@ -175,7 +177,7 @@ const vm = new Vue({
         let {totalPercent, items} = getCategories(globalData.categories, globalData.translations)
 
         vm.category.totalPercent = totalPercent
-        vm.category.items = items
+        vm.category.items = isSortByPercent ? sortByPercent(items) : items
 
         locationHashChanged()
 

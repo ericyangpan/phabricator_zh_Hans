@@ -66,6 +66,22 @@ function sortByItemKey(array) {
   })
 }
 
+function sortByPercent(array) {
+  return array.sort((a, b) => {
+    const percentA = parseInt(a.percent.substr(0, a.percent.length - 1))
+    const percentB = parseInt(b.percent.substr(0, b.percent.length - 1))
+    if (percentA > percentB) {
+      return -1
+    }
+
+    if (percentA < percentB) {
+      return 1
+    }
+
+    return 0
+  })
+}
+
 function objectToItems(obj) {
   const items = []
 
