@@ -8,6 +8,8 @@ const phplint = require('phplint').lint
 const rules = require('../lib/rules')
 const sortKeys = require('../lib/sortkeys')
 
+const CALCULATE_TEST_CASE = false
+
 // Initialize data file paths.
 const i18nFilesPath = 'data/phabricator/i18n_files.json'
 const prototypeApplicationsPath = 'data/prototype_applications.json'
@@ -20,8 +22,6 @@ const readmeFilePath = 'README.md'
 const rulesFilePath = 'Rules.md'
 const terminologyFilePath = 'Terminology.md'
 const translationsFilePath = 'dist/PhabricatorSimplifiedChineseTranslation.php'
-
-const calculateTestCase = false
 
 // Load data.
 const rulesData = jsonfile.readFileSync(rulesPath)
@@ -112,7 +112,7 @@ function computeTranslationSummary(translations) {
   let previousCategory = null
 
   for (let file in i18nFilesData.files) {
-    if (!calculateTestCase && file.endsWith('TestCase.php')) continue
+    if (!CALCULATE_TEST_CASE && file.endsWith('TestCase.php')) continue
 
     const pathFragments = file.split('/')
 
@@ -273,6 +273,8 @@ function computePercent(dividend, divisor) {
   if (percent === 100) {
     // Emphasize "100%" in markdown (**text**).
     return '**100%**'
+  } else if (percent > 99) {
+    return '99%'
   } else if (Number.isNaN(percent)) {
     // Not available.
     return '---'

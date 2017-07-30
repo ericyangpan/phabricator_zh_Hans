@@ -13,8 +13,8 @@ const sectionPaths = {
 }
 
 // If show libphutil translation in the UI.
-const showLibphutil = false
-const showTestCase = false
+const SHOW_LIBPHUTIL = false
+const SHOW_TEST_CASE = false
 
 app.use(bodyParser.json())
 app.use(express.static('public'))
@@ -83,7 +83,7 @@ function getCategories(phabricatori18nFiles, libphutili18nFiles) {
 
   buildCategories(categories, phabricatori18nFiles, '')
 
-  if (showLibphutil) {
+  if (SHOW_LIBPHUTIL) {
     buildCategories(categories, libphutili18nFiles, '[libphutil]')
   }
 
@@ -92,7 +92,7 @@ function getCategories(phabricatori18nFiles, libphutili18nFiles) {
 
 function buildCategories(categories, i18nFiles, prefix) {
   for (let file in i18nFiles.files) {
-    if (!showTestCase && file.endsWith('TestCase.php')) continue
+    if (!SHOW_TEST_CASE && file.endsWith('TestCase.php')) continue
 
     const pathFragments = file.split('/')
 

@@ -3,6 +3,15 @@ pluralize.addUncountableRule('as')
 
 const HTMLElementContainer = document.createElement('span')
 
+function isMac() {
+  return navigator.appVersion.indexOf('Macintosh') > 0
+}
+
+function dbcsByteLength(str) {
+  const m = encodeURIComponent(str).match(/%[89ABab]/g)
+  return str.length + (m ? m.length / 2 : 0)
+}
+
 function toPascalCase (str) {
   if (str.length < 2) return str
 
@@ -20,7 +29,7 @@ function toPascalCase (str) {
   return words.join(' ')
 }
 
-function replacePunctuation(text) {
+function toChinesePunctuation(text) {
   return text
     .replace(/％/g, '%')
     .replace(/\.{3}/g, '…')
@@ -52,13 +61,29 @@ function decodeHTML(html) {
   return HTMLElementContainer.textContent
 }
 
-function sortByItemKey(array) {
+function forEachElements(containerId, tagName, func) {
+  const elements = document.getElementById(containerId).getElementsByTagName(tagName)
+
+  for (let i = 0; i < elements.length; i++) {
+    func(elements[i])
+  }
+}
+
+function forEachTextBoxes(containerId, func) {
+  forEachElements(containerId, 'input', func)
+  forEachElements(containerId, 'textarea', func)
+}
+
+function sortByKey(array, key, sortValueFunc) {
   return array.sort((a, b) => {
-    if (a.key < b.key) {
+    const valueA = sortValueFunc ? sortValueFunc(a[key]) : a[key]
+    const valueB = sortValueFunc ? sortValueFunc(b[key]) : b[key]
+
+    if (valueA < valueB) {
       return -1
     }
 
-    if (a.key > b.key) {
+    if (valueA > valueB) {
       return 1
     }
 
@@ -67,19 +92,7 @@ function sortByItemKey(array) {
 }
 
 function sortByPercent(array) {
-  return array.sort((a, b) => {
-    const percentA = parseInt(a.percent.substr(0, a.percent.length - 1))
-    const percentB = parseInt(b.percent.substr(0, b.percent.length - 1))
-    if (percentA > percentB) {
-      return -1
-    }
-
-    if (percentA < percentB) {
-      return 1
-    }
-
-    return 0
-  })
+  return sortByKey(array, 'percent', value => -parseInt(value.substr(0, value.length - 1)) )
 }
 
 function objectToItems(obj) {
@@ -107,44 +120,6 @@ function computePercent(dividend, divisor) {
   }
   
   return percent.toPrecision(2) + '%'
-}
-
-function setLocationHash(options) {
-  options.type = options.type || 'text'
-  options.text = encodeURI(options.text || '')
-
-  window.location.hash = `#${options.category}|${options.isWord ? 'word' : 'any'}|${options.type}|${options.filterLength}|${options.text}`
-}
-
-function parseLocationHash() {
-  const hash = decodeURI(window.location.hash)
-  const regex = /^#(all|.+)\|(any|word)\|(text|regex)\|(\d+)\|(.*)$/g
-  const defaultMatches = [ null, 'all', 'any', 'text', '66', '']
-  const matches = regex.exec(hash) || defaultMatches
-
-  return {
-    category: matches[1],
-    isWord: matches[2] === 'word',
-    type: matches[3],
-    filterLength: parseInt(matches[4]),
-    text: matches[5]
-  }
-}
-
-function checkStatus(response) {
-  if (response.status >= 200 && response.status < 300) {
-    return response
-  } else {
-    const error = new Error(response.statusText)
-
-    error.response = response
-
-    throw error
-  }
-}
-
-function parseJSON(response) {
-  return response.json()
 }
 
 function getValueByKey(object, key) {
@@ -180,38 +155,17 @@ function getValueByKey(object, key) {
   return undefined
 }
 
-// Get context info about key, value, suggestion and tr element, textbox element.
-function getRowContext(target) {
-  const row = target.parentElement.parentElement
-  const key = row.firstElementChild.textContent
-  let valueTextBox = null
-  let value = null
-  let suggestion = null
-
-  // Target is textbox.
-  if ((target.tagName === 'INPUT' && target.getAttribute('type') === 'text') || target.tagName === 'TEXTAREA') {
-    valueTextBox = target
-    value = target.value
-  // Target is action links.
-  } else if (target.textContent !== '✕') {
-    valueTextBox = target.parentElement.parentElement.children[1].firstElementChild
-    suggestion = target.parentElement.parentElement.children[3].textContent
-  }
-
-  return {
-    row: row,
-    key: key,
-    value: value,
-    valueTextBox: valueTextBox,
-    suggestion: suggestion
-  }
+function resetTextBoxStyle(textBox) {
+  textBox.classList.remove('changed')
+  textBox.classList.remove('updated')
 }
 
-function isMac() {
-  return navigator.appVersion.indexOf('Macintosh') > 0
+function setTextBoxUpdatedStyle(textBox) {
+  textBox.classList.remove('changed')
+  textBox.classList.add('updated')
 }
 
-function dbcsByteLength(str) {
-  const m = encodeURIComponent(str).match(/%[89ABab]/g)
-  return str.length + (m ? m.length / 2 : 0)
+function setTextBoxChangedStyle(textBox) {
+  textBox.classList.remove('updated')
+  textBox.classList.add('changed')
 }

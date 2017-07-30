@@ -1,4 +1,7 @@
-const isSortByPercent = true
+const IGNORE_PROTOTYPE = true
+const IS_SORT_BY_PERCENT = true
+const DEFAULT_FILTER_LENGTH = 66
+const DEFAULT_CATEGORY = 'N/A'
 
 const regexWholeWord = /^\w+$/i
 const globalDictionary = {}
@@ -8,11 +11,12 @@ let globalData
 const vm = new Vue({
   el: '#app',
   data: {
-    form: {
-      searchText: '',
-      isSearchWord: false,
-      searchType: 'text',
-      filterLength: 66
+    searchForm: {
+      category: DEFAULT_CATEGORY,
+      text: '',
+      isWord: false,
+      type: 'text',
+      filterLength: DEFAULT_FILTER_LENGTH
     },
     category: {
       show: false,
@@ -39,53 +43,35 @@ const vm = new Vue({
     searchCategory(event) {
       this.category.show = false
       this.dialog.show = false
-      this.form.searchText = ''
+      this.searchForm.text = ''
+      this.searchForm.category = event.target.textContent
 
-      search({
-        category: event.target.textContent,
-        filterLength: this.form.filterLength
-      })
+      search(this.searchForm)
     },
-    search() {
+    searchText() {
       this.category.show = false
 
-      if (!Number.isInteger(this.form.filterLength)) {
-        this.form.filterLength = 66
-      }
-
-      const options = parseLocationHash()
-      const category = this.form.searchText.trim() === '' ? options.category : 'all'
-
-      search({
-        category: category,
-        text: this.form.searchText,
-        isWord: this.form.isSearchWord,
-        type: this.form.searchType,
-        filterLength: this.form.filterLength
-      })
+      search(this.searchForm)
     },
     showDialog(event) {
       const title = event.target.textContent
 
       if (this.dialog.title === title && this.dialog.show) {
         this.dialog.show = false
-        return
+      } else {
+        this.dialog.show = true
+        this.dialog.title = title
+        this.dialog.newKey = ''
+        this.dialog.newValue = ''
+        this.dialog.items = objectToItems(globalData[this.section])
+
+        Vue.nextTick(() => document.getElementById('newKey').focus())
       }
-
-      this.dialog.title = title
-      this.dialog.show = true
-      this.dialog.newKey = ''
-      this.dialog.newValue = ''
-      this.dialog.items = objectToItems(globalData[this.section])
-
-      // TODO: bug
-      document.getElementById('newKey').focus()
     },
     closeDialog() {
       this.dialog.show = false
-      document.getElementById('searchText').focus()
 
-      resetTextBoxStyle('dialogList')
+      forEachTextBoxes('dialogList', textBox => resetTextBoxStyle(textBox))
     },
     addRow() {
       const key = this.section === 'dictionary' ? this.dialog.newKey.toLowerCase() : this.dialog.newKey
@@ -134,24 +120,13 @@ const vm = new Vue({
     saveAllTranslationValues() {
       saveAllTranslationValuesInternal()
         .then(() => {
-          const textBoxes = document.getElementById('translationList').getElementsByTagName('input')
+          forEachTextBoxes('translationList', textBox => {
+            if (!textBox.classList.contains('changed') || textBox.value === '') return
 
-          for (let i = 0; i < textBoxes.length; i++) { 
-            const textBox = textBoxes[i]
+            setTextBoxUpdatedStyle(textBox)
 
-            if (textBox.classList.contains('changed') && textBox.value !== '') {
-              textBox.classList.remove('changed')
-              textBox.classList.add('updated')
-
-              const statusNode = textBox.parentElement.parentElement.lastElementChild
-
-              statusNode.textContent = 'Saved!'
-
-              setTimeout(() => {
-                statusNode.textContent = ''
-              }, 3000)
-            }
-          }
+            updateStatusNode(textBox)
+          })
 
           refreshSuggestion()
         })
@@ -168,16 +143,16 @@ const vm = new Vue({
   },
   created() {
     fetch('/data')
-      .then(parseJSON)
+      .then(response => response.json())
       .then(data => {
         globalData = data
 
-        setGlobalDictionary(globalData.translations, globalData.dictionary)
+        setGlobalDictionary(globalData.translations, globalData.dictionary, globalData.terminology)
 
         let {totalPercent, items} = getCategories(globalData.categories, globalData.translations)
 
-        vm.category.totalPercent = totalPercent
-        vm.category.items = isSortByPercent ? sortByPercent(items) : items
+        this.category.totalPercent = totalPercent
+        this.category.items = IS_SORT_BY_PERCENT ? sortByPercent(items) : items
 
         locationHashChanged()
 
@@ -189,15 +164,13 @@ const vm = new Vue({
 const vmt = new Vue({
   el: '#translation',
   data: {
-    category: 'N/A',
+    section: 'translations',
+    category: DEFAULT_CATEGORY,
     filteredCount: 0,
     totalCount: 0,
     items: []
   },
   computed: {
-    section() {
-      return 'translations'
-    },
     translationPercent() {
       return computePercent(this.filteredCount, this.totalCount)
     }
@@ -211,10 +184,9 @@ const vmt = new Vue({
       ctx.valueTextBox.value = ctx.suggestion
 
       if (ctx.suggestion !== globalData[this.section][ctx.key]) {
-        ctx.valueTextBox.classList.remove('updated')
-        ctx.valueTextBox.classList.add('changed')
+        setTextBoxChangedStyle(ctx.valueTextBox)
       } else {
-        ctx.valueTextBox.classList.remove('changed')
+        resetTextBoxStyle(ctx.valueTextBox)
       }
     },
     revert(event) {
@@ -224,7 +196,7 @@ const vmt = new Vue({
         ctx.valueTextBox.value = ''
       } else {
         ctx.valueTextBox.value = globalData[this.section][ctx.key]
-        ctx.valueTextBox.classList.remove('changed')
+        resetTextBoxStyle(ctx.valueTextBox)
       }
     },
     input(event) {
@@ -244,11 +216,6 @@ const vmt = new Vue({
 function locationHashChanged() {
   const options = parseLocationHash()
 
-  vm.form.searchText = options.text
-  vm.form.isSearchWord = options.isWord
-  vm.form.searchType = options.type
-  vm.form.filterLength = options.filterLength
-
   search(options)
 }
 
@@ -256,10 +223,9 @@ function inputInternal(event, section) {
   const ctx = getRowContext(event.target)
 
   if (ctx.value !== globalData[section][ctx.key]) {
-    ctx.valueTextBox.classList.remove('updated')
-    ctx.valueTextBox.classList.add('changed')
+    setTextBoxChangedStyle(ctx.valueTextBox)
   } else {
-    ctx.valueTextBox.classList.remove('changed')
+    resetTextBoxStyle(ctx.valueTextBox)
   }
 }
 
@@ -284,51 +250,58 @@ function processValueKeyInternal(event, section) {
 
         if (isTranslation && ctx.value === '') {
           promise = deleteItem(section, ctx.key)
+
         } else if (ctx.value !== globalData[section][ctx.key]) {
           promise = saveItem(section, ctx.key, ctx.value)
         }
         
         promise.then(() => {
-            updateStatusNode(ctx, isTranslation)
-          })
-          .catch(error => {
-            console.error(error)
-          })
+          setTextBoxUpdatedStyle(ctx.valueTextBox)
+
+          if (isTranslation) {
+            updateStatusNode(ctx.valueTextBox)
+          }
+
+          refreshSuggestion()
+        })
+        .catch(error => {
+          console.error(error)
+        })
       }
 
       break
   }
 }
 
-function updateStatusNode(ctx, isTranslation) {
-  ctx.valueTextBox.classList.remove('changed')
-  ctx.valueTextBox.classList.add('updated')
+function updateStatusNode(textBox) {
+  const statusNode = textBox.parentElement.parentElement.lastElementChild
 
-  refreshSuggestion()
+  statusNode.textContent = 'Saved!'
 
-  if (isTranslation) {
-    const statusNode = ctx.row.lastElementChild
-
-    statusNode.textContent = 'Saved!'
-
-    setTimeout(() => {
-      statusNode.textContent = ''
-    }, 3000)
-  }
+  setTimeout(() => {
+    statusNode.textContent = ''
+  }, 3000)
 }
 
-function resetTextBoxStyle(containerId) {
-  const textBoxes = document.getElementById(containerId).getElementsByTagName('input')
+function setGlobalDictionary(translations, dictionary, terminology) {
+  function setGlobalDictionaryInternal(key, value, section) {
+    if (value.indexOf('|') > 0) return
 
-  for (let i = 0; i < textBoxes.length; i++) {
-    const textBox = textBoxes[i]
+    if (regexWholeWord.test(key)) {
+      if (getValueByKey(globalDictionary, key) !== undefined) {
+        console.log(`Duplicated translation '${key}' on ${section}: ${getValueByKey(globalDictionary, key)} vs ${value}`)
+      }
 
-    textBox.classList.remove('changed')
-    textBox.classList.remove('updated')
+      globalDictionary[key] = value
+    } else {
+      if (getValueByKey(globalPhrases, key) !== undefined) {
+        console.log(`Duplicated translation '${key}' on ${section}: ${getValueByKey(globalPhrases, key)} vs ${value}`)
+      }
+
+      globalPhrases[key] = value
+    }
   }
-}
 
-function setGlobalDictionary(translations, dictionary) {
   for (let key in translations) {
     if (regexWholeWord.test(key)) {
       globalDictionary[key] = translations[key]
@@ -336,83 +309,74 @@ function setGlobalDictionary(translations, dictionary) {
   }
 
   for (let key in dictionary) {
-    if (regexWholeWord.test(key)) {
-      if (getValueByKey(globalDictionary, key) !== undefined) {
-        console.log(`Duplicated translation '${key}': ${getValueByKey(globalDictionary, key)} vs ${dictionary[key]}`)
-      }
+    setGlobalDictionaryInternal(key, dictionary[key], 'dictionary')
+  }
 
-      globalDictionary[key] = dictionary[key]
-    } else {
-      if (getValueByKey(globalPhrases, key) !== undefined) {
-        console.log(`Duplicated translation '${key}': ${getValueByKey(globalPhrases, key)} vs ${dictionary[key]}`)
-      }
-
-      globalPhrases[key] = dictionary[key]
-    }
+  for (let key in terminology) {
+    setGlobalDictionaryInternal(key, terminology[key], 'terminology')
   }
 }
 
 function getCategories(categories, translations) {
   const items = []
-  let totalKeys = 0
-  let totalTranslatedKeys = 0
+  let totalItemCount = 0
+  let totalTranslatedItemCount = 0
 
   for (let category in categories) {
-    // Ignore prototype applications.
-    if (globalData.prototypeApplications.indexOf(category.replace('applications/', '')) !== -1) continue
+    const isPrototype = globalData.prototypeApplications.indexOf(category.replace('applications/', '')) !== -1
 
-    const categoryKeys = Object.keys(categories[category]).length
-    let translatedKeys = 0
+    // Ignore prototype application category.
+    if (IGNORE_PROTOTYPE && isPrototype) continue
 
+    const categoryItemCount = Object.keys(categories[category]).length
+
+    // Ignore empty category.
+    if (categoryItemCount === 0) continue
+
+    let categoryTranslatedItemCount = 0
+
+    // Calculate item count of a category.
     for (let key in categories[category]) {
-      totalKeys++
+      totalItemCount++
 
       if (translations[key] !== undefined) {
-        totalTranslatedKeys++
-        translatedKeys++
+        totalTranslatedItemCount++
+        categoryTranslatedItemCount++
       }
     }
 
-    if (categoryKeys > 0) {
-      items.push(
-        {
-          group: category,
-          isPrototype: globalData.prototypeApplications.indexOf(category.replace('applications/', '')) !== -1,
-          percent: computePercent(translatedKeys, categoryKeys)
-        }
-      )
-    }
+    items.push(
+      {
+        group: category,
+        isPrototype: isPrototype,
+        percent: computePercent(categoryTranslatedItemCount, categoryItemCount)
+      }
+    )
   }
 
-  const totalPercent = computePercent(totalTranslatedKeys, totalKeys)
+  const totalPercent = computePercent(totalTranslatedItemCount, totalItemCount)
 
   return {totalPercent, items}
 }
 
 function search(options) {
-  resetTextBoxStyle('translationList')
+  forEachTextBoxes('translationList', textBox => resetTextBoxStyle(textBox))
+
+  if (!Number.isInteger(vm.searchForm.filterLength)) {
+    vm.searchForm.filterLength = DEFAULT_FILTER_LENGTH
+    options.filterLength = DEFAULT_FILTER_LENGTH
+  }
+
+  setLocationHash(options)
 
   let promise
 
-  if (options.category !== 'all') {
-    setLocationHash({
-      category: options.category,
-      filterLength: options.filterLength
-    })
-
+  if (options.category !== DEFAULT_CATEGORY) {
     promise = searchCategory(
       options.category,
       options.filterLength
     )
   } else {
-    setLocationHash({
-      category: 'all',
-      text: options.text,
-      isWord: options.isWord,
-      type: options.type,
-      filterLength: options.filterLength
-    })
-
     promise = searchText(
       options.text,
       options.isWord,
@@ -432,18 +396,17 @@ function search(options) {
 }
 
 function searchText(text, isWord, type, filterLength) {
-  const escapedText = type === 'regex' ? text : escapeRegExp(text)
-  const regexSearch = isWord ? new RegExp(`^(${pluralize(escapedText, 1)}|${pluralize(escapedText)})$`, 'gi') : new RegExp(escapedText, 'gi')
-
   if (text.length < 2) {
     return Promise.resolve({
-      category: 'all',
+      category: DEFAULT_CATEGORY,
       filteredCount: 0,
       totalCount: 0,
       items: []
     })
   }
 
+  const escapedText = type === 'regex' ? text : escapeRegExp(text)
+  const regexSearch = isWord ? new RegExp(`^(${pluralize(escapedText, 1)}|${pluralize(escapedText)})$`, 'gi') : new RegExp(escapedText, 'gi')
   const results = []
   const resultIndexes = {}
   let resultIndex = 0
@@ -452,50 +415,49 @@ function searchText(text, isWord, type, filterLength) {
 
   for (let category in globalData.categories) {
     for (let key in globalData.categories[category]) {
-      if (regexSearch.test(key)) {
-        totalResultCount++
+      if (!regexSearch.test(key)) continue
 
-        if (key.length > filterLength) continue
+      totalResultCount++
 
-        // New item.
-        if (resultIndexes[key] === undefined) {
-          const item = {
-            key: encodeHTML(key).replace(regexSearch, '<span>$&</span>'),
-            value: globalData.translations[key],
-            category: category,
-            suggestion: isWord ? '' : getSuggestion(key)
-          }
+      if (key.length > filterLength) continue
 
-          item.isTextarea = isTextarea(item)
-          item.textareaRows = getTextareaRows(item)
+      resultCount++
 
-          results.push(item)
+      // New item.
+      if (resultIndexes[key] === undefined) {
+        resultIndexes[key] = resultIndex
+        resultIndex++
 
-          resultIndexes[key] = resultIndex
-          resultIndex++
-        // Exists item.
-        } else {
-          results[resultIndexes[key]].category += ', ' + category
+        const item = {
+          key: encodeHTML(key).replace(regexSearch, '<span>$&</span>'),
+          value: globalData.translations[key],
+          suggestion: isWord ? '' : getSuggestion(key),
+          category: category
         }
 
-        resultCount++
+        setTextareaRowCount(item)
+
+        results.push(item)
+      // Exists item.
+      } else {
+        results[resultIndexes[key]].category += ', ' + category
       }
     }
   }
 
   return Promise.resolve({
-    category: 'all',
+    category: DEFAULT_CATEGORY,
     filteredCount: resultCount,
     totalCount: totalResultCount,
-    items: sortByItemKey(results)
+    items: sortByKey(results, 'key')
   })
 }
 
 function searchCategory(category, filterLength) {
-  const stringsInCateogry = globalData.categories[category]
+  const items = globalData.categories[category]
   const results = []
 
-  for (let key in stringsInCateogry) {
+  for (let key in items) {
     if (key.length > filterLength) continue
 
     const item = {
@@ -504,8 +466,7 @@ function searchCategory(category, filterLength) {
       suggestion: getSuggestion(key)
     }
 
-    item.isTextarea = isTextarea(item)
-    item.textareaRows = getTextareaRows(item)
+    setTextareaRowCount(item)
 
     results.push(item)
   }
@@ -513,26 +474,18 @@ function searchCategory(category, filterLength) {
   return Promise.resolve({
     category: category,
     filteredCount: results.length,
-    totalCount: Object.keys(stringsInCateogry).length,
-    items: sortByItemKey(results)
+    totalCount: Object.keys(items).length,
+    items: sortByKey(results, 'key')
   })
 }
 
 function deleteItem(section, key) {
-  const data = [{
+  const items = [{
     key: key,
     value: null
   }]
 
-  console.log(`Delete ${section} ${key}:`)
-  console.log(data) 
-
-  return fetch('/save/' + section, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
-  })
-    .then(checkStatus)
+  return saveToServer('Delete', section, key, items)
     .then(() => {
       delete globalData[section][key]
 
@@ -544,20 +497,12 @@ function deleteItem(section, key) {
 }
 
 function saveItem(section, key, value) {
-  const data = [{
+  const items = [{
     key: key,
     value: value
   }]
 
-  console.log(`Save ${section} '${key}':`)
-  console.log(data)
-
-  return fetch('/save/' + section, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
-  })
-    .then(checkStatus)
+  return saveToServer('Save', section, key, items)
     .then(() => {
       globalData[section][key] = value
 
@@ -572,34 +517,22 @@ function saveItem(section, key, value) {
 }
 
 function saveAllTranslationValuesInternal() {
-  const data = []
+  const items = []
 
-  const textBoxes = document.getElementById('translationList').getElementsByTagName('input')
+  forEachTextBoxes('translationList', textBox => {
+    if (!textBox.classList.contains('changed') || textBox.value === '') return
 
-  for (let i = 0; i < textBoxes.length; i++) {
-    const textBox = textBoxes[i]
+    const key = textBox.parentElement.parentElement.firstElementChild.textContent
 
-    if (textBox.classList.contains('changed') && textBox.value !== '') {
-      const key = textBox.parentElement.parentElement.firstElementChild.textContent
-
-      data.push({
-        key: key,
-        value: textBox.value
-      })
-    }
-  }
-
-  console.log(`Save all to translations:`)
-  console.log(data)
-
-  return fetch('/save/translations', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
+    items.push({
+      key: key,
+      value: textBox.value
+    })
   })
-    .then(checkStatus)
+
+  return saveToServer('Save', 'translations', DEFAULT_CATEGORY, items)
     .then(() => {
-      data.forEach(item => {
+      items.forEach(item => {
         globalData.translations[item.key] = item.value
 
         if (regexWholeWord.test(item.key)) {
@@ -669,36 +602,104 @@ function getSuggestion(str) {
     }
   }
 
-  return replacePunctuation(results.join('').trim())
+  return toChinesePunctuation(results.join('').trim())
 }
 
 function refreshSuggestion() {
   Vue.nextTick(() => {
-    const rows = document.getElementById('translationList').getElementsByTagName('tr')
+    forEachElements('translationList', 'tr', element => {
+      const key = element.firstElementChild.textContent
 
-    for (let i = 1; i < rows.length; i++) {
-      const key = rows[i].firstElementChild.textContent
-      rows[i].children[3].textContent = getSuggestion(key)
-    }
+      element.children[3].textContent = getSuggestion(key)
+    })
   })
 }
 
-function isTextarea(item) {
+function setTextareaRowCount(item) {
+  const keyRowCount = Math.ceil(decodeHTML(item.key).length / DEFAULT_FILTER_LENGTH)
+  let rowCount
+
   if (item.value !== undefined) {
-    return dbcsByteLength(item.value) > 64
+    const valueRowCount = Math.ceil(dbcsByteLength(item.value) / DEFAULT_FILTER_LENGTH - 2)
+
+    rowCount = Math.max(keyRowCount, valueRowCount)
   } else {
-    return decodeHTML(item.key).length > 66
+    rowCount = keyRowCount
+  }
+
+  item.isTextarea = rowCount > 1
+  item.textareaRowCount = rowCount
+}
+
+function setLocationHash(options) {
+  const type = options.type || 'text'
+  const text = encodeURI(options.text || '')
+
+  window.location.hash = `#${options.category}|${options.isWord ? 'word' : 'any'}|${type}|${options.filterLength}|${text}`
+}
+
+function parseLocationHash() {
+  const hash = decodeURI(window.location.hash)
+  const regex = /^#(all|.+)\|(any|word)\|(text|regex)\|(\d+)\|(.*)$/g
+  const matches = regex.exec(hash) || [ null, DEFAULT_CATEGORY, 'any', 'text', DEFAULT_FILTER_LENGTH, '']
+
+  return {
+    category: matches[1],
+    isWord: matches[2] === 'word',
+    type: matches[3],
+    filterLength: parseInt(matches[4].toString()),
+    text: matches[5]
   }
 }
 
-function getTextareaRows(item) {
-  const keyRows = Math.ceil(decodeHTML(item.key).length / 66)
+// Get context info about key, value, suggestion and tr element, text box element.
+function getRowContext(target) {
+  const row = target.parentElement.parentElement
+  const key = row.firstElementChild.textContent
+  let valueTextBox = null
+  let value = null
+  let suggestion = null
 
-  if (item.value !== undefined) {
-    const valueRows = Math.ceil(dbcsByteLength(item.value) / 64)
-
-    return Math.max(keyRows, valueRows)
-  } else {
-    return keyRows
+  // Target is text box.
+  if ((target.tagName === 'INPUT' && target.getAttribute('type') === 'text') || target.tagName === 'TEXTAREA') {
+    valueTextBox = target
+    value = target.value
+  // Target is action links.
+  } else if (target.textContent !== '✕') {
+    valueTextBox = target.parentElement.parentElement.children[1].firstElementChild
+    suggestion = target.parentElement.parentElement.children[3].textContent
   }
+
+  return {
+    row: row,
+    key: key,
+    value: value,
+    valueTextBox: valueTextBox,
+    suggestion: suggestion
+  }
+}
+
+function saveToServer(action, section, key, items, callback) {
+  console.log(`${action} ${section} ${key}:`)
+  console.log(items) 
+
+  return fetch('/save/' + section, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(items)
+  })
+    .then(response => {
+      if (response.status >= 200 && response.status < 300) {
+        return response
+      } else {
+        const error = new Error(response.statusText)
+
+        error['response'] = response
+
+        throw error
+      }
+    })
+    .then(() => {
+      callback()
+    })  
 }
