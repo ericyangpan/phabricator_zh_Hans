@@ -679,7 +679,7 @@ function getRowContext(target) {
   }
 }
 
-function saveToServer(action, section, key, items, callback) {
+function saveToServer(action, section, key, items) {
   console.log(`${action} ${section} ${key}:`)
   console.log(items) 
 
@@ -699,7 +699,4 @@ function saveToServer(action, section, key, items, callback) {
         throw error
       }
     })
-    .then(() => {
-      callback()
-    })  
 }
