@@ -40,18 +40,18 @@ const vm = new Vue({
     showCategory() {
       this.category.show = !this.category.show
     },
-    searchCategory(event) {
+    search(event) {
       this.category.show = false
       this.dialog.show = false
-      this.searchForm.text = ''
-      this.searchForm.category = event.target.textContent
 
-      search(this.searchForm)
-    },
-    searchText() {
-      this.category.show = false
+      if (event.target.tagName === 'A') {
+        this.searchForm.category = event.target.textContent
+        this.searchForm.text = ''
+      } else if (event.target.name !== 'filterLength') {
+        this.searchForm.category = DEFAULT_CATEGORY
+      }
 
-      search(this.searchForm)
+      searchInternal(this.searchForm)
     },
     showDialog(event) {
       const title = event.target.textContent
@@ -216,7 +216,9 @@ const vmt = new Vue({
 function locationHashChanged() {
   const options = parseLocationHash()
 
-  search(options)
+  vm.searchForm = options
+
+  searchInternal(options)
 }
 
 function inputInternal(event, section) {
@@ -359,7 +361,7 @@ function getCategories(categories, translations) {
   return {totalPercent, items}
 }
 
-function search(options) {
+function searchInternal(options) {
   forEachTextBoxes('translationList', textBox => resetTextBoxStyle(textBox))
 
   if (!Number.isInteger(vm.searchForm.filterLength)) {
@@ -530,7 +532,7 @@ function saveAllTranslationValuesInternal() {
     })
   })
 
-  return saveToServer('Save', 'translations', DEFAULT_CATEGORY, items)
+  return saveToServer('Save', 'translations', 'all', items)
     .then(() => {
       items.forEach(item => {
         globalData.translations[item.key] = item.value
