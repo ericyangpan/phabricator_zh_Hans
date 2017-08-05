@@ -2,12 +2,17 @@
 
 词 | 翻译
 -- | -----------
+Almanac | Almanac
 Differential | Differential
+Legalpad | Legalpad
+Meme | Meme
+Mock | Mock
 Phabricator | Phabricator
 Phame | Phame
 Phortune | Phortune
 Phriction | Phriction
 Phurl | Phurl
+Ponder | Ponder
 Remarkup | Remarkup
 URI | URI
 account | 帐户
@@ -20,6 +25,7 @@ award | 授予|获得
 badge | 徽章
 collation | 字符序
 config | 配置
+creation | 创建
 daemon | 守护进程
 default | 默认
 delete | 删除
@@ -33,10 +39,12 @@ include | 包含
 invitee | 受邀人
 is required | 是必填的
 job | 作业
+launch | 启动
 monogram | 花押字
 multi-factor | 多因素
 notification | 通知
 open status | 开放状态
+parent task | 父任务
 permission | 权限
 post | 帖子|发送|发布
 preference | 偏好

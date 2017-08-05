@@ -10,7 +10,7 @@
     "\n": "\n",
     "[^.]\\.(?!\\.|ics|%s)": "(?! )。(?! )",
     "<.+>": "(?! )<.+>(?! )",
-    "\\((?!s).*?\\)": "（.+?）|\\(\\)",
+    "\\((?!s).*?\\)": "（.+?）|\\(\\)|\\(<.+?>\\)",
     "\".+\"": "(?! )“.+”(?! )",
     "'.+'": "(?! )‘.+’(?! )",
     "\\*\\*[\\S\\s]+?\\*\\*": "\\*\\*[\\S\\s]+?\\*\\*",
@@ -19,9 +19,18 @@
     "»": "»"
   },
   "exceptions": {
-    "\\((?!s).*?\\)": [
-      "%s DIFF LINK(S)",
-      "%s ERROR(S)"
+    ",": [
+      "ou=People, dc=example, dc=com",
+      "user=%s, should_verify=%s",
+      "user=%s, verified=%s, primary=%s, should_verify=%s",
+      "The first cats evolved on the savanah about 8,000 years ago."
+    ],
+    ":": [
+      "ldaps://ldaps.example.com/",
+      "JIRA base URI should include protocol (like \"https://\").",
+      "12 Hour, 2:34 PM",
+      "24 Hour, 14:34",
+      "Add \"Re:\" Prefix"
     ],
     "[^.]\\.(?!\\.|ics|%s)": [
       "ldap.example.com",
@@ -32,20 +41,15 @@
       "Whitelist 1.2.*.*",
       "Whitelist 1.2.3.*",
       "PHP 7.0 Not Supported",
-      "Highlight httpd.conf as \"apacheconf\"."
+      "Highlight httpd.conf as \"apacheconf\".",
+      "Optimizing table \"%s\".\"%s\"..."
     ],
-    ":": [
-      "ldaps://ldaps.example.com/",
-      "JIRA base URI should include protocol (like \"https://\").",
-      "12 Hour, 2:34 PM",
-      "24 Hour, 14:34",
-      "Add \"Re:\" Prefix"
+    "<.+>": [
+      "<DEAD> %s"
     ],
-    ",": [
-      "ou=People, dc=example, dc=com",
-      "user=%s, should_verify=%s",
-      "user=%s, verified=%s, primary=%s, should_verify=%s",
-      "The first cats evolved on the savanah about 8,000 years ago."
+    "\\((?!s).*?\\)": [
+      "%s DIFF LINK(S)",
+      "%s ERROR(S)"
     ]
   }
 }
