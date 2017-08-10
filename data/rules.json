@@ -20,6 +20,7 @@
   },
   "exceptions": {
     ",": [
+      "Go Juice",
       "ou=People, dc=example, dc=com",
       "user=%s, should_verify=%s",
       "user=%s, verified=%s, primary=%s, should_verify=%s",
@@ -42,7 +43,8 @@
       "Whitelist 1.2.3.*",
       "PHP 7.0 Not Supported",
       "Highlight httpd.conf as \"apacheconf\".",
-      "Optimizing table \"%s\".\"%s\"..."
+      "Optimizing table \"%s\".\"%s\"...",
+      "US East (N. Virginia, Older default endpoint)"
     ],
     "<.+>": [
       "<DEAD> %s"
