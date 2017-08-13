@@ -4,6 +4,9 @@
 -- | -----------
 Almanac | Almanac
 Differential | Differential
+Doorkeeper | Doorkeeper
+Drydock | Drydock
+Herald | Herald
 Legalpad | Legalpad
 Meme | Meme
 Mock | Mock
@@ -49,7 +52,7 @@ permission | 权限
 post | 帖子|发送|发布
 preference | 偏好
 priority | 优先级
-profile | 档案
+profile | 档案|分析
 remove | 移除
 repository | 仓库|repository
 retention policy | 保留策略
