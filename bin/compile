@@ -9,6 +9,7 @@ const rules = require('../lib/rules')
 const sortKeys = require('../lib/sortkeys')
 
 const CALCULATE_TEST_CASE = false
+const LENGTH_OF_SHORT_ITEMS = 66
 
 // Initialize data file paths.
 const i18nFilesPath = 'data/phabricator/i18n_files.json'
@@ -96,7 +97,6 @@ function computeTranslationSummary(translations) {
   const i18nFilesData = jsonfile.readFileSync(i18nFilesPath)
   const prototypeApplicationsData = jsonfile.readFileSync(prototypeApplicationsPath)
 
-  const lengthOfShortItems = 66
   const categories = {}
   const items = {}
 
@@ -159,7 +159,7 @@ function computeTranslationSummary(translations) {
 
         categoryTotalCount++
 
-        if (item.string.length <= lengthOfShortItems) {
+        if (item.string.length <= LENGTH_OF_SHORT_ITEMS) {
           categoryTotalCountOfShortItems++
         }
 
@@ -168,7 +168,7 @@ function computeTranslationSummary(translations) {
         if (translation !== undefined) {
           categoryTranslationCount++
 
-          if (item.string.length <= lengthOfShortItems) {
+          if (item.string.length <= LENGTH_OF_SHORT_ITEMS) {
             categoryTranslationCountOfShortItems++
           }
         }
@@ -181,7 +181,7 @@ function computeTranslationSummary(translations) {
           totalCountWithoutPrototype++
         }
 
-        if (item.string.length <= lengthOfShortItems) {
+        if (item.string.length <= LENGTH_OF_SHORT_ITEMS) {
           totalCountOfShortItems++
         }
 
@@ -203,7 +203,7 @@ function computeTranslationSummary(translations) {
   for (let key in translations) {
     totalTranslationCount++
 
-    if (key.length <= lengthOfShortItems) {
+    if (key.length <= LENGTH_OF_SHORT_ITEMS) {
       totalTranslationCountOfShortItems++
     }
   }
