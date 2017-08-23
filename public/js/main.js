@@ -501,7 +501,7 @@ function deleteItem(section, key) {
 function saveItem(section, key, value) {
   const items = [{
     key: key,
-    value: toChinesePunctuation(value)
+    value: value
   }]
 
   return saveToServer('Save', section, key, items)
@@ -528,7 +528,7 @@ function saveAllTranslationValuesInternal() {
 
     items.push({
       key: key,
-      value: toChinesePunctuation(textBox.value)
+      value: textBox.value
     })
   })
 
