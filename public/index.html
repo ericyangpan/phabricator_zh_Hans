@@ -98,7 +98,7 @@
           <th style="width:4%">Status</th>
         </thead>
         <tbody>
-          <tr v-for="item in items" :class="item.value ? '' : 'highlight'">
+          <tr v-for="item in items" :class="item.highlight ? '' : 'highlight'">
             <td v-html="item.key" :title="item.category"></td>
             <td class="center">
               <input v-if="!item.isTextarea" type="text" size="66" :value="item.value" @input="input" @keydown="processValueKey">
