@@ -8,7 +8,7 @@
     "\\?": "(?! )？(?! )",
     "\\.{3}": "(?! )…(?! )",
     "\n": "\n",
-    "[^.]\\.(?!\\.|ics|%s)": "(?! )。(?! )",
+    "[^.]\\.(?!\\w|\\d|\\.|%|\\*|\")": "(?! )。(?! )",
     "<.+>": "(?! )<.+>(?! )",
     "\\((?!s).*?\\)": "（.+?）|\\(\\)|\\(<.+?>\\)",
     "\".+\"": "(?! )“.+”(?! )",
@@ -19,6 +19,10 @@
     "»": "»"
   },
   "exceptions": {
+    "!": [
+      "Disable Email \"!accept\" Action",
+      "Enable Email \"!accept\" Action"
+    ],
     ",": [
       "Go Juice",
       "ou=People, dc=example, dc=com",
@@ -33,17 +37,7 @@
       "24 Hour, 14:34",
       "Add \"Re:\" Prefix"
     ],
-    "[^.]\\.(?!\\.|ics|%s)": [
-      "ldap.example.com",
-      "ldaps://ldaps.example.com/",
-      "ou=People, dc=example, dc=com",
-      "Replaced by 'phid.query'.",
-      "Deprecated mysql.host Format",
-      "Whitelist 1.2.*.*",
-      "Whitelist 1.2.3.*",
-      "PHP 7.0 Not Supported",
-      "Highlight httpd.conf as \"apacheconf\".",
-      "Optimizing table \"%s\".\"%s\"...",
+    "[^.]\\.(?!\\w|\\d|\\.|%|\\*|\")": [
       "US East (N. Virginia, Older default endpoint)"
     ],
     "<.+>": [
