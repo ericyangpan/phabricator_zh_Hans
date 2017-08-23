@@ -9,7 +9,8 @@ const sectionPaths = {
   i18nFiles: ['data/phabricator/i18n_files.json', 'data/libphutil/i18n_files.json'],
   prototypeApplications: 'data/prototype_applications.json',
   terminology: 'data/terminology.json',
-  translations: 'data/translations.json'
+  translations: 'data/translations.json',
+  similars: 'data/similars.json'
 }
 
 // If show libphutil translation in the UI.
@@ -31,6 +32,8 @@ app.get('/data', (req, res) => {
       const libphutili18nFiles = jsonfile.readFileSync(sectionPaths[section][1])
 
       data.categories = sortKeys(getCategories(phabricatori18nFiles, libphutili18nFiles))
+    } else if (section === 'similars') {
+      data[section] = getSimilars(jsonfile.readFileSync(sectionPaths[section]), data.translations)
     } else {
       data[section] = sortKeys(jsonfile.readFileSync(sectionPaths[section]))
     }
@@ -115,4 +118,31 @@ function buildCategories(categories, i18nFiles, prefix) {
       categories[category][item.string] = ''
     })
   }
+}
+
+function getSimilars(similars, translations) {
+  const results = []
+  let groupTranslated
+
+  for (let distance in similars) {
+    for (let word in similars[distance]) {
+      for (let key in similars[distance][word]) {
+        groupTranslated = true
+
+        for (let words of similars[distance][word][key]) {
+          if (translations[words] === undefined) {
+            groupTranslated = false
+
+            break
+          }
+        }
+
+        if (!groupTranslated) {
+          results.push(similars[distance][word][key])
+        }
+      }
+    }
+  }
+
+  return results
 }

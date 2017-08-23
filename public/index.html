@@ -22,10 +22,16 @@
           Word
           <input type="radio" name="searchType" value="text" checked="checked" v-model="searchForm.type"> Text
           <input type="radio" name="searchType" value="regex" v-model="searchForm.type"> RegExp
-          <input type="text" name="filterLength" class="center" size="3" v-model.number="searchForm.filterLength" @keyup.enter="search"> Length Filter
+          <input type="text" name="filterLength" class="center" size="2" v-model.number="searchForm.filterLength" @keyup.enter="search"> Length Filter
           <button type="button" @click="saveAllTranslationValues">Save All Values</button>
         </div>
         <ul class="navbar-nav nav-right">
+          <li></li>
+          <li>
+            <a href="#" @click.prevent="loadSimilarPage(-1)">&lt;</a>
+            Similar:{{ searchForm.similarPageNumber }}
+            <a href="#" @click.prevent="loadSimilarPage(1)">&gt;</a>
+          </li>
           <li><a href="#" @click.prevent="showDialog">Dictionary</a></li>
           <li><a href="#" @click.prevent="showDialog">Terminology</a></li>
         </ul>

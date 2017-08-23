@@ -2,11 +2,13 @@ const IGNORE_PROTOTYPE = true
 const IS_SORT_BY_PERCENT = true
 const DEFAULT_FILTER_LENGTH = 66
 const DEFAULT_CATEGORY = 'N/A'
+const SIMILAR_PAGE_SIZE = 10
 
 const regexWholeWord = /^\w+$/i
 const globalDictionary = {}
 const globalPhrases = {}
 let globalData
+let maxSimilarPageCount
 
 const vm = new Vue({
   el: '#app',
@@ -16,7 +18,8 @@ const vm = new Vue({
       text: '',
       isWord: false,
       type: 'text',
-      filterLength: DEFAULT_FILTER_LENGTH
+      filterLength: DEFAULT_FILTER_LENGTH,
+      similarPageNumber: 0
     },
     category: {
       show: false,
@@ -43,6 +46,7 @@ const vm = new Vue({
     search(event) {
       this.category.show = false
       this.dialog.show = false
+      this.searchForm.similarPageNumber = 0
 
       if (event.target.tagName === 'A') {
         this.searchForm.category = event.target.textContent
@@ -139,6 +143,15 @@ const vm = new Vue({
     },
     processValueKey(event) {
       processValueKeyInternal(event, this.section)
+    },
+    loadSimilarPage(delta) {
+      if (this.searchForm.similarPageNumber + delta === 0) return
+      if (this.searchForm.similarPageNumber + delta === maxSimilarPageCount) return
+
+      this.searchForm.similarPageNumber += delta
+      this.searchForm.text = ''
+
+      searchInternal(this.searchForm)
     }
   },
   created() {
@@ -146,6 +159,7 @@ const vm = new Vue({
       .then(response => response.json())
       .then(data => {
         globalData = data
+        maxSimilarPageCount = Math.ceil(globalData.similars.length / SIMILAR_PAGE_SIZE)
 
         setGlobalDictionary(globalData.translations, globalData.dictionary, globalData.terminology)
 
@@ -373,7 +387,11 @@ function searchInternal(options) {
 
   let promise
 
-  if (options.category !== DEFAULT_CATEGORY) {
+  if (options.similarPageNumber !== 0) {
+    promise = searchSimilar(
+      options.similarPageNumber
+    )
+  } else if (options.category !== DEFAULT_CATEGORY) {
     promise = searchCategory(
       options.category,
       options.filterLength
@@ -482,6 +500,42 @@ function searchCategory(category, filterLength) {
     filteredCount: results.length,
     totalCount: Object.keys(items).length,
     items: sortByKey(results, 'key')
+  })
+}
+
+function searchSimilar(pageNumber) {    
+  const from = SIMILAR_PAGE_SIZE * (pageNumber - 1)
+  const to = SIMILAR_PAGE_SIZE * pageNumber
+  const results = []
+
+  for (let i = from; i < to; i++) {
+    const length = globalData.similars[i].length
+
+    for (let j = 0; j < length; j++) {
+      const key = globalData.similars[i][j]
+      const item = {
+        key: key,
+        value: globalData.translations[key],
+        highlight: i % 2 === 1,
+        suggestion: getSuggestion(key)
+      }
+
+      setTextareaRowCount(item)
+
+      results.push(item)
+    }
+  }
+
+  vmt.category = DEFAULT_CATEGORY
+  vmt.filteredCount = results.length
+  vmt.totalCount = results.length
+  vmt.items = results
+
+  return Promise.resolve({
+    category: DEFAULT_CATEGORY,
+    filteredCount: results.length,
+    totalCount: results.length,
+    items: results
   })
 }
 
@@ -643,20 +697,21 @@ function setLocationHash(options) {
   const type = options.type || 'text'
   const text = encodeURI(options.text || '')
 
-  window.location.hash = `#${options.category}|${options.isWord ? 'word' : 'any'}|${type}|${options.filterLength}|${text}`
+  window.location.hash = `#${options.category}|${options.isWord ? 'word' : 'any'}|${type}|${options.filterLength}|${options.similarPageNumber}|${text}`
 }
 
 function parseLocationHash() {
   const hash = decodeURI(window.location.hash)
-  const regex = /^#(all|.+)\|(any|word)\|(text|regex)\|(\d+)\|(.*)$/g
-  const matches = regex.exec(hash) || [ null, DEFAULT_CATEGORY, 'any', 'text', DEFAULT_FILTER_LENGTH, '']
+  const regex = /^#(all|.+)\|(any|word)\|(text|regex)\|(\d+)\|(\d+)\|(.*)$/g
+  const matches = regex.exec(hash) || [ null, DEFAULT_CATEGORY, 'any', 'text', DEFAULT_FILTER_LENGTH, 0, '']
 
   return {
     category: matches[1],
     isWord: matches[2] === 'word',
     type: matches[3],
     filterLength: parseInt(matches[4].toString()),
-    text: matches[5]
+    similarPageNumber: parseInt(matches[5].toString()),
+    text: matches[6]
   }
 }
 
