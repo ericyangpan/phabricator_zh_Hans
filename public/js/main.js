@@ -609,7 +609,9 @@ function getSuggestion(str) {
 
 function refreshSuggestion() {
   Vue.nextTick(() => {
-    forEachElements('translationList', 'tr', element => {
+    forEachElements('translationList', 'tr', (element, i) => {
+      if (i === 0) return
+
       const key = element.firstElementChild.textContent
 
       element.children[3].textContent = getSuggestion(key)

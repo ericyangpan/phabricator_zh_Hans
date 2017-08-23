@@ -65,7 +65,7 @@ function forEachElements(containerId, tagName, func) {
   const elements = document.getElementById(containerId).getElementsByTagName(tagName)
 
   for (let i = 0; i < elements.length; i++) {
-    func(elements[i])
+    func(elements[i], i)
   }
 }
 
