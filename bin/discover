@@ -1,0 +1,94 @@
+#!/usr/bin/env node
+
+const jsonfile = require('jsonfile')
+const wordLevenshtein = require('../lib/wordlevenshtein')
+
+const i18nFilesPath = 'data/phabricator/i18n_files.json'
+const similarsPath = 'data/similars.json'
+
+const DISCOVER_TEST_CASE = false
+
+const i18nFilesData = jsonfile.readFileSync(i18nFilesPath)
+
+const globalStrings = getGlobalStrings(i18nFilesData)
+const globalStringsLength = Object.keys(globalStrings).length
+const totalCount = globalStringsLength * globalStringsLength
+const resultStrings = {}
+
+let lastPercent = 0
+let count = 0
+
+for (let d = 1; d < 3; d++) {
+  resultStrings['distance' + d] = {}
+
+  for (let w = 3; w < 25; w++) {
+    resultStrings['distance' + d]['word' + w] = getSimilarStrings(globalStrings, w, d)
+  }  
+}
+
+// Set output JSON file indent.
+jsonfile.spaces = 2
+jsonfile.writeFileSync(similarsPath, resultStrings)
+
+function getGlobalStrings(i18nFilesData) {
+  const resultStrings = {}
+
+  for (let file in i18nFilesData.files) {
+    if (!DISCOVER_TEST_CASE && file.endsWith('TestCase.php')) continue
+  
+    const fileId = i18nFilesData.files[file]
+    const strings = i18nFilesData.strings[fileId] || []
+  
+    strings.forEach(item => {
+      resultStrings[item.string] = []
+    })
+  }
+
+  return resultStrings
+}
+
+function getSimilarStrings(globalStrings, wordCount, distance, outputFunc) {
+  if (wordCount < 3) return null
+  if (distance < 1 || distance > wordCount - 2) return null
+  
+  const resultStrings = {}
+
+  for (let str0 in globalStrings) {
+    if ((str0.match(/ /g) || []).length !== wordCount - 1) continue
+
+    for (let str1 in globalStrings) {
+      const d = wordLevenshtein.get(str0, str1)
+
+      if (d === distance) {
+        if (resultStrings[str0] === undefined) {
+          resultStrings[str0] = []
+          resultStrings[str0].push(str0)
+        }
+
+        if (resultStrings[str0].length > 1) {
+          const d = wordLevenshtein.get(resultStrings[str0][1], str1)
+          
+          if (d === distance) {
+            resultStrings[str0].push(str1)
+            delete globalStrings[str1]
+          }
+        } else {
+          resultStrings[str0].push(str1)
+          delete globalStrings[str1]
+        }
+      }
+
+      count++
+
+      const percent = Math.ceil(100 * count / totalCount)
+
+      if (percent !== lastPercent) {
+        console.log(percent + '%')
+
+        lastPercent = percent
+      }
+    }
+  }  
+
+  return resultStrings
+}
