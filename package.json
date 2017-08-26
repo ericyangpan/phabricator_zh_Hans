@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Phabricator zh_Hans Translation & Tools.",
   "main": "index.js",
+  "repository": "https://github.com/arielyang/phabricator_zh_Hans",
   "scripts": {
     "start": "node index.js"
   },
