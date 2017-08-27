@@ -51,6 +51,7 @@ notification | 通知
 open status | 开放状态
 parent task | 父任务
 permission | 权限
+policy | 策略
 post | 帖子|发送|发布
 preference | 偏好
 priority | 优先级
