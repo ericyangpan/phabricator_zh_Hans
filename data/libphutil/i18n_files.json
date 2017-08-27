@@ -124,6 +124,13 @@
     "filesystem/__tests__/FilesystemTestCase.php": "f84bb134e6470df1bf4a049b98019fb6",
     "filesystem/__tests__/PhutilDeferredLogTestCase.php": "ef2b18a04e4e8b38dbce718e8cea3636",
     "filesystem/__tests__/PhutilFileLockTestCase.php": "482ef6c94bd546103a4ea03d649421a9",
+    "filesystem/binary/__tests__/PhutilBinaryAnalyzerTestCase.php": "64f20a1c7cde32d15f2b588cdabecff0",
+    "filesystem/binary/PhutilBinaryAnalyzer.php": "c28f1b1810a8a2ab67988807a116ba4b",
+    "filesystem/binary/PhutilDiffBinaryAnalyzer.php": "67cf185e88cac74cb79fb45aec2cf153",
+    "filesystem/binary/PhutilGitBinaryAnalyzer.php": "6b0c8ed7a341cf19859f8197c4e7d2fe",
+    "filesystem/binary/PhutilMercurialBinaryAnalyzer.php": "addc7b37ff749b2b5e8d7d89a834498d",
+    "filesystem/binary/PhutilPygmentizeBinaryAnalyzer.php": "7c8dbbeb7dbdf20ef2c22f39b4548222",
+    "filesystem/binary/PhutilSubversionBinaryAnalyzer.php": "88658974b002ca0ea496b6700e30a392",
     "filesystem/FileFinder.php": "469f3932b37a696b7a9bccf2d9ae1cd4",
     "filesystem/FileList.php": "1ec973e59f621af8e724ae8673fd1188",
     "filesystem/Filesystem.php": "19c5282e6d8b606836b84ca22f3fcd73",
@@ -317,7 +324,7 @@
     "parser/__tests__/PhutilQueryStringParserTestCase.php": "64bd993cf2d591f8405b4a8239dda07b",
     "parser/__tests__/PhutilSimpleOptionsTestCase.php": "7ce8a81fe0a9fe86d4cbdc38dde6680d",
     "parser/__tests__/PhutilTypeSpecTestCase.php": "bc2ebc8b5945967f9605b747f625c3f7",
-    "parser/__tests__/PhutilURITestCase.php": "66d95fbafe8d7af622dac958f2182170",
+    "parser/__tests__/PhutilURITestCase.php": "ce032d19c7ac16e92223ddb8f570115f",
     "parser/aast/api/AASTNode.php": "2b092449216b2079930160783142aa65",
     "parser/aast/api/AASTNodeList.php": "32cae9b71a8ce371ac5d3e173cfbd89c",
     "parser/aast/api/AASTToken.php": "63def30242cd1ce42f9cff7abc872215",
@@ -381,7 +388,7 @@
     "parser/PhutilQueryStringParser.php": "226280eade88f2ea5a9740fbaf730a71",
     "parser/PhutilSimpleOptions.php": "254cfd29bbac4faf75c298c3a8ad216b",
     "parser/PhutilTypeSpec.php": "c51a48ad7c621368c6916d0617f39e80",
-    "parser/PhutilURI.php": "81b957328b4dbb99dd24cea844fcecb7",
+    "parser/PhutilURI.php": "acb1390105383ad63a6dee30b72e36e5",
     "parser/xhpast/__tests__/PHPASTParserTestCase.php": "a5d61cfe4cc41e84ed8403b0de99ce45",
     "parser/xhpast/api/__tests__/XHPASTNodeTestCase.php": "d5bb60e8b8e1c6a29ce308f6f9abcd30",
     "parser/xhpast/api/__tests__/XHPASTTreeTestCase.php": "d8afb5da17c55d9e8c225ee1558a3f87",
@@ -478,143 +485,19 @@
     "xsprintf/xsprintf.php": "ba44e16cfb863bdbb0a8856ccebaef75"
   },
   "strings": {
-    "2d51d36e7614fb1808dcabe0c1c1a55b": [
+    "e4dd336304b1ec54452cae1daf9faee8": [
       {
-        "string": "Editor exited with an error code (#%d).",
-        "file": "/console/PhutilInteractiveEditor.php",
-        "line": 81,
+        "string": "Failed to open stream \"%s\" for reading.",
+        "file": "/aphront/requeststream/AphrontRequestStream.php",
+        "line": 57,
         "types": [
           null
         ]
       },
       {
-        "string": "Unable to launch an interactive text editor. Set the %s environment variable to an appropriate editor.",
-        "file": "/console/PhutilInteractiveEditor.php",
-        "line": 277,
-        "types": [
-          null
-        ]
-      }
-    ],
-    "285e281c3252480a571979895a5c518b": [
-      {
-        "string": "daemon overseer",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 41,
-        "types": []
-      },
-      {
-        "string": "Enable debug memory tracing.",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 52,
-        "types": []
-      },
-      {
-        "string": "Enable verbose activity logging.",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 56,
-        "types": []
-      },
-      {
-        "string": "Optional process label. Makes \"%s\" nicer, no behavioral effects.",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 63,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Reading daemon configuration from stdin...",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 94,
-        "types": []
-      },
-      {
-        "string": "You may not instantiate more than one Overseer per process.",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 108,
-        "types": []
-      },
-      {
-        "string": "Specified daemon PID directory ('%s') does not exist or is not writable by the daemon user!",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 124,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "You must specify at least one daemon to start!",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 132,
-        "types": []
-      },
-      {
-        "string": "Unable to fork!",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 151,
-        "types": []
-      },
-      {
-        "string": "Failed to create new process session!",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 158,
-        "types": []
-      },
-      {
-        "string": "Started new daemon overseer (with PID \"%s\").",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 165,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Unable to update PID file: %s.",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 351,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Overseer Memory Usage: %s KB",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 385,
-        "types": [
-          "number"
-        ]
-      },
-      {
-        "string": "Overseer (\"%d\") received signal %d (\"%s\").",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 432,
-        "types": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Signal handler called with unknown signal type (\"%d\")!",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 466,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Reloading daemons (triggered by overseer module \"%s\").",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 496,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Waking pool \"%s\" (triggered by overseer module \"%s\").",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 518,
+        "string": "Failed to append filter \"%s\" to input stream while processing a request with \"%s\" encoding.",
+        "file": "/aphront/requeststream/AphrontRequestStream.php",
+        "line": 82,
         "types": [
           null,
           null
@@ -639,25 +522,6 @@
           null,
           null,
           null,
-          null,
-          null
-        ]
-      }
-    ],
-    "e4dd336304b1ec54452cae1daf9faee8": [
-      {
-        "string": "Failed to open stream \"%s\" for reading.",
-        "file": "/aphront/requeststream/AphrontRequestStream.php",
-        "line": 57,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Failed to append filter \"%s\" to input stream while processing a request with \"%s\" encoding.",
-        "file": "/aphront/requeststream/AphrontRequestStream.php",
-        "line": 82,
-        "types": [
           null,
           null
         ]
@@ -1547,6 +1411,24 @@
         "types": []
       }
     ],
+    "2d51d36e7614fb1808dcabe0c1c1a55b": [
+      {
+        "string": "Editor exited with an error code (#%d).",
+        "file": "/console/PhutilInteractiveEditor.php",
+        "line": 81,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Unable to launch an interactive text editor. Set the %s environment variable to an appropriate editor.",
+        "file": "/console/PhutilInteractiveEditor.php",
+        "line": 277,
+        "types": [
+          null
+        ]
+      }
+    ],
     "65b9635e197b51f9819cdc734a30dd3c": [
       {
         "string": "Memory Usage: %s KB",
@@ -1686,6 +1568,131 @@
         "file": "/daemon/PhutilDaemonHandle.php",
         "line": 478,
         "types": [
+          null
+        ]
+      }
+    ],
+    "285e281c3252480a571979895a5c518b": [
+      {
+        "string": "daemon overseer",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 41,
+        "types": []
+      },
+      {
+        "string": "Enable debug memory tracing.",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 52,
+        "types": []
+      },
+      {
+        "string": "Enable verbose activity logging.",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 56,
+        "types": []
+      },
+      {
+        "string": "Optional process label. Makes \"%s\" nicer, no behavioral effects.",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 63,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Reading daemon configuration from stdin...",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 94,
+        "types": []
+      },
+      {
+        "string": "You may not instantiate more than one Overseer per process.",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 108,
+        "types": []
+      },
+      {
+        "string": "Specified daemon PID directory ('%s') does not exist or is not writable by the daemon user!",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 124,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "You must specify at least one daemon to start!",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 132,
+        "types": []
+      },
+      {
+        "string": "Unable to fork!",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 151,
+        "types": []
+      },
+      {
+        "string": "Failed to create new process session!",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 158,
+        "types": []
+      },
+      {
+        "string": "Started new daemon overseer (with PID \"%s\").",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 165,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Unable to update PID file: %s.",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 351,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Overseer Memory Usage: %s KB",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 385,
+        "types": [
+          "number"
+        ]
+      },
+      {
+        "string": "Overseer (\"%d\") received signal %d (\"%s\").",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 432,
+        "types": [
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Signal handler called with unknown signal type (\"%d\")!",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 466,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Reloading daemons (triggered by overseer module \"%s\").",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 496,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Waking pool \"%s\" (triggered by overseer module \"%s\").",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 518,
+        "types": [
+          null,
           null
         ]
       }
@@ -1888,6 +1895,43 @@
         "file": "/filesystem/__tests__/PhutilFileLockTestCase.php",
         "line": 170,
         "types": []
+      }
+    ],
+    "64f20a1c7cde32d15f2b588cdabecff0": [
+      {
+        "string": "%s on %s",
+        "file": "/filesystem/binary/__tests__/PhutilBinaryAnalyzerTestCase.php",
+        "line": 111,
+        "types": [
+          null,
+          null
+        ]
+      }
+    ],
+    "c28f1b1810a8a2ab67988807a116ba4b": [
+      {
+        "string": "Unable to determine the installed version of binary \"%s\". This version is required.",
+        "file": "/filesystem/binary/PhutilBinaryAnalyzer.php",
+        "line": 33,
+        "types": []
+      },
+      {
+        "string": "No analyzer is available for binary \"%s\".",
+        "file": "/filesystem/binary/PhutilBinaryAnalyzer.php",
+        "line": 58,
+        "types": [
+          null
+        ]
+      }
+    ],
+    "addc7b37ff749b2b5e8d7d89a834498d": [
+      {
+        "string": "Unknown Mercurial capability \"%s\".",
+        "file": "/filesystem/binary/PhutilMercurialBinaryAnalyzer.php",
+        "line": 70,
+        "types": [
+          null
+        ]
       }
     ],
     "469f3932b37a696b7a9bccf2d9ae1cd4": [
@@ -4524,7 +4568,7 @@
         "types": []
       }
     ],
-    "66d95fbafe8d7af622dac958f2182170": [
+    "ce032d19c7ac16e92223ddb8f570115f": [
       {
         "string": "protocol",
         "file": "/parser/__tests__/PhutilURITestCase.php",
@@ -4620,37 +4664,37 @@
       {
         "string": "protocol",
         "file": "/parser/__tests__/PhutilURITestCase.php",
-        "line": 162,
+        "line": 176,
         "types": []
       },
       {
         "string": "domain",
         "file": "/parser/__tests__/PhutilURITestCase.php",
-        "line": 163,
+        "line": 177,
         "types": []
       },
       {
         "string": "path",
         "file": "/parser/__tests__/PhutilURITestCase.php",
-        "line": 164,
+        "line": 178,
         "types": []
       },
       {
         "string": "protocol",
         "file": "/parser/__tests__/PhutilURITestCase.php",
-        "line": 167,
+        "line": 181,
         "types": []
       },
       {
         "string": "domain",
         "file": "/parser/__tests__/PhutilURITestCase.php",
-        "line": 168,
+        "line": 182,
         "types": []
       },
       {
         "string": "path",
         "file": "/parser/__tests__/PhutilURITestCase.php",
-        "line": 169,
+        "line": 183,
         "types": []
       }
     ],
@@ -5893,7 +5937,7 @@
         ]
       }
     ],
-    "81b957328b4dbb99dd24cea844fcecb7": [
+    "acb1390105383ad63a6dee30b72e36e5": [
       {
         "string": "Rejecting ambiguous URI \"%s\". This URI is not formatted or encoded properly.",
         "file": "/parser/PhutilURI.php",
@@ -5913,7 +5957,7 @@
       {
         "string": "Unable to convert URI \"%s\" into a standard URI because the path is relative. Standard URIs can not represent relative paths.",
         "file": "/parser/PhutilURI.php",
-        "line": 331,
+        "line": 335,
         "types": [
           null
         ]
