@@ -300,21 +300,15 @@ function updateStatusNode(textBox) {
 }
 
 function setGlobalDictionary(translations, dictionary, terminology) {
-  function setGlobalDictionaryInternal(key, value, section) {
-    if (value.indexOf('|') > 0) return
+  function setGlobalDictionaryInternal(obj, section) {
+    for (let key in obj) {
+      if (obj[key].indexOf('|') > 0) continue
 
-    if (regexWholeWord.test(key)) {
-      if (getValueByKey(globalDictionary, key) !== undefined) {
-        console.log(`Duplicated translation '${key}' on ${section}: ${getValueByKey(globalDictionary, key)} vs ${value}`)
+      if (regexWholeWord.test(key)) {
+        globalDictionary[key] = obj[key]
+      } else {
+        globalPhrases[key] = obj[key]
       }
-
-      globalDictionary[key] = value
-    } else {
-      if (getValueByKey(globalPhrases, key) !== undefined) {
-        console.log(`Duplicated translation '${key}' on ${section}: ${getValueByKey(globalPhrases, key)} vs ${value}`)
-      }
-
-      globalPhrases[key] = value
     }
   }
 
@@ -324,13 +318,8 @@ function setGlobalDictionary(translations, dictionary, terminology) {
     }
   }
 
-  for (let key in dictionary) {
-    setGlobalDictionaryInternal(key, dictionary[key], 'dictionary')
-  }
-
-  for (let key in terminology) {
-    setGlobalDictionaryInternal(key, terminology[key], 'terminology')
-  }
+  setGlobalDictionaryInternal(dictionary, 'dictionary')
+  setGlobalDictionaryInternal(terminology, 'terminology')
 }
 
 function getCategories(categories, translations) {
@@ -503,7 +492,7 @@ function searchCategory(category, filterLength) {
   })
 }
 
-function searchSimilar(pageNumber) {    
+function searchSimilar(pageNumber) {
   const from = SIMILAR_PAGE_SIZE * (pageNumber - 1)
   const to = SIMILAR_PAGE_SIZE * pageNumber
   const results = []
