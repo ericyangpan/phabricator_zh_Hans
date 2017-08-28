@@ -424,7 +424,7 @@ function searchText(text, isWord, type, filterLength) {
 
   for (let category in globalData.categories) {
     for (let key in globalData.categories[category]) {
-      if (!regexSearch.test(key)) continue
+      if (!regexSearch.test(key) && !regexSearch.test(globalData.translations[key])) continue
 
       totalResultCount++
 
