@@ -10,7 +10,7 @@ const sectionPaths = {
   prototypeApplications: 'data/prototype_applications.json',
   terminology: 'data/terminology.json',
   translations: 'data/translations.json',
-  similars: 'data/similars.json'
+  similars: 'data/discover/similars.json'
 }
 
 // If show libphutil translation in the UI.
@@ -124,22 +124,20 @@ function getSimilars(similars, translations) {
   const results = []
   let groupTranslated
 
-  for (let distance in similars) {
-    for (let word in similars[distance]) {
-      for (let key in similars[distance][word]) {
-        groupTranslated = true
+  for (let str in similars) {
+    for (let sameSize in similars[str]) {
+      groupTranslated = true
 
-        for (let words of similars[distance][word][key]) {
-          if (translations[words] === undefined) {
-            groupTranslated = false
+      for (let words of similars[str][sameSize]) {
+        if (translations[words] === undefined) {
+          groupTranslated = false
 
-            break
-          }
+          break
         }
+      }
 
-        if (!groupTranslated) {
-          results.push(similars[distance][word][key])
-        }
+      if (!groupTranslated) {
+        results.push(similars[str][sameSize])
       }
     }
   }
