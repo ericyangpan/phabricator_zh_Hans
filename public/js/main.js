@@ -150,7 +150,13 @@ const vm = new Vue({
     },
     loadSimilarPage(delta) {
       if (this.searchForm.similarPageNumber + delta === 0) return
-      if (this.searchForm.similarPageNumber + delta === maxSimilarPageCount) return
+      if (this.searchForm.similarPageNumber + delta >= maxSimilarPageCount) {
+        if (delta < 0) {
+          this.searchForm.similarPageNumber += delta
+        }
+
+        return
+      }
 
       this.searchForm.similarPageNumber += delta
       this.searchForm.text = ''
