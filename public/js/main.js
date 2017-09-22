@@ -130,6 +130,10 @@ const vm = new Vue({
             setTextBoxUpdatedStyle(textBox)
 
             updateStatusNode(textBox)
+
+            const ctx = getRowContext(textBox)
+
+            refreshTranslation(ctx.key, ctx.value)
           })
 
           refreshSuggestion()
@@ -276,6 +280,7 @@ function processValueKeyInternal(event, section) {
 
           if (isTranslation) {
             updateStatusNode(ctx.valueTextBox)
+            refreshTranslation(ctx.key, ctx.value)
           }
 
           refreshSuggestion()
@@ -652,6 +657,21 @@ function getSuggestion(str) {
   }
 
   return toChinesePunctuation(results.join('').trim())
+}
+
+function refreshTranslation(key, translation) {
+  Vue.nextTick(() => {
+    forEachElements('translationList', 'tr', (element, i) => {
+      if (i === 0) return
+
+      if (element.firstElementChild.textContent === key
+        && element.children[1].firstElementChild.value !== translation) {
+        element.children[1].firstElementChild.value = translation
+
+        setTextBoxUpdatedStyle(element.children[1].firstElementChild)
+      }
+    })
+  })
 }
 
 function refreshSuggestion() {
