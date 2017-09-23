@@ -6,7 +6,8 @@ const sortKeys = require('../lib/sortkeys')
 
 const obsoletedPath = 'data/discover/obsoleted.json'
 const similarsPath = 'data/discover/similars.json'
-const allPath = 'data/discover/all.json'
+const allPath = 'data/discover/strings.json'
+const terminologyPath = 'data/discover/terminology.json'
 const libphutili18nFilesPath = 'data/libphutil/i18n_files.json'
 const phabricatori18nFilesPath = 'data/phabricator/i18n_files.json'
 const translationsPath = 'data/translations.json'
@@ -26,23 +27,30 @@ console.log('')
 
 switch (option) {
   case 'all':
-    console.log('Get all items.')  
+    console.log('Get all items. See "data/discover/strings.json".')
 
     findAllItems()
 
     break;
 
   case 'similar':
-    console.log('Find similar items.')  
+    console.log('Find similar items. See "data/discover/similars.json".')
 
     findSimilarItems()
 
     break;
 
   case 'obsoleted':
-    console.log('Find obsoleted items.')  
+    console.log('Find obsoleted items. See "data/discover/obsoleted.json".')
 
     findObsoletedItems()
+
+    break;
+
+  case 'terminology':
+    console.log('Find terminologies. See "data/discover/terminology.json".')
+
+    findTerminologies()
 
     break;
 
@@ -50,8 +58,9 @@ switch (option) {
     console.log('Invalid option. Input one of following options:\n')
     console.log('bin/discover all')
     console.log('bin/discover similar')
-    console.log('bin/discover obsoleted\n')
-
+    console.log('bin/discover obsoleted')
+    console.log('bin/discover terminology')
+    
     break;
 }
 
@@ -65,6 +74,8 @@ function findAllItems() {
 
 function findSimilarItems() {
   const resultStrings = getSimilarStrings()
+
+  cleanupDuplicatedSimilarStrings(resultStrings)
 
   jsonfile.writeFileSync(similarsPath, resultStrings)
 }
@@ -82,12 +93,18 @@ function findObsoletedItems() {
   jsonfile.writeFileSync(obsoletedPath, resultStrings)
 }
 
+function findTerminologies() {
+  const resultStrings = getTerminologies()
+
+  jsonfile.writeFileSync(terminologyPath, resultStrings)
+}
+
 function getAllStrings() {
   const resultStrings = {}
   const func = item => resultStrings[item.string] = ''
 
   forEachi18nFilesData(phabricatori18nFilesData, func)
-  forEachi18nFilesData(libphutili18nFilesData, func)
+  // forEachi18nFilesData(libphutili18nFilesData, func)
 
   delete resultStrings['']
 
@@ -116,6 +133,8 @@ function getSimilarStrings() {
   for (let str0 in allStrings) {
     const length0 = (str0.match(/ /g) || []).length + 1
 
+    count++
+
     if (length0 === 1) continue
 
     resultStrings[str0] = {}
@@ -141,8 +160,6 @@ function getSimilarStrings() {
       }
     }
 
-    count++
-
     const percent = Math.ceil(100 * count / allStringsLength)
 
     // if (percent === 2) {
@@ -160,6 +177,84 @@ function getSimilarStrings() {
       delete resultStrings[str0]
     }
   }  
+
+  return resultStrings
+}
+
+function cleanupDuplicatedSimilarStrings(similars) {
+  console.log('Cleaning up...')
+
+  for (let str0 in similars) {
+    for (let str1 in similars) {
+      if (str0 === str1) continue
+
+      for (let sameSize0 in similars[str0]) {
+        for (let sameSize1 in similars[str1]) {
+          if (similars[str0][sameSize0].length !== similars[str1][sameSize1].length) continue
+
+          if (JSON.stringify(similars[str0][sameSize0].sort())
+            === JSON.stringify(similars[str1][sameSize1].sort())) {
+            delete similars[str1][sameSize1]
+
+            if (Object.keys(similars[str1]).length === 0) {
+              delete similars[str1]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+function getTerminologies() {
+  const resultStrings = {}
+  const words = {}
+
+  for (let str in translationsData) {
+    if (/^\w+$|^\w+ \w+$/.test(str)) {
+      words[str] = translationsData[str]
+    }
+  }
+
+  for (let word in words) {
+    if (resultStrings[word] === undefined) {
+      resultStrings[word] = {
+        translation: words[word],
+        yes: 0,
+        no: 0,
+        kvp: {}
+      }
+    }
+
+    let regexTranslationString
+
+    if (words[word].endsWith('的')) {
+      regexTranslationString = words[word] + '|' + words[word].substr(0, words[word].length - 1)
+    } else {
+      regexTranslationString = words[word]
+    }
+
+    const regexWord = new RegExp(word, 'i')
+    const regexExclude = new RegExp(` ${word} |^${word} `, 'i')
+    const regexTranslation = new RegExp(regexTranslationString, 'i')
+    
+    for (let str in translationsData) {
+      if (regexWord.test(str)) {
+        if (regexTranslation.test(translationsData[str])) {
+          resultStrings[word].yes++
+        } else if (regexExclude.test(str)) {
+          resultStrings[word].no++
+          resultStrings[word].kvp[str] = translationsData[str]
+        }
+      }
+    }
+  }
+
+  for (let key in resultStrings) {
+    if (resultStrings[key].no === 0) {
+      delete resultStrings[key]
+    }
+  }
 
   return resultStrings
 }
