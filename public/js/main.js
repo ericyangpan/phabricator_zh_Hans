@@ -426,7 +426,7 @@ function searchText(text, isWord, type, filterLength) {
   }
 
   const escapedText = type === 'regex' ? text : escapeRegExp(text)
-  const regexSearch = isWord ? new RegExp(`^(${pluralize(escapedText, 1)}|${pluralize(escapedText)})$`, 'gi') : new RegExp(escapedText, 'gi')
+  const regexSearch = isWord ? new RegExp(`^(${pluralize(escapedText, 1)}|${pluralize(escapedText)})$`, 'i') : new RegExp(escapedText, 'i')
   const results = []
   const resultIndexes = {}
   let resultIndex = 0
