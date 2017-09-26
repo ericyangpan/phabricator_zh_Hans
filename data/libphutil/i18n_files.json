@@ -125,10 +125,10 @@
     "filesystem/__tests__/PhutilDeferredLogTestCase.php": "ef2b18a04e4e8b38dbce718e8cea3636",
     "filesystem/__tests__/PhutilFileLockTestCase.php": "482ef6c94bd546103a4ea03d649421a9",
     "filesystem/binary/__tests__/PhutilBinaryAnalyzerTestCase.php": "64f20a1c7cde32d15f2b588cdabecff0",
-    "filesystem/binary/PhutilBinaryAnalyzer.php": "c28f1b1810a8a2ab67988807a116ba4b",
+    "filesystem/binary/PhutilBinaryAnalyzer.php": "3cfee63ae9400fc5a841a18d7451719f",
     "filesystem/binary/PhutilDiffBinaryAnalyzer.php": "67cf185e88cac74cb79fb45aec2cf153",
     "filesystem/binary/PhutilGitBinaryAnalyzer.php": "6b0c8ed7a341cf19859f8197c4e7d2fe",
-    "filesystem/binary/PhutilMercurialBinaryAnalyzer.php": "addc7b37ff749b2b5e8d7d89a834498d",
+    "filesystem/binary/PhutilMercurialBinaryAnalyzer.php": "ce485be67ba57c828024db3b65147fd2",
     "filesystem/binary/PhutilPygmentizeBinaryAnalyzer.php": "7c8dbbeb7dbdf20ef2c22f39b4548222",
     "filesystem/binary/PhutilSubversionBinaryAnalyzer.php": "88658974b002ca0ea496b6700e30a392",
     "filesystem/FileFinder.php": "469f3932b37a696b7a9bccf2d9ae1cd4",
@@ -155,8 +155,9 @@
     "future/aws/management/PhutilAWSS3GetManagementWorkflow.php": "3d15513b7dfb62a449ceddf6fceab345",
     "future/aws/management/PhutilAWSS3ManagementWorkflow.php": "73c81d9685e23c8f1fda333240e883ee",
     "future/aws/management/PhutilAWSS3PutManagementWorkflow.php": "554195b5e1efd3c84f0a16ea3f64602b",
+    "future/aws/PhutilAWSCloudFormationFuture.php": "896e1a35adef1eadfd200eed838b8d85",
     "future/aws/PhutilAWSEC2Future.php": "cb962fb9d0ac02e9be84bc452ea7099d",
-    "future/aws/PhutilAWSException.php": "0de44c2e886b0dd64dd5791433d38a14",
+    "future/aws/PhutilAWSException.php": "175e03d207e07e7d388710926ecdf767",
     "future/aws/PhutilAWSFuture.php": "dcbe5e8e0c8acb47d38810997ca8518b",
     "future/aws/PhutilAWSS3Future.php": "8dced4a7b353fb30e9c58cd559993fe9",
     "future/aws/PhutilAWSv4Signature.php": "a8362c4c65198e31385efae75fb86a0f",
@@ -411,11 +412,11 @@
     "phage/util/PhutilBallOfPHP.php": "64c934036de887e115452c86ba3d1c21",
     "readableserializer/__tests__/PhutilReadableSerializerTestCase.php": "c5ff46cd16459c1e1d288e143fc9ef0e",
     "readableserializer/PhutilReadableSerializer.php": "a60617cca3db5c024fb43280d7bc8e2a",
-    "search/__tests__/PhutilSearchQueryCompilerTestCase.php": "82c12c9b113a0362b1de8284710714d7",
+    "search/__tests__/PhutilSearchQueryCompilerTestCase.php": "b65bcccd537a185d3c378987eb18e2ee",
     "search/__tests__/PhutilSearchStemmerTestCase.php": "3be44f0e58a5615bc572cd9a8b949420",
-    "search/PhutilSearchQueryCompiler.php": "2a4d06e53468938372c68365c65abd6e",
+    "search/PhutilSearchQueryCompiler.php": "33bcd901600106ba46c0b58249e8aa6b",
     "search/PhutilSearchQueryCompilerSyntaxException.php": "9ee7b70d751f5c56b8b7d02c534aabf1",
-    "search/PhutilSearchQueryToken.php": "df467efbc1b08906eb330d1709efe776",
+    "search/PhutilSearchQueryToken.php": "670cb08f43a71972f3d15e304369a0ce",
     "search/PhutilSearchStemmer.php": "ca7aee9c95a0b886c82b04eb4429a7bc",
     "serviceprofiler/PhutilServiceProfiler.php": "cbc59914d428667d425a9ca4309f35c9",
     "sprites/PhutilSprite.php": "890a3c92896f360ceee20f5efa73ca72",
@@ -436,7 +437,7 @@
     "utils/__tests__/PhutilProseDiffTestCase.php": "017ab0e27018b625477d4d21ab8b2ab4",
     "utils/__tests__/PhutilRopeTestCase.php": "055345d513695f3e8a0136639eb6dc57",
     "utils/__tests__/PhutilSystemTestCase.php": "2ec70f5693bf3b53e5bb7b76ca722d96",
-    "utils/__tests__/PhutilUTF8TestCase.php": "07b9f0b3fd05c7c304b52ae78695be6d",
+    "utils/__tests__/PhutilUTF8TestCase.php": "6a238afa29c6dc03ad478de106550b01",
     "utils/__tests__/PhutilUtilsTestCase.php": "44a472709fbc9d8271945725bdb25208",
     "utils/__tests__/TestAbstractDirectedGraph.php": "8a92e97ff0a5ba5b3c5dc56dfd4e173b",
     "utils/AbstractDirectedGraph.php": "10c4f0f5148528721099f2dd4de7f408",
@@ -461,7 +462,7 @@
     "utils/PhutilStreamIterator.php": "f02bead085dcbcd49a8c167b8199f69f",
     "utils/PhutilSystem.php": "44b90611b3ae9c9712a52d715f72592c",
     "utils/PhutilUTF8StringTruncator.php": "5c777a45ec1eb5da85072a6a066dc84d",
-    "utils/utf8.php": "1348e378dd94fa952465040ef5b89849",
+    "utils/utf8.php": "4fb171a162aacc9e7ed9f889e2425c75",
     "utils/utils.php": "cb2174d6ea7a41d9970740810bfa855c",
     "utils/viewutils.php": "e939a9e073cb95786aacad9173547a93",
     "xsprintf/__tests__/PhutilCsprintfTestCase.php": "a87372666a04b80df4e4cce575b2c42a",
@@ -485,20 +486,443 @@
     "xsprintf/xsprintf.php": "ba44e16cfb863bdbb0a8856ccebaef75"
   },
   "strings": {
-    "e4dd336304b1ec54452cae1daf9faee8": [
+    "ce485be67ba57c828024db3b65147fd2": [
       {
-        "string": "Failed to open stream \"%s\" for reading.",
-        "file": "/aphront/requeststream/AphrontRequestStream.php",
-        "line": 57,
+        "string": "Unknown Mercurial capability \"%s\".",
+        "file": "/filesystem/binary/PhutilMercurialBinaryAnalyzer.php",
+        "line": 76,
+        "types": [
+          null
+        ]
+      }
+    ],
+    "3cfee63ae9400fc5a841a18d7451719f": [
+      {
+        "string": "Unable to determine the installed version of binary \"%s\". This version is required.",
+        "file": "/filesystem/binary/PhutilBinaryAnalyzer.php",
+        "line": 34,
         "types": [
           null
         ]
       },
       {
-        "string": "Failed to append filter \"%s\" to input stream while processing a request with \"%s\" encoding.",
-        "file": "/aphront/requeststream/AphrontRequestStream.php",
-        "line": 82,
+        "string": "No analyzer is available for binary \"%s\".",
+        "file": "/filesystem/binary/PhutilBinaryAnalyzer.php",
+        "line": 60,
         "types": [
+          null
+        ]
+      }
+    ],
+    "175e03d207e07e7d388710926ecdf767": [
+      {
+        "string": "AWS Request Failed",
+        "file": "/future/aws/PhutilAWSException.php",
+        "line": 16,
+        "types": []
+      },
+      {
+        "string": "HTTP Status Code: %d",
+        "file": "/future/aws/PhutilAWSException.php",
+        "line": 17,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "AWS Request ID: %s",
+        "file": "/future/aws/PhutilAWSException.php",
+        "line": 21,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "AWS Errors:",
+        "file": "/future/aws/PhutilAWSException.php",
+        "line": 25,
+        "types": []
+      },
+      {
+        "string": "Response Body: %s",
+        "file": "/future/aws/PhutilAWSException.php",
+        "line": 36,
+        "types": [
+          null
+        ]
+      }
+    ],
+    "b65bcccd537a185d3c378987eb18e2ee": [
+      {
+        "string": "Compilation of query: %s",
+        "file": "/search/__tests__/PhutilSearchQueryCompilerTestCase.php",
+        "line": 185,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Stemmed compilation of query: %s",
+        "file": "/search/__tests__/PhutilSearchQueryCompilerTestCase.php",
+        "line": 192,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Function compilation of query: %s",
+        "file": "/search/__tests__/PhutilSearchQueryCompilerTestCase.php",
+        "line": 216,
+        "types": [
+          null
+        ]
+      }
+    ],
+    "33bcd901600106ba46c0b58249e8aa6b": [
+      {
+        "string": "Query is too long (%s bytes, maximum is %s bytes).",
+        "file": "/search/PhutilSearchQueryCompiler.php",
+        "line": 109,
+        "types": [
+          "number",
+          "number"
+        ]
+      },
+      {
+        "string": "Query contains unmatched double quotes.",
+        "file": "/search/PhutilSearchQueryCompiler.php",
+        "line": 243,
+        "types": []
+      },
+      {
+        "string": "Query contains operator (\"%s\") with no search term.",
+        "file": "/search/PhutilSearchQueryCompiler.php",
+        "line": 249,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Query has an invalid sequence of operators (\"%s\").",
+        "file": "/search/PhutilSearchQueryCompiler.php",
+        "line": 303,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Unsupported operator prefix \"%s\".",
+        "file": "/search/PhutilSearchQueryCompiler.php",
+        "line": 354,
+        "types": [
+          null
+        ]
+      }
+    ],
+    "6a238afa29c6dc03ad478de106550b01": [
+      {
+        "string": "Overlong form canonicalization of: %s",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 68,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Surrogate filtering: %s",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 84,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "UTF8 codepoint encoding of \"%s\".",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 103,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Codepoint Vector of %s",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 155,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Console Length of %s",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 182,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Shortening of %s",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 235,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "byte-short of %s",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 286,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "codepoint-short of %s",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 292,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "glyph-short of %s",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 298,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Large truncation.",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 318,
+        "types": []
+      },
+      {
+        "string": "Wrapping of '%s'.",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 379,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Wrapping of '%s'",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 442,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Requires source encoding.",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 453,
+        "types": []
+      },
+      {
+        "string": "Requires target encoding.",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 461,
+        "types": []
+      },
+      {
+        "string": "Requires %s extension.",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 467,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Conversion from ISO-8859-1.",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 475,
+        "types": []
+      },
+      {
+        "string": "Conversion with bogus encoding.",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 484,
+        "types": []
+      },
+      {
+        "string": "CJK: \"%s\"",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 624,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "empty string",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 633,
+        "types": []
+      },
+      {
+        "string": "%s with combining",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 643,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "snowman",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 648,
+        "types": []
+      },
+      {
+        "string": "Invalid, byte range.",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 662,
+        "types": []
+      },
+      {
+        "string": "Nonminimal 4-byte character.",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 669,
+        "types": []
+      },
+      {
+        "string": "gclef text",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 687,
+        "types": []
+      },
+      {
+        "string": "Invalid, truncated.",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 692,
+        "types": []
+      },
+      {
+        "string": "Nonminimal 3-byte character.",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 698,
+        "types": []
+      },
+      {
+        "string": "Partial 2-byte character.",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 705,
+        "types": []
+      },
+      {
+        "string": "Partial BMP 0xE0 character.",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 710,
+        "types": []
+      },
+      {
+        "string": "Partial BMP cahracter.",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 715,
+        "types": []
+      },
+      {
+        "string": "is_utf(%s)",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 727,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "is_utf_slowly(%s)",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 733,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "is_utf_bmp(%s)",
+        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
+        "line": 738,
+        "types": [
+          null
+        ]
+      }
+    ],
+    "4fb171a162aacc9e7ed9f889e2425c75": [
+      {
+        "string": "Invalid UTF-8 string passed to %s.",
+        "file": "/utils/utf8.php",
+        "line": 414,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Invalid UTF-8 string passed to %s.",
+        "file": "/utils/utf8.php",
+        "line": 427,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Invalid UTF-8 string passed to %s.",
+        "file": "/utils/utf8.php",
+        "line": 432,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Invalid UTF-8 string passed to %s.",
+        "file": "/utils/utf8.php",
+        "line": 437,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Encoding UTF8 codepoint \"%s\" is not supported.",
+        "file": "/utils/utf8.php",
+        "line": 525,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Attempting to convert a string encoding, but no source encoding was provided. Explicitly provide the source encoding.",
+        "file": "/utils/utf8.php",
+        "line": 651,
+        "types": []
+      },
+      {
+        "string": "Attempting to convert a string encoding, but no target encoding was provided. Explicitly provide the target encoding.",
+        "file": "/utils/utf8.php",
+        "line": 657,
+        "types": []
+      },
+      {
+        "string": "Attempting to convert a string encoding from '%s' to '%s', but the '%s' PHP extension is not available. Install %s to work with encodings other than UTF-8.",
+        "file": "/utils/utf8.php",
+        "line": 672,
+        "types": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Unknown error.",
+        "file": "/utils/utf8.php",
+        "line": 686,
+        "types": []
+      },
+      {
+        "string": "String conversion from encoding '%s' to encoding '%s' failed: %s",
+        "file": "/utils/utf8.php",
+        "line": 690,
+        "types": [
+          null,
           null,
           null
         ]
@@ -522,6 +946,25 @@
           null,
           null,
           null,
+          null,
+          null
+        ]
+      }
+    ],
+    "e4dd336304b1ec54452cae1daf9faee8": [
+      {
+        "string": "Failed to open stream \"%s\" for reading.",
+        "file": "/aphront/requeststream/AphrontRequestStream.php",
+        "line": 57,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Failed to append filter \"%s\" to input stream while processing a request with \"%s\" encoding.",
+        "file": "/aphront/requeststream/AphrontRequestStream.php",
+        "line": 82,
+        "types": [
           null,
           null
         ]
@@ -1908,32 +2351,6 @@
         ]
       }
     ],
-    "c28f1b1810a8a2ab67988807a116ba4b": [
-      {
-        "string": "Unable to determine the installed version of binary \"%s\". This version is required.",
-        "file": "/filesystem/binary/PhutilBinaryAnalyzer.php",
-        "line": 33,
-        "types": []
-      },
-      {
-        "string": "No analyzer is available for binary \"%s\".",
-        "file": "/filesystem/binary/PhutilBinaryAnalyzer.php",
-        "line": 58,
-        "types": [
-          null
-        ]
-      }
-    ],
-    "addc7b37ff749b2b5e8d7d89a834498d": [
-      {
-        "string": "Unknown Mercurial capability \"%s\".",
-        "file": "/filesystem/binary/PhutilMercurialBinaryAnalyzer.php",
-        "line": 70,
-        "types": [
-          null
-        ]
-      }
-    ],
     "469f3932b37a696b7a9bccf2d9ae1cd4": [
       {
         "string": "Invalid %s root directory specified ('%s'). Root directory must be a directory, be readable, and be specified with an absolute path.",
@@ -2533,44 +2950,6 @@
         "string": "Uploaded \"%s\".",
         "file": "/future/aws/management/PhutilAWSS3PutManagementWorkflow.php",
         "line": 47,
-        "types": [
-          null
-        ]
-      }
-    ],
-    "0de44c2e886b0dd64dd5791433d38a14": [
-      {
-        "string": "AWS Request Failed",
-        "file": "/future/aws/PhutilAWSException.php",
-        "line": 16,
-        "types": []
-      },
-      {
-        "string": "HTTP Status Code: %d",
-        "file": "/future/aws/PhutilAWSException.php",
-        "line": 17,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "AWS Request ID: %s",
-        "file": "/future/aws/PhutilAWSException.php",
-        "line": 20,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "AWS Errors:",
-        "file": "/future/aws/PhutilAWSException.php",
-        "line": 23,
-        "types": []
-      },
-      {
-        "string": "Response Body: %s",
-        "file": "/future/aws/PhutilAWSException.php",
-        "line": 30,
         "types": [
           null
         ]
@@ -6260,24 +6639,6 @@
         ]
       }
     ],
-    "82c12c9b113a0362b1de8284710714d7": [
-      {
-        "string": "Compilation of query: %s",
-        "file": "/search/__tests__/PhutilSearchQueryCompilerTestCase.php",
-        "line": 134,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Stemmed compilation of query: %s",
-        "file": "/search/__tests__/PhutilSearchQueryCompilerTestCase.php",
-        "line": 141,
-        "types": [
-          null
-        ]
-      }
-    ],
     "3be44f0e58a5615bc572cd9a8b949420": [
       {
         "string": "Token stem of \"%s\".",
@@ -6291,47 +6652,6 @@
         "string": "Corpus stem of: %s",
         "file": "/search/__tests__/PhutilSearchStemmerTestCase.php",
         "line": 80,
-        "types": [
-          null
-        ]
-      }
-    ],
-    "2a4d06e53468938372c68365c65abd6e": [
-      {
-        "string": "Query is too long (%s bytes, maximum is %s bytes).",
-        "file": "/search/PhutilSearchQueryCompiler.php",
-        "line": 97,
-        "types": [
-          "number",
-          "number"
-        ]
-      },
-      {
-        "string": "Query contains unmatched double quotes.",
-        "file": "/search/PhutilSearchQueryCompiler.php",
-        "line": 184,
-        "types": []
-      },
-      {
-        "string": "Query contains operator (\"%s\") with no search term.",
-        "file": "/search/PhutilSearchQueryCompiler.php",
-        "line": 190,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Query has an invalid sequence of operators (\"%s\").",
-        "file": "/search/PhutilSearchQueryCompiler.php",
-        "line": 220,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Unsupported operator prefix \"%s\".",
-        "file": "/search/PhutilSearchQueryCompiler.php",
-        "line": 265,
         "types": [
           null
         ]
@@ -6746,226 +7066,6 @@
         ]
       }
     ],
-    "07b9f0b3fd05c7c304b52ae78695be6d": [
-      {
-        "string": "Overlong form canonicalization of: %s",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 68,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Surrogate filtering: %s",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 84,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "UTF8 codepoint encoding of \"%s\".",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 103,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Codepoint Vector of %s",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 155,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Console Length of %s",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 182,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Shortening of %s",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 235,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "byte-short of %s",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 286,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "codepoint-short of %s",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 292,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "glyph-short of %s",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 298,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Large truncation.",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 318,
-        "types": []
-      },
-      {
-        "string": "Wrapping of '%s'.",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 379,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Wrapping of '%s'",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 442,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Requires source encoding.",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 453,
-        "types": []
-      },
-      {
-        "string": "Requires target encoding.",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 461,
-        "types": []
-      },
-      {
-        "string": "Requires %s extension.",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 467,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Conversion from ISO-8859-1.",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 475,
-        "types": []
-      },
-      {
-        "string": "Conversion with bogus encoding.",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 484,
-        "types": []
-      },
-      {
-        "string": "empty string",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 617,
-        "types": []
-      },
-      {
-        "string": "%s with combining",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 627,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "snowman",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 632,
-        "types": []
-      },
-      {
-        "string": "Invalid, byte range.",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 646,
-        "types": []
-      },
-      {
-        "string": "Nonminimal 4-byte character.",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 653,
-        "types": []
-      },
-      {
-        "string": "gclef text",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 671,
-        "types": []
-      },
-      {
-        "string": "Invalid, truncated.",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 676,
-        "types": []
-      },
-      {
-        "string": "Nonminimal 3-byte character.",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 682,
-        "types": []
-      },
-      {
-        "string": "Partial 2-byte character.",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 689,
-        "types": []
-      },
-      {
-        "string": "Partial BMP 0xE0 character.",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 694,
-        "types": []
-      },
-      {
-        "string": "Partial BMP cahracter.",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 699,
-        "types": []
-      },
-      {
-        "string": "is_utf(%s)",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 711,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "is_utf_slowly(%s)",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 717,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "is_utf_bmp(%s)",
-        "file": "/utils/__tests__/PhutilUTF8TestCase.php",
-        "line": 722,
-        "types": [
-          null
-        ]
-      }
-    ],
     "44a472709fbc9d8271945725bdb25208": [
       {
         "string": "%s invalid on %s",
@@ -7200,87 +7300,6 @@
         "file": "/utils/PhutilSystem.php",
         "line": 142,
         "types": [
-          null,
-          null
-        ]
-      }
-    ],
-    "1348e378dd94fa952465040ef5b89849": [
-      {
-        "string": "Invalid UTF-8 string passed to %s.",
-        "file": "/utils/utf8.php",
-        "line": 356,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Invalid UTF-8 string passed to %s.",
-        "file": "/utils/utf8.php",
-        "line": 369,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Invalid UTF-8 string passed to %s.",
-        "file": "/utils/utf8.php",
-        "line": 374,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Invalid UTF-8 string passed to %s.",
-        "file": "/utils/utf8.php",
-        "line": 379,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Encoding UTF8 codepoint \"%s\" is not supported.",
-        "file": "/utils/utf8.php",
-        "line": 467,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Attempting to convert a string encoding, but no source encoding was provided. Explicitly provide the source encoding.",
-        "file": "/utils/utf8.php",
-        "line": 593,
-        "types": []
-      },
-      {
-        "string": "Attempting to convert a string encoding, but no target encoding was provided. Explicitly provide the target encoding.",
-        "file": "/utils/utf8.php",
-        "line": 599,
-        "types": []
-      },
-      {
-        "string": "Attempting to convert a string encoding from '%s' to '%s', but the '%s' PHP extension is not available. Install %s to work with encodings other than UTF-8.",
-        "file": "/utils/utf8.php",
-        "line": 614,
-        "types": [
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Unknown error.",
-        "file": "/utils/utf8.php",
-        "line": 628,
-        "types": []
-      },
-      {
-        "string": "String conversion from encoding '%s' to encoding '%s' failed: %s",
-        "file": "/utils/utf8.php",
-        "line": 632,
-        "types": [
-          null,
           null,
           null
         ]
