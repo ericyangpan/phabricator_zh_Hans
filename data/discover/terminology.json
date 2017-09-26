@@ -2,8 +2,9 @@
   "100": {
     "translation": "一百分",
     "yes": 1,
-    "no": 1,
+    "no": 2,
     "kvp": {
+      "Almanac service, device, property and namespace names may not be more than 100 characters long.": "Almanac 服务，设备，属性和命名空间名称不可以超过 100 个字符。",
       "Closed over 100 tasks": "关闭超过 100 个任务"
     }
   },
@@ -906,8 +907,8 @@
   },
   "From": {
     "translation": "来自",
-    "yes": 16,
-    "no": 263,
+    "yes": 17,
+    "no": 265,
     "kvp": {
       "%s adjusted autoreview from %s to %s.": "%s 把自动评审从 %s 调整为了 %s。",
       "%s changed %s from %s to %s.": "%s 把 %s 从 %s 变更为了 %s。",
@@ -988,7 +989,7 @@
       "%s changed track branches from \"%s\" to \"%s\".": "%s 将跟踪分支从“%s”变更为了“%s”。",
       "%s converted %s from an all day event.": "%s 把 %s 从一个全天事件转换了过来。",
       "%s converted this from an all day event.": "%s 把这个从一个全天事件转换了过来。",
-      "%s deleted imported events from this source.": "%s 删除了从这个来源导入的事件。",
+      "%s deleted imported events from this source.": "%s 删除了从此来源导入的事件。",
       "%s edited the question title from \"%s\" to \"%s\".": "%s 把这个问题标题从“%s”编辑为“%s”。",
       "%s from %s": "%s 从 %s",
       "%s lowered the priority of %s from %s to %s.": "%s 把 %s 的优先级从 %s 降低到了 %s。",
@@ -1134,7 +1135,9 @@
       "Really remove the authentication factor %s from your account?": "确实要从你的帐户移除认证因素 %s ？",
       "Really revoke the badge \"%s\" from %s?": "确实要从 %2$s 吊销徽章“%1$s”？",
       "Received a 304 Not Modified from GitHub, no new events.": "从 GitHub 接收到一个 304 未修改，无新事件。",
+      "Reload events imported from this source.": "重新加载从此来源导入的事件。",
       "Reload from GitHub": "从 GitHub 重新加载",
+      "Reload this source? Events imported from this source will be updated.": "重新加载这个来源？从这个来源导入的事件将被更新。",
       "Remove %s from this room?": "从这个房间移除 %s？",
       "Remove multi-factor authentication from an account.": "从一个帐户中移除多因素认证。",
       "Retrieve file content from a repository.": "从一个仓库检索文件内容。",
@@ -1239,9 +1242,9 @@
   "Imported": {
     "translation": "已导入",
     "yes": 3,
-    "no": 11,
+    "no": 13,
     "kvp": {
-      "%s deleted imported events from this source.": "%s 删除了从这个来源导入的事件。",
+      "%s deleted imported events from this source.": "%s 删除了从此来源导入的事件。",
       "%s imported an ICS file.": "%s 导入了一个 ICS 文件。",
       "Can Not Edit Imported Event": "不能编辑导入的事件",
       "Content imported via Nuance.": "通过 Nuance 导入的内容。",
@@ -1250,6 +1253,8 @@
       "Imported Events": "导入的事件",
       "No Imported Events": "无导入的事件",
       "No imported events.": "无导入的事件。",
+      "Reload events imported from this source.": "重新加载从此来源导入的事件。",
+      "Reload this source? Events imported from this source will be updated.": "重新加载这个来源？从这个来源导入的事件将被更新。",
       "Successfully imported users from LDAP": "成功的从 LDAP 导入了用户",
       "Unnamed Imported Event": "未命名的导入事件"
     }
@@ -1307,8 +1312,8 @@
   },
   "Key": {
     "translation": "键",
-    "yes": 75,
-    "no": 31,
+    "yes": 77,
+    "no": 32,
     "kvp": {
       "%s updated the SSH key for this repository.": "%s 更新了这个仓库的 SSH 密钥。",
       "Amazon SES Access Key Not Set": "亚马逊 SES 访问密钥未设置",
@@ -1318,6 +1323,7 @@
       "Key for HMAC digests.": "HMAC 摘要的密钥。",
       "Mark a public key as trusted.": "把一个公钥标记为信任的。",
       "No private key exists at path \"%s\"!": "路径“%s”上不存在私钥！",
+      "No public key exists with ID \"%s\".": "没有 ID“%s”的公钥存在。",
       "No public key was provided.": "未提供公钥。",
       "Once a publisher is created, its key can not be changed.": "一旦创建发布者后，他的密钥就无法被更改了。",
       "Only private key credentials are supported.": "只支持私钥凭据。",
@@ -1345,7 +1351,7 @@
   },
   "Last": {
     "translation": "最后的",
-    "yes": 14,
+    "yes": 15,
     "no": 2,
     "kvp": {
       "No tasks have completed in the last 15 minutes.": "在过去的 15 分钟无已完成的任务。",
@@ -1362,7 +1368,7 @@
   },
   "Lease": {
     "translation": "租约",
-    "yes": 50,
+    "yes": 51,
     "no": 1,
     "kvp": {
       "Lease a resource.": "租用一个资源。"
@@ -1475,11 +1481,14 @@
   "May": {
     "translation": "五月",
     "yes": 1,
-    "no": 35,
+    "no": 38,
     "kvp": {
+      "Almanac service, device, property and namespace names may not be more than 100 characters long.": "Almanac 服务，设备，属性和命名空间名称不可以超过 100 个字符。",
       "Almanac service, device, property and namespace names may not contain hyphens adjacent to periods.": "Almanac 服务，设备，属性和命名空间名称不可以包含临近句号的连字符。",
       "Almanac service, device, property and namespace names may not contain multiple consecutive hyphens.": "Almanac 服务，设备，属性和命名空间名称不可以包含多个连续的连字符。",
       "Almanac service, device, property and namespace names may not contain multiple consecutive periods.": "Almanac 服务，设备，属性和命名空间名称不可以包含多个连续的句号。",
+      "Almanac service, device, property and namespace names may not have any segments containing only digits.": "Almanac 服务，设备，属性和命名空间名称不可以有任何部分只包含数字。",
+      "Almanac service, device, property and namespace names may only contain lowercase letters, numbers, hyphens, and periods.": "Almanac 服务，设备，属性和命名空间名称只可以包含小写字母，数字，连字符，和句号。",
       "Committing this change failed. It may already have been merged.": "提交此变更失败。它可能已经被合并了。",
       "Content may not be empty.": "内容不可以为空。",
       "GZip Compression May Not Be Enabled": "GZip 压缩可能未启用",
@@ -1609,7 +1618,7 @@
   },
   "Name": {
     "translation": "名称",
-    "yes": 275,
+    "yes": 280,
     "no": 4,
     "kvp": {
       "Always require real name for user profiles.": "用户档案总是需要真实姓名。",
@@ -1620,7 +1629,7 @@
   },
   "New": {
     "translation": "新的",
-    "yes": 316,
+    "yes": 317,
     "no": 1,
     "kvp": {
       "To create a new dashboard panel, you must select a panel type.": "要创建一个仪表板面板，你必须选择一个面板类型。"
@@ -1640,7 +1649,7 @@
   "No": {
     "translation": "否",
     "yes": 4,
-    "no": 421,
+    "no": 427,
     "kvp": {
       "%s has no active lease.": "%s 没有活跃的租约。",
       "%s no longer requires audit.": "%s 不再需要审计。",
@@ -1661,11 +1670,13 @@
       "Disable %s? They will no longer be able to access Phabricator or receive email.": "禁用 %s？他们将不能够再访问 Phabricator 或接收邮件。",
       "Disable this build plan? It will no longer be executed automatically.": "禁用这个构建计划？它将不再被自动执行。",
       "Disable this form? Users will no longer be able to use it.": "禁用这个表单？用户将不能再使用它。",
+      "Disable this import? Events from this source will no longer be updated.": "禁用这个导入？来自这个来源的事件将不再被更新。",
       "Document has no PHID!": "文档无 PHID！",
       "Existing objects will no longer be hidden from query results.": "已经存在的对象将不再被查询结果隐藏。",
       "Found no adjustments for schemata.": "未找到模式需要的调整。",
       "If No Rules Match": "如果没有规则匹配",
       "If no rules match, %s all other users.": "如果没有规则匹配，%s 所有其他用户。",
+      "No \"Host\" Header": "无“主机”头",
       "No %s": "无 %s",
       "No '%s' specified!": "未指定‘%s’！",
       "No Access to Spaces": "没有空间的访问权限",
@@ -1820,6 +1831,7 @@
       "No device \"%s\" exists.": "无设备“%s”存在。",
       "No documents found.": "未找到文档。",
       "No email address set": "未设置邮件地址",
+      "No email exists with address \"%s\"!": "无地址“%s”的邮件存在！",
       "No errors.": "无错误。",
       "No events found.": "未找到事件。",
       "No exports found.": "未找到导出。",
@@ -1878,6 +1890,7 @@
       "No profiling": "无分析",
       "No projects found.": "未找到项目。",
       "No properties.": "无属性。",
+      "No public key exists with ID \"%s\".": "没有 ID“%s”的公钥存在。",
       "No public key was provided.": "未提供公钥。",
       "No publishers found.": "未找到发布者。",
       "No questions found.": "未找到问题。",
@@ -1894,6 +1907,7 @@
       "No repository exists with PHID \"%s\".": "无 PHID“%s”的仓库存在。",
       "No repository service \"%s\" exists.": "无仓库服务“%s”存在。",
       "No repository was found.": "未找到仓库。",
+      "No resource source exists with name \"%s\"!": "无名称“%s”的资源来源存在！",
       "No results found for this query.": "未找到这次查询的结果。",
       "No results found.": "未找到结果。",
       "No revisions are blocked on your review.": "没有修订受阻于你的评审。",
@@ -1920,6 +1934,7 @@
       "No special rules affected this mail.": "没有影响这封邮件的特殊规则。",
       "No storage engines are available.": "没有存储引擎可用。",
       "No storage engines available.": "没有存储引擎可用。",
+      "No story exists with key \"%s\"!": "无键“%s”的故事存在！",
       "No such AST!": "无此 AST！",
       "No such Maniphest task exists.": "无此 Maniphest 任务存在。",
       "No such build target \"%s\"!": "无此构建目标“%s”！",
@@ -2149,6 +2164,14 @@
       "No repository was found.": "未找到仓库。"
     }
   },
+  "No Resource": {
+    "translation": "无资源",
+    "yes": 1,
+    "no": 1,
+    "kvp": {
+      "No resource source exists with name \"%s\"!": "无名称“%s”的资源来源存在！"
+    }
+  },
   "None": {
     "translation": "无",
     "yes": 8,
@@ -2297,7 +2320,7 @@
       "This engine is used to modify menu items on profiles.": "这个引擎用于修改档案菜单项。",
       "This is very unusual and will leave you without any content on the Phabricator home page. You should only do this if you are certain you know what you are doing.": "这非常不寻常并且会让 Phabricator 的首页没有任何内容。你应该只在你非常确信你知道你在做什么的情况下才做。",
       "This order was put on hold until payment clears.": "此订单被搁置直到付款清算。",
-      "This panel does not appear on any dashboards.": "这个面板不会出现在任何仪表板上。",
+      "This panel does not appear on any dashboards.": "此面板不会出现在任何仪表板上。",
       "This table briefly describes available functions for this control. For details on a particular function, see the corresponding section below.": "本表格简要介绍了这个控件的可用函数。有关特定功能的详情，请看下面相应的章节。",
       "This table summarizes the available mail commands. For details on a specific command, see the command section below.": "这个表格汇总了可用的邮件命令。关于一个具体命令的详情，看下面的命令章节。",
       "To begin on such a grand journey, requires but just a single step.": "只再需要一小步，就可以开始一段伟大的旅程了。",
@@ -2370,7 +2393,7 @@
   "Parent": {
     "translation": "父级",
     "yes": 22,
-    "no": 44,
+    "no": 45,
     "kvp": {
       "%s added %s parent task(s) for %s: %s.": "%1$s 给 %3$s 添加了 %2$s 个父任务：%4$s。",
       "%s added %s parent task(s): %s.": "%s 添加了 %s 个父任务：%s。",
@@ -2396,6 +2419,7 @@
       "Edit Parent Tasks": "编辑父任务",
       "Empty Parent Document": "空父文档",
       "Found orphaned child event (\"%s\") without a parent event (\"%s\").": "发现没有父事件（“%2$s”）的孤儿子事件（“%1$s”）。",
+      "List of parent task PHIDs.": "父任务 PHID 列表。",
       "Members of the parent project are members of this project.": "父项目的成员就是这个项目的成员。",
       "New blog parent domain.": "新博客父域名。",
       "New blog parent site name.": "新博客父站点名称。",
@@ -2476,9 +2500,10 @@
   "Points": {
     "translation": "点数",
     "yes": 2,
-    "no": 6,
+    "no": 7,
     "kvp": {
       "Certificate token points to an invalid user!": "证书令牌指向一个无效的用户！",
+      "Expected numeric points value, got something else.": "预期数字点值，得到了其他东西。",
       "Maximum number of points of tasks allowed in the column.": "允许在列中的最大任务点值数。",
       "No tasks have points assigned.": "无任务被分配点值。",
       "Points Bar": "点值条",
@@ -2535,13 +2560,14 @@
   "Public": {
     "translation": "公共的",
     "yes": 17,
-    "no": 22,
+    "no": 23,
     "kvp": {
       "Deactivate Public Key": "停用公钥",
       "Deactivate SSH Public Key": "停用 SSH 公钥",
       "Edit SSH Public Key": "编辑 SSH 公钥",
       "Installing public key...": "正在安装公钥…",
       "Mark a public key as trusted.": "把一个公钥标记为信任的。",
+      "No public key exists with ID \"%s\".": "没有 ID“%s”的公钥存在。",
       "No public key was provided.": "未提供公钥。",
       "Provide a public key, not a private key!": "提供一个公钥，而不是一个私钥！",
       "Public Key": "公钥",
@@ -2665,6 +2691,14 @@
       "Leases can not be released after they are destroyed.": "租约在被销毁后不能被释放。",
       "Released cluster write lock.": "释放群集写入锁定。",
       "Resources can not be released after they are destroyed.": "资源在被销毁后不能被释放。"
+    }
+  },
+  "Reload Events": {
+    "translation": "重新加载事件",
+    "yes": 1,
+    "no": 1,
+    "kvp": {
+      "Reload events imported from this source.": "重新加载从此来源导入的事件。"
     }
   },
   "Request Verification": {
@@ -2846,7 +2880,7 @@
   },
   "Source": {
     "translation": "来源",
-    "yes": 61,
+    "yes": 65,
     "no": 3,
     "kvp": {
       "Database source is not configured properly": "数据库源没有被正确配置",
@@ -3069,7 +3103,7 @@
   },
   "Type": {
     "translation": "类型",
-    "yes": 153,
+    "yes": 156,
     "no": 68,
     "kvp": {
       "Type \"anyone()\"...": "输入“anyone()”…",
@@ -3549,7 +3583,7 @@
   "is": {
     "translation": "是",
     "yes": 309,
-    "no": 261,
+    "no": 262,
     "kvp": {
       "%s is already archived, and can not be cancelled.": "%s 已经归档，不能取消。",
       "%s is already archived, and can not be executed.": "%s 已经归档，不能执行。",
@@ -3798,9 +3832,10 @@
       "When mail is sent to project members, you will not receive a copy.": "当邮件被发送给项目成员时，你将不会收到一个拷贝。",
       "When this test fails, it means the Celerity resource map is out of date. Run `%s` to rebuild it.": "当这个测试失败，它意味着 Celerity 资源地图过期了。运行 `%s` 以重建它。",
       "You can not delete an interface which is still in use.": "你不能删除一个仍在使用中的接口。",
-      "You can not interact with this object because it is locked.": "你不能和这个对象交互因为它已经被锁定。",
-      "You can not interact with this task because it is locked.": "因为这个任务已被锁定所以你不能和它交互了。",
+      "You can not interact with this object because it is locked.": "你不能和此对象交互因为它已被锁定。",
+      "You can not interact with this task because it is locked.": "你不能和此任务交互因为它已被锁定。",
       "You can not move this document there, because it would overwrite an existing document which is already at that location. Move or delete the existing document first.": "你不能移动这个文档到这里，因为它会覆盖已经在那个位置上存在的文档。首先移动或者删除已经存在的文档。",
+      "You can not unlink this account because it is not linked.": "你不能取消这个帐户的链接因为它未被链接。",
       "You were stopped here because %s is set in your configuration.": "因为在你的配置里设置了 %s 所以你被停在这里。",
       "You will receive mail that is sent to project members.": "你将接收到发给项目成员的邮件。",
       "Your Way is Blocked": "你的路被挡住了",
@@ -3817,7 +3852,7 @@
   "is not": {
     "translation": "不是",
     "yes": 80,
-    "no": 89,
+    "no": 90,
     "kvp": {
       "%s is not available; unable to read deflated data!": "%s 不可用；无法读取压缩的数据！",
       "API token \"%s\" is not valid.": "API 令牌“%s”是无效的。",
@@ -3906,13 +3941,14 @@
       "Version name \"%s\" is not valid: version names are required.": "版本名称“%s”是无效的：版本名称是必填的。",
       "Version name \"%s\" is not valid: version names must not be more than %s characters long.": "版本名称“%s”无效：版本名称必须不超过 %s 个字符。",
       "View policy is not mutable.": "查看策略是不可变的。",
+      "You can not unlink this account because it is not linked.": "你不能取消这个帐户的链接因为它未被链接。",
       "Your webserver is not forwarding credentials.": "你的 Web 服务器没有转发凭据。",
       "Your webserver is not handling GET parameters properly.": "你的 Web 服务器没有正确处理 GET 参数。"
     }
   },
   "name": {
     "translation": "名称",
-    "yes": 275,
+    "yes": 280,
     "no": 4,
     "kvp": {
       "Always require real name for user profiles.": "用户档案总是需要真实姓名。",
@@ -3937,7 +3973,7 @@
   },
   "or": {
     "translation": "或",
-    "yes": 224,
+    "yes": 226,
     "no": 2,
     "kvp": {
       "Determines whether or not YouTube videos get embedded.": "确定 YouTube 视频是否嵌入。",
