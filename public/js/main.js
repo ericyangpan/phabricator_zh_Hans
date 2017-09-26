@@ -509,12 +509,13 @@ function searchSimilar(pageNumber) {
   const results = []
 
   for (let i = from; i < to; i++) {
+    const diff = getDiff(globalData.similars[i])
     const length = globalData.similars[i].length
-
+    
     for (let j = 0; j < length; j++) {
       const key = globalData.similars[i][j]
       const item = {
-        key: key,
+        key: diff[key],
         value: globalData.translations[key],
         highlight: i % 2 === 1,
         suggestion: getSuggestion(key)
@@ -777,4 +778,107 @@ function saveToServer(action, section, key, items) {
         throw error
       }
     })
+}
+
+function getDiff(items) {
+  if (!items || items.length === 0) throw new Error('Parameter "items" can not be null or empty.')
+
+  const diffResult = {}
+
+  if (items.length < 2) {
+    const item0 = items[0]
+    diffResult[item0] = item0
+
+    return diffResult
+  }
+
+  const itemArray = []
+  const indexArray = []
+  const tempIndexArray = []
+  const diffArray = []
+  const tempDiffArray = []
+
+  for (let item of items) {
+    itemArray.push(item.split(' '))
+    indexArray.push(0)
+    diffArray.push([])
+    tempDiffArray.push([])
+    diffResult[item] = ''
+  }
+
+  const itemArray0 = itemArray[0]
+
+  for (let i = 0; i < itemArray0.length; i++) {
+    const word = itemArray0[i]
+
+    let isInclude = true
+
+    tempDiffArray[0].push(word)
+    tempIndexArray[0] = i + 1
+
+    for (let j = 1; j < itemArray.length; j++) {
+      const item = itemArray[j]
+      let isFound = false
+
+      for (let k = indexArray[j]; k < item.length; k++) {
+
+        if (
+          word.toLowerCase() === item[k].toLowerCase() ||
+          (
+            word[word.length - 1] === '.' &&
+            word.substr(0, word.length - 1).toLowerCase() === item[k].toLowerCase()
+          )
+        ) {
+          isFound = true
+          tempIndexArray[j] = k + 1
+          tempDiffArray[j].push(item[k])
+
+          break
+        } else {
+          tempDiffArray[j].push('<span>' + item[k] + '</span>')
+        }
+      }
+
+      if (!isFound) {
+        isInclude = false
+
+        break
+      }
+    }
+
+    if (!isInclude) {
+      diffArray[0].push('<span>' + word + '</span>')
+      indexArray[0]++
+    }
+
+    for (let i = 0; i < itemArray.length; i++) {
+      if (isInclude) {
+        for (let n = 0; n < tempDiffArray[i].length; n++) {
+          diffArray[i].push(tempDiffArray[i][n])
+        }
+
+        indexArray[i] = tempIndexArray[i]
+        tempDiffArray[i] = []
+      } else {
+        tempDiffArray[i] = []
+      }
+    }
+  }
+
+  for (let l = 0; l < items.length; l++) {
+    if (itemArray[l].length > indexArray[l]) {
+      for (let m = indexArray[l]; m < itemArray[l].length; m++) {
+        diffArray[l].push('<span>' + itemArray[l][m] + '</span>')
+      }
+    }
+
+    diffResult[items[l]] = diffArray[l].join(' ')
+
+    if (items[l] !== decodeHTML(diffResult[items[l]])) {
+      console.log('Text:', items[l])
+      console.log('HTML:', diffResult[items[l]])
+    }
+  }
+
+  return diffResult
 }
