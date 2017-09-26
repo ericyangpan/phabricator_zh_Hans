@@ -1,0 +1,45 @@
+#!/bin/sh
+
+echo "* Pull latest libphutil *"
+
+cd ../libphutil
+git pull
+
+echo "* Pull latest phabricator *"
+
+cd ../phabricator
+git pull
+
+echo "* Extract phabricator *"
+
+bin/i18n extract
+
+echo "* Extract libphutil *"
+
+bin/i18n extract ../libphutil
+
+echo "* Copy phabricator i18n_files.json to data folder *"
+
+cp ../phabricator/src/.cache/i18n_files.json ../phabricator_zh_Hans/data/phabricator
+
+echo "* Copy libphutil i18n_files.json to data folder *"
+
+cp ../libphutil/src/.cache/i18n_files.json ../phabricator_zh_Hans/data/libphutil
+
+echo "* Generate strings.json *"
+
+cd ../phabricator_zh_Hans
+bin/discover all
+
+echo "* Generate obsoleted.json *"
+
+bin/discover obsoleted
+
+echo "* Generate terminology.json *"
+
+bin/discover terminology
+
+echo "* Generate similars.json *"
+
+bin/discover similar
+
