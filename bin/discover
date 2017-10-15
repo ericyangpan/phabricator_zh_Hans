@@ -8,6 +8,7 @@ const obsoletedPath = 'data/discover/obsoleted.json'
 const similarsPath = 'data/discover/similars.json'
 const allPath = 'data/discover/strings.json'
 const terminologyPath = 'data/discover/terminology.json'
+const unitsPath = 'data/discover/units.json'
 const libphutili18nFilesPath = 'data/libphutil/i18n_files.json'
 const phabricatori18nFilesPath = 'data/phabricator/i18n_files.json'
 const translationsPath = 'data/translations.json'
@@ -18,7 +19,7 @@ const phabricatori18nFilesData = jsonfile.readFileSync(phabricatori18nFilesPath)
 const libphutili18nFilesData = jsonfile.readFileSync(libphutili18nFilesPath)
 const translationsData = sortKeys(jsonfile.readFileSync(translationsPath))
 
-const option = process.argv[2] || 'all'
+const option = process.argv[2]
 
 // Set output JSON file indent.
 jsonfile.spaces = 2
@@ -54,12 +55,20 @@ switch (option) {
 
     break;
 
+  case 'unit':
+    console.log('Find unit. See "data/discover/units.json".')
+
+    findUnitItems()
+
+    break;
+
   default:
     console.log('Invalid option. Input one of following options:\n')
     console.log('bin/discover all')
     console.log('bin/discover similar')
     console.log('bin/discover obsoleted')
     console.log('bin/discover terminology')
+    console.log('bin/discover unit')
     
     break;
 }
@@ -97,6 +106,12 @@ function findTerminologies() {
   const resultStrings = getTerminologies()
 
   jsonfile.writeFileSync(terminologyPath, resultStrings)
+}
+
+function findUnitItems() {
+  const resultStrings = getUnitItems()
+
+  jsonfile.writeFileSync(unitsPath, resultStrings)
 }
 
 function getAllStrings() {
@@ -253,6 +268,43 @@ function getTerminologies() {
   for (let key in resultStrings) {
     if (resultStrings[key].no === 0) {
       delete resultStrings[key]
+    }
+  }
+
+  return resultStrings
+}
+
+function getUnitItems() {
+  const allStrings = getAllStrings()
+  const resultStrings = {
+    type1: {},
+    type2: {
+      empty: {},
+      has_one: {},
+      no_one: {}
+    }
+  }
+
+  const regexType1 = /%[sd] \w+\(s\)/i
+  const regexType2 = /a \w+/i
+
+  for (let str in allStrings) {
+    if (regexType1.test(str)) {
+      resultStrings['type1'][str] = translationsData[str]
+    }
+
+    if (regexType2.test(str)) {
+      const translation = translationsData[str]
+
+      if (translation) {
+        if (translation.indexOf('一') !== -1) {
+          resultStrings['type2']['no_one'][str] = translation
+        } else {
+          resultStrings['type2']['has_one'][str] = translation
+        }
+      } else {
+        resultStrings['type2']['empty'][str] = ''
+      }
     }
   }
 
