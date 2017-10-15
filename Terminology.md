@@ -18,8 +18,10 @@ Phriction | Phriction
 Phurl | Phurl
 Ponder | Ponder
 Remarkup | Remarkup
+UI | 用户界面
 URI | URI
 VCS | 版本控制系统
+\n | \n
 account | 帐户
 action | 操作
 allow | 允许
@@ -27,7 +29,7 @@ approve | 批准
 artifact | 工件
 author | 作者
 authored | 创建
-award | 授予|获得
+award | 授予|奖励
 badge | 徽章
 collation | 字符序
 config | 配置
@@ -36,6 +38,7 @@ daemon | 守护进程
 default | 默认
 delete | 删除
 dictionary | 字典
+effect | 效果|影响
 email | 邮件
 enable | 启用
 event | 事件
@@ -60,13 +63,14 @@ overwrite | 覆盖|--overwrite
 parent task | 父任务
 permission | 权限
 policy | 策略
-post | 帖子|发送|发布
+post | 文章|发送|发布
 preference | 偏好
 priority | 优先级
 profile | 档案|分析
 publisher | 发布者
 real name | 真实姓名
-recipient | 收件人|接收者|获得者
+receiver | 接收人
+recipient | 收件人|接受者
 remove | 移除
 repository | 仓库|repository
 retention policy | 保留策略
@@ -78,8 +82,13 @@ setting | 设置
 setup | 安装设置
 specification | 规格
 start | 开始|启动
+tab | 选项卡
 token | 令牌|符记|符号|语素|token
+type | 类型|键入
 update | 更新
 webserver | Web 服务器
 worker | 工作者
 working copy | 工作副本
+you | 你
+« | «
+» | »

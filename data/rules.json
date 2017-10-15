@@ -1,42 +1,33 @@
 {
   "items": {
     "%[sd]": "%(\\d\\$)?[sd]",
-    "!": "(?! )！(?! )",
-    ",": "(?! )(，|、)(?! )",
-    ":": "(?! )：(?! )",
+    "!": "(?! )！(?! )|“!",
+    ",(?! and)": "(?! )(，|、)(?! )(?!并且)|\\d,\\d",
+    ":": "(?! )：(?! )|https:|ldaps:|\\d:\\d",
     ";": "(?! )；(?! )",
     "\\?": "(?! )？(?! )",
     "\\.{3}": "(?! )…(?! )",
-    "\n": "\n",
     "[^.]\\.(?!\\w|\\d|\\.|%|\\*|\")": "(?! )。(?! )",
     "<.+>": "(?! )<.+>(?! )",
-    "\\((?!s).*?\\)": "（.+?）|\\(\\)|\\(<.+?>\\)",
+    "\\((?!s)(?!S).*?\\)": "（.+?）|\\(\\)|\\(<.+?>\\)",
     "\".+\"": "(?! )“.+”(?! )",
-    "'.+'": "(?! )‘.+’(?! )",
+    "'\\S+?'": "(?! )‘\\S+?’(?! )",
     "\\*\\*[\\S\\s]+?\\*\\*": "\\*\\*[\\S\\s]+?\\*\\*",
     "no .+ found": "^没有\\.+找到",
-    "^You do not have permission to": "^你没有.+权限",
-    "«": "«",
-    "»": "»"
+    "^You do not have permission to": "^你没有.+权限"
   },
   "exceptions": {
-    "!": [
-      "Disable Email \"!accept\" Action",
-      "Enable Email \"!accept\" Action"
-    ],
-    ",": [
+    ",(?! and)": [
       "Go Juice",
       "ou=People, dc=example, dc=com",
       "user=%s, should_verify=%s",
-      "user=%s, verified=%s, primary=%s, should_verify=%s",
-      "The first cats evolved on the savanah about 8,000 years ago."
+      "user=%s, verified=%s, primary=%s, should_verify=%s"
     ],
     ":": [
-      "ldaps://ldaps.example.com/",
-      "JIRA base URI should include protocol (like \"https://\").",
-      "12 Hour, 2:34 PM",
-      "24 Hour, 14:34",
       "Add \"Re:\" Prefix"
+    ],
+    ";": [
+      "<script>alert(1);</script>"
     ],
     "[^.]\\.(?!\\w|\\d|\\.|%|\\*|\")": [
       "US East (N. Virginia, Older default endpoint)"
@@ -44,9 +35,8 @@
     "<.+>": [
       "<DEAD> %s"
     ],
-    "\\((?!s).*?\\)": [
-      "%s DIFF LINK(S)",
-      "%s ERROR(S)"
+    "\\((?!s)(?!S).*?\\)": [
+      "<script>alert(1);</script>"
     ]
   }
 }
