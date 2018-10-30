@@ -1,5 +1,5 @@
 * {
-  font: 14px Tahoma;
+  font: 14px "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -192,7 +192,7 @@ input[type=number] {
   width: 5em;
   height: 1em;
   margin-left: 1em;
-  display: inline-block;
+  display: block;
   border: 1px solid #e1e1e1;
 }
 
