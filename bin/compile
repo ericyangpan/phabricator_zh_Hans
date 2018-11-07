@@ -58,9 +58,15 @@ writeFile(translationsPath, translationsData)
 
 // Write all template files.
 writeTemplateFile(readmeFilePath, computeTranslationSummary(translationsData))
-writeTemplateFile(rulesFilePath, { rules: rulesData })
-writeTemplateFile(terminologyFilePath, { terminology: terminologyData })
-writeTemplateFile(translationsFilePath, { translations: translationsData })
+writeTemplateFile(rulesFilePath, {
+  rules: rulesData
+})
+writeTemplateFile(terminologyFilePath, {
+  terminology: terminologyData
+})
+writeTemplateFile(translationsFilePath, {
+  translations: translationsData
+})
 
 // Run PHP Lint.
 phplint([translationsFilePath], (err) => {
@@ -97,7 +103,7 @@ function computeTranslationSummary(translations) {
   const i18nFilesData = jsonfile.readFileSync(i18nFilesPath)
   const prototypeApplicationsData = jsonfile.readFileSync(prototypeApplicationsPath)
 
-  const categories = {}
+  let categories = {}
   const items = {}
 
   let totalCount = 0
@@ -120,11 +126,11 @@ function computeTranslationSummary(translations) {
     const category = pathFragments[0] === 'applications' ?
       pathFragments[0] + '/' + pathFragments[1] :
       pathFragments[0]
-    
+
     // Init empty category.
     if (categories[category] === undefined) {
       categories[category] = null
-      
+
       // Buld a previous category.
       if (previousCategory !== null) {
         categories[previousCategory] = buildCategory(
@@ -151,7 +157,9 @@ function computeTranslationSummary(translations) {
     strings.forEach(item => {
       // For exception.
       if (categories[category] === null) {
-        categories[category] = { strings: {} }
+        categories[category] = {
+          strings: {}
+        }
       }
 
       if (categories[category].strings[item.string] === undefined) {
@@ -200,6 +208,8 @@ function computeTranslationSummary(translations) {
     categoryTotalCountOfShortItems
   )
 
+  categories = sortKeys(categories)
+
   for (let key in translations) {
     totalTranslationCount++
 
@@ -247,7 +257,9 @@ function writeTemplateFile(filePath, data) {
   const template = fs.readFileSync(templatePath).toString()
 
   // Render template with data.
-  const fileContent = ejs.render(template, data, { context: ejsContext })
+  const fileContent = ejs.render(template, data, {
+    context: ejsContext
+  })
 
   writeFile(filePath, fileContent)
 }
