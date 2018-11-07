@@ -15,7 +15,9 @@
 
 ## 翻译进度
 
-当前翻译的 Phabricator 版本：[[7ae4d93](https://secure.phabricator.com/rP7ae4d93043c8c120dfd85df4689aa90f34dcca37)] `(stable) Promote 2017 Week 38`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：<%- i18nFileHash %>。
+当前翻译的 Phabricator 版本：[[c4ab918482](https://secure.phabricator.com/rPc4ab91848267789c6f1184be3d664856d21f8264)]`(stable) Promote 2018 Week 43`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：<%- i18nFileHash %>。
+
+当前翻译的 libphutil 版本：[[6c0017aaefcf](https://secure.phabricator.com/rPHU6c0017aaefcf22ffe6686f732feb1da578fbb8a5)]`(stable) Promote 2018 Week 43`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：<%- i18nFileHash %>。
 
 当前总词条数量：<%- totalCount %> 条，不包含原型应用的总词条数量：<%- totalCountWithoutPrototype %> 条。
 
@@ -67,10 +69,18 @@ $ bin/compile
 
 ```sh
 $ bin/i18n extract
+$ bin/i18n extract ../libphutil
 ```
 
-然后你将在 Phabricator 项目的 `/src/.cache/` 目录中找到 `i18n_files.json` 文件。
-拷贝 `i18n_files.json` 文件到本项目的 `data/` 目录。
+然后你将在 Phabricator 项目的 `/src/.cache/` 目录中找到 `i18n_files.json` 文件，拷贝 `i18n_files.json` 文件到本项目的 `data/phabricator` 目录。
+
+然后你将在 libphutil 项目的 `/src/.cache/` 目录中找到 `i18n_files.json` 文件，拷贝 `i18n_files.json` 文件到本项目的 `data/libphutil` 目录。
+
+如果您的 Phabricator 项目和本项目处于同级目录，可以直接在本项目路径下执行以下命令来完成提取和更新国际化字典的工作：
+
+```sh
+$ bin/update
+```
 
 ## 翻译指南
 
@@ -81,7 +91,6 @@ $ bin/i18n extract
 * 相同的英文单词和词组在不同意思下，避免使用相同的翻译；
 * 相同结构的英文组合，要使用相同的翻译方法；
 * 如果英文表达本身不准确，翻译过程中要予以校准；
-
 
 ## 附录
 

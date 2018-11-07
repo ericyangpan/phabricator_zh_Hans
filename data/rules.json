@@ -2,8 +2,8 @@
   "items": {
     "%[sd]": "%(\\d\\$)?[sd]",
     "!": "(?! )！(?! )|“!",
-    ",(?! and)": "(?! )(，|、)(?! )(?!并且)|\\d,\\d",
-    ":": "(?! )：(?! )|https:|ldaps:|\\d:\\d",
+    ",(?! and)(?! or)": "(?! )(，|、)(?! )(?!并且)(?!或者)|\\d,\\d",
+    ":": "(?! )：(?! )|://|：\\n|WARNING:|\\d:\\d",
     ";": "(?! )；(?! )",
     "\\?": "(?! )？(?! )",
     "\\.{3}": "(?! )…(?! )",
@@ -17,14 +17,15 @@
     "^You do not have permission to": "^你没有.+权限"
   },
   "exceptions": {
-    ",(?! and)": [
+    ",(?! and)(?! or)": [
       "Go Juice",
       "ou=People, dc=example, dc=com",
       "user=%s, should_verify=%s",
       "user=%s, verified=%s, primary=%s, should_verify=%s"
     ],
     ":": [
-      "Add \"Re:\" Prefix"
+      "Add \"Re:\" Prefix",
+      "Malformed password hash, expected \"name:hash\"."
     ],
     ";": [
       "<script>alert(1);</script>"
@@ -40,4 +41,3 @@
     ]
   }
 }
-

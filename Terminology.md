@@ -74,13 +74,14 @@ recipient | 收件人|接受者
 remove | 移除
 repository | 仓库|repository
 retention policy | 保留策略
-revert | 回复
+revert | 恢复
 save | 保存
 serve | 服务于
 session | 会话
 setting | 设置
 setup | 安装设置
 specification | 规格
+specified | 指定|特定
 start | 开始|启动
 tab | 选项卡
 token | 令牌|符记|符号|语素|token
