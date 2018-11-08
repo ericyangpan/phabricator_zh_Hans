@@ -3,11 +3,13 @@
 echo "* Pull latest libphutil *"
 
 cd ../libphutil
+git checkout stable
 git pull
 
 echo "* Pull latest phabricator *"
 
 cd ../phabricator
+git checkout stable
 git pull
 
 echo "* Extract phabricator *"
@@ -42,4 +44,3 @@ bin/discover terminology
 echo "* Generate similars.json *"
 
 bin/discover similar
-
