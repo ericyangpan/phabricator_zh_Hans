@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+const child_process = require('child_process')
 const crypto = require('crypto')
 const ejs = require('ejs')
 const fs = require('fs')
@@ -218,13 +219,19 @@ function computeTranslationSummary(translations) {
     }
   }
 
+  const gitInfo = {
+    phabricator: getGitInfo('../phabricator'),
+    libphutil: getGitInfo('../libphutil')
+  }
+
   const data = {
     i18nFileHash: computeFileHash(i18nFilesPath),
     totalCount: totalCount,
     totalCountWithoutPrototype: totalCountWithoutPrototype,
     totalPercent: computePercent(totalTranslationCount, totalCount),
     totalPercentOfShortItems: computePercent(totalTranslationCountOfShortItems, totalCountOfShortItems),
-    categories: categories
+    categories: categories,
+    gitInfo: gitInfo
   }
 
   return data
@@ -319,4 +326,19 @@ function computeFileHash(path) {
   sha1.update(buffer)
 
   return sha1.digest('hex')
+}
+
+function getGitInfo(path) {
+  const stdout = child_process.execSync('git log -1 --pretty=format:"%h %H %s"', {
+    cwd: path
+  }).toString()
+
+  const i1 = stdout.indexOf(' ')
+  const i2 = stdout.indexOf(' ', i1 + 1)
+
+  return {
+    abbrCommitHash: stdout.substring(0, i1),
+    commitHash: stdout.substring(i1 + 1, i2),
+    subject: stdout.substring(i2 + 1)
+  }
 }
