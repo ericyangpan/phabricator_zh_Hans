@@ -73,7 +73,7 @@
   "Accepted": {
     "translation": "已接受",
     "yes": 4,
-    "no": 13,
+    "no": 16,
     "kvp": {
       "%s accepted %s.": "%s 接受了 %s。",
       "%s accepted this commit.": "%s 接受了这个提交。",
@@ -81,6 +81,9 @@
       "%s is now accepted and ready to land.": "%s 现在已被接受并且准备就绪。",
       "Accepted By": "由谁接受",
       "Accepted Differential revision": "接受了 Differential 修订",
+      "Accepted Earlier": "较早接受了",
+      "Accepted Prior Diff": "接受了先前的差异",
+      "Accepted Prior Diff (by %s)": "接受了先前的差异（由 %s）",
       "Already Accepted Invite": "已经接受邀请",
       "This revision is now accepted and ready to land.": "此修订现在已被接受并且准备就绪。",
       "Treat Accepted Revisions as \"Closed\"": "将接受的修订视为“关闭的”",
@@ -144,14 +147,14 @@
   },
   "All": {
     "translation": "所有的",
-    "yes": 198,
+    "yes": 199,
     "no": 13,
     "kvp": {
       "%s - %s, All Day": "%s - %s，全天",
       "%s changed %s to an all day event.": "%s 把 %s 变更为了全天事件。",
-      "%s changed this to an all day event.": "%s 把这个变更为了一个全天事件。",
+      "%s changed this to an all day event.": "%s 把此变更为了一个全天事件。",
       "%s converted %s from an all day event.": "%s 把 %s 从一个全天事件转换了过来。",
-      "%s converted this from an all day event.": "%s 把这个从一个全天事件转换了过来。",
+      "%s converted this from an all day event.": "%s 把此从一个全天事件转换了过来。",
       "%s, All Day": "%s，全天",
       "All Day": "全天",
       "All Day Event": "全天事件",
@@ -172,7 +175,7 @@
   },
   "Almanac Bindings": {
     "translation": "Almanac 绑定",
-    "yes": 1,
+    "yes": 2,
     "no": 1,
     "kvp": {
       "Get Almanac bindings for the service.": "获取 Almanac 服务的绑定。"
@@ -218,7 +221,7 @@
     "kvp": {
       "A moderator can always view the answers.": "主持人可以随时查看答案。",
       "A moderator can always view the question.": "主持人可以随时查看问题。",
-      "Typeahead functions are an advanced feature which allow you to build more powerful queries. This document explains functions available for the selected control.\n\nFor general help with search, see the [[ %s | Search User Guide ]] in the documentation.\n\nNote that different controls support //different// functions (depending on what the control is doing), so these specific functions may not work everywhere. You can always check the help for a control to review which functions are available for that control.": "输入提示功能是一种允许你构建更强大查询的高级功能。本文档解释了所选控件的可用功能。\n\n有关搜索的一般帮助，请参阅[[%s | 搜索用户指南]]。\n\n请注意不同的控件支持//不同的//函数（取决于控件做什么），所以这些特定的功能可能不能在任意的地方工作。你可以随时检查控件的帮助以查看该控件可用的功能。"
+      "Typeahead functions are an advanced feature which allow you to build more powerful queries. This document explains functions available for the selected control.\n\nFor general help with search, see the [[ %s | Search User Guide ]] in the documentation.\n\nNote that different controls support //different// functions (depending on what the control is doing), so these specific functions may not work everywhere. You can always check the help for a control to review which functions are available for that control.": "键入提示功能是一种允许你构建更强大查询的高级功能。本文档解释了所选控件的可用功能。\n\n有关搜索的一般帮助，请参阅[[%s | 搜索用户指南]]。\n\n请注意不同的控件支持//不同的//函数（取决于控件做什么），所以这些特定的功能可能不能在任意的地方工作。你可以随时检查控件的帮助以查看该控件可用的功能。"
     }
   },
   "Answered": {
@@ -339,7 +342,7 @@
   },
   "Build": {
     "translation": "构建",
-    "yes": 197,
+    "yes": 198,
     "no": 1,
     "kvp": {
       "Build self esteem through gamification.": "通过游戏化的方式建立自我尊重。"
@@ -404,7 +407,7 @@
     "kvp": {
       "Controls who can view the object.": "控制谁可以查看对象。",
       "Flags are private. Only you can view or edit your flags.": "标记是私有的。只有你可以查看或者编辑标记。",
-      "Imported events can only be viewed by users who can view the import source.": "导入的事件只能被可以查看导入来源的人查看。",
+      "Imported events can only be viewed by users who can view the import source.": "导入的事件只能被可以查看导入来源的用户查看。",
       "Mail received! You can view details by running this command:": "邮件已接收！你可以通过运行这个命令查看详情：",
       "Mail sent! You can view details by running this command:": "邮件已发送！你可以通过运行这个命令查看详情：",
       "Mark this form as an edit form? Users who can view it will be able to use it to edit objects.": "标记这个表单为一个编辑表单？可以查看它的用户能够使用它编辑对象。",
@@ -487,9 +490,10 @@
   "Complete": {
     "translation": "完成",
     "yes": 21,
-    "no": 3,
+    "no": 4,
     "kvp": {
       "Client closed connection before sending a complete protocol frame.": "客户端在发送一个完整的协议帧之前关闭了连接。",
+      "Many text editors can be configured as URI handlers for special protocols like `editor://`. If you have such an editor, Phabricator can generate links that you can click to open files locally.\n\nThese special variables are supported:\n\n| Value | Replaced With |\n|-------|---------------|\n| `%%f`  | Filename |\n| `%%l`  | Line Number |\n| `%%r`  | Repository Callsign |\n| `%%%%`  | Literal `%%` |\n\n\nFor complete instructions on editor configuration, see **[[ %s | %s ]]**.": "许多文本编辑器可以被配置为特殊协议的 URI 处理器如 `editor://`。如果你有这样的编辑器，Phabricator 可以生成链接以便你单击在本地打开文件。\n\n支持这些特殊的变量：\n\n| 值 | 替换为 |\n|-------|---------------|\n| `%%f` | Filename |\n| `%%l`  | 行 Number |\n| `%%r`  | 仓库呼号 |\n| `%%%%`  | Literal `%%` |\n|-------|---------------|\n| `%%f`  | 文件名 |\n| `%%l`  | 行号 |\n| `%%r`  | 仓库呼号 |\n| `%%%%`  | 文字 `%%` |\n\n\n有关编辑器配置的完整说明，查看 **[[ %s | %s ]]**。",
       "Thank you for signing this document. Please check your email to verify your signature and complete the process.": "感谢你签署这个文档。请检查你的邮件来验证你的签名并且完整此过程。",
       "When it is prohibitively expensive or complex to attain a complete count of the items, you can select one extra item and set %s if it exists, creating an inexact pager.": "如果获得完整的条目数量过分昂贵或复杂，你可以选择一个额外的条目并设置 %s（如果存在），创建一个不严格的翻页控件。"
     }
@@ -567,7 +571,7 @@
       "Created by %s": "由 %s 创建",
       "Created by %s on %s.": "由 %s 于 %s 创建。",
       "Search for applications created by particular users.": "搜索由特定用户创建的应用程序。",
-      "This file was not created by transforming another file.": "未通过转换其它文件创建此文件。"
+      "This file was not created by transforming another file.": "未通过转换其他文件创建此文件。"
     }
   },
   "Currently Tracking": {
@@ -635,7 +639,7 @@
   },
   "Documents": {
     "translation": "文档",
-    "yes": 28,
+    "yes": 29,
     "no": 9,
     "kvp": {
       "This page documents the commands you can use to interact with commits and audits in Diffusion.": "此页面记录了你可以用来与 Diffusion 中的提交和审计进行交互的命令。",
@@ -770,7 +774,7 @@
       "%s edited the end date of %s.": "%s 编辑了 %s 的结束日期。",
       "%s edited the question answer wiki.": "%s 编辑了这个问题答案 Wiki。",
       "%s edited the question description.": "%s 编辑了这个问题描述。",
-      "%s edited the question title from \"%s\" to \"%s\".": "%s 把这个问题标题从“%s”编辑为“%s”。",
+      "%s edited the question title from \"%s\" to \"%s\".": "%s 把此问题标题从“%s”编辑为“%s”。",
       "%s edited the risks for this initiative.": "%s 编辑了这个倡议的风险。",
       "%s edited the summary of this revision.": "%s 编辑了此修订的摘要。",
       "%s edited the task description.": "%s 编辑了这个任务描述。",
@@ -795,8 +799,9 @@
   "Enabled": {
     "translation": "已启用",
     "yes": 4,
-    "no": 30,
+    "no": 31,
     "kvp": {
+      "%s enabled %s.": "%s 启用了 %s。",
       "%s enabled account linking.": "%s 启用了帐户连接。",
       "%s enabled account unlinking.": "%s 启用了帐户取消连接。",
       "%s enabled auditing for this package.": "%s 启用了这个包的审计。",
@@ -894,7 +899,7 @@
   },
   "Find": {
     "translation": "查找",
-    "yes": 41,
+    "yes": 42,
     "no": 10,
     "kvp": {
       "Find user accounts created after a given time.": "搜索给定时间之后创建的用户帐户。",
@@ -940,17 +945,22 @@
   "From": {
     "translation": "来自",
     "yes": 19,
-    "no": 276,
+    "no": 293,
     "kvp": {
       "%s adjusted autoreview from %s to %s.": "%s 把自动评审从 %s 调整为了 %s。",
+      "%s adjusted package dominion rules from %s to %s.": "%s 把包支配规则从 %s 调整为了 %s。",
       "%s changed %s from %s to %s.": "%s 把 %s 从 %s 变更为了 %s。",
       "%s changed autoclose branches from \"%s\" to \"%s\".": "%s 将自动关闭分支从“%s”变更为了“%s”。",
+      "%s changed hook status from %s to %s.": "%s 把勾子状态从 %s 变更为了 %s。",
       "%s changed indexed languages from %s to %s.": "%s 把索引的语言从 %s 变更为了 %s。",
-      "%s changed point limit for this column from %s to %s.": "%s 把这个列的点值限制从 %s 变更为了 %s。",
+      "%s changed point limit for this column from %s to %s.": "%s 把此列的点值限制从 %s 变更为了 %s。",
       "%s changed symbol sources from %s to %s.": "%s 把符号来源从 %s 变更为了 %s。",
       "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".": "%1$s 把应用 %3$s 的“%2$s”策略从“%4$s”变更为了“%5$s”。",
       "%s changed the \"%s\" policy from \"%s\" to \"%s\".": "%s 把“%s”策略从“%s”变更为了“%s”。",
       "%s changed the \"%s\" value from \"%s\" to \"%s\".": "%s 将“%s”值从“%s”变更为了“%s”。",
+      "%s changed the URI for %s from %s to %s.": "%s 把 %s 的 URI 从 %s 变更为了 %s。",
+      "%s changed the URI for this webhook from %s to %s.": "%s 把此 Webhook 的 URI 从 %s 变更为了 %s。",
+      "%s changed the address for this interface from %s to %s.": "%s 把此接口的地址从 %s 变更为了 %s。",
       "%s changed the alias from %s to %s.": "%s 把别名从 %s 变更为了 %s。",
       "%s changed the alias of %s from %s to %s.": "%s 把 %s 的别名从 %s 变更为了 %s。",
       "%s changed the application redirect URI from \"%s\" to \"%s\".": "%s 将应用重定向 URI 从“%s”变更为了“%s”。",
@@ -964,6 +974,7 @@
       "%s changed the default queue for this source from %s to %s.": "%s 把此来源的默认队列从 %s 变更为了 %s。",
       "%s changed the destination URL %s from %s to %s.": "%s 把目标 URL %s 从“%s”变更为了“%s”。",
       "%s changed the destination URL from %s to %s.": "%s 把目标 URL 从“%s”变更为了“%s”。",
+      "%s changed the device for this interface from %s to %s.": "%s 把此接口的设备从 %s 变更为了 %s。",
       "%s changed the display type for this URI from \"%s\" to \"%s\".": "%s 把此 URI 的显示类型从“%s”变更到了“%s”。",
       "%s changed the edit policy from \"%s\" to \"%s\".": "%s 把编辑策略从“%s”变更为了“%s”。",
       "%s changed the end date for %s from %s to %s.": "%s 把 %s 的结束日期从 %s 变更为了 %s。",
@@ -972,8 +983,9 @@
       "%s changed the host of %s from %s to %s.": "%s 把 %s 的主办者从 %s 变更为了 %s。",
       "%s changed the host of this event from %s to %s.": "%s 把此事件的主办者从 %s 变更为了 %s。",
       "%s changed the icon for %s from %s to %s.": "%s 把 %s 的图标从 %s 变更为了 %s。",
-      "%s changed the image for this macro from %s to %s.": "%s 把这个宏的图片从 %s 变更为了 %s。",
+      "%s changed the image for this macro from %s to %s.": "%s 把此宏的图片从 %s 变更为了 %s。",
       "%s changed the import path from \"%s\" to \"%s\".": "%s 将导入路径从“%s”变更为了“%s”。",
+      "%s changed the interface for this binding from %s to %s.": "%s 把此绑定的接口从 %s 变更为了 %s。",
       "%s changed the join policy from \"%s\" to \"%s\".": "%s 把加入策略从“%s”变更为了“%s”。",
       "%s changed the local path from \"%s\" to \"%s\".": "%s 将本地路径从“%s”变更为了“%s”。",
       "%s changed the merchant receiving funds from %s from %s to %s.": "%s 把从 %s 接收基金的商家从 %s 变更为了 %s。",
@@ -983,10 +995,12 @@
       "%s changed the name of this package from %s to %s.": "%s 将这个包的名称从 %s 变更为了 %s。",
       "%s changed the name of this publisher from %s to %s.": "%s 将这个发布者的名称从 %s 变更为了 %s。",
       "%s changed the name of this version from %s to %s.": "%s 将这个版本的名称从 %s 变更为了 %s。",
+      "%s changed the network for this interface from %s to %s.": "%s 把此接口的网络从 %s 变更为了 %s。",
       "%s changed the point value for %s from %s to %s.": "%s 将 %s 的点值数从 %s 变更为了 %s。",
       "%s changed the point value for this task from %s to %s.": "%s 将这个任务的点值数从 %s 变更为了 %s。",
       "%s changed the policy mode for this export from %s to %s.": "%s 把此导出的策略模式从 %s 变更为了 %s。",
       "%s changed the poll question from \"%s\" to \"%s\".": "%s 将投票问题从“%s”变更为了“%s”。",
+      "%s changed the port for this interface from %s to %s.": "%s 把此接口的端口从 %s 变更为了 %s。",
       "%s changed the push policy of this repository from \"%s\" to \"%s\".": "%s 把此仓库的 Push 策略从“%s”变更到了“%s”。",
       "%s changed the remote URI for this repository from \"%s\" to \"%s\".": "%s 把此仓库的远程 URI 从“%s”变更到了“%s”。",
       "%s changed the repository UUID from \"%s\" to \"%s\".": "%s 将仓库 UUID 从“%s”变更为了“%s”。",
@@ -1003,8 +1017,8 @@
       "%s changed the status of subtask %s from %s to %s.": "%s 把子任务 %s 的状态从 %s 变更为了 %s。",
       "%s changed the status of this item from %s to %s.": "%s 把此条目的状态从 %s 变更为了 %s。",
       "%s changed the subtype of %s from \"%s\" to \"%s\".": "%s 把 %s 的子类型从“%s”变更为了“%s”。",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".": "%s 把这个表单的子类型从“%s”变更为了“%s”。",
-      "%s changed the subtype of this task from \"%s\" to \"%s\".": "%s 把这个任务的子类型从“%s”变更为了“%s”。",
+      "%s changed the subtype of this form from \"%s\" to \"%s\".": "%s 把此表单的子类型从“%s”变更为了“%s”。",
+      "%s changed the subtype of this task from \"%s\" to \"%s\".": "%s 把此任务的子类型从“%s”变更为了“%s”。",
       "%s changed the tabs from \"%s\" to \"%s\".": "%s 将选项卡从“%s”变更为了“%s”。",
       "%s changed the task status from \"%s\" to \"%s\".": "%s 把任务状态从“%s”变更为“%s”。",
       "%s changed the task status from %s to %s by committing %s.": "%1$s 通过提交 %4$s 把任务状态从 %2$s 变更为了 %3$s。",
@@ -1017,27 +1031,27 @@
       "%s changed the visibility from \"%s\" to \"%s\".": "%s 将可见性从“%s”变更为了“%s”。",
       "%s changed this URI from \"%s\" to \"%s\".": "%s 将此 URI 从“%s”变更为了“%s”。",
       "%s changed this binding from %s to %s.": "%s 把此绑定从 %s 变更为了 %s。",
-      "%s changed this dashboard icon from \"%s\" to \"%s\".": "%s 把这个仪表板图标从“%s”变更为了“%s”。",
+      "%s changed this dashboard icon from \"%s\" to \"%s\".": "%s 把此仪表板图标从“%s”变更为了“%s”。",
       "%s changed track branches from \"%s\" to \"%s\".": "%s 将跟踪分支从“%s”变更为了“%s”。",
       "%s converted %s from an all day event.": "%s 把 %s 从一个全天事件转换了过来。",
-      "%s converted this from an all day event.": "%s 把这个从一个全天事件转换了过来。",
+      "%s converted this from an all day event.": "%s 把此从一个全天事件转换了过来。",
       "%s deleted imported events from this source.": "%s 删除了从此来源导入的事件。",
-      "%s edited the question title from \"%s\" to \"%s\".": "%s 把这个问题标题从“%s”编辑为“%s”。",
+      "%s edited the question title from \"%s\" to \"%s\".": "%s 把此问题标题从“%s”编辑为“%s”。",
       "%s from %s": "%s 从 %s",
       "%s lowered the priority of %s from %s to %s.": "%s 把 %s 的优先级从 %s 降低到了 %s。",
-      "%s lowered the priority of this task from %s to %s.": "%s 把这个任务的优先级从 %s 降低到了 %s。",
+      "%s lowered the priority of this task from %s to %s.": "%s 把此任务的优先级从 %s 降低到了 %s。",
       "%s moved %s from %s": "%s 把 %s 从 %s 移动来了",
       "%s moved %s from %s to %s on the %s board.": "%1$s 把 %5$s 工作板上的 %2$s 从 %3$s 移动到了 %4$s。",
       "%s moved storage for this repository from %s to %s.": "%s 将此仓库的存储从 %s 移动到了 %s。",
       "%s moved storage for this repository from %s to local.": "%s 将此仓库的存储从 %s 移动到了本地。",
-      "%s moved this document from %s": "%s 把这个文档从 %s 移动来了",
+      "%s moved this document from %s": "%s 把此文档从 %s 移动来了",
       "%s moved this task from %s to %s on the %s board.": "%1$s 在 %4$s 工作板上把这个任务从 %2$s 移动到了 %3$s。",
       "%s raised the priority of %s from \"%s\" to \"%s\".": "%s 把 %s 的优先级从“%s”提升到“%s”。",
       "%s raised the priority of %s from %s to %s.": "%s 把 %s 的优先级从 %s 提升到了 %s。",
-      "%s raised the priority of this task from \"%s\" to \"%s\".": "%s 把这个任务的优先级从“%s”提升到“%s”。",
-      "%s raised the priority of this task from %s to %s.": "%s 把这个任务的优先级从 %s 提升到了 %s。",
+      "%s raised the priority of this task from \"%s\" to \"%s\".": "%s 把此任务的优先级从“%s”提升到“%s”。",
+      "%s raised the priority of this task from %s to %s.": "%s 把此任务的优先级从 %s 提升到了 %s。",
       "%s reassigned %s from %s to %s.": "%s 把 %s 从 %s 重新分配给了 %s。",
-      "%s reassigned this item from %s to %s.": "%s 把这个条目从 %s 重新分配给了 %s。",
+      "%s reassigned this item from %s to %s.": "%s 把此条目从 %s 重新分配给了 %s。",
       "%s reassigned this task from %s to %s.": "%s 把此任务从 %s 重新分配给了 %s。",
       "%s removed %s account manager(s) from %s: %s.": "%1$s 从 %3$s 移除了 %2$s 位帐户管理员：%4$s。",
       "%s removed %s commit(s) from %s: %s.": "%1$s 从 %3$s 移除了 %2$s 个提交：%4$s。",
@@ -1059,52 +1073,58 @@
       "%s renamed dashboard %s from \"%s\" to \"%s\".": "%s 将仪表板 %s 从“%s”重命名为了“%s”。",
       "%s renamed dashboard panel %s from \"%s\" to \"%s\".": "%s 将仪表板面板 %s 从“%s”重命名为了“%s”。",
       "%s renamed space %s from %s to %s.": "%s 把空间 %s 从 %s 重命名为了 %s。",
-      "%s renamed this account from \"%s\" to \"%s\".": "%s 把这个帐户从“%s”重命名为“%s”。",
-      "%s renamed this account from %s to %s.": "%s 把这个帐户从 %s 重命名为了 %s。",
-      "%s renamed this application from \"%s\" to \"%s\".": "%s 把这个应用从“%s”重命名为了“%s”。",
+      "%s renamed this account from \"%s\" to \"%s\".": "%s 把此帐户从“%s”重命名为“%s”。",
+      "%s renamed this account from %s to %s.": "%s 把此帐户从 %s 重命名为了 %s。",
+      "%s renamed this application from \"%s\" to \"%s\".": "%s 把此应用从“%s”重命名为了“%s”。",
       "%s renamed this badge from %s to %s.": "%s 把此徽章从 %s 重命名为了 %s。",
-      "%s renamed this blog from %s to %s.": "%s 把这个博客从 %s 重命名为了 %s。",
-      "%s renamed this blog post from %s to %s.": "%s 把这个博客文章从 %s 重命名为了 %s。",
-      "%s renamed this blueprint from \"%s\" to \"%s\".": "%s 把这个蓝图从“%s”重命名为了“%s”。",
-      "%s renamed this build plan from \"%s\" to \"%s\".": "%s 把这个构建计划从“%s”重命名为了“%s”。",
-      "%s renamed this column from \"%s\" to \"%s\".": "%s 把这个列从“%s”重命名为了“%s”。",
-      "%s renamed this countdown from \"%s\" to \"%s\".": "%s 把这个倒计时从“%s”重命名为“%s”。",
-      "%s renamed this credential from \"%s\" to \"%s\".": "%s 把这个凭据从“%s”重命名为“%s”。",
-      "%s renamed this credential from %s to %s.": "%s 把这个凭据从 %s 重命名为了 %s。",
-      "%s renamed this dashboard from \"%s\" to \"%s\".": "%s 把这个仪表板从“%s”重命名为了“%s”。",
-      "%s renamed this device from \"%s\" to \"%s\".": "%s 把这个设备从“%s”重命名为了“%s”。",
-      "%s renamed this document from \"%s\" to \"%s\".": "%s 把这个文档从“%s”重命名为“%s”。",
-      "%s renamed this document from %s to %s.": "%s 把这个文档从 %s 重命名为了 %s。",
-      "%s renamed this event from %s to %s.": "%s 把这个事件从 %s 重命名为了 %s。",
-      "%s renamed this export from %s to %s.": "%s 把这个导出从 %s 重命名为了 %s。",
-      "%s renamed this form from \"%s\" to \"%s\".": "%s 把这个表单从“%s”重命名为了“%s”。",
-      "%s renamed this import from %s to %s.": "%s 把这个导入从 %s 重命名为了 %s。",
-      "%s renamed this initiative from \"%s\" to \"%s\".": "%s 把这个倡议从“%s”重命名为“%s”。",
-      "%s renamed this initiative from %s to %s.": "%s 把这个倡议从 %s 重命名为了 %s。",
-      "%s renamed this key from \"%s\" to \"%s\".": "%s 把这个键从“%s”重命名为了“%s”。",
-      "%s renamed this macro from \"%s\" to \"%s\".": "%s 把这个宏从“%s”重命名为“%s”。",
-      "%s renamed this macro from %s to %s.": "%s 把这个宏从 %s 重命名为了 %s。",
-      "%s renamed this merchant from \"%s\" to \"%s\".": "%s 把这个商家从“%s”重命名为“%s”。",
-      "%s renamed this merchant from %s to %s.": "%s 把这个商家从 %s 重命名为了 %s。",
-      "%s renamed this mock from %s to %s.": "%s 把这个 Mock 从 %s 重命名为了 %s。",
-      "%s renamed this namespace from \"%s\" to \"%s\".": "%s 把这个命名空间从“%s”重命名为了“%s”。",
-      "%s renamed this network from \"%s\" to \"%s\".": "%s 把这个网络从“%s”重命名为了“%s”。",
-      "%s renamed this package from %s to %s.": "%s 把这个包从 %s 重命名为了 %s。",
-      "%s renamed this panel from \"%s\" to \"%s\".": "%s 把这个面板从“%s”重命名为了“%s”。",
-      "%s renamed this project from \"%s\" to \"%s\".": "%s 把这个项目从“%s”重命名为“%s”。",
-      "%s renamed this project from %s to %s.": "%s 把这个项目从 %s 重命名为了 %s。",
-      "%s renamed this queue from \"%s\" to \"%s\".": "%s 把这个队列从“%s”重命名为“%s”。",
-      "%s renamed this queue from %s to %s.": "%s 把这个队列从 %s 重命名为了 %s。",
-      "%s renamed this repository from \"%s\" to \"%s\".": "%s 把这个仓库从“%s”重命名为了“%s”。",
-      "%s renamed this room from \"%s\" to \"%s\".": "%s 把这个房间从“%s”重命名为“%s”。",
-      "%s renamed this room from %s to %s.": "%s 把这个房间从 %s 重命名为了 %s。",
-      "%s renamed this rule from \"%s\" to \"%s\".": "%s 把这个规则从“%s”重命名为了“%s”。",
-      "%s renamed this service from \"%s\" to \"%s\".": "%s 把这个服务从“%s”重命名为了“%s”。",
-      "%s renamed this source from \"%s\" to \"%s\".": "%s 把这个来源从“%s”重命名为“%s”。",
-      "%s renamed this source from %s to %s.": "%s 把这个来源从 %s 重命名为了 %s。",
-      "%s renamed this space from \"%s\" to \"%s\".": "%s 把这个空间从“%s”重命名为“%s”。",
-      "%s renamed this space from %s to %s.": "%s 把这个空间从 %s 重命名为了 %s。",
-      "%s renamed this task from %s to %s.": "%s 把这个任务从 %s 重命名为了 %s。",
+      "%s renamed this blog from %s to %s.": "%s 把此博客从 %s 重命名为了 %s。",
+      "%s renamed this blog post from %s to %s.": "%s 把此博客文章从 %s 重命名为了 %s。",
+      "%s renamed this blueprint from \"%s\" to \"%s\".": "%s 把此蓝图从“%s”重命名为了“%s”。",
+      "%s renamed this blueprint from %s to %s.": "%s 把此蓝图从 %s 重命名为了 %s。",
+      "%s renamed this build plan from \"%s\" to \"%s\".": "%s 把此构建计划从“%s”重命名为了“%s”。",
+      "%s renamed this column from \"%s\" to \"%s\".": "%s 把此列从“%s”重命名为了“%s”。",
+      "%s renamed this countdown from \"%s\" to \"%s\".": "%s 把此倒计时从“%s”重命名为“%s”。",
+      "%s renamed this credential from \"%s\" to \"%s\".": "%s 把此凭据从“%s”重命名为“%s”。",
+      "%s renamed this credential from %s to %s.": "%s 把此凭据从 %s 重命名为了 %s。",
+      "%s renamed this dashboard from \"%s\" to \"%s\".": "%s 把此仪表板从“%s”重命名为了“%s”。",
+      "%s renamed this device from \"%s\" to \"%s\".": "%s 把此设备从“%s”重命名为了“%s”。",
+      "%s renamed this device from %s to %s.": "%s 把此设备从 %s 重命名为了 %s。",
+      "%s renamed this document from \"%s\" to \"%s\".": "%s 把此文档从“%s”重命名为“%s”。",
+      "%s renamed this document from %s to %s.": "%s 把此文档从 %s 重命名为了 %s。",
+      "%s renamed this event from %s to %s.": "%s 把此事件从 %s 重命名为了 %s。",
+      "%s renamed this export from %s to %s.": "%s 把此导出从 %s 重命名为了 %s。",
+      "%s renamed this form from \"%s\" to \"%s\".": "%s 把此表单从“%s”重命名为了“%s”。",
+      "%s renamed this import from %s to %s.": "%s 把此导入从 %s 重命名为了 %s。",
+      "%s renamed this initiative from \"%s\" to \"%s\".": "%s 把此倡议从“%s”重命名为“%s”。",
+      "%s renamed this initiative from %s to %s.": "%s 把此倡议从 %s 重命名为了 %s。",
+      "%s renamed this key from \"%s\" to \"%s\".": "%s 把此键从“%s”重命名为了“%s”。",
+      "%s renamed this macro from \"%s\" to \"%s\".": "%s 把此宏从“%s”重命名为“%s”。",
+      "%s renamed this macro from %s to %s.": "%s 把此宏从 %s 重命名为了 %s。",
+      "%s renamed this merchant from \"%s\" to \"%s\".": "%s 把此商家从“%s”重命名为“%s”。",
+      "%s renamed this merchant from %s to %s.": "%s 把此商家从 %s 重命名为了 %s。",
+      "%s renamed this mock from %s to %s.": "%s 把此 Mock 从 %s 重命名为了 %s。",
+      "%s renamed this namespace from \"%s\" to \"%s\".": "%s 把此命名空间从“%s”重命名为了“%s”。",
+      "%s renamed this namespace from %s to %s.": "%s 把此命名空间从 %s 重命名为了 %s。",
+      "%s renamed this network from \"%s\" to \"%s\".": "%s 把此网络从“%s”重命名为了“%s”。",
+      "%s renamed this network from %s to %s.": "%s 把此网络从 %s 重命名为了 %s。",
+      "%s renamed this package from %s to %s.": "%s 把此包从 %s 重命名为了 %s。",
+      "%s renamed this panel from \"%s\" to \"%s\".": "%s 把此面板从“%s”重命名为了“%s”。",
+      "%s renamed this project from \"%s\" to \"%s\".": "%s 把此项目从“%s”重命名为“%s”。",
+      "%s renamed this project from %s to %s.": "%s 把此项目从 %s 重命名为了 %s。",
+      "%s renamed this queue from \"%s\" to \"%s\".": "%s 把此队列从“%s”重命名为“%s”。",
+      "%s renamed this queue from %s to %s.": "%s 把此队列从 %s 重命名为了 %s。",
+      "%s renamed this repository from \"%s\" to \"%s\".": "%s 把此仓库从“%s”重命名为了“%s”。",
+      "%s renamed this room from \"%s\" to \"%s\".": "%s 把此房间从“%s”重命名为“%s”。",
+      "%s renamed this room from %s to %s.": "%s 把此房间从 %s 重命名为了 %s。",
+      "%s renamed this rule from \"%s\" to \"%s\".": "%s 把此规则从“%s”重命名为了“%s”。",
+      "%s renamed this service from \"%s\" to \"%s\".": "%s 把此服务从“%s”重命名为了“%s”。",
+      "%s renamed this service from %s to %s.": "%s 把此服务从 %s 重命名为了 %s。",
+      "%s renamed this source from \"%s\" to \"%s\".": "%s 把此来源从“%s”重命名为“%s”。",
+      "%s renamed this source from %s to %s.": "%s 把此来源从 %s 重命名为了 %s。",
+      "%s renamed this space from \"%s\" to \"%s\".": "%s 把此空间从“%s”重命名为“%s”。",
+      "%s renamed this space from %s to %s.": "%s 把此空间从 %s 重命名为了 %s。",
+      "%s renamed this task from %s to %s.": "%s 把此任务从 %s 重命名为了 %s。",
+      "%s renamed this webhook from %s to %s.": "%s 把此 Webhook 从 %s 重命名为了 %s。",
       "%s rerouted this item from %s to %s.": "%s 把此条目从 %s 重新路由为了 %s。",
       "%s resigned from %s.": "%s 退出了 %s。",
       "%s resigned from auditing %s.": "%s 退出了审计 %s。",
@@ -1136,12 +1156,13 @@
       "%s updated the name of %s from \"%s\" to \"%s\".": "%s 把 %s 的名称从“%s”更新到了“%s”。",
       "%s updated the paste's language from %s to %s.": "%s 把粘贴的语言从 %s 更新为了  %s。",
       "%s updated the quality from %s to %s.": "%s 把质量从 %s 更新为了 %s。",
+      "%s updated the quality of %s from %s to %s.": "%s 把 %s 的数量从 %s 更新为了 %s。",
       "%s updated the question from %s to %s.": "%s 把问题从 %s 更新为了 %s。",
       "%s updated the title for %s from %s to %s.": "%s 把 %s 的标题从 %s 更新为了 %s。",
       "%s updated the title for %s from %s to untitled.": "%s 把 %s 的标题从 %s 更新为了无标题。",
       "%s updated the title for %s from untitled to %s.": "%s 把 %s 的标题从无标题更新为了 %s。",
       "%s updated the title for this countdown from %s to %s.": "%s 把倒计时的标题从 %s 更新为了  %s。",
-      "%s updated this project's image from %s to %s.": "%s 把这个项目的图片从 %s 更新为了 %s。",
+      "%s updated this project's image from %s to %s.": "%s 把此项目的图片从 %s 更新为了 %s。",
       "A buildable inherits policies from the underlying object.": "可构建项从基础对象继承策略。",
       "Allows you to remove levity and jokes from the UI.": "允许你从用户界面中移除轻率和笑话。",
       "Authorization token from Twilio service.": "Twilio 服务的授权令牌。",
@@ -1211,6 +1232,7 @@
       "Unable to copy from parent event: this is not a child event.": "无法从父级事件拷贝：这不是一个子事件。",
       "Unmark this form as a create form? It will still function properly, but no longer be reachable directly from the application \"Create\" menu.": "取消标记这个表单为一个创建表单？它将仍然能够正常使用，但不再可以从应用“创建”菜单中直接访问到。",
       "View '%s' did not return an array from getTagAttributes()!": "视图‘%s’没有从 getTagAttributes() 返回一个数组！",
+      "WARNING: Failed to extract strings from file \"%s\": %s": "WARNING: 从自文件“%s”释放字符串失败：%s",
       "You can also paste a diff below, or upload a file containing a diff (for example, from %s, %s or %s).": "你也可以在下面粘贴一个差异或上传一个包含差异的文件（例如，从 %s、%s 或 %s）。",
       "You can also upload files by dragging and dropping them from your desktop onto this page or the Phabricator home page.": "你也可以通过从你的桌面拖放文件到这个页面上或者 Phabricator 首页上来上传它们。",
       "You can not resign from a draft revision.": "你不能从一个草稿修订退出。",
@@ -1245,7 +1267,7 @@
       "General Cache (TTL)": "通用缓存（TTL）",
       "Purge the general cache.": "清除通用缓存。",
       "Purging general cache...": "清除通用缓存…",
-      "Typeahead functions are an advanced feature which allow you to build more powerful queries. This document explains functions available for the selected control.\n\nFor general help with search, see the [[ %s | Search User Guide ]] in the documentation.\n\nNote that different controls support //different// functions (depending on what the control is doing), so these specific functions may not work everywhere. You can always check the help for a control to review which functions are available for that control.": "输入提示功能是一种允许你构建更强大查询的高级功能。本文档解释了所选控件的可用功能。\n\n有关搜索的一般帮助，请参阅[[%s | 搜索用户指南]]。\n\n请注意不同的控件支持//不同的//函数（取决于控件做什么），所以这些特定的功能可能不能在任意的地方工作。你可以随时检查控件的帮助以查看该控件可用的功能。"
+      "Typeahead functions are an advanced feature which allow you to build more powerful queries. This document explains functions available for the selected control.\n\nFor general help with search, see the [[ %s | Search User Guide ]] in the documentation.\n\nNote that different controls support //different// functions (depending on what the control is doing), so these specific functions may not work everywhere. You can always check the help for a control to review which functions are available for that control.": "键入提示功能是一种允许你构建更强大查询的高级功能。本文档解释了所选控件的可用功能。\n\n有关搜索的一般帮助，请参阅[[%s | 搜索用户指南]]。\n\n请注意不同的控件支持//不同的//函数（取决于控件做什么），所以这些特定的功能可能不能在任意的地方工作。你可以随时检查控件的帮助以查看该控件可用的功能。"
     }
   },
   "Graph": {
@@ -1320,7 +1342,7 @@
       "Imported Event": "导入的事件",
       "Imported Events": "导入的事件",
       "Imported events can not be edited in Phabricator.": "导入的事件不能在 Phabricator 中编辑。",
-      "Imported events can only be viewed by users who can view the import source.": "导入的事件只能被可以查看导入来源的人查看。",
+      "Imported events can only be viewed by users who can view the import source.": "导入的事件只能被可以查看导入来源的用户查看。",
       "No Imported Events": "无导入的事件",
       "No imported events.": "无导入的事件。",
       "Reload events imported from this source.": "重新加载从此来源导入的事件。",
@@ -1354,6 +1376,14 @@
       "Build individual panels to display on your homepage dashboard.": "构建单独的面板以显示在你的首页仪表板上。"
     }
   },
+  "Installed": {
+    "translation": "已安装的",
+    "yes": 6,
+    "no": 1,
+    "kvp": {
+      "%s installed %s.": "%s 安装了 %s。"
+    }
+  },
   "Invited": {
     "translation": "被邀请的",
     "yes": 7,
@@ -1369,7 +1399,7 @@
   },
   "Item": {
     "translation": "条目",
-    "yes": 41,
+    "yes": 42,
     "no": 6,
     "kvp": {
       "Edit Profile Menu Item Configurations": "编辑档案菜单项配置",
@@ -1382,7 +1412,7 @@
   },
   "Items": {
     "translation": "条目",
-    "yes": 11,
+    "yes": 12,
     "no": 2,
     "kvp": {
       "Profile menu items can not be generated without an object context.": "没有对象上下文无法生成档案菜单项。",
@@ -1487,12 +1517,13 @@
   "Like": {
     "translation": "喜欢",
     "yes": 2,
-    "no": 14,
+    "no": 15,
     "kvp": {
       "Choose which language you would like the Phabricator UI to use.": "选择你希望 Phabricator 用户界面使用的语言。",
       "Create a mailing list user to represent an existing, external mailing list like a Google Group or a Mailman list.": "创建一个邮件列表用户来代表一个现有的、外部的邮件列表如 Google 群组或 Mailman 列表。",
       "If you disable **Email Notifications**, Phabricator will never send email to notify you about events. This preference overrides all your other settings.\n\n//You will still receive some administrative email, like password reset email.//": "如果你禁用**邮件通知**，Phabricator 将永远不会发送提醒事件的邮件。这个偏好会覆盖所有其他设置。\n\n//你仍然将会接收到一些管理类邮件，如密码重置邮件。//",
       "Like fractions, but more horizontal.": "像分数，但更水平。",
+      "Many text editors can be configured as URI handlers for special protocols like `editor://`. If you have such an editor, Phabricator can generate links that you can click to open files locally.\n\nThese special variables are supported:\n\n| Value | Replaced With |\n|-------|---------------|\n| `%%f`  | Filename |\n| `%%l`  | Line Number |\n| `%%r`  | Repository Callsign |\n| `%%%%`  | Literal `%%` |\n\n\nFor complete instructions on editor configuration, see **[[ %s | %s ]]**.": "许多文本编辑器可以被配置为特殊协议的 URI 处理器如 `editor://`。如果你有这样的编辑器，Phabricator 可以生成链接以便你单击在本地打开文件。\n\n支持这些特殊的变量：\n\n| 值 | 替换为 |\n|-------|---------------|\n| `%%f` | Filename |\n| `%%l`  | 行 Number |\n| `%%r`  | 仓库呼号 |\n| `%%%%`  | Literal `%%` |\n|-------|---------------|\n| `%%f`  | 文件名 |\n| `%%l`  | 行号 |\n| `%%r`  | 仓库呼号 |\n| `%%%%`  | 文字 `%%` |\n\n\n有关编辑器配置的完整说明，查看 **[[ %s | %s ]]**。",
       "Object types to reindex, like \"task\", \"commit\" or \"revision\".": "重建索引的对象类型，如“任务”、“提交”或“修订”。",
       "Serves static resources like images, CSS and JS.": "服务于静态资源如图片、CSS 和 JS。",
       "Short test name, like \"ExampleTest\".": "短测试名称，如“ExampleTest”。",
@@ -1623,7 +1654,7 @@
       "Two different colors (\"%s\", \"%s\") are marked as the default color. Only one color may be marked as the default.": "两个不同的颜色（“%s”，“%s”）被标记为默认颜色。只有一个颜色可以被标记为默认。",
       "Two different icons (\"%s\", \"%s\") are marked as the default icon. Only one icon may be marked as the default.": "两个不同的图标（“%s”，“%s”）被标记为默认图标。只有一个图标可以被标记为默认。",
       "Two different icons (\"%s\", \"%s\") are marked with special attribute \"%s\". Only one icon may be marked with this attribute.": "两个不同的图标（“%s”，“%s”）用特殊属性“%s”做了标记。只有一个图标可以被标记为这个属性。",
-      "Typeahead functions are an advanced feature which allow you to build more powerful queries. This document explains functions available for the selected control.\n\nFor general help with search, see the [[ %s | Search User Guide ]] in the documentation.\n\nNote that different controls support //different// functions (depending on what the control is doing), so these specific functions may not work everywhere. You can always check the help for a control to review which functions are available for that control.": "输入提示功能是一种允许你构建更强大查询的高级功能。本文档解释了所选控件的可用功能。\n\n有关搜索的一般帮助，请参阅[[%s | 搜索用户指南]]。\n\n请注意不同的控件支持//不同的//函数（取决于控件做什么），所以这些特定的功能可能不能在任意的地方工作。你可以随时检查控件的帮助以查看该控件可用的功能。",
+      "Typeahead functions are an advanced feature which allow you to build more powerful queries. This document explains functions available for the selected control.\n\nFor general help with search, see the [[ %s | Search User Guide ]] in the documentation.\n\nNote that different controls support //different// functions (depending on what the control is doing), so these specific functions may not work everywhere. You can always check the help for a control to review which functions are available for that control.": "键入提示功能是一种允许你构建更强大查询的高级功能。本文档解释了所选控件的可用功能。\n\n有关搜索的一般帮助，请参阅[[%s | 搜索用户指南]]。\n\n请注意不同的控件支持//不同的//函数（取决于控件做什么），所以这些特定的功能可能不能在任意的地方工作。你可以随时检查控件的帮助以查看该控件可用的功能。",
       "Unable to find the specified documentation. You may have followed a bad or outdated link.": "无法找到指定的文档。你可能遇到了一个错误的或者过期的链接。",
       "Users with access may join and leave this project.": "用户有加入和离开这个项目的访问权限。",
       "Users with access may join this project, but may not leave.": "用户访问权限可以加入这个项目，但是不可离开。",
@@ -1679,7 +1710,7 @@
       "%s moved %s to %s": "%s 把 %s 移动到了 %s",
       "%s moved storage for this repository from %s to %s.": "%s 将此仓库的存储从 %s 移动到了 %s。",
       "%s moved storage for this repository from %s to local.": "%s 将此仓库的存储从 %s 移动到了本地。",
-      "%s moved this document from %s": "%s 把这个文档从 %s 移动来了",
+      "%s moved this document from %s": "%s 把此文档从 %s 移动来了",
       "%s moved this document to %s": "%s 把此文档移动到了 %s",
       "%s moved this task from %s to %s on the %s board.": "%1$s 在 %4$s 工作板上把这个任务从 %2$s 移动到了 %3$s。",
       "A moved document can not be deleted.": "移动过的文档不能被删除。",
@@ -1737,7 +1768,7 @@
   },
   "Name": {
     "translation": "名称",
-    "yes": 289,
+    "yes": 293,
     "no": 4,
     "kvp": {
       "Always require real name for user profiles.": "用户档案总是需要真实姓名。",
@@ -1782,7 +1813,7 @@
   "No": {
     "translation": "否",
     "yes": 4,
-    "no": 442,
+    "no": 446,
     "kvp": {
       "%s has no active lease.": "%s 没有活跃的租约。",
       "%s no longer requires audit.": "%s 不再需要审计。",
@@ -1889,6 +1920,7 @@
       "No Repository": "无仓库",
       "No Repository Automation": "无仓库自动化",
       "No Resource": "无资源",
+      "No Reviewers": "无评审者",
       "No Rooms": "无房间",
       "No Schema Issues": "无模式问题",
       "No Short Name": "无短名称",
@@ -1998,7 +2030,7 @@
       "No matching SSH keys.": "无匹配的 SSH 密钥。",
       "No matching calls in log.": "在日志中无匹配的调用。",
       "No matching flags.": "无匹配的标记。",
-      "No matching lock logs.": "无匹配的锁日志",
+      "No matching lock logs.": "无匹配的锁日志。",
       "No matching operations.": "无匹配的操作。",
       "No matching repositories.": "无匹配的仓库。",
       "No matching symbol could be found in any indexed repository.": "无匹配的符号能在任何索引的仓库中被发现。",
@@ -2022,6 +2054,7 @@
       "No panels.": "没有面板。",
       "No parent domain": "无父域名",
       "No parent site": "无父站点",
+      "No parent/ancestor paths specified.": "未指定父/祖先路径。",
       "No pastes found.": "未找到粘贴。",
       "No payment methods configured.": "没有配置支付方法。",
       "No performance sampling.": "无性能取样。",
@@ -2112,6 +2145,7 @@
       "No such resource \"%s\"!": "无此资源“%s”！",
       "No such revision exists.": "无此修订存在。",
       "No such token \"%s\"!": "无此符记“%s”！",
+      "No such user \"%s\" exists.": "无此用户“%s”存在。",
       "No such user \"%s\"!": "无此用户“%s”！",
       "No such user \"%s\". Recoverable administrator accounts are: %s.": "无此用户“%s”。可恢复的管理员帐户是：%s。",
       "No such user '%s' exists.": "无此用户‘%s’存在。",
@@ -2147,6 +2181,7 @@
       "Rule failed automatically because it has no conditions.": "规则自动失败因为它没有条件。",
       "Select results with no owner.": "选择没有所有者的结果。",
       "Select results with no tags.": "选择没有标签的结果。",
+      "Skipping main task update, object is no longer visible.": "跳过主任务更新，对象不再可见。",
       "Skipping, provider has no stored refresh token.": "跳过，提供者无存储的刷新令牌。",
       "Task has no object PHID!": "任务没有对象 PHID！",
       "The alias can be no longer than %d characters.": "别名不能长于 %d 个字符。",
@@ -2329,6 +2364,14 @@
       "No resource with symbol \"%s\" exists in source \"%s\"!": "来源“%s”中不存在符号“%s”的资源！"
     }
   },
+  "No Reviewers": {
+    "translation": "无评审者",
+    "yes": 1,
+    "no": 1,
+    "kvp": {
+      "This revision needs review, but there are no reviewers specified.": "此修订需要评审，但是未指定评审者。"
+    }
+  },
   "None": {
     "translation": "无",
     "yes": 8,
@@ -2395,8 +2438,8 @@
   },
   "On": {
     "translation": "打开",
-    "yes": 9,
-    "no": 118,
+    "yes": 10,
+    "no": 120,
     "kvp": {
       "%s (branched from %s on %s)": "%1$s（在 %3$s 上来自 %2$s 的分支）",
       "%s changed interface %s on this device to %s.": "%s 把此设备上的接口 %s 变更为了 %s。",
@@ -2494,16 +2537,18 @@
       "This table briefly describes available functions for this control. For details on a particular function, see the corresponding section below.": "本表格简要介绍了这个控件的可用函数。有关特定功能的详情，请看下面相应的章节。",
       "This table summarizes the available mail commands. For details on a specific command, see the command section below.": "这个表格汇总了可用的邮件命令。关于一个具体命令的详情，看下面的命令章节。",
       "To begin on such a grand journey, requires but just a single step.": "只再需要一小步，就可以开始一段伟大的旅程了。",
-      "Typeahead functions are an advanced feature which allow you to build more powerful queries. This document explains functions available for the selected control.\n\nFor general help with search, see the [[ %s | Search User Guide ]] in the documentation.\n\nNote that different controls support //different// functions (depending on what the control is doing), so these specific functions may not work everywhere. You can always check the help for a control to review which functions are available for that control.": "输入提示功能是一种允许你构建更强大查询的高级功能。本文档解释了所选控件的可用功能。\n\n有关搜索的一般帮助，请参阅[[%s | 搜索用户指南]]。\n\n请注意不同的控件支持//不同的//函数（取决于控件做什么），所以这些特定的功能可能不能在任意的地方工作。你可以随时检查控件的帮助以查看该控件可用的功能。",
+      "Typeahead functions are an advanced feature which allow you to build more powerful queries. This document explains functions available for the selected control.\n\nFor general help with search, see the [[ %s | Search User Guide ]] in the documentation.\n\nNote that different controls support //different// functions (depending on what the control is doing), so these specific functions may not work everywhere. You can always check the help for a control to review which functions are available for that control.": "键入提示功能是一种允许你构建更强大查询的高级功能。本文档解释了所选控件的可用功能。\n\n有关搜索的一般帮助，请参阅[[%s | 搜索用户指南]]。\n\n请注意不同的控件支持//不同的//函数（取决于控件做什么），所以这些特定的功能可能不能在任意的地方工作。你可以随时检查控件的帮助以查看该控件可用的功能。",
       "Unable to find object \"%s\" in column \"%s\" on board \"%s\".": "在工作板“%s”列“%s”中无法找到对象“%s”。",
       "Unable to test client on an admin server!": "无法在管理服务器上测试客户端！",
       "Uploaded by %s on %s": "由 %s 于 %s 上传",
       "Uploaded on %s": "上传于 %s",
       "Use %s to listen for gesture events. Note that you must be in device mode for this to work (you can narrow your browser window if you are on a desktop).": "使用 %s 监听手势事件。注意你必须在设备模式下才能使其工作（如果你处于桌面上可以缩小浏览器窗口）。",
+      "WARNING: Failed to evaluate pht() call on line %d in \"%s\": %s": "WARNING: 在“%2$s”中 %1$d 行评估 pht() 调用失败：%3$s",
       "Waiting on Auditors": "正在等待审计员",
       "Waiting on Authors": "正在等待作者",
-      "Waiting on Other Reviewers": "等待其他评审者",
+      "Waiting on Other Reviewers": "正在等待其他评审者",
       "Waiting on Review": "正在等待评审",
+      "Waiting on another user to finish writing...": "正在等待其他用户写入…",
       "Work will continue on all builds. Really resume?": "所有构建将继续工作。确实要恢复吗？",
       "Work will continue on the build. Really resume?": "所有构建将继续工作。确实要恢复吗？",
       "Written by %s on %s in %s.": "由 %s 于 %s 在 %s 中撰写。",
@@ -2521,11 +2566,12 @@
   "Open": {
     "translation": "开放的",
     "yes": 38,
-    "no": 10,
+    "no": 11,
     "kvp": {
       "Failed to open file \"%s\" for writing.": "打开文件“%s”写入失败。",
       "Failed to open file!": "打开文件失败！",
       "Failed to open output file \"%s\" for writing.": "打开输出文件“%s”写入失败。",
+      "Many text editors can be configured as URI handlers for special protocols like `editor://`. If you have such an editor, Phabricator can generate links that you can click to open files locally.\n\nThese special variables are supported:\n\n| Value | Replaced With |\n|-------|---------------|\n| `%%f`  | Filename |\n| `%%l`  | Line Number |\n| `%%r`  | Repository Callsign |\n| `%%%%`  | Literal `%%` |\n\n\nFor complete instructions on editor configuration, see **[[ %s | %s ]]**.": "许多文本编辑器可以被配置为特殊协议的 URI 处理器如 `editor://`。如果你有这样的编辑器，Phabricator 可以生成链接以便你单击在本地打开文件。\n\n支持这些特殊的变量：\n\n| 值 | 替换为 |\n|-------|---------------|\n| `%%f` | Filename |\n| `%%l`  | 行 Number |\n| `%%r`  | 仓库呼号 |\n| `%%%%`  | Literal `%%` |\n|-------|---------------|\n| `%%f`  | 文件名 |\n| `%%l`  | 行号 |\n| `%%r`  | 仓库呼号 |\n| `%%%%`  | 文字 `%%` |\n\n\n有关编辑器配置的完整说明，查看 **[[ %s | %s ]]**。",
       "Open Mock": "打开 Mock",
       "Open Mocks": "打开 Mock",
       "Open Pholio Mock": "打开 Pholio Mock",
@@ -2552,19 +2598,9 @@
       "Orange Medal": "铜牌"
     }
   },
-  "Other": {
-    "translation": "其他",
-    "yes": 48,
-    "no": 3,
-    "kvp": {
-      "%s Other Test(s)": "%s 个其它的测试",
-      "Total wall time spent in this function and all of its children (children are other functions it called while executing).": "这个函数和其所有子函数（子函数是它执行时调用的其它函数）的总执行时间。",
-      "Wall time spent in this function, excluding time spent in children (children are other functions it called while executing).": "这个函数花费的执行时间，除了花费在其子函数的时间（子函数是它执行时调用的其它函数）。"
-    }
-  },
   "Parent": {
     "translation": "父级",
-    "yes": 23,
+    "yes": 24,
     "no": 45,
     "kvp": {
       "%s added %s parent task(s) for %s: %s.": "%1$s 给 %3$s 添加了 %2$s 个父任务：%4$s。",
@@ -2672,9 +2708,19 @@
   "Plan Changes": {
     "translation": "计划变更",
     "yes": 1,
-    "no": 1,
+    "no": 2,
     "kvp": {
-      "Plan changes to a revision.": "计划对一个修订的变更。"
+      "Plan changes to a revision.": "计划对一个修订的变更。",
+      "You can not plan changes to a draft revision.": "你不能计划一个草稿修订的变更。"
+    }
+  },
+  "Planned Changes": {
+    "translation": "计划的变更",
+    "yes": 1,
+    "no": 2,
+    "kvp": {
+      "%s planned changes to %s.": "%s 计划了对 %s 的变更。",
+      "%s planned changes to this revision.": "%s 计划了对此修订的变更。"
     }
   },
   "Points": {
@@ -2715,7 +2761,7 @@
       "Do you want to post your comment anyway?": "无论如何你都要发布你的评论吗？",
       "POST notifications of feed events.": "发布动态事件的通知。",
       "Post as Comment": "发布为评论",
-      "This post will go live once you publish it.": "此帖子将在发布后生效。",
+      "This post will go live once you publish it.": "此帖子将在你发布后生效。",
       "Unable to post message: this is not an admin server!": "无法发送消息：这不是管理服务器！",
       "You can not post an empty comment.": "你不能发布一个空的评论。"
     }
@@ -2800,7 +2846,7 @@
   },
   "Push": {
     "translation": "推送",
-    "yes": 30,
+    "yes": 31,
     "no": 2,
     "kvp": {
       "%s changed the push policy of this repository from \"%s\" to \"%s\".": "%s 把此仓库的 Push 策略从“%s”变更到了“%s”。",
@@ -2819,9 +2865,18 @@
   "Pushed": {
     "translation": "推送了",
     "yes": 1,
+    "no": 2,
+    "kvp": {
+      "%s pushed to %s.": "%s 推送到了 %s。",
+      "Pushed By": "由谁推送"
+    }
+  },
+  "Quality": {
+    "translation": "质量",
+    "yes": 7,
     "no": 1,
     "kvp": {
-      "Pushed By": "由谁推送"
+      "%s updated the quality of %s from %s to %s.": "%s 把 %s 的数量从 %s 更新为了 %s。"
     }
   },
   "RELEASE": {
@@ -2850,7 +2905,7 @@
     "no": 3,
     "kvp": {
       "%s reassigned %s from %s to %s.": "%s 把 %s 从 %s 重新分配给了 %s。",
-      "%s reassigned this item from %s to %s.": "%s 把这个条目从 %s 重新分配给了 %s。",
+      "%s reassigned this item from %s to %s.": "%s 把此条目从 %s 重新分配给了 %s。",
       "%s reassigned this task from %s to %s.": "%s 把此任务从 %s 重新分配给了 %s。"
     }
   },
@@ -2929,6 +2984,15 @@
       "You can not request verification of this commit because you are not the author.": "你不能请求此提交的验证因为你不是作者。"
     }
   },
+  "Requested Changes": {
+    "translation": "请求的变更",
+    "yes": 1,
+    "no": 2,
+    "kvp": {
+      "%s requested changes to %s.": "%s 请求了对 %s 的变更。",
+      "%s requested changes to this revision.": "%s 请求了对此修订的变更。"
+    }
+  },
   "Required": {
     "translation": "必填的",
     "yes": 79,
@@ -3001,13 +3065,13 @@
   },
   "Review": {
     "translation": "评审",
-    "yes": 73,
+    "yes": 78,
     "no": 4,
     "kvp": {
       "Another user made changes to this document after you began editing it. Do you want to overwrite their changes? (If you choose to overwrite their changes, you should review the document edit history to see what you overwrote, and then make another edit to merge the changes if necessary.)": "另一位用户在你开始编辑后对其进行了变更。你想覆盖他们的变化吗？（如果你选择覆盖他们的更改，你应该检查文档编辑历史记录以查看所覆盖的内容，并且随后进行其他编辑以在必要时合并更改。）",
       "Review Recent Activity": "查看最近的活动",
       "Review the repository operation queue.": "检查仓库操作队列。",
-      "Typeahead functions are an advanced feature which allow you to build more powerful queries. This document explains functions available for the selected control.\n\nFor general help with search, see the [[ %s | Search User Guide ]] in the documentation.\n\nNote that different controls support //different// functions (depending on what the control is doing), so these specific functions may not work everywhere. You can always check the help for a control to review which functions are available for that control.": "输入提示功能是一种允许你构建更强大查询的高级功能。本文档解释了所选控件的可用功能。\n\n有关搜索的一般帮助，请参阅[[%s | 搜索用户指南]]。\n\n请注意不同的控件支持//不同的//函数（取决于控件做什么），所以这些特定的功能可能不能在任意的地方工作。你可以随时检查控件的帮助以查看该控件可用的功能。"
+      "Typeahead functions are an advanced feature which allow you to build more powerful queries. This document explains functions available for the selected control.\n\nFor general help with search, see the [[ %s | Search User Guide ]] in the documentation.\n\nNote that different controls support //different// functions (depending on what the control is doing), so these specific functions may not work everywhere. You can always check the help for a control to review which functions are available for that control.": "键入提示功能是一种允许你构建更强大查询的高级功能。本文档解释了所选控件的可用功能。\n\n有关搜索的一般帮助，请参阅[[%s | 搜索用户指南]]。\n\n请注意不同的控件支持//不同的//函数（取决于控件做什么），所以这些特定的功能可能不能在任意的地方工作。你可以随时检查控件的帮助以查看该控件可用的功能。"
     }
   },
   "Revoke Tokens": {
@@ -3053,7 +3117,7 @@
   },
   "Search": {
     "translation": "搜索",
-    "yes": 102,
+    "yes": 103,
     "no": 2,
     "kvp": {
       "Elastic Search host.": "ElasticSearch 主机。",
@@ -3079,7 +3143,7 @@
       "The task already has the selected owner.": "任务已经有选定的所有者。",
       "The task already has the selected priority.": "任务已经有选定的优先级。",
       "The task already has the selected status.": "任务已经有选定的状态。",
-      "Typeahead functions are an advanced feature which allow you to build more powerful queries. This document explains functions available for the selected control.\n\nFor general help with search, see the [[ %s | Search User Guide ]] in the documentation.\n\nNote that different controls support //different// functions (depending on what the control is doing), so these specific functions may not work everywhere. You can always check the help for a control to review which functions are available for that control.": "输入提示功能是一种允许你构建更强大查询的高级功能。本文档解释了所选控件的可用功能。\n\n有关搜索的一般帮助，请参阅[[%s | 搜索用户指南]]。\n\n请注意不同的控件支持//不同的//函数（取决于控件做什么），所以这些特定的功能可能不能在任意的地方工作。你可以随时检查控件的帮助以查看该控件可用的功能。",
+      "Typeahead functions are an advanced feature which allow you to build more powerful queries. This document explains functions available for the selected control.\n\nFor general help with search, see the [[ %s | Search User Guide ]] in the documentation.\n\nNote that different controls support //different// functions (depending on what the control is doing), so these specific functions may not work everywhere. You can always check the help for a control to review which functions are available for that control.": "键入提示功能是一种允许你构建更强大查询的高级功能。本文档解释了所选控件的可用功能。\n\n有关搜索的一般帮助，请参阅[[%s | 搜索用户指南]]。\n\n请注意不同的控件支持//不同的//函数（取决于控件做什么），所以这些特定的功能可能不能在任意的地方工作。你可以随时检查控件的帮助以查看该控件可用的功能。",
       "You don't have permission to edit any of the selected tasks.": "你没有编辑任意选定任务的权限。"
     }
   },
@@ -3120,6 +3184,15 @@
       "Show details about outbound mail with given ID.": "显示有关给定 ID 的出站邮件的详情。"
     }
   },
+  "Show More": {
+    "translation": "显示更多",
+    "yes": 2,
+    "no": 2,
+    "kvp": {
+      "Show More Above": "显示以上更多",
+      "Show More Below": "显示以下更多"
+    }
+  },
   "Shutting Down": {
     "translation": "正在关闭",
     "yes": 2,
@@ -3140,7 +3213,7 @@
   },
   "Spaces": {
     "translation": "空间",
-    "yes": 28,
+    "yes": 29,
     "no": 1,
     "kvp": {
       "The path you entered (%s) is not a valid wiki document path. Paths may not contain spaces or special characters.": "你进入的路径（%s）不是有效的 Wiki 文档路径。路径不可以包含空格或者特殊字符。"
@@ -3216,7 +3289,7 @@
       "Total Messages": "总消息",
       "Total Objects": "总对象",
       "Total Objects of type %s": "类型 %s 的全部对象",
-      "Total wall time spent in this function and all of its children (children are other functions it called while executing).": "这个函数和其所有子函数（子函数是它执行时调用的其它函数）的总执行时间。"
+      "Total wall time spent in this function and all of its children (children are other functions it called while executing).": "这个函数和其所有子函数（子函数是它执行时调用的其他函数）的总执行时间。"
     }
   },
   "Table": {
@@ -3232,12 +3305,12 @@
     "yes": 1,
     "no": 1,
     "kvp": {
-      "Waiting to test configuration for %s...": "等待测试 %s 的配置…"
+      "Waiting to test configuration for %s...": "正在等待测试 %s 的配置…"
     }
   },
   "Text": {
     "translation": "文本",
-    "yes": 39,
+    "yes": 40,
     "no": 9,
     "kvp": {
       "%s updated %s flavor text from %s to %s.": "%s 把 %s 风味文字从 %s 更新为了  %s。",
@@ -3265,8 +3338,8 @@
     "yes": 2,
     "no": 2,
     "kvp": {
-      "Total wall time spent in this function and all of its children (children are other functions it called while executing).": "这个函数和其所有子函数（子函数是它执行时调用的其它函数）的总执行时间。",
-      "Wall time spent in this function, excluding time spent in children (children are other functions it called while executing).": "这个函数花费的执行时间，除了花费在其子函数的时间（子函数是它执行时调用的其它函数）。"
+      "Total wall time spent in this function and all of its children (children are other functions it called while executing).": "这个函数和其所有子函数（子函数是它执行时调用的其他函数）的总执行时间。",
+      "Wall time spent in this function, excluding time spent in children (children are other functions it called while executing).": "这个函数花费的执行时间，除了花费在其子函数的时间（子函数是它执行时调用的其他函数）。"
     }
   },
   "Token": {
@@ -3319,7 +3392,7 @@
       "Total Messages": "总消息",
       "Total Objects": "总对象",
       "Total Objects of type %s": "类型 %s 的全部对象",
-      "Total wall time spent in this function and all of its children (children are other functions it called while executing).": "这个函数和其所有子函数（子函数是它执行时调用的其它函数）的总执行时间。"
+      "Total wall time spent in this function and all of its children (children are other functions it called while executing).": "这个函数和其所有子函数（子函数是它执行时调用的其他函数）的总执行时间。"
     }
   },
   "Total Objects": {
@@ -3337,7 +3410,7 @@
     "kvp": {
       "%s triaged %s as \"%s\" priority.": "%s 把 %s 分类为“%s”优先级。",
       "%s triaged %s as %s priority.": "%s 把 %s 分类为了 %s 优先级。",
-      "%s triaged this task as \"%s\" priority.": "%s 把这个任务分类为“%s”优先级。",
+      "%s triaged this task as \"%s\" priority.": "%s 把此任务分类为“%s”优先级。",
       "%s triaged this task as %s priority.": "%s 把此任务分类为了 %s 优先级。"
     }
   },
@@ -3355,7 +3428,7 @@
   "Type": {
     "translation": "类型",
     "yes": 161,
-    "no": 69,
+    "no": 70,
     "kvp": {
       "Type \"anyone()\"...": "键入“anyone()”…",
       "Type \"none\"...": "键入“无”…",
@@ -3407,6 +3480,7 @@
       "Type a username or function...": "键入一个用户名或者函数…",
       "Type a username, project, mailing list, or function...": "键入一个用户名、项目、邮件列表或函数…",
       "Type a username...": "键入一个用户名…",
+      "Type a webhook name...": "键入一个 Webhook 名称…",
       "Type an application email address...": "键入一个应用邮件地址…",
       "Type an application name...": "键入一个应用名称…",
       "Type an emoji name...": "键入一个 emoji 名称…",
@@ -3426,23 +3500,6 @@
       "Type the name of a user, application or Herald rule...": "键入一个用户、应用或者 Herald 规则的名称…",
       "Type viewer()...": "键入 viewer()…",
       "Type viewerprojects()...": "键入 viewerprojects()…"
-    }
-  },
-  "Typeahead": {
-    "translation": "键入提示",
-    "yes": 5,
-    "no": 2,
-    "kvp": {
-      "Phabricator now manages typeahead strategies automatically.": "Phabricator 现在自动管理输入提示策略。",
-      "Typeahead functions are an advanced feature which allow you to build more powerful queries. This document explains functions available for the selected control.\n\nFor general help with search, see the [[ %s | Search User Guide ]] in the documentation.\n\nNote that different controls support //different// functions (depending on what the control is doing), so these specific functions may not work everywhere. You can always check the help for a control to review which functions are available for that control.": "输入提示功能是一种允许你构建更强大查询的高级功能。本文档解释了所选控件的可用功能。\n\n有关搜索的一般帮助，请参阅[[%s | 搜索用户指南]]。\n\n请注意不同的控件支持//不同的//函数（取决于控件做什么），所以这些特定的功能可能不能在任意的地方工作。你可以随时检查控件的帮助以查看该控件可用的功能。"
-    }
-  },
-  "USERS": {
-    "translation": "用户",
-    "yes": 88,
-    "no": 1,
-    "kvp": {
-      "Imported events can only be viewed by users who can view the import source.": "导入的事件只能被可以查看导入来源的人查看。"
     }
   },
   "Unlocked": {
@@ -3497,7 +3554,7 @@
   "Updated": {
     "translation": "已更新",
     "yes": 5,
-    "no": 146,
+    "no": 147,
     "kvp": {
       "%s updated %s blog's full domain from %s to %s.": "%s 将 %s 博客的完整域名从 %s 更新为了 %s。",
       "%s updated %s blog's parent domain from %s to %s.": "%s 将 %s 博客的父域名从 %s 更新为了 %s。",
@@ -3605,6 +3662,7 @@
       "%s updated the preamble.": "%s 更新了序文。",
       "%s updated the property \"%s\".": "%s 更新了属性“%s”。",
       "%s updated the quality from %s to %s.": "%s 把质量从 %s 更新为了 %s。",
+      "%s updated the quality of %s from %s to %s.": "%s 把 %s 的数量从 %s 更新为了 %s。",
       "%s updated the question details for %s.": "%s 更新了 %s 的问题详情。",
       "%s updated the question details.": "%s 更新了问题详情。",
       "%s updated the question from %s to %s.": "%s 把问题从 %s 更新为了 %s。",
@@ -3625,7 +3683,7 @@
       "%s updated the title for this countdown from %s to %s.": "%s 把倒计时的标题从 %s 更新为了  %s。",
       "%s updated their profile": "%s 更新了他们的档案",
       "%s updated this object.": "%s 更新了此对象。",
-      "%s updated this project's image from %s to %s.": "%s 把这个项目的图片从 %s 更新为了 %s。",
+      "%s updated this project's image from %s to %s.": "%s 把此项目的图片从 %s 更新为了 %s。",
       "%s updated this revision to %s.": "%s 更新了对 %s 的修订。",
       "%s updated this revision.": "%s 更新了此修订。",
       "%s updated this variable.": "%s 更新了这个变量。",
@@ -3647,34 +3705,10 @@
       "Your PHP \"%s\" needs to be updated to include the PHPExcel Classes directory.": "你的 PHP “%s”需要升级以包含 PHPExcel 类目录。"
     }
   },
-  "Users": {
-    "translation": "用户",
-    "yes": 88,
-    "no": 1,
-    "kvp": {
-      "Imported events can only be viewed by users who can view the import source.": "导入的事件只能被可以查看导入来源的人查看。"
-    }
-  },
-  "Valid Setting": {
-    "translation": "有效的设置",
-    "yes": 2,
-    "no": 1,
-    "kvp": {
-      "Empty string is not a valid setting for \"%s\".": "空字符串不是一个有效的“%s”设置。"
-    }
-  },
-  "Valid setting": {
-    "translation": "有效的设置",
-    "yes": 2,
-    "no": 1,
-    "kvp": {
-      "Empty string is not a valid setting for \"%s\".": "空字符串不是一个有效的“%s”设置。"
-    }
-  },
   "View": {
     "translation": "视图",
     "yes": 18,
-    "no": 118,
+    "no": 119,
     "kvp": {
       "%s (You do not have permission to view policy details.)": "%s（你没有查看策略详情权限。）",
       "A merchant's members an always view and edit it.": "一个商家的成员可以总是查看和编辑它。",
@@ -3703,7 +3737,7 @@
       "Default view policy for newly created tasks.": "新创建任务的默认查看策略。",
       "Flags are private. Only you can view or edit your flags.": "标记是私有的。只有你可以查看或者编辑标记。",
       "If a revision belongs to a repository, other users must be able to view the repository in order to view the revision.": "如果一个修订属于一个仓库，其他用户必须能够查看这个仓库以便查看此修订。",
-      "Imported events can only be viewed by users who can view the import source.": "导入的事件只能被可以查看导入来源的人查看。",
+      "Imported events can only be viewed by users who can view the import source.": "导入的事件只能被可以查看导入来源的用户查看。",
       "Mail received! You can view details by running this command:": "邮件已接收！你可以通过运行这个命令查看详情：",
       "Mail sent! You can view details by running this command:": "邮件已发送！你可以通过运行这个命令查看详情：",
       "Mark this form as an edit form? Users who can view it will be able to use it to edit objects.": "标记这个表单为一个编辑表单？可以查看它的用户能够使用它编辑对象。",
@@ -3787,6 +3821,7 @@
       "View Unified": "统一查看",
       "View Version": "查看版本",
       "View Version %d": "查看版本 %d",
+      "View as Remarkup": "以 Remarkup 查看",
       "View in Buildkite": "在 Buildkite 中查看",
       "View in CircleCI": "在 CircleCI 中查看",
       "View in Conpherence": "在 Conpherence 中查看",
@@ -3806,43 +3841,20 @@
     }
   },
   "Waiting": {
-    "translation": "等待中",
-    "yes": 1,
-    "no": 28,
+    "translation": "正在等待",
+    "yes": 26,
+    "no": 5,
     "kvp": {
-      "No commits are waiting for you to audit them.": "没有提交正在等待你去审计它们。",
-      "No revisions are waiting for other reviewers.": "没有修订正在等待其他评审者。",
-      "No revisions are waiting for updates.": "没有修订正在等待更新。",
       "No revisions are waiting on author action.": "无修订在等待作者操作。",
-      "No revisions are waiting on you to review them.": "没有修订正在等待你的评审。",
       "None of your audits are waiting on authors.": "你的审计都没有在等待作者。",
       "None of your commits are waiting on audit.": "你的提交都没有在等待审计。",
       "None of your revisions are waiting on review.": "你的修订都没有在等待评审。",
-      "Pre-commit code review. Revisions that are waiting on your input will appear here.": "预提交代码评审。正在等待你输入的修订将显示在这里。",
-      "This job is waiting for confirmation before work begins.": "这个作业正在等待工作开始前的确认。",
-      "This job is waiting for tasks to be queued.": "这个作业正在等待任务排队。",
-      "Waiting For Confirmation": "正在等待确认",
-      "Waiting For Resource": "正在等待资源",
-      "Waiting For Update": "正在等待更新",
-      "Waiting for %s": "正在等待 %s",
-      "Waiting for Activation": "正在等待激活",
-      "Waiting for Message": "正在等待消息",
-      "Waiting for available resources from: %s.": "正在等待可用资源从：%s。",
-      "Waiting for daemons to activate lease...": "正在等待守护进程激活租约…",
-      "Waiting for daemons to build a working copy.": "正在等待守护进程构建一个工作副本。",
-      "Waiting for daemons to read updates.": "正在等待守护进程读取更新。",
-      "Waiting for updates to complete...": "正在等待更新完成…",
-      "Waiting on Auditors": "正在等待审计员",
-      "Waiting on Authors": "正在等待作者",
-      "Waiting on Other Reviewers": "等待其他评审者",
-      "Waiting on Review": "正在等待评审",
-      "Waiting to test configuration for %s...": "等待测试 %s 的配置…",
       "Waiting up to %s second(s) for a cluster write lock...": "等待群集写入锁定 %s 秒…"
     }
   },
   "Web": {
     "translation": "Web",
-    "yes": 31,
+    "yes": 38,
     "no": 1,
     "kvp": {
       "Amazon Web Services": "亚马逊云服务"
@@ -3854,7 +3866,7 @@
     "no": 3,
     "kvp": {
       "Get the workboard columns where an object appears.": "获取对象出现的工作板列。",
-      "Phabricator can send real-time notifications to your web browser or to your desktop. Select where you'd want to receive these real-time updates.": "Phabricator 可以发送实时通知到你的 Web 浏览器或到你的桌面。选择想在哪里接收这些实时更新。",
+      "Phabricator can send real-time notifications to your web browser or to your desktop. Select where you'd want to receive these real-time updates.": "Phabricator 可以向你的 Web 浏览器或你的桌面发送实时通知。选择想在哪里接收这些实时更新。",
       "URI where Phabricator is installed.": "安装 Phabricator 的 URI。"
     }
   },
@@ -3876,8 +3888,8 @@
   },
   "is": {
     "translation": "是",
-    "yes": 331,
-    "no": 287,
+    "yes": 333,
+    "no": 289,
     "kvp": {
       "%s is already archived, and can not be cancelled.": "%s 已经归档，不能取消。",
       "%s is already archived, and can not be executed.": "%s 已经归档，不能执行。",
@@ -4000,6 +4012,8 @@
       "Setting \"%s\" is misconfigured: %s": "设置“%s”的配置缺失：%s",
       "Shows when a user is away or busy.": "显示用户何时离开或忙碌。",
       "Simulate receiving mail. This is primarily useful if you are developing new mail receivers.": "模拟接收邮件。如果你正在开发新的邮件接收人这非常有用。",
+      "Skipping main task update, cursor is ahead of the story.": "跳过主任务更新，光标超前于故事。",
+      "Skipping main task update, object is no longer visible.": "跳过主任务更新，对象不再可见。",
       "Skipping, provider is not enabled or does not exist.": "跳过，提供者未启用或者不存在。",
       "Test rules which run when a mock is created or updated.": "创建或更新 Mock 时运行的测试规则。",
       "Test rules which run when a question is created or updated.": "创建或更新问题时运行的测试规则。",
@@ -4170,7 +4184,7 @@
   },
   "is not": {
     "translation": "不是",
-    "yes": 82,
+    "yes": 83,
     "no": 100,
     "kvp": {
       "%s is not available; unable to read deflated data!": "%s 不可用；无法读取压缩的数据！",
@@ -4194,7 +4208,7 @@
       "Event frequency \"%s\" is not valid. Valid frequences are: %s.": "事件频率“%s”是无效的。有效的频率是：%s。",
       "File PHID \"%s\" is not valid or not visible.": "文件 PHID“%s”是无效的或不可见的。",
       "File is not viewable.": "文件不可查看。",
-      "Footer configuration is not valid: value must be a list of items.": "页脚配置无效：值必须是一个项目列表。",
+      "Footer configuration is not valid: value must be a list of items.": "页脚配置无效：值必须是一个条目列表。",
       "Git LFS batch operation \"%s\" is not supported by this server.": "这个服务器不支持 Git LFS 批量操作“%s”。",
       "Git LFS is not enabled for this repository.": "Git LFS 未对这个仓库启用。",
       "Git LFS operation \"%s\" is not supported by this server.": "这个服务器不支持 Git LFS 操作“%s”。",
@@ -4277,7 +4291,7 @@
   },
   "name": {
     "translation": "名称",
-    "yes": 289,
+    "yes": 293,
     "no": 4,
     "kvp": {
       "Always require real name for user profiles.": "用户档案总是需要真实姓名。",
@@ -4302,19 +4316,11 @@
   },
   "or": {
     "translation": "或",
-    "yes": 248,
+    "yes": 249,
     "no": 2,
     "kvp": {
       "Determines whether or not YouTube videos get embedded.": "确定 YouTube 视频是否嵌入。",
       "Determines whether or not basic account information is editable.": "确定基础帐户信息是否可编辑。"
-    }
-  },
-  "users": {
-    "translation": "用户",
-    "yes": 88,
-    "no": 1,
-    "kvp": {
-      "Imported events can only be viewed by users who can view the import source.": "导入的事件只能被可以查看导入来源的人查看。"
     }
   }
 }

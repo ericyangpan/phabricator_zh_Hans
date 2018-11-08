@@ -15,19 +15,19 @@
 
 ## 翻译进度
 
-当前翻译的 Phabricator 版本：[[c4ab918482](https://secure.phabricator.com/rPc4ab91848267789c6f1184be3d664856d21f8264)]`(stable) Promote 2018 Week 43`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：daf9a91ba0e182ed634ca1187f09c94283331400。
+当前翻译的 Phabricator 版本：[[6e3b838e10](https://secure.phabricator.com/rP6e3b838e1062bda5d087b3a8dee58202cc1e9218)]`(stable) Promote 2018 Week 44`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：2743c72769f65bbc1729c674ff48b8a7b4b1b23f。
 
-当前翻译的 libphutil 版本：[[6c0017aaefcf](https://secure.phabricator.com/rPHU6c0017aaefcf22ffe6686f732feb1da578fbb8a5)]`(stable) Promote 2018 Week 43`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：daf9a91ba0e182ed634ca1187f09c94283331400。
+当前翻译的 libphutil 版本：[[a02ebc3](https://secure.phabricator.com/rPHUa02ebc3635b64ea5d2105b84dde0dc3ad3b1e4eb)]`(stable) Promote 2018 Week 44`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：2743c72769f65bbc1729c674ff48b8a7b4b1b23f。
 
-当前总词条数量：15257 条，不包含原型应用的总词条数量：12991 条。
+当前总词条数量：15261 条，不包含原型应用的总词条数量：12995 条。
 
-当前整体翻译进度百分比：73%。
+当前整体翻译进度百分比：69%。
 
-当前短词条翻译进度百分比：83%。注：短词条为长度小于 66 个字符的词条。
+当前短词条翻译进度百分比：79%。注：短词条为长度小于 66 个字符的词条。
 
 分类 | 短词条翻译百分比 | 短词条翻译进度条 | 整体翻译百分比 | 整体翻译进度条
 --- | :-----------: | ------------- | :----------: | -----------
-aphront | 97% | ========= | 79% | =======
+aphront | 97% | ========= | 80% | =======
 applications/almanac | 75% | ======= | 65% | ======
 applications/aphlict | **100%** | ✓✓✓✓✓✓✓✓ | 71% | =======
 applications/arcanist | --- |  | --- | 
@@ -39,8 +39,8 @@ applications/cache | 86% | ======== | 67% | ======
 applications/calendar `原型` | 92% | ========= | 87% | ========
 applications/celerity | 93% | ========= | 83% | ========
 applications/chatlog `原型` | 79% | ======= | 79% | =======
-applications/conduit | 89% | ======== | 77% | =======
-applications/config | 88% | ======== | 67% | ======
+applications/conduit | 93% | ========= | 80% | =======
+applications/config | 88% | ======== | 68% | ======
 applications/conpherence | **100%** | ✓✓✓✓✓✓✓✓ | 99% | =========
 applications/console | 70% | ======= | 68% | ======
 applications/countdown | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
@@ -68,7 +68,7 @@ applications/lipsum | **100%** | ✓✓✓✓✓✓✓✓ | 71% | =======
 applications/macro | 90% | ========= | 88% | ========
 applications/maniphest | 94% | ========= | 89% | ========
 applications/meta | 99% | ========= | 98% | =========
-applications/metamta | 72% | ======= | 63% | ======
+applications/metamta | 74% | ======= | 65% | ======
 applications/multimeter `原型` | 82% | ======== | 82% | ========
 applications/notification | **100%** | ✓✓✓✓✓✓✓✓ | 73% | =======
 applications/nuance `原型` | 81% | ======== | 76% | =======
@@ -86,7 +86,7 @@ applications/phortune `原型` | 78% | ======= | 70% | ======
 applications/phpast | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/phragment `原型` | 72% | ======= | 68% | ======
 applications/phrequent `原型` | 80% | ======== | 76% | =======
-applications/phriction | 79% | ======= | 76% | =======
+applications/phriction | 79% | ======= | 77% | =======
 applications/phurl `原型` | 90% | ======== | 89% | ========
 applications/policy | 89% | ======== | 77% | =======
 applications/ponder | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
@@ -95,10 +95,10 @@ applications/releeph `原型` | 57% | ===== | 53% | =====
 applications/remarkup | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/repository | 57% | ===== | 47% | ====
 applications/search | 88% | ======== | 74% | =======
-applications/settings | 95% | ========= | 87% | ========
+applications/settings | 96% | ========= | 88% | ========
 applications/slowvote | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/spaces | 97% | ========= | 82% | ========
-applications/subscriptions | 96% | ========= | 90% | =========
+applications/subscriptions | 96% | ========= | 94% | =========
 applications/support | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/system | 74% | ======= | 49% | ====
 applications/tokens | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓

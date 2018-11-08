@@ -14895,6 +14895,7 @@
       "The id of the OAuth client.",
       "The name of the event.",
       "The name of this blueprint.",
+      "The name of this build plan.",
       "The name of this build.",
       "The port number of the interface.",
       "The preamble of the document.",
@@ -20012,6 +20013,7 @@
       "Retrieve information about Drydock authorizations.",
       "Retrieve information about Drydock blueprints.",
       "Retrieve information about Drydock leases.",
+      "Retrieve information about Harbormaster build plans.",
       "Retrieve information about a Phriction document.",
       "Retrieve information about arbitrary PHIDs.",
       "Retrieve information about the logged-in user."
@@ -40539,7 +40541,8 @@
       "%s created this configuration entry.",
       "%s created this form configuration.",
       "%s created this payment account.",
-      "%s created this payment provider."
+      "%s created this payment provider.",
+      "The name of this build plan."
     ],
     "s4": [
       "%s created this build plan.",
@@ -40576,7 +40579,8 @@
     "s3": [
       "%s created this build step.",
       "%s disabled this build plan.",
-      "%s disabled this payment provider."
+      "%s disabled this payment provider.",
+      "The name of this build plan."
     ],
     "s4": [
       "%s created this build plan.",
@@ -40588,7 +40592,8 @@
     "s3": [
       "%s created this build step.",
       "%s enabled this build plan.",
-      "%s enabled this payment provider."
+      "%s enabled this payment provider.",
+      "The name of this build plan."
     ]
   },
   "%s created this build step.": {
@@ -40606,6 +40611,12 @@
     "s4": [
       "%s created this build plan.",
       "%s created this build step."
+    ]
+  },
+  "The name of this build plan.": {
+    "s5": [
+      "The current status of this build plan.",
+      "The name of this build plan."
     ]
   },
   "Failed to load build plan (\"%s\").": {
@@ -40877,6 +40888,12 @@
       "A buildable inherits policies from the underlying object."
     ]
   },
+  "The current status of this build.": {
+    "s5": [
+      "The current status of this build plan.",
+      "The current status of this build."
+    ]
+  },
   "The name of this build.": {
     "s3": [
       "The ID of the current build.",
@@ -40900,6 +40917,7 @@
     "s4": [
       "The current status of this build.",
       "The name of this blueprint.",
+      "The name of this build plan.",
       "The name of this build."
     ]
   },
@@ -45671,6 +45689,7 @@
       "The id of the OAuth client.",
       "The name of the project.",
       "The name of this blueprint.",
+      "The name of this build plan.",
       "The name of this build.",
       "The port number of the interface.",
       "The preamble of the document.",
@@ -55985,6 +56004,7 @@
       "The id of the OAuth client.",
       "The name of the version.",
       "The name of this blueprint.",
+      "The name of this build plan.",
       "The name of this build.",
       "The port number of the interface.",
       "The preamble of the document.",
@@ -56066,6 +56086,7 @@
       "The id of the OAuth client.",
       "The name of the publisher.",
       "The name of this blueprint.",
+      "The name of this build plan.",
       "The name of this build.",
       "The port number of the interface.",
       "The preamble of the document.",
@@ -56167,6 +56188,7 @@
       "The id of the OAuth client.",
       "The name of the package.",
       "The name of this blueprint.",
+      "The name of this build plan.",
       "The name of this build.",
       "The port number of the interface.",
       "The preamble of the document.",
@@ -59026,6 +59048,7 @@
       "The id of the OAuth client.",
       "The name of the file.",
       "The name of this blueprint.",
+      "The name of this build plan.",
       "The name of this build.",
       "The port number of the interface.",
       "The preamble of the document.",
@@ -61730,6 +61753,7 @@
       "The id of the OAuth client.",
       "The name of the blog.",
       "The name of this blueprint.",
+      "The name of this build plan.",
       "The name of this build.",
       "The port number of the interface.",
       "The preamble of the document.",
@@ -64455,6 +64479,7 @@
       "The id of the OAuth client.",
       "The name of the token.",
       "The name of this blueprint.",
+      "The name of this build plan.",
       "The name of this build.",
       "The port number of the interface.",
       "The preamble of the document.",
@@ -65618,6 +65643,7 @@
       "The id of the OAuth client.",
       "The name of the badge.",
       "The name of this blueprint.",
+      "The name of this build plan.",
       "The name of this build.",
       "The port number of the interface.",
       "The preamble of the document.",
@@ -66631,6 +66657,7 @@
   "Retrieve information about Drydock authorizations.": {
     "s3": [
       "Retrieve information about Drydock authorizations.",
+      "Retrieve information about Harbormaster build plans.",
       "Retrieve information about a Phriction document.",
       "Retrieve information about an arbitrary PHID.",
       "Retrieve information about arbitrary PHIDs.",
@@ -66645,6 +66672,7 @@
   "Retrieve information about Drydock blueprints.": {
     "s3": [
       "Retrieve information about Drydock blueprints.",
+      "Retrieve information about Harbormaster build plans.",
       "Retrieve information about a Phriction document.",
       "Retrieve information about an arbitrary PHID.",
       "Retrieve information about arbitrary PHIDs.",
@@ -66654,6 +66682,7 @@
   "Retrieve information about Drydock leases.": {
     "s3": [
       "Retrieve information about Drydock leases.",
+      "Retrieve information about Harbormaster build plans.",
       "Retrieve information about a Phriction document.",
       "Retrieve information about an arbitrary PHID.",
       "Retrieve information about arbitrary PHIDs.",
@@ -67120,6 +67149,7 @@
     ],
     "s4": [
       "The name of this blueprint.",
+      "The name of this build plan.",
       "The name of this build."
     ]
   },
@@ -70309,6 +70339,7 @@
       "The id of the OAuth client.",
       "The name of the service.",
       "The name of this blueprint.",
+      "The name of this build plan.",
       "The name of this build.",
       "The port number of the interface.",
       "The preamble of the document.",
@@ -70332,6 +70363,7 @@
       "The id of the OAuth client.",
       "The name of the device.",
       "The name of this blueprint.",
+      "The name of this build plan.",
       "The name of this build.",
       "The port number of the interface.",
       "The preamble of the document.",
@@ -70355,6 +70387,7 @@
       "The id of the OAuth client.",
       "The name of the namespace.",
       "The name of this blueprint.",
+      "The name of this build plan.",
       "The name of this build.",
       "The port number of the interface.",
       "The preamble of the document.",
@@ -70394,6 +70427,7 @@
       "The id of the OAuth client.",
       "The name of the network.",
       "The name of this blueprint.",
+      "The name of this build plan.",
       "The name of this build.",
       "The port number of the interface.",
       "The preamble of the document.",
