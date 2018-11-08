@@ -23,7 +23,7 @@ const option = process.argv[2]
 
 // Set output JSON file indent.
 jsonfile.spaces = 2
-  
+
 console.log('')
 
 switch (option) {
@@ -69,7 +69,7 @@ switch (option) {
     console.log('bin/discover obsoleted')
     console.log('bin/discover terminology')
     console.log('bin/discover unit')
-    
+
     break;
 }
 
@@ -95,11 +95,13 @@ function findObsoletedItems() {
 
   for (let key in translationsData) {
     if (allStrings[key] === undefined) {
-      resultStrings[key] = ''
+      resultStrings[key] = translationsData[key]
+      delete translationsData[key]
     }
   }
 
   jsonfile.writeFileSync(obsoletedPath, resultStrings)
+  jsonfile.writeFileSync(translationsPath, translationsData)
 }
 
 function findTerminologies() {
@@ -191,7 +193,7 @@ function getSimilarStrings() {
     if (Object.keys(resultStrings[str0]).length === 0) {
       delete resultStrings[str0]
     }
-  }  
+  }
 
   return resultStrings
 }
@@ -207,8 +209,8 @@ function cleanupDuplicatedSimilarStrings(similars) {
         for (let sameSize1 in similars[str1]) {
           if (similars[str0][sameSize0].length !== similars[str1][sameSize1].length) continue
 
-          if (JSON.stringify(similars[str0][sameSize0].sort())
-            === JSON.stringify(similars[str1][sameSize1].sort())) {
+          if (JSON.stringify(similars[str0][sameSize0].sort()) ===
+            JSON.stringify(similars[str1][sameSize1].sort())) {
             delete similars[str1][sameSize1]
 
             if (Object.keys(similars[str1]).length === 0) {
@@ -252,7 +254,7 @@ function getTerminologies() {
     const regexWord = new RegExp(word, 'i')
     const regexExclude = new RegExp(` ${word} |^${word} `, 'i')
     const regexTranslation = new RegExp(regexTranslationString, 'i')
-    
+
     for (let str in translationsData) {
       if (regexWord.test(str)) {
         if (regexTranslation.test(translationsData[str])) {
