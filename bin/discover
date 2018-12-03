@@ -15,8 +15,9 @@ const translationsPath = 'data/translations.json'
 
 const DISCOVER_TEST_CASE = false
 
-const phabricatori18nFilesData = jsonfile.readFileSync(phabricatori18nFilesPath)
+const obsoletedData = jsonfile.readFileSync(obsoletedPath)
 const libphutili18nFilesData = jsonfile.readFileSync(libphutili18nFilesPath)
+const phabricatori18nFilesData = jsonfile.readFileSync(phabricatori18nFilesPath)
 const translationsData = sortKeys(jsonfile.readFileSync(translationsPath))
 
 const option = process.argv[2]
@@ -91,16 +92,15 @@ function findSimilarItems() {
 
 function findObsoletedItems() {
   const allStrings = getAllStrings()
-  const resultStrings = {}
 
   for (let key in translationsData) {
     if (allStrings[key] === undefined) {
-      resultStrings[key] = translationsData[key]
+      obsoletedData[key] = translationsData[key]
       delete translationsData[key]
     }
   }
 
-  jsonfile.writeFileSync(obsoletedPath, resultStrings)
+  jsonfile.writeFileSync(obsoletedPath, obsoletedData)
   jsonfile.writeFileSync(translationsPath, translationsData)
 }
 
