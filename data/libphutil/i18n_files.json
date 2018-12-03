@@ -146,7 +146,7 @@
     "utils/PhutilCowsay.php": "a6602144ae547034b9b0951b5c368c8a",
     "utils/PhutilArray.php": "c4fde7ca949b3e6323708e77dcfd207b",
     "utils/PhutilProseDifferenceEngine.php": "85eb0e7399fc74c822c6f3de2f250404",
-    "utils/utils.php": "cb2174d6ea7a41d9970740810bfa855c",
+    "utils/utils.php": "900c2877a9aacc2376e6b9640b03f389",
     "utils/PhutilDirectedScalarGraph.php": "b7aa98e78bbb6189ce8e0d3d5218e993",
     "utils/PhutilExampleBufferedIterator.php": "08825080bbb72d313db80e4be8057ded",
     "utils/CaseInsensitiveArray.php": "2c2b1dd18c99a55b8b82ffb67b8c162d",
@@ -507,17 +507,51 @@
     "console/PhutilInteractiveEditor.php": "2d51d36e7614fb1808dcabe0c1c1a55b"
   },
   "strings": {
-    "1b26e9597fddd0e7424b98adeb000cc5": [
+    "900c2877a9aacc2376e6b9640b03f389": [
       {
-        "string": "Invalid database escaper.",
-        "file": "/xsprintf/qsprintf.php",
-        "line": 87,
+        "string": "Objects passed to \"%s\" must return sort vectors (objects of class \"%s\") from the specified method (\"%s\"). One object (with key \"%s\") did not.",
+        "file": "/utils/utils.php",
+        "line": 426,
+        "types": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Argument method is not a string.",
+        "file": "/utils/utils.php",
+        "line": 500,
         "types": []
       },
       {
-        "string": "Unknown conversion, try %s, %s, or %s.",
-        "file": "/xsprintf/qsprintf.php",
-        "line": 110,
+        "string": "Argument index is not a scalar.",
+        "file": "/utils/utils.php",
+        "line": 545,
+        "types": []
+      },
+      {
+        "string": "Array item with key '%s' must be of type array, %s given.",
+        "file": "/utils/utils.php",
+        "line": 610,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "instance of %s",
+        "file": "/utils/utils.php",
+        "line": 618,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Array item with key '%s' must be an instance of %s, %s given.",
+        "file": "/utils/utils.php",
+        "line": 622,
         "types": [
           null,
           null,
@@ -525,52 +559,155 @@
         ]
       },
       {
-        "string": "Expected array argument for %%%s conversion.",
-        "file": "/xsprintf/qsprintf.php",
-        "line": 269,
+        "string": "Argument must be scalar or object which implements %s!",
+        "file": "/utils/utils.php",
+        "line": 662,
         "types": [
           null
         ]
       },
       {
-        "string": "Array for %%%s conversion is empty.",
-        "file": "/xsprintf/qsprintf.php",
-        "line": 274,
+        "string": "Expected all items passed to `%s` to be arrays, but argument with key \"%s\" has type \"%s\".",
+        "file": "/utils/utils.php",
+        "line": 822,
+        "types": [
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Unable to parse unit specification (expected a specification in the form \"%s\"): %s",
+        "file": "/utils/utils.php",
+        "line": 1063,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "This function can not convert from the unit \"%s\".",
+        "file": "/utils/utils.php",
+        "line": 1097,
         "types": [
           null
         ]
       },
       {
-        "string": "Expected a string for %%%s conversion.",
-        "file": "/xsprintf/qsprintf.php",
-        "line": 296,
+        "string": "This function can not convert from the unit \"%s\".",
+        "file": "/utils/utils.php",
+        "line": 1115,
         "types": [
           null
         ]
       },
       {
-        "string": "Expected a numeric scalar or null for %%%s conversion.",
-        "file": "/xsprintf/qsprintf.php",
-        "line": 307,
+        "string": "This function can not convert into the unit \"%s\".",
+        "file": "/utils/utils.php",
+        "line": 1122,
         "types": [
           null
         ]
       },
       {
-        "string": "Expected a scalar or null for %%%s conversion.",
-        "file": "/xsprintf/qsprintf.php",
-        "line": 322,
+        "string": "\"%s\" is not an exact quantity.",
+        "file": "/utils/utils.php",
+        "line": 1130,
         "types": [
           null
         ]
       },
       {
-        "string": "Parameter to \"%s\" conversion in \"qsprintf(...)\" is not an instance of AphrontDatabaseTableRefInterface.",
-        "file": "/xsprintf/qsprintf.php",
-        "line": 330,
+        "string": "Argument to \"phutil_microseconds_since(...)\" should be a value returned from \"microtime(true)\".",
+        "file": "/utils/utils.php",
+        "line": 1151,
+        "types": []
+      },
+      {
+        "string": "#%d: %s",
+        "file": "/utils/utils.php",
+        "line": 1198,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "#%d",
+        "file": "/utils/utils.php",
+        "line": 1200,
         "types": [
           null
         ]
+      },
+      {
+        "string": "Failed to JSON encode value (%s): %s.",
+        "file": "/utils/utils.php",
+        "line": 1208,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Failed to JSON encode value: %s.",
+        "file": "/utils/utils.php",
+        "line": 1213,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Dictionary key \"%s\" is not valid UTF8, and cannot be JSON encoded.",
+        "file": "/utils/utils.php",
+        "line": 1263,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "String value is not valid UTF8, and can not be JSON encoded: %s",
+        "file": "/utils/utils.php",
+        "line": 1281,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Dictionary value at key \"%s\" is not valid UTF8, and cannot be JSON encoded: %s",
+        "file": "/utils/utils.php",
+        "line": 1285,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "%s is not compatible with your version of PHP (%s). This function is only supported on PHP versions newer than 5.3.0.",
+        "file": "/utils/utils.php",
+        "line": 1311,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Invalid glob pattern.",
+        "file": "/utils/utils.php",
+        "line": 1487,
+        "types": []
+      },
+      {
+        "string": "First hash argument must be a string.",
+        "file": "/utils/utils.php",
+        "line": 1520,
+        "types": []
+      },
+      {
+        "string": "Second hash argument must be a string.",
+        "file": "/utils/utils.php",
+        "line": 1524,
+        "types": []
       }
     ],
     "ae64185a4b37fe4b4bf0d6b0c3038c80": [
@@ -656,6 +793,72 @@
         "file": "/xsprintf/__tests__/PhutilCsprintfTestCase.php",
         "line": 79,
         "types": []
+      }
+    ],
+    "1b26e9597fddd0e7424b98adeb000cc5": [
+      {
+        "string": "Invalid database escaper.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 87,
+        "types": []
+      },
+      {
+        "string": "Unknown conversion, try %s, %s, or %s.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 110,
+        "types": [
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Expected array argument for %%%s conversion.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 269,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Array for %%%s conversion is empty.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 274,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Expected a string for %%%s conversion.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 296,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Expected a numeric scalar or null for %%%s conversion.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 307,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Expected a scalar or null for %%%s conversion.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 322,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Parameter to \"%s\" conversion in \"qsprintf(...)\" is not an instance of AphrontDatabaseTableRefInterface.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 330,
+        "types": [
+          null
+        ]
       }
     ],
     "2bc999aef013f410b004bca083f7df27": [
@@ -2737,203 +2940,6 @@
         "types": [
           null
         ]
-      }
-    ],
-    "cb2174d6ea7a41d9970740810bfa855c": [
-      {
-        "string": "Objects passed to \"%s\" must return sort vectors (objects of class \"%s\") from the specified method (\"%s\"). One object (with key \"%s\") did not.",
-        "file": "/utils/utils.php",
-        "line": 426,
-        "types": [
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Argument method is not a string.",
-        "file": "/utils/utils.php",
-        "line": 500,
-        "types": []
-      },
-      {
-        "string": "Argument index is not a scalar.",
-        "file": "/utils/utils.php",
-        "line": 545,
-        "types": []
-      },
-      {
-        "string": "Array item with key '%s' must be of type array, %s given.",
-        "file": "/utils/utils.php",
-        "line": 610,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "instance of %s",
-        "file": "/utils/utils.php",
-        "line": 618,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Array item with key '%s' must be an instance of %s, %s given.",
-        "file": "/utils/utils.php",
-        "line": 622,
-        "types": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Argument must be scalar or object which implements %s!",
-        "file": "/utils/utils.php",
-        "line": 662,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Expected all items passed to `%s` to be arrays, but argument with key \"%s\" has type \"%s\".",
-        "file": "/utils/utils.php",
-        "line": 822,
-        "types": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Unable to parse unit specification (expected a specification in the form \"%s\"): %s",
-        "file": "/utils/utils.php",
-        "line": 1063,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "This function can not convert from the unit \"%s\".",
-        "file": "/utils/utils.php",
-        "line": 1097,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "This function can not convert from the unit \"%s\".",
-        "file": "/utils/utils.php",
-        "line": 1115,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "This function can not convert into the unit \"%s\".",
-        "file": "/utils/utils.php",
-        "line": 1122,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "\"%s\" is not an exact quantity.",
-        "file": "/utils/utils.php",
-        "line": 1130,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "#%d: %s",
-        "file": "/utils/utils.php",
-        "line": 1175,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "#%d",
-        "file": "/utils/utils.php",
-        "line": 1177,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Failed to JSON encode value (%s): %s.",
-        "file": "/utils/utils.php",
-        "line": 1185,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Failed to JSON encode value: %s.",
-        "file": "/utils/utils.php",
-        "line": 1190,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Dictionary key \"%s\" is not valid UTF8, and cannot be JSON encoded.",
-        "file": "/utils/utils.php",
-        "line": 1240,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "String value is not valid UTF8, and can not be JSON encoded: %s",
-        "file": "/utils/utils.php",
-        "line": 1258,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Dictionary value at key \"%s\" is not valid UTF8, and cannot be JSON encoded: %s",
-        "file": "/utils/utils.php",
-        "line": 1262,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "%s is not compatible with your version of PHP (%s). This function is only supported on PHP versions newer than 5.3.0.",
-        "file": "/utils/utils.php",
-        "line": 1288,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Invalid glob pattern.",
-        "file": "/utils/utils.php",
-        "line": 1464,
-        "types": []
-      },
-      {
-        "string": "First hash argument must be a string.",
-        "file": "/utils/utils.php",
-        "line": 1497,
-        "types": []
-      },
-      {
-        "string": "Second hash argument must be a string.",
-        "file": "/utils/utils.php",
-        "line": 1501,
-        "types": []
       }
     ],
     "b7aa98e78bbb6189ce8e0d3d5218e993": [

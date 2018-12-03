@@ -30,6 +30,7 @@ artifact | 工件
 author | 作者
 authored | 创建
 award | 授予|奖励
+backer | 支持者
 badge | 徽章
 collation | 字符序
 config | 配置
@@ -44,12 +45,14 @@ enable | 启用
 event | 事件
 exit | 退出
 full domain | 完整域名
+graph | 图表
 guide | 指南
 hashtag | 唯一标签
 header | 标头|页头
+host | 主办者|主机|托管|“Host”
 include | 包含
 inline comment | 行内评论
-input | 输入|--input
+input | 输入
 invitee | 受邀人
 is required | 是必填的
 item | 条目|菜单项
@@ -59,11 +62,12 @@ monogram | 字母组合
 multi-factor | 多因素
 notification | 通知
 open status | 开放状态
-output | 输出|--output
-overwrite | 覆盖|--overwrite
+output | 输出
+overwrite | 覆盖
+pane | 面板
 parent task | 父任务
 permission | 权限
-policy | 策略|-Policy
+policy | 策略
 post | 文章|发送|发布
 preference | 偏好
 priority | 优先级
@@ -73,7 +77,7 @@ real name | 真实姓名
 receiver | 接收人
 recipient | 收件人|接受者
 remove | 移除
-repository | 仓库|repository
+repository | 仓库
 retention policy | 保留策略
 revert | 恢复
 save | 保存
@@ -85,7 +89,7 @@ specification | 规格
 specified | 指定|特定
 start | 开始|启动
 tab | 选项卡
-token | 令牌|符记|符号|语素|token
+token | 令牌|符记|符号|语素
 type | 类型|键入
 update | 更新
 webserver | Web 服务器

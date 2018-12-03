@@ -8543,6 +8543,19 @@
       "User \"%s\" is not a valid user."
     ]
   },
+  "Sync Event": {
+    "s2": [
+      "Sync Event",
+      "Sync Event %d"
+    ]
+  },
+  "Sync Event %d": {
+    "s2": [
+      "Pull Event %d",
+      "Push Event %d",
+      "Sync Event %d"
+    ]
+  },
   "Repository URI": {
     "s2": [
       "Create Repository URI",
@@ -8613,19 +8626,14 @@
     "s2": [
       "Pull Event %d",
       "Push Event %d",
-      "Push Log %d"
+      "Push Log %d",
+      "Sync Event %d"
     ]
   },
   "Pull Event": {
     "s2": [
       "Pull Event",
       "Pull Event %d"
-    ]
-  },
-  "Pull Event %d": {
-    "s2": [
-      "Pull Event %d",
-      "Push Event %d"
     ]
   },
   "Shows repository in email.": {
@@ -9390,7 +9398,8 @@
     ],
     "s12": [
       "A repository's pull events are visible to users who can see the repository.",
-      "A repository's push events are visible to users who can see the repository."
+      "A repository's push events are visible to users who can see the repository.",
+      "A repository's sync events are visible to users who can see the repository."
     ]
   },
   "The empty string is not a valid repository short name. Repository short names must be at least one character long.": {
@@ -9582,6 +9591,11 @@
     ]
   },
   "A repository's push logs are visible to users who can see the repository.": {
+    "s11": [
+      "A repository's pull events are visible to users who can see the repository.",
+      "A repository's push logs are visible to users who can see the repository.",
+      "A repository's sync events are visible to users who can see the repository."
+    ],
     "s12": [
       "A repository's push events are visible to users who can see the repository.",
       "A repository's push logs are visible to users who can see the repository."
@@ -11047,7 +11061,8 @@
     "s12": [
       "A repository's pull events are visible to users who can see the repository.",
       "A repository's push events are visible to users who can see the repository.",
-      "A repository's push logs are visible to users who can see the repository."
+      "A repository's push logs are visible to users who can see the repository.",
+      "A repository's sync events are visible to users who can see the repository."
     ]
   },
   "Repository refs have the same policies as their repository.": {
@@ -11055,6 +11070,12 @@
       "Build messages have the same policies as their receivers.",
       "Drydock commands have the same policies as their targets.",
       "Repository refs have the same policies as their repository."
+    ]
+  },
+  "A repository's sync events are visible to users who can see the repository.": {
+    "s11": [
+      "A repository's push logs are visible to users who can see the repository.",
+      "A repository's sync events are visible to users who can see the repository."
     ]
   },
   "Commit \"%s\" is not a reachable ancestor of \"%s\".": {
@@ -11196,7 +11217,8 @@
     ],
     "s6": [
       "Search for pull logs for specific repositories.",
-      "Search for push logs for specific repositories."
+      "Search for push logs for specific repositories.",
+      "Search for sync logs for specific repositories."
     ],
     "s4": [
       "Search for pull logs by specific users.",
@@ -11209,6 +11231,7 @@
       "Search for documents signed by given users.",
       "Search for pull logs for specific repositories.",
       "Search for push logs by specific users.",
+      "Search for sync logs for specific repositories.",
       "Search for tasks closed by certain users."
     ],
     "s6": [
@@ -11221,11 +11244,19 @@
       "All Call Logs",
       "All Pull Logs",
       "All Push Logs",
+      "All Sync Logs",
       "View Push Logs"
     ]
   },
-  "Write Wait (us)": {
+  "Device PHID": {
     "s2": [
+      "Device PHID",
+      "From Device PHID"
+    ]
+  },
+  "Host Wait (us)": {
+    "s2": [
+      "Hook Wait (us)",
       "Host Wait (us)",
       "Read Wait (us)",
       "Write Wait (us)"
@@ -15469,7 +15500,8 @@
       "All Call Logs",
       "All Logs",
       "All Pull Logs",
-      "All Push Logs"
+      "All Push Logs",
+      "All Sync Logs"
     ]
   },
   "Import .ics File": {
@@ -19960,6 +19992,7 @@
       "All Call Logs",
       "All Pull Logs",
       "All Push Logs",
+      "All Sync Logs",
       "Deprecated Call Logs"
     ]
   },
@@ -37394,6 +37427,13 @@
       "Wrong Type"
     ]
   },
+  "Sync Logs": {
+    "s2": [
+      "All Sync Logs",
+      "Sync Logs",
+      "View Sync Logs"
+    ]
+  },
   "It will no longer be possible to edit revprops in this repository.": {
     "s9": [
       "It will no longer be possible to edit revprops in this repository.",
@@ -37727,7 +37767,17 @@
       "All Push Logs",
       "View Full Logs",
       "View Pull Logs",
-      "View Push Logs"
+      "View Push Logs",
+      "View Sync Logs"
+    ]
+  },
+  "View Sync Logs": {
+    "s2": [
+      "All Sync Logs",
+      "View Full Logs",
+      "View Pull Logs",
+      "View Push Logs",
+      "View Sync Logs"
     ]
   },
   "View Pull Logs": {
@@ -37735,7 +37785,8 @@
       "All Pull Logs",
       "View Full Logs",
       "View Pull Logs",
-      "View Push Logs"
+      "View Push Logs",
+      "View Sync Logs"
     ]
   },
   "Branch: %s": {
@@ -37958,6 +38009,19 @@
       "This repository is read-only over SSH."
     ]
   },
+  "From Device": {
+    "s2": [
+      "From Device",
+      "From Device PHID",
+      "From Device Version"
+    ]
+  },
+  "From Version": {
+    "s2": [
+      "From Device Version",
+      "From Version"
+    ]
+  },
   "%s on %s.": {
     "s2": [
       "%s abandoned %s.",
@@ -38064,6 +38128,30 @@
     "s17": [
       "This Diffusion repository is configured to track only one subdirectory of the entire Subversion repository, and this commit didn't affect the tracked subdirectory ('%s'), so no information is available.",
       "This repository is configured to track only one subdirectory of the entire repository ('%s'), but you aren't looking at something in that subdirectory, so no information is available."
+    ]
+  },
+  "Host Wait": {
+    "s2": [
+      "Host Wait",
+      "Host Wait (us)"
+    ]
+  },
+  "Write Wait": {
+    "s2": [
+      "Write Wait",
+      "Write Wait (us)"
+    ]
+  },
+  "Read Wait": {
+    "s2": [
+      "Read Wait",
+      "Read Wait (us)"
+    ]
+  },
+  "Hook Wait": {
+    "s2": [
+      "Hook Wait",
+      "Hook Wait (us)"
     ]
   },
   "Unknown version control system!": {
@@ -38280,6 +38368,34 @@
       "Import Date (Oldest First)"
     ]
   },
+  "Search for sync logs for specific repositories.": {
+    "s4": [
+      "Search for pull logs by specific users.",
+      "Search for push logs by specific users.",
+      "Search for sync logs for specific repositories."
+    ]
+  },
+  "From Device PHID": {
+    "s2": [
+      "From Device PHID",
+      "From Device Version"
+    ]
+  },
+  "Device Version": {
+    "s2": [
+      "Device Version",
+      "From Device Version"
+    ]
+  },
+  "All Sync Logs": {
+    "s2": [
+      "All Call Logs",
+      "All Pull Logs",
+      "All Push Logs",
+      "All Sync Logs",
+      "View Sync Logs"
+    ]
+  },
   "Unsupported repository type!": {
     "s2": [
       "Unsupported repository type \"%s\"!",
@@ -38323,6 +38439,7 @@
       "Search for documents signed by given users.",
       "Search for pull logs by specific users.",
       "Search for push logs for specific repositories.",
+      "Search for sync logs for specific repositories.",
       "Search for tasks closed by certain users."
     ]
   },
@@ -38331,6 +38448,7 @@
       "All Call Logs",
       "All Pull Logs",
       "All Push Logs",
+      "All Sync Logs",
       "View Pull Logs"
     ]
   },
@@ -54962,7 +55080,8 @@
       "View Full Logs",
       "View Full Transcript",
       "View Pull Logs",
-      "View Push Logs"
+      "View Push Logs",
+      "View Sync Logs"
     ]
   },
   "Task %d Missing": {
