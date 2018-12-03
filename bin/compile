@@ -144,9 +144,9 @@ function computeTranslationSummary(translations) {
 
     // Group category by applications.
     const category =
-      pathFragments[0] === 'applications'
-        ? pathFragments[0] + '/' + pathFragments[1]
-        : pathFragments[0]
+      pathFragments[0] === 'applications' ?
+      pathFragments[0] + '/' + pathFragments[1] :
+      pathFragments[0]
 
     // Init empty category.
     if (categories[category] === undefined) {
@@ -351,7 +351,15 @@ function computeFileHash(path) {
 function getGitInfo(path) {
   console.log(`Switch branch of ${path} to stable.`)
 
-  child_process.execSync(`git -C ${path} checkout stable`)
+  const branch = child_process.execSync('git rev-parse --abbrev-ref HEAD', {
+    cwd: path
+  }).toString()
+
+  if (branch !== 'stable') {
+    child_process.execSync(`git checkout stable`, {
+      cwd: path
+    })
+  }
 
   const stdout = child_process
     .execSync('git log -1 --pretty=format:"%h %H %s"', {
