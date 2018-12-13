@@ -25,6 +25,8 @@
 
 当前短词条翻译进度百分比：<%- totalPercentOfShortItems %>。注：短词条为长度小于 66 个字符的词条。
 
+当前不包含原型应用的翻译进度百分比：<%- totalPercentWithoutPrototype %>。
+
 分类 | 短词条翻译百分比 | 短词条翻译进度条 | 整体翻译百分比 | 整体翻译进度条
 --- | :-----------: | ------------- | :----------: | -----------
 <% for (let category in categories) { %><%- this.escapeMarkdown(category) + (categories[category].isPrototype ? ' `原型`' : '') %> | <%- categories[category].percentOfShortItems %> | <%- categories[category].percentOfShortItemsBar %> | <%- categories[category].percent %> | <%- categories[category].percentBar %>
@@ -65,7 +67,7 @@ $ bin/compile
 
 当 Phabricator 项目更新时，会出现新的词条，这时需要提取新的国际化字典资源，方法如下：
 
-首先拉取最新的 Phabricator 源码。在 **Phabricator** 项目路径，执行如下命令：
+首先拉取最新的 Phabricator 和 libphutil 源码。在 **Phabricator** 项目路径，执行如下命令：
 
 ```sh
 $ bin/i18n extract
@@ -86,7 +88,7 @@ $ bin/update
 
 * 是否翻译为中文的判断；
   * 如果英文意思无法直接表达名称所代表的功能，则不予翻译，保留英文，如 Multimeter 翻译成中文为“万用表”，并不是模块的本意“性能取样器”，所以不予翻译；
-  * 开发术语，如：Pull 和 Push 等；
+  * 开发术语，~~如：Pull 和 Push 等~~；
 * 相同的英文单词和词组在同一意思下，尽量使用相同的翻译；
 * 相同的英文单词和词组在不同意思下，避免使用相同的翻译；
 * 相同结构的英文组合，要使用相同的翻译方法；

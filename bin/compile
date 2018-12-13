@@ -131,6 +131,7 @@ function computeTranslationSummary(translations) {
   let totalCountOfShortItems = 0
   let totalTranslationCount = 0
   let totalTranslationCountOfShortItems = 0
+  let totalTranslationCountWithoutPrototype = 0
   let categoryTotalCount = 0
   let categoryTotalCountOfShortItems = 0
   let categoryTranslationCount = 0
@@ -200,6 +201,10 @@ function computeTranslationSummary(translations) {
           if (item.string.length <= LENGTH_OF_SHORT_ITEMS) {
             categoryTranslationCountOfShortItems++
           }
+
+          if (!isPrototype(category)) {
+            totalTranslationCountWithoutPrototype++
+          }
         }
       }
 
@@ -247,6 +252,10 @@ function computeTranslationSummary(translations) {
     totalPercentOfShortItems: computePercent(
       totalTranslationCountOfShortItems,
       totalCountOfShortItems
+    ),
+    totalPercentWithoutPrototype: computePercent(
+      totalTranslationCountWithoutPrototype,
+      totalCountWithoutPrototype
     ),
     categories: categories,
     gitInfo: gitInfo
