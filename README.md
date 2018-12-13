@@ -15,98 +15,100 @@
 
 ## 翻译进度
 
-当前翻译的 Phabricator 版本：[[66896e8bf7](https://secure.phabricator.com/rP66896e8bf7169a7d7830a68fe82d49ce1b7bc164)]`(stable) Pull some debugging code back out of "master"`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：9d41c4001a3ca1d8cc6aeb929b8c594183616b9d。
+当前翻译的 Phabricator 版本：[[8ef2f4086e](https://secure.phabricator.com/rP8ef2f4086ee3479853f045d0fa1457bebd833bbd)]`(stable) Promote 2018 Week 48`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：f276dfeefa32b5d54a7cf22e6c099ff329d65a09。
 
-当前翻译的 libphutil 版本：[[b29d76e](https://secure.phabricator.com/rPHUb29d76e1709ef018cc5edc7c03033fd9fdebc578)]`(stable) Promote 2018 Week 45`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：9d41c4001a3ca1d8cc6aeb929b8c594183616b9d。
+当前翻译的 libphutil 版本：[[2a2d4fc](https://secure.phabricator.com/rPHU2a2d4fce881ea48974e7356ca4cf3d33105998f0)]`(stable) Promote 2018 Week 48`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：f276dfeefa32b5d54a7cf22e6c099ff329d65a09。
 
-当前总词条数量：15285 条，不包含原型应用的总词条数量：13019 条。
+当前总词条数量：15344 条，不包含原型应用的总词条数量：13078 条。
 
-当前整体翻译进度百分比：73%。
+当前整体翻译进度百分比：74%。
 
-当前短词条翻译进度百分比：83%。注：短词条为长度小于 66 个字符的词条。
+当前短词条翻译进度百分比：84%。注：短词条为长度小于 66 个字符的词条。
+
+当前不包含原型应用的翻译进度百分比：86%。
 
 分类 | 短词条翻译百分比 | 短词条翻译进度条 | 整体翻译百分比 | 整体翻译进度条
 --- | :-----------: | ------------- | :----------: | -----------
 aphront | 97% | ========= | 80% | =======
-applications/almanac | 81% | ======== | 73% | =======
+applications/almanac | 82% | ======== | 73% | =======
 applications/aphlict | **100%** | ✓✓✓✓✓✓✓✓ | 71% | =======
 applications/arcanist | --- |  | --- | 
-applications/audit | 80% | ======= | 74% | =======
-applications/auth | 88% | ======== | 67% | ======
+applications/audit | 82% | ======== | 75% | =======
+applications/auth | 89% | ======== | 69% | ======
 applications/badges | 92% | ========= | 91% | =========
 applications/base | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/cache | 86% | ======== | 67% | ======
-applications/calendar `原型` | 93% | ========= | 89% | ========
+applications/calendar `原型` | 94% | ========= | 89% | ========
 applications/celerity | 93% | ========= | 83% | ========
 applications/chatlog `原型` | 79% | ======= | 79% | =======
-applications/conduit | 93% | ========= | 80% | =======
-applications/config | 93% | ========= | 71% | =======
+applications/conduit | 98% | ========= | 85% | ========
+applications/config | 94% | ========= | 73% | =======
 applications/conpherence | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/console | 70% | ======= | 68% | ======
+applications/console | 72% | ======= | 70% | ======
 applications/countdown | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/daemon | 98% | ========= | 86% | ========
 applications/dashboard | 95% | ========= | 90% | =========
-applications/differential | 79% | ======= | 72% | =======
-applications/diffusion | 78% | ======= | 66% | ======
+applications/differential | 83% | ======== | 76% | =======
+applications/diffusion | 79% | ======= | 68% | ======
 applications/diviner | 71% | ======= | 67% | ======
 applications/doorkeeper | 73% | ======= | 60% | ======
 applications/draft | --- |  | --- | 
-applications/drydock | 72% | ======= | 61% | ======
-applications/fact `原型` | 43% | ==== | 42% | ====
+applications/drydock | 74% | ======= | 63% | ======
+applications/fact `原型` | 46% | ==== | 44% | ====
 applications/favorites | 75% | ======= | 75% | =======
-applications/feed | 75% | ======= | 67% | ======
-applications/files | 72% | ======= | 62% | ======
+applications/feed | 74% | ======= | 66% | ======
+applications/files | 74% | ======= | 64% | ======
 applications/flag | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/fund `原型` | 90% | ========= | 87% | ========
 applications/guides | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/harbormaster | 76% | ======= | 67% | ======
+applications/harbormaster | 78% | ======= | 69% | ======
 applications/help | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/herald | 77% | ======= | 70% | =======
+applications/herald | 74% | ======= | 67% | ======
 applications/home | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/legalpad | 89% | ======== | 84% | ========
+applications/legalpad | 90% | ========= | 86% | ========
 applications/lipsum | **100%** | ✓✓✓✓✓✓✓✓ | 71% | =======
 applications/macro | 94% | ========= | 91% | =========
-applications/maniphest | 97% | ========= | 92% | =========
+applications/maniphest | 98% | ========= | 93% | =========
 applications/meta | **100%** | ✓✓✓✓✓✓✓✓ | 99% | =========
-applications/metamta | 74% | ======= | 65% | ======
-applications/multimeter `原型` | 82% | ======== | 82% | ========
+applications/metamta | 76% | ======= | 67% | ======
+applications/multimeter `原型` | 88% | ======== | 88% | ========
 applications/notification | **100%** | ✓✓✓✓✓✓✓✓ | 73% | =======
-applications/nuance `原型` | 81% | ======== | 76% | =======
-applications/oauthserver `原型` | 85% | ======== | 72% | =======
-applications/owners | 78% | ======= | 74% | =======
+applications/nuance `原型` | 83% | ======== | 78% | =======
+applications/oauthserver `原型` | 87% | ======== | 74% | =======
+applications/owners | 79% | ======= | 75% | =======
 applications/packages `原型` | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/passphrase | 88% | ======== | 81% | ========
+applications/passphrase | 91% | ========= | 83% | ========
 applications/paste | 99% | ========= | 99% | =========
 applications/people | 99% | ========= | 90% | ========
 applications/phame | 99% | ========= | 95% | =========
 applications/phid | **100%** | ✓✓✓✓✓✓✓✓ | 79% | =======
 applications/phlux `原型` | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/pholio | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/phortune `原型` | 79% | ======= | 72% | =======
+applications/phortune `原型` | 80% | ======= | 73% | =======
 applications/phpast | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/phragment `原型` | 72% | ======= | 68% | ======
 applications/phrequent `原型` | 80% | ======== | 76% | =======
-applications/phriction | 91% | ========= | 88% | ========
-applications/phurl `原型` | 90% | ======== | 89% | ========
-applications/policy | 89% | ======== | 77% | =======
+applications/phriction | 92% | ========= | 89% | ========
+applications/phurl `原型` | 95% | ========= | 94% | =========
+applications/policy | 90% | ======== | 78% | =======
 applications/ponder | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/project | 96% | ========= | 89% | ========
-applications/releeph `原型` | 58% | ===== | 54% | =====
+applications/releeph `原型` | 60% | ===== | 55% | =====
 applications/remarkup | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/repository | 73% | ======= | 64% | ======
-applications/search | 88% | ======== | 74% | =======
+applications/search | 89% | ======== | 75% | =======
 applications/settings | 97% | ========= | 89% | ========
 applications/slowvote | 99% | ========= | 98% | =========
-applications/spaces | 97% | ========= | 82% | ========
+applications/spaces | 97% | ========= | 84% | ========
 applications/subscriptions | **100%** | ✓✓✓✓✓✓✓✓ | 98% | =========
 applications/support | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/system | 74% | ======= | 49% | ====
+applications/system | 79% | ======= | 54% | =====
 applications/tokens | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/transactions | 81% | ======== | 69% | ======
+applications/transactions | 86% | ======== | 74% | =======
 applications/typeahead | 91% | ========= | 88% | ========
-applications/uiexample `原型` | 97% | ========= | 97% | =========
+applications/uiexample `原型` | 98% | ========= | 97% | =========
 applications/xhprof | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-infrastructure | 64% | ====== | 51% | =====
+infrastructure | 66% | ====== | 53% | =====
 view | 99% | ========= | 97% | =========
 
 ## 启动翻译工具
@@ -145,7 +147,7 @@ $ bin/compile
 
 当 Phabricator 项目更新时，会出现新的词条，这时需要提取新的国际化字典资源，方法如下：
 
-首先拉取最新的 Phabricator 源码。在 **Phabricator** 项目路径，执行如下命令：
+首先拉取最新的 Phabricator 和 libphutil 源码。在 **Phabricator** 项目路径，执行如下命令：
 
 ```sh
 $ bin/i18n extract
@@ -166,7 +168,7 @@ $ bin/update
 
 * 是否翻译为中文的判断；
   * 如果英文意思无法直接表达名称所代表的功能，则不予翻译，保留英文，如 Multimeter 翻译成中文为“万用表”，并不是模块的本意“性能取样器”，所以不予翻译；
-  * 开发术语，如：Pull 和 Push 等；
+  * 开发术语，~~如：Pull 和 Push 等~~；
 * 相同的英文单词和词组在同一意思下，尽量使用相同的翻译；
 * 相同的英文单词和词组在不同意思下，避免使用相同的翻译；
 * 相同结构的英文组合，要使用相同的翻译方法；

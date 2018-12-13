@@ -11,6 +11,7 @@
     "xsprintf/xsprintf.php": "ba44e16cfb863bdbb0a8856ccebaef75",
     "xsprintf/csprintf.php": "1ec79f3c783cb9f645e3f61b2a6a0527",
     "xsprintf/ldapsprintf.php": "ec2667790fc806358bd621fe33baeb42",
+    "xsprintf/PhutilQueryString.php": "0db8808f3047f62b8cf647788c0a9afb",
     "xsprintf/AphrontDatabaseTableRef.php": "ca5c7a3b8f1b5c941e25a5724d08a4a9",
     "xsprintf/PhutilCommandString.php": "77a2a44bde45c32bdd267a504ecf212c",
     "xsprintf/PhutilQsprintfInterface.php": "8e64933cbd4fd0b4436fdd3d0dce49f5",
@@ -20,11 +21,11 @@
     "xsprintf/__tests__/PhutilHgsprintfTestCase.php": "3c1f8a61c0dad658e39d7a6752e68677",
     "xsprintf/__tests__/PhutilTsprintfTestCase.php": "3ede5688d1a0b4a1de77b5e2ac97a68c",
     "xsprintf/__tests__/PhutilCsprintfTestCase.php": "a87372666a04b80df4e4cce575b2c42a",
-    "xsprintf/qsprintf.php": "1b26e9597fddd0e7424b98adeb000cc5",
+    "xsprintf/qsprintf.php": "414ec1c740bd52162526a33d85265bc4",
     "xsprintf/jsprintf.php": "2bc999aef013f410b004bca083f7df27",
     "xsprintf/tsprintf.php": "38ea16cb4251bdfdf9da1745669fde15",
     "xsprintf/pregsprintf.php": "a270fc9b5f110369f7da379d48e10bd4",
-    "xsprintf/queryfx.php": "9d75f1404559e6e77e123ca6e72f0eda",
+    "xsprintf/queryfx.php": "48b340e6625e715e585495575a93fe19",
     "xsprintf/AphrontDatabaseTableRefInterface.php": "0cb5a6e04ce1a7aed37367d176a2839d",
     "xsprintf/exception/XsprintfUnknownConversionException.php": "a5f181c5868b3e523048e9ecdd1ae925",
     "xsprintf/hgsprintf.php": "6c076bd9a28cf04f535cc3059a11e534",
@@ -385,12 +386,12 @@
     "events/PhutilEvent.php": "1492090cb5176d7ac2f2caa4b78cf59b",
     "aphront/writeguard/AphrontWriteGuard.php": "82896d9b2b35d3e4285a96ecb1957193",
     "aphront/writeguard/AphrontScopedUnguardedWriteCapability.php": "39dc8210d7afd1b2c66c472c350eafea",
-    "aphront/storage/connection/AphrontDatabaseConnection.php": "3320b20860b8d445de0ea2281204fa9d",
-    "aphront/storage/connection/AphrontIsolatedDatabaseConnection.php": "a136cb81e2930cefbcbd6ce407296eb8",
+    "aphront/storage/connection/AphrontDatabaseConnection.php": "c2d0004d9321fa4a63aef0ae2a13613d",
+    "aphront/storage/connection/AphrontIsolatedDatabaseConnection.php": "14ce1483b182194f696f215e3f9f89d1",
     "aphront/storage/connection/AphrontDatabaseTransactionState.php": "15dddf2d6af737a774dea150a89ebc9d",
     "aphront/storage/connection/mysql/AphrontMySQLDatabaseConnection.php": "bbe53c5f571f419295443755f5e4305c",
     "aphront/storage/connection/mysql/AphrontMySQLiDatabaseConnection.php": "bf07d1c29d8e00b4aa8d3fee7ad6b130",
-    "aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php": "360a569d268998fc378520f7841639a1",
+    "aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php": "5d289143aa15c46dcff7c5edbb0e8597",
     "aphront/storage/exception/AphrontParameterQueryException.php": "cd17f8e4fdf74c4448c2a6c07f00a8b6",
     "aphront/storage/exception/AphrontObjectMissingQueryException.php": "d48f306c8f0df7af37f04e13ef9a4373",
     "aphront/storage/exception/AphrontLockTimeoutQueryException.php": "96254684743638f13505c4d2b3f3c874",
@@ -461,7 +462,7 @@
     "future/exec/PhutilExecutableFuture.php": "e1cb7d9009c0735f103779bfc41718c8",
     "future/exec/__tests__/ExecPassthruTestCase.php": "e575d28e369198efd518ebc63aca0cb6",
     "future/exec/__tests__/ExecFutureTestCase.php": "fff684224387d486f0740ea5160c2dd8",
-    "future/exec/ExecFuture.php": "6562718e3fb4258245cdb12004e487b1",
+    "future/exec/ExecFuture.php": "788fc2f447a413c3a90dbb04be45566d",
     "future/exec/PhutilSignalHandler.php": "bc3565ec2713f5f7c11cccf63bbc7e99",
     "future/exec/execx.php": "6348f9f0d81748c06800d4de7702f3f9",
     "future/slack/PhutilSlackFuture.php": "edbfa6d47de07baf43eb4288ea78bf24",
@@ -507,69 +508,55 @@
     "console/PhutilInteractiveEditor.php": "2d51d36e7614fb1808dcabe0c1c1a55b"
   },
   "strings": {
-    "900c2877a9aacc2376e6b9640b03f389": [
+    "48b340e6625e715e585495575a93fe19": [
       {
-        "string": "Objects passed to \"%s\" must return sort vectors (objects of class \"%s\") from the specified method (\"%s\"). One object (with key \"%s\") did not.",
-        "file": "/utils/utils.php",
-        "line": 426,
-        "types": [
-          null,
-          null,
-          null,
-          null
-        ]
-      },
+        "string": "Query returned more than one row.",
+        "file": "/xsprintf/queryfx.php",
+        "line": 22,
+        "types": []
+      }
+    ],
+    "c2d0004d9321fa4a63aef0ae2a13613d": [
       {
-        "string": "Argument method is not a string.",
-        "file": "/utils/utils.php",
-        "line": 500,
+        "string": "Async queries are not supported.",
+        "file": "/aphront/storage/connection/AphrontDatabaseConnection.php",
+        "line": 89,
         "types": []
       },
       {
-        "string": "Argument index is not a scalar.",
-        "file": "/utils/utils.php",
-        "line": 545,
+        "string": "Async queries are not supported.",
+        "file": "/aphront/storage/connection/AphrontDatabaseConnection.php",
+        "line": 93,
         "types": []
       },
       {
-        "string": "Array item with key '%s' must be of type array, %s given.",
-        "file": "/utils/utils.php",
-        "line": 610,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "instance of %s",
-        "file": "/utils/utils.php",
-        "line": 618,
+        "string": "Trying to remember lock \"%s\", but this lock has already been remembered.",
+        "file": "/aphront/storage/connection/AphrontDatabaseConnection.php",
+        "line": 125,
         "types": [
           null
         ]
       },
       {
-        "string": "Array item with key '%s' must be an instance of %s, %s given.",
-        "file": "/utils/utils.php",
-        "line": 622,
-        "types": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Argument must be scalar or object which implements %s!",
-        "file": "/utils/utils.php",
-        "line": 662,
+        "string": "Trying to forget lock \"%s\", but this connection does not remember that lock.",
+        "file": "/aphront/storage/connection/AphrontDatabaseConnection.php",
+        "line": 139,
         "types": [
           null
         ]
+      }
+    ],
+    "414ec1c740bd52162526a33d85265bc4": [
+      {
+        "string": "Invalid database escaper.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 108,
+        "types": []
       },
       {
-        "string": "Expected all items passed to `%s` to be arrays, but argument with key \"%s\" has type \"%s\".",
-        "file": "/utils/utils.php",
-        "line": 822,
+        "string": "Unknown conversion, try %s, %s, or %s.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 131,
         "types": [
           null,
           null,
@@ -577,136 +564,267 @@
         ]
       },
       {
-        "string": "Unable to parse unit specification (expected a specification in the form \"%s\"): %s",
-        "file": "/utils/utils.php",
-        "line": 1063,
+        "string": "Expected array argument for %%%s conversion.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 380,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Array for %%%s conversion is empty.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 385,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "UNSAFE: Raw string (\"%s\") passed to query (\"%s\") subclause for \"%%%s\" conversion. Subclause conversions should be passed a list of PhutilQueryString objects.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 408,
+        "types": [
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Expected a list of PhutilQueryString objects for %%%s conversion.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 421,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "UNSAFE: Raw string (\"%s\") passed to query (\"%s\") for \"%%Q\" conversion. %%Q should be passed a query string.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 432,
         "types": [
           null,
           null
         ]
       },
       {
-        "string": "This function can not convert from the unit \"%s\".",
-        "file": "/utils/utils.php",
-        "line": 1097,
+        "string": "Expected a PhutilQueryString for %%%s conversion.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 442,
         "types": [
           null
         ]
       },
       {
-        "string": "This function can not convert from the unit \"%s\".",
-        "file": "/utils/utils.php",
-        "line": 1115,
+        "string": "Value for \"%%Z\" conversion should be a raw string.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 450,
+        "types": []
+      },
+      {
+        "string": "Expected a string for %%%s conversion.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 461,
         "types": [
           null
         ]
       },
       {
-        "string": "This function can not convert into the unit \"%s\".",
-        "file": "/utils/utils.php",
-        "line": 1122,
+        "string": "Expected a numeric scalar or null for %%%s conversion.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 472,
         "types": [
           null
         ]
       },
       {
-        "string": "\"%s\" is not an exact quantity.",
-        "file": "/utils/utils.php",
-        "line": 1130,
+        "string": "Expected a scalar or null for %%%s conversion.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 487,
         "types": [
           null
         ]
       },
       {
-        "string": "Argument to \"phutil_microseconds_since(...)\" should be a value returned from \"microtime(true)\".",
-        "file": "/utils/utils.php",
-        "line": 1151,
+        "string": "Parameter to \"%s\" conversion in \"qsprintf(...)\" is not an instance of AphrontDatabaseTableRefInterface.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 495,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Parameter to \"%s\" conversion in \"qsprintf(...)\" is not an instance of PhutilOpaqueEnvelope.",
+        "file": "/xsprintf/qsprintf.php",
+        "line": 505,
+        "types": [
+          null
+        ]
+      }
+    ],
+    "14ce1483b182194f696f215e3f9f89d1": [
+      {
+        "string": "Database isolation currently only supports some queries. You are trying to issue a query which does not begin with an allowed keyword (%s): '%s'.",
+        "file": "/aphront/storage/connection/AphrontIsolatedDatabaseConnection.php",
+        "line": 96,
+        "types": [
+          null,
+          null
+        ]
+      }
+    ],
+    "5d289143aa15c46dcff7c5edbb0e8597": [
+      {
+        "string": "Retrying (%d) after %s: %s",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 108,
+        "types": [
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "string": "No query result to fetch from!",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 147,
+        "types": []
+      },
+      {
+        "string": "Attempting to issue a write query on a read-only connection (to database \"%s\")!",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 272,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Simulated error.",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 286,
         "types": []
       },
       {
         "string": "#%d: %s",
-        "file": "/utils/utils.php",
-        "line": 1198,
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 296,
         "types": [
           null,
           null
         ]
       },
       {
-        "string": "#%d",
-        "file": "/utils/utils.php",
-        "line": 1200,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Failed to JSON encode value (%s): %s.",
-        "file": "/utils/utils.php",
-        "line": 1208,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Failed to JSON encode value: %s.",
-        "file": "/utils/utils.php",
-        "line": 1213,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Dictionary key \"%s\" is not valid UTF8, and cannot be JSON encoded.",
-        "file": "/utils/utils.php",
-        "line": 1263,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "String value is not valid UTF8, and can not be JSON encoded: %s",
-        "file": "/utils/utils.php",
-        "line": 1281,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Dictionary value at key \"%s\" is not valid UTF8, and cannot be JSON encoded: %s",
-        "file": "/utils/utils.php",
-        "line": 1285,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "%s is not compatible with your version of PHP (%s). This function is only supported on PHP versions newer than 5.3.0.",
-        "file": "/utils/utils.php",
-        "line": 1311,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Invalid glob pattern.",
-        "file": "/utils/utils.php",
-        "line": 1487,
+        "string": "This error may occur if your configured MySQL \"wait_timeout\" or \"max_allowed_packet\" values are too small. This may also indicate that something used the MySQL \"KILL <process>\" command to kill the connection running the query.",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 303,
         "types": []
       },
       {
-        "string": "First hash argument must be a string.",
-        "file": "/utils/utils.php",
-        "line": 1520,
+        "string": "Attempt to connect to %s@%s failed with error #%d: %s.",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 340,
+        "types": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "string": "#%d: %s",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 354,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Attempting to construct a query using a non-utf8 string when utf8 is expected. Use the `%%B` conversion to escape binary strings data.",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 382,
+        "types": []
+      }
+    ],
+    "788fc2f447a413c3a90dbb04be45566d": [
+      {
+        "string": "Writing to a closed pipe!",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 267,
         "types": []
       },
       {
-        "string": "Second hash argument must be a string.",
-        "file": "/utils/utils.php",
-        "line": 1524,
+        "string": "Command killed by timeout after running for more than %s seconds.",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 374,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Command failed with error #%d!",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 377,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "JSON command '%s' emitted text to stderr when none was expected: %d",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 407,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "JSON command '%s' did not produce a valid JSON object on stdout: %s",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 421,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Failed to read from %s",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 555,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Unable to create temporary files for Windows stdout / stderr streams",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 653,
+        "types": []
+      },
+      {
+        "string": "Unable to open temporary files for reading Windows stdout / stderr streams",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 676,
+        "types": []
+      },
+      {
+        "string": "Failed to `%s`: %s",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 691,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Failed to set streams nonblocking.",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 711,
+        "types": []
+      },
+      {
+        "string": "Unable to write to stdin!",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 731,
         "types": []
       }
     ],
@@ -795,72 +913,6 @@
         "types": []
       }
     ],
-    "1b26e9597fddd0e7424b98adeb000cc5": [
-      {
-        "string": "Invalid database escaper.",
-        "file": "/xsprintf/qsprintf.php",
-        "line": 87,
-        "types": []
-      },
-      {
-        "string": "Unknown conversion, try %s, %s, or %s.",
-        "file": "/xsprintf/qsprintf.php",
-        "line": 110,
-        "types": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Expected array argument for %%%s conversion.",
-        "file": "/xsprintf/qsprintf.php",
-        "line": 269,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Array for %%%s conversion is empty.",
-        "file": "/xsprintf/qsprintf.php",
-        "line": 274,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Expected a string for %%%s conversion.",
-        "file": "/xsprintf/qsprintf.php",
-        "line": 296,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Expected a numeric scalar or null for %%%s conversion.",
-        "file": "/xsprintf/qsprintf.php",
-        "line": 307,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Expected a scalar or null for %%%s conversion.",
-        "file": "/xsprintf/qsprintf.php",
-        "line": 322,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Parameter to \"%s\" conversion in \"qsprintf(...)\" is not an instance of AphrontDatabaseTableRefInterface.",
-        "file": "/xsprintf/qsprintf.php",
-        "line": 330,
-        "types": [
-          null
-        ]
-      }
-    ],
     "2bc999aef013f410b004bca083f7df27": [
       {
         "string": "You are passing an integer to %s which is so large it can not be represented without loss of precision by Javascript's native %s class. Use %%# instead.",
@@ -870,14 +922,6 @@
           null,
           null
         ]
-      }
-    ],
-    "9d75f1404559e6e77e123ca6e72f0eda": [
-      {
-        "string": "Query returned more than one row.",
-        "file": "/xsprintf/queryfx.php",
-        "line": 22,
-        "types": []
       }
     ],
     "a5f181c5868b3e523048e9ecdd1ae925": [
@@ -2940,6 +2984,209 @@
         "types": [
           null
         ]
+      }
+    ],
+    "900c2877a9aacc2376e6b9640b03f389": [
+      {
+        "string": "Objects passed to \"%s\" must return sort vectors (objects of class \"%s\") from the specified method (\"%s\"). One object (with key \"%s\") did not.",
+        "file": "/utils/utils.php",
+        "line": 426,
+        "types": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Argument method is not a string.",
+        "file": "/utils/utils.php",
+        "line": 500,
+        "types": []
+      },
+      {
+        "string": "Argument index is not a scalar.",
+        "file": "/utils/utils.php",
+        "line": 545,
+        "types": []
+      },
+      {
+        "string": "Array item with key '%s' must be of type array, %s given.",
+        "file": "/utils/utils.php",
+        "line": 610,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "instance of %s",
+        "file": "/utils/utils.php",
+        "line": 618,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Array item with key '%s' must be an instance of %s, %s given.",
+        "file": "/utils/utils.php",
+        "line": 622,
+        "types": [
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Argument must be scalar or object which implements %s!",
+        "file": "/utils/utils.php",
+        "line": 662,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Expected all items passed to `%s` to be arrays, but argument with key \"%s\" has type \"%s\".",
+        "file": "/utils/utils.php",
+        "line": 822,
+        "types": [
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Unable to parse unit specification (expected a specification in the form \"%s\"): %s",
+        "file": "/utils/utils.php",
+        "line": 1063,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "This function can not convert from the unit \"%s\".",
+        "file": "/utils/utils.php",
+        "line": 1097,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "This function can not convert from the unit \"%s\".",
+        "file": "/utils/utils.php",
+        "line": 1115,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "This function can not convert into the unit \"%s\".",
+        "file": "/utils/utils.php",
+        "line": 1122,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "\"%s\" is not an exact quantity.",
+        "file": "/utils/utils.php",
+        "line": 1130,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Argument to \"phutil_microseconds_since(...)\" should be a value returned from \"microtime(true)\".",
+        "file": "/utils/utils.php",
+        "line": 1151,
+        "types": []
+      },
+      {
+        "string": "#%d: %s",
+        "file": "/utils/utils.php",
+        "line": 1198,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "#%d",
+        "file": "/utils/utils.php",
+        "line": 1200,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Failed to JSON encode value (%s): %s.",
+        "file": "/utils/utils.php",
+        "line": 1208,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Failed to JSON encode value: %s.",
+        "file": "/utils/utils.php",
+        "line": 1213,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Dictionary key \"%s\" is not valid UTF8, and cannot be JSON encoded.",
+        "file": "/utils/utils.php",
+        "line": 1263,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "String value is not valid UTF8, and can not be JSON encoded: %s",
+        "file": "/utils/utils.php",
+        "line": 1281,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Dictionary value at key \"%s\" is not valid UTF8, and cannot be JSON encoded: %s",
+        "file": "/utils/utils.php",
+        "line": 1285,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "%s is not compatible with your version of PHP (%s). This function is only supported on PHP versions newer than 5.3.0.",
+        "file": "/utils/utils.php",
+        "line": 1311,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Invalid glob pattern.",
+        "file": "/utils/utils.php",
+        "line": 1487,
+        "types": []
+      },
+      {
+        "string": "First hash argument must be a string.",
+        "file": "/utils/utils.php",
+        "line": 1520,
+        "types": []
+      },
+      {
+        "string": "Second hash argument must be a string.",
+        "file": "/utils/utils.php",
+        "line": 1524,
+        "types": []
       }
     ],
     "b7aa98e78bbb6189ce8e0d3d5218e993": [
@@ -6506,47 +6753,6 @@
         ]
       }
     ],
-    "3320b20860b8d445de0ea2281204fa9d": [
-      {
-        "string": "Async queries are not supported.",
-        "file": "/aphront/storage/connection/AphrontDatabaseConnection.php",
-        "line": 89,
-        "types": []
-      },
-      {
-        "string": "Async queries are not supported.",
-        "file": "/aphront/storage/connection/AphrontDatabaseConnection.php",
-        "line": 93,
-        "types": []
-      },
-      {
-        "string": "Trying to remember lock \"%s\", but this lock has already been remembered.",
-        "file": "/aphront/storage/connection/AphrontDatabaseConnection.php",
-        "line": 104,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Trying to forget lock \"%s\", but this connection does not remember that lock.",
-        "file": "/aphront/storage/connection/AphrontDatabaseConnection.php",
-        "line": 118,
-        "types": [
-          null
-        ]
-      }
-    ],
-    "a136cb81e2930cefbcbd6ce407296eb8": [
-      {
-        "string": "Database isolation currently only supports some queries. You are trying to issue a query which does not begin with an allowed keyword (%s): '%s'.",
-        "file": "/aphront/storage/connection/AphrontIsolatedDatabaseConnection.php",
-        "line": 93,
-        "types": [
-          null,
-          null
-        ]
-      }
-    ],
     "15dddf2d6af737a774dea150a89ebc9d": [
       {
         "string": "Too many calls to %s or %s!",
@@ -6645,79 +6851,6 @@
         "string": "There are some results left in the result set.",
         "file": "/aphront/storage/connection/mysql/AphrontMySQLiDatabaseConnection.php",
         "line": 154,
-        "types": []
-      }
-    ],
-    "360a569d268998fc378520f7841639a1": [
-      {
-        "string": "Retrying (%d) after %s: %s",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 108,
-        "types": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "string": "No query result to fetch from!",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 147,
-        "types": []
-      },
-      {
-        "string": "Attempting to issue a write query on a read-only connection (to database \"%s\")!",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 269,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Simulated error.",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 283,
-        "types": []
-      },
-      {
-        "string": "#%d: %s",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 293,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "This error may occur if your configured MySQL \"wait_timeout\" or \"max_allowed_packet\" values are too small. This may also indicate that something used the MySQL \"KILL <process>\" command to kill the connection running the query.",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 300,
-        "types": []
-      },
-      {
-        "string": "Attempt to connect to %s@%s failed with error #%d: %s.",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 337,
-        "types": [
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "string": "#%d: %s",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 351,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Attempting to construct a query using a non-utf8 string when utf8 is expected. Use the `%%B` conversion to escape binary strings data.",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 379,
         "types": []
       }
     ],
@@ -7539,81 +7672,6 @@
         "types": [
           null
         ]
-      }
-    ],
-    "6562718e3fb4258245cdb12004e487b1": [
-      {
-        "string": "Writing to a closed pipe!",
-        "file": "/future/exec/ExecFuture.php",
-        "line": 267,
-        "types": []
-      },
-      {
-        "string": "Command failed with error #%d!",
-        "file": "/future/exec/ExecFuture.php",
-        "line": 370,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "JSON command '%s' emitted text to stderr when none was expected: %d",
-        "file": "/future/exec/ExecFuture.php",
-        "line": 396,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "JSON command '%s' did not produce a valid JSON object on stdout: %s",
-        "file": "/future/exec/ExecFuture.php",
-        "line": 410,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Failed to read from %s",
-        "file": "/future/exec/ExecFuture.php",
-        "line": 544,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Unable to create temporary files for Windows stdout / stderr streams",
-        "file": "/future/exec/ExecFuture.php",
-        "line": 642,
-        "types": []
-      },
-      {
-        "string": "Unable to open temporary files for reading Windows stdout / stderr streams",
-        "file": "/future/exec/ExecFuture.php",
-        "line": 665,
-        "types": []
-      },
-      {
-        "string": "Failed to `%s`: %s",
-        "file": "/future/exec/ExecFuture.php",
-        "line": 680,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Failed to set streams nonblocking.",
-        "file": "/future/exec/ExecFuture.php",
-        "line": 700,
-        "types": []
-      },
-      {
-        "string": "Unable to write to stdin!",
-        "file": "/future/exec/ExecFuture.php",
-        "line": 720,
-        "types": []
       }
     ],
     "edbfa6d47de07baf43eb4288ea78bf24": [
