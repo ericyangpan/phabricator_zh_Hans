@@ -37,6 +37,11 @@ td span {
   color: blue;
 }
 
+td i {
+  color: brown;
+  font-size: 0.8em;
+}
+
 tr.highlight {
   background-color: #f5f5f5;
 }

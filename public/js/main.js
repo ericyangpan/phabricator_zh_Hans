@@ -173,7 +173,10 @@ const vm = new Vue({
 
         setGlobalDictionary(globalData.translations, globalData.dictionary, globalData.terminology)
 
-        let {totalPercent, items} = getCategories(globalData.categories, globalData.translations)
+        let {
+          totalPercent,
+          items
+        } = getCategories(globalData.categories, globalData.translations)
 
         this.category.totalPercent = totalPercent
         this.category.items = IS_SORT_BY_PERCENT ? sortByPercent(items) : items
@@ -204,8 +207,8 @@ const vmt = new Vue({
       const ctx = getRowContext(event.target)
 
       if (ctx.suggestion === '') return
-      
-      ctx.valueTextBox.value = ctx.suggestion
+
+      ctx.valueTextBox.value = ctx.suggestion.replace(/↵/g, '\n')
 
       if (ctx.suggestion !== globalData[this.section][ctx.key]) {
         setTextBoxChangedStyle(ctx.valueTextBox)
@@ -258,12 +261,12 @@ function inputInternal(event, section) {
 function processValueKeyInternal(event, section) {
   switch (event.key) {
     case 'ArrowDown':
-      if (event.target.parentElement.parentElement.nextSibling) {
+      if (event.target.tagName === 'INPUT' && event.target.parentElement.parentElement.nextSibling) {
         event.target.parentElement.parentElement.nextSibling.children[1].firstElementChild.focus()
       }
       break
     case 'ArrowUp':
-      if (event.target.parentElement.parentElement.previousSibling) {
+      if (event.target.tagName === 'INPUT' && event.target.parentElement.parentElement.previousSibling) {
         event.target.parentElement.parentElement.previousSibling.children[1].firstElementChild.focus()
       }
       break
@@ -280,20 +283,20 @@ function processValueKeyInternal(event, section) {
         } else if (ctx.value !== globalData[section][ctx.key]) {
           promise = saveItem(section, ctx.key, ctx.value)
         }
-        
+
         promise.then(() => {
-          setTextBoxUpdatedStyle(ctx.valueTextBox)
+            setTextBoxUpdatedStyle(ctx.valueTextBox)
 
-          if (isTranslation) {
-            updateStatusNode(ctx.valueTextBox)
-            refreshTranslation(ctx.key, ctx.value)
-          }
+            if (isTranslation) {
+              updateStatusNode(ctx.valueTextBox)
+              refreshTranslation(ctx.key, ctx.value)
+            }
 
-          refreshSuggestion()
-        })
-        .catch(error => {
-          console.error(error)
-        })
+            refreshSuggestion()
+          })
+          .catch(error => {
+            console.error(error)
+          })
       }
 
       break
@@ -361,18 +364,19 @@ function getCategories(categories, translations) {
       }
     }
 
-    items.push(
-      {
-        group: category,
-        isPrototype: isPrototype,
-        percent: computePercent(categoryTranslatedItemCount, categoryItemCount)
-      }
-    )
+    items.push({
+      group: category,
+      isPrototype: isPrototype,
+      percent: computePercent(categoryTranslatedItemCount, categoryItemCount)
+    })
   }
 
   const totalPercent = computePercent(totalTranslatedItemCount, totalItemCount)
 
-  return {totalPercent, items}
+  return {
+    totalPercent,
+    items
+  }
 }
 
 function searchInternal(options) {
@@ -443,8 +447,8 @@ function searchText(text, isWord, type, filterLength) {
 
       resultCount++
 
-      // New item.
       if (resultIndexes[key] === undefined) {
+        // New item.
         resultIndexes[key] = resultIndex
         resultIndex++
 
@@ -460,8 +464,8 @@ function searchText(text, isWord, type, filterLength) {
         setTextareaRowCount(item)
 
         results.push(item)
-      // Exists item.
       } else {
+        // Item exists.
         results[resultIndexes[key]].category += ', ' + category
       }
     }
@@ -489,12 +493,12 @@ function searchCategory(category, filterLength) {
     }
 
     item.highlight = item.value !== undefined
-    
+
     setTextareaRowCount(item)
 
     results.push(item)
   }
-  
+
   return Promise.resolve({
     category: category,
     filteredCount: results.length,
@@ -511,7 +515,7 @@ function searchSimilar(pageNumber) {
   for (let i = from; i < to; i++) {
     const diff = getDiff(globalData.similars[i])
     const length = globalData.similars[i].length
-    
+
     for (let j = 0; j < length; j++) {
       const key = globalData.similars[i][j]
       const item = {
@@ -653,17 +657,17 @@ function getSuggestion(str) {
 
   // Remove spaces between Chinese characters.
   for (let i = 1; i < str.length; i++) {
-    if (str[i] === ' '
-      && regexChineseChar.test(str[i - 1])
-      && i + 1 < str.length
-      && regexChineseChar.test(str[i + 1])) {
+    if (str[i] === ' ' &&
+      regexChineseChar.test(str[i - 1]) &&
+      i + 1 < str.length &&
+      regexChineseChar.test(str[i + 1])) {
       continue
     } else {
       results.push(str[i])
     }
   }
 
-  return toChinesePunctuation(results.join('').trim())
+  return toChinesePunctuation(results.join('').trim()).replace(/↵/g, '<i>↵</i><br/>')
 }
 
 function refreshTranslation(key, translation) {
@@ -671,8 +675,8 @@ function refreshTranslation(key, translation) {
     forEachElements('translationList', 'tr', (element, i) => {
       if (i === 0) return
 
-      if (element.firstElementChild.textContent === key
-        && element.children[1].firstElementChild.value !== translation) {
+      if (element.firstElementChild.textContent === key &&
+        element.children[1].firstElementChild.value !== translation) {
         element.children[1].firstElementChild.value = translation
 
         setTextBoxUpdatedStyle(element.children[1].firstElementChild)
@@ -688,7 +692,7 @@ function refreshSuggestion() {
 
       const key = element.firstElementChild.textContent
 
-      element.children[3].textContent = getSuggestion(key)
+      element.children[3].innerHTML = getSuggestion(key)
     })
   })
 }
@@ -705,6 +709,9 @@ function setTextareaRowCount(item) {
     rowCount = keyRowCount
   }
 
+  rowCount += (item.key.match(/\n/g) || []).length
+
+  item.key = item.key.replace(/\n/g, '<i>&crarr;</i><br/>')
   item.isTextarea = rowCount > 1
   item.textareaRowCount = rowCount
 }
@@ -719,7 +726,7 @@ function setLocationHash(options) {
 function parseLocationHash() {
   const hash = decodeURI(window.location.hash)
   const regex = /^#(all|.+)\|(any|word)\|(text|regex)\|(\d+)\|(\d+)\|(.*)$/g
-  const matches = regex.exec(hash) || [ null, DEFAULT_CATEGORY, 'any', 'text', DEFAULT_FILTER_LENGTH, 0, '']
+  const matches = regex.exec(hash) || [null, DEFAULT_CATEGORY, 'any', 'text', DEFAULT_FILTER_LENGTH, 0, '']
 
   return {
     category: matches[1],
@@ -743,7 +750,7 @@ function getRowContext(target) {
   if ((target.tagName === 'INPUT' && target.getAttribute('type') === 'text') || target.tagName === 'TEXTAREA') {
     valueTextBox = target
     value = target.value
-  // Target is action links.
+    // Target is action links.
   } else if (target.textContent !== '✕') {
     valueTextBox = target.parentElement.parentElement.children[1].firstElementChild
     suggestion = target.parentElement.parentElement.children[3].textContent
@@ -760,13 +767,22 @@ function getRowContext(target) {
 
 function saveToServer(action, section, key, items) {
   console.log(`${action} ${section} ${key}:`)
-  console.log(items) 
+  console.log(items)
+
+  const savedItems = items.map(item => {
+    return {
+      key: item.key.replace(/↵/g, '\n'),
+      value: item.value
+    }
+  })
 
   return fetch('/save/' + section, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(items)
-  })
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(savedItems)
+    })
     .then(response => {
       if (response.status >= 200 && response.status < 300) {
         return response

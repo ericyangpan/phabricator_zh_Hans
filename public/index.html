@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Phabricator Translator</title>
     <link href="css/main.css" rel="stylesheet">
   </head>
+
   <body>
     <div id="app">
       <div class="navbar">
@@ -18,11 +20,13 @@
         </ul>
         <div class="navbar-form">
           <input type="text" placeholder="Search..." size="40" v-model="searchForm.text" @keyup.enter="search">
-          <input type="checkbox" v-model="searchForm.isWord" @click="searchForm.type = searchForm.isWord ? 'text' : searchForm.type"> Search
+          <input type="checkbox" v-model="searchForm.isWord" @click="searchForm.type = searchForm.isWord ? 'text' : searchForm.type">
+          Search
           Word
           <input type="radio" name="searchType" value="text" checked="checked" v-model="searchForm.type"> Text
           <input type="radio" name="searchType" value="regex" v-model="searchForm.type"> RegExp
-          <input type="text" name="filterLength" class="center" size="2" v-model.number="searchForm.filterLength" @keyup.enter="search"> Length Filter
+          <input type="text" name="filterLength" class="center" size="2" v-model.number="searchForm.filterLength"
+            @keyup.enter="search"> Length Filter
           <button type="button" @click="saveAllTranslationValues">Save All Values</button>
         </div>
         <ul class="navbar-nav nav-right">
@@ -42,7 +46,8 @@
         </div>
         <ul class="category-list">
           <li v-for="item in category.items" :class="item.isPrototype ? 'prototype' : ''">
-            <a :href="'#filter/' + item.group" @click.prevent="search" :title="item.isPrototype ? 'This is a prototype application.' : ''">{{ item.group }}</a>
+            <a :href="'#filter/' + item.group" @click.prevent="search" :title="item.isPrototype ? 'This is a prototype application.' : ''">{{
+              item.group }}</a>
             <span>{{ item.percent }}</span>
             <div class="progressbar">
               <div :style="'width:' + item.percent + (item.percent === '100%' ? ';background-color:limegreen' : '')"></div>
@@ -66,10 +71,12 @@
               <tbody>
                 <tr>
                   <td>
-                    <input type="text" id="newKey" size="25" class="changed" placeholder="Type key here..." v-model.trim="dialog.newKey">
+                    <input type="text" id="newKey" size="25" class="changed" placeholder="Type key here..."
+                      v-model.trim="dialog.newKey">
                   </td>
                   <td>
-                    <input type="text" size="25" class="changed" placeholder="Type value here..." v-model="dialog.newValue" @keyup.enter="addRow">
+                    <input type="text" size="25" class="changed" placeholder="Type value here..." v-model="dialog.newValue"
+                      @keyup.enter="addRow">
                   </td>
                   <td>
                     <a href="#" @click.prevent="addRow">Add</a>
@@ -108,7 +115,7 @@
             <td v-html="item.key" :title="item.category"></td>
             <td class="center">
               <input v-if="!item.isTextarea" type="text" size="66" :value="item.value" @input="input" @keydown="processValueKey">
-              <textarea v-if="item.isTextarea" cols="66" :rows="item.textareaRows" @input="input" @keydown="processValueKey">{{ item.value }}</textarea>
+              <textarea v-if="item.isTextarea" cols="66" :rows="item.textareaRowCount" @input="input" @keydown="processValueKey">{{ item.value }}</textarea>
             </td>
             <td class="center action">
               <a href="#" @click.prevent="revert">Revert</a> | <a :href="'https://translate.google.com/?#en/zh-CN/' + encodeURIComponent(decodeHTML(item.key))"
@@ -126,4 +133,5 @@
   <script src="js/fetch.js"></script>
   <script src="js/helper.js"></script>
   <script src="js/main.js"></script>
+
 </html>
