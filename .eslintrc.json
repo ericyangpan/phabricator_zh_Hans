@@ -6,9 +6,6 @@
     "node": true
   },
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
     "sourceType": "script"
   },
   "rules": {
