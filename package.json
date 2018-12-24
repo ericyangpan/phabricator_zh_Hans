@@ -1,5 +1,5 @@
 {
-  "name": "phabricator_zh_Hans",
+  "name": "phabricator_zh_hans",
   "version": "1.0.0",
   "description": "Phabricator zh_Hans Translation & Tools.",
   "main": "index.js",
