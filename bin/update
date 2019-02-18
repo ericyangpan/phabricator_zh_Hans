@@ -2,23 +2,21 @@
 
 echo "* Pull latest libphutil *"
 
-cd ../libphutil
-git checkout stable
-git pull
+git -C ../libphutil checkout stable
+git -C ../libphutil pull
 
 echo "* Pull latest phabricator *"
 
-cd ../phabricator
-git checkout stable
-git pull
+git -C ../phabricator checkout stable
+git -C ../phabricator pull
 
 echo "* Extract phabricator *"
 
-bin/i18n extract
+../phabricator/bin/i18n extract ../phabricator
 
 echo "* Extract libphutil *"
 
-bin/i18n extract ../libphutil
+../phabricator/bin/i18n extract ../libphutil
 
 echo "* Copy phabricator i18n_files.json to data folder *"
 
@@ -30,7 +28,6 @@ cp ../libphutil/src/.cache/i18n_files.json ../phabricator_zh_Hans/data/libphutil
 
 echo "* Generate strings.json *"
 
-cd ../phabricator_zh_Hans
 bin/discover all
 
 echo "* Generate obsoleted.json *"
