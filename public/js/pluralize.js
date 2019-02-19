@@ -1,3 +1,7 @@
+// The MIT License (MIT)
+// Copyright (c) 2013 Blake Embrey (hello@blakeembrey.com)
+// https://github.com/blakeembrey/pluralize
+
 /* global define */
 
 (function (root, pluralize) {
@@ -24,22 +28,12 @@
   var irregularSingles = {};
 
   /**
-   * Title case a string.
-   *
-   * @param  {string} str
-   * @return {string}
-   */
-  function toTitleCase (str) {
-    return str.charAt(0).toUpperCase() + str.substr(1).toLowerCase();
-  }
-
-  /**
    * Sanitize a pluralization rule to a usable regular expression.
    *
    * @param  {(RegExp|string)} rule
    * @return {RegExp}
    */
-  function sanitizeRule (rule) {
+  function sanitizeRule(rule) {
     if (typeof rule === 'string') {
       return new RegExp('^' + rule + '$', 'i');
     }
@@ -55,20 +49,16 @@
    * @param  {string}   token
    * @return {Function}
    */
-  function restoreCase (word, token) {
+  function restoreCase(word, token) {
     // Tokens are an exact match.
-    if (word === token) {
-      return token;
-    }
+    if (word === token) return token;
 
     // Upper cased words. E.g. "HELLO".
-    if (word === word.toUpperCase()) {
-      return token.toUpperCase();
-    }
+    if (word === word.toUpperCase()) return token.toUpperCase();
 
     // Title cased words. E.g. "Title".
     if (word[0] === word[0].toUpperCase()) {
-      return toTitleCase(token);
+      return token.charAt(0).toUpperCase() + token.substr(1).toLowerCase();
     }
 
     // Lower cased words. E.g. "test".
@@ -82,9 +72,28 @@
    * @param  {Array}  args
    * @return {string}
    */
-  function interpolate (str, args) {
+  function interpolate(str, args) {
     return str.replace(/\$(\d{1,2})/g, function (match, index) {
       return args[index] || '';
+    });
+  }
+
+  /**
+   * Replace a word using a rule.
+   *
+   * @param  {string} word
+   * @param  {Array}  rule
+   * @return {string}
+   */
+  function replace(word, rule) {
+    return word.replace(rule[0], function (match, index) {
+      var result = interpolate(rule[1], arguments);
+
+      if (match === '') {
+        return restoreCase(word[index - 1], result);
+      }
+
+      return restoreCase(match, result);
     });
   }
 
@@ -93,33 +102,22 @@
    *
    * @param  {string}   token
    * @param  {string}   word
-   * @param  {Array}    collection
+   * @param  {Array}    rules
    * @return {string}
    */
-  function sanitizeWord (token, word, collection) {
+  function sanitizeWord(token, word, rules) {
     // Empty string or doesn't need fixing.
     if (!token.length || uncountables.hasOwnProperty(token)) {
       return word;
     }
 
-    var len = collection.length;
+    var len = rules.length;
 
     // Iterate over the sanitization rules and use the first one to match.
     while (len--) {
-      var rule = collection[len];
+      var rule = rules[len];
 
-      // If the rule passes, return the replacement.
-      if (rule[0].test(word)) {
-        return word.replace(rule[0], function (match, index, word) {
-          var result = interpolate(rule[1], arguments);
-
-          if (match === '') {
-            return restoreCase(word[index - 1], result);
-          }
-
-          return restoreCase(match, result);
-        });
-      }
+      if (rule[0].test(word)) return replace(word, rule);
     }
 
     return word;
@@ -133,7 +131,7 @@
    * @param  {Array}    rules
    * @return {Function}
    */
-  function replaceWord (replaceMap, keepMap, rules) {
+  function replaceWord(replaceMap, keepMap, rules) {
     return function (word) {
       // Get the correct token and case restoration functions.
       var token = word.toLowerCase();
@@ -154,6 +152,20 @@
   }
 
   /**
+   * Check if a word is part of the map.
+   */
+  function checkWord(replaceMap, keepMap, rules, bool) {
+    return function (word) {
+      var token = word.toLowerCase();
+
+      if (keepMap.hasOwnProperty(token)) return true;
+      if (replaceMap.hasOwnProperty(token)) return false;
+
+      return sanitizeWord(token, token, rules) === token;
+    };
+  }
+
+  /**
    * Pluralize or singularize a word based on the passed in count.
    *
    * @param  {string}  word
@@ -161,9 +173,9 @@
    * @param  {boolean} inclusive
    * @return {string}
    */
-  function pluralize (word, count, inclusive) {
-    var pluralized = count === 1
-      ? pluralize.singular(word) : pluralize.plural(word);
+  function pluralize(word, count, inclusive) {
+    var pluralized = count === 1 ?
+      pluralize.singular(word) : pluralize.plural(word);
 
     return (inclusive ? count + ' ' : '') + pluralized;
   }
@@ -178,11 +190,29 @@
   );
 
   /**
+   * Check if a word is plural.
+   *
+   * @type {Function}
+   */
+  pluralize.isPlural = checkWord(
+    irregularSingles, irregularPlurals, pluralRules
+  );
+
+  /**
    * Singularize a word.
    *
    * @type {Function}
    */
   pluralize.singular = replaceWord(
+    irregularPlurals, irregularSingles, singularRules
+  );
+
+  /**
+   * Check if a word is singular.
+   *
+   * @type {Function}
+   */
+  pluralize.isSingular = checkWord(
     irregularPlurals, irregularSingles, singularRules
   );
 
@@ -304,9 +334,9 @@
     [/[^\u0000-\u007F]$/i, '$0'],
     [/([^aeiou]ese)$/i, '$1'],
     [/(ax|test)is$/i, '$1es'],
-    [/(alias|[^aou]us|tlas|gas|ris)$/i, '$1es'],
+    [/(alias|[^aou]us|t[lm]as|gas|ris)$/i, '$1es'],
     [/(e[mn]u)s?$/i, '$1s'],
-    [/([^l]ias|[aeiou]las|[emjzr]as|[iu]am)$/i, '$1'],
+    [/([^l]ias|[aeiou]las|[ejzr]as|[iu]am)$/i, '$1'],
     [/(alumn|syllab|octop|vir|radi|nucle|fung|cact|stimul|termin|bacill|foc|uter|loc|strat)(?:us|i)$/i, '$1i'],
     [/(alumn|alg|vertebr)(?:a|ae)$/i, '$1ae'],
     [/(seraph|cherub)(?:im)?$/i, '$1im'],
@@ -319,7 +349,7 @@
     [/([^ch][ieo][ln])ey$/i, '$1ies'],
     [/(x|ch|ss|sh|zz)$/i, '$1es'],
     [/(matr|cod|mur|sil|vert|ind|append)(?:ix|ex)$/i, '$1ices'],
-    [/(m|l)(?:ice|ouse)$/i, '$1ice'],
+    [/\b((?:tit)?m|l)(?:ice|ouse)$/i, '$1ice'],
     [/(pe)(?:rson|ople)$/i, '$1ople'],
     [/(child)(?:ren)?$/i, '$1ren'],
     [/eaux$/i, '$0'],
@@ -335,19 +365,17 @@
   [
     [/s$/i, ''],
     [/(ss)$/i, '$1'],
-    [/((a)naly|(b)a|(d)iagno|(p)arenthe|(p)rogno|(s)ynop|(t)he)(?:sis|ses)$/i, '$1sis'],
-    [/(^analy)(?:sis|ses)$/i, '$1sis'],
     [/(wi|kni|(?:after|half|high|low|mid|non|night|[^\w]|^)li)ves$/i, '$1fe'],
     [/(ar|(?:wo|[ae])l|[eo][ao])ves$/i, '$1f'],
     [/ies$/i, 'y'],
     [/\b([pl]|zomb|(?:neck|cross)?t|coll|faer|food|gen|goon|group|lass|talk|goal|cut)ies$/i, '$1ie'],
     [/\b(mon|smil)ies$/i, '$1ey'],
-    [/(m|l)ice$/i, '$1ouse'],
+    [/\b((?:tit)?m|l)ice$/i, '$1ouse'],
     [/(seraph|cherub)im$/i, '$1'],
-    [/(x|ch|ss|sh|zz|tto|go|cho|alias|[^aou]us|tlas|gas|(?:her|at|gr)o|ris)(?:es)?$/i, '$1'],
-    [/(e[mn]u)s?$/i, '$1'],
-    [/(movie|twelve)s$/i, '$1'],
-    [/(cris|test|diagnos)(?:is|es)$/i, '$1is'],
+    [/(x|ch|ss|sh|zz|tto|go|cho|alias|[^aou]us|t[lm]as|gas|(?:her|at|gr)o|ris)(?:es)?$/i, '$1'],
+    [/(analy|ba|diagno|parenthe|progno|synop|the|empha|cri)(?:sis|ses)$/i, '$1sis'],
+    [/(movie|twelve|abuse|e[mn]u)s$/i, '$1'],
+    [/(test)(?:is|es)$/i, '$1is'],
     [/(alumn|syllab|octop|vir|radi|nucle|fung|cact|stimul|termin|bacill|foc|uter|loc|strat)(?:us|i)$/i, '$1us'],
     [/(agend|addend|millenni|dat|extrem|bacteri|desiderat|strat|candelabr|errat|ov|symposi|curricul|quor)a$/i, '$1um'],
     [/(apheli|hyperbat|periheli|asyndet|noumen|phenomen|criteri|organ|prolegomen|hedr|automat)a$/i, '$1on'],
@@ -367,13 +395,16 @@
    */
   [
     // Singular words with no plurals.
-    'advice',
     'adulthood',
+    'advice',
     'agenda',
     'aid',
     'alcohol',
     'ammo',
+    'analytics',
+    'anime',
     'athletics',
+    'audio',
     'bison',
     'blood',
     'bream',
@@ -384,18 +415,19 @@
     'chassis',
     'chess',
     'clothing',
-    'commerce',
     'cod',
+    'commerce',
     'cooperation',
     'corps',
-    'digestion',
     'debris',
     'diabetes',
+    'digestion',
+    'elk',
     'energy',
     'equipment',
-    'elk',
     'excretion',
     'expertise',
+    'firmware',
     'flounder',
     'fun',
     'gallows',
@@ -420,10 +452,14 @@
     'mews',
     'moose',
     'music',
+    'mud',
+    'manga',
     'news',
+    'only',
     'pike',
     'plankton',
     'pliers',
+    'police',
     'pollution',
     'premises',
     'rain',
@@ -438,9 +474,10 @@
     'species',
     'staff',
     'swine',
-    'trout',
+    'tennis',
     'traffic',
-    'transporation',
+    'transportation',
+    'trout',
     'tuna',
     'wealth',
     'welfare',
@@ -449,13 +486,13 @@
     'wildlife',
     'you',
     // Regexes.
-    /pox$/i, // "chickpox", "smallpox"
-    /ois$/i,
+    /[^aeiou]ese$/i, // "chinese", "japanese"
     /deer$/i, // "deer", "reindeer"
     /fish$/i, // "fish", "blowfish", "angelfish"
-    /sheep$/i,
     /measles$/i,
-    /[^aeiou]ese$/i // "chinese", "japanese"
+    /o[iu]s$/i, // "carnivorous"
+    /pox$/i, // "chickpox", "smallpox"
+    /sheep$/i
   ].forEach(pluralize.addUncountableRule);
 
   return pluralize;
