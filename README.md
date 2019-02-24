@@ -1,4 +1,4 @@
-# Phabricator 简体中文翻译和工具
+# Phabricator 简体中文翻译（汉化）和工具
 
 ## 目录
 
@@ -15,100 +15,100 @@
 
 ## 翻译进度
 
-当前翻译的 Phabricator 版本：[[8ef2f4086e](https://secure.phabricator.com/rP8ef2f4086ee3479853f045d0fa1457bebd833bbd)]`(stable) Promote 2018 Week 48`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：f276dfeefa32b5d54a7cf22e6c099ff329d65a09。
+当前翻译的 Phabricator 版本：[[5d88eef26](https://secure.phabricator.com/rP5d88eef26b72623be528f6e448b5615a7cb166c2)]`(stable) Promote 2019 Week 8`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：89b88a2ab887d9c16d4a7aaf5ca9eff9dd977209。
 
-当前翻译的 libphutil 版本：[[2a2d4fc](https://secure.phabricator.com/rPHU2a2d4fce881ea48974e7356ca4cf3d33105998f0)]`(stable) Promote 2018 Week 48`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：f276dfeefa32b5d54a7cf22e6c099ff329d65a09。
+当前翻译的 libphutil 版本：[[813a26a](https://secure.phabricator.com/rPHU813a26a2d09758f3c407a0c99c6761f11f62cb90)]`(stable) Promote 2019 Week 8`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：89b88a2ab887d9c16d4a7aaf5ca9eff9dd977209。
 
-当前总词条数量：15344 条，不包含原型应用的总词条数量：13078 条。
+当前总词条数量：15636 条，不包含原型应用的总词条数量：13354 条。
 
-当前整体翻译进度百分比：74%。
+当前整体翻译进度百分比：73%。
 
-当前短词条翻译进度百分比：84%。注：短词条为长度小于 66 个字符的词条。
+当前短词条翻译进度百分比：83%。注：短词条为长度小于 66 个字符的词条。
 
-当前不包含原型应用的翻译进度百分比：86%。
+当前不包含原型应用的翻译进度百分比：84%。
 
 分类 | 短词条翻译百分比 | 短词条翻译进度条 | 整体翻译百分比 | 整体翻译进度条
 --- | :-----------: | ------------- | :----------: | -----------
-aphront | 97% | ========= | 80% | =======
+aphront | 95% | ========= | 78% | =======
 applications/almanac | 82% | ======== | 73% | =======
-applications/aphlict | **100%** | ✓✓✓✓✓✓✓✓ | 71% | =======
+applications/aphlict | 74% | ======= | 60% | ======
 applications/arcanist | --- |  | --- | 
-applications/audit | 82% | ======== | 75% | =======
-applications/auth | 89% | ======== | 69% | ======
+applications/audit | 79% | ======= | 72% | =======
+applications/auth | 70% | ====== | 53% | =====
 applications/badges | 92% | ========= | 91% | =========
 applications/base | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/cache | 86% | ======== | 67% | ======
 applications/calendar `原型` | 94% | ========= | 89% | ========
 applications/celerity | 93% | ========= | 83% | ========
 applications/chatlog `原型` | 79% | ======= | 79% | =======
-applications/conduit | 98% | ========= | 85% | ========
-applications/config | 94% | ========= | 73% | =======
-applications/conpherence | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
+applications/conduit | 96% | ========= | 83% | ========
+applications/config | 91% | ========= | 70% | =======
+applications/conpherence | 99% | ========= | 99% | =========
 applications/console | 72% | ======= | 70% | ======
 applications/countdown | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/daemon | 98% | ========= | 86% | ========
+applications/daemon | 97% | ========= | 84% | ========
 applications/dashboard | 95% | ========= | 90% | =========
 applications/differential | 83% | ======== | 76% | =======
-applications/diffusion | 79% | ======= | 68% | ======
+applications/diffusion | 81% | ======== | 69% | ======
 applications/diviner | 71% | ======= | 67% | ======
 applications/doorkeeper | 73% | ======= | 60% | ======
 applications/draft | --- |  | --- | 
-applications/drydock | 74% | ======= | 63% | ======
-applications/fact `原型` | 46% | ==== | 44% | ====
+applications/drydock | 75% | ======= | 63% | ======
+applications/fact `原型` | 50% | ===== | 48% | ====
 applications/favorites | 75% | ======= | 75% | =======
-applications/feed | 74% | ======= | 66% | ======
+applications/feed | 79% | ======= | 72% | =======
 applications/files | 74% | ======= | 64% | ======
 applications/flag | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/fund `原型` | 90% | ========= | 87% | ========
 applications/guides | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/harbormaster | 78% | ======= | 69% | ======
+applications/harbormaster | 79% | ======= | 70% | ======
 applications/help | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/herald | 74% | ======= | 67% | ======
+applications/herald | 73% | ======= | 66% | ======
 applications/home | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/legalpad | 90% | ========= | 86% | ========
+applications/legalpad | 90% | ======== | 86% | ========
 applications/lipsum | **100%** | ✓✓✓✓✓✓✓✓ | 71% | =======
-applications/macro | 94% | ========= | 91% | =========
-applications/maniphest | 98% | ========= | 93% | =========
-applications/meta | **100%** | ✓✓✓✓✓✓✓✓ | 99% | =========
-applications/metamta | 76% | ======= | 67% | ======
+applications/macro | 93% | ========= | 91% | =========
+applications/maniphest | 97% | ========= | 90% | =========
+applications/meta | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
+applications/metamta | 72% | ======= | 63% | ======
 applications/multimeter `原型` | 88% | ======== | 88% | ========
-applications/notification | **100%** | ✓✓✓✓✓✓✓✓ | 73% | =======
+applications/notification | **100%** | ✓✓✓✓✓✓✓✓ | 72% | =======
 applications/nuance `原型` | 83% | ======== | 78% | =======
 applications/oauthserver `原型` | 87% | ======== | 74% | =======
-applications/owners | 79% | ======= | 75% | =======
+applications/owners | 76% | ======= | 72% | =======
 applications/packages `原型` | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/passphrase | 91% | ========= | 83% | ========
 applications/paste | 99% | ========= | 99% | =========
-applications/people | 99% | ========= | 90% | ========
+applications/people | 92% | ========= | 84% | ========
 applications/phame | 99% | ========= | 95% | =========
 applications/phid | **100%** | ✓✓✓✓✓✓✓✓ | 79% | =======
 applications/phlux `原型` | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/pholio | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/phortune `原型` | 80% | ======= | 73% | =======
+applications/pholio | 95% | ========= | 94% | =========
+applications/phortune `原型` | 77% | ======= | 70% | =======
 applications/phpast | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/phragment `原型` | 72% | ======= | 68% | ======
 applications/phrequent `原型` | 80% | ======== | 76% | =======
-applications/phriction | 92% | ========= | 89% | ========
-applications/phurl `原型` | 95% | ========= | 94% | =========
+applications/phriction | 95% | ========= | 92% | =========
+applications/phurl `原型` | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/policy | 90% | ======== | 78% | =======
 applications/ponder | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/project | 96% | ========= | 89% | ========
+applications/project | 95% | ========= | 88% | ========
 applications/releeph `原型` | 60% | ===== | 55% | =====
 applications/remarkup | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/repository | 73% | ======= | 64% | ======
+applications/repository | 72% | ======= | 63% | ======
 applications/search | 89% | ======== | 75% | =======
-applications/settings | 97% | ========= | 89% | ========
-applications/slowvote | 99% | ========= | 98% | =========
+applications/settings | 94% | ========= | 86% | ========
+applications/slowvote | 97% | ========= | 97% | =========
 applications/spaces | 97% | ========= | 84% | ========
-applications/subscriptions | **100%** | ✓✓✓✓✓✓✓✓ | 98% | =========
+applications/subscriptions | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/support | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/system | 79% | ======= | 54% | =====
 applications/tokens | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/transactions | 86% | ======== | 74% | =======
-applications/typeahead | 91% | ========= | 88% | ========
+applications/transactions | 85% | ======== | 72% | =======
+applications/typeahead | 89% | ======== | 84% | ========
 applications/uiexample `原型` | 98% | ========= | 97% | =========
 applications/xhprof | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-infrastructure | 66% | ====== | 53% | =====
+infrastructure | 69% | ====== | 55% | =====
 view | 99% | ========= | 97% | =========
 
 ## 启动翻译工具

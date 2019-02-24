@@ -8,8 +8,8 @@
     }
   },
   "ARCHIVED": {
-    "translation": "已归档的",
-    "yes": 4,
+    "translation": "已归档",
+    "yes": 5,
     "no": 24,
     "kvp": {
       "%s archived %s.": "%s 归档了 %s。",
@@ -105,7 +105,7 @@
   },
   "Added": {
     "translation": "添加了",
-    "yes": 165,
+    "yes": 164,
     "no": 6,
     "kvp": {
       "%s added %s account manager(s) to %s: %s.": "%s 把 %s 位帐户管理员添加到了 %s：%s。",
@@ -245,9 +245,11 @@
   },
   "Any": {
     "translation": "任意",
-    "yes": 29,
-    "no": 66,
+    "yes": 32,
+    "no": 68,
     "kvp": {
+      "Add one or more subscribers to the object. You can add users by providing their usernames, or add projects by adding their hashtags. For example, use `%s` to add the user `alincoln` and the project with hashtag `#ios` as subscribers.\n\nSubscribers which are invalid or unrecognized will be ignored. This command has no effect if you do not specify any subscribers.\n\nUsers who are CC'd on the email itself are also automatically subscribed if Phabricator knows which accounts are linked to their email addresses.": "向对象添加一个或多个订阅者。你可以通过提供用户名来添加用户，或者通过添加唯一标签来添加项目。例如，使用`%s`将用户`alincoln`和标签`#ios`添加为订阅者。\n\n无效或无法识别的订阅者将被忽略。如果你未指定任何订阅者则此命令没有效果。\n\n如果 Phabricator 知道哪些帐户链接到他们的邮件地址那么在电子邮件本身上被 CC 的用户也会自动订阅。",
+      "After configuring Phabricator to process inbound mail, you can interact with objects (like tasks and revisions) over email. For information on configuring Phabricator, see **[[ %s | Configuring Inbound Email ]]**.\n\nIn most cases, you can reply to email you receive from Phabricator to leave comments. You can also use **mail commands** to take a greater range of actions (like claiming a task or requesting changes to a revision) without needing to log in to the web UI.\n\nMail commands are keywords which start with an exclamation point, like `!claim`. Some commands may take parameters, like `!assign alincoln`.\n\nTo use mail commands, write one command per line at the beginning or end of your mail message. For example, you could write this in a reply to task email to claim the task:\n\n```\n!claim\n\nI'll take care of this.\n```\n\n\nWhen Phabricator receives your mail, it will process any commands first, then post the remaining message body as a comment. You can execute multiple commands at once:\n\n```\n!assign alincoln\n!close\n\nI just talked to @alincoln, and he showed me that he fixed this.\n```\n": "配置 Phabricator 处理入站邮件后，你可以通过邮件与对象（如任务和修订）进行交互。有关配置 Phabricator 的信息，请查看 **[[ %s | Configuring Inbound Email ]]**。\n\n在大多数情况下，你可以回复从 Phabricator 收到的邮件来发表评论。你还可以使用**邮件命令**来执行更大范围的操作（例如声明任务或请求修订变更）而无需登录 Web 用户界面。\n\n邮件命令是以感叹号开始的关键字，如`!claim`。有些命令可能会携带参数，如`!assign alincoln`。\n\n要使用邮件命令，在邮件开头或结尾处每行写一个命令。例如，你可以在一个回复任务邮件里写这个来声明任务：\n\n```\n!claim\n\n我会照顾好这个。\n```\n\n\n当 Phabricator 收到你的邮件时，它将首先处理所有命令，然后将剩余的邮件正文作为评论发布。你可以一次执行多个命令：\n\n```\n!assign alincoln\n!close\n\n我刚和 @alincoln 谈过并且他给我看他修好了这个。\n```\n",
       "Allow any user": "允许任何用户",
       "Allows any user to abandon revisions.": "允许任何用户放弃修订。",
       "Allows any user to close accepted revisions.": "允许任何用户关闭已接受的修订。",
@@ -270,7 +272,6 @@
       "No one has written any blog posts yet.": "还无人写过任何博客文章。",
       "None of these policy rules have any effect.": "这些策略规则不会有任何影响。",
       "Not Tagged With Any Projects": "没有用任何项目做标记",
-      "Phabricator is configured to authenticate users using the \"Reply-To\" header, but the reply address (\"%s\") on this message does not correspond to any known user account.": "Phabricator 没有配置使用“Reply-To”标头认证用户，但是这条消息的回复地址（“%s”）没有对应任何已知的用户帐户。",
       "Query does not match any objects.": "查询与任何对象都不匹配。",
       "Really cancel this order? Any payment will be refunded.": "确实要取消这个订单？任何付款都将被退还。",
       "Really terminate all active API tokens? Any systems using these tokens will no longer be able to make API requests.": "确实要终止所有活跃的 API 令牌？任何使用这些令牌的系统将不能再执行 API 请求。",
@@ -288,6 +289,7 @@
       "This project does not have any members.": "此项目没有任何成员。",
       "This project does not have any watchers.": "此项目没有任何观察者。",
       "This providers does not require any special configuration.": "此提供者不需要任何特殊配置。",
+      "This push didn't push any new commits.": "此推送没有推送任何新的提交。",
       "This repository does not have any commits yet.": "这个仓库还没有任何提交。",
       "This service has not been bound to any device interfaces yet.": "此服务还未被绑定到任何设备接口。",
       "Type \"not tagged with any projects\"...": "键入“not tagged with any projects”…",
@@ -333,6 +335,37 @@
       "Your account has been created, but needs to be approved by an administrator. You'll receive an email once your account is approved.": "你的帐户已经被创建，但是需要被管理员批准。你的帐户通过批准后你将收到一封邮件。"
     }
   },
+  "Archived": {
+    "translation": "已归档",
+    "yes": 5,
+    "no": 24,
+    "kvp": {
+      "%s archived %s.": "%s 归档了 %s。",
+      "%s archived dashboard %s.": "%s 归档了仪表板 %s。",
+      "%s archived dashboard panel %s.": "%s 归档了仪表板面板 %s。",
+      "%s archived space %s.": "%s 归档了空间 %s。",
+      "%s archived the blog %s.": "%s 归档了的这个博客 %s。",
+      "%s archived this blog.": "%s 归档了的这个博客。",
+      "%s archived this dashboard.": "%s 归档了这个仪表板。",
+      "%s archived this package.": "%s 归档了这个包。",
+      "%s archived this panel.": "%s 归档了这个面板。",
+      "%s archived this paste.": "%s 归档了这个粘贴。",
+      "%s archived this post.": "%s 归档了此文章。",
+      "%s archived this project.": "%s 归档了这个项目。",
+      "%s archived this space.": "%s 归档了这个空间。",
+      "Active or archived status of the badge.": "徽章的活跃或归档状态。",
+      "Active or archived status of the package.": "包的活跃或归档状态。",
+      "Active or archived status of the paste.": "粘贴的活跃或归档状态。",
+      "Active or archived status.": "活跃或归档状态。",
+      "Archived Blogs": "归档的博客",
+      "Archived Panels": "归档的面板",
+      "Archived Post": "归档的文章",
+      "Archived Posts": "归档的文章",
+      "Archived Tasks": "归档的任务",
+      "Archived or active status.": "归档或者活跃的状态。",
+      "Archived post by %s.": "文章被 %s 归档了。"
+    }
+  },
   "Archived Post": {
     "translation": "归档的文章",
     "yes": 2,
@@ -357,13 +390,27 @@
       "Attach patches to email, as text attachments.": "附带补丁到邮件，作为文本附件。"
     }
   },
+  "Attached": {
+    "translation": "附加的",
+    "yes": 13,
+    "no": 1,
+    "kvp": {
+      "Posts must be attached to a blog.": "文章必须附属于一个博客。"
+    }
+  },
+  "Attached To": {
+    "translation": "附加到",
+    "yes": 6,
+    "no": 1,
+    "kvp": {
+      "Posts must be attached to a blog.": "文章必须附属于一个博客。"
+    }
+  },
   "Auditing": {
     "translation": "审计中",
     "yes": 1,
-    "no": 3,
+    "no": 1,
     "kvp": {
-      "%s disabled auditing for this package.": "%s 禁用了此包的审计。",
-      "%s enabled auditing for this package.": "%s 启用了这个包的审计。",
       "%s resigned from auditing %s.": "%s 退出了审计 %s。"
     }
   },
@@ -388,10 +435,11 @@
   "Authorized": {
     "translation": "已授权",
     "yes": 1,
-    "no": 3,
+    "no": 4,
     "kvp": {
       "Authorized By": "由谁授权",
       "Authorized Object": "授权对象",
+      "No authorized blueprints.": "无授权的蓝图。",
       "You haven't authorized any OAuth applications.": "你没有授权任何 OAuth 应用。"
     }
   },
@@ -429,7 +477,7 @@
   },
   "Block": {
     "translation": "阻止",
-    "yes": 8,
+    "yes": 10,
     "no": 1,
     "kvp": {
       "These layouts test UI edge cases in the element. This block tests wrapping and overflow behavior.": "这些布局测试元素中的用户界面边缘情况。此块测试换行和溢出行为。"
@@ -453,7 +501,7 @@
   },
   "Build": {
     "translation": "构建",
-    "yes": 226,
+    "yes": 229,
     "no": 1,
     "kvp": {
       "Build self esteem through gamification.": "通过游戏化的方式建立自我尊重。"
@@ -462,11 +510,10 @@
   "Building": {
     "translation": "正在构建",
     "yes": 2,
-    "no": 3,
+    "no": 2,
     "kvp": {
       "%s completed building %s for %s.": "%1$s 完成了 %3$s 的构建 %2$s。",
-      "%s completed building %s.": "%s 完成了构建 %s。",
-      "An input to the hash function when building resource hashes.": "构建资源哈希时 Hash 函数的输入。"
+      "%s completed building %s.": "%s 完成了构建 %s。"
     }
   },
   "CANCELLED": {
@@ -496,6 +543,14 @@
       "Users who can edit a blog can always view it.": "可以编辑博客的用户总是可以查看它。",
       "Users who can edit a project can always join it.": "能编辑一个项目的用户总是可以加入它。",
       "You have already answered this question. You can not answer twice, but you can edit your existing answer.": "你已经回答过这个问题了。你不能回答两次，但是你可以编辑现存的答案。"
+    }
+  },
+  "Can Interact": {
+    "translation": "可互动",
+    "yes": 1,
+    "no": 1,
+    "kvp": {
+      "After configuring Phabricator to process inbound mail, you can interact with objects (like tasks and revisions) over email. For information on configuring Phabricator, see **[[ %s | Configuring Inbound Email ]]**.\n\nIn most cases, you can reply to email you receive from Phabricator to leave comments. You can also use **mail commands** to take a greater range of actions (like claiming a task or requesting changes to a revision) without needing to log in to the web UI.\n\nMail commands are keywords which start with an exclamation point, like `!claim`. Some commands may take parameters, like `!assign alincoln`.\n\nTo use mail commands, write one command per line at the beginning or end of your mail message. For example, you could write this in a reply to task email to claim the task:\n\n```\n!claim\n\nI'll take care of this.\n```\n\n\nWhen Phabricator receives your mail, it will process any commands first, then post the remaining message body as a comment. You can execute multiple commands at once:\n\n```\n!assign alincoln\n!close\n\nI just talked to @alincoln, and he showed me that he fixed this.\n```\n": "配置 Phabricator 处理入站邮件后，你可以通过邮件与对象（如任务和修订）进行交互。有关配置 Phabricator 的信息，请查看 **[[ %s | Configuring Inbound Email ]]**。\n\n在大多数情况下，你可以回复从 Phabricator 收到的邮件来发表评论。你还可以使用**邮件命令**来执行更大范围的操作（例如声明任务或请求修订变更）而无需登录 Web 用户界面。\n\n邮件命令是以感叹号开始的关键字，如`!claim`。有些命令可能会携带参数，如`!assign alincoln`。\n\n要使用邮件命令，在邮件开头或结尾处每行写一个命令。例如，你可以在一个回复任务邮件里写这个来声明任务：\n\n```\n!claim\n\n我会照顾好这个。\n```\n\n\n当 Phabricator 收到你的邮件时，它将首先处理所有命令，然后将剩余的邮件正文作为评论发布。你可以一次执行多个命令：\n\n```\n!assign alincoln\n!close\n\n我刚和 @alincoln 谈过并且他给我看他修好了这个。\n```\n"
     }
   },
   "Can Join": {
@@ -548,7 +603,7 @@
   },
   "Cluster": {
     "translation": "群集",
-    "yes": 46,
+    "yes": 49,
     "no": 2,
     "kvp": {
       "Cluster repository service in Almanac to move repositories into.": "用来移动仓库进入的 Almanac 中的集群仓库服务。",
@@ -617,7 +672,7 @@
   },
   "Complete": {
     "translation": "完成",
-    "yes": 26,
+    "yes": 27,
     "no": 4,
     "kvp": {
       "Client closed connection before sending a complete protocol frame.": "客户端在发送一个完整的协议帧之前关闭了连接。",
@@ -678,7 +733,7 @@
     "yes": 1,
     "no": 2,
     "kvp": {
-      "Find user accounts created after a given time.": "搜索给定时间之后创建的用户帐户。",
+      "Find user accounts created after a given time.": "查找给定时间之后创建的用户帐户。",
       "Search for pastes created after a given time.": "搜索给定时间之后创建的粘贴。"
     }
   },
@@ -687,7 +742,7 @@
     "yes": 1,
     "no": 2,
     "kvp": {
-      "Find user accounts created before a given time.": "搜索给定时间之前创建的用户帐户。",
+      "Find user accounts created before a given time.": "查找给定时间之前创建的用户帐户。",
       "Search for pastes created before a given time.": "搜索给定时间之前创建的粘贴。"
     }
   },
@@ -785,12 +840,14 @@
   },
   "ERROR": {
     "translation": "错误",
-    "yes": 44,
-    "no": 4,
+    "yes": 45,
+    "no": 6,
     "kvp": {
       "Error While Fetching Changes": "获取变更时出错",
+      "Error While Initializing Repository": "初始化仓库时出错",
       "Error when decoding image.": "解码图片时出错。",
       "Error while executing Task ID %d.": "执行任务 ID %d 时出错。",
+      "Error while pushing \"%s\" repository to mirrors.": "推送“%s”仓库到镜像时出错。",
       "Error while updating the \"%s\" repository.": "更新“%s”仓库时出错。"
     }
   },
@@ -807,7 +864,7 @@
     "yes": 11,
     "no": 1,
     "kvp": {
-      "Editable By": "可被谁编辑"
+      "Editable By": "谁可以编辑"
     }
   },
   "Edited": {
@@ -905,12 +962,11 @@
   "Enabled": {
     "translation": "已启用",
     "yes": 4,
-    "no": 33,
+    "no": 31,
     "kvp": {
       "%s enabled %s.": "%s 启用了 %s。",
       "%s enabled account linking.": "%s 启用了帐户连接。",
       "%s enabled account unlinking.": "%s 启用了帐户取消连接。",
-      "%s enabled auditing for this package.": "%s 启用了这个包的审计。",
       "%s enabled auto login.": "%s 启用了自动登录。",
       "%s enabled autoclose for this repository.": "%s 启用了这个仓库的自动关闭。",
       "%s enabled email trust.": "%s 启用了邮件信任。",
@@ -934,7 +990,6 @@
       "%s enabled this provider.": "%s 启用了这个提供者。",
       "%s enabled this rule.": "%s 启用了这个规则。",
       "%s enabled this user.": "%s 启用了这个用户。",
-      "Enabled Providers": "启用的提供者",
       "Git LFS is not enabled for this repository.": "Git LFS 未对这个仓库启用。",
       "No Enabled Providers": "没有启用的提供者",
       "Show Only Enabled Rules": "只显示启用的规则",
@@ -945,8 +1000,9 @@
   "End": {
     "translation": "结束",
     "yes": 29,
-    "no": 2,
+    "no": 3,
     "kvp": {
+      "After configuring Phabricator to process inbound mail, you can interact with objects (like tasks and revisions) over email. For information on configuring Phabricator, see **[[ %s | Configuring Inbound Email ]]**.\n\nIn most cases, you can reply to email you receive from Phabricator to leave comments. You can also use **mail commands** to take a greater range of actions (like claiming a task or requesting changes to a revision) without needing to log in to the web UI.\n\nMail commands are keywords which start with an exclamation point, like `!claim`. Some commands may take parameters, like `!assign alincoln`.\n\nTo use mail commands, write one command per line at the beginning or end of your mail message. For example, you could write this in a reply to task email to claim the task:\n\n```\n!claim\n\nI'll take care of this.\n```\n\n\nWhen Phabricator receives your mail, it will process any commands first, then post the remaining message body as a comment. You can execute multiple commands at once:\n\n```\n!assign alincoln\n!close\n\nI just talked to @alincoln, and he showed me that he fixed this.\n```\n": "配置 Phabricator 处理入站邮件后，你可以通过邮件与对象（如任务和修订）进行交互。有关配置 Phabricator 的信息，请查看 **[[ %s | Configuring Inbound Email ]]**。\n\n在大多数情况下，你可以回复从 Phabricator 收到的邮件来发表评论。你还可以使用**邮件命令**来执行更大范围的操作（例如声明任务或请求修订变更）而无需登录 Web 用户界面。\n\n邮件命令是以感叹号开始的关键字，如`!claim`。有些命令可能会携带参数，如`!assign alincoln`。\n\n要使用邮件命令，在邮件开头或结尾处每行写一个命令。例如，你可以在一个回复任务邮件里写这个来声明任务：\n\n```\n!claim\n\n我会照顾好这个。\n```\n\n\n当 Phabricator 收到你的邮件时，它将首先处理所有命令，然后将剩余的邮件正文作为评论发布。你可以一次执行多个命令：\n\n```\n!assign alincoln\n!close\n\n我刚和 @alincoln 谈过并且他给我看他修好了这个。\n```\n",
       "The name \"%s\" is not a valid repository short name. Repository short names must end with a letter or number.": "名称“%s”不是有效的仓库短名称。仓库短名称必须以一个字母或者数字结尾。",
       "Version name \"%s\" is not valid: version names may not start or end with a period or hyphen.": "版本名称“%s”无效：版本名称不可以以句号或连字符开始或结尾。"
     }
@@ -971,12 +1027,14 @@
   },
   "Error": {
     "translation": "错误",
-    "yes": 44,
-    "no": 4,
+    "yes": 45,
+    "no": 6,
     "kvp": {
       "Error While Fetching Changes": "获取变更时出错",
+      "Error While Initializing Repository": "初始化仓库时出错",
       "Error when decoding image.": "解码图片时出错。",
       "Error while executing Task ID %d.": "执行任务 ID %d 时出错。",
+      "Error while pushing \"%s\" repository to mirrors.": "推送“%s”仓库到镜像时出错。",
       "Error while updating the \"%s\" repository.": "更新“%s”仓库时出错。"
     }
   },
@@ -1009,7 +1067,7 @@
   },
   "Feed": {
     "translation": "动态",
-    "yes": 13,
+    "yes": 12,
     "no": 1,
     "kvp": {
       "The framable public feed is no longer supported.": "不再支持可用的公共 Feed。"
@@ -1017,7 +1075,7 @@
   },
   "Field": {
     "translation": "字段",
-    "yes": 55,
+    "yes": 57,
     "no": 1,
     "kvp": {
       "Error parsing field \"%s\": %s": "解析“%s”错误：%s"
@@ -1025,13 +1083,13 @@
   },
   "Find": {
     "translation": "查找",
-    "yes": 48,
+    "yes": 56,
     "no": 12,
     "kvp": {
+      "Can not generate keys: unable to find \"%s\" in PATH!": "不能生成密钥：在 PATH 中无法找到“%s”！",
       "Find out information about build logs.": "找出有关构建日志的信息。",
+      "Find out information about buildables.": "找出有关可构建项的信息。",
       "Find out information about builds.": "找出有关构建的信息。",
-      "Find user accounts created after a given time.": "搜索给定时间之后创建的用户帐户。",
-      "Find user accounts created before a given time.": "搜索给定时间之前创建的用户帐户。",
       "If those commands don't work, try Google. The process of installing PHP extensions is not specific to Phabricator, and any instructions you can find for installing them on your system should work. On Mac OS X, you might want to try Homebrew.": "如果这些命令不起作用，请尝试 Google。安装 PHP 扩展的过程不是 Phabricator 所特有的，并且你能找到的你系统上的任何安装它们的操作说明都应该可以正常工作。在 Mac OS X 上，你可能需要尝试 Homebrew。",
       "Phabricator has been successfully installed. These next guides will take you through configuration and new user orientation. These steps are optional, and you can go through them in any order. If you want to get back to this guide later on, you can find it in {icon globe} **Applications** under {icon map-o} **Guides**.": "Phabricator 已经被成功安装。下面的这些指南将带你通过配置和新用户指引。这些步骤是可选的，并且你可以以任意顺序通过它们。如果你想稍后再回到这个指南，你可以在 {icon globe} **应用** 的 {icon map-o} **指南** 下找到它。",
       "This page raised PHP errors. Find them in DarkConsole or the error log.": "此页面引发了 PHP 错误。在 DarkConsole 或错误日志中找到它们。",
@@ -1062,8 +1120,8 @@
   },
   "From": {
     "translation": "来自",
-    "yes": 28,
-    "no": 279,
+    "yes": 26,
+    "no": 278,
     "kvp": {
       "%s adjusted autoreview from %s to %s.": "%s 把自动评审从 %s 调整为了 %s。",
       "%s adjusted package dominion rules from %s to %s.": "%s 把包支配规则从 %s 调整为了 %s。",
@@ -1115,6 +1173,7 @@
       "%s changed the policy mode for this export from %s to %s.": "%s 把此导出的策略模式从 %s 变更为了 %s。",
       "%s changed the poll question from \"%s\" to \"%s\".": "%s 将投票问题从“%s”变更为了“%s”。",
       "%s changed the port for this interface from %s to %s.": "%s 把此接口的端口从 %s 变更为了 %s。",
+      "%s changed the push policy of this repository from %s to %s.": "%s 将此仓库的推送策略从 %s 变更到 %s。",
       "%s changed the repository for %s from %s to %s.": "%s 把 %s 的仓库从 %s 变更为了 %s。",
       "%s changed the repository for this revision from %s to %s.": "%s 把此修订的仓库从 %s 变更为了 %s。",
       "%s changed the start date for %s from %s to %s.": "%s 把 %s 的开始日期从 %s 变更为了 %s。",
@@ -1251,8 +1310,8 @@
       "%s upgraded the hash algorithm for this password from \"%s\" to \"%s\".": "%s 把此密码的哈希算法从“%s”升级到了“%s”。",
       "A build inherits policies from its buildable.": "构建从它的可构建项继承策略。",
       "A buildable inherits policies from the underlying object.": "可构建项从基础对象继承策略。",
+      "After configuring Phabricator to process inbound mail, you can interact with objects (like tasks and revisions) over email. For information on configuring Phabricator, see **[[ %s | Configuring Inbound Email ]]**.\n\nIn most cases, you can reply to email you receive from Phabricator to leave comments. You can also use **mail commands** to take a greater range of actions (like claiming a task or requesting changes to a revision) without needing to log in to the web UI.\n\nMail commands are keywords which start with an exclamation point, like `!claim`. Some commands may take parameters, like `!assign alincoln`.\n\nTo use mail commands, write one command per line at the beginning or end of your mail message. For example, you could write this in a reply to task email to claim the task:\n\n```\n!claim\n\nI'll take care of this.\n```\n\n\nWhen Phabricator receives your mail, it will process any commands first, then post the remaining message body as a comment. You can execute multiple commands at once:\n\n```\n!assign alincoln\n!close\n\nI just talked to @alincoln, and he showed me that he fixed this.\n```\n": "配置 Phabricator 处理入站邮件后，你可以通过邮件与对象（如任务和修订）进行交互。有关配置 Phabricator 的信息，请查看 **[[ %s | Configuring Inbound Email ]]**。\n\n在大多数情况下，你可以回复从 Phabricator 收到的邮件来发表评论。你还可以使用**邮件命令**来执行更大范围的操作（例如声明任务或请求修订变更）而无需登录 Web 用户界面。\n\n邮件命令是以感叹号开始的关键字，如`!claim`。有些命令可能会携带参数，如`!assign alincoln`。\n\n要使用邮件命令，在邮件开头或结尾处每行写一个命令。例如，你可以在一个回复任务邮件里写这个来声明任务：\n\n```\n!claim\n\n我会照顾好这个。\n```\n\n\n当 Phabricator 收到你的邮件时，它将首先处理所有命令，然后将剩余的邮件正文作为评论发布。你可以一次执行多个命令：\n\n```\n!assign alincoln\n!close\n\n我刚和 @alincoln 谈过并且他给我看他修好了这个。\n```\n",
       "Allows you to remove levity and jokes from the UI.": "允许你从用户界面中移除轻率和笑话。",
-      "Authorization token from Twilio service.": "Twilio 服务的授权令牌。",
       "Awakened from sleep by graceful shutdown!": "被优雅的关机从休眠中唤醒！",
       "Awakened from sleep by pending updates!": "被即将发生的更新从休眠中唤醒！",
       "Changes from before your most recent comment are hidden.": "你最近评论之前的变更被隐藏了。",
@@ -1268,13 +1327,11 @@
       "If you lock this project, members will be prevented from leaving it.": "如果你锁定此项目，成员将被阻止离开它。",
       "If you're new to Phabricator, these optional steps can help you learn the basics. Conceptually, Phabricator is structured as a graph, and repositories, tasks, and projects are all independent from each other. Feel free to set up Phabricator for how you work best, and explore these features at your own pace.": "如果你新来到 Phabricator，这些可选步骤可以帮助你了解基础知识。在概念上，Phabricator 以图表构成，并且仓库、任务和项目都是彼此独立的。随意设置 Phabricator 为最佳的工作方式，并且以你自己的节奏探索这些功能。",
       "Import board columns from another project.": "从其他项目导入工作板列。",
-      "Import from LDAP": "从 LDAP 导入",
-      "Import issues and pull requests from a GitHub repository.": "从 一个 GitHub 仓库导入问题和 Pull 请求。",
+      "Import issues and pull requests from a GitHub repository.": "从 一个 GitHub 仓库导入问题和拉取请求。",
       "Language used for syntax highlighting. By default, inferred from the title.": "用于语法高亮的语言。默认情况下，从标题推断。",
       "Migrated option \"%s\" from file to database config.": "从文件中迁移了选项“%s”到数据库配置。",
       "Migrated option \"%s\" from file to local config.": "从文件中迁移了选项“%s”到本地配置。",
       "Motivate your team with inspirational quotes from great minds. This menu item shows a new quote every day.": "用引用自伟大头脑的充满灵感的名言来激励你的团队。这个菜单项每天显示一条新名言。",
-      "New username must be different from old username.": "新用户名必须与旧用户名不同。",
       "Only a user can remove themselves from a room.": "只有用户才可以从房间中移除他们自己。",
       "Only allow registration from particular domains.": "只允许从特定的域名注册。",
       "Read option value from stdin.": "从 stdin 读取选项值。",
@@ -1300,14 +1357,16 @@
       "Strip factors from all users.": "剥夺所有用户的因素。",
       "Strip factors from specified users.": "剥夺指定用户的因素。",
       "Success, got HTTP %s from webhook.": "成功，从 webhook 得到 HTTP %s。",
-      "Successfully imported users from LDAP": "成功的从 LDAP 导入了用户",
+      "Synchronization of \"%s\" from leader \"%s\" failed: %s": "从领导“%2$s”的“%1$s”同步失败：%3$s",
+      "Synchronization of \"%s\" from remote failed: %s": "从远程“%s”的同步失败：%s",
       "Synchronization of child task from Asana failed!": "从 Asana 的子任务同步失败！",
       "Synchronization of parent task from Asana failed!": "从 Asana 的父任务同步失败！",
+      "Synchronizing this device (\"%s\") from cluster leader (\"%s\").": "正在从群集领导（“%2$s”）同步此设备（“%1$s”）。",
       "The content of this mail is sensitive and it can not be viewed from the web UI.": "此邮件的内容是敏感的并且无法从 Web 用户界面查看。",
       "This URI will be hidden from users.": "这个 URI 将对用户隐藏。",
       "This binary file was copied from %s.": "此二进制文件从 %s 拷贝来。",
       "This binary file was moved from %s.": "此二进制文件从 %s 移动来。",
-      "This change could not be fetched from the remote.": "此变更不能从远程被获取。",
+      "This change could not be fetched from the remote.": "此变更不能从远程被抓取。",
       "This configuration is hidden and can not be edited or viewed from the web interface.": "此配置是隐藏的并且不能从 Web 界面编辑或者查看。",
       "This configuration is locked and can not be edited from the web interface. Use %s in %s to edit it.": "此配置已被锁定且无法通过 Web 界面编辑。在 %2$s 中使用 %1$s 来编辑它。",
       "This directory was copied from %s.": "此目录是从 %s 拷贝来的。",
@@ -1334,9 +1393,7 @@
       "Upload a file from a host to Phabricator.": "从一个主机上传文件到 Phabricator。",
       "View '%s' did not return an array from getTagAttributes()!": "视图‘%s’没有从 getTagAttributes() 返回一个数组！",
       "WARNING: Failed to extract strings from file \"%s\": %s": "WARNING: 从自文件“%s”释放字符串失败：%s",
-      "You can also paste a diff below, or upload a file containing a diff (for example, from %s, %s or %s).": "你也可以在下面粘贴一个差异或上传一个包含差异的文件（例如，从 %s、%s 或 %s）。",
       "You can also upload files by dragging and dropping them from your desktop onto this page or the Phabricator home page.": "你也可以通过从你的桌面拖放文件到这个页面上或者 Phabricator 首页上来上传它们。",
-      "You can make adjustments from the Settings panel later.": "你可以以后从设置面板进行调整。",
       "You can not move tasks from a column to itself.": "你不能从一个列移动任务到它自己。",
       "You can not reopen this revision because configuration prevents any revision from being reopened. You can change this behavior by adjusting the \"%s\" setting in Config.": "你不能重新打开此修订因为配置阻止任何修订被重新打开。你可以通过在配置中调整“%s”设置变更这个行为。",
       "You can opt to receive plain text email from Phabricator instead of HTML email. Plain text email works better with some clients.": "你可以选择从 Phabricator 接收纯文本邮件而不是 HTML 邮件。纯文本邮件在某些客户端工作得更好。",
@@ -1360,7 +1417,7 @@
       "For full details, run `/bin/mail show-inbound --id %d`": "有关完整的详情，运行 `/bin/mail show-inbound --id %d`",
       "Full Domain": "完整域名",
       "Full Domain URI": "完整域名 URI",
-      "Full HTML presentation of story": "故事的完整 HTML 展现",
+      "Full HTML presentation of story": "报道的完整 HTML 展现",
       "Full of sand.": "全是沙子。",
       "New blog full domain URI.": "新博客完整域名 URI。",
       "Set Full Domain URI if you plan to serve this blog on another hosted domain. Parent Site Name and Parent Site URI are optional but helpful since they provide a link from the blog back to your parent site.": "如果你计划用另一个托管域名服务于此博客，请设置完整的域名 URI。父级站点名称和父级站点 URI 是可选的但有帮助，因为它们提供了从博客返回到你的父级站点的链接。"
@@ -1376,7 +1433,7 @@
   },
   "Function": {
     "translation": "函数",
-    "yes": 28,
+    "yes": 27,
     "no": 1,
     "kvp": {
       "Unmark this form as a create form? It will still function properly, but no longer be reachable directly from the application \"Create\" menu.": "取消标记这个表单为一个创建表单？它将仍然能够正常使用，但不再可以从应用“创建”菜单中直接访问到。"
@@ -1456,7 +1513,7 @@
   "Imported": {
     "translation": "已导入",
     "yes": 5,
-    "no": 16,
+    "no": 15,
     "kvp": {
       "%s deleted imported events from this source.": "%s 删除了从此来源导入的事件。",
       "%s imported an ICS file.": "%s 导入了一个 ICS 文件。",
@@ -1472,7 +1529,6 @@
       "No imported events.": "无导入的事件。",
       "Reload events imported from this source.": "重新加载从此来源导入的事件。",
       "Reload this source? Events imported from this source will be updated.": "重新加载这个来源？从这个来源导入的事件将被更新。",
-      "Successfully imported users from LDAP": "成功的从 LDAP 导入了用户",
       "Unnamed Imported Event": "未命名的导入事件"
     }
   },
@@ -1505,11 +1561,12 @@
   "Invited": {
     "translation": "被邀请的",
     "yes": 7,
-    "no": 5,
+    "no": 6,
     "kvp": {
       "%s has invited you to join Phabricator.": "%s 已经邀请你加入 Phabricator。",
       "%s invited %s attendee(s) to %s: %s.": "%s 邀请了 %s 位出席者到 %s：%s。",
       "%s invited %s attendee(s): %s.": "%s 邀请了 %s 位出席者：%s。",
+      "%s invited %s attendee(s): %s; uninvited %s attendee(s): %s.": "%s 邀请了 %s 位出席者：%s；取消邀请了 %s 位出席者：%s。",
       "%s updated the invite list for %s, invited %s: %s; uninvited %s: %s.": "%s 更新了 %s 的邀请列表，邀请了 %s 个：%s；取消邀请了 %s 个：%s。",
       "[Phabricator] %s has invited you to join Phabricator": "[Phabricator] %s 已经邀请你加入 Phabricator"
     }
@@ -1538,14 +1595,12 @@
   },
   "Key": {
     "translation": "键",
-    "yes": 94,
-    "no": 40,
+    "yes": 93,
+    "no": 38,
     "kvp": {
       "%s set the OAuth consumer key for this provider to \"%s\".": "%s 把此提供者的 OAuth 消费者密钥设置为了“%s”。",
       "%s updated the OAuth consumer key for this provider from \"%s\" to \"%s\".": "%s 把此提供者的 OAuth 消费者密钥从“%s”更新为了“%s”。",
       "%s updated the public key material for this SSH key.": "%s 更新了此 SSH 密钥的公钥材料。",
-      "Amazon SES Secret Key Not Set": "亚马逊 SES 密钥未设置",
-      "Amazon SES is selected as the mail adapter, but no SES secret key is configured. Provide an SES secret key, or choose a different mail adapter.": "亚马逊 SES 被选择为邮件适配器，但是没有配置 SES 密钥。提供一个 SES 密钥或选择不同邮件适配器。",
       "Consumer key is required.": "消费者密钥是必填的。",
       "Download Private Key (%s)": "下载私钥（%s）",
       "ID of the SSH key used to authenticate the request.": "用来认证请求的 SSH 密钥 ID。",
@@ -1573,12 +1628,12 @@
       "SSH key name is required.": "SSH 密钥名称是必填的。",
       "Secret key for Amazon EC2.": "亚马逊 EC2 密钥。",
       "Secret key for Amazon S3.": "亚马逊 S3 密钥。",
-      "Secret key for Amazon SES.": "亚马逊 SES 密钥。",
       "Select the type of key to generate.": "选择要生成的密钥类型。",
       "Specify a private key with --private-key.": "用 --private-key 指定一个私钥。",
       "Specify a public key to revoke trust for with --id.": "用 --id 指定一个公钥来吊销信任。",
       "Stripe Publishable Key is required.": "Stripe 可发布钥是必填的。",
       "Stripe Secret Key is required.": "Stripe 密钥是必填的。",
+      "This key has been revoked. Choose or generate a new, unique key.": "此密钥已经被吊销了。选择或生成一个新的、唯一的密钥。",
       "Trust has been revoked for public key %s.": "公钥 %s 的信任已经被吊销。",
       "Trying to add duplicate key \"%s\"!": "试图添加重复密钥“%s”！"
     }
@@ -1592,6 +1647,14 @@
       "SSH keys are now actually useful, so they are always enabled.": "SSH 密钥现在实际上是有用的，所以它们总是启用的。",
       "SSH keys can not be reactivated.": "SSH 密钥不能被重新激活。",
       "You can only trust keys associated with Almanac devices.": "你只能信任和 Almanac 设备关联的密钥。"
+    }
+  },
+  "Keywords": {
+    "translation": "关键词",
+    "yes": 1,
+    "no": 1,
+    "kvp": {
+      "After configuring Phabricator to process inbound mail, you can interact with objects (like tasks and revisions) over email. For information on configuring Phabricator, see **[[ %s | Configuring Inbound Email ]]**.\n\nIn most cases, you can reply to email you receive from Phabricator to leave comments. You can also use **mail commands** to take a greater range of actions (like claiming a task or requesting changes to a revision) without needing to log in to the web UI.\n\nMail commands are keywords which start with an exclamation point, like `!claim`. Some commands may take parameters, like `!assign alincoln`.\n\nTo use mail commands, write one command per line at the beginning or end of your mail message. For example, you could write this in a reply to task email to claim the task:\n\n```\n!claim\n\nI'll take care of this.\n```\n\n\nWhen Phabricator receives your mail, it will process any commands first, then post the remaining message body as a comment. You can execute multiple commands at once:\n\n```\n!assign alincoln\n!close\n\nI just talked to @alincoln, and he showed me that he fixed this.\n```\n": "配置 Phabricator 处理入站邮件后，你可以通过邮件与对象（如任务和修订）进行交互。有关配置 Phabricator 的信息，请查看 **[[ %s | Configuring Inbound Email ]]**。\n\n在大多数情况下，你可以回复从 Phabricator 收到的邮件来发表评论。你还可以使用**邮件命令**来执行更大范围的操作（例如声明任务或请求修订变更）而无需登录 Web 用户界面。\n\n邮件命令是以感叹号开始的关键字，如`!claim`。有些命令可能会携带参数，如`!assign alincoln`。\n\n要使用邮件命令，在邮件开头或结尾处每行写一个命令。例如，你可以在一个回复任务邮件里写这个来声明任务：\n\n```\n!claim\n\n我会照顾好这个。\n```\n\n\n当 Phabricator 收到你的邮件时，它将首先处理所有命令，然后将剩余的邮件正文作为评论发布。你可以一次执行多个命令：\n\n```\n!assign alincoln\n!close\n\n我刚和 @alincoln 谈过并且他给我看他修好了这个。\n```\n"
     }
   },
   "Last": {
@@ -1617,15 +1680,14 @@
   "Learn More": {
     "translation": "了解更多",
     "yes": 1,
-    "no": 2,
+    "no": 1,
     "kvp": {
-      "Learn more about locked and hidden options.": "学习更多关于锁定和隐藏的选项。",
-      "To learn more about multi-factor authentication, click the %s button below.": "要学习更多关于多因素认证，点击下面的 %s 按钮。"
+      "Learn more about locked and hidden options.": "学习更多关于锁定和隐藏的选项。"
     }
   },
   "Lease": {
     "translation": "租约",
-    "yes": 50,
+    "yes": 52,
     "no": 1,
     "kvp": {
       "Lease a resource.": "租用一个资源。"
@@ -1643,13 +1705,15 @@
   "Like": {
     "translation": "喜欢",
     "yes": 2,
-    "no": 17,
+    "no": 19,
     "kvp": {
+      "After configuring Phabricator to process inbound mail, you can interact with objects (like tasks and revisions) over email. For information on configuring Phabricator, see **[[ %s | Configuring Inbound Email ]]**.\n\nIn most cases, you can reply to email you receive from Phabricator to leave comments. You can also use **mail commands** to take a greater range of actions (like claiming a task or requesting changes to a revision) without needing to log in to the web UI.\n\nMail commands are keywords which start with an exclamation point, like `!claim`. Some commands may take parameters, like `!assign alincoln`.\n\nTo use mail commands, write one command per line at the beginning or end of your mail message. For example, you could write this in a reply to task email to claim the task:\n\n```\n!claim\n\nI'll take care of this.\n```\n\n\nWhen Phabricator receives your mail, it will process any commands first, then post the remaining message body as a comment. You can execute multiple commands at once:\n\n```\n!assign alincoln\n!close\n\nI just talked to @alincoln, and he showed me that he fixed this.\n```\n": "配置 Phabricator 处理入站邮件后，你可以通过邮件与对象（如任务和修订）进行交互。有关配置 Phabricator 的信息，请查看 **[[ %s | Configuring Inbound Email ]]**。\n\n在大多数情况下，你可以回复从 Phabricator 收到的邮件来发表评论。你还可以使用**邮件命令**来执行更大范围的操作（例如声明任务或请求修订变更）而无需登录 Web 用户界面。\n\n邮件命令是以感叹号开始的关键字，如`!claim`。有些命令可能会携带参数，如`!assign alincoln`。\n\n要使用邮件命令，在邮件开头或结尾处每行写一个命令。例如，你可以在一个回复任务邮件里写这个来声明任务：\n\n```\n!claim\n\n我会照顾好这个。\n```\n\n\n当 Phabricator 收到你的邮件时，它将首先处理所有命令，然后将剩余的邮件正文作为评论发布。你可以一次执行多个命令：\n\n```\n!assign alincoln\n!close\n\n我刚和 @alincoln 谈过并且他给我看他修好了这个。\n```\n",
       "Choose which language you would like the Phabricator UI to use.": "选择你希望 Phabricator 用户界面使用的语言。",
       "Create a mailing list user to represent an existing, external mailing list like a Google Group or a Mailman list.": "创建一个邮件列表用户来代表一个现有的、外部的邮件列表如 Google 群组或 Mailman 列表。",
       "If you disable **Email Notifications**, Phabricator will never send email to notify you about events. This preference overrides all your other settings.\n\n//You will still receive some administrative email, like password reset email.//": "如果你禁用**邮件通知**，Phabricator 将永远不会发送提醒事件的邮件。这个偏好会覆盖所有其他设置。\n\n//你仍然将会接收到一些管理类邮件，如密码重置邮件。//",
       "Like fractions, but more horizontal.": "像分数，但更水平。",
       "Many text editors can be configured as URI handlers for special protocols like `editor://`. If you have such an editor, Phabricator can generate links that you can click to open files locally.\n\nThese special variables are supported:\n\n| Value | Replaced With |\n|-------|---------------|\n| `%%f`  | Filename |\n| `%%l`  | Line Number |\n| `%%r`  | Repository Callsign |\n| `%%%%`  | Literal `%%` |\n\n\nFor complete instructions on editor configuration, see **[[ %s | %s ]]**.": "许多文本编辑器可以被配置成特殊协议的 URI 处理器如 `editor://`。如果你有这样的编辑器，Phabricator 可以生成链接以便你在本地点击打开文件。\n\n支持这些特殊的变量：\n\n| 值 | 替换为 |\n|-------|---------------|\n| `%%f`  | 文件名 |\n| `%%l`  | 行号 |\n| `%%r`  | 仓库呼号 |\n| `%%%%`  | 文字 `%%` |\n\n\n有关编辑器配置的完整说明，查看 **[[ %s | %s ]]**。",
+      "Name one or more buildables to publish, like \"B123\".": "为一个或多个要发布的可构建项命名，如“B123”。",
       "Object types to reindex, like \"task\", \"commit\" or \"revision\".": "重建索引的对象类型，如“任务”、“提交”或“修订”。",
       "Serves static resources like images, CSS and JS.": "服务于静态资源如图片、CSS 和 JS。",
       "Short test name, like \"ExampleTest\".": "短测试名称，如“ExampleTest”。",
@@ -1687,7 +1751,7 @@
     }
   },
   "Locked": {
-    "translation": "已锁定的",
+    "translation": "已锁定",
     "yes": 5,
     "no": 12,
     "kvp": {
@@ -1707,9 +1771,10 @@
   },
   "Log": {
     "translation": "日志",
-    "yes": 95,
+    "yes": 96,
     "no": 26,
     "kvp": {
+      "After configuring Phabricator to process inbound mail, you can interact with objects (like tasks and revisions) over email. For information on configuring Phabricator, see **[[ %s | Configuring Inbound Email ]]**.\n\nIn most cases, you can reply to email you receive from Phabricator to leave comments. You can also use **mail commands** to take a greater range of actions (like claiming a task or requesting changes to a revision) without needing to log in to the web UI.\n\nMail commands are keywords which start with an exclamation point, like `!claim`. Some commands may take parameters, like `!assign alincoln`.\n\nTo use mail commands, write one command per line at the beginning or end of your mail message. For example, you could write this in a reply to task email to claim the task:\n\n```\n!claim\n\nI'll take care of this.\n```\n\n\nWhen Phabricator receives your mail, it will process any commands first, then post the remaining message body as a comment. You can execute multiple commands at once:\n\n```\n!assign alincoln\n!close\n\nI just talked to @alincoln, and he showed me that he fixed this.\n```\n": "配置 Phabricator 处理入站邮件后，你可以通过邮件与对象（如任务和修订）进行交互。有关配置 Phabricator 的信息，请查看 **[[ %s | Configuring Inbound Email ]]**。\n\n在大多数情况下，你可以回复从 Phabricator 收到的邮件来发表评论。你还可以使用**邮件命令**来执行更大范围的操作（例如声明任务或请求修订变更）而无需登录 Web 用户界面。\n\n邮件命令是以感叹号开始的关键字，如`!claim`。有些命令可能会携带参数，如`!assign alincoln`。\n\n要使用邮件命令，在邮件开头或结尾处每行写一个命令。例如，你可以在一个回复任务邮件里写这个来声明任务：\n\n```\n!claim\n\n我会照顾好这个。\n```\n\n\n当 Phabricator 收到你的邮件时，它将首先处理所有命令，然后将剩余的邮件正文作为评论发布。你可以一次执行多个命令：\n\n```\n!assign alincoln\n!close\n\n我刚和 @alincoln 谈过并且他给我看他修好了这个。\n```\n",
       "Allow users to log in or register using a username and password.": "允许用户使用用户名和密码登录或注册。",
       "Are you sure you want to log out?": "你确定要注销吗？",
       "Authentication providers allow users to register accounts and log in to Phabricator.": "认证提供者允许用户注册帐户并且登录到 Phabricator。",
@@ -1734,8 +1799,15 @@
       "You must log in to access this repository.": "你必须登录才能访问这个仓库。",
       "You must log in to push to this repository.": "你必须登录才能推送到此仓库。",
       "You must log in to take this action.": "你必须登录才能执行这个操作。",
-      "You will no longer be able to use this account to log in to Phabricator.": "你将不再能够使用此帐户登录 Phabricator。",
       "You will no longer be able to use your %s account to log in to Phabricator.": "你将不再能够使用你的 %s 帐户登录 Phabricator。"
+    }
+  },
+  "MESSAGE": {
+    "translation": "消息",
+    "yes": 63,
+    "no": 1,
+    "kvp": {
+      "After configuring Phabricator to process inbound mail, you can interact with objects (like tasks and revisions) over email. For information on configuring Phabricator, see **[[ %s | Configuring Inbound Email ]]**.\n\nIn most cases, you can reply to email you receive from Phabricator to leave comments. You can also use **mail commands** to take a greater range of actions (like claiming a task or requesting changes to a revision) without needing to log in to the web UI.\n\nMail commands are keywords which start with an exclamation point, like `!claim`. Some commands may take parameters, like `!assign alincoln`.\n\nTo use mail commands, write one command per line at the beginning or end of your mail message. For example, you could write this in a reply to task email to claim the task:\n\n```\n!claim\n\nI'll take care of this.\n```\n\n\nWhen Phabricator receives your mail, it will process any commands first, then post the remaining message body as a comment. You can execute multiple commands at once:\n\n```\n!assign alincoln\n!close\n\nI just talked to @alincoln, and he showed me that he fixed this.\n```\n": "配置 Phabricator 处理入站邮件后，你可以通过邮件与对象（如任务和修订）进行交互。有关配置 Phabricator 的信息，请查看 **[[ %s | Configuring Inbound Email ]]**。\n\n在大多数情况下，你可以回复从 Phabricator 收到的邮件来发表评论。你还可以使用**邮件命令**来执行更大范围的操作（例如声明任务或请求修订变更）而无需登录 Web 用户界面。\n\n邮件命令是以感叹号开始的关键字，如`!claim`。有些命令可能会携带参数，如`!assign alincoln`。\n\n要使用邮件命令，在邮件开头或结尾处每行写一个命令。例如，你可以在一个回复任务邮件里写这个来声明任务：\n\n```\n!claim\n\n我会照顾好这个。\n```\n\n\n当 Phabricator 收到你的邮件时，它将首先处理所有命令，然后将剩余的邮件正文作为评论发布。你可以一次执行多个命令：\n\n```\n!assign alincoln\n!close\n\n我刚和 @alincoln 谈过并且他给我看他修好了这个。\n```\n"
     }
   },
   "MODIFIED": {
@@ -1773,6 +1845,14 @@
       "When mail is sent to members of this project, you will receive a copy.": "当邮件被发送给这个项目的成员时，你将收到一个副本。",
       "members of any project": "任意项目的成员",
       "members of project": "本项目成员"
+    }
+  },
+  "Message": {
+    "translation": "消息",
+    "yes": 63,
+    "no": 1,
+    "kvp": {
+      "After configuring Phabricator to process inbound mail, you can interact with objects (like tasks and revisions) over email. For information on configuring Phabricator, see **[[ %s | Configuring Inbound Email ]]**.\n\nIn most cases, you can reply to email you receive from Phabricator to leave comments. You can also use **mail commands** to take a greater range of actions (like claiming a task or requesting changes to a revision) without needing to log in to the web UI.\n\nMail commands are keywords which start with an exclamation point, like `!claim`. Some commands may take parameters, like `!assign alincoln`.\n\nTo use mail commands, write one command per line at the beginning or end of your mail message. For example, you could write this in a reply to task email to claim the task:\n\n```\n!claim\n\nI'll take care of this.\n```\n\n\nWhen Phabricator receives your mail, it will process any commands first, then post the remaining message body as a comment. You can execute multiple commands at once:\n\n```\n!assign alincoln\n!close\n\nI just talked to @alincoln, and he showed me that he fixed this.\n```\n": "配置 Phabricator 处理入站邮件后，你可以通过邮件与对象（如任务和修订）进行交互。有关配置 Phabricator 的信息，请查看 **[[ %s | Configuring Inbound Email ]]**。\n\n在大多数情况下，你可以回复从 Phabricator 收到的邮件来发表评论。你还可以使用**邮件命令**来执行更大范围的操作（例如声明任务或请求修订变更）而无需登录 Web 用户界面。\n\n邮件命令是以感叹号开始的关键字，如`!claim`。有些命令可能会携带参数，如`!assign alincoln`。\n\n要使用邮件命令，在邮件开头或结尾处每行写一个命令。例如，你可以在一个回复任务邮件里写这个来声明任务：\n\n```\n!claim\n\n我会照顾好这个。\n```\n\n\n当 Phabricator 收到你的邮件时，它将首先处理所有命令，然后将剩余的邮件正文作为评论发布。你可以一次执行多个命令：\n\n```\n!assign alincoln\n!close\n\n我刚和 @alincoln 谈过并且他给我看他修好了这个。\n```\n"
     }
   },
   "Missing": {
@@ -1860,11 +1940,12 @@
   },
   "Name": {
     "translation": "名称",
-    "yes": 288,
-    "no": 5,
+    "yes": 289,
+    "no": 6,
     "kvp": {
       "Always require real name for user profiles.": "用户档案总是需要真实姓名。",
       "Argument \"%s\" does not name a buildable. Provide one or more valid buildable monograms or PHIDs.": "参数“%s”没有命名一个可构建项。提供一个或者更多有效的可构建项字母组合或者 PHID。",
+      "Name one or more buildables to publish, like \"B123\".": "为一个或多个要发布的可构建项命名，如“B123”。",
       "Real name is required.": "真实姓名是必填的。",
       "Stores the real name of the user, like \"Abraham Lincoln\".": "存储用户的真实姓名，如“杨攀”。",
       "You must name the query.": "你必须给这个查询命名。"
@@ -1884,7 +1965,7 @@
   },
   "New": {
     "translation": "新的",
-    "yes": 330,
+    "yes": 333,
     "no": 2,
     "kvp": {
       "To create a new dashboard panel, you must select a panel type.": "要创建一个仪表板面板，你必须选择一个面板类型。",
@@ -1915,7 +1996,7 @@
   "No": {
     "translation": "否",
     "yes": 4,
-    "no": 474,
+    "no": 469,
     "kvp": {
       "%s Action(s) Have No Effect": "%s 个操作没有影响",
       "%s Action(s) With No Effect": "%s 个操作无影响",
@@ -1927,9 +2008,7 @@
       "(This message has no HTML body.)": "（此消息没有 HTML 正文。）",
       "(This message has no text body.)": "（此消息没有文本正文。）",
       "A major event with no title.": "一个无标题的重要事件。",
-      "Amazon SES is selected as the mail adapter, but no SES access key is configured. Provide an SES access key, or choose a different mail adapter.": "亚马逊 SES 被选择为邮件适配器，但是没有配置 SES 访问键。提供一个 SES 访问键或选择不同邮件适配器。",
-      "Amazon SES is selected as the mail adapter, but no SES endpoint is configured. Provide an SES endpoint or choose a different mail adapter.": "亚马逊 SES 被选择为邮件适配器，但是没有配置 SES 端点。提供一个 SES 端点或选择不同邮件适配器。",
-      "Amazon SES is selected as the mail adapter, but no SES secret key is configured. Provide an SES secret key, or choose a different mail adapter.": "亚马逊 SES 被选择为邮件适配器，但是没有配置 SES 密钥。提供一个 SES 密钥或选择不同邮件适配器。",
+      "Add one or more subscribers to the object. You can add users by providing their usernames, or add projects by adding their hashtags. For example, use `%s` to add the user `alincoln` and the project with hashtag `#ios` as subscribers.\n\nSubscribers which are invalid or unrecognized will be ignored. This command has no effect if you do not specify any subscribers.\n\nUsers who are CC'd on the email itself are also automatically subscribed if Phabricator knows which accounts are linked to their email addresses.": "向对象添加一个或多个订阅者。你可以通过提供用户名来添加用户，或者通过添加唯一标签来添加项目。例如，使用`%s`将用户`alincoln`和标签`#ios`添加为订阅者。\n\n无效或无法识别的订阅者将被忽略。如果你未指定任何订阅者则此命令没有效果。\n\n如果 Phabricator 知道哪些帐户链接到他们的邮件地址那么在电子邮件本身上被 CC 的用户也会自动订阅。",
       "Are you sure you want to delete this address? You will no longer be able to use it to login.": "你确定要删除这个地址吗？你将不能再使用它登录。",
       "Are you sure you want to hide this column? It will no longer appear on the workboard.": "你确定你要隐藏这个列吗？它将不再显示在工作板上。",
       "Article has no %s!": "文章无 %s！",
@@ -2004,7 +2083,6 @@
       "No Imported Events": "无导入的事件",
       "No Issues": "无问题",
       "No JIRA provider configured.": "没有配置 JIRA 提供者。",
-      "No LDAP provider enabled!": "没有启用的 LDAP 提供者！",
       "No Limit": "无限制",
       "No Linters Available": "无可用的 Linter",
       "No Local Working Copy": "没有本地工作副本",
@@ -2047,7 +2125,6 @@
       "No Stories.": "无故事。",
       "No Subject": "无主题",
       "No Subprojects": "无子项目",
-      "No Such Account": "无此帐户",
       "No Such Branch": "无此分支",
       "No Such Object": "无此对象",
       "No Such Task": "无此任务",
@@ -2069,6 +2146,7 @@
       "No application!": "没有应用！",
       "No attachments.": "无附件。",
       "No audits match the query.": "无审计匹配这个查询。",
+      "No authorized blueprints.": "无授权的蓝图。",
       "No backers found.": "未找到支持者。",
       "No badges found.": "未找到徽章。",
       "No blogs found.": "未找到博客。",
@@ -2113,7 +2191,6 @@
       "No default edit engine configuration for bulk edit.": "无用于批量编辑的默认的编辑引擎配置。",
       "No description.": "无描述。",
       "No details provided.": "没有提供详情。",
-      "No device \"%s\" exists.": "无设备“%s”存在。",
       "No documents found.": "未找到文档。",
       "No email address set": "未设置邮件地址",
       "No email exists with address \"%s\"!": "无地址“%s”的邮件存在！",
@@ -2215,7 +2292,6 @@
       "No saved queries.": "无保存的查询。",
       "No search engines available.": "无搜索引擎可用。",
       "No search servers are configured.": "没有配置搜索服务器。",
-      "No sent SMS.": "未发送短信。",
       "No sent mail.": "无发送的邮件。",
       "No services are bound to this device.": "无服务绑定到此设备。",
       "No services need initialization.": "无服务需要初始化。",
@@ -2229,7 +2305,8 @@
       "No special rules affected this mail.": "没有影响这封邮件的特殊规则。",
       "No storage engines are available.": "没有存储引擎可用。",
       "No storage engines available.": "没有存储引擎可用。",
-      "No story exists with key \"%s\"!": "无键“%s”的故事存在！",
+      "No storage namespace configured!": "无配置的存储命名空间！",
+      "No story exists with key \"%s\"!": "无键“%s”的报道存在！",
       "No such AST!": "无此 AST！",
       "No such Maniphest task exists.": "无此 Maniphest 任务存在。",
       "No such build target \"%s\"!": "无此构建目标“%s”！",
@@ -2282,7 +2359,6 @@
       "No trigger exists with id \"%s\"!": "无 ID“%s”的触发器存在！",
       "No user exists with username \"%s\".": "无用户名“%s”的用户存在。",
       "No user or device is associated with the public key \"%s\".": "无用户或设备和公钥“%s”关联。",
-      "No users imported?": "没有用户被导入？",
       "No valid linkable account.": "无有效的可链接帐户。",
       "No valid object provided for object rule!": "没有为对象规则提供有效的对象！",
       "No valid storage engines are available!": "没有有效的存储引擎可用！",
@@ -2297,6 +2373,7 @@
       "Really terminate this token? Any system using this token will no longer be able to make API requests.": "确实要终止此 API 令牌？任何使用此令牌的系统将不能再执行 API 请求。",
       "Received a 304 Not Modified from GitHub, no new events.": "从 GitHub 接收到一个 304 未修改，无新事件。",
       "Remove %s as an administrator? They will no longer be able to perform administrative functions on this Phabricator install.": "移除 %s 作为管理员？他们将不再能够在此 Phabricator 安装上执行管理功能。",
+      "Repository %s is no longer pullable; skipping.": "仓库 %s 不再可拉取；跳过。",
       "Rule failed automatically because it has no conditions.": "规则自动失败因为它没有条件。",
       "Select results with no owner.": "选择没有所有者的结果。",
       "Select results with no tags.": "选择没有标签的结果。",
@@ -2386,7 +2463,6 @@
       "You have no unpaid invoices.": "你没有未支付的发票。",
       "You have no unread notifications.": "你没有未读的通知。",
       "You have no unresolved setup issues.": "你没有未解决的安装设置问题。",
-      "You will no longer be able to use this account to log in to Phabricator.": "你将不再能够使用此帐户登录 Phabricator。",
       "You will no longer be able to use your %s account to log in to Phabricator.": "你将不再能够使用你的 %s 帐户登录 Phabricator。",
       "You will no longer receive email or notifications about every object associated with this project.": "你将不再接收关于这个项目的每个相关对象的邮件或者通知。",
       "Your install has no current setup issues to resolve.": "你的安装没有当前要解决的安装设置问题。",
@@ -2427,6 +2503,14 @@
       "%s: Stored as chunks, no data to encode directly.": "%s：以块存储，没有数据直接编码。",
       "%s: Stored as chunks, no data to migrate directly.": "%s：以块存储，没有数据直接迁移。",
       "No data available.": "无可用的数据。"
+    }
+  },
+  "No Effect": {
+    "translation": "无效果",
+    "yes": 5,
+    "no": 1,
+    "kvp": {
+      "Add one or more subscribers to the object. You can add users by providing their usernames, or add projects by adding their hashtags. For example, use `%s` to add the user `alincoln` and the project with hashtag `#ios` as subscribers.\n\nSubscribers which are invalid or unrecognized will be ignored. This command has no effect if you do not specify any subscribers.\n\nUsers who are CC'd on the email itself are also automatically subscribed if Phabricator knows which accounts are linked to their email addresses.": "向对象添加一个或多个订阅者。你可以通过提供用户名来添加用户，或者通过添加唯一标签来添加项目。例如，使用`%s`将用户`alincoln`和标签`#ios`添加为订阅者。\n\n无效或无法识别的订阅者将被忽略。如果你未指定任何订阅者则此命令没有效果。\n\n如果 Phabricator 知道哪些帐户链接到他们的邮件地址那么在电子邮件本身上被 CC 的用户也会自动订阅。"
     }
   },
   "No Messages": {
@@ -2521,7 +2605,7 @@
   },
   "Not Configured": {
     "translation": "没有配置",
-    "yes": 5,
+    "yes": 4,
     "no": 6,
     "kvp": {
       "Database source is not configured properly": "数据库源没有被正确配置",
@@ -2542,7 +2626,7 @@
   },
   "Not Found": {
     "translation": "未找到",
-    "yes": 17,
+    "yes": 16,
     "no": 1,
     "kvp": {
       "Not found in graph cache.": "未在图表缓存中找到。"
@@ -2564,10 +2648,18 @@
       "Use %s to listen for gesture events. Note that you must be in device mode for this to work (you can narrow your browser window if you are on a desktop).": "使用 %s 监听手势事件。注意你必须在设备模式下才能使其工作（如果你处于桌面上可以缩小浏览器窗口）。"
     }
   },
+  "Older": {
+    "translation": "较旧的",
+    "yes": 12,
+    "no": 1,
+    "kvp": {
+      "You are viewing an older run of this build. %s": "你正在查看此构建的一个旧的运行。%s"
+    }
+  },
   "On": {
     "translation": "打开",
-    "yes": 14,
-    "no": 133,
+    "yes": 15,
+    "no": 134,
     "kvp": {
       "%s (branched from %s on %s)": "%1$s（在 %3$s 上来自 %2$s 的分支）",
       "%s changed %s from %s to %s on %s.": "%1$s 在 %5$s 把 %2$s 从 %3$s 变更为了 %4$s。",
@@ -2585,8 +2677,9 @@
       "%s set this repository to autoclose on all branches.": "%s 在所有分支上把此仓库设置为了自动关闭。",
       "%s set this repository to autoclose on branches: %s.": "%s 设置此仓库为自动关闭于分支：%s。",
       "A task is moved between columns on a workboard.": "一个任务在工作板上的列之间被移动。",
-      "Account ID on Twilio service.": "Twilio 服务上的帐户 ID。",
       "Activate DarkConsole on every page.": "在每一页激活 DarkConsole。",
+      "Add one or more subscribers to the object. You can add users by providing their usernames, or add projects by adding their hashtags. For example, use `%s` to add the user `alincoln` and the project with hashtag `#ios` as subscribers.\n\nSubscribers which are invalid or unrecognized will be ignored. This command has no effect if you do not specify any subscribers.\n\nUsers who are CC'd on the email itself are also automatically subscribed if Phabricator knows which accounts are linked to their email addresses.": "向对象添加一个或多个订阅者。你可以通过提供用户名来添加用户，或者通过添加唯一标签来添加项目。例如，使用`%s`将用户`alincoln`和标签`#ios`添加为订阅者。\n\n无效或无法识别的订阅者将被忽略。如果你未指定任何订阅者则此命令没有效果。\n\n如果 Phabricator 知道哪些帐户链接到他们的邮件地址那么在电子邮件本身上被 CC 的用户也会自动订阅。",
+      "After configuring Phabricator to process inbound mail, you can interact with objects (like tasks and revisions) over email. For information on configuring Phabricator, see **[[ %s | Configuring Inbound Email ]]**.\n\nIn most cases, you can reply to email you receive from Phabricator to leave comments. You can also use **mail commands** to take a greater range of actions (like claiming a task or requesting changes to a revision) without needing to log in to the web UI.\n\nMail commands are keywords which start with an exclamation point, like `!claim`. Some commands may take parameters, like `!assign alincoln`.\n\nTo use mail commands, write one command per line at the beginning or end of your mail message. For example, you could write this in a reply to task email to claim the task:\n\n```\n!claim\n\nI'll take care of this.\n```\n\n\nWhen Phabricator receives your mail, it will process any commands first, then post the remaining message body as a comment. You can execute multiple commands at once:\n\n```\n!assign alincoln\n!close\n\nI just talked to @alincoln, and he showed me that he fixed this.\n```\n": "配置 Phabricator 处理入站邮件后，你可以通过邮件与对象（如任务和修订）进行交互。有关配置 Phabricator 的信息，请查看 **[[ %s | Configuring Inbound Email ]]**。\n\n在大多数情况下，你可以回复从 Phabricator 收到的邮件来发表评论。你还可以使用**邮件命令**来执行更大范围的操作（例如声明任务或请求修订变更）而无需登录 Web 用户界面。\n\n邮件命令是以感叹号开始的关键字，如`!claim`。有些命令可能会携带参数，如`!assign alincoln`。\n\n要使用邮件命令，在邮件开头或结尾处每行写一个命令。例如，你可以在一个回复任务邮件里写这个来声明任务：\n\n```\n!claim\n\n我会照顾好这个。\n```\n\n\n当 Phabricator 收到你的邮件时，它将首先处理所有命令，然后将剩余的邮件正文作为评论发布。你可以一次执行多个命令：\n\n```\n!assign alincoln\n!close\n\n我刚和 @alincoln 谈过并且他给我看他修好了这个。\n```\n",
       "Allows you to add footer links on most pages.": "允许你在大多数页面添加页脚链接。",
       "Are you sure you want to hide this column? It will no longer appear on the workboard.": "你确定你要隐藏这个列吗？它将不再显示在工作板上。",
       "Asked by %s on %s.": "由 %s 于 %s 提问。",
@@ -2637,7 +2730,6 @@
       "Not On A Blog": "不在一个博客中",
       "On Small Screens": "在小屏幕上",
       "Panel \"%s\" already exists on dashboard.": "面板“%s”已经存在于仪表板上了。",
-      "Phabricator is configured to authenticate users using the \"Reply-To\" header, but the reply address (\"%s\") on this message does not correspond to any known user account.": "Phabricator 没有配置使用“Reply-To”标头认证用户，但是这条消息的回复地址（“%s”）没有对应任何已知的用户帐户。",
       "Phabricator uses unicode glyphs in page titles to provide a compact representation of the current application. You can substitute plain text instead if these glyphs do not display on your system.": "Phabricator 在页面标题中使用 Unicode 符号以提供一个当前应用的紧凑表达。如果这些符号在你的系统中无法显示时你可以替换为纯文本。",
       "Pin Form On Screen": "把表单钉到屏幕上",
       "Pre-commit code review. Revisions that are waiting on your input will appear here.": "预提交代码评审。正在等待你输入的修订将显示在这里。",
@@ -2645,6 +2737,7 @@
       "Reinstate only the event which occurs on %s.": "只恢复发生在 %s 的事件。",
       "Reinstate this event and all events in the series which occur on or after %s.": "恢复此事件和所有这个系列里发生在 %s 或之后的事件。",
       "Remove %s as an administrator? They will no longer be able to perform administrative functions on this Phabricator install.": "移除 %s 作为管理员？他们将不再能够在此 Phabricator 安装上执行管理功能。",
+      "Run \"ANALYZE TABLE\" on tables to improve performance.": "在表格上运行“ANALYZE TABLE”来提升性能。",
       "Run \"OPTIMIZE TABLE\" on tables to reclaim space.": "在表格上运行“OPTIMIZE TABLE”以收回空间。",
       "Run On Host": "运行于主机",
       "Run a command on Drydock resource.": "在 Drydock 资源上运行一个命令。",
@@ -2707,7 +2800,7 @@
   "Open": {
     "translation": "开放的",
     "yes": 39,
-    "no": 10,
+    "no": 11,
     "kvp": {
       "Failed to open file \"%s\" for writing.": "打开文件“%s”写入失败。",
       "Failed to open output file \"%s\" for writing.": "打开输出文件“%s”写入失败。",
@@ -2718,6 +2811,7 @@
       "Open and Closed Branches": "打开和已关闭分支",
       "Open in Editor": "在编辑器里打开",
       "Return to Open Issue List": "返回到打开问题列表",
+      "This domain can only be used to open URLs shortened using the Phurl application. The URL you are trying to access does not have a Phurl URL associated with it.": "此域名只可以被用来打开用 Phurl 应用缩短的 URL。没有一个 Phurl URL 和你正在尝试访问的 URL 有关联。",
       "Unable to open ZIP.": "无法打开 ZIP。"
     }
   },
@@ -2741,7 +2835,7 @@
   },
   "PHID": {
     "translation": "PHID",
-    "yes": 128,
+    "yes": 132,
     "no": 1,
     "kvp": {
       "Invalid buildable PHID \"%s\".": "无效的可构建项 ID“%s”。"
@@ -2922,8 +3016,8 @@
     "yes": 84,
     "no": 6,
     "kvp": {
+      "After configuring Phabricator to process inbound mail, you can interact with objects (like tasks and revisions) over email. For information on configuring Phabricator, see **[[ %s | Configuring Inbound Email ]]**.\n\nIn most cases, you can reply to email you receive from Phabricator to leave comments. You can also use **mail commands** to take a greater range of actions (like claiming a task or requesting changes to a revision) without needing to log in to the web UI.\n\nMail commands are keywords which start with an exclamation point, like `!claim`. Some commands may take parameters, like `!assign alincoln`.\n\nTo use mail commands, write one command per line at the beginning or end of your mail message. For example, you could write this in a reply to task email to claim the task:\n\n```\n!claim\n\nI'll take care of this.\n```\n\n\nWhen Phabricator receives your mail, it will process any commands first, then post the remaining message body as a comment. You can execute multiple commands at once:\n\n```\n!assign alincoln\n!close\n\nI just talked to @alincoln, and he showed me that he fixed this.\n```\n": "配置 Phabricator 处理入站邮件后，你可以通过邮件与对象（如任务和修订）进行交互。有关配置 Phabricator 的信息，请查看 **[[ %s | Configuring Inbound Email ]]**。\n\n在大多数情况下，你可以回复从 Phabricator 收到的邮件来发表评论。你还可以使用**邮件命令**来执行更大范围的操作（例如声明任务或请求修订变更）而无需登录 Web 用户界面。\n\n邮件命令是以感叹号开始的关键字，如`!claim`。有些命令可能会携带参数，如`!assign alincoln`。\n\n要使用邮件命令，在邮件开头或结尾处每行写一个命令。例如，你可以在一个回复任务邮件里写这个来声明任务：\n\n```\n!claim\n\n我会照顾好这个。\n```\n\n\n当 Phabricator 收到你的邮件时，它将首先处理所有命令，然后将剩余的邮件正文作为评论发布。你可以一次执行多个命令：\n\n```\n!assign alincoln\n!close\n\n我刚和 @alincoln 谈过并且他给我看他修好了这个。\n```\n",
       "Do you want to post your comment anyway?": "无论如何你都要发布你的评论吗？",
-      "POST notifications of feed events.": "发布动态事件的通知。",
       "Post as Comment": "发布为评论",
       "This post will go live once you publish it.": "此帖子将在你发布后生效。",
       "Unable to post message: this is not an admin server!": "无法发送消息：这不是管理服务器！",
@@ -3006,8 +3100,8 @@
     }
   },
   "Published": {
-    "translation": "已发布的",
-    "yes": 1,
+    "translation": "已发布",
+    "yes": 4,
     "no": 7,
     "kvp": {
       "%s published %s.": "%s 发布了 %s。",
@@ -3021,13 +3115,12 @@
   },
   "Push": {
     "translation": "推送",
-    "yes": 36,
-    "no": 8,
+    "yes": 51,
+    "no": 7,
     "kvp": {
       "A repository's push events are visible to users who can see the repository.": "一个仓库的 Push 事件对可以看到仓库的用户是可见的。",
       "A repository's push logs are visible to users who can see the repository.": "一个仓库的 Push 日志对可以看到仓库的用户是可见的。",
       "Change the push policy of the repository.": "变更仓库的 Push 策略。",
-      "Phabricator will not push or pull any changes to this URI.": "Phabricator 将不会 Push 或 Pull 任意变更到这个 URI。",
       "Phabricator will push a copy of any changes to this URI.": "Phabricator 将会 Push 一个任意变更的拷贝到这个 URI。",
       "Search for push logs by specific users.": "搜索特定用户的 Push 日志。",
       "Search for push logs for specific repositories.": "搜索特定仓库的 Push 日志。",
@@ -3046,7 +3139,7 @@
   },
   "Push Policy": {
     "translation": "推送策略",
-    "yes": 2,
+    "yes": 3,
     "no": 1,
     "kvp": {
       "Change the push policy of the repository.": "变更仓库的 Push 策略。"
@@ -3054,11 +3147,12 @@
   },
   "Pushed": {
     "translation": "推送了",
-    "yes": 2,
-    "no": 2,
+    "yes": 3,
+    "no": 3,
     "kvp": {
       "%s pushed to %s.": "%s 推送到了 %s。",
-      "Pushed By": "由推送按"
+      "All Pushed Updates": "所有推送的更新",
+      "Pushed By": "被谁推送"
     }
   },
   "Quality": {
@@ -3072,11 +3166,13 @@
   "RELEASE": {
     "translation": "发布",
     "yes": 12,
-    "no": 3,
+    "no": 5,
     "kvp": {
       "CRITICAL. Failed to release cluster write lock!": "危险。释放群集写入锁定失败！",
       "Release a lease.": "释放租约。",
-      "Release a resource.": "释放一个资源。"
+      "Release a resource.": "释放一个资源。",
+      "Scheduled release of lease \"%s\".": "计划释放租约“%s”。",
+      "Scheduled release of resource \"%s\".": "计划释放资源“%s”。"
     }
   },
   "RESTARTING": {
@@ -3087,6 +3183,16 @@
       "After editing the PHP configuration, <strong>restart Phabricator for the changes to take effect</strong>. For help with restarting Phabricator, see %s in the documentation.": "编辑 PHP 配置之后，<strong>重启 Phabricator 以使变更产生效果</strong>。有关重启 Phabricator 的帮助，请在文档中查看 %s。",
       "After installing new PHP extensions, <strong>restart Phabricator for the changes to take effect</strong>. For help with restarting Phabricator, see %s in the documentation.": "安装新 PHP 扩展之后，<strong>重启 Phabricator 以使变更产生效果</strong>。有关重启 Phabricator 的帮助，请在文档中查看 %s。",
       "Restarting Phabricator": "重启 Phabricator"
+    }
+  },
+  "Rate": {
+    "translation": "速率",
+    "yes": 4,
+    "no": 3,
+    "kvp": {
+      "Task Burn Rate for All Tasks": "所有任务的任务燃尽率",
+      "Task Burn Rate for Project %s": "项目 %s 的任务燃尽率",
+      "You are being rate limited.": "你正在被限制频率。"
     }
   },
   "Reassigned": {
@@ -3108,14 +3214,6 @@
       "Expected a password hash, received nothing!": "预期密码哈希，什么都没收到！",
       "Field \"%s\" expects a list of strings, but received a value of type \"%s\".": "字段“%s”预期一个字符串列表，但是收到一个类型“%s”的值。",
       "Field \"%s\" expects a string value, but received a value of type \"%s\".": "字段“%s”预期一个字符串值，但是收到一个类型“%s”的值。"
-    }
-  },
-  "Recipient": {
-    "translation": "收件人",
-    "yes": 18,
-    "no": 1,
-    "kvp": {
-      "Recipient PHID \"%s\" has not been awarded.": "接受者 PHID“%s”未被授予。"
     }
   },
   "Rejected": {
@@ -3143,11 +3241,13 @@
   "Release": {
     "translation": "发布",
     "yes": 12,
-    "no": 3,
+    "no": 5,
     "kvp": {
       "CRITICAL. Failed to release cluster write lock!": "危险。释放群集写入锁定失败！",
       "Release a lease.": "释放租约。",
-      "Release a resource.": "释放一个资源。"
+      "Release a resource.": "释放一个资源。",
+      "Scheduled release of lease \"%s\".": "计划释放租约“%s”。",
+      "Scheduled release of resource \"%s\".": "计划释放资源“%s”。"
     }
   },
   "Released": {
@@ -3274,11 +3374,12 @@
   },
   "Review": {
     "translation": "评审",
-    "yes": 79,
-    "no": 4,
+    "yes": 81,
+    "no": 5,
     "kvp": {
       "Another user made changes to this document after you began editing it. Do you want to overwrite their changes? (If you choose to overwrite their changes, you should review the document edit history to see what you overwrote, and then make another edit to merge the changes if necessary.)": "另一位用户在你开始编辑后对其进行了变更。你想覆盖他们的变化吗？（如果你选择覆盖他们的更改，你应该检查文档编辑历史记录以查看所覆盖的内容，并且随后进行其他编辑以在必要时合并更改。）",
       "Review Recent Activity": "查看最近的活动",
+      "Review the documentation describing how to import or observe an existing repository.": "检查描述如何导入或者观察一个已存在仓库的文档。",
       "Review the repository operation queue.": "检查仓库操作队列。",
       "Typeahead functions are an advanced feature which allow you to build more powerful queries. This document explains functions available for the selected control.\n\nFor general help with search, see the [[ %s | Search User Guide ]] in the documentation.\n\nNote that different controls support //different// functions (depending on what the control is doing), so these specific functions may not work everywhere. You can always check the help for a control to review which functions are available for that control.": "键入提示功能是一种允许你构建更强大查询的高级功能。本文档解释了所选控件的可用功能。\n\n有关搜索的一般帮助，请参阅[[%s | 搜索用户指南]]。\n\n请注意不同的控件支持//不同的//函数（取决于控件做什么），所以这些特定的功能可能不能在任意的地方工作。你可以随时检查控件的帮助以查看该控件可用的功能。"
     }
@@ -3338,7 +3439,7 @@
   },
   "Select": {
     "translation": "选择",
-    "yes": 79,
+    "yes": 73,
     "no": 1,
     "kvp": {
       "Select results with any value.": "查找任意值的结果。"
@@ -3354,7 +3455,7 @@
   },
   "Selected": {
     "translation": "选择的",
-    "yes": 14,
+    "yes": 11,
     "no": 7,
     "kvp": {
       "Activates selected triggers, firing them immediately.": "激活选定的触发器，立即触发。",
@@ -3377,10 +3478,9 @@
   "Sent By": {
     "translation": "由谁发送",
     "yes": 1,
-    "no": 4,
+    "no": 3,
     "kvp": {
       "Content sent by electronic mail, also known as e-mail.": "通过电子邮件发送的内容，也俗称 E-mail。",
-      "List outbound SMS messages sent by Phabricator.": "列出由 Phabricator 发送的出站短信消息。",
       "List outbound messages sent by Phabricator.": "列出 Phabricator 发送的出站消息。",
       "Sent by Phabricator": "发送自 Phabricator"
     }
@@ -3388,9 +3488,10 @@
   "Short": {
     "translation": "简短的",
     "yes": 3,
-    "no": 21,
+    "no": 22,
     "kvp": {
       "%s removed the short name of this repository.": "%s 移除了此仓库的短名称。",
+      "%s set the short name of this repository to %s.": "%s 把此仓库的短名称设置为了 %s。",
       "Change the repository short name.": "变更仓库短名称。",
       "Drew the short stick": "画短棍",
       "Ignored Short Word": "忽略短文字",
@@ -3416,10 +3517,9 @@
   "Show Details": {
     "translation": "显示详情",
     "yes": 2,
-    "no": 3,
+    "no": 2,
     "kvp": {
       "Show details about inbound mail with given ID.": "显示有关给定 ID 的入站邮件的详情。",
-      "Show details about outbound SMS with given ID.": "显示有关给定 ID 的出站短信的详情。",
       "Show details about outbound mail with given ID.": "显示有关给定 ID 的出站邮件的详情。"
     }
   },
@@ -3450,7 +3550,7 @@
   },
   "Source": {
     "translation": "来源",
-    "yes": 72,
+    "yes": 73,
     "no": 5,
     "kvp": {
       "Database source is not configured properly": "数据库源没有被正确配置",
@@ -3470,7 +3570,7 @@
   },
   "Start": {
     "translation": "开始",
-    "yes": 38,
+    "yes": 39,
     "no": 13,
     "kvp": {
       "(To start the server, run this command.)\n%s": "（要启动服务器，运行这个命令。）\n%s",
@@ -3529,15 +3629,16 @@
   },
   "Subject": {
     "translation": "主题",
-    "yes": 18,
-    "no": 1,
+    "yes": 7,
+    "no": 2,
     "kvp": {
-      "All Harbormaster APIs are new and subject to change.": "所有的 Harbormaster API 都是新的并随时会变化。"
+      "All Harbormaster APIs are new and subject to change.": "所有的 Harbormaster API 都是新的并随时会变化。",
+      "Show new methods which are subject to change.": "显示随时可能变化的新方法。"
     }
   },
   "TOTAL": {
     "translation": "总计",
-    "yes": 6,
+    "yes": 7,
     "no": 4,
     "kvp": {
       "Total Cost": "总耗费",
@@ -3548,7 +3649,7 @@
   },
   "Table": {
     "translation": "表格",
-    "yes": 12,
+    "yes": 13,
     "no": 1,
     "kvp": {
       "Table of Contents": "目录"
@@ -3580,7 +3681,7 @@
   },
   "Time": {
     "translation": "时间",
-    "yes": 59,
+    "yes": 60,
     "no": 3,
     "kvp": {
       "If you leave high security, you will need to authenticate again the next time you try to take a high security action.": "如果你离开了高安全，下次你试图执行高安全操作时你将需要再次进行认证。",
@@ -3599,7 +3700,7 @@
   },
   "Token": {
     "translation": "令牌",
-    "yes": 77,
+    "yes": 75,
     "no": 10,
     "kvp": {
       "A token inherits the policies of the object it is awarded to.": "一个符记继承其被授予的对象的策略。",
@@ -3610,16 +3711,17 @@
       "Token Name": "符号名称",
       "Token Query": "符号查询",
       "Token Results (%s)": "符号结果（%s）",
-      "Token Story": "符记故事",
+      "Token Story": "符记报道",
       "Token flavor.": "符记风味。"
     }
   },
   "Tokens": {
     "translation": "符记",
     "yes": 5,
-    "no": 8,
+    "no": 9,
     "kvp": {
       "(Some types of token can not be revoked, and you can not revoke tokens which have already expired.)": "（一些类型的令牌不可以被吊销，你也不能吊销那些已经过期的令牌。）",
+      "Conduit tokens inherit the policies of the user they authenticate.": "Conduit 令牌继承了所认证用户的策略。",
       "No Tokens to Terminate": "没有要终止的令牌",
       "Really terminate all active API tokens? Any systems using these tokens will no longer be able to make API requests.": "确实要终止所有活跃的 API 令牌？任何使用这些令牌的系统将不能再执行 API 请求。",
       "Refresh tokens for a given domain.": "刷新给定域名的令牌。",
@@ -3639,7 +3741,7 @@
   },
   "Total": {
     "translation": "总计",
-    "yes": 6,
+    "yes": 7,
     "no": 4,
     "kvp": {
       "Total Cost": "总耗费",
@@ -3661,7 +3763,7 @@
   },
   "Transaction": {
     "translation": "事务",
-    "yes": 51,
+    "yes": 52,
     "no": 2,
     "kvp": {
       "Custom field transaction has no '%s'!": "自定义字段事物无‘%s’！",
@@ -3699,10 +3801,12 @@
   "Type": {
     "translation": "类型",
     "yes": 174,
-    "no": 67,
+    "no": 69,
     "kvp": {
+      "Type \"any()\"...": "键入“any()”…",
       "Type \"anyone()\"...": "键入“anyone()”…",
       "Type \"none\"...": "键入“无”…",
+      "Type \"none()\"...": "键入“none()”…",
       "Type \"not tagged with any projects\"...": "键入“not tagged with any projects”…",
       "Type a Herald rule name...": "键入一个 Herald 规则名称…",
       "Type a badge name...": "键入一个徽章名称…",
@@ -3800,7 +3904,7 @@
   },
   "Up": {
     "translation": "上",
-    "yes": 57,
+    "yes": 56,
     "no": 14,
     "kvp": {
       "If you are here for code review, let's set up your first repository.": "如果你在这里进行代码评审，让我们建立你的第一个仓库。",
@@ -3834,7 +3938,7 @@
   "Updated": {
     "translation": "已更新",
     "yes": 6,
-    "no": 135,
+    "no": 137,
     "kvp": {
       "%s updated %s blog's full domain from %s to %s.": "%s 将 %s 博客的完整域名从 %s 更新为了 %s。",
       "%s updated %s blog's parent domain from %s to %s.": "%s 将 %s 博客的父域名从 %s 更新为了 %s。",
@@ -3934,6 +4038,8 @@
       "%s updated the question details for %s.": "%s 更新了 %s 的问题详情。",
       "%s updated the question details.": "%s 更新了问题详情。",
       "%s updated the question from %s to %s.": "%s 把问题从 %s 更新为了 %s。",
+      "%s updated the revert plan for %s.": "%s 更新了 %s 的恢复计划。",
+      "%s updated the revert plan for this revision.": "%s 更新了此修订的恢复计划。",
       "%s updated the room image for %s.": "%s 更新了 %s 的房间图片。",
       "%s updated the room image.": "%s 更新了房间图片。",
       "%s updated the secret for %s.": "%s 更新了 %s 的秘文。",
@@ -3984,7 +4090,7 @@
   "View": {
     "translation": "视图",
     "yes": 18,
-    "no": 130,
+    "no": 131,
     "kvp": {
       "%s (You do not have permission to view policy details.)": "%s（你没有查看策略详情权限。）",
       "A merchant's members an always view and edit it.": "一个商家的成员可以总是查看和编辑它。",
@@ -4079,7 +4185,7 @@
       "View Options": "查看选项",
       "View Panel": "查看面板",
       "View Policy": "查看策略",
-      "View Pull Logs": "查看 Pull 日志",
+      "View Pull Logs": "查看拉取日志",
       "View Push Logs": "查看推送日志",
       "View Raw Event": "查看原始事件",
       "View Raw File": "查看原始文件",
@@ -4092,6 +4198,7 @@
       "View Signatures": "查看签名",
       "View Snapshot": "查看快照",
       "View Standalone": "单独查看",
+      "View Sync Logs": "查看同步日志",
       "View Task": "查看任务",
       "View Transforms": "查看转换",
       "View Unified": "统一查看",
@@ -4123,7 +4230,7 @@
     "yes": 1,
     "no": 4,
     "kvp": {
-      "A repository's pull events are visible to users who can see the repository.": "一个仓库的 Pull 事件对可以看到仓库的用户是可见的。",
+      "A repository's pull events are visible to users who can see the repository.": "一个仓库的拉取事件对可以看到仓库的用户是可见的。",
       "A repository's push events are visible to users who can see the repository.": "一个仓库的 Push 事件对可以看到仓库的用户是可见的。",
       "A repository's push logs are visible to users who can see the repository.": "一个仓库的 Push 日志对可以看到仓库的用户是可见的。",
       "A repository's sync events are visible to users who can see the repository.": "一个仓库的同步事件对可以看到仓库的用户是可见的。"
@@ -4151,10 +4258,9 @@
   "Where": {
     "translation": "位置",
     "yes": 1,
-    "no": 5,
+    "no": 4,
     "kvp": {
       "Get the workboard columns where an object appears.": "获取对象出现的工作板列。",
-      "Phabricator can send real-time notifications to your web browser or to your desktop. Select where you'd want to receive these real-time updates.": "Phabricator 可以向你的 Web 浏览器或你的桌面发送实时通知。选择想在哪里接收这些实时更新。",
       "Shows the local host where the diff came from.": "显示差异来自的本地主机。",
       "Shows the local path where the diff came from.": "显示差异来自的本地路径。",
       "URI where Phabricator is installed.": "安装 Phabricator 的 URI。"
@@ -4187,8 +4293,8 @@
   },
   "is": {
     "translation": "是",
-    "yes": 362,
-    "no": 318,
+    "yes": 367,
+    "no": 314,
     "kvp": {
       "%s is already archived, and can not be cancelled.": "%s 已经归档，不能取消。",
       "%s is already archived, and can not be executed.": "%s 已经归档，不能执行。",
@@ -4199,7 +4305,6 @@
       "%s is now accepted and ready to land.": "%s 现在已被接受并且准备就绪。",
       "%s is starting in %s minute(s), at %s.": "%1$s 将于 %3$s，在 %2$s 分钟内开始。",
       "'%s' binary not found or Imagemagick is not installed.": "‘%s’二进制文件未找到或 ImageMagick 未安装。",
-      "(Phabricator is not configured to authenticate users using the \"Reply-To\" header, so it was ignored.)": "（Phabricator 没有配置使用“Reply-To”标头认证用户，所以它被忽略了。）",
       "A commit is accepted.": "一个提交被接受。",
       "A commit is closed.": "提交被关闭。",
       "A commit is created.": "一个提交被创建。",
@@ -4241,9 +4346,6 @@
       "Commit is on autoclose branch": "提交在自动关闭分支上",
       "Conduit client \"%s\" is not known.": "Conduit 客户端“%s”未知。",
       "Configuration key '%s' is not set in %s configuration!": "配置键‘%s’未在 %s 配置中设置！",
-      "Configure how mail is encoded.": "配置邮件如何编码。",
-      "Control how SMS is sent.": "控制短信如何被发送。",
-      "Control how mail is sent.": "控制邮件如何被发送。",
       "Credential is locked": "凭据被锁定",
       "Current task owner, if task is assigned.": "当前的任务所有者，如果任务已被分配。",
       "Cursor %s does not exist or is already reset.": "游标 %s 不存在或已经重置。",
@@ -4269,6 +4371,7 @@
       "Lock log is already enabled.": "锁定日志已被启用。",
       "Login validation is missing expected parameter (\"%s\").": "登录验证缺失预期参数（“%s”）。",
       "Membership for this project is locked. You can not leave.": "这个项目的成员身份被锁定。你不能离开。",
+      "Method '%s' belongs to application '%s', which is not installed.": "方法‘%s’属于应用‘%s’，未安装。",
       "Month is out of query range": "月份超出了查询范围",
       "MySQL is Using Default Minimum Word Length": "MySQL 正在使用默认最小词长",
       "MySQL is Using Default Stopword File": "MySQL 正在使用默认停用词文件",
@@ -4310,6 +4413,7 @@
       "Repository \"%s\" is already importing.": "仓库“%s”已经在导入。",
       "Repository \"%s\" is already queued.": "仓库“%s”已经被排队。",
       "Repository \"%s\" is currently updating.": "仓库“%s”当前正在更新。",
+      "Repository %s is no longer pullable; skipping.": "仓库 %s 不再可拉取；跳过。",
       "Repository is not available yet!": "仓库仍然不可用！",
       "Request is missing required \"%s\" parameter.": "请求缺失了必填的“%s”参数。",
       "Required parameter `parentPanelPHIDs` is not present in request.": "必需的参数 `parentPanelPHIDs` 不在请求中。",
@@ -4323,7 +4427,7 @@
       "Setting \"%s\" is misconfigured: %s": "设置“%s”的配置缺失：%s",
       "Shows when a user is away or busy.": "显示用户何时离开或忙碌。",
       "Simulate receiving mail. This is primarily useful if you are developing new mail receivers.": "模拟接收邮件。如果你正在开发新的邮件接收人这非常有用。",
-      "Skipping main task update, cursor is ahead of the story.": "跳过主任务更新，光标超前于故事。",
+      "Skipping main task update, cursor is ahead of the story.": "跳过主任务更新，光标超前于报道。",
       "Skipping main task update, object is no longer visible.": "跳过主任务更新，对象不再可见。",
       "Skipping, branch is untracked.": "跳过，分支未被跟踪。",
       "Skipping, provider is not enabled or does not exist.": "跳过，提供者未启用或者不存在。",
@@ -4384,6 +4488,7 @@
       "This daemon is shutting down gracefully.": "这个守护进程正在优雅的关闭。",
       "This daemon is shutting down.": "这个守护进程正在关闭。",
       "This device is bound to a cluster service.": "此设备被绑定到一个群集服务。",
+      "This diff is already attached to a revision.": "此差异已经附加到一个修订。",
       "This diff is attached to a revision, and inherits its policies.": "此差异被附加到一个修订，并且继承了它的策略。",
       "This document is already deleted. You must specify content to re-create the document and make further edits.": "这个文档已经被删除了。你必须指明内容来重新创建文档并且进行后续编辑。",
       "This email address is already in use.": "这个邮件地址已经在使用中。",
@@ -4399,7 +4504,7 @@
       "This engine is used to edit Nuance queues.": "这个引擎用于编辑 Nuance 队列。",
       "This engine is used to edit Nuance sources.": "这个引擎用于编辑 Nuance 来源。",
       "This engine is used to edit Packages packages.": "这个引擎用于编辑包的包。",
-      "This engine is used to edit Packages publishers.": "这个引擎用于编辑包发布者。",
+      "This engine is used to edit Packages publishers.": "此引擎用于编辑包发布者。",
       "This engine is used to edit Packages versions.": "这个引擎用于编辑包版本。",
       "This engine is used to edit Phriction documents.": "这个引擎用于编辑 Phriction 文档。",
       "This engine is used to edit Repository identities.": "这个引擎用于编辑仓库身份。",
@@ -4456,7 +4561,6 @@
       "This option is not recognized. It may be misspelled.": "此选项未被识别。它可能拼写错了。",
       "This payment provider is disabled.": "这个支付提供者已被禁用。",
       "This permission is very dangerous. %s": "这个权限非常危险。%s",
-      "This provider is already configured.": "此提供者已经配置了。",
       "This provider is not configured to allow linking.": "这个提供者没有被配置允许连接。",
       "This question is open for answers.": "此问题开放等待答案。",
       "This question is out of date.": "此问题已过期。",
@@ -4497,9 +4601,7 @@
       "You can not reclaim this revision because his revision is not abandoned.": "你不能纠正此修订因为此修订未被放弃。",
       "You can not reopen this revision because it is not closed. Only closed revisions can be reopened.": "你不能重新打开此修订因为它已经被关闭。只有关闭的修订可以被重新打开。",
       "You can not reopen this revision because this revision is not closed.": "你不能重新打开此修订因为此修订未被关闭。",
-      "You can not unlink this account because it is not linked.": "你不能取消这个帐户的链接因为它未被链接。",
       "You were stopped here because %s is set in your configuration.": "因为在你的配置里设置了 %s 所以你被停在这里。",
-      "Your Way is Blocked": "你的路被挡住了",
       "Your account is linked with all available providers.": "你的帐户被连接到所有可用的提供者上。",
       "Your session is in high security mode. When you finish using it, click here to leave.": "你的会话处于高安全模式。当你使用完时，点击这里离开。",
       "Your session is no longer in high security.": "你的会话不再在高安全下。",
@@ -4512,12 +4614,11 @@
   },
   "is not": {
     "translation": "不是",
-    "yes": 99,
+    "yes": 101,
     "no": 108,
     "kvp": {
       "%s is not available; unable to read deflated data!": "%s 不可用；无法读取压缩的数据！",
       "'%s' binary not found or Imagemagick is not installed.": "‘%s’二进制文件未找到或 ImageMagick 未安装。",
-      "(Phabricator is not configured to authenticate users using the \"Reply-To\" header, so it was ignored.)": "（Phabricator 没有配置使用“Reply-To”标头认证用户，所以它被忽略了。）",
       "API token \"%s\" is not valid.": "API 令牌“%s”是无效的。",
       "API token is not associated with a valid user.": "API 令牌未关联到一个有效的用户。",
       "Action \"%s\" is not forbidden!": "操作“%s”没有被禁止！",
@@ -4551,6 +4652,7 @@
       "Literal %s is not allowed inside inline script.": "不允许文字 %s 在行内脚本中 。",
       "Logo configuration is not valid: value must be a dictionary.": "Logo 配置是无效的：值必须是一个字典。",
       "Mailer cluster configuration is not valid: it should be a list of mailer configurations.": "邮件寄送者集群配置无效：应该是一个邮件寄送者配置列表。",
+      "Method '%s' belongs to application '%s', which is not installed.": "方法‘%s’属于应用‘%s’，未安装。",
       "MySQL is not in strict mode (on host \"%s\"), but using strict mode is strongly encouraged.": "MySQL 不在严格模式下（在主机“%s”上），但是强烈建议使用严格模式。",
       "OPcache is not configured ideally for production.": "OPCache 没有为生产环境进行理想的配置。",
       "OPcache is not configured properly for development.": "OPCache 没有为开发环境进行正确的配置。",
@@ -4563,6 +4665,7 @@
       "Phabricator is not configured in cluster mode.": "Phabricator 未在群集模式下配置。",
       "Phabricator is not currently configured to accept inbound mail. You won't be able to interact with objects over email until inbound mail is set up.": "Phabricator 当前没有配置为接受入站邮件。入站邮件被配置好之前你将无法通过邮件和各种对象交互。",
       "Please provide a valid regular expression: %s is not valid": "请提供一个有效的正则表达式：%s 是无效的",
+      "Provided \"%s\" (\"%s\") is not recognized.": "提供的“%s”（“%s”）是不被承认的。",
       "Public key with ID %s is not trusted.": "ID %s 的公钥不被信任。",
       "Publisher key \"%s\" is not valid: publisher keys are required.": "发布者键“%s”无效：发布者键是必填的。",
       "Publisher key \"%s\" is not valid: publisher keys may only contain lowercase latin letters.": "发布者键“%s”无效：发布者键只可以包含小写拉丁字母。",
@@ -4620,18 +4723,26 @@
       "You can not reclaim this revision because his revision is not abandoned.": "你不能纠正此修订因为此修订未被放弃。",
       "You can not reopen this revision because it is not closed. Only closed revisions can be reopened.": "你不能重新打开此修订因为它已经被关闭。只有关闭的修订可以被重新打开。",
       "You can not reopen this revision because this revision is not closed.": "你不能重新打开此修订因为此修订未被关闭。",
-      "You can not unlink this account because it is not linked.": "你不能取消这个帐户的链接因为它未被链接。",
       "Your webserver is not forwarding credentials.": "你的 Web 服务器没有转发凭据。",
       "Your webserver is not handling GET parameters properly.": "你的 Web 服务器没有正确处理 GET 参数。"
     }
   },
+  "message": {
+    "translation": "消息",
+    "yes": 63,
+    "no": 1,
+    "kvp": {
+      "After configuring Phabricator to process inbound mail, you can interact with objects (like tasks and revisions) over email. For information on configuring Phabricator, see **[[ %s | Configuring Inbound Email ]]**.\n\nIn most cases, you can reply to email you receive from Phabricator to leave comments. You can also use **mail commands** to take a greater range of actions (like claiming a task or requesting changes to a revision) without needing to log in to the web UI.\n\nMail commands are keywords which start with an exclamation point, like `!claim`. Some commands may take parameters, like `!assign alincoln`.\n\nTo use mail commands, write one command per line at the beginning or end of your mail message. For example, you could write this in a reply to task email to claim the task:\n\n```\n!claim\n\nI'll take care of this.\n```\n\n\nWhen Phabricator receives your mail, it will process any commands first, then post the remaining message body as a comment. You can execute multiple commands at once:\n\n```\n!assign alincoln\n!close\n\nI just talked to @alincoln, and he showed me that he fixed this.\n```\n": "配置 Phabricator 处理入站邮件后，你可以通过邮件与对象（如任务和修订）进行交互。有关配置 Phabricator 的信息，请查看 **[[ %s | Configuring Inbound Email ]]**。\n\n在大多数情况下，你可以回复从 Phabricator 收到的邮件来发表评论。你还可以使用**邮件命令**来执行更大范围的操作（例如声明任务或请求修订变更）而无需登录 Web 用户界面。\n\n邮件命令是以感叹号开始的关键字，如`!claim`。有些命令可能会携带参数，如`!assign alincoln`。\n\n要使用邮件命令，在邮件开头或结尾处每行写一个命令。例如，你可以在一个回复任务邮件里写这个来声明任务：\n\n```\n!claim\n\n我会照顾好这个。\n```\n\n\n当 Phabricator 收到你的邮件时，它将首先处理所有命令，然后将剩余的邮件正文作为评论发布。你可以一次执行多个命令：\n\n```\n!assign alincoln\n!close\n\n我刚和 @alincoln 谈过并且他给我看他修好了这个。\n```\n"
+    }
+  },
   "name": {
     "translation": "名称",
-    "yes": 288,
-    "no": 5,
+    "yes": 289,
+    "no": 6,
     "kvp": {
       "Always require real name for user profiles.": "用户档案总是需要真实姓名。",
       "Argument \"%s\" does not name a buildable. Provide one or more valid buildable monograms or PHIDs.": "参数“%s”没有命名一个可构建项。提供一个或者更多有效的可构建项字母组合或者 PHID。",
+      "Name one or more buildables to publish, like \"B123\".": "为一个或多个要发布的可构建项命名，如“B123”。",
       "Real name is required.": "真实姓名是必填的。",
       "Stores the real name of the user, like \"Abraham Lincoln\".": "存储用户的真实姓名，如“杨攀”。",
       "You must name the query.": "你必须给这个查询命名。"
@@ -4652,7 +4763,7 @@
   },
   "or": {
     "translation": "或",
-    "yes": 302,
+    "yes": 298,
     "no": 2,
     "kvp": {
       "Determines whether or not YouTube videos get embedded.": "确定 YouTube 视频是否嵌入。",

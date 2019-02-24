@@ -21,7 +21,7 @@
     "xsprintf/__tests__/PhutilHgsprintfTestCase.php": "3c1f8a61c0dad658e39d7a6752e68677",
     "xsprintf/__tests__/PhutilTsprintfTestCase.php": "3ede5688d1a0b4a1de77b5e2ac97a68c",
     "xsprintf/__tests__/PhutilCsprintfTestCase.php": "a87372666a04b80df4e4cce575b2c42a",
-    "xsprintf/qsprintf.php": "414ec1c740bd52162526a33d85265bc4",
+    "xsprintf/qsprintf.php": "1cf1368092c9ef86e481c787307468a8",
     "xsprintf/jsprintf.php": "2bc999aef013f410b004bca083f7df27",
     "xsprintf/tsprintf.php": "38ea16cb4251bdfdf9da1745669fde15",
     "xsprintf/pregsprintf.php": "a270fc9b5f110369f7da379d48e10bd4",
@@ -83,26 +83,26 @@
     "conduit/ConduitFuture.php": "2bb7629551a5cc64046c94e08fb433c1",
     "conduit/__tests__/ConduitClientTestCase.php": "ae5f8abbdd1c1d5faac1495e2841c5ae",
     "conduit/ConduitClient.php": "9518262ecbda59c160cd6feebc75d85b",
-    "auth/PhutilDisqusAuthAdapter.php": "32aa0b1c1dc74054ddf7d35816300a73",
+    "auth/PhutilDisqusAuthAdapter.php": "56486ee9a1b31be62a0a861e205aec0d",
     "auth/PhutilAuthAdapter.php": "cf3026fd5a51a1a39a7746abee3f848f",
-    "auth/PhutilPhabricatorAuthAdapter.php": "9a0846094362c8e3266dbddd1bb2e939",
-    "auth/PhutilOAuth1AuthAdapter.php": "5a11e3c3f73c8c1696626fae68c48f4f",
+    "auth/PhutilPhabricatorAuthAdapter.php": "4ad71e6b86c0300d2b4f3a9c227a0b23",
+    "auth/PhutilOAuth1AuthAdapter.php": "142f15a58e6b62b022b28116ae82d211",
     "auth/PhutilSlackAuthAdapter.php": "7f49905f201ebdb7d98deed4501ba2f6",
-    "auth/PhutilOAuthAuthAdapter.php": "743ce3d9e420d6067612ca1017b0d3cb",
-    "auth/PhutilGitHubAuthAdapter.php": "557647064ac1aee961ec985d735fed29",
+    "auth/PhutilOAuthAuthAdapter.php": "78a4bca81e4fcd20c4b530f8a175676e",
+    "auth/PhutilGitHubAuthAdapter.php": "afe997fcdcc826cbeab0fccb1247c7f3",
     "auth/PhutilWordPressAuthAdapter.php": "56af544595fa943d9ce1b826c3668368",
     "auth/PhutilAsanaAuthAdapter.php": "b023f8ef47987c7e4e25c8fe98ff5ceb",
-    "auth/PhutilJIRAAuthAdapter.php": "8f2ae326f95df4b6e2c9ba05a4e4d259",
+    "auth/PhutilJIRAAuthAdapter.php": "127ee0fb7c8ecd09d9fd15c7d7aeaeaf",
     "auth/PhutilLDAPAuthAdapter.php": "f111a14fb356ec9147581ddad100c22f",
-    "auth/PhutilGoogleAuthAdapter.php": "bb982d13662df80369f24ff8995545a0",
-    "auth/PhutilAmazonAuthAdapter.php": "6c935074d8b8e7fd1a5c2b69f241f692",
+    "auth/PhutilGoogleAuthAdapter.php": "14b36afd4d1ac478c7a2db928ed5095c",
+    "auth/PhutilAmazonAuthAdapter.php": "1eaa1cb84dc0c57fc5af1b3d08b3a8ec",
     "auth/PhutilTwitchAuthAdapter.php": "4c8429b49a2ae7dc34bbc93d45b9db73",
-    "auth/PhutilFacebookAuthAdapter.php": "ba10fa7f9b50bc924930529c5ab70adc",
+    "auth/PhutilFacebookAuthAdapter.php": "3d48e238c4fcf23cbb1ec2f4f845883b",
     "auth/exception/PhutilAuthException.php": "2667f8e050b7129e35f201d803952a59",
     "auth/exception/PhutilAuthCredentialException.php": "a4da266d91b9d7c5cad7f23a235b9821",
     "auth/exception/PhutilAuthUserAbortedException.php": "2e1a0aec07127145e438fa1161b573e4",
     "auth/exception/PhutilAuthConfigurationException.php": "90159fee6c6e41c25cd87ac718f3517d",
-    "auth/PhutilTwitterAuthAdapter.php": "9087ab383b783f4535da552e8291e194",
+    "auth/PhutilTwitterAuthAdapter.php": "9b24bce38079c30e75c2ce82a1f09d6b",
     "auth/PhutilBitbucketAuthAdapter.php": "a36a52f53c72751efed684984f26ec93",
     "auth/PhutilEmptyAuthAdapter.php": "d93b2d00067c0d36e244e5f189e8b74e",
     "lexer/PhutilLexer.php": "72176b7111c7ce2b9d46c0e77654a7cd",
@@ -141,13 +141,13 @@
     "utils/__tests__/PhutilBufferedIteratorTestCase.php": "c729a8f9007d95dc99c2fcbaf4dfc565",
     "utils/__tests__/PhutilArrayTestCase.php": "c497760c43e230f13e4bc5edb9eefcfc",
     "utils/__tests__/PhutilRopeTestCase.php": "055345d513695f3e8a0136639eb6dc57",
-    "utils/__tests__/PhutilUtilsTestCase.php": "44a472709fbc9d8271945725bdb25208",
+    "utils/__tests__/PhutilUtilsTestCase.php": "ed969c5dfbc9aedda9f0b36a87aec57b",
     "utils/PhutilSystem.php": "44b90611b3ae9c9712a52d715f72592c",
     "utils/PhutilHashingIterator.php": "5ad54f0306e41a367bbf46112b79d834",
     "utils/PhutilCowsay.php": "a6602144ae547034b9b0951b5c368c8a",
     "utils/PhutilArray.php": "c4fde7ca949b3e6323708e77dcfd207b",
     "utils/PhutilProseDifferenceEngine.php": "85eb0e7399fc74c822c6f3de2f250404",
-    "utils/utils.php": "900c2877a9aacc2376e6b9640b03f389",
+    "utils/utils.php": "d7cf95f2796f1f25ac037bcb93cb43f9",
     "utils/PhutilDirectedScalarGraph.php": "b7aa98e78bbb6189ce8e0d3d5218e993",
     "utils/PhutilExampleBufferedIterator.php": "08825080bbb72d313db80e4be8057ded",
     "utils/CaseInsensitiveArray.php": "2c2b1dd18c99a55b8b82ffb67b8c162d",
@@ -167,10 +167,10 @@
     "filesystem/linesofalarge/__tests__/LinesOfALargeFileTestCase.php": "c711967b76e53c008fa2664876a23871",
     "filesystem/linesofalarge/LinesOfALargeExecFuture.php": "383bd65b2ce975736e590222530d139d",
     "filesystem/linesofalarge/LinesOfALarge.php": "e718211c4ca83e98b9e1ed04ea6b92ac",
-    "filesystem/Filesystem.php": "27aa80043e516228fbee7fff9d8ba6e5",
+    "filesystem/Filesystem.php": "41ad91f45533bbf25583ac2b09fb3515",
     "filesystem/TempFile.php": "65530de0e1de7a3e7205fe47b2a857d9",
     "filesystem/__tests__/PhutilFileLockTestCase.php": "482ef6c94bd546103a4ea03d649421a9",
-    "filesystem/__tests__/FilesystemTestCase.php": "f84bb134e6470df1bf4a049b98019fb6",
+    "filesystem/__tests__/FilesystemTestCase.php": "a228e828b0c7887e1da222a0d855b779",
     "filesystem/__tests__/PhutilDeferredLogTestCase.php": "ef2b18a04e4e8b38dbce718e8cea3636",
     "filesystem/__tests__/FileFinderTestCase.php": "2426f04cd397f42a19fce741be9c7585",
     "filesystem/PhutilFileTree.php": "0deed7c74e352ff4c5b7209e6d41a817",
@@ -218,7 +218,7 @@
     "parser/argument/__tests__/PhutilArgumentSpellingCorrectorTestCase.php": "d0619e399ba68a8b0660f8163d93a074",
     "parser/argument/__tests__/PhutilArgumentParserTestCase.php": "a666cc7098a1be3ad7efb3da1756d7c8",
     "parser/argument/__tests__/PhutilArgumentSpecificationTestCase.php": "c3972fc05a72fbdf3da73d10fb376048",
-    "parser/argument/PhutilArgumentSpellingCorrector.php": "746730e5c85b2fbe3e521aec3f4f1e5c",
+    "parser/argument/PhutilArgumentSpellingCorrector.php": "6506536ed5093a1ed07a330155866a10",
     "parser/argument/workflow/PhutilHelpArgumentWorkflow.php": "88f3ed146637a4f22d9e3f18f23c3cc2",
     "parser/argument/workflow/PhutilArgumentWorkflow.php": "e4bdf14ffc95eb73d6ec0e7e9dc6e9d3",
     "parser/argument/exception/PhutilArgumentSpecificationException.php": "daa339a844823811104c6d831e6a5450",
@@ -226,7 +226,7 @@
     "parser/argument/exception/PhutilArgumentUsageException.php": "8ce55fe9b23191571f1998e2fdc1d82c",
     "parser/PhutilJSONParser.php": "86a3a90b000607164670feb4c756e62f",
     "parser/PhutilBugtraqParser.php": "f472a9f53d63ebfc76bf08a13956d2bc",
-    "parser/PhutilURI.php": "acb1390105383ad63a6dee30b72e36e5",
+    "parser/PhutilURI.php": "5e6dfc2ac962040301d0a277d50b2d7e",
     "parser/PhutilTypeSpec.php": "c51a48ad7c621368c6916d0617f39e80",
     "parser/generator/exception/PhutilUnreachableRuleParserGeneratorException.php": "fc3fc456f909a0550bf59246527ceee8",
     "parser/generator/exception/PhutilParserGeneratorException.php": "abc1c0c9c63737a92ee3365828cddf4e",
@@ -256,7 +256,7 @@
     "parser/__tests__/PhutilSimpleOptionsTestCase.php": "7ce8a81fe0a9fe86d4cbdc38dde6680d",
     "parser/__tests__/PhutilBugtraqParserTestCase.php": "017b02b15c5e3b2fdb2c9c3c08da1b59",
     "parser/__tests__/PhutilParserGeneratorTestCase.php": "2c6aade9b557ce9faad41827e4a98a03",
-    "parser/__tests__/PhutilURITestCase.php": "ce032d19c7ac16e92223ddb8f570115f",
+    "parser/__tests__/PhutilURITestCase.php": "2071ea251dcda945b28e232c06790a00",
     "parser/__tests__/PhutilJSONTestCase.php": "e44bff685e3dc9fdfdab21b1ebb7d35a",
     "parser/__tests__/PhutilEditorConfigTestCase.php": "b3b3eefc7a6ba602b737073bf958857a",
     "parser/__tests__/PhutilDocblockParserTestCase.php": "492b7ec80ee4bb7673b1cf7b6ef4dc5f",
@@ -301,7 +301,7 @@
     "markup/render.php": "37f1be55b2b3cc606e0a00de803e1dc6",
     "markup/syntax/highlighter/PhutilDivinerSyntaxHighlighter.php": "99551b0709224c3382d2e34f966eff50",
     "markup/syntax/highlighter/pygments/PhutilDefaultSyntaxHighlighterEnginePygmentsFuture.php": "e083be3cfff13ae4ea92d5d724952911",
-    "markup/syntax/highlighter/PhutilPygmentsSyntaxHighlighter.php": "8be19f12773b4e7694b3dd0fbce0e17d",
+    "markup/syntax/highlighter/PhutilPygmentsSyntaxHighlighter.php": "988e195852e590a59e896292d09fc944",
     "markup/syntax/highlighter/PhutilLexerSyntaxHighlighter.php": "f52a5110c0a7664c0f70ef03f576ac47",
     "markup/syntax/highlighter/PhutilXHPASTSyntaxHighlighter.php": "a88e9ff6863cdc63696bdeb87ad0e743",
     "markup/syntax/highlighter/PhutilDefaultSyntaxHighlighter.php": "97e700ff297f2077273746fa7fd851e1",
@@ -319,7 +319,7 @@
     "markup/syntax/engine/__tests__/PhutilDefaultSyntaxHighlighterEngineTestCase.php": "c4b4a9bbd38c5101ebba8c34227ac336",
     "markup/engine/remarkup/blockrule/PhutilRemarkupNoteBlockRule.php": "22bec25e10a1955b6276948cdde85b92",
     "markup/engine/remarkup/blockrule/PhutilRemarkupCodeBlockRule.php": "259df7fee512ab590ee852c89d267663",
-    "markup/engine/remarkup/blockrule/PhutilRemarkupTestInterpreterRule.php": "3e2599e1895fedf83b955cdbaaed1cdf",
+    "markup/engine/remarkup/blockrule/PhutilRemarkupTestInterpreterRule.php": "df1a0b0400e2ca92fd4f43ed745806c3",
     "markup/engine/remarkup/blockrule/PhutilRemarkupTableBlockRule.php": "d6f3b2edcb71d15c677b24e10f81b23f",
     "markup/engine/remarkup/blockrule/PhutilRemarkupDefaultBlockRule.php": "94d82d16fec1e302ef5d439785b9eb6f",
     "markup/engine/remarkup/blockrule/PhutilRemarkupSimpleTableBlockRule.php": "992598a65c86257a50d8b73cb46127de",
@@ -338,7 +338,7 @@
     "markup/engine/remarkup/markuprule/PhutilRemarkupRule.php": "6053f1d9bfb6a47ab9fdc573741fe7ae",
     "markup/engine/remarkup/markuprule/PhutilRemarkupItalicRule.php": "09040fdf2e771d7b652d716d2c347714",
     "markup/engine/remarkup/markuprule/PhutilRemarkupDelRule.php": "1323a5c9f4749786fea5ab92c3d50892",
-    "markup/engine/remarkup/markuprule/PhutilRemarkupDocumentLinkRule.php": "d77f67838c46343927bbdecf1b2de568",
+    "markup/engine/remarkup/markuprule/PhutilRemarkupDocumentLinkRule.php": "c26d94892dd83b486384f6bf6bd6585d",
     "markup/engine/remarkup/markuprule/PhutilRemarkupMonospaceRule.php": "4c2fdf172c491fdacc85813fa12aa26e",
     "markup/engine/remarkup/markuprule/PhutilRemarkupHighlightRule.php": "fa6727a18f1fc85f76029e66b9fa5c53",
     "markup/engine/remarkup/markuprule/PhutilRemarkupHyperlinkRule.php": "7dc2ecbca581f5c1dd208344623df125",
@@ -390,7 +390,7 @@
     "aphront/storage/connection/AphrontIsolatedDatabaseConnection.php": "14ce1483b182194f696f215e3f9f89d1",
     "aphront/storage/connection/AphrontDatabaseTransactionState.php": "15dddf2d6af737a774dea150a89ebc9d",
     "aphront/storage/connection/mysql/AphrontMySQLDatabaseConnection.php": "bbe53c5f571f419295443755f5e4305c",
-    "aphront/storage/connection/mysql/AphrontMySQLiDatabaseConnection.php": "bf07d1c29d8e00b4aa8d3fee7ad6b130",
+    "aphront/storage/connection/mysql/AphrontMySQLiDatabaseConnection.php": "7bf386762cf6683abcc884764da69d13",
     "aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php": "5d289143aa15c46dcff7c5edbb0e8597",
     "aphront/storage/exception/AphrontParameterQueryException.php": "cd17f8e4fdf74c4448c2a6c07f00a8b6",
     "aphront/storage/exception/AphrontObjectMissingQueryException.php": "d48f306c8f0df7af37f04e13ef9a4373",
@@ -423,34 +423,34 @@
     "error/PhutilOpaqueEnvelope.php": "b42c1da421425d159d34677c62f54c57",
     "error/PhutilErrorTrap.php": "2e3588cdf0d708c144f2f49709ff08da",
     "error/PhutilAggregateException.php": "0e6921b70d3aaba828d4792077e9e2cd",
-    "error/PhutilProxyException.php": "e4649e5d0d9f6a4245771141d2d9eaa3",
+    "error/PhutilProxyException.php": "d3980d8561b40dd9f9e3e064dd62f19b",
     "error/__tests__/PhutilOpaqueEnvelopeTestCase.php": "9d4058f4d2bc773a7679161feb01bbf9",
     "error/__tests__/PhutilErrorHandlerTestCase.php": "8b3caf24ff927d2bbbbff9690eecf998",
     "error/PhutilOpaqueEnvelopeKey.php": "c069f1956c0f245a461631a349d7e8e3",
     "error/PhutilErrorHandler.php": "1ff487099f242fda4558468ee2391f51",
     "error/PhutilMethodNotImplementedException.php": "2426e8c4a9c2b7a0674f98e525ac09f7",
-    "error/phlog.php": "aa7647eee58b5796aae34ed5eef948df",
+    "error/phlog.php": "f7e3ee3366abc112c39dd999ee7719ff",
     "exception/PhutilInvalidStateException.php": "74810c48222dce4c9b7dee14e5986da9",
     "exception/__tests__/PhutilInvalidStateExceptionTestCase.php": "6fdeac0ad6d305f5c87546f609d024f8",
-    "future/postmark/PhutilPostmarkFuture.php": "0146254d173086d668e41b9a21f41181",
+    "future/postmark/PhutilPostmarkFuture.php": "75e461f577ad144da999c73e26238010",
     "future/Future.php": "374a434d60b236e70fc5414aef83f999",
     "future/oauth/__tests__/PhutilOAuth1FutureTestCase.php": "8214f07879596efec58a11461b64f292",
-    "future/oauth/PhutilOAuth1Future.php": "b7dde2bc76dc718a1ede8225744aa63f",
+    "future/oauth/PhutilOAuth1Future.php": "00326e1c26447b763f4eb35217ec3b27",
     "future/wordpress/PhutilWordPressFuture.php": "a84aebab1043fa54e1365f89b0682eef",
     "future/github/PhutilGitHubFuture.php": "62fa182dfeff39fbc69213b61767bb35",
     "future/github/PhutilGitHubResponse.php": "37b4360851b12d6d9822b90c17454220",
     "future/FutureIterator.php": "7e665daea41e4b466bb0c1acb999fe6a",
     "future/__tests__/FutureIteratorTestCase.php": "c8cc50af3bd8d868680bd94fe39fa073",
     "future/ImmediateFuture.php": "5cda8bb47b21b735fcccc31070f65538",
-    "future/http/BaseHTTPFuture.php": "a36e7048816840db1a2e6f65a98beeee",
-    "future/http/HTTPSFuture.php": "8676cba496bd9b48f3042526c127f6bf",
+    "future/http/BaseHTTPFuture.php": "a61425600f5ec8084b8383372dfc7a38",
+    "future/http/HTTPSFuture.php": "0f318a94aabfa4c03719d6d9cb5e7f1e",
     "future/http/status/HTTPFutureResponseStatus.php": "0a56750ee4c8ac14473c35349a2c7774",
     "future/http/status/HTTPFutureParseResponseStatus.php": "0f2d9a2e089563eb487cff04f3ba11db",
     "future/http/status/HTTPFutureCertificateResponseStatus.php": "0d8ad45790a9bfaf1b4671cce0c8cc3b",
     "future/http/status/HTTPFutureCURLResponseStatus.php": "0ee7a1b249385db1a6cb9e11ea945b18",
     "future/http/status/HTTPFutureTransportResponseStatus.php": "8411611396eb910f80fbbce6cea74ee3",
     "future/http/status/HTTPFutureHTTPResponseStatus.php": "89a7b6df1e1c5bf635b45e34da6689fe",
-    "future/http/HTTPFuture.php": "b0a3eb892b7a57184e2eb061629940f1",
+    "future/http/HTTPFuture.php": "1c282692d547910f348f8bb3f926454a",
     "future/http/PhutilHTTPEngineExtension.php": "af44d4cfee914ce44e934d172cdf7727",
     "future/paypal/PhutilPayPalAPIFuture.php": "7cd4e3fa523e2f19b23ddbc19713feac",
     "future/exec/PhutilBacktraceSignalHandler.php": "10577bfb661960498c69a504284db695",
@@ -465,9 +465,9 @@
     "future/exec/ExecFuture.php": "788fc2f447a413c3a90dbb04be45566d",
     "future/exec/PhutilSignalHandler.php": "bc3565ec2713f5f7c11cccf63bbc7e99",
     "future/exec/execx.php": "6348f9f0d81748c06800d4de7702f3f9",
-    "future/slack/PhutilSlackFuture.php": "edbfa6d47de07baf43eb4288ea78bf24",
+    "future/slack/PhutilSlackFuture.php": "d6b558ff01db3399dde8ac7b3f2cfc1a",
     "future/aws/PhutilAWSCloudFormationFuture.php": "896e1a35adef1eadfd200eed838b8d85",
-    "future/aws/PhutilAWSv4Signature.php": "a8362c4c65198e31385efae75fb86a0f",
+    "future/aws/PhutilAWSv4Signature.php": "9450216a13844df17f86e77a8f5d8a29",
     "future/aws/PhutilAWSCloudWatchFuture.php": "bbfb6e110b2c0ec5219071a312e72030",
     "future/aws/PhutilCloudWatchMetric.php": "6f516e3bf7e90b2f02ccbadc8fe671ea",
     "future/aws/PhutilAWSEC2Future.php": "cb962fb9d0ac02e9be84bc452ea7099d",
@@ -477,11 +477,11 @@
     "future/aws/management/PhutilAWSS3PutManagementWorkflow.php": "554195b5e1efd3c84f0a16ea3f64602b",
     "future/aws/management/PhutilAWSManagementWorkflow.php": "deb8dfb04287499c86ce3490a5cf8744",
     "future/aws/management/PhutilAWSS3ManagementWorkflow.php": "73c81d9685e23c8f1fda333240e883ee",
-    "future/aws/PhutilAWSFuture.php": "dcbe5e8e0c8acb47d38810997ca8518b",
+    "future/aws/PhutilAWSFuture.php": "81192b2e81dbd2525753ef821871d486",
     "future/aws/__tests__/PhutilAWSv4SignatureTestCase.php": "71b76bb6117935da7da19c9ee8b8589a",
     "future/aws/PhutilAWSS3Future.php": "8dced4a7b353fb30e9c58cd559993fe9",
     "future/query/QueryFuture.php": "b81f4e8ffaab8a2505c88e6b5ac208cb",
-    "future/twitch/PhutilTwitchFuture.php": "0fe243919dc4bba006f57e8fc8a705c9",
+    "future/twitch/PhutilTwitchFuture.php": "8da108d37715abafbe995c1ecd2aae3e",
     "future/asana/PhutilAsanaFuture.php": "9d27ec590adb78eca4f3275dc284b400",
     "future/FutureProxy.php": "e02e8c38bf47e3f98a6c6bfd283f2f3e",
     "readableserializer/__tests__/PhutilReadableSerializerTestCase.php": "c5ff46cd16459c1e1d288e143fc9ef0e",
@@ -508,45 +508,423 @@
     "console/PhutilInteractiveEditor.php": "2d51d36e7614fb1808dcabe0c1c1a55b"
   },
   "strings": {
-    "48b340e6625e715e585495575a93fe19": [
+    "ed969c5dfbc9aedda9f0b36a87aec57b": [
       {
-        "string": "Query returned more than one row.",
-        "file": "/xsprintf/queryfx.php",
-        "line": 22,
-        "types": []
-      }
-    ],
-    "c2d0004d9321fa4a63aef0ae2a13613d": [
-      {
-        "string": "Async queries are not supported.",
-        "file": "/aphront/storage/connection/AphrontDatabaseConnection.php",
-        "line": 89,
-        "types": []
+        "string": "%s invalid on %s",
+        "file": "/utils/__tests__/PhutilUtilsTestCase.php",
+        "line": 181,
+        "types": [
+          null,
+          null
+        ]
       },
       {
-        "string": "Async queries are not supported.",
-        "file": "/aphront/storage/connection/AphrontDatabaseConnection.php",
-        "line": 93,
-        "types": []
-      },
-      {
-        "string": "Trying to remember lock \"%s\", but this lock has already been remembered.",
-        "file": "/aphront/storage/connection/AphrontDatabaseConnection.php",
-        "line": 125,
+        "string": "(Retained) %s",
+        "file": "/utils/__tests__/PhutilUtilsTestCase.php",
+        "line": 374,
         "types": [
           null
         ]
       },
       {
-        "string": "Trying to forget lock \"%s\", but this connection does not remember that lock.",
-        "file": "/aphront/storage/connection/AphrontDatabaseConnection.php",
-        "line": 139,
+        "string": "(Discarded) %s",
+        "file": "/utils/__tests__/PhutilUtilsTestCase.php",
+        "line": 393,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Credential censoring for: %s",
+        "file": "/utils/__tests__/PhutilUtilsTestCase.php",
+        "line": 628,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Expecting \"%s\" to match \"%s\".",
+        "file": "/utils/__tests__/PhutilUtilsTestCase.php",
+        "line": 760,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Expecting \"%s\" not to match \"%s\".",
+        "file": "/utils/__tests__/PhutilUtilsTestCase.php",
+        "line": 766,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Test Case: \"%s\" vs \"%s\"",
+        "file": "/utils/__tests__/PhutilUtilsTestCase.php",
+        "line": 818,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "HTTP querystring for byte \"%s\".",
+        "file": "/utils/__tests__/PhutilUtilsTestCase.php",
+        "line": 917,
         "types": [
           null
         ]
       }
     ],
-    "414ec1c740bd52162526a33d85265bc4": [
+    "d7cf95f2796f1f25ac037bcb93cb43f9": [
+      {
+        "string": "Objects passed to \"%s\" must return sort vectors (objects of class \"%s\") from the specified method (\"%s\"). One object (with key \"%s\") did not.",
+        "file": "/utils/utils.php",
+        "line": 426,
+        "types": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Argument method is not a string.",
+        "file": "/utils/utils.php",
+        "line": 500,
+        "types": []
+      },
+      {
+        "string": "Argument index is not a scalar.",
+        "file": "/utils/utils.php",
+        "line": 545,
+        "types": []
+      },
+      {
+        "string": "Array item with key '%s' must be of type array, %s given.",
+        "file": "/utils/utils.php",
+        "line": 610,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "instance of %s",
+        "file": "/utils/utils.php",
+        "line": 618,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Array item with key '%s' must be an instance of %s, %s given.",
+        "file": "/utils/utils.php",
+        "line": 622,
+        "types": [
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Argument must be scalar or object which implements %s!",
+        "file": "/utils/utils.php",
+        "line": 662,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Expected all items passed to `%s` to be arrays, but argument with key \"%s\" has type \"%s\".",
+        "file": "/utils/utils.php",
+        "line": 822,
+        "types": [
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Unable to parse unit specification (expected a specification in the form \"%s\"): %s",
+        "file": "/utils/utils.php",
+        "line": 1078,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "This function can not convert from the unit \"%s\".",
+        "file": "/utils/utils.php",
+        "line": 1112,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "This function can not convert from the unit \"%s\".",
+        "file": "/utils/utils.php",
+        "line": 1131,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "This function can not convert from the unit \"%s\".",
+        "file": "/utils/utils.php",
+        "line": 1157,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "This function can not convert from the unit \"%s\".",
+        "file": "/utils/utils.php",
+        "line": 1183,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "This function can not convert into the unit \"%s\".",
+        "file": "/utils/utils.php",
+        "line": 1191,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "\"%s\" is not an exact quantity.",
+        "file": "/utils/utils.php",
+        "line": 1199,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Argument to \"phutil_microseconds_since(...)\" should be a value returned from \"microtime(true)\".",
+        "file": "/utils/utils.php",
+        "line": 1220,
+        "types": []
+      },
+      {
+        "string": "#%d: %s",
+        "file": "/utils/utils.php",
+        "line": 1267,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "#%d",
+        "file": "/utils/utils.php",
+        "line": 1269,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Failed to JSON encode value (%s): %s.",
+        "file": "/utils/utils.php",
+        "line": 1277,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Failed to JSON encode value: %s.",
+        "file": "/utils/utils.php",
+        "line": 1282,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Dictionary key \"%s\" is not valid UTF8, and cannot be JSON encoded.",
+        "file": "/utils/utils.php",
+        "line": 1332,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "String value is not valid UTF8, and can not be JSON encoded: %s",
+        "file": "/utils/utils.php",
+        "line": 1350,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Dictionary value at key \"%s\" is not valid UTF8, and cannot be JSON encoded: %s",
+        "file": "/utils/utils.php",
+        "line": 1354,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "%s is not compatible with your version of PHP (%s). This function is only supported on PHP versions newer than 5.3.0.",
+        "file": "/utils/utils.php",
+        "line": 1388,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Invalid glob pattern.",
+        "file": "/utils/utils.php",
+        "line": 1562,
+        "types": []
+      },
+      {
+        "string": "First hash argument must be a string.",
+        "file": "/utils/utils.php",
+        "line": 1595,
+        "types": []
+      },
+      {
+        "string": "Second hash argument must be a string.",
+        "file": "/utils/utils.php",
+        "line": 1599,
+        "types": []
+      },
+      {
+        "string": "HTTP parameter pair (with key \"%s\") is not valid: each pair must be an array with exactly two elements.",
+        "file": "/utils/utils.php",
+        "line": 1648,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "HTTP query parameter key must be a scalar.",
+        "file": "/utils/utils.php",
+        "line": 1676,
+        "types": []
+      },
+      {
+        "string": "HTTP query parameter value (for key \"%s\") must be a scalar.",
+        "file": "/utils/utils.php",
+        "line": 1687,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Unable to decode MIME header: install \"iconv\" or \"mbstring\" extension.",
+        "file": "/utils/utils.php",
+        "line": 1708,
+        "types": []
+      },
+      {
+        "string": "Value passed to \"phutil_string_cast()\" is an array; arrays can not be sensibly cast to strings.",
+        "file": "/utils/utils.php",
+        "line": 1741,
+        "types": []
+      },
+      {
+        "string": "Object (of class \"%s\") did not return a string from \"__toString()\".",
+        "file": "/utils/utils.php",
+        "line": 1751,
+        "types": [
+          null
+        ]
+      }
+    ],
+    "ae64185a4b37fe4b4bf0d6b0c3038c80": [
+      {
+        "string": "Token replacement count exceeded limit!",
+        "file": "/grammar/PhutilContextFreeGrammar.php",
+        "line": 28,
+        "types": []
+      },
+      {
+        "string": "Invalid token '%s' in grammar.",
+        "file": "/grammar/PhutilContextFreeGrammar.php",
+        "line": 46,
+        "types": [
+          null
+        ]
+      }
+    ],
+    "ba44e16cfb863bdbb0a8856ccebaef75": [
+      {
+        "string": "%s does not support the \"%s\" modifier.",
+        "file": "/xsprintf/xsprintf.php",
+        "line": 53,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Too few arguments to %s.",
+        "file": "/xsprintf/xsprintf.php",
+        "line": 65,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Too many arguments to %s.",
+        "file": "/xsprintf/xsprintf.php",
+        "line": 85,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "This function exists only to document the call signature for %s callbacks.",
+        "file": "/xsprintf/xsprintf.php",
+        "line": 124,
+        "types": [
+          null
+        ]
+      }
+    ],
+    "1ec79f3c783cb9f645e3f61b2a6a0527": [
+      {
+        "string": "Expected an array for %%L%s conversion.",
+        "file": "/xsprintf/csprintf.php",
+        "line": 86,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Expected %s for %%P conversion.",
+        "file": "/xsprintf/csprintf.php",
+        "line": 124,
+        "types": [
+          null
+        ]
+      }
+    ],
+    "77a2a44bde45c32bdd267a504ecf212c": [
+      {
+        "string": "Unknown escaping mode!",
+        "file": "/xsprintf/PhutilCommandString.php",
+        "line": 55,
+        "types": []
+      }
+    ],
+    "a87372666a04b80df4e4cce575b2c42a": [
+      {
+        "string": "This test doesn't work on Windows.",
+        "file": "/xsprintf/__tests__/PhutilCsprintfTestCase.php",
+        "line": 79,
+        "types": []
+      }
+    ],
+    "1cf1368092c9ef86e481c787307468a8": [
       {
         "string": "Invalid database escaper.",
         "file": "/xsprintf/qsprintf.php",
@@ -647,7 +1025,7 @@
       {
         "string": "Parameter to \"%s\" conversion in \"qsprintf(...)\" is not an instance of AphrontDatabaseTableRefInterface.",
         "file": "/xsprintf/qsprintf.php",
-        "line": 495,
+        "line": 496,
         "types": [
           null
         ]
@@ -655,262 +1033,10 @@
       {
         "string": "Parameter to \"%s\" conversion in \"qsprintf(...)\" is not an instance of PhutilOpaqueEnvelope.",
         "file": "/xsprintf/qsprintf.php",
-        "line": 505,
+        "line": 507,
         "types": [
           null
         ]
-      }
-    ],
-    "14ce1483b182194f696f215e3f9f89d1": [
-      {
-        "string": "Database isolation currently only supports some queries. You are trying to issue a query which does not begin with an allowed keyword (%s): '%s'.",
-        "file": "/aphront/storage/connection/AphrontIsolatedDatabaseConnection.php",
-        "line": 96,
-        "types": [
-          null,
-          null
-        ]
-      }
-    ],
-    "5d289143aa15c46dcff7c5edbb0e8597": [
-      {
-        "string": "Retrying (%d) after %s: %s",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 108,
-        "types": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "string": "No query result to fetch from!",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 147,
-        "types": []
-      },
-      {
-        "string": "Attempting to issue a write query on a read-only connection (to database \"%s\")!",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 272,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Simulated error.",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 286,
-        "types": []
-      },
-      {
-        "string": "#%d: %s",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 296,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "This error may occur if your configured MySQL \"wait_timeout\" or \"max_allowed_packet\" values are too small. This may also indicate that something used the MySQL \"KILL <process>\" command to kill the connection running the query.",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 303,
-        "types": []
-      },
-      {
-        "string": "Attempt to connect to %s@%s failed with error #%d: %s.",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 340,
-        "types": [
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "string": "#%d: %s",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 354,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Attempting to construct a query using a non-utf8 string when utf8 is expected. Use the `%%B` conversion to escape binary strings data.",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 382,
-        "types": []
-      }
-    ],
-    "788fc2f447a413c3a90dbb04be45566d": [
-      {
-        "string": "Writing to a closed pipe!",
-        "file": "/future/exec/ExecFuture.php",
-        "line": 267,
-        "types": []
-      },
-      {
-        "string": "Command killed by timeout after running for more than %s seconds.",
-        "file": "/future/exec/ExecFuture.php",
-        "line": 374,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Command failed with error #%d!",
-        "file": "/future/exec/ExecFuture.php",
-        "line": 377,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "JSON command '%s' emitted text to stderr when none was expected: %d",
-        "file": "/future/exec/ExecFuture.php",
-        "line": 407,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "JSON command '%s' did not produce a valid JSON object on stdout: %s",
-        "file": "/future/exec/ExecFuture.php",
-        "line": 421,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Failed to read from %s",
-        "file": "/future/exec/ExecFuture.php",
-        "line": 555,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Unable to create temporary files for Windows stdout / stderr streams",
-        "file": "/future/exec/ExecFuture.php",
-        "line": 653,
-        "types": []
-      },
-      {
-        "string": "Unable to open temporary files for reading Windows stdout / stderr streams",
-        "file": "/future/exec/ExecFuture.php",
-        "line": 676,
-        "types": []
-      },
-      {
-        "string": "Failed to `%s`: %s",
-        "file": "/future/exec/ExecFuture.php",
-        "line": 691,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Failed to set streams nonblocking.",
-        "file": "/future/exec/ExecFuture.php",
-        "line": 711,
-        "types": []
-      },
-      {
-        "string": "Unable to write to stdin!",
-        "file": "/future/exec/ExecFuture.php",
-        "line": 731,
-        "types": []
-      }
-    ],
-    "ae64185a4b37fe4b4bf0d6b0c3038c80": [
-      {
-        "string": "Token replacement count exceeded limit!",
-        "file": "/grammar/PhutilContextFreeGrammar.php",
-        "line": 28,
-        "types": []
-      },
-      {
-        "string": "Invalid token '%s' in grammar.",
-        "file": "/grammar/PhutilContextFreeGrammar.php",
-        "line": 46,
-        "types": [
-          null
-        ]
-      }
-    ],
-    "ba44e16cfb863bdbb0a8856ccebaef75": [
-      {
-        "string": "%s does not support the \"%s\" modifier.",
-        "file": "/xsprintf/xsprintf.php",
-        "line": 53,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Too few arguments to %s.",
-        "file": "/xsprintf/xsprintf.php",
-        "line": 65,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Too many arguments to %s.",
-        "file": "/xsprintf/xsprintf.php",
-        "line": 85,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "This function exists only to document the call signature for %s callbacks.",
-        "file": "/xsprintf/xsprintf.php",
-        "line": 124,
-        "types": [
-          null
-        ]
-      }
-    ],
-    "1ec79f3c783cb9f645e3f61b2a6a0527": [
-      {
-        "string": "Expected an array for %%L%s conversion.",
-        "file": "/xsprintf/csprintf.php",
-        "line": 86,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Expected %s for %%P conversion.",
-        "file": "/xsprintf/csprintf.php",
-        "line": 124,
-        "types": [
-          null
-        ]
-      }
-    ],
-    "77a2a44bde45c32bdd267a504ecf212c": [
-      {
-        "string": "Unknown escaping mode!",
-        "file": "/xsprintf/PhutilCommandString.php",
-        "line": 55,
-        "types": []
-      }
-    ],
-    "a87372666a04b80df4e4cce575b2c42a": [
-      {
-        "string": "This test doesn't work on Windows.",
-        "file": "/xsprintf/__tests__/PhutilCsprintfTestCase.php",
-        "line": 79,
-        "types": []
       }
     ],
     "2bc999aef013f410b004bca083f7df27": [
@@ -922,6 +1048,14 @@
           null,
           null
         ]
+      }
+    ],
+    "48b340e6625e715e585495575a93fe19": [
+      {
+        "string": "Query returned more than one row.",
+        "file": "/xsprintf/queryfx.php",
+        "line": 22,
+        "types": []
       }
     ],
     "a5f181c5868b3e523048e9ecdd1ae925": [
@@ -1770,7 +1904,7 @@
         ]
       }
     ],
-    "32aa0b1c1dc74054ddf7d35816300a73": [
+    "56486ee9a1b31be62a0a861e205aec0d": [
       {
         "string": "Expected valid JSON response from Disqus account data request.",
         "file": "/auth/PhutilDisqusAuthAdapter.php",
@@ -1778,7 +1912,7 @@
         "types": []
       }
     ],
-    "9a0846094362c8e3266dbddd1bb2e939": [
+    "4ad71e6b86c0300d2b4f3a9c227a0b23": [
       {
         "string": "Expected valid JSON response from Phabricator %s request.",
         "file": "/auth/PhutilPhabricatorAuthAdapter.php",
@@ -1788,7 +1922,7 @@
         ]
       }
     ],
-    "5a11e3c3f73c8c1696626fae68c48f4f": [
+    "142f15a58e6b62b022b28116ae82d211": [
       {
         "string": "%s is required!",
         "file": "/auth/PhutilOAuth1AuthAdapter.php",
@@ -1835,11 +1969,11 @@
         ]
       }
     ],
-    "743ce3d9e420d6067612ca1017b0d3cb": [
+    "78a4bca81e4fcd20c4b530f8a175676e": [
       {
         "string": "Access token error: %s",
         "file": "/auth/PhutilOAuthAuthAdapter.php",
-        "line": 194,
+        "line": 193,
         "types": [
           null
         ]
@@ -1847,13 +1981,13 @@
       {
         "string": "Failed to decode OAuth access token response: %s",
         "file": "/auth/PhutilOAuthAuthAdapter.php",
-        "line": 215,
+        "line": 214,
         "types": [
           null
         ]
       }
     ],
-    "557647064ac1aee961ec985d735fed29": [
+    "afe997fcdcc826cbeab0fccb1247c7f3": [
       {
         "string": "Expected valid JSON response from GitHub account data request.",
         "file": "/auth/PhutilGitHubAuthAdapter.php",
@@ -1861,7 +1995,7 @@
         "types": []
       }
     ],
-    "8f2ae326f95df4b6e2c9ba05a4e4d259": [
+    "127ee0fb7c8ecd09d9fd15c7d7aeaeaf": [
       {
         "string": "%s failed!",
         "file": "/auth/PhutilJIRAAuthAdapter.php",
@@ -1979,33 +2113,15 @@
         "types": []
       }
     ],
-    "bb982d13662df80369f24ff8995545a0": [
-      {
-        "string": "Expected to retrieve an \"account\" email from Google Plus API call to identify account, but failed.",
-        "file": "/auth/PhutilGoogleAuthAdapter.php",
-        "line": 26,
-        "types": []
-      },
+    "14b36afd4d1ac478c7a2db928ed5095c": [
       {
         "string": "Expected valid JSON response from Google account data request.",
         "file": "/auth/PhutilGoogleAuthAdapter.php",
-        "line": 123,
+        "line": 98,
         "types": []
-      },
-      {
-        "string": "Google returned an \"%s\" error. This usually means you need to enable the \"Google+ API\" in your Google Cloud Console, under \"APIs\".\n\nAround March 2014, Google made some API changes which require this configuration adjustment.\n\nNormally, you can resolve this issue by going to %s, then clicking \"API Project\", then \"APIs & auth\", then turning the \"Google+ API\" on. The names you see on the console may be different depending on how your integration is set up. If you are not sure, you can hunt through the projects until you find the one associated with the right Application ID under \"Credentials\". The Application ID this install is using is \"%s\".\n\n(If you are unable to log into Phabricator, you can use \"%s\" to recover access to an administrator account.)\n\nFull HTTP Response\n\n%s",
-        "file": "/auth/PhutilGoogleAuthAdapter.php",
-        "line": 153,
-        "types": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
       }
     ],
-    "6c935074d8b8e7fd1a5c2b69f241f692": [
+    "1eaa1cb84dc0c57fc5af1b3d08b3a8ec": [
       {
         "string": "Expected valid JSON response from Amazon account data request.",
         "file": "/auth/PhutilAmazonAuthAdapter.php",
@@ -2013,7 +2129,7 @@
         "types": []
       }
     ],
-    "ba10fa7f9b50bc924930529c5ab70adc": [
+    "3d48e238c4fcf23cbb1ec2f4f845883b": [
       {
         "string": "Expected valid JSON response from Facebook account data request.",
         "file": "/auth/PhutilFacebookAuthAdapter.php",
@@ -2868,68 +2984,6 @@
         ]
       }
     ],
-    "44a472709fbc9d8271945725bdb25208": [
-      {
-        "string": "%s invalid on %s",
-        "file": "/utils/__tests__/PhutilUtilsTestCase.php",
-        "line": 181,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "(Retained) %s",
-        "file": "/utils/__tests__/PhutilUtilsTestCase.php",
-        "line": 374,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "(Discarded) %s",
-        "file": "/utils/__tests__/PhutilUtilsTestCase.php",
-        "line": 393,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Credential censoring for: %s",
-        "file": "/utils/__tests__/PhutilUtilsTestCase.php",
-        "line": 627,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Expecting \"%s\" to match \"%s\".",
-        "file": "/utils/__tests__/PhutilUtilsTestCase.php",
-        "line": 763,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Expecting \"%s\" not to match \"%s\".",
-        "file": "/utils/__tests__/PhutilUtilsTestCase.php",
-        "line": 769,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Test Case: \"%s\" vs \"%s\"",
-        "file": "/utils/__tests__/PhutilUtilsTestCase.php",
-        "line": 821,
-        "types": [
-          null,
-          null
-        ]
-      }
-    ],
     "44b90611b3ae9c9712a52d715f72592c": [
       {
         "string": "Unable to access %s or `%s` on this system to get system memory information.",
@@ -2984,209 +3038,6 @@
         "types": [
           null
         ]
-      }
-    ],
-    "900c2877a9aacc2376e6b9640b03f389": [
-      {
-        "string": "Objects passed to \"%s\" must return sort vectors (objects of class \"%s\") from the specified method (\"%s\"). One object (with key \"%s\") did not.",
-        "file": "/utils/utils.php",
-        "line": 426,
-        "types": [
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Argument method is not a string.",
-        "file": "/utils/utils.php",
-        "line": 500,
-        "types": []
-      },
-      {
-        "string": "Argument index is not a scalar.",
-        "file": "/utils/utils.php",
-        "line": 545,
-        "types": []
-      },
-      {
-        "string": "Array item with key '%s' must be of type array, %s given.",
-        "file": "/utils/utils.php",
-        "line": 610,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "instance of %s",
-        "file": "/utils/utils.php",
-        "line": 618,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Array item with key '%s' must be an instance of %s, %s given.",
-        "file": "/utils/utils.php",
-        "line": 622,
-        "types": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Argument must be scalar or object which implements %s!",
-        "file": "/utils/utils.php",
-        "line": 662,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Expected all items passed to `%s` to be arrays, but argument with key \"%s\" has type \"%s\".",
-        "file": "/utils/utils.php",
-        "line": 822,
-        "types": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Unable to parse unit specification (expected a specification in the form \"%s\"): %s",
-        "file": "/utils/utils.php",
-        "line": 1063,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "This function can not convert from the unit \"%s\".",
-        "file": "/utils/utils.php",
-        "line": 1097,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "This function can not convert from the unit \"%s\".",
-        "file": "/utils/utils.php",
-        "line": 1115,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "This function can not convert into the unit \"%s\".",
-        "file": "/utils/utils.php",
-        "line": 1122,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "\"%s\" is not an exact quantity.",
-        "file": "/utils/utils.php",
-        "line": 1130,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Argument to \"phutil_microseconds_since(...)\" should be a value returned from \"microtime(true)\".",
-        "file": "/utils/utils.php",
-        "line": 1151,
-        "types": []
-      },
-      {
-        "string": "#%d: %s",
-        "file": "/utils/utils.php",
-        "line": 1198,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "#%d",
-        "file": "/utils/utils.php",
-        "line": 1200,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Failed to JSON encode value (%s): %s.",
-        "file": "/utils/utils.php",
-        "line": 1208,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Failed to JSON encode value: %s.",
-        "file": "/utils/utils.php",
-        "line": 1213,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Dictionary key \"%s\" is not valid UTF8, and cannot be JSON encoded.",
-        "file": "/utils/utils.php",
-        "line": 1263,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "String value is not valid UTF8, and can not be JSON encoded: %s",
-        "file": "/utils/utils.php",
-        "line": 1281,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Dictionary value at key \"%s\" is not valid UTF8, and cannot be JSON encoded: %s",
-        "file": "/utils/utils.php",
-        "line": 1285,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "%s is not compatible with your version of PHP (%s). This function is only supported on PHP versions newer than 5.3.0.",
-        "file": "/utils/utils.php",
-        "line": 1311,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Invalid glob pattern.",
-        "file": "/utils/utils.php",
-        "line": 1487,
-        "types": []
-      },
-      {
-        "string": "First hash argument must be a string.",
-        "file": "/utils/utils.php",
-        "line": 1520,
-        "types": []
-      },
-      {
-        "string": "Second hash argument must be a string.",
-        "file": "/utils/utils.php",
-        "line": 1524,
-        "types": []
       }
     ],
     "b7aa98e78bbb6189ce8e0d3d5218e993": [
@@ -3366,7 +3217,7 @@
         "types": []
       }
     ],
-    "27aa80043e516228fbee7fff9d8ba6e5": [
+    "41ad91f45533bbf25583ac2b09fb3515": [
       {
         "string": "Failed to read file '%s'.",
         "file": "/filesystem/Filesystem.php",
@@ -3496,7 +3347,7 @@
       {
         "string": "%s failed to generate entropy!",
         "file": "/filesystem/Filesystem.php",
-        "line": 439,
+        "line": 446,
         "types": [
           null
         ]
@@ -3504,7 +3355,7 @@
       {
         "string": "%s returned an unexpected number of bytes (got %s, expected %s)!",
         "file": "/filesystem/Filesystem.php",
-        "line": 446,
+        "line": 453,
         "types": [
           null,
           "number",
@@ -3514,13 +3365,13 @@
       {
         "string": "Failed to read random bytes!",
         "file": "/filesystem/Filesystem.php",
-        "line": 467,
+        "line": 474,
         "types": []
       },
       {
         "string": "%s requires the PHP OpenSSL extension to be installed and enabled to access an entropy source. On Windows, this extension is usually installed but not enabled by default. Enable it in your \"s\".",
         "file": "/filesystem/Filesystem.php",
-        "line": 482,
+        "line": 489,
         "types": [
           null,
           null
@@ -3529,7 +3380,7 @@
       {
         "string": "%s requires the PHP OpenSSL extension or access to \"%s\". Install or enable the OpenSSL extension, or make sure \"%s\" is accessible.",
         "file": "/filesystem/Filesystem.php",
-        "line": 491,
+        "line": 498,
         "types": [
           null,
           null,
@@ -3537,9 +3388,42 @@
         ]
       },
       {
+        "string": "Minimum value must be an integer.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 550,
+        "types": []
+      },
+      {
+        "string": "Maximum value must be an integer.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 554,
+        "types": []
+      },
+      {
+        "string": "Minimum (\"%d\") must not be greater than maximum (\"%d\").",
+        "file": "/filesystem/Filesystem.php",
+        "line": 560,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "mt_rand() range is smaller than the requested range.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 578,
+        "types": []
+      },
+      {
+        "string": "Bad return value from mt_rand().",
+        "file": "/filesystem/Filesystem.php",
+        "line": 583,
+        "types": []
+      },
+      {
         "string": "Failed to create directory '%s'.",
         "file": "/filesystem/Filesystem.php",
-        "line": 656,
+        "line": 713,
         "types": [
           null
         ]
@@ -3547,19 +3431,19 @@
       {
         "string": "Unable to determine system temporary directory.",
         "file": "/filesystem/Filesystem.php",
-        "line": 702,
+        "line": 759,
         "types": []
       },
       {
         "string": "Failed to create a temporary directory: the disk is full.",
         "file": "/filesystem/Filesystem.php",
-        "line": 724,
+        "line": 781,
         "types": []
       },
       {
         "string": "Failed to create a temporary directory in '%s'.",
         "file": "/filesystem/Filesystem.php",
-        "line": 729,
+        "line": 786,
         "types": [
           null
         ]
@@ -3567,7 +3451,7 @@
       {
         "string": "Unable to list contents of directory '%s'.",
         "file": "/filesystem/Filesystem.php",
-        "line": 758,
+        "line": 815,
         "types": [
           null
         ]
@@ -3575,7 +3459,7 @@
       {
         "string": "File system entity '%s' does not exist.",
         "file": "/filesystem/Filesystem.php",
-        "line": 1067,
+        "line": 1124,
         "types": [
           null
         ]
@@ -3583,7 +3467,7 @@
       {
         "string": "Path '%s' already exists!",
         "file": "/filesystem/Filesystem.php",
-        "line": 1084,
+        "line": 1141,
         "types": [
           null
         ]
@@ -3591,7 +3475,7 @@
       {
         "string": "Requested path '%s' is not a file.",
         "file": "/filesystem/Filesystem.php",
-        "line": 1101,
+        "line": 1158,
         "types": [
           null
         ]
@@ -3599,7 +3483,7 @@
       {
         "string": "Requested path '%s' is not a directory.",
         "file": "/filesystem/Filesystem.php",
-        "line": 1118,
+        "line": 1175,
         "types": [
           null
         ]
@@ -3607,7 +3491,7 @@
       {
         "string": "Requested path '%s' is not writable.",
         "file": "/filesystem/Filesystem.php",
-        "line": 1135,
+        "line": 1192,
         "types": [
           null
         ]
@@ -3615,7 +3499,7 @@
       {
         "string": "Path '%s' is not readable.",
         "file": "/filesystem/Filesystem.php",
-        "line": 1152,
+        "line": 1209,
         "types": [
           null
         ]
@@ -3627,6 +3511,26 @@
         "file": "/filesystem/__tests__/PhutilFileLockTestCase.php",
         "line": 170,
         "types": []
+      }
+    ],
+    "a228e828b0c7887e1da222a0d855b779": [
+      {
+        "string": "%d <= %d",
+        "file": "/filesystem/__tests__/FilesystemTestCase.php",
+        "line": 192,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "%d >= %d",
+        "file": "/filesystem/__tests__/FilesystemTestCase.php",
+        "line": 193,
+        "types": [
+          null,
+          null
+        ]
       }
     ],
     "ef2b18a04e4e8b38dbce718e8cea3636": [
@@ -4923,11 +4827,11 @@
         ]
       }
     ],
-    "acb1390105383ad63a6dee30b72e36e5": [
+    "5e6dfc2ac962040301d0a277d50b2d7e": [
       {
         "string": "Rejecting ambiguous URI \"%s\". This URI is not formatted or encoded properly.",
         "file": "/parser/PhutilURI.php",
-        "line": 53,
+        "line": 56,
         "types": [
           null
         ]
@@ -4935,15 +4839,40 @@
       {
         "string": "Failed to parse URI \"%s\" as a Git URI.",
         "file": "/parser/PhutilURI.php",
-        "line": 78,
+        "line": 81,
         "types": [
+          null
+        ]
+      },
+      {
+        "string": "Query parameters include a duplicate key (\"%s\") and can not be nondestructively represented as a map.",
+        "file": "/parser/PhutilURI.php",
+        "line": 292,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Value provided to \"replaceQueryParam()\" for key \"%s\" is NULL. Use \"removeQueryParam()\" to remove a query parameter.",
+        "file": "/parser/PhutilURI.php",
+        "line": 338,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "You are trying to construct an ambiguous URI: query parameter \"%s\" is present in both the string argument (\"%s\") and the map argument.",
+        "file": "/parser/PhutilURI.php",
+        "line": 371,
+        "types": [
+          null,
           null
         ]
       },
       {
         "string": "Unable to convert URI \"%s\" into a standard URI because the path is relative. Standard URIs can not represent relative paths.",
         "file": "/parser/PhutilURI.php",
-        "line": 335,
+        "line": 507,
         "types": [
           null
         ]
@@ -5300,7 +5229,7 @@
         "types": []
       }
     ],
-    "ce032d19c7ac16e92223ddb8f570115f": [
+    "2071ea251dcda945b28e232c06790a00": [
       {
         "string": "protocol",
         "file": "/parser/__tests__/PhutilURITestCase.php",
@@ -5340,55 +5269,55 @@
       {
         "string": "fragment",
         "file": "/parser/__tests__/PhutilURITestCase.php",
-        "line": 23,
+        "line": 26,
         "types": []
       },
       {
         "string": "protocol",
         "file": "/parser/__tests__/PhutilURITestCase.php",
-        "line": 31,
+        "line": 34,
         "types": []
       },
       {
         "string": "user",
         "file": "/parser/__tests__/PhutilURITestCase.php",
-        "line": 32,
+        "line": 35,
         "types": []
       },
       {
         "string": "password",
         "file": "/parser/__tests__/PhutilURITestCase.php",
-        "line": 33,
+        "line": 36,
         "types": []
       },
       {
         "string": "domain",
         "file": "/parser/__tests__/PhutilURITestCase.php",
-        "line": 34,
+        "line": 37,
         "types": []
       },
       {
         "string": "path",
         "file": "/parser/__tests__/PhutilURITestCase.php",
-        "line": 37,
+        "line": 40,
         "types": []
       },
       {
         "string": "query parameters",
         "file": "/parser/__tests__/PhutilURITestCase.php",
-        "line": 41,
+        "line": 44,
         "types": []
       },
       {
         "string": "fragment",
         "file": "/parser/__tests__/PhutilURITestCase.php",
-        "line": 42,
+        "line": 45,
         "types": []
       },
       {
         "string": "Unexpected parse result for dangerous URI \"%s\".",
         "file": "/parser/__tests__/PhutilURITestCase.php",
-        "line": 116,
+        "line": 119,
         "types": [
           null
         ]
@@ -5396,37 +5325,55 @@
       {
         "string": "protocol",
         "file": "/parser/__tests__/PhutilURITestCase.php",
-        "line": 176,
+        "line": 179,
         "types": []
       },
       {
         "string": "domain",
         "file": "/parser/__tests__/PhutilURITestCase.php",
-        "line": 177,
+        "line": 180,
         "types": []
       },
       {
         "string": "path",
-        "file": "/parser/__tests__/PhutilURITestCase.php",
-        "line": 178,
-        "types": []
-      },
-      {
-        "string": "protocol",
         "file": "/parser/__tests__/PhutilURITestCase.php",
         "line": 181,
         "types": []
       },
       {
+        "string": "protocol",
+        "file": "/parser/__tests__/PhutilURITestCase.php",
+        "line": 184,
+        "types": []
+      },
+      {
         "string": "domain",
         "file": "/parser/__tests__/PhutilURITestCase.php",
-        "line": 182,
+        "line": 185,
         "types": []
       },
       {
         "string": "path",
         "file": "/parser/__tests__/PhutilURITestCase.php",
-        "line": 183,
+        "line": 186,
+        "types": []
+      },
+      {
+        "string": "Replacing a parameter should overwrite other instances of the key.",
+        "file": "/parser/__tests__/PhutilURITestCase.php",
+        "line": 319,
+        "types": []
+      },
+      {
+        "string": "Nonscalar HTTP keys should throw.",
+        "file": "/parser/__tests__/PhutilURITestCase.php",
+        "line": 334,
+        "types": []
+      },
+      {
+        "string": "Nonscalar HTTP values should throw.",
+        "file": "/parser/__tests__/PhutilURITestCase.php",
+        "line": 345,
         "types": []
       }
     ],
@@ -6753,6 +6700,47 @@
         ]
       }
     ],
+    "c2d0004d9321fa4a63aef0ae2a13613d": [
+      {
+        "string": "Async queries are not supported.",
+        "file": "/aphront/storage/connection/AphrontDatabaseConnection.php",
+        "line": 89,
+        "types": []
+      },
+      {
+        "string": "Async queries are not supported.",
+        "file": "/aphront/storage/connection/AphrontDatabaseConnection.php",
+        "line": 93,
+        "types": []
+      },
+      {
+        "string": "Trying to remember lock \"%s\", but this lock has already been remembered.",
+        "file": "/aphront/storage/connection/AphrontDatabaseConnection.php",
+        "line": 125,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Trying to forget lock \"%s\", but this connection does not remember that lock.",
+        "file": "/aphront/storage/connection/AphrontDatabaseConnection.php",
+        "line": 139,
+        "types": [
+          null
+        ]
+      }
+    ],
+    "14ce1483b182194f696f215e3f9f89d1": [
+      {
+        "string": "Database isolation currently only supports some queries. You are trying to issue a query which does not begin with an allowed keyword (%s): '%s'.",
+        "file": "/aphront/storage/connection/AphrontIsolatedDatabaseConnection.php",
+        "line": 96,
+        "types": [
+          null,
+          null
+        ]
+      }
+    ],
     "15dddf2d6af737a774dea150a89ebc9d": [
       {
         "string": "Too many calls to %s or %s!",
@@ -6824,7 +6812,7 @@
         "types": []
       }
     ],
-    "bf07d1c29d8e00b4aa8d3fee7ad6b130": [
+    "7bf386762cf6683abcc884764da69d13": [
       {
         "string": "About to call new %s, but the PHP MySQLi extension is not available!",
         "file": "/aphront/storage/connection/mysql/AphrontMySQLiDatabaseConnection.php",
@@ -6836,21 +6824,100 @@
       {
         "string": "Failed to poll mysqli connection!",
         "file": "/aphront/storage/connection/mysql/AphrontMySQLiDatabaseConnection.php",
-        "line": 113,
+        "line": 118,
         "types": []
       },
       {
         "string": "Query timed out after %s second(s)!",
         "file": "/aphront/storage/connection/mysql/AphrontMySQLiDatabaseConnection.php",
-        "line": 118,
+        "line": 123,
         "types": [
           "number"
         ]
       },
       {
+        "string": "Call to \"mysqli->query()\" failed, but did not set an error code or emit an error message.",
+        "file": "/aphront/storage/connection/mysql/AphrontMySQLiDatabaseConnection.php",
+        "line": 152,
+        "types": []
+      },
+      {
         "string": "There are some results left in the result set.",
         "file": "/aphront/storage/connection/mysql/AphrontMySQLiDatabaseConnection.php",
-        "line": 154,
+        "line": 188,
+        "types": []
+      }
+    ],
+    "5d289143aa15c46dcff7c5edbb0e8597": [
+      {
+        "string": "Retrying (%d) after %s: %s",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 108,
+        "types": [
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "string": "No query result to fetch from!",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 147,
+        "types": []
+      },
+      {
+        "string": "Attempting to issue a write query on a read-only connection (to database \"%s\")!",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 272,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Simulated error.",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 286,
+        "types": []
+      },
+      {
+        "string": "#%d: %s",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 296,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "This error may occur if your configured MySQL \"wait_timeout\" or \"max_allowed_packet\" values are too small. This may also indicate that something used the MySQL \"KILL <process>\" command to kill the connection running the query.",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 303,
+        "types": []
+      },
+      {
+        "string": "Attempt to connect to %s@%s failed with error #%d: %s.",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 340,
+        "types": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "string": "#%d: %s",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 354,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Attempting to construct a query using a non-utf8 string when utf8 is expected. Use the `%%B` conversion to escape binary strings data.",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 382,
         "types": []
       }
     ],
@@ -7148,7 +7215,7 @@
         ]
       }
     ],
-    "aa7647eee58b5796aae34ed5eef948df": [
+    "f7e3ee3366abc112c39dd999ee7719ff": [
       {
         "string": "This is just an example function!",
         "file": "/error/phlog.php",
@@ -7167,17 +7234,17 @@
         ]
       }
     ],
-    "0146254d173086d668e41b9a21f41181": [
+    "75e461f577ad144da999c73e26238010": [
       {
         "string": "Expected JSON response from Postmark.",
         "file": "/future/postmark/PhutilPostmarkFuture.php",
-        "line": 69,
+        "line": 84,
         "types": []
       },
       {
         "string": "Received error from Postmark: (%s) %s",
         "file": "/future/postmark/PhutilPostmarkFuture.php",
-        "line": 77,
+        "line": 92,
         "types": [
           null,
           null
@@ -7192,7 +7259,7 @@
         "types": []
       }
     ],
-    "b7dde2bc76dc718a1ede8225744aa63f": [
+    "00326e1c26447b763f4eb35217ec3b27": [
       {
         "string": "Signature method '%s' requires %s!",
         "file": "/future/oauth/PhutilOAuth1Future.php",
@@ -7325,7 +7392,7 @@
         ]
       }
     ],
-    "a36e7048816840db1a2e6f65a98beeee": [
+    "a61425600f5ec8084b8383372dfc7a38": [
       {
         "string": "The HTTP method '%s' is not supported. Supported HTTP methods are: %s.",
         "file": "/future/http/BaseHTTPFuture.php",
@@ -7342,7 +7409,7 @@
         "types": []
       }
     ],
-    "8676cba496bd9b48f3042526c127f6bf": [
+    "0f318a94aabfa4c03719d6d9cb5e7f1e": [
       {
         "string": "%s currently supports only one file attachment for each parameter name. You are trying to attach two different files with the same parameter, \"%s\".",
         "file": "/future/http/HTTPSFuture.php",
@@ -7509,7 +7576,7 @@
         ]
       }
     ],
-    "b0a3eb892b7a57184e2eb061629940f1": [
+    "1c282692d547910f348f8bb3f926454a": [
       {
         "string": "Could not parse URI '%s'.",
         "file": "/future/http/HTTPFuture.php",
@@ -7674,7 +7741,90 @@
         ]
       }
     ],
-    "edbfa6d47de07baf43eb4288ea78bf24": [
+    "788fc2f447a413c3a90dbb04be45566d": [
+      {
+        "string": "Writing to a closed pipe!",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 267,
+        "types": []
+      },
+      {
+        "string": "Command killed by timeout after running for more than %s seconds.",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 374,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Command failed with error #%d!",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 377,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "JSON command '%s' emitted text to stderr when none was expected: %d",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 407,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "JSON command '%s' did not produce a valid JSON object on stdout: %s",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 421,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Failed to read from %s",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 555,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Unable to create temporary files for Windows stdout / stderr streams",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 653,
+        "types": []
+      },
+      {
+        "string": "Unable to open temporary files for reading Windows stdout / stderr streams",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 676,
+        "types": []
+      },
+      {
+        "string": "Failed to `%s`: %s",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 691,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Failed to set streams nonblocking.",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 711,
+        "types": []
+      },
+      {
+        "string": "Unable to write to stdin!",
+        "file": "/future/exec/ExecFuture.php",
+        "line": 731,
+        "types": []
+      }
+    ],
+    "d6b558ff01db3399dde8ac7b3f2cfc1a": [
       {
         "string": "You must %s!",
         "file": "/future/slack/PhutilSlackFuture.php",
@@ -7706,7 +7856,7 @@
         ]
       }
     ],
-    "a8362c4c65198e31385efae75fb86a0f": [
+    "9450216a13844df17f86e77a8f5d8a29": [
       {
         "string": "You must either provide a signing key with setSigningKey(), or provide a secret key with setSecretKey().",
         "file": "/future/aws/PhutilAWSv4Signature.php",
@@ -7904,7 +8054,7 @@
         "types": []
       }
     ],
-    "0fe243919dc4bba006f57e8fc8a705c9": [
+    "8da108d37715abafbe995c1ecd2aae3e": [
       {
         "string": "You must %s!",
         "file": "/future/twitch/PhutilTwitchFuture.php",
