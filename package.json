@@ -5,7 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/arielyang/phabricator_zh_Hans",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "copy_lib": "cp node_modules/vue/dist/vue.min.js public/js ; cp node_modules/whatwg-fetch/fetch.js public/js ; cp node_modules/pluralize/pluralize.js public/js"
   },
   "bin": {
     "compile": "bin/compile",

@@ -1,7 +1,3 @@
-// The MIT License (MIT)
-// Copyright (c) 2013 Blake Embrey (hello@blakeembrey.com)
-// https://github.com/blakeembrey/pluralize
-
 /* global define */
 
 (function (root, pluralize) {
@@ -33,7 +29,7 @@
    * @param  {(RegExp|string)} rule
    * @return {RegExp}
    */
-  function sanitizeRule(rule) {
+  function sanitizeRule (rule) {
     if (typeof rule === 'string') {
       return new RegExp('^' + rule + '$', 'i');
     }
@@ -49,7 +45,7 @@
    * @param  {string}   token
    * @return {Function}
    */
-  function restoreCase(word, token) {
+  function restoreCase (word, token) {
     // Tokens are an exact match.
     if (word === token) return token;
 
@@ -72,7 +68,7 @@
    * @param  {Array}  args
    * @return {string}
    */
-  function interpolate(str, args) {
+  function interpolate (str, args) {
     return str.replace(/\$(\d{1,2})/g, function (match, index) {
       return args[index] || '';
     });
@@ -85,7 +81,7 @@
    * @param  {Array}  rule
    * @return {string}
    */
-  function replace(word, rule) {
+  function replace (word, rule) {
     return word.replace(rule[0], function (match, index) {
       var result = interpolate(rule[1], arguments);
 
@@ -105,7 +101,7 @@
    * @param  {Array}    rules
    * @return {string}
    */
-  function sanitizeWord(token, word, rules) {
+  function sanitizeWord (token, word, rules) {
     // Empty string or doesn't need fixing.
     if (!token.length || uncountables.hasOwnProperty(token)) {
       return word;
@@ -131,7 +127,7 @@
    * @param  {Array}    rules
    * @return {Function}
    */
-  function replaceWord(replaceMap, keepMap, rules) {
+  function replaceWord (replaceMap, keepMap, rules) {
     return function (word) {
       // Get the correct token and case restoration functions.
       var token = word.toLowerCase();
@@ -154,7 +150,7 @@
   /**
    * Check if a word is part of the map.
    */
-  function checkWord(replaceMap, keepMap, rules, bool) {
+  function checkWord (replaceMap, keepMap, rules, bool) {
     return function (word) {
       var token = word.toLowerCase();
 
@@ -173,9 +169,9 @@
    * @param  {boolean} inclusive
    * @return {string}
    */
-  function pluralize(word, count, inclusive) {
-    var pluralized = count === 1 ?
-      pluralize.singular(word) : pluralize.plural(word);
+  function pluralize (word, count, inclusive) {
+    var pluralized = count === 1
+      ? pluralize.singular(word) : pluralize.plural(word);
 
     return (inclusive ? count + ' ' : '') + pluralized;
   }
@@ -334,9 +330,9 @@
     [/[^\u0000-\u007F]$/i, '$0'],
     [/([^aeiou]ese)$/i, '$1'],
     [/(ax|test)is$/i, '$1es'],
-    [/(alias|[^aou]us|t[lm]as|gas|ris)$/i, '$1es'],
+    [/(alias|[^aou]us|tlas|gas|ris)$/i, '$1es'],
     [/(e[mn]u)s?$/i, '$1s'],
-    [/([^l]ias|[aeiou]las|[ejzr]as|[iu]am)$/i, '$1'],
+    [/([^l]ias|[aeiou]las|[emjzr]as|[iu]am)$/i, '$1'],
     [/(alumn|syllab|octop|vir|radi|nucle|fung|cact|stimul|termin|bacill|foc|uter|loc|strat)(?:us|i)$/i, '$1i'],
     [/(alumn|alg|vertebr)(?:a|ae)$/i, '$1ae'],
     [/(seraph|cherub)(?:im)?$/i, '$1im'],
@@ -349,7 +345,7 @@
     [/([^ch][ieo][ln])ey$/i, '$1ies'],
     [/(x|ch|ss|sh|zz)$/i, '$1es'],
     [/(matr|cod|mur|sil|vert|ind|append)(?:ix|ex)$/i, '$1ices'],
-    [/\b((?:tit)?m|l)(?:ice|ouse)$/i, '$1ice'],
+    [/(m|l)(?:ice|ouse)$/i, '$1ice'],
     [/(pe)(?:rson|ople)$/i, '$1ople'],
     [/(child)(?:ren)?$/i, '$1ren'],
     [/eaux$/i, '$0'],
@@ -370,9 +366,9 @@
     [/ies$/i, 'y'],
     [/\b([pl]|zomb|(?:neck|cross)?t|coll|faer|food|gen|goon|group|lass|talk|goal|cut)ies$/i, '$1ie'],
     [/\b(mon|smil)ies$/i, '$1ey'],
-    [/\b((?:tit)?m|l)ice$/i, '$1ouse'],
+    [/(m|l)ice$/i, '$1ouse'],
     [/(seraph|cherub)im$/i, '$1'],
-    [/(x|ch|ss|sh|zz|tto|go|cho|alias|[^aou]us|t[lm]as|gas|(?:her|at|gr)o|ris)(?:es)?$/i, '$1'],
+    [/(x|ch|ss|sh|zz|tto|go|cho|alias|[^aou]us|tlas|gas|(?:her|at|gr)o|ris)(?:es)?$/i, '$1'],
     [/(analy|ba|diagno|parenthe|progno|synop|the|empha|cri)(?:sis|ses)$/i, '$1sis'],
     [/(movie|twelve|abuse|e[mn]u)s$/i, '$1'],
     [/(test)(?:is|es)$/i, '$1is'],
@@ -401,7 +397,6 @@
     'aid',
     'alcohol',
     'ammo',
-    'analytics',
     'anime',
     'athletics',
     'audio',
@@ -427,7 +422,6 @@
     'equipment',
     'excretion',
     'expertise',
-    'firmware',
     'flounder',
     'fun',
     'gallows',
@@ -452,14 +446,11 @@
     'mews',
     'moose',
     'music',
-    'mud',
     'manga',
     'news',
-    'only',
     'pike',
     'plankton',
     'pliers',
-    'police',
     'pollution',
     'premises',
     'rain',
@@ -476,7 +467,7 @@
     'swine',
     'tennis',
     'traffic',
-    'transportation',
+    'transporation',
     'trout',
     'tuna',
     'wealth',
