@@ -12,7 +12,7 @@
     "compile": "bin/compile",
     "sortjson": "bin/sortjson"
   },
-  "author": "",
+  "author": "Ariel Yang",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
