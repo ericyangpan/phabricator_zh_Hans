@@ -55,9 +55,6 @@ if (hasError) {
   console.log('Rules passed.')
 }
 
-// Set output JSON file indent.
-jsonfile.spaces = 2
-
 // Sort keys of translations object.
 translationsData = sortKeys(translationsData)
 
@@ -307,7 +304,9 @@ function writeFile(path, content) {
     fs.writeFileSync(path, content)
   } else {
     // JSON file.
-    jsonfile.writeFileSync(path, content)
+    jsonfile.writeFileSync(path, content, {
+      spaces: 2
+    })
   }
 
   console.log('-'.repeat(30))

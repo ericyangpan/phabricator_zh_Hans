@@ -68,8 +68,9 @@ app.post('/save/:section', (req, res) => {
     sourceData = sortKeys(sourceData)
   }
 
-  jsonfile.spaces = 2
-  jsonfile.writeFileSync(sectionPaths[section], sourceData)
+  jsonfile.writeFileSync(sectionPaths[section], sourceData, {
+    spaces: 2
+  })
 
   console.log((req.body.length === 1 && req.body[0].value === null) ? `Delete ${section}:` : `Save to ${section}:`)
   console.log(req.body)

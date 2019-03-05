@@ -22,9 +22,6 @@ const translationsData = sortKeys(jsonfile.readFileSync(translationsPath))
 
 const option = process.argv[2]
 
-// Set output JSON file indent.
-jsonfile.spaces = 2
-
 console.log('')
 
 switch (option) {
@@ -79,7 +76,9 @@ console.log('')
 function findAllItems() {
   const resultStrings = getAllStrings()
 
-  jsonfile.writeFileSync(allPath, sortKeys(resultStrings))
+  jsonfile.writeFileSync(allPath, sortKeys(resultStrings), {
+    spaces: 2
+  })
 }
 
 function findSimilarItems() {
@@ -87,7 +86,9 @@ function findSimilarItems() {
 
   cleanupDuplicatedSimilarStrings(resultStrings)
 
-  jsonfile.writeFileSync(similarsPath, resultStrings)
+  jsonfile.writeFileSync(similarsPath, resultStrings, {
+    spaces: 2
+  })
 }
 
 function findObsoletedItems() {
@@ -100,20 +101,28 @@ function findObsoletedItems() {
     }
   }
 
-  jsonfile.writeFileSync(obsoletedPath, obsoletedData)
-  jsonfile.writeFileSync(translationsPath, translationsData)
+  jsonfile.writeFileSync(obsoletedPath, obsoletedData, {
+    spaces: 2
+  })
+  jsonfile.writeFileSync(translationsPath, translationsData, {
+    spaces: 2
+  })
 }
 
 function findTerminologies() {
   const resultStrings = getTerminologies()
 
-  jsonfile.writeFileSync(terminologyPath, resultStrings)
+  jsonfile.writeFileSync(terminologyPath, resultStrings, {
+    spaces: 2
+  })
 }
 
 function findUnitItems() {
   const resultStrings = getUnitItems()
 
-  jsonfile.writeFileSync(unitsPath, resultStrings)
+  jsonfile.writeFileSync(unitsPath, resultStrings, {
+    spaces: 2
+  })
 }
 
 function getAllStrings() {
