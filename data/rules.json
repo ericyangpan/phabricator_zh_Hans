@@ -25,7 +25,8 @@
     ],
     ":": [
       "Add \"Re:\" Prefix",
-      "Malformed password hash, expected \"name:hash\"."
+      "Malformed password hash, expected \"name:hash\".",
+      "UTC%+d:%02d"
     ],
     ";": [
       "<script>alert(1);</script>"

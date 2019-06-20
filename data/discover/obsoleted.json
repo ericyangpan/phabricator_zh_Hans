@@ -749,5 +749,6 @@
   "Show %d more line(s)...": "显示更多的 %d 行…",
   "This file was changed only by adding or removing whitespace.": "仅通过添加或移除空白而变更了此文件。",
   "Whitespace Changes:": "空白变更：",
-  "You must %s before accessing this data.": "访问这个数据之前你必须 %s。"
+  "You must %s before accessing this data.": "访问这个数据之前你必须 %s。",
+  "Username: %s": "用户名：%s"
 }

@@ -28,6 +28,7 @@ allow | 允许
 approve | 批准
 artifact | 工件
 attempting | 尝试
+auditor | 审计人
 author | 作者
 authored | 创建
 award | 授予|奖励
@@ -40,6 +41,7 @@ daemon | 守护进程
 default | 默认
 delete | 删除
 dictionary | 字典
+dump | 转储
 effect | 效果|影响
 email | 邮件
 enable | 启用
@@ -60,6 +62,7 @@ is required | 是必填的
 item | 条目|菜单项
 job | 作业
 launch | 启动
+link | 链接|关联
 monogram | 字母组合
 multi-factor | 多因素
 notification | 通知
