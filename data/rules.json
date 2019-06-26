@@ -32,6 +32,7 @@
       "<script>alert(1);</script>"
     ],
     "[^.]\\.(?!\\w|\\d|\\.|%|\\*|\")": [
+      "$ ./bin/drydock release-lease --id %d",
       "US East (N. Virginia, Older default endpoint)"
     ],
     "<.+>": [

@@ -24,47 +24,77 @@ VCS | 版本控制系统
 \n | \n
 account | 帐户
 action | 操作
+activation | 激活
 allow | 允许
+ancestor | 祖先
 approve | 批准
 artifact | 工件
+at least one | 至少一
 attempting | 尝试
 auditor | 审计人
+authenticate | 认证
 author | 作者
-authored | 创建
+authored | 创作
 award | 授予|奖励
 backer | 支持者
+background | 背景|后台
 badge | 徽章
+byte | 字节
 collation | 字符序
 config | 配置
+control | 控制|控件
 creation | 创建
-daemon | 守护进程
+daemon | 守护程序
+datasource | 数据源
 default | 默认
+definition | 定义
 delete | 删除
+dependency | 依赖
+determine | 确定
 dictionary | 字典
+dimension | 尺寸
 dump | 转储
+editor | 编辑器
 effect | 效果|影响
 email | 邮件
 enable | 启用
 event | 事件
 exit | 退出
 fetch | 抓取
+footer | 页脚
+forever | 永远|永久
 full domain | 完整域名
 graph | 图表
 guide | 指南
+haiku | 俳句
 hashtag | 唯一标签
 header | 标头|页头
 host | 主办者|主机|托管|“Host”
+implementation | 实现
 include | 包含
+inherit | 继承
 inline comment | 行内评论
 input | 输入
+internal | 内部
 invitee | 受邀人
+invoke | 调用
 is required | 是必填的
 item | 条目|菜单项
 job | 作业
+keyboard | 键盘
+keyboard shortcut | 键盘快捷键
+kind | 种类
 launch | 启动
+length | 长度
 link | 链接|关联
+maximum | 最大
+membership | 成员身份
+merge | 合并
+minimum | 最小
 monogram | 字母组合
 multi-factor | 多因素
+named | 命名|名为
+need | 需要
 notification | 通知
 observe | 观察
 open status | 开放状态
@@ -72,8 +102,12 @@ output | 输出
 overwrite | 覆盖
 pane | 面板
 parent task | 父任务
+permanent | 永久
 permission | 权限
+permitted | 允许
+play | 播放
 policy | 策略
+portal | 门户
 post | 文章|发送|发布
 preference | 偏好
 priority | 优先级
@@ -81,25 +115,41 @@ profile | 档案|分析
 publisher | 发布者
 pull | 拉取
 push | 推送
+reachable | 可访问
 real name | 真实姓名
 receiver | 接收人
 recipient | 收件人|接受者
 remove | 移除
+renamed | 重命名
 repository | 仓库
 retention policy | 保留策略
-revert | 恢复
+revert | 还原
+ruleset | 规则集
+same | 相同
 save | 保存
+selection | 选择
 serve | 服务于
 session | 会话
 setting | 设置
 setup | 安装设置
+share | 分享|共享
+size | 大小|尺寸
 skipping | 跳过
+snippet | 片段
+sound | 声音
 specification | 规格
 specified | 指定|特定
 start | 开始|启动
+subclass | 子类
 tab | 选项卡
+template | 模板
 token | 令牌|符记|符号|语素
+trigger | 触发|触发器
 type | 类型|键入
+unavailable | 不可用
+underlying | 底层
+unnamed | 未命名的
+unreachable | 不可访问
 update | 更新
 webserver | Web 服务器
 worker | 工作者

@@ -11,7 +11,7 @@
     "xsprintf/xsprintf.php": "ba44e16cfb863bdbb0a8856ccebaef75",
     "xsprintf/csprintf.php": "1ec79f3c783cb9f645e3f61b2a6a0527",
     "xsprintf/ldapsprintf.php": "ec2667790fc806358bd621fe33baeb42",
-    "xsprintf/PhutilQueryString.php": "0db8808f3047f62b8cf647788c0a9afb",
+    "xsprintf/PhutilQueryString.php": "88764236d2029ff23e0e67df19bb6f5b",
     "xsprintf/AphrontDatabaseTableRef.php": "ca5c7a3b8f1b5c941e25a5724d08a4a9",
     "xsprintf/PhutilCommandString.php": "77a2a44bde45c32bdd267a504ecf212c",
     "xsprintf/PhutilQsprintfInterface.php": "8e64933cbd4fd0b4436fdd3d0dce49f5",
@@ -30,7 +30,7 @@
     "xsprintf/exception/XsprintfUnknownConversionException.php": "a5f181c5868b3e523048e9ecdd1ae925",
     "xsprintf/hgsprintf.php": "6c076bd9a28cf04f535cc3059a11e534",
     "xsprintf/PhutilTerminalString.php": "4a2a303001615aec003c75063132b486",
-    "moduleutils/PhutilBootloader.php": "029ad7838413b85d63fbe4e43b513922",
+    "moduleutils/PhutilBootloader.php": "0d04fa1a0e69a983b1fbe8cbea359374",
     "moduleutils/PhutilLibraryConflictException.php": "bdb0ae2fc1580b273c6c1ba5b0ef39d2",
     "moduleutils/PhutilLibraryMapBuilder.php": "ab48ddf5f183da0df59cfbdf6a126457",
     "moduleutils/moduleutils.php": "6eea9212e9a20268b03bebc9321889e7",
@@ -82,7 +82,7 @@
     "conduit/ConduitClientException.php": "7cdd41a97a9dfd8aaadf5c3c537100d5",
     "conduit/ConduitFuture.php": "2bb7629551a5cc64046c94e08fb433c1",
     "conduit/__tests__/ConduitClientTestCase.php": "ae5f8abbdd1c1d5faac1495e2841c5ae",
-    "conduit/ConduitClient.php": "9518262ecbda59c160cd6feebc75d85b",
+    "conduit/ConduitClient.php": "411929de4a58d068398803ed7e19e217",
     "auth/PhutilDisqusAuthAdapter.php": "56486ee9a1b31be62a0a861e205aec0d",
     "auth/PhutilAuthAdapter.php": "cf3026fd5a51a1a39a7746abee3f848f",
     "auth/PhutilPhabricatorAuthAdapter.php": "4ad71e6b86c0300d2b4f3a9c227a0b23",
@@ -141,13 +141,13 @@
     "utils/__tests__/PhutilBufferedIteratorTestCase.php": "c729a8f9007d95dc99c2fcbaf4dfc565",
     "utils/__tests__/PhutilArrayTestCase.php": "c497760c43e230f13e4bc5edb9eefcfc",
     "utils/__tests__/PhutilRopeTestCase.php": "055345d513695f3e8a0136639eb6dc57",
-    "utils/__tests__/PhutilUtilsTestCase.php": "ed969c5dfbc9aedda9f0b36a87aec57b",
+    "utils/__tests__/PhutilUtilsTestCase.php": "b0aa4d874df8bccc8196e4146a67b19f",
     "utils/PhutilSystem.php": "44b90611b3ae9c9712a52d715f72592c",
     "utils/PhutilHashingIterator.php": "5ad54f0306e41a367bbf46112b79d834",
     "utils/PhutilCowsay.php": "a6602144ae547034b9b0951b5c368c8a",
     "utils/PhutilArray.php": "c4fde7ca949b3e6323708e77dcfd207b",
     "utils/PhutilProseDifferenceEngine.php": "85eb0e7399fc74c822c6f3de2f250404",
-    "utils/utils.php": "d7cf95f2796f1f25ac037bcb93cb43f9",
+    "utils/utils.php": "c603e700e48c172a5365a8cf3e6237c8",
     "utils/PhutilDirectedScalarGraph.php": "b7aa98e78bbb6189ce8e0d3d5218e993",
     "utils/PhutilExampleBufferedIterator.php": "08825080bbb72d313db80e4be8057ded",
     "utils/CaseInsensitiveArray.php": "2c2b1dd18c99a55b8b82ffb67b8c162d",
@@ -167,7 +167,7 @@
     "filesystem/linesofalarge/__tests__/LinesOfALargeFileTestCase.php": "c711967b76e53c008fa2664876a23871",
     "filesystem/linesofalarge/LinesOfALargeExecFuture.php": "383bd65b2ce975736e590222530d139d",
     "filesystem/linesofalarge/LinesOfALarge.php": "e718211c4ca83e98b9e1ed04ea6b92ac",
-    "filesystem/Filesystem.php": "41ad91f45533bbf25583ac2b09fb3515",
+    "filesystem/Filesystem.php": "c5b9cd42281fd00ffb66ef2f6cc4c382",
     "filesystem/TempFile.php": "65530de0e1de7a3e7205fe47b2a857d9",
     "filesystem/__tests__/PhutilFileLockTestCase.php": "482ef6c94bd546103a4ea03d649421a9",
     "filesystem/__tests__/FilesystemTestCase.php": "a228e828b0c7887e1da222a0d855b779",
@@ -227,7 +227,7 @@
     "parser/PhutilJSONParser.php": "86a3a90b000607164670feb4c756e62f",
     "parser/PhutilBugtraqParser.php": "f472a9f53d63ebfc76bf08a13956d2bc",
     "parser/PhutilURI.php": "5e6dfc2ac962040301d0a277d50b2d7e",
-    "parser/PhutilTypeSpec.php": "c51a48ad7c621368c6916d0617f39e80",
+    "parser/PhutilTypeSpec.php": "66c122890997d97cca748a4f232a31d0",
     "parser/generator/exception/PhutilUnreachableRuleParserGeneratorException.php": "fc3fc456f909a0550bf59246527ceee8",
     "parser/generator/exception/PhutilParserGeneratorException.php": "abc1c0c9c63737a92ee3365828cddf4e",
     "parser/generator/exception/PhutilUnknownSymbolParserGeneratorException.php": "62841264edd5d5d2779c82b98cb35fa7",
@@ -238,7 +238,7 @@
     "parser/aast/api/AASTToken.php": "63def30242cd1ce42f9cff7abc872215",
     "parser/aast/api/AASTNode.php": "2b092449216b2079930160783142aa65",
     "parser/aast/api/AASTNodeList.php": "32cae9b71a8ce371ac5d3e173cfbd89c",
-    "parser/xhpast/bin/PhutilXHPASTBinary.php": "721fe259c154bafc33a81366b9aa22b4",
+    "parser/xhpast/bin/PhutilXHPASTBinary.php": "cc6f2f844bfe52da92d60db92d57499c",
     "parser/xhpast/parser_tokens.php": "12b7f3a83eb3a9b736a1273c5c5fcddd",
     "parser/xhpast/__tests__/PHPASTParserTestCase.php": "a5d61cfe4cc41e84ed8403b0de99ce45",
     "parser/xhpast/api/XHPASTToken.php": "114eac29f6b1973235588a9f3dc6d320",
@@ -268,7 +268,7 @@
     "parser/PhutilQueryStringParser.php": "226280eade88f2ea5a9740fbaf730a71",
     "parser/PhutilEditorConfig.php": "dc1ff425a99dcd0098e1f3ba4e944809",
     "parser/PhutilDocblockParser.php": "285c3d8ad0b25a1107ff608fc747775e",
-    "parser/PhutilJSON.php": "c1f6b3622825ecc2fd78d7f5409acaf5",
+    "parser/PhutilJSON.php": "7926128fd21202744552071bcbcb9aae",
     "parser/PhutilEmailAddress.php": "143827172ad76ad571d65318856ba85a",
     "parser/exception/PhutilTypeMissingParametersException.php": "f9caca49ffb1a280476cb37333f5d70f",
     "parser/exception/PhutilINIParserException.php": "202af9a56ab340957df14d4d3818f074",
@@ -314,7 +314,7 @@
     "markup/syntax/highlighter/PhutilRainbowSyntaxHighlighter.php": "245eed768857f23f06d5cc33b15515da",
     "markup/syntax/highlighter/PhutilSyntaxHighlighter.php": "05cdd61e5992e377a38ef3009e42c3f6",
     "markup/syntax/highlighter/PhutilSyntaxHighlighterException.php": "266959521260a2a190a2bfb9f74a0eb2",
-    "markup/syntax/engine/PhutilDefaultSyntaxHighlighterEngine.php": "ce697b891cbbe66987e9aeae1d8b8aa3",
+    "markup/syntax/engine/PhutilDefaultSyntaxHighlighterEngine.php": "b64a40b51a56d6a97ee8c9c198c31863",
     "markup/syntax/engine/PhutilSyntaxHighlighterEngine.php": "1d319a6306f2bc445042dceaa81e4523",
     "markup/syntax/engine/__tests__/PhutilDefaultSyntaxHighlighterEngineTestCase.php": "c4b4a9bbd38c5101ebba8c34227ac336",
     "markup/engine/remarkup/blockrule/PhutilRemarkupNoteBlockRule.php": "22bec25e10a1955b6276948cdde85b92",
@@ -324,13 +324,14 @@
     "markup/engine/remarkup/blockrule/PhutilRemarkupDefaultBlockRule.php": "94d82d16fec1e302ef5d439785b9eb6f",
     "markup/engine/remarkup/blockrule/PhutilRemarkupSimpleTableBlockRule.php": "992598a65c86257a50d8b73cb46127de",
     "markup/engine/remarkup/blockrule/PhutilRemarkupHeaderBlockRule.php": "bc27ea4c857c2f6aca029bb8523fa005",
-    "markup/engine/remarkup/blockrule/PhutilRemarkupReplyBlockRule.php": "9185b15b1ec1d02d3aae3d8c40c8caf1",
+    "markup/engine/remarkup/blockrule/PhutilRemarkupReplyBlockRule.php": "422bbbd76fbe3147a1a897c2c67ad23e",
     "markup/engine/remarkup/blockrule/PhutilRemarkupListBlockRule.php": "9d37109a0c7e4ecd071dd918b3d3f0fd",
+    "markup/engine/remarkup/blockrule/PhutilRemarkupQuotedBlockRule.php": "d03a2dc2cfea882a07fc1d91a5e6d580",
     "markup/engine/remarkup/blockrule/PhutilRemarkupLiteralBlockRule.php": "2a7e38c467c4ae6756057d47a5ac64ea",
     "markup/engine/remarkup/blockrule/PhutilRemarkupBlockInterpreter.php": "25805e0d928ce0584cbd397fc28fe9b1",
     "markup/engine/remarkup/blockrule/PhutilRemarkupHorizontalRuleBlockRule.php": "ced39e2a7df1037fc0a01a620b652217",
     "markup/engine/remarkup/blockrule/PhutilRemarkupBlockRule.php": "f39b927ff7a9f55087f34fe0cbf754cd",
-    "markup/engine/remarkup/blockrule/PhutilRemarkupQuotesBlockRule.php": "2443f15f93c1c9f2d4cf5dceaafbf06d",
+    "markup/engine/remarkup/blockrule/PhutilRemarkupQuotesBlockRule.php": "b90622d0bc8b6b9c1f28137f0c24d47f",
     "markup/engine/remarkup/blockrule/PhutilRemarkupInterpreterBlockRule.php": "61e0ae156a616471c03f50ea9285d3ab",
     "markup/engine/remarkup/blockrule/PhutilRemarkupInlineBlockRule.php": "30301a4eb62456b6205ccdf5236b42af",
     "markup/engine/remarkup/markuprule/PhutilRemarkupBoldRule.php": "54fef152aedc17ed0083dee19eaa0448",
@@ -341,11 +342,13 @@
     "markup/engine/remarkup/markuprule/PhutilRemarkupDocumentLinkRule.php": "c26d94892dd83b486384f6bf6bd6585d",
     "markup/engine/remarkup/markuprule/PhutilRemarkupMonospaceRule.php": "4c2fdf172c491fdacc85813fa12aa26e",
     "markup/engine/remarkup/markuprule/PhutilRemarkupHighlightRule.php": "fa6727a18f1fc85f76029e66b9fa5c53",
-    "markup/engine/remarkup/markuprule/PhutilRemarkupHyperlinkRule.php": "7dc2ecbca581f5c1dd208344623df125",
+    "markup/engine/remarkup/markuprule/PhutilRemarkupHyperlinkRef.php": "5b5254c5294781371fd8774637c25b2f",
+    "markup/engine/remarkup/markuprule/PhutilRemarkupHyperlinkRule.php": "771c5ac104db93db9a19a17d781c0f8b",
+    "markup/engine/remarkup/markuprule/PhutilRemarkupHyperlinkEngineExtension.php": "6af3fc61a669e05a58175d7e1c3aa090",
     "markup/engine/remarkup/markuprule/PhutilRemarkupEscapeRemarkupRule.php": "254277324b80355672f181faeeec828f",
     "markup/engine/remarkup/markuprule/PhutilRemarkupLinebreaksRule.php": "51c8e1fde93a9c110b94ec2845c41c40",
-    "markup/engine/remarkup/PhutilRemarkupBlockStorage.php": "6b022b6c2f91981cca3a57f366cb28b1",
-    "markup/engine/__tests__/PhutilRemarkupEngineTestCase.php": "885f3be666e0ece731e8b066a8f2cd62",
+    "markup/engine/remarkup/PhutilRemarkupBlockStorage.php": "61f7e26dcd6d6f47b6a578365a44acf6",
+    "markup/engine/__tests__/PhutilRemarkupEngineTestCase.php": "e968292c1194115a7372791dc0a1f280",
     "markup/engine/PhutilRemarkupEngine.php": "0087c2bcc7acd26c2bfdc000898a937b",
     "__tests__/PhutilLibraryTestCase.php": "a32681574776eefaa731289d1278c534",
     "daemon/PhutilDaemonOverseerModule.php": "51144000451a06467ccce8e285419dd8",
@@ -375,8 +378,8 @@
     "phage/action/PhagePlanAction.php": "6252b55ef5d9191f012b06da36d434b3",
     "phage/__tests__/PhageAgentTestCase.php": "48f621fde60181ed925be8752acca5c0",
     "symbols/PhutilClassMapQuery.php": "14c9da0c5318cff002235fc54530e671",
-    "symbols/PhutilSymbolLoader.php": "9888e701e2f6cfd2edaec72e67b114e0",
-    "symbols/exception/PhutilMissingSymbolException.php": "b26833685e95d1feb70473d11b393a38",
+    "symbols/PhutilSymbolLoader.php": "3ebe3cbb1389e24fa552fa5bf6714d8e",
+    "symbols/exception/PhutilMissingSymbolException.php": "5d8773142acafc93502e12dd25d8f765",
     "sprites/PhutilSprite.php": "890a3c92896f360ceee20f5efa73ca72",
     "sprites/PhutilSpriteSheet.php": "b492d34736e326291a261d66d97ab057",
     "events/PhutilEventListener.php": "11e5eff528f4a09c019fc17f027896ab",
@@ -391,7 +394,7 @@
     "aphront/storage/connection/AphrontDatabaseTransactionState.php": "15dddf2d6af737a774dea150a89ebc9d",
     "aphront/storage/connection/mysql/AphrontMySQLDatabaseConnection.php": "bbe53c5f571f419295443755f5e4305c",
     "aphront/storage/connection/mysql/AphrontMySQLiDatabaseConnection.php": "7bf386762cf6683abcc884764da69d13",
-    "aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php": "5d289143aa15c46dcff7c5edbb0e8597",
+    "aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php": "648f88a77d347ec76938bce6363035e9",
     "aphront/storage/exception/AphrontParameterQueryException.php": "cd17f8e4fdf74c4448c2a6c07f00a8b6",
     "aphront/storage/exception/AphrontObjectMissingQueryException.php": "d48f306c8f0df7af37f04e13ef9a4373",
     "aphront/storage/exception/AphrontLockTimeoutQueryException.php": "96254684743638f13505c4d2b3f3c874",
@@ -435,7 +438,7 @@
     "future/postmark/PhutilPostmarkFuture.php": "75e461f577ad144da999c73e26238010",
     "future/Future.php": "374a434d60b236e70fc5414aef83f999",
     "future/oauth/__tests__/PhutilOAuth1FutureTestCase.php": "8214f07879596efec58a11461b64f292",
-    "future/oauth/PhutilOAuth1Future.php": "00326e1c26447b763f4eb35217ec3b27",
+    "future/oauth/PhutilOAuth1Future.php": "f051886b71e58671bd3b115dd8ec3d01",
     "future/wordpress/PhutilWordPressFuture.php": "a84aebab1043fa54e1365f89b0682eef",
     "future/github/PhutilGitHubFuture.php": "62fa182dfeff39fbc69213b61767bb35",
     "future/github/PhutilGitHubResponse.php": "37b4360851b12d6d9822b90c17454220",
@@ -459,7 +462,7 @@
     "future/exec/CommandException.php": "6f01f1f5d812d48fd346162b58e54ebe",
     "future/exec/PhutilConsoleMetricsSignalHandler.php": "5e1915ca3686caeaad3b84e02e2b02e5",
     "future/exec/PhutilSignalRouter.php": "35ab12df25f2a8d613f97a7b05ece1cd",
-    "future/exec/PhutilExecutableFuture.php": "e1cb7d9009c0735f103779bfc41718c8",
+    "future/exec/PhutilExecutableFuture.php": "e48ca1c8ff12a399d91e74f7cc5ff295",
     "future/exec/__tests__/ExecPassthruTestCase.php": "e575d28e369198efd518ebc63aca0cb6",
     "future/exec/__tests__/ExecFutureTestCase.php": "fff684224387d486f0740ea5160c2dd8",
     "future/exec/ExecFuture.php": "788fc2f447a413c3a90dbb04be45566d",
@@ -482,7 +485,7 @@
     "future/aws/PhutilAWSS3Future.php": "8dced4a7b353fb30e9c58cd559993fe9",
     "future/query/QueryFuture.php": "b81f4e8ffaab8a2505c88e6b5ac208cb",
     "future/twitch/PhutilTwitchFuture.php": "8da108d37715abafbe995c1ecd2aae3e",
-    "future/asana/PhutilAsanaFuture.php": "9d27ec590adb78eca4f3275dc284b400",
+    "future/asana/PhutilAsanaFuture.php": "4a62d3441fdcd348882d3fa786c32696",
     "future/FutureProxy.php": "e02e8c38bf47e3f98a6c6bfd283f2f3e",
     "readableserializer/__tests__/PhutilReadableSerializerTestCase.php": "c5ff46cd16459c1e1d288e143fc9ef0e",
     "readableserializer/PhutilReadableSerializer.php": "a60617cca3db5c024fb43280d7bc8e2a",
@@ -505,10 +508,87 @@
     "console/PhutilConsole.php": "ec2ac424291fa73db3912f4ae198cc30",
     "console/PhutilConsoleFormatter.php": "df384167c3d094bae529cd803ed16be2",
     "console/format.php": "6b2d80e2f971a3800cb0ff9d9fdff1da",
-    "console/PhutilInteractiveEditor.php": "2d51d36e7614fb1808dcabe0c1c1a55b"
+    "console/PhutilInteractiveEditor.php": "243e7b1536bc3b5df4cc49db4fb87c59"
   },
   "strings": {
-    "ed969c5dfbc9aedda9f0b36a87aec57b": [
+    "411929de4a58d068398803ed7e19e217": [
+      {
+        "string": "Conduit URI '%s' must include a valid host.",
+        "file": "/conduit/ConduitClient.php",
+        "line": 29,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Unable to sign Conduit request with signing key.",
+        "file": "/conduit/ConduitClient.php",
+        "line": 240,
+        "types": []
+      },
+      {
+        "string": "Unable to verify request signature, specified \"%s\" (\"%s\") is unknown.",
+        "file": "/conduit/ConduitClient.php",
+        "line": 259,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Unable to verify request signature, no \"%s\" present in request protocol information.",
+        "file": "/conduit/ConduitClient.php",
+        "line": 269,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Unable to verify request signature, no \"%s\" present in request protocol information.",
+        "file": "/conduit/ConduitClient.php",
+        "line": 278,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Unable to verify request signature, signature format is not known.",
+        "file": "/conduit/ConduitClient.php",
+        "line": 287,
+        "types": []
+      },
+      {
+        "string": "Request signature verification failed: signature is not correct.",
+        "file": "/conduit/ConduitClient.php",
+        "line": 314,
+        "types": []
+      },
+      {
+        "string": "OpenSSL encountered an error verifying the request signature: %s",
+        "file": "/conduit/ConduitClient.php",
+        "line": 320,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "OpenSSL encountered an unknown error verifying the request: %s",
+        "file": "/conduit/ConduitClient.php",
+        "line": 325,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Unexpected data type in request data: %s.",
+        "file": "/conduit/ConduitClient.php",
+        "line": 388,
+        "types": [
+          null
+        ]
+      }
+    ],
+    "b0aa4d874df8bccc8196e4146a67b19f": [
       {
         "string": "%s invalid on %s",
         "file": "/utils/__tests__/PhutilUtilsTestCase.php",
@@ -521,7 +601,7 @@
       {
         "string": "(Retained) %s",
         "file": "/utils/__tests__/PhutilUtilsTestCase.php",
-        "line": 374,
+        "line": 405,
         "types": [
           null
         ]
@@ -529,7 +609,7 @@
       {
         "string": "(Discarded) %s",
         "file": "/utils/__tests__/PhutilUtilsTestCase.php",
-        "line": 393,
+        "line": 424,
         "types": [
           null
         ]
@@ -537,7 +617,7 @@
       {
         "string": "Credential censoring for: %s",
         "file": "/utils/__tests__/PhutilUtilsTestCase.php",
-        "line": 628,
+        "line": 659,
         "types": [
           null
         ]
@@ -545,7 +625,7 @@
       {
         "string": "Expecting \"%s\" to match \"%s\".",
         "file": "/utils/__tests__/PhutilUtilsTestCase.php",
-        "line": 760,
+        "line": 791,
         "types": [
           null,
           null
@@ -554,7 +634,7 @@
       {
         "string": "Expecting \"%s\" not to match \"%s\".",
         "file": "/utils/__tests__/PhutilUtilsTestCase.php",
-        "line": 766,
+        "line": 797,
         "types": [
           null,
           null
@@ -563,7 +643,7 @@
       {
         "string": "Test Case: \"%s\" vs \"%s\"",
         "file": "/utils/__tests__/PhutilUtilsTestCase.php",
-        "line": 818,
+        "line": 849,
         "types": [
           null,
           null
@@ -572,13 +652,13 @@
       {
         "string": "HTTP querystring for byte \"%s\".",
         "file": "/utils/__tests__/PhutilUtilsTestCase.php",
-        "line": 917,
+        "line": 948,
         "types": [
           null
         ]
       }
     ],
-    "d7cf95f2796f1f25ac037bcb93cb43f9": [
+    "c603e700e48c172a5365a8cf3e6237c8": [
       {
         "string": "Objects passed to \"%s\" must return sort vectors (objects of class \"%s\") from the specified method (\"%s\"). One object (with key \"%s\") did not.",
         "file": "/utils/utils.php",
@@ -630,9 +710,25 @@
         ]
       },
       {
+        "string": "Expected to find key \"%s\", but it is not present.",
+        "file": "/utils/utils.php",
+        "line": 647,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Found unexpected surplus key \"%s\" where no such key was expected.",
+        "file": "/utils/utils.php",
+        "line": 659,
+        "types": [
+          null
+        ]
+      },
+      {
         "string": "Argument must be scalar or object which implements %s!",
         "file": "/utils/utils.php",
-        "line": 662,
+        "line": 694,
         "types": [
           null
         ]
@@ -640,7 +736,7 @@
       {
         "string": "Expected all items passed to `%s` to be arrays, but argument with key \"%s\" has type \"%s\".",
         "file": "/utils/utils.php",
-        "line": 822,
+        "line": 854,
         "types": [
           null,
           null,
@@ -650,7 +746,7 @@
       {
         "string": "Unable to parse unit specification (expected a specification in the form \"%s\"): %s",
         "file": "/utils/utils.php",
-        "line": 1078,
+        "line": 1110,
         "types": [
           null,
           null
@@ -659,7 +755,7 @@
       {
         "string": "This function can not convert from the unit \"%s\".",
         "file": "/utils/utils.php",
-        "line": 1112,
+        "line": 1144,
         "types": [
           null
         ]
@@ -667,7 +763,7 @@
       {
         "string": "This function can not convert from the unit \"%s\".",
         "file": "/utils/utils.php",
-        "line": 1131,
+        "line": 1163,
         "types": [
           null
         ]
@@ -675,7 +771,7 @@
       {
         "string": "This function can not convert from the unit \"%s\".",
         "file": "/utils/utils.php",
-        "line": 1157,
+        "line": 1189,
         "types": [
           null
         ]
@@ -683,7 +779,7 @@
       {
         "string": "This function can not convert from the unit \"%s\".",
         "file": "/utils/utils.php",
-        "line": 1183,
+        "line": 1215,
         "types": [
           null
         ]
@@ -691,7 +787,7 @@
       {
         "string": "This function can not convert into the unit \"%s\".",
         "file": "/utils/utils.php",
-        "line": 1191,
+        "line": 1223,
         "types": [
           null
         ]
@@ -699,7 +795,7 @@
       {
         "string": "\"%s\" is not an exact quantity.",
         "file": "/utils/utils.php",
-        "line": 1199,
+        "line": 1231,
         "types": [
           null
         ]
@@ -707,13 +803,13 @@
       {
         "string": "Argument to \"phutil_microseconds_since(...)\" should be a value returned from \"microtime(true)\".",
         "file": "/utils/utils.php",
-        "line": 1220,
+        "line": 1252,
         "types": []
       },
       {
         "string": "#%d: %s",
         "file": "/utils/utils.php",
-        "line": 1267,
+        "line": 1299,
         "types": [
           null,
           null
@@ -722,7 +818,7 @@
       {
         "string": "#%d",
         "file": "/utils/utils.php",
-        "line": 1269,
+        "line": 1301,
         "types": [
           null
         ]
@@ -730,7 +826,7 @@
       {
         "string": "Failed to JSON encode value (%s): %s.",
         "file": "/utils/utils.php",
-        "line": 1277,
+        "line": 1309,
         "types": [
           null,
           null
@@ -739,7 +835,7 @@
       {
         "string": "Failed to JSON encode value: %s.",
         "file": "/utils/utils.php",
-        "line": 1282,
+        "line": 1314,
         "types": [
           null
         ]
@@ -747,7 +843,7 @@
       {
         "string": "Dictionary key \"%s\" is not valid UTF8, and cannot be JSON encoded.",
         "file": "/utils/utils.php",
-        "line": 1332,
+        "line": 1364,
         "types": [
           null
         ]
@@ -755,7 +851,7 @@
       {
         "string": "String value is not valid UTF8, and can not be JSON encoded: %s",
         "file": "/utils/utils.php",
-        "line": 1350,
+        "line": 1382,
         "types": [
           null
         ]
@@ -763,7 +859,7 @@
       {
         "string": "Dictionary value at key \"%s\" is not valid UTF8, and cannot be JSON encoded: %s",
         "file": "/utils/utils.php",
-        "line": 1354,
+        "line": 1386,
         "types": [
           null,
           null
@@ -772,7 +868,7 @@
       {
         "string": "%s is not compatible with your version of PHP (%s). This function is only supported on PHP versions newer than 5.3.0.",
         "file": "/utils/utils.php",
-        "line": 1388,
+        "line": 1420,
         "types": [
           null,
           null
@@ -781,25 +877,25 @@
       {
         "string": "Invalid glob pattern.",
         "file": "/utils/utils.php",
-        "line": 1562,
+        "line": 1594,
         "types": []
       },
       {
         "string": "First hash argument must be a string.",
         "file": "/utils/utils.php",
-        "line": 1595,
+        "line": 1627,
         "types": []
       },
       {
         "string": "Second hash argument must be a string.",
         "file": "/utils/utils.php",
-        "line": 1599,
+        "line": 1631,
         "types": []
       },
       {
         "string": "HTTP parameter pair (with key \"%s\") is not valid: each pair must be an array with exactly two elements.",
         "file": "/utils/utils.php",
-        "line": 1648,
+        "line": 1680,
         "types": [
           null
         ]
@@ -807,13 +903,13 @@
       {
         "string": "HTTP query parameter key must be a scalar.",
         "file": "/utils/utils.php",
-        "line": 1676,
+        "line": 1708,
         "types": []
       },
       {
         "string": "HTTP query parameter value (for key \"%s\") must be a scalar.",
         "file": "/utils/utils.php",
-        "line": 1687,
+        "line": 1719,
         "types": [
           null
         ]
@@ -821,19 +917,632 @@
       {
         "string": "Unable to decode MIME header: install \"iconv\" or \"mbstring\" extension.",
         "file": "/utils/utils.php",
-        "line": 1708,
+        "line": 1740,
         "types": []
       },
       {
         "string": "Value passed to \"phutil_string_cast()\" is an array; arrays can not be sensibly cast to strings.",
         "file": "/utils/utils.php",
-        "line": 1741,
+        "line": 1773,
         "types": []
       },
       {
         "string": "Object (of class \"%s\") did not return a string from \"__toString()\".",
         "file": "/utils/utils.php",
-        "line": 1751,
+        "line": 1783,
+        "types": [
+          null
+        ]
+      }
+    ],
+    "c5b9cd42281fd00ffb66ef2f6cc4c382": [
+      {
+        "string": "Failed to read file '%s'.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 45,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Failed to write file '%s'.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 94,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Unable to create temporary file in %s.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 130,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Unable to move %s to %s.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 142,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Failed to write file data.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 188,
+        "types": []
+      },
+      {
+        "string": "Failed to close file handle.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 195,
+        "types": []
+      },
+      {
+        "string": "Failed to open file '%s'.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 237,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Failed to write %d bytes to '%s'.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 243,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Failed closing file '%s' after write.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 248,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "No path provided to %s.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 292,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Failed to rename '%s' to '%s'!",
+        "file": "/filesystem/Filesystem.php",
+        "line": 323,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Failed to remove directory '%s'!",
+        "file": "/filesystem/Filesystem.php",
+        "line": 346,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Failed to remove file '%s'!",
+        "file": "/filesystem/Filesystem.php",
+        "line": 353,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Failed to chmod '%s' to '%s'.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 378,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Failed to read modified time for %s.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 402,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "You must generate at least 1 byte of entropy.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 421,
+        "types": []
+      },
+      {
+        "string": "%s failed to generate entropy!",
+        "file": "/filesystem/Filesystem.php",
+        "line": 446,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "%s returned an unexpected number of bytes (got %s, expected %s)!",
+        "file": "/filesystem/Filesystem.php",
+        "line": 453,
+        "types": [
+          null,
+          "number",
+          "number"
+        ]
+      },
+      {
+        "string": "Failed to read random bytes!",
+        "file": "/filesystem/Filesystem.php",
+        "line": 474,
+        "types": []
+      },
+      {
+        "string": "%s requires the PHP OpenSSL extension to be installed and enabled to access an entropy source. On Windows, this extension is usually installed but not enabled by default. Enable it in your \"s\".",
+        "file": "/filesystem/Filesystem.php",
+        "line": 489,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "%s requires the PHP OpenSSL extension or access to \"%s\". Install or enable the OpenSSL extension, or make sure \"%s\" is accessible.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 498,
+        "types": [
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Minimum value must be an integer.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 550,
+        "types": []
+      },
+      {
+        "string": "Maximum value must be an integer.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 554,
+        "types": []
+      },
+      {
+        "string": "Minimum (\"%d\") must not be greater than maximum (\"%d\").",
+        "file": "/filesystem/Filesystem.php",
+        "line": 560,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "mt_rand() range is smaller than the requested range.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 578,
+        "types": []
+      },
+      {
+        "string": "Bad return value from mt_rand().",
+        "file": "/filesystem/Filesystem.php",
+        "line": 583,
+        "types": []
+      },
+      {
+        "string": "Failed to create directory '%s'.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 713,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Unable to determine system temporary directory.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 759,
+        "types": []
+      },
+      {
+        "string": "Failed to create a temporary directory: the disk is full.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 781,
+        "types": []
+      },
+      {
+        "string": "Failed to create a temporary directory in '%s'.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 786,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Unable to list contents of directory '%s'.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 815,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Filesystem path \"%s\" can not be accessed because a parent directory (\"%s\") is not executable (the current process does not have \"+x\" permission).",
+        "file": "/filesystem/Filesystem.php",
+        "line": 1148,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Filesystem path \"%s\" does not exist.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 1159,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Path '%s' already exists!",
+        "file": "/filesystem/Filesystem.php",
+        "line": 1176,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Requested path '%s' is not a file.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 1193,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Requested path '%s' is not a directory.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 1210,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Requested path '%s' is not writable.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 1227,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Path '%s' is not readable.",
+        "file": "/filesystem/Filesystem.php",
+        "line": 1244,
+        "types": [
+          null
+        ]
+      }
+    ],
+    "66c122890997d97cca748a4f232a31d0": [
+      {
+        "string": "Unhandled parser rule '%s'!",
+        "file": "/parser/PhutilTypeSpec.php",
+        "line": 373,
+        "types": [
+          null
+        ]
+      }
+    ],
+    "cc6f2f844bfe52da92d60db92d57499c": [
+      {
+        "string": "%s is broken.",
+        "file": "/parser/xhpast/bin/PhutilXHPASTBinary.php",
+        "line": 49,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Your version of '%s' is unbuilt or out of date. Run this script to build it.",
+        "file": "/parser/xhpast/bin/PhutilXHPASTBinary.php",
+        "line": 65,
+        "types": [
+          null
+        ]
+      }
+    ],
+    "61f7e26dcd6d6f47b6a578365a44acf6": [
+      {
+        "string": "Matched token key \"%s\" while processing remarkup block, but this token does not exist in the token map.",
+        "file": "/markup/engine/remarkup/PhutilRemarkupBlockStorage.php",
+        "line": 118,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Matched token key \"%s\" while processing remarkup block, but this token appears later in the list than the key being processed (\"%s\").",
+        "file": "/markup/engine/remarkup/PhutilRemarkupBlockStorage.php",
+        "line": 124,
+        "types": [
+          null,
+          null
+        ]
+      }
+    ],
+    "e968292c1194115a7372791dc0a1f280": [
+      {
+        "string": "Failed to markup HTML in file '%s'.",
+        "file": "/markup/engine/__tests__/PhutilRemarkupEngineTestCase.php",
+        "line": 67,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Failed to markup text in file '%s'.",
+        "file": "/markup/engine/__tests__/PhutilRemarkupEngineTestCase.php",
+        "line": 75,
+        "types": [
+          null
+        ]
+      }
+    ],
+    "3ebe3cbb1389e24fa552fa5bf6714d8e": [
+      {
+        "string": "The symbol map for library \"%s\" (at \"%s\") claims this symbol (of type \"%s\") is defined in \"%s\", but loading that source file did not cause the symbol to become defined.",
+        "file": "/symbols/PhutilSymbolLoader.php",
+        "line": 403,
+        "types": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ],
+    "5d8773142acafc93502e12dd25d8f765": [
+      {
+        "string": "Failed to load %s \"%s\".\n\n%s\n\nIf you are not a developer, this almost always means that a library is out of date. For example, you may have upgraded \"phabricator/\" without upgrading \"libphutil/\", or vice versa. It might also mean that you need to restart Apache or PHP-FPM. Make sure all libraries are up to date and all services have been restarted.\n\nIf you are a developer and this symbol was recently added or moved, your library map may need to be rebuilt. You can rebuild the map by running \"arc liberate\".\n\nFor more information, see: https://phurl.io/newclasses",
+        "file": "/symbols/exception/PhutilMissingSymbolException.php",
+        "line": 8,
+        "types": [
+          null,
+          null,
+          null
+        ]
+      }
+    ],
+    "648f88a77d347ec76938bce6363035e9": [
+      {
+        "string": "Retrying database connection to \"%s\" after connection failure (attempt %d; \"%s\"; error #%d): %s",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 118,
+        "types": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "string": "No query result to fetch from!",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 165,
+        "types": []
+      },
+      {
+        "string": "Attempting to issue a write query on a read-only connection (to database \"%s\")!",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 290,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Simulated error.",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 304,
+        "types": []
+      },
+      {
+        "string": "#%d: %s",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 314,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "This error may occur if your configured MySQL \"wait_timeout\" or \"max_allowed_packet\" values are too small. This may also indicate that something used the MySQL \"KILL <process>\" command to kill the connection running the query.",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 321,
+        "types": []
+      },
+      {
+        "string": "Attempt to connect to %s@%s failed with error #%d: %s.",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 358,
+        "types": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "string": "#%d: %s",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 372,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Attempting to construct a query using a non-utf8 string when utf8 is expected. Use the `%%B` conversion to escape binary strings data.",
+        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
+        "line": 400,
+        "types": []
+      }
+    ],
+    "f051886b71e58671bd3b115dd8ec3d01": [
+      {
+        "string": "Signature method '%s' requires %s!",
+        "file": "/future/oauth/PhutilOAuth1Future.php",
+        "line": 239,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Signature method '%s' requires %s!",
+        "file": "/future/oauth/PhutilOAuth1Future.php",
+        "line": 250,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "%s failed!",
+        "file": "/future/oauth/PhutilOAuth1Future.php",
+        "line": 257,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "%s failed!",
+        "file": "/future/oauth/PhutilOAuth1Future.php",
+        "line": 262,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "%s failed!",
+        "file": "/future/oauth/PhutilOAuth1Future.php",
+        "line": 268,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Signature method '%s' requires %s!",
+        "file": "/future/oauth/PhutilOAuth1Future.php",
+        "line": 278,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Unknown signature method '%s'!",
+        "file": "/future/oauth/PhutilOAuth1Future.php",
+        "line": 284,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Expected JSON.",
+        "file": "/future/oauth/PhutilOAuth1Future.php",
+        "line": 301,
+        "types": []
+      }
+    ],
+    "e48ca1c8ff12a399d91e74f7cc5ff295": [
+      {
+        "string": "Unable to run a command in directory \"%s\".",
+        "file": "/future/exec/PhutilExecutableFuture.php",
+        "line": 136,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Preparing to run a command in directory \"%s\", but that path is not a directory.",
+        "file": "/future/exec/PhutilExecutableFuture.php",
+        "line": 144,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Preparing to run a command in directory \"%s\", but that directory is not readable (the current process does not have \"+r\" permission).",
+        "file": "/future/exec/PhutilExecutableFuture.php",
+        "line": 158,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Preparing to run a command in directory \"%s\", but that directory is not executable (the current process does not have \"+x\" permission).",
+        "file": "/future/exec/PhutilExecutableFuture.php",
+        "line": 171,
+        "types": [
+          null
+        ]
+      }
+    ],
+    "4a62d3441fdcd348882d3fa786c32696": [
+      {
+        "string": "You must %s!",
+        "file": "/future/asana/PhutilAsanaFuture.php",
+        "line": 48,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "You must %s!",
+        "file": "/future/asana/PhutilAsanaFuture.php",
+        "line": 55,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Expected JSON response from Asana.",
+        "file": "/future/asana/PhutilAsanaFuture.php",
+        "line": 90,
+        "types": []
+      },
+      {
+        "string": "Received errors from Asana: %s",
+        "file": "/future/asana/PhutilAsanaFuture.php",
+        "line": 98,
+        "types": [
+          null
+        ]
+      }
+    ],
+    "243e7b1536bc3b5df4cc49db4fb87c59": [
+      {
+        "string": "Editor exited with an error code (#%d).",
+        "file": "/console/PhutilInteractiveEditor.php",
+        "line": 107,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Unable to launch an interactive text editor. Set the %s environment variable to an appropriate editor.",
+        "file": "/console/PhutilInteractiveEditor.php",
+        "line": 303,
         "types": [
           null
         ]
@@ -1825,83 +2534,6 @@
         "file": "/conduit/ConduitFuture.php",
         "line": 56,
         "types": []
-      }
-    ],
-    "9518262ecbda59c160cd6feebc75d85b": [
-      {
-        "string": "Conduit URI '%s' must include a valid host.",
-        "file": "/conduit/ConduitClient.php",
-        "line": 29,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Unable to sign Conduit request with signing key.",
-        "file": "/conduit/ConduitClient.php",
-        "line": 240,
-        "types": []
-      },
-      {
-        "string": "Unable to verify request signature, specified \"%s\" (\"%s\") is unknown.",
-        "file": "/conduit/ConduitClient.php",
-        "line": 259,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Unable to verify request signature, no \"%s\" present in request protocol information.",
-        "file": "/conduit/ConduitClient.php",
-        "line": 269,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Unable to verify request signature, no \"%s\" present in request protocol information.",
-        "file": "/conduit/ConduitClient.php",
-        "line": 278,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Unable to verify request signature, signature format is not known.",
-        "file": "/conduit/ConduitClient.php",
-        "line": 287,
-        "types": []
-      },
-      {
-        "string": "Request signature verification failed: signature is not correct.",
-        "file": "/conduit/ConduitClient.php",
-        "line": 314,
-        "types": []
-      },
-      {
-        "string": "OpenSSL encountered an error verifying the request signature: %s",
-        "file": "/conduit/ConduitClient.php",
-        "line": 320,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "OpenSSL encountered an unknown error verifying the request: %s",
-        "file": "/conduit/ConduitClient.php",
-        "line": 325,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Unexpected data type in request data: %s.",
-        "file": "/conduit/ConduitClient.php",
-        "line": 388,
-        "types": [
-          null
-        ]
       }
     ],
     "56486ee9a1b31be62a0a861e205aec0d": [
@@ -3215,294 +3847,6 @@
         "file": "/filesystem/linesofalarge/LinesOfALarge.php",
         "line": 66,
         "types": []
-      }
-    ],
-    "41ad91f45533bbf25583ac2b09fb3515": [
-      {
-        "string": "Failed to read file '%s'.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 45,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Failed to write file '%s'.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 94,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Unable to create temporary file in %s.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 130,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Unable to move %s to %s.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 142,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Failed to write file data.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 188,
-        "types": []
-      },
-      {
-        "string": "Failed to close file handle.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 195,
-        "types": []
-      },
-      {
-        "string": "Failed to open file '%s'.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 237,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Failed to write %d bytes to '%s'.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 243,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Failed closing file '%s' after write.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 248,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "No path provided to %s.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 292,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Failed to rename '%s' to '%s'!",
-        "file": "/filesystem/Filesystem.php",
-        "line": 323,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Failed to remove directory '%s'!",
-        "file": "/filesystem/Filesystem.php",
-        "line": 346,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Failed to remove file '%s'!",
-        "file": "/filesystem/Filesystem.php",
-        "line": 353,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Failed to chmod '%s' to '%s'.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 378,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Failed to read modified time for %s.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 402,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "You must generate at least 1 byte of entropy.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 421,
-        "types": []
-      },
-      {
-        "string": "%s failed to generate entropy!",
-        "file": "/filesystem/Filesystem.php",
-        "line": 446,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "%s returned an unexpected number of bytes (got %s, expected %s)!",
-        "file": "/filesystem/Filesystem.php",
-        "line": 453,
-        "types": [
-          null,
-          "number",
-          "number"
-        ]
-      },
-      {
-        "string": "Failed to read random bytes!",
-        "file": "/filesystem/Filesystem.php",
-        "line": 474,
-        "types": []
-      },
-      {
-        "string": "%s requires the PHP OpenSSL extension to be installed and enabled to access an entropy source. On Windows, this extension is usually installed but not enabled by default. Enable it in your \"s\".",
-        "file": "/filesystem/Filesystem.php",
-        "line": 489,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "%s requires the PHP OpenSSL extension or access to \"%s\". Install or enable the OpenSSL extension, or make sure \"%s\" is accessible.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 498,
-        "types": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Minimum value must be an integer.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 550,
-        "types": []
-      },
-      {
-        "string": "Maximum value must be an integer.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 554,
-        "types": []
-      },
-      {
-        "string": "Minimum (\"%d\") must not be greater than maximum (\"%d\").",
-        "file": "/filesystem/Filesystem.php",
-        "line": 560,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "mt_rand() range is smaller than the requested range.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 578,
-        "types": []
-      },
-      {
-        "string": "Bad return value from mt_rand().",
-        "file": "/filesystem/Filesystem.php",
-        "line": 583,
-        "types": []
-      },
-      {
-        "string": "Failed to create directory '%s'.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 713,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Unable to determine system temporary directory.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 759,
-        "types": []
-      },
-      {
-        "string": "Failed to create a temporary directory: the disk is full.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 781,
-        "types": []
-      },
-      {
-        "string": "Failed to create a temporary directory in '%s'.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 786,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Unable to list contents of directory '%s'.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 815,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "File system entity '%s' does not exist.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 1124,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Path '%s' already exists!",
-        "file": "/filesystem/Filesystem.php",
-        "line": 1141,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Requested path '%s' is not a file.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 1158,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Requested path '%s' is not a directory.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 1175,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Requested path '%s' is not writable.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 1192,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Path '%s' is not readable.",
-        "file": "/filesystem/Filesystem.php",
-        "line": 1209,
-        "types": [
-          null
-        ]
       }
     ],
     "482ef6c94bd546103a4ea03d649421a9": [
@@ -4878,16 +5222,6 @@
         ]
       }
     ],
-    "c51a48ad7c621368c6916d0617f39e80": [
-      {
-        "string": "Unhandled parser rule '%s'!",
-        "file": "/parser/PhutilTypeSpec.php",
-        "line": 373,
-        "types": [
-          null
-        ]
-      }
-    ],
     "0b34192db6aac5cb52ebd0e508d604ad": [
       {
         "string": "No type name for node type ID '%s' in '%s' AAST.",
@@ -4951,24 +5285,6 @@
         "line": 311,
         "types": [
           null,
-          null
-        ]
-      }
-    ],
-    "721fe259c154bafc33a81366b9aa22b4": [
-      {
-        "string": "%s is broken.",
-        "file": "/parser/xhpast/bin/PhutilXHPASTBinary.php",
-        "line": 49,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Your version of '%s' is unbuilt or out of date. Run this script to build it.",
-        "file": "/parser/xhpast/bin/PhutilXHPASTBinary.php",
-        "line": 65,
-        "types": [
           null
         ]
       }
@@ -5920,24 +6236,6 @@
         "types": []
       }
     ],
-    "885f3be666e0ece731e8b066a8f2cd62": [
-      {
-        "string": "Failed to markup HTML in file '%s'.",
-        "file": "/markup/engine/__tests__/PhutilRemarkupEngineTestCase.php",
-        "line": 63,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Failed to markup text in file '%s'.",
-        "file": "/markup/engine/__tests__/PhutilRemarkupEngineTestCase.php",
-        "line": 71,
-        "types": [
-          null
-        ]
-      }
-    ],
     "0087c2bcc7acd26c2bfdc000898a937b": [
       {
         "string": "State '%s' pushed more than popped!",
@@ -6526,46 +6824,6 @@
         ]
       }
     ],
-    "9888e701e2f6cfd2edaec72e67b114e0": [
-      {
-        "string": "function",
-        "file": "/symbols/PhutilSymbolLoader.php",
-        "line": 389,
-        "types": []
-      },
-      {
-        "string": "class or interface",
-        "file": "/symbols/PhutilSymbolLoader.php",
-        "line": 393,
-        "types": []
-      },
-      {
-        "string": "the symbol map for library '%s' (at '%s') claims this %s is defined in '%s', but loading that source file did not cause the %s to become defined.",
-        "file": "/symbols/PhutilSymbolLoader.php",
-        "line": 403,
-        "types": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      }
-    ],
-    "b26833685e95d1feb70473d11b393a38": [
-      {
-        "string": "Failed to load %s '%s': %s\n\nIf you are not a developer, this almost always means that a library is out of date. For example, you may have upgraded `phabricator` without upgrading `libphutil`, or vice versa. It might also mean that you need to restart Apache or PHP-FPM. Make sure all libraries are up to date and all services have been restarted.\n\nIf you are a developer and this symbol was recently added or moved, your library map may need to be rebuilt. You can rebuild the map by running '%s'. For more information, see:\n\n%s",
-        "file": "/symbols/exception/PhutilMissingSymbolException.php",
-        "line": 8,
-        "types": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      }
-    ],
     "890a3c92896f360ceee20f5efa73ca72": [
       {
         "string": "No source file for scale '%s'!",
@@ -6845,79 +7103,6 @@
         "string": "There are some results left in the result set.",
         "file": "/aphront/storage/connection/mysql/AphrontMySQLiDatabaseConnection.php",
         "line": 188,
-        "types": []
-      }
-    ],
-    "5d289143aa15c46dcff7c5edbb0e8597": [
-      {
-        "string": "Retrying (%d) after %s: %s",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 108,
-        "types": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "string": "No query result to fetch from!",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 147,
-        "types": []
-      },
-      {
-        "string": "Attempting to issue a write query on a read-only connection (to database \"%s\")!",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 272,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Simulated error.",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 286,
-        "types": []
-      },
-      {
-        "string": "#%d: %s",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 296,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "This error may occur if your configured MySQL \"wait_timeout\" or \"max_allowed_packet\" values are too small. This may also indicate that something used the MySQL \"KILL <process>\" command to kill the connection running the query.",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 303,
-        "types": []
-      },
-      {
-        "string": "Attempt to connect to %s@%s failed with error #%d: %s.",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 340,
-        "types": [
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "string": "#%d: %s",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 354,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Attempting to construct a query using a non-utf8 string when utf8 is expected. Use the `%%B` conversion to escape binary strings data.",
-        "file": "/aphront/storage/connection/mysql/AphrontBaseMySQLDatabaseConnection.php",
-        "line": 382,
         "types": []
       }
     ],
@@ -7256,73 +7441,6 @@
         "string": "Failed to install signal handler!",
         "file": "/future/Future.php",
         "line": 129,
-        "types": []
-      }
-    ],
-    "00326e1c26447b763f4eb35217ec3b27": [
-      {
-        "string": "Signature method '%s' requires %s!",
-        "file": "/future/oauth/PhutilOAuth1Future.php",
-        "line": 224,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Signature method '%s' requires %s!",
-        "file": "/future/oauth/PhutilOAuth1Future.php",
-        "line": 235,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "%s failed!",
-        "file": "/future/oauth/PhutilOAuth1Future.php",
-        "line": 242,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "%s failed!",
-        "file": "/future/oauth/PhutilOAuth1Future.php",
-        "line": 247,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "%s failed!",
-        "file": "/future/oauth/PhutilOAuth1Future.php",
-        "line": 253,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Signature method '%s' requires %s!",
-        "file": "/future/oauth/PhutilOAuth1Future.php",
-        "line": 263,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Unknown signature method '%s'!",
-        "file": "/future/oauth/PhutilOAuth1Future.php",
-        "line": 269,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Expected JSON.",
-        "file": "/future/oauth/PhutilOAuth1Future.php",
-        "line": 286,
         "types": []
       }
     ],
@@ -7731,16 +7849,6 @@
         ]
       }
     ],
-    "e1cb7d9009c0735f103779bfc41718c8": [
-      {
-        "string": "Preparing to run a command in directory \"%s\", but that directory does not exist.",
-        "file": "/future/exec/PhutilExecutableFuture.php",
-        "line": 134,
-        "types": [
-          null
-        ]
-      }
-    ],
     "788fc2f447a413c3a90dbb04be45566d": [
       {
         "string": "Writing to a closed pipe!",
@@ -8086,38 +8194,6 @@
         ]
       }
     ],
-    "9d27ec590adb78eca4f3275dc284b400": [
-      {
-        "string": "You must %s!",
-        "file": "/future/asana/PhutilAsanaFuture.php",
-        "line": 38,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "You must %s!",
-        "file": "/future/asana/PhutilAsanaFuture.php",
-        "line": 45,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Expected JSON response from Asana.",
-        "file": "/future/asana/PhutilAsanaFuture.php",
-        "line": 75,
-        "types": []
-      },
-      {
-        "string": "Received errors from Asana: %s",
-        "file": "/future/asana/PhutilAsanaFuture.php",
-        "line": 83,
-        "types": [
-          null
-        ]
-      }
-    ],
     "e02e8c38bf47e3f98a6c6bfd283f2f3e": [
       {
         "string": "The proxied future has not been provided yet.",
@@ -8185,24 +8261,6 @@
         "string": "Message type '%s' is already enabled!",
         "file": "/console/PhutilConsole.php",
         "line": 238,
-        "types": [
-          null
-        ]
-      }
-    ],
-    "2d51d36e7614fb1808dcabe0c1c1a55b": [
-      {
-        "string": "Editor exited with an error code (#%d).",
-        "file": "/console/PhutilInteractiveEditor.php",
-        "line": 81,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Unable to launch an interactive text editor. Set the %s environment variable to an appropriate editor.",
-        "file": "/console/PhutilInteractiveEditor.php",
-        "line": 277,
         "types": [
           null
         ]
