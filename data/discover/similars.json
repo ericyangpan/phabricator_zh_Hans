@@ -1022,6 +1022,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the touch limit for this repository from %s paths to %s paths.",
       "%s updated the title for this countdown from %s to %s."
@@ -1074,7 +1075,6 @@
     "s6": [
       "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".",
       "%s changed the repository for this revision from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the countdown end for %s from %s to %s.",
       "%s updated the name for this file from \"%s\" to \"%s\".",
@@ -1178,6 +1178,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s lowered the priority of %s from %s to %s.",
       "%s raised the priority of %s from %s to %s.",
@@ -1369,6 +1370,8 @@
       "%s updated the test plan for %s."
     ],
     "s4": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
@@ -1756,6 +1759,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -1873,6 +1877,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -1922,6 +1927,7 @@
       "Dashboards must have a name.",
       "Events must have a name.",
       "Files must have a name.",
+      "Forms must have a name.",
       "Image macros must have a file.",
       "Initiatives must have a name.",
       "Initiatives must have a payable merchant.",
@@ -3265,6 +3271,8 @@
   },
   "%s updated the revert plan for %s.": {
     "s4": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
@@ -3381,6 +3389,8 @@
       "%s updated the test plan for %s."
     ],
     "s4": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
@@ -3590,7 +3600,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -3723,12 +3732,6 @@
       "Commit \"%s\" is not valid."
     ]
   },
-  "Migrate all hunks.": {
-    "s2": [
-      "Migrate all files.",
-      "Migrate all hunks."
-    ]
-  },
   "Specify a hunk to migrate with \"--id\", or migrate all hunks with \"--all\".": {
     "s8": [
       "Choose a build log to rebuild with \"--id\", or rebuild all logs with \"--all\".",
@@ -3784,6 +3787,7 @@
   },
   "No revision \"%s\" exists.": {
     "s3": [
+      "No file \"%s\" exists.",
       "No key type \"%s\" exists.",
       "No object \"%s\" exists.",
       "No repository service \"%s\" exists.",
@@ -6216,7 +6220,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -8801,6 +8804,7 @@
       "%s changed the status of subtask %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the task status from %s to %s by committing %s.",
       "%s changed the task status from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
@@ -8959,6 +8963,7 @@
       "%s changed the name of this version from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s updated the title for this countdown from %s to %s."
     ]
@@ -9013,6 +9018,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -9095,6 +9101,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -9366,6 +9373,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -9440,6 +9448,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -9526,7 +9535,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s renamed this repository from %s to %s.",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -9556,6 +9564,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -9619,6 +9628,7 @@
       "Dashboards must have a name.",
       "Events must have a name.",
       "Files must have a name.",
+      "Forms must have a name.",
       "Initiatives must have a name.",
       "Macros must have a name.",
       "Merchants must have a name.",
@@ -9678,6 +9688,8 @@
     ],
     "s4": [
       "%s changed the alias from %s to %s.",
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the title from %s to %s.",
       "%s set %s blog's full domain to %s.",
       "%s set %s blog's parent domain to %s.",
@@ -9756,6 +9768,7 @@
       "%s changed the status of subtask %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the task status from %s to %s by committing %s.",
       "%s changed the task status from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
@@ -9959,13 +9972,13 @@
       "%s changed the name of this version from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s updated the title for this countdown from %s to %s."
     ],
     "s6": [
       "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".",
       "%s changed the callsign for this repository from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the countdown end for %s from %s to %s.",
       "%s updated the name for this file from \"%s\" to \"%s\".",
@@ -10152,6 +10165,7 @@
       "%s changed the name of this version from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s lowered the priority of this task from %s to %s.",
       "%s moved storage for this repository from %s to %s.",
@@ -10245,6 +10259,7 @@
       "%s changed the status of subtask %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the trigger for this column from %s to %s.",
       "%s changed the username policy for this provider from %s to %s."
@@ -10653,6 +10668,7 @@
   "Specify --service or --remove-service, but not both.": {
     "s5": [
       "Specify \"%s\" or \"%s\", but not both.",
+      "Specify \"--enable\" or \"--disable\", but not both.",
       "Specify --service or --remove-service, but not both.",
       "Specify either --promote or --demote, but not both."
     ]
@@ -10761,7 +10777,6 @@
   "Specify --all or a list of repositories, but not both.": {
     "s6": [
       "Specify --all or a list of repositories, but not both.",
-      "Specify either a list of files or `%s`, but not both.",
       "Specify either a list of users or `%s`, but not both."
     ]
   },
@@ -10965,7 +10980,6 @@
   "Specify a list of repositories or \"--all-repositories\", but not both.": {
     "s8": [
       "Specify a list of repositories or \"--all-repositories\", but not both.",
-      "Specify either a list of files or `%s`, but not both.",
       "Specify either a list of objects to affect or \"--all\", but not both.",
       "Specify either a list of users or `%s`, but not both."
     ]
@@ -11176,12 +11190,10 @@
       "%s changed this URI from \"%s\" to \"%s\".",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\"."
     ],
     "s7": [
       "%s changed the application redirect URI from \"%s\" to \"%s\".",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s changed this URI from \"%s\" to \"%s\"."
     ],
@@ -11299,6 +11311,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the touch limit for this repository from %s paths to %s paths.",
       "%s updated the title for this countdown from %s to %s."
@@ -11320,7 +11333,6 @@
     "s6": [
       "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".",
       "%s changed the credential for this URI from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the countdown end for %s from %s to %s.",
       "%s updated the name for this file from \"%s\" to \"%s\".",
@@ -12426,6 +12438,8 @@
       "%s updated the test plan for %s."
     ],
     "s4": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
@@ -12542,6 +12556,8 @@
       "%s updated the test plan for %s."
     ],
     "s4": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
@@ -12587,7 +12603,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -12657,7 +12672,6 @@
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
       "%s renamed this document from %s to %s.",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s revoked this badge from %s recipient(s): %s.",
       "%s updated %s flavor text from %s to %s.",
@@ -12682,6 +12696,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -12739,6 +12754,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -12785,7 +12801,6 @@
       "%s refunded %s to %s for %s.",
       "%s renamed %s from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s reopened %s as %s by committing %s.",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -12852,6 +12867,7 @@
       "Documents must have a title.",
       "Events must have a name.",
       "Files must have a name.",
+      "Forms must have a name.",
       "Image macros must have a file.",
       "Initiatives must have a name.",
       "Initiatives must have a payable merchant.",
@@ -13613,13 +13629,13 @@
       "%s closed this task as %s.",
       "%s mentioned this in %s.",
       "%s moved this document to %s.",
-      "%s named this form \"%s\".",
       "%s named this import %s.",
       "%s reopened this task as %s.",
       "%s updated this revision to %s."
     ],
     "s4": [
       "%s named this column %s.",
+      "%s named this form %s.",
       "%s named this import %s.",
       "%s named this provider %s.",
       "%s named this trigger %s."
@@ -13669,7 +13685,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this import from %s to %s.",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -13938,6 +13953,7 @@
       "%s changed the status of subtask %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the task status from %s to %s by committing %s.",
       "%s changed the task status from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
@@ -14069,6 +14085,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s lowered the priority of %s from %s to %s.",
       "%s raised the priority of %s from %s to %s.",
@@ -14456,6 +14473,7 @@
       "%s changed the status of %s from %s to %s by committing %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the trigger for this column from %s to %s."
     ],
@@ -14705,7 +14723,8 @@
   "%s changed the query for this export.": {
     "s4": [
       "%s changed the blog for post %s.",
-      "%s changed the default value for field \"%s\".",
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
       "%s changed the panels on this dashboard.",
@@ -14861,6 +14880,7 @@
       "%s changed the start date for this event from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s."
     ],
     "s7": [
@@ -14872,7 +14892,6 @@
       "%s changed the point value for %s from %s to %s.",
       "%s changed the start date for %s from %s to %s.",
       "%s changed the status of %s from %s to %s by committing %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the title for this countdown from %s to %s."
     ],
@@ -14945,6 +14964,7 @@
       "%s changed the start date for %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s lowered the priority of %s from %s to %s.",
       "%s raised the priority of %s from %s to %s.",
@@ -14953,7 +14973,6 @@
     "s6": [
       "%s changed permanent refs for this repository from %s to %s.",
       "%s changed the host of %s from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the blog's full domain from %s to %s.",
       "%s updated the blog's parent domain from %s to %s.",
@@ -15018,7 +15037,6 @@
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
       "%s renamed this event from %s to %s.",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s revoked this badge from %s recipient(s): %s.",
       "%s updated %s flavor text from %s to %s.",
@@ -15044,6 +15062,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -15157,6 +15176,8 @@
       "%s updated the test plan for %s."
     ],
     "s4": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
@@ -15270,7 +15291,6 @@
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
       "%s renamed this export from %s to %s.",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s revoked this badge from %s recipient(s): %s.",
       "%s updated %s flavor text from %s to %s.",
@@ -15423,6 +15443,7 @@
       "%s changed the status of %s from %s to %s by committing %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the trigger for this column from %s to %s."
     ],
@@ -15581,6 +15602,7 @@
     ],
     "s6": [
       "Unable to load Calendar import with ID \"%s\".",
+      "Unable to load Herald rule with ID or monogram \"%s\".",
       "Unable to load bulk job with ID \"%s\"."
     ]
   },
@@ -16316,7 +16338,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -16448,6 +16469,7 @@
       "Disable the export.",
       "Disable the import.",
       "Disable the lock log.",
+      "Disable the rule.",
       "Disable the user.",
       "Name of the import.",
       "Rename the import."
@@ -16962,6 +16984,7 @@
       "Disable the export.",
       "Disable the import.",
       "Disable the lock log.",
+      "Disable the rule.",
       "Disable the user.",
       "Name of the export.",
       "Rename the export."
@@ -17042,7 +17065,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -17104,7 +17126,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -17210,6 +17231,7 @@
       "%s changed the status of subtask %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the task status from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the trigger for this column from %s to %s.",
@@ -17387,6 +17409,8 @@
   },
   "%s removed the invoice email for %s.": {
     "s4": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
@@ -17551,7 +17575,6 @@
       "%s renamed this account from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s revoked this badge from %s recipient(s): %s.",
       "%s updated %s flavor text from %s to %s.",
@@ -17588,7 +17611,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -17752,6 +17774,8 @@
   "%s updated the picture for merchant %s.": {
     "s4": [
       "%s changed the blog for post %s.",
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
       "%s changed the profile image for blog %s.",
@@ -17904,7 +17928,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s renamed this merchant from %s to %s.",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -17931,6 +17954,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -18095,6 +18119,8 @@
       "%s updated the test plan for %s."
     ],
     "s4": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
@@ -18751,7 +18777,6 @@
       "%s created this bulk job.",
       "%s created this configuration entry.",
       "%s created this contact number.",
-      "%s created this form configuration.",
       "%s created this payment provider."
     ]
   },
@@ -19317,6 +19342,12 @@
       "No MFA Providers"
     ]
   },
+  "All of the payment providers for this merchant are disabled.": {
+    "s7": [
+      "All members of the account (\"%s\") for this subscription (\"%s\") are disabled.",
+      "All of the payment providers for this merchant are disabled."
+    ]
+  },
   "No Providers": {
     "s2": [
       "No Auth Providers",
@@ -19490,7 +19521,6 @@
       "%s created this bulk job.",
       "%s created this configuration entry.",
       "%s created this contact number.",
-      "%s created this form configuration.",
       "%s created this payment account.",
       "%s disabled this payment provider.",
       "%s enabled this payment provider."
@@ -19782,7 +19812,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -19849,7 +19878,6 @@
       "%s changed the join policy from \"%s\" to \"%s\".",
       "%s changed the poll question from \"%s\" to \"%s\".",
       "%s changed the subtype of %s from \"%s\" to \"%s\".",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\"."
     ],
     "s6": [
@@ -19937,6 +19965,7 @@
       "Documents must have a title.",
       "Events must have a name.",
       "Files must have a name.",
+      "Forms must have a name.",
       "Image macros must have a file.",
       "Initiatives must have a name.",
       "Initiatives must have a payable merchant.",
@@ -20543,6 +20572,7 @@
       "Specify a method to call with \"--method\".",
       "Specify a path to look up with `%s`.",
       "Specify a public key to trust with --id.",
+      "Specify a rule to edit with \"--rule <id|monogram>\".",
       "Specify a user to notify with \"--user\"."
     ],
     "s5": [
@@ -20975,6 +21005,8 @@
       "%s updated the test plan for %s."
     ],
     "s4": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
@@ -21043,6 +21075,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to untitled.",
       "%s changed the title of this paste from untitled to %s.",
       "%s lowered the priority of this task from %s to %s.",
@@ -21081,6 +21114,7 @@
       "Dashboards must have a name.",
       "Events must have a name.",
       "Files must have a name.",
+      "Forms must have a name.",
       "Image macros must have a file.",
       "Initiatives must have a name.",
       "Initiatives must have a payable merchant.",
@@ -21176,6 +21210,7 @@
       "%s changed the status of subtask %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the task status from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the trigger for this column from %s to %s.",
@@ -21251,6 +21286,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the trigger for this column from %s to %s.",
       "%s lowered the priority of this task from %s to %s.",
@@ -21790,6 +21826,8 @@
     ],
     "s4": [
       "%s added a cover image to %s.",
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for this blog.",
       "%s changed the header image for this post.",
@@ -21832,73 +21870,73 @@
   },
   "%s merged %s task(s): %s.": {
     "s3": [
-      "%s merged %s task(s): %s.",
-      "%s added %s reviewer(s): %s.",
-      "%s removed %s reviewer(s): %s.",
-      "%s added %s blocking reviewer(s): %s.",
-      "%s removed %s blocking reviewer(s): %s.",
-      "%s added %s child revision(s): %s.",
-      "%s removed %s child revision(s): %s.",
-      "%s added %s commit(s): %s.",
-      "%s removed %s commit(s): %s.",
-      "%s added %s parent revision(s): %s.",
-      "%s removed %s parent revision(s): %s.",
-      "%s closed %s by committing %s.",
-      "%s added %s automation blueprint(s): %s.",
-      "%s removed %s automation blueprint(s): %s.",
-      "%s invited %s attendee(s): %s.",
-      "%s uninvited %s attendee(s): %s.",
-      "%s added %s merchant manager(s): %s.",
-      "%s removed %s merchant manager(s): %s.",
+      "%s added %d %s hashtag(s): %s.",
       "%s added %s account manager(s): %s.",
-      "%s removed %s account manager(s): %s.",
-      "%s reopened subtask %s as %s.",
-      "%s closed subtask %s as %s.",
-      "%s closed %s as %s.",
+      "%s added %s auditor(s): %s.",
+      "%s added %s automation blueprint(s): %s.",
+      "%s added %s blocking reviewer(s): %s.",
+      "%s added %s child revision(s): %s.",
+      "%s added %s commit(s): %s.",
+      "%s added %s contributor(s): %s.",
+      "%s added %s edge(s): %s.",
+      "%s added %s file(s): %s.",
+      "%s added %s member(s): %s.",
+      "%s added %s merchant manager(s): %s.",
+      "%s added %s mock(s): %s.",
+      "%s added %s owner(s): %s.",
+      "%s added %s parent revision(s): %s.",
+      "%s added %s project(s): %s.",
+      "%s added %s reverted change(s): %s.",
+      "%s added %s reverting change(s): %s.",
+      "%s added %s reviewer(s): %s.",
+      "%s added %s revision(s): %s.",
+      "%s added %s subscriber(s): %s.",
+      "%s added %s subtask(s): %s.",
+      "%s added %s unsubscriber(s): %s.",
+      "%s added %s watcher(s): %s.",
       "%s assigned %s to %s.",
       "%s attached %s file(s): %s.",
-      "%s detached %s file(s): %s.",
-      "%s added %s subtask(s): %s.",
-      "%s removed %s subtask(s): %s.",
-      "%s added %s mock(s): %s.",
-      "%s removed %s mock(s): %s.",
-      "%s added %s revision(s): %s.",
-      "%s removed %s revision(s): %s.",
-      "%s replaced %s with %s.",
-      "%s moved %s to %s.",
-      "%s completed building %s for %s.",
-      "%s added %s auditor(s): %s.",
-      "%s removed %s auditor(s): %s.",
-      "%s added %s reverting change(s): %s.",
-      "%s removed %s reverting change(s): %s.",
-      "%s added %s reverted change(s): %s.",
-      "%s removed %s reverted change(s): %s.",
-      "%s added %d %s hashtag(s): %s.",
-      "%s removed %d %s hashtag(s): %s.",
-      "%s added %s project(s): %s.",
-      "%s removed %s project(s): %s.",
-      "%s added %s member(s): %s.",
-      "%s removed %s member(s): %s.",
-      "%s added %s subscriber(s): %s.",
-      "%s removed %s subscriber(s): %s.",
-      "%s added %s watcher(s): %s.",
-      "%s removed %s watcher(s): %s.",
-      "%s added %s contributor(s): %s.",
-      "%s removed %s contributor(s): %s.",
-      "%s added %s unsubscriber(s): %s.",
-      "%s removed %s unsubscriber(s): %s.",
-      "%s added %s file(s): %s.",
-      "%s removed %s file(s): %s.",
-      "%s added %s owner(s): %s.",
-      "%s removed %s owner(s): %s.",
-      "%s refunded %s to %s.",
       "%s backed %s with %s.",
-      "%s set %s to %s.",
-      "%s removed %s on %s.",
-      "%s removed %s as %s.",
+      "%s closed %s as %s.",
+      "%s closed %s by committing %s.",
+      "%s closed subtask %s as %s.",
+      "%s completed building %s for %s.",
+      "%s detached %s file(s): %s.",
       "%s edited %s on %s.",
-      "%s added %s edge(s): %s.",
-      "%s removed %s edge(s): %s."
+      "%s invited %s attendee(s): %s.",
+      "%s merged %s task(s): %s.",
+      "%s moved %s to %s.",
+      "%s refunded %s to %s.",
+      "%s removed %d %s hashtag(s): %s.",
+      "%s removed %s account manager(s): %s.",
+      "%s removed %s as %s.",
+      "%s removed %s auditor(s): %s.",
+      "%s removed %s automation blueprint(s): %s.",
+      "%s removed %s blocking reviewer(s): %s.",
+      "%s removed %s child revision(s): %s.",
+      "%s removed %s commit(s): %s.",
+      "%s removed %s contributor(s): %s.",
+      "%s removed %s edge(s): %s.",
+      "%s removed %s file(s): %s.",
+      "%s removed %s member(s): %s.",
+      "%s removed %s merchant manager(s): %s.",
+      "%s removed %s mock(s): %s.",
+      "%s removed %s on %s.",
+      "%s removed %s owner(s): %s.",
+      "%s removed %s parent revision(s): %s.",
+      "%s removed %s project(s): %s.",
+      "%s removed %s reverted change(s): %s.",
+      "%s removed %s reverting change(s): %s.",
+      "%s removed %s reviewer(s): %s.",
+      "%s removed %s revision(s): %s.",
+      "%s removed %s subscriber(s): %s.",
+      "%s removed %s subtask(s): %s.",
+      "%s removed %s unsubscriber(s): %s.",
+      "%s removed %s watcher(s): %s.",
+      "%s reopened subtask %s as %s.",
+      "%s replaced %s with %s.",
+      "%s set %s to %s.",
+      "%s uninvited %s attendee(s): %s."
     ],
     "s4": [
       "%s added %s parent task(s): %s.",
@@ -22013,13 +22051,13 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the start date for %s from %s to %s.",
       "%s changed the status of subtask %s from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s."
     ],
     "s6": [
       "%s changed permanent refs for this repository from %s to %s.",
       "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".",
       "%s changed the status of subtask %s from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s changed the task status from %s to %s by committing %s.",
       "%s updated the title for this countdown from %s to %s."
@@ -22195,6 +22233,7 @@
       "%s changed the status of subtask %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the task status from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the trigger for this column from %s to %s.",
@@ -22491,6 +22530,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the start date for %s from %s to %s.",
       "%s changed the status of %s from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s lowered the priority of %s from %s to %s.",
       "%s raised the priority of %s from %s to %s.",
@@ -22499,7 +22539,6 @@
     "s6": [
       "%s changed permanent refs for this repository from %s to %s.",
       "%s changed the status of %s from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the blog's full domain from %s to %s.",
       "%s updated the blog's parent domain from %s to %s.",
@@ -22689,7 +22728,7 @@
   },
   "%s removed the point value for %s.": {
     "s4": [
-      "%s changed the default value for field \"%s\".",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
@@ -22729,6 +22768,7 @@
       "%s updated the test plan for %s."
     ],
     "s5": [
+      "%s changed the default value for field %s.",
       "%s removed the invoice email for %s.",
       "%s removed the point limit for this column.",
       "%s removed the point value for %s.",
@@ -22769,6 +22809,7 @@
       "%s changed the status of %s from %s to %s by committing %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the trigger for this column from %s to %s."
     ],
@@ -22885,6 +22926,8 @@
       "%s updated the test plan for %s."
     ],
     "s4": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
@@ -22934,7 +22977,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -23003,7 +23045,6 @@
       "%s moved this task on %s board(s): %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s renamed this task from %s to %s.",
       "%s reopened this task as %s by committing %s.",
@@ -23033,6 +23074,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -23072,6 +23114,7 @@
       "Dashboards must have a name.",
       "Events must have a name.",
       "Files must have a name.",
+      "Forms must have a name.",
       "Image macros must have a file.",
       "Initiatives must have a name.",
       "Initiatives must have a payable merchant.",
@@ -23165,6 +23208,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s lowered the priority of this task from %s to %s."
     ],
@@ -23175,7 +23219,6 @@
       "%s changed the merchant receiving funds from %s from %s to %s.",
       "%s changed the point value for %s from %s to %s.",
       "%s changed the start date for %s from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s lowered the priority of this task from %s to %s.",
       "%s updated the countdown end for %s from %s to %s."
     ],
@@ -23232,6 +23275,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s raised the priority of this task from %s to %s."
     ],
@@ -23242,7 +23286,6 @@
       "%s changed the merchant receiving funds from %s from %s to %s.",
       "%s changed the point value for %s from %s to %s.",
       "%s changed the start date for %s from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s raised the priority of this task from %s to %s.",
       "%s updated the countdown end for %s from %s to %s."
     ]
@@ -23302,6 +23345,7 @@
       "%s changed the start date for %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s lowered the priority of %s from %s to %s.",
       "%s updated the countdown end for %s from %s to %s.",
@@ -23376,6 +23420,7 @@
       "%s changed the start date for %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s raised the priority of %s from %s to %s.",
       "%s updated the countdown end for %s from %s to %s.",
@@ -23455,6 +23500,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -23791,6 +23837,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -26164,10 +26211,7 @@
     ],
     "s8": [
       "%s changed the display type for this URI from \"%s\" to \"%s\".",
-      "%s changed the subtype of this task from \"%s\" to \"%s\"."
-    ],
-    "s10": [
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the subtype of this task from \"%s\" to \"%s\"."
     ]
   },
@@ -26206,11 +26250,11 @@
       "%s changed the name of %s from %s to %s.",
       "%s changed the status of %s from %s to %s.",
       "%s changed the status of subtask %s from %s to %s.",
-      "%s changed the subtype of %s from \"%s\" to \"%s\"."
+      "%s changed the subtype of %s from \"%s\" to \"%s\".",
+      "%s changed the subtype of this form from %s to %s."
     ],
     "s9": [
       "%s changed the subtype of %s from \"%s\" to \"%s\".",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\"."
     ],
     "s8": [
@@ -27583,7 +27627,6 @@
       "%s created this bulk job.",
       "%s created this configuration entry.",
       "%s created this contact number.",
-      "%s created this form configuration.",
       "%s created this payment account.",
       "%s created this payment provider.",
       "%s deleted this configuration entry (again?)."
@@ -28904,6 +28947,7 @@
       "%s changed the push policy of this repository from %s to %s.",
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the touch limit for this repository from %s paths to %s paths.",
       "%s updated the title for this countdown from %s to %s."
@@ -28928,7 +28972,6 @@
     "s6": [
       "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".",
       "%s changed the hostname for this provider from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the countdown end for %s from %s to %s.",
       "%s updated the name for this file from \"%s\" to \"%s\".",
@@ -29041,6 +29084,7 @@
       "%s changed the status of subtask %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the task status from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the trigger for this column from %s to %s.",
@@ -29184,6 +29228,7 @@
       "%s changed the status of %s, a subtask of %s, from %s to %s.",
       "%s changed the status of subtask %s from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the username policy for this provider from %s to %s."
     ],
@@ -29195,7 +29240,6 @@
       "%s changed the point value for %s from %s to %s.",
       "%s changed the start date for %s from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the title for this countdown from %s to %s."
     ],
@@ -29302,7 +29346,6 @@
       "%s closed this task as %s.",
       "%s mentioned this in %s.",
       "%s moved this document to %s.",
-      "%s named this form \"%s\".",
       "%s named this provider %s.",
       "%s reopened this task as %s.",
       "%s updated this revision to %s."
@@ -29350,7 +29393,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s renamed this provider from %s to %s.",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -29379,6 +29421,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -29552,6 +29595,7 @@
       "%s changed the push policy of this repository from %s to %s.",
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the touch limit for this repository from %s paths to %s paths.",
       "%s updated the title for this countdown from %s to %s."
@@ -29583,7 +29627,6 @@
     "s6": [
       "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".",
       "%s changed the credential for this provider from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the countdown end for %s from %s to %s.",
       "%s updated the name for this file from \"%s\" to \"%s\".",
@@ -29872,7 +29915,6 @@
   },
   "%s set the \"%s\" value to \"%s\".": {
     "s4": [
-      "%s changed the default value for field \"%s\".",
       "%s changed the visibility from \"%s\" to \"%s\".",
       "%s set the \"%s\" value to \"%s\".",
       "%s set the audio for %s to loop.",
@@ -29930,7 +29972,6 @@
       "%s changed the join policy from \"%s\" to \"%s\".",
       "%s changed the poll question from \"%s\" to \"%s\".",
       "%s changed the subtype of %s from \"%s\" to \"%s\".",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\"."
     ],
     "s6": [
@@ -30625,7 +30666,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -30682,6 +30722,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this key from \"%s\" to \"%s\".",
@@ -30714,7 +30755,6 @@
     "s7": [
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\"."
     ]
   },
@@ -30783,7 +30823,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -31974,7 +32013,6 @@
       "%s created this bulk job.",
       "%s created this configuration entry.",
       "%s created this contact number.",
-      "%s created this form configuration.",
       "%s created this payment account.",
       "%s created this payment provider."
     ]
@@ -32047,7 +32085,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -32296,6 +32333,7 @@
       "%s changed the status of subtask %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the task status from %s to %s.",
       "%s changed the title from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
@@ -32330,6 +32368,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -32460,6 +32499,7 @@
       "%s changed the start date for %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s lowered the priority of %s from %s to %s.",
       "%s raised the priority of %s from %s to %s.",
@@ -32468,7 +32508,6 @@
     "s6": [
       "%s changed permanent refs for this repository from %s to %s.",
       "%s changed the alias of %s from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the blog's full domain from %s to %s.",
       "%s updated the blog's parent domain from %s to %s.",
@@ -32660,12 +32699,12 @@
       "%s changed the status of subtask %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s."
     ],
     "s6": [
       "%s changed permanent refs for this repository from %s to %s.",
       "%s changed the name of the URL from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the countdown end for %s from %s to %s.",
       "%s updated the title for this countdown from %s to %s."
@@ -32737,6 +32776,7 @@
       "%s changed the start date for %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s lowered the priority of %s from %s to %s.",
       "%s raised the priority of %s from %s to %s.",
@@ -32746,7 +32786,6 @@
     "s6": [
       "%s changed permanent refs for this repository from %s to %s.",
       "%s changed the name of %s from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the blog's full domain from %s to %s.",
       "%s updated the blog's parent domain from %s to %s.",
@@ -32853,6 +32892,7 @@
       "%s changed the status of subtask %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the task status from %s to %s by committing %s.",
       "%s changed the task status from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
@@ -32958,6 +32998,7 @@
       "%s changed the start date for this event from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the trigger for this column from %s to %s.",
       "%s changed the username policy for this provider from %s to %s.",
@@ -33309,6 +33350,8 @@
       "%s updated the test plan for %s."
     ],
     "s4": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
@@ -33359,7 +33402,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -33427,7 +33469,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s renamed this space from %s to %s.",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -33471,6 +33512,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -33908,6 +33950,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -33953,7 +33996,6 @@
       "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".",
       "%s changed the application redirect URI from \"%s\" to \"%s\".",
       "%s changed the subtype of %s from \"%s\" to \"%s\".",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\"."
     ]
   },
@@ -34441,7 +34483,6 @@
       "%s changed the display type for this URI from \"%s\" to \"%s\".",
       "%s changed the poll question from \"%s\" to \"%s\".",
       "%s changed the subtype of %s from \"%s\" to \"%s\".",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\"."
     ],
     "s8": [
@@ -34867,7 +34908,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s renamed this mock from %s to %s.",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -35708,7 +35748,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -35946,6 +35985,8 @@
   "%s destroyed the secret for credential %s.": {
     "s4": [
       "%s changed the blog for post %s.",
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
       "%s changed the profile image for blog %s.",
@@ -36186,7 +36227,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -36256,7 +36296,6 @@
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
       "%s renamed this credential from %s to %s.",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s revoked this badge from %s recipient(s): %s.",
       "%s updated %s flavor text from %s to %s.",
@@ -36322,6 +36361,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -36440,6 +36480,8 @@
   "%s updated the description for credential %s.": {
     "s4": [
       "%s changed the blog for post %s.",
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
       "%s changed the profile image for blog %s.",
@@ -37191,6 +37233,7 @@
       "%s changed the status of subtask %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the task status from %s to %s.",
       "%s changed the title from %s to %s.",
       "%s changed the title of this paste from %s to untitled.",
@@ -37228,6 +37271,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -38968,10 +39012,10 @@
       "Synchronization of \"%s\" from remote failed: %s"
     ]
   },
-  "Unexpected \"git upload-pack\" protocol frame: expected \"<hash> <name>\\n\", got \"%s\".": {
-    "s9": [
-      "Unexpected \"git upload-pack\" initial protocol frame: expected \"<hash> <name>\\0<capabilities>\\n\", got \"%s\".",
-      "Unexpected \"git upload-pack\" protocol frame: expected \"<hash> <name>\\n\", got \"%s\"."
+  "Unexpected \"git upload-pack\" protocol frame: expected \"<hash> <name>\\n\", or \"shallow <hash>\\n\", got \"%s\".": {
+    "s12": [
+      "Unexpected \"git upload-pack\" initial protocol frame: expected \"<hash> <name>\\0<capabilities>\\n\", or \"shallow <hash>\\n\", got \"%s\".",
+      "Unexpected \"git upload-pack\" protocol frame: expected \"<hash> <name>\\n\", or \"shallow <hash>\\n\", got \"%s\"."
     ]
   },
   "SSH Key": {
@@ -41295,70 +41339,70 @@
   },
   "%s added %s.": {
     "s2": [
-      "%s added %s.",
-      "%s resigned from %s.",
-      "%s accepted %s.",
-      "%s reopened %s.",
       "%s abandoned %s.",
-      "%s commandeered %s.",
-      "%s closed %s.",
-      "%s reclaimed %s.",
-      "%s added inline comments.",
-      "Added %s reviewer(s): %s.",
-      "%s created %s.",
-      "%s pushed to %s.",
-      "Required %s signature(s): %s.",
-      "%s cancelled %s.",
-      "%s reinstated %s.",
-      "%s is attending %s.",
-      "%s declined %s.",
-      "%s renamed %s.",
-      "%s created subtask %s.",
-      "%s claimed %s.",
-      "%s deleted %s.",
-      "%s edited %s.",
-      "%s archived space %s.",
-      "%s activated space %s.",
-      "%s created space %s.",
-      "%s uninstalled %s.",
-      "%s installed %s.",
-      "%s added inline comment(s).",
-      "%s closed mock %s.",
-      "%s opened mock %s.",
-      "%s locked credential %s.",
-      "%s completed building %s.",
-      "%s on %s.",
-      "Added %s auditor(s): %s.",
-      "%s added an answer.",
-      "%s added this answer.",
-      "%s asked %s.",
-      "Upload %s from %s.",
-      "Started %s build(s): %s.",
-      "Added %s subscriber(s): %s.",
-      "Removed %s subscriber(s): %s.",
-      "%s archived %s.",
+      "%s accepted %s.",
       "%s activated %s.",
-      "Added %s project(s): %s.",
-      "Removed %s project(s): %s.",
+      "%s activated space %s.",
+      "%s added %s.",
       "%s added a comment.",
-      "%s edited this %s.",
-      "%s committed %s.",
-      "%s removed subscribers: %s.",
-      "%s added subscribers...",
-      "%s removed auditors: %s.",
+      "%s added an answer.",
       "%s added auditors...",
+      "%s added inline comment(s).",
+      "%s added inline comments.",
+      "%s added subscribers...",
+      "%s added this answer.",
+      "%s archived %s.",
+      "%s archived space %s.",
+      "%s asked %s.",
       "%s attached audio: %s.",
-      "%s disabled %s.",
-      "%s restored %s.",
-      "%s defrocked %s.",
-      "%s published %s.",
-      "%s enabled %s.",
-      "%s created initiative %s.",
-      "%s updated %s.",
-      "%s removed %s.",
+      "%s cancelled %s.",
       "%s checked %s.",
+      "%s claimed %s.",
+      "%s closed %s.",
+      "%s closed mock %s.",
+      "%s commandeered %s.",
+      "%s committed %s.",
+      "%s completed building %s.",
+      "%s created %s.",
+      "%s created initiative %s.",
+      "%s created space %s.",
+      "%s created subtask %s.",
+      "%s declined %s.",
+      "%s defrocked %s.",
+      "%s deleted %s.",
+      "%s disabled %s.",
+      "%s edited %s.",
+      "%s edited this %s.",
+      "%s enabled %s.",
+      "%s installed %s.",
+      "%s is attending %s.",
+      "%s locked credential %s.",
+      "%s must implement %s.",
+      "%s on %s.",
+      "%s opened mock %s.",
+      "%s published %s.",
+      "%s pushed to %s.",
+      "%s reclaimed %s.",
+      "%s reinstated %s.",
+      "%s removed %s.",
+      "%s removed auditors: %s.",
+      "%s removed subscribers: %s.",
+      "%s renamed %s.",
+      "%s reopened %s.",
+      "%s resigned from %s.",
+      "%s restored %s.",
       "%s unchecked %s.",
-      "%s must implement %s."
+      "%s uninstalled %s.",
+      "%s updated %s.",
+      "Added %s auditor(s): %s.",
+      "Added %s project(s): %s.",
+      "Added %s reviewer(s): %s.",
+      "Added %s subscriber(s): %s.",
+      "Removed %s project(s): %s.",
+      "Removed %s subscriber(s): %s.",
+      "Required %s signature(s): %s.",
+      "Started %s build(s): %s.",
+      "Upload %s from %s."
     ],
     "s3": [
       "%s added %d image(s): %s.",
@@ -41409,6 +41453,8 @@
       "%s updated the test plan for %s."
     ],
     "s4": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
@@ -41506,6 +41552,8 @@
       "%s updated the test plan for %s."
     ],
     "s4": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
@@ -41715,6 +41763,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -41861,6 +41910,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -41918,6 +41968,7 @@
       "Dashboards must have a name.",
       "Events must have a name.",
       "Files must have a name.",
+      "Forms must have a name.",
       "Image macros must have a file.",
       "Initiatives must have a name.",
       "Initiatives must have a payable merchant.",
@@ -41987,6 +42038,8 @@
       "%s updated the test plan for %s."
     ],
     "s4": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
@@ -43091,7 +43144,6 @@
       "%s created this bulk job.",
       "%s created this configuration entry.",
       "%s created this contact number.",
-      "%s created this form configuration.",
       "%s created this payment account.",
       "%s created this payment provider.",
       "%s disabled this build plan.",
@@ -43182,7 +43234,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -43261,64 +43312,63 @@
   },
   "%s created this buildable.": {
     "s3": [
-      "%s created this buildable.",
-      "%s created this revision.",
-      "%s created this diff.",
-      "%s created this document.",
-      "%s created this export.",
-      "%s created this import.",
-      "%s created this event.",
-      "%s created this account.",
-      "%s created this payment provider.",
-      "%s created this payment account.",
-      "%s created this merchant.",
-      "%s created this poll.",
-      "%s created this task.",
-      "%s created this configuration entry.",
-      "%s created this key.",
-      "%s created this provider.",
-      "%s created this contact number.",
-      "%s created this password.",
-      "%s created this message.",
       "%s created this MFA provider.",
-      "%s created this URL.",
-      "%s created this space.",
       "%s created this OAuth application.",
-      "%s created this mock.",
-      "%s created this credential.",
-      "%s created this identity.",
+      "%s created this URL.",
+      "%s created this account.",
+      "%s created this badge.",
+      "%s created this binding.",
+      "%s created this blog.",
+      "%s created this blueprint.",
+      "%s created this build plan.",
       "%s created this build step.",
       "%s created this build.",
-      "%s restarted this buildable.",
-      "%s resumed this buildable.",
-      "%s paused this buildable.",
-      "%s created this build plan.",
-      "%s created this project.",
-      "%s created this trigger.",
+      "%s created this buildable.",
+      "%s created this bulk job.",
       "%s created this column.",
-      "%s created this portal.",
-      "%s created this object.",
-      "%s created this form configuration.",
-      "%s created this macro.",
-      "%s created this publisher.",
-      "%s created this version.",
-      "%s created this package.",
-      "%s created this room.",
-      "%s created this post.",
-      "%s created this blog.",
-      "%s created this variable.",
-      "%s created this webhook.",
-      "%s created this badge.",
-      "%s created this blueprint.",
-      "%s created this paste.",
-      "%s created this namespace.",
+      "%s created this configuration entry.",
+      "%s created this contact number.",
+      "%s created this credential.",
       "%s created this device.",
-      "%s created this service.",
-      "%s created this interface.",
-      "%s created this network.",
-      "%s created this binding.",
+      "%s created this diff.",
+      "%s created this document.",
+      "%s created this event.",
+      "%s created this export.",
+      "%s created this identity.",
+      "%s created this import.",
       "%s created this initiative.",
-      "%s created this bulk job."
+      "%s created this interface.",
+      "%s created this key.",
+      "%s created this macro.",
+      "%s created this merchant.",
+      "%s created this message.",
+      "%s created this mock.",
+      "%s created this namespace.",
+      "%s created this network.",
+      "%s created this object.",
+      "%s created this package.",
+      "%s created this password.",
+      "%s created this paste.",
+      "%s created this payment account.",
+      "%s created this payment provider.",
+      "%s created this poll.",
+      "%s created this portal.",
+      "%s created this post.",
+      "%s created this project.",
+      "%s created this provider.",
+      "%s created this publisher.",
+      "%s created this revision.",
+      "%s created this room.",
+      "%s created this service.",
+      "%s created this space.",
+      "%s created this task.",
+      "%s created this trigger.",
+      "%s created this variable.",
+      "%s created this version.",
+      "%s created this webhook.",
+      "%s paused this buildable.",
+      "%s restarted this buildable.",
+      "%s resumed this buildable."
     ]
   },
   "%s restarted this buildable.": {
@@ -44492,7 +44542,6 @@
       "%s created this bulk job.",
       "%s created this configuration entry.",
       "%s created this contact number.",
-      "%s created this form configuration.",
       "%s created this payment account.",
       "%s created this payment provider.",
       "The name of this build plan."
@@ -45512,6 +45561,7 @@
       "Dashboards must have a name.",
       "Events must have a name.",
       "Files must have a name.",
+      "Forms must have a name.",
       "Initiatives must have a name.",
       "Macros must have a name.",
       "Merchants must have a name.",
@@ -46061,7 +46111,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s renamed this trigger from %s to %s.",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -46083,7 +46132,6 @@
       "%s closed this task as %s.",
       "%s mentioned this in %s.",
       "%s moved this document to %s.",
-      "%s named this form \"%s\".",
       "%s named this trigger %s.",
       "%s reopened this task as %s.",
       "%s updated this revision to %s."
@@ -46360,6 +46408,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -46669,6 +46718,7 @@
       "%s changed the name of this version from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s lowered the priority of this task from %s to %s.",
       "%s raised the priority of this task from %s to %s.",
@@ -46725,7 +46775,6 @@
       "%s mentioned this in %s.",
       "%s moved this document to %s.",
       "%s named this column %s.",
-      "%s named this form \"%s\".",
       "%s reopened this task as %s.",
       "%s updated this revision to %s."
     ]
@@ -46764,7 +46813,6 @@
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
       "%s renamed this column from %s to %s.",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s revoked this badge from %s recipient(s): %s.",
       "%s updated %s flavor text from %s to %s.",
@@ -46790,6 +46838,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -46963,6 +47012,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the touch limit for this repository from %s paths to %s paths.",
       "%s changed the trigger for this column from %s to %s.",
@@ -46985,7 +47035,6 @@
     ],
     "s6": [
       "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s changed the trigger for this column from %s to %s.",
       "%s updated the countdown end for %s from %s to %s.",
@@ -47113,6 +47162,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -47345,6 +47395,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -47483,7 +47534,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -47553,7 +47603,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s renamed this project from %s to %s.",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -50170,7 +50219,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -50651,7 +50699,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s renamed this portal from %s to %s.",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -50679,6 +50726,7 @@
       "Dashboards must have a name.",
       "Events must have a name.",
       "Files must have a name.",
+      "Forms must have a name.",
       "Image macros must have a file.",
       "Initiatives must have a name.",
       "Initiatives must have a payable merchant.",
@@ -50769,7 +50817,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s renamed this panel from %s to %s.",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -50797,6 +50844,7 @@
       "Dashboards must have a name.",
       "Events must have a name.",
       "Files must have a name.",
+      "Forms must have a name.",
       "Image macros must have a file.",
       "Initiatives must have a name.",
       "Initiatives must have a payable merchant.",
@@ -50924,6 +50972,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the touch limit for this repository from %s paths to %s paths.",
       "%s updated the title for this countdown from %s to %s."
@@ -50945,7 +50994,6 @@
     "s6": [
       "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".",
       "%s changed the icon for this dashboard from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the countdown end for %s from %s to %s.",
       "%s updated the name for this file from \"%s\" to \"%s\".",
@@ -51027,7 +51075,6 @@
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
       "%s renamed this dashboard from %s to %s.",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s revoked this badge from %s recipient(s): %s.",
       "%s updated %s flavor text from %s to %s.",
@@ -51053,6 +51100,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -51947,8 +51995,354 @@
       "Post as Comment"
     ]
   },
+  "%s changed the default values for field %s.": {
+    "s5": [
+      "%s changed the default branch from %s to %s.",
+      "%s changed the default filter for the project workboard.",
+      "%s changed the default values for field %s.",
+      "%s changed the header image for blog %s.",
+      "%s changed the header image for post %s.",
+      "%s changed the profile image for blog %s."
+    ],
+    "s7": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s."
+    ]
+  },
+  "%s changed the default value for field %s.": {
+    "s5": [
+      "%s changed the default branch from %s to %s.",
+      "%s changed the default filter for the project workboard.",
+      "%s changed the default value for field %s.",
+      "%s changed the header image for blog %s.",
+      "%s changed the header image for post %s.",
+      "%s changed the profile image for blog %s.",
+      "%s set the point value for %s to %s."
+    ]
+  },
+  "%s added this form to the \"Create\" menu.": {
+    "s6": [
+      "%s added this form to the \"Create\" menu.",
+      "%s removed this form from the \"Create\" menu."
+    ]
+  },
+  "%s reordered the fields in this form.": {
+    "s4": [
+      "%s reordered the fields in this form.",
+      "%s updated the preamble for this form."
+    ]
+  },
+  "%s changed the order in which this form appears in the \"Create\" menu.": {
+    "s12": [
+      "%s changed the order in which this form appears in the \"Create\" menu.",
+      "%s changed the order in which this form appears in the \"Edit\" menu."
+    ]
+  },
+  "%s marked this form as an edit form.": {
+    "s7": [
+      "%s marked this form as an edit form.",
+      "%s unmarked this form as an edit form."
+    ]
+  },
+  "%s updated the preamble for this form.": {
+    "s4": [
+      "%s changed the blog for this post.",
+      "%s changed the header image for this blog.",
+      "%s changed the header image for this post.",
+      "%s changed the image for this macro.",
+      "%s changed the profile image for this blog.",
+      "%s changed the query for this export.",
+      "%s destroyed the secret for this credential.",
+      "%s disabled the audio for this macro.",
+      "%s disabled the workboard for this project.",
+      "%s edited the test plan for this revision.",
+      "%s enabled the workboard for this project.",
+      "%s examined the secret plaintext for this credential.",
+      "%s explained the test plan for this revision.",
+      "%s removed the callsign (%s) for this repository.",
+      "%s removed the interface for this binding.",
+      "%s removed the point limit for this column.",
+      "%s removed the point value for this task.",
+      "%s reordered the fields in this form.",
+      "%s updated the description for credential %s.",
+      "%s updated the document preamble for %s.",
+      "%s updated the picture for merchant %s.",
+      "%s updated the preamble for this form."
+    ]
+  },
+  "%s renamed this form from %s to %s.": {
+    "s6": [
+      "%s changed this contact number from %s to %s.",
+      "%s moved storage for this repository from %s to %s.",
+      "%s reassigned this item from %s to %s.",
+      "%s reassigned this task from %s to %s.",
+      "%s renamed %s blog from %s to %s.",
+      "%s renamed %s blog post from %s to %s.",
+      "%s renamed %s merchant name from %s to %s.",
+      "%s renamed an image (%s) from %s to %s.",
+      "%s renamed space %s from %s to %s.",
+      "%s renamed this form from %s to %s.",
+      "%s rerouted this item from %s to %s.",
+      "%s retitled this revision from %s to %s.",
+      "%s updated this project's image from %s to %s."
+    ],
+    "s5": [
+      "%s adjusted package dominion rules from %s to %s.",
+      "%s changed fetched refs from %s to %s.",
+      "%s changed hook status from %s to %s.",
+      "%s changed indexed languages from %s to %s.",
+      "%s changed symbol sources from %s to %s.",
+      "%s changed the alias from %s to %s.",
+      "%s changed the badge icon from %s to %s.",
+      "%s changed the default branch from %s to %s.",
+      "%s changed the destination URL from %s to %s.",
+      "%s changed the event icon from %s to %s.",
+      "%s changed the repository encoding from %s to %s.",
+      "%s changed the task status from %s to %s.",
+      "%s changed the title from %s to %s.",
+      "%s changed tracked branches from %s to %s.",
+      "%s renamed this application from \"%s\" to \"%s\".",
+      "%s renamed this build plan from \"%s\" to \"%s\".",
+      "%s renamed this form from %s to %s.",
+      "%s renamed this key from \"%s\" to \"%s\".",
+      "%s revoked this badge from %s recipient(s): %s.",
+      "%s updated %s flavor text from %s to %s.",
+      "%s updated %s invoice email from %s to %s.",
+      "%s updated the countdown end from %s to %s.",
+      "%s updated the flavor from %s to %s.",
+      "%s updated the invoice email from %s to %s.",
+      "%s updated the paste's language from %s to %s.",
+      "%s updated the quality from %s to %s.",
+      "%s updated the question from %s to %s."
+    ],
+    "s7": [
+      "%s changed the subtype of this form from %s to %s.",
+      "%s renamed this account from %s to %s.",
+      "%s renamed this badge from %s to %s.",
+      "%s renamed this blog from %s to %s.",
+      "%s renamed this blog post from %s to %s.",
+      "%s renamed this blueprint from %s to %s.",
+      "%s renamed this column from %s to %s.",
+      "%s renamed this credential from %s to %s.",
+      "%s renamed this dashboard from %s to %s.",
+      "%s renamed this device from %s to %s.",
+      "%s renamed this document from %s to %s.",
+      "%s renamed this event from %s to %s.",
+      "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
+      "%s renamed this import from %s to %s.",
+      "%s renamed this initiative from %s to %s.",
+      "%s renamed this macro from %s to %s.",
+      "%s renamed this merchant from %s to %s.",
+      "%s renamed this mock from %s to %s.",
+      "%s renamed this namespace from %s to %s.",
+      "%s renamed this network from %s to %s.",
+      "%s renamed this package from %s to %s.",
+      "%s renamed this panel from %s to %s.",
+      "%s renamed this portal from %s to %s.",
+      "%s renamed this project from %s to %s.",
+      "%s renamed this provider from %s to %s.",
+      "%s renamed this queue from %s to %s.",
+      "%s renamed this repository from %s to %s.",
+      "%s renamed this room from %s to %s.",
+      "%s renamed this rule from %s to %s.",
+      "%s renamed this service from %s to %s.",
+      "%s renamed this source from %s to %s.",
+      "%s renamed this space from %s to %s.",
+      "%s renamed this task from %s to %s.",
+      "%s renamed this trigger from %s to %s.",
+      "%s renamed this user from %s to %s.",
+      "%s renamed this webhook from %s to %s."
+    ]
+  },
+  "%s named this form %s.": {
+    "s3": [
+      "%s assigned this identity to %s.",
+      "%s assigned this task to %s.",
+      "%s backed this initiative with %s.",
+      "%s closed this task as %s.",
+      "%s mentioned this in %s.",
+      "%s moved this document to %s.",
+      "%s named this form %s.",
+      "%s reopened this task as %s.",
+      "%s updated this revision to %s."
+    ]
+  },
+  "Forms must have a name.": {
+    "s3": [
+      "Bindings must have a service.",
+      "Countdowns must have a title.",
+      "Documents must have a title.",
+      "Forms must have a name.",
+      "Image macros must have a file.",
+      "Initiatives must have a payable merchant.",
+      "Interfaces must have a device.",
+      "Interfaces must have a network.",
+      "Interfaces must have a port number.",
+      "Panels must have a title.",
+      "Polls must have a question.",
+      "Portals must have a title.",
+      "Posts must have a title.",
+      "Questions must have a title.",
+      "Revisions must have a title.",
+      "Rooms must have a title.",
+      "Sources must have a default queue.",
+      "Tasks must have a title.",
+      "This credential must have a username.",
+      "Webhooks must have a URI.",
+      "You must choose a label name.",
+      "You must choose a link name.",
+      "You must specify a name."
+    ]
+  },
+  "%s changed the subtype of this form from %s to %s.": {
+    "s8": [
+      "%s changed the %s behavior for this plan from %s to %s.",
+      "%s changed the URI for this webhook from %s to %s.",
+      "%s changed the address for this interface from %s to %s.",
+      "%s changed the assigned user for this identity from %s to %s.",
+      "%s changed the audio for this macro from %s to %s.",
+      "%s changed the audit rule for this package from %s to %s.",
+      "%s changed the billing name for this account from %s to %s.",
+      "%s changed the callsign for this repository from %s to %s.",
+      "%s changed the credential for this URI from %s to %s.",
+      "%s changed the credential for this provider from %s to %s.",
+      "%s changed the default queue for this source from %s to %s.",
+      "%s changed the device for this interface from %s to %s.",
+      "%s changed the end date for this event from %s to %s.",
+      "%s changed the enrollment policy for this provider from %s to %s.",
+      "%s changed the hostname for this provider from %s to %s.",
+      "%s changed the icon for this dashboard from %s to %s.",
+      "%s changed the interface for this binding from %s to %s.",
+      "%s changed the layout mode for this dashboard from %s to %s.",
+      "%s changed the merchant receiving funds from this initiative from %s to %s.",
+      "%s changed the name of the URL from %s to %s.",
+      "%s changed the network for this interface from %s to %s.",
+      "%s changed the point limit for this column from %s to %s.",
+      "%s changed the point value for this task from %s to %s.",
+      "%s changed the policy mode for this export from %s to %s.",
+      "%s changed the port for this interface from %s to %s.",
+      "%s changed the repository for this revision from %s to %s.",
+      "%s changed the staging area for this repository from %s to %s.",
+      "%s changed the start date for this event from %s to %s.",
+      "%s changed the status of %s, a subtask of %s, from %s to %s.",
+      "%s changed the status of subtask %s from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
+      "%s changed the subtype of this task from \"%s\" to \"%s\".",
+      "%s changed the title of this paste from %s to untitled.",
+      "%s changed the title of this paste from untitled to %s.",
+      "%s changed the trigger for this column from %s to %s.",
+      "%s changed the username policy for this provider from %s to %s.",
+      "%s lowered the priority of this task from %s to %s.",
+      "%s raised the priority of this task from %s to %s."
+    ],
+    "s9": [
+      "%s changed the host of this event from %s to %s.",
+      "%s changed the name of this package from %s to %s.",
+      "%s changed the name of this publisher from %s to %s.",
+      "%s changed the name of this version from %s to %s.",
+      "%s changed the push policy of this repository from %s to %s.",
+      "%s changed the short name of this repository from %s to %s.",
+      "%s changed the status of this item from %s to %s.",
+      "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
+      "%s changed the title of this paste from %s to %s."
+    ],
+    "s7": [
+      "%s changed permanent refs for this repository from %s to %s.",
+      "%s changed the badge icon for %s from %s to %s.",
+      "%s changed the end date for %s from %s to %s.",
+      "%s changed the merchant receiving funds from %s from %s to %s.",
+      "%s changed the point value for %s from %s to %s.",
+      "%s changed the start date for %s from %s to %s.",
+      "%s changed the status of %s from %s to %s by committing %s.",
+      "%s changed the subtype of this form from %s to %s.",
+      "%s updated the title for this countdown from %s to %s."
+    ],
+    "s6": [
+      "%s changed the display type for this URI from \"%s\" to \"%s\".",
+      "%s changed the subtype of this form from %s to %s.",
+      "%s updated the countdown end for %s from %s to %s."
+    ]
+  },
+  "Subtype \"%s\" is not a valid subtype.": {
+    "s5": [
+      "Action \"%s\" is not a valid repository URI action.",
+      "Argument \"%s\" is not a valid message ID.",
+      "Auditor \"%s\" is not a valid object.",
+      "Host PHID \"%s\" is not a valid user PHID.",
+      "Object \"%s\" is not a valid object.",
+      "Object \"%s\" is not a valid repository or commit.",
+      "Participant PHID \"%s\" is not a valid user PHID.",
+      "Recipient PHID \"%s\" is not a valid user PHID.",
+      "Repository \"%s\" is not a valid repository.",
+      "Reviewer \"%s\" is not a valid object.",
+      "Routing fragment \"%s\" is not a valid regular expression.",
+      "Subtype \"%s\" is not a valid subtype.",
+      "Template \"%s\" is not a valid template.",
+      "Timezone \"%s\" is not a valid timezone identifier.",
+      "User \"%s\" is not a valid user."
+    ],
+    "s4": [
+      "\"%s\" is not a valid file PHID.",
+      "Monogram \"%s\" does not identify a valid object.",
+      "Object \"%s\" is not a Harbormaster Buildable!",
+      "PID '%s' is not a valid PID.",
+      "Parameter \"%s\" is not a list of transactions.",
+      "Request %s is probably not a valid commit.",
+      "Rule '%s' is not a valid regular expression.",
+      "Sound (\"%s\") is not a valid sound.",
+      "Subtype \"%s\" is not a valid subtype.",
+      "User PHID (\"%s\") is not a valid user."
+    ],
+    "s6": [
+      "Subtype \"%s\" is not a valid subtype.",
+      "Subtype key \"%s\" does not identify a valid subtype.",
+      "The subtype \"%s\" is not a valid subtype."
+    ]
+  },
+  "%s disabled this form.": {
+    "s3": [
+      "%s disabled this URI.",
+      "%s disabled this application.",
+      "%s disabled this badge.",
+      "%s disabled this binding.",
+      "%s disabled this blueprint.",
+      "%s disabled this build plan.",
+      "%s disabled this contact number.",
+      "%s disabled this export.",
+      "%s disabled this form.",
+      "%s disabled this import.",
+      "%s disabled this macro.",
+      "%s disabled this payment provider.",
+      "%s disabled this provider.",
+      "%s disabled this rule.",
+      "%s disabled this user.",
+      "%s enabled this form."
+    ]
+  },
+  "%s enabled this form.": {
+    "s3": [
+      "%s disabled this form.",
+      "%s enabled this URI.",
+      "%s enabled this application.",
+      "%s enabled this badge.",
+      "%s enabled this binding.",
+      "%s enabled this blueprint.",
+      "%s enabled this build plan.",
+      "%s enabled this contact number.",
+      "%s enabled this export.",
+      "%s enabled this form.",
+      "%s enabled this import.",
+      "%s enabled this payment provider.",
+      "%s enabled this provider.",
+      "%s enabled this rule.",
+      "%s enabled this user."
+    ]
+  },
   "No object \"%s\" exists.": {
     "s3": [
+      "No file \"%s\" exists.",
       "No key type \"%s\" exists.",
       "No object \"%s\" exists.",
       "No repository service \"%s\" exists.",
@@ -52249,7 +52643,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -52315,7 +52708,6 @@
       "%s changed the visibility from \"%s\" to \"%s\".",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\"."
     ],
     "s6": [
@@ -52331,7 +52723,6 @@
       "%s changed the join policy from \"%s\" to \"%s\".",
       "%s changed the poll question from \"%s\" to \"%s\".",
       "%s changed the subtype of %s from \"%s\" to \"%s\".",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s changed the visibility from \"%s\" to \"%s\"."
     ]
@@ -52370,7 +52761,6 @@
       "%s changed the edit policy from \"%s\" to \"%s\".",
       "%s changed the poll question from \"%s\" to \"%s\".",
       "%s changed the subtype of %s from \"%s\" to \"%s\".",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\"."
     ],
     "s8": [
@@ -52413,7 +52803,6 @@
       "%s changed the join policy from \"%s\" to \"%s\".",
       "%s changed the poll question from \"%s\" to \"%s\".",
       "%s changed the subtype of %s from \"%s\" to \"%s\".",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\"."
     ],
     "s6": [
@@ -52654,6 +53043,7 @@
       "%s edited this rule.",
       "%s mentioned this in %s.",
       "%s named this column %s.",
+      "%s named this form %s.",
       "%s named this import %s.",
       "%s named this provider %s.",
       "%s named this trigger %s."
@@ -52718,6 +53108,8 @@
     ],
     "s5": [
       "%s changed the blog for post %s.",
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
@@ -52731,7 +53123,6 @@
     "s4": [
       "%s changed the alias from %s to %s.",
       "%s changed the blog for post %s.",
-      "%s changed the default value for field \"%s\".",
       "%s changed the edit policy for %s.",
       "%s changed the header image for this blog.",
       "%s changed the header image for this post.",
@@ -52765,6 +53156,8 @@
       "%s updated the test plan for %s."
     ],
     "s5": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the edit policy from \"%s\" to \"%s\".",
       "%s changed the header image for blog %s.",
@@ -52780,7 +53173,6 @@
     "s4": [
       "%s changed the alias from %s to %s.",
       "%s changed the blog for post %s.",
-      "%s changed the default value for field \"%s\".",
       "%s changed the header image for this blog.",
       "%s changed the header image for this post.",
       "%s changed the join policy for %s.",
@@ -52814,6 +53206,8 @@
       "%s updated the test plan for %s."
     ],
     "s5": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
       "%s changed the join policy for %s.",
@@ -52899,238 +53293,6 @@
     "s2": [
       "View Full Transcript",
       "View Herald Transcript"
-    ]
-  },
-  "%s created this form configuration.": {
-    "s3": [
-      "%s created this MFA provider.",
-      "%s created this OAuth application.",
-      "%s created this build plan.",
-      "%s created this build step.",
-      "%s created this bulk job.",
-      "%s created this configuration entry.",
-      "%s created this contact number.",
-      "%s created this form configuration.",
-      "%s created this payment account.",
-      "%s created this payment provider.",
-      "%s named this form \"%s\"."
-    ]
-  },
-  "%s renamed this form from \"%s\" to \"%s\".": {
-    "s5": [
-      "%s changed the \"%s\" policy from \"%s\" to \"%s\".",
-      "%s changed the \"%s\" value from \"%s\" to \"%s\".",
-      "%s changed the edit policy from \"%s\" to \"%s\".",
-      "%s changed the join policy from \"%s\" to \"%s\".",
-      "%s changed the poll question from \"%s\" to \"%s\".",
-      "%s changed the visibility from \"%s\" to \"%s\".",
-      "%s renamed this account from %s to %s.",
-      "%s renamed this badge from %s to %s.",
-      "%s renamed this blog from %s to %s.",
-      "%s renamed this blog post from %s to %s.",
-      "%s renamed this blueprint from %s to %s.",
-      "%s renamed this column from %s to %s.",
-      "%s renamed this credential from %s to %s.",
-      "%s renamed this dashboard from %s to %s.",
-      "%s renamed this device from %s to %s.",
-      "%s renamed this document from %s to %s.",
-      "%s renamed this event from %s to %s.",
-      "%s renamed this export from %s to %s.",
-      "%s renamed this form from \"%s\" to \"%s\".",
-      "%s renamed this import from %s to %s.",
-      "%s renamed this initiative from %s to %s.",
-      "%s renamed this macro from %s to %s.",
-      "%s renamed this merchant from %s to %s.",
-      "%s renamed this mock from %s to %s.",
-      "%s renamed this namespace from %s to %s.",
-      "%s renamed this network from %s to %s.",
-      "%s renamed this package from %s to %s.",
-      "%s renamed this panel from %s to %s.",
-      "%s renamed this portal from %s to %s.",
-      "%s renamed this project from %s to %s.",
-      "%s renamed this provider from %s to %s.",
-      "%s renamed this queue from %s to %s.",
-      "%s renamed this repository from %s to %s.",
-      "%s renamed this room from %s to %s.",
-      "%s renamed this rule from %s to %s.",
-      "%s renamed this service from %s to %s.",
-      "%s renamed this source from %s to %s.",
-      "%s renamed this space from %s to %s.",
-      "%s renamed this task from %s to %s.",
-      "%s renamed this trigger from %s to %s.",
-      "%s renamed this user from %s to %s.",
-      "%s renamed this webhook from %s to %s."
-    ],
-    "s6": [
-      "%s changed this URI from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\"."
-    ],
-    "s7": [
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
-      "%s renamed this application from \"%s\" to \"%s\".",
-      "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
-      "%s renamed this key from \"%s\" to \"%s\"."
-    ]
-  },
-  "%s named this form \"%s\".": {
-    "s3": [
-      "%s created this form configuration.",
-      "%s named this column %s.",
-      "%s named this form \"%s\".",
-      "%s named this import %s.",
-      "%s named this provider %s.",
-      "%s named this trigger %s."
-    ]
-  },
-  "%s updated the preamble for this form.": {
-    "s4": [
-      "%s changed the blog for this post.",
-      "%s changed the header image for this blog.",
-      "%s changed the header image for this post.",
-      "%s changed the image for this macro.",
-      "%s changed the profile image for this blog.",
-      "%s changed the query for this export.",
-      "%s destroyed the secret for this credential.",
-      "%s disabled the audio for this macro.",
-      "%s disabled the workboard for this project.",
-      "%s edited the test plan for this revision.",
-      "%s enabled the workboard for this project.",
-      "%s examined the secret plaintext for this credential.",
-      "%s explained the test plan for this revision.",
-      "%s removed the callsign (%s) for this repository.",
-      "%s removed the interface for this binding.",
-      "%s removed the point limit for this column.",
-      "%s removed the point value for this task.",
-      "%s reordered the fields in this form.",
-      "%s updated the description for credential %s.",
-      "%s updated the document preamble for %s.",
-      "%s updated the picture for merchant %s.",
-      "%s updated the preamble for this form."
-    ]
-  },
-  "%s reordered the fields in this form.": {
-    "s4": [
-      "%s reordered the fields in this form.",
-      "%s updated the preamble for this form."
-    ]
-  },
-  "%s changed the default value for field \"%s\".": {
-    "s5": [
-      "%s changed the \"%s\" value from \"%s\" to \"%s\".",
-      "%s changed the default filter for the project workboard.",
-      "%s changed the default value for field \"%s\"."
-    ]
-  },
-  "%s added this form to the \"Create\" menu.": {
-    "s6": [
-      "%s added this form to the \"Create\" menu.",
-      "%s removed this form from the \"Create\" menu."
-    ]
-  },
-  "%s marked this form as an edit form.": {
-    "s7": [
-      "%s marked this form as an edit form.",
-      "%s unmarked this form as an edit form."
-    ]
-  },
-  "%s disabled this form.": {
-    "s3": [
-      "%s disabled this URI.",
-      "%s disabled this application.",
-      "%s disabled this badge.",
-      "%s disabled this binding.",
-      "%s disabled this blueprint.",
-      "%s disabled this build plan.",
-      "%s disabled this contact number.",
-      "%s disabled this export.",
-      "%s disabled this form.",
-      "%s disabled this import.",
-      "%s disabled this macro.",
-      "%s disabled this payment provider.",
-      "%s disabled this provider.",
-      "%s disabled this rule.",
-      "%s disabled this user.",
-      "%s enabled this form."
-    ]
-  },
-  "%s enabled this form.": {
-    "s3": [
-      "%s disabled this form.",
-      "%s enabled this URI.",
-      "%s enabled this application.",
-      "%s enabled this badge.",
-      "%s enabled this binding.",
-      "%s enabled this blueprint.",
-      "%s enabled this build plan.",
-      "%s enabled this contact number.",
-      "%s enabled this export.",
-      "%s enabled this form.",
-      "%s enabled this import.",
-      "%s enabled this payment provider.",
-      "%s enabled this provider.",
-      "%s enabled this rule.",
-      "%s enabled this user."
-    ]
-  },
-  "%s changed the subtype of this form from \"%s\" to \"%s\".": {
-    "s6": [
-      "%s changed the %s behavior for this plan from %s to %s.",
-      "%s changed the URI for this webhook from %s to %s.",
-      "%s changed the address for this interface from %s to %s.",
-      "%s changed the assigned user for this identity from %s to %s.",
-      "%s changed the audio for this macro from %s to %s.",
-      "%s changed the audit rule for this package from %s to %s.",
-      "%s changed the billing name for this account from %s to %s.",
-      "%s changed the callsign for this repository from %s to %s.",
-      "%s changed the credential for this URI from %s to %s.",
-      "%s changed the credential for this provider from %s to %s.",
-      "%s changed the default queue for this source from %s to %s.",
-      "%s changed the device for this interface from %s to %s.",
-      "%s changed the end date for this event from %s to %s.",
-      "%s changed the enrollment policy for this provider from %s to %s.",
-      "%s changed the hostname for this provider from %s to %s.",
-      "%s changed the icon for this dashboard from %s to %s.",
-      "%s changed the interface for this binding from %s to %s.",
-      "%s changed the layout mode for this dashboard from %s to %s.",
-      "%s changed the name of the URL from %s to %s.",
-      "%s changed the network for this interface from %s to %s.",
-      "%s changed the point limit for this column from %s to %s.",
-      "%s changed the point value for this task from %s to %s.",
-      "%s changed the policy mode for this export from %s to %s.",
-      "%s changed the port for this interface from %s to %s.",
-      "%s changed the repository for this revision from %s to %s.",
-      "%s changed the staging area for this repository from %s to %s.",
-      "%s changed the start date for this event from %s to %s.",
-      "%s changed the status of subtask %s from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
-      "%s changed the trigger for this column from %s to %s.",
-      "%s changed the username policy for this provider from %s to %s.",
-      "%s lowered the priority of this task from %s to %s.",
-      "%s raised the priority of this task from %s to %s."
-    ],
-    "s7": [
-      "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".",
-      "%s changed the host of this event from %s to %s.",
-      "%s changed the name of this package from %s to %s.",
-      "%s changed the name of this publisher from %s to %s.",
-      "%s changed the name of this version from %s to %s.",
-      "%s changed the push policy of this repository from %s to %s.",
-      "%s changed the short name of this repository from %s to %s.",
-      "%s changed the status of this item from %s to %s.",
-      "%s changed the status of this provider from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
-      "%s changed the title of this paste from %s to %s.",
-      "%s changed the title of this paste from %s to untitled.",
-      "%s changed the title of this paste from untitled to %s.",
-      "%s updated the OAuth application ID for this provider from \"%s\" to \"%s\".",
-      "%s updated the OAuth consumer key for this provider from \"%s\" to \"%s\".",
-      "%s updated the name for this file from \"%s\" to \"%s\".",
-      "%s upgraded the hash algorithm for this password from \"%s\" to \"%s\"."
-    ],
-    "s8": [
-      "%s changed the display type for this URI from \"%s\" to \"%s\".",
-      "%s changed the subtype of this form from \"%s\" to \"%s\"."
     ]
   },
   "Make Editable": {
@@ -53426,6 +53588,7 @@
       "%s mentioned this in %s.",
       "%s moved this document to %s.",
       "%s named this column %s.",
+      "%s named this form %s.",
       "%s named this import %s.",
       "%s named this provider %s.",
       "%s named this trigger %s.",
@@ -55501,42 +55664,6 @@
       "Edit Webhook Configurations"
     ]
   },
-  "Subtype \"%s\" is not a valid subtype.": {
-    "s5": [
-      "Action \"%s\" is not a valid repository URI action.",
-      "Argument \"%s\" is not a valid message ID.",
-      "Auditor \"%s\" is not a valid object.",
-      "Host PHID \"%s\" is not a valid user PHID.",
-      "Object \"%s\" is not a valid object.",
-      "Object \"%s\" is not a valid repository or commit.",
-      "Participant PHID \"%s\" is not a valid user PHID.",
-      "Recipient PHID \"%s\" is not a valid user PHID.",
-      "Repository \"%s\" is not a valid repository.",
-      "Reviewer \"%s\" is not a valid object.",
-      "Routing fragment \"%s\" is not a valid regular expression.",
-      "Subtype \"%s\" is not a valid subtype.",
-      "Template \"%s\" is not a valid template.",
-      "Timezone \"%s\" is not a valid timezone identifier.",
-      "User \"%s\" is not a valid user."
-    ],
-    "s4": [
-      "\"%s\" is not a valid file PHID.",
-      "Monogram \"%s\" does not identify a valid object.",
-      "Object \"%s\" is not a Harbormaster Buildable!",
-      "PID '%s' is not a valid PID.",
-      "Parameter \"%s\" is not a list of transactions.",
-      "Request %s is probably not a valid commit.",
-      "Rule '%s' is not a valid regular expression.",
-      "Sound (\"%s\") is not a valid sound.",
-      "Subtype \"%s\" is not a valid subtype.",
-      "User PHID (\"%s\") is not a valid user."
-    ],
-    "s6": [
-      "Subtype \"%s\" is not a valid subtype.",
-      "Subtype key \"%s\" does not identify a valid subtype.",
-      "The subtype \"%s\" is not a valid subtype."
-    ]
-  },
   "Edge transaction has no '%s'!": {
     "s4": [
       "Custom field transaction has no '%s'!",
@@ -55664,7 +55791,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s renamed this queue from %s to %s.",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -55757,7 +55883,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s renamed this source from %s to %s.",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -55808,6 +55933,7 @@
       "Dashboards must have a name.",
       "Events must have a name.",
       "Files must have a name.",
+      "Forms must have a name.",
       "Initiatives must have a name.",
       "Macros must have a name.",
       "Merchants must have a name.",
@@ -55864,6 +55990,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -55977,6 +56104,7 @@
       "%s changed the status of %s, a subtask of %s, from %s to %s.",
       "%s changed the status of subtask %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s."
     ],
     "s7": [
@@ -55987,7 +56115,6 @@
       "%s changed the point value for %s from %s to %s.",
       "%s changed the start date for %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the title for this countdown from %s to %s."
     ],
@@ -56014,6 +56141,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -57189,7 +57317,8 @@
   "%s changed the image for this macro.": {
     "s4": [
       "%s changed the blog for post %s.",
-      "%s changed the default value for field \"%s\".",
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the image for this macro.",
       "%s changed the panels on this dashboard.",
       "%s destroyed the secret for this credential.",
@@ -57270,6 +57399,8 @@
     ],
     "s5": [
       "%s changed the blog for post %s.",
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for this blog.",
       "%s changed the header image for this post.",
@@ -57310,6 +57441,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the touch limit for this repository from %s paths to %s paths.",
       "%s updated the title for this countdown from %s to %s."
@@ -57332,7 +57464,6 @@
     "s6": [
       "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".",
       "%s changed the audio for this macro from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the countdown end for %s from %s to %s.",
       "%s updated the name for this file from \"%s\" to \"%s\".",
@@ -57421,6 +57552,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s lowered the priority of %s from %s to %s.",
       "%s raised the priority of %s from %s to %s.",
@@ -57474,7 +57606,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s renamed this macro from %s to %s.",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -57501,6 +57632,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -57636,8 +57768,8 @@
       "%s activated %s.",
       "Added %s project(s): %s.",
       "Removed %s project(s): %s.",
-      "%s edited this %s.",
       "%s disabled this form.",
+      "%s edited this %s.",
       "%s committed %s.",
       "%s added subscribers: %s.",
       "%s removed subscribers: %s.",
@@ -58083,7 +58215,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -58836,6 +58967,7 @@
       "%s changed the push policy of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s."
     ],
     "s7": [
@@ -58847,7 +58979,6 @@
       "%s changed the point value for %s from %s to %s.",
       "%s changed the start date for %s from %s to %s.",
       "%s changed the status of %s from %s to %s by committing %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the title for this countdown from %s to %s."
     ],
@@ -58936,6 +59067,7 @@
       "%s changed the host of this event from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s lowered the priority of this task from %s to %s.",
       "%s raised the priority of this task from %s to %s.",
@@ -58983,6 +59115,7 @@
       "Dashboards must have a name.",
       "Events must have a name.",
       "Files must have a name.",
+      "Forms must have a name.",
       "Initiatives must have a name.",
       "Macros must have a name.",
       "Merchants must have a name.",
@@ -59049,6 +59182,7 @@
       "%s changed the push policy of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s."
     ],
     "s7": [
@@ -59060,7 +59194,6 @@
       "%s changed the point value for %s from %s to %s.",
       "%s changed the start date for %s from %s to %s.",
       "%s changed the status of %s from %s to %s by committing %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the title for this countdown from %s to %s."
     ],
@@ -59208,6 +59341,7 @@
       "%s changed the push policy of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s."
     ],
     "s7": [
@@ -59219,7 +59353,6 @@
       "%s changed the point value for %s from %s to %s.",
       "%s changed the start date for %s from %s to %s.",
       "%s changed the status of %s from %s to %s by committing %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the title for this countdown from %s to %s."
     ],
@@ -60035,7 +60168,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -60109,7 +60241,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s renamed this room from %s to %s.",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -60137,6 +60268,7 @@
       "Dashboards must have a name.",
       "Events must have a name.",
       "Files must have a name.",
+      "Forms must have a name.",
       "Image macros must have a file.",
       "Initiatives must have a name.",
       "Initiatives must have a payable merchant.",
@@ -60402,6 +60534,8 @@
       "%s updated the test plan for %s."
     ],
     "s4": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for this blog.",
       "%s changed the header image for this post.",
@@ -60503,6 +60637,8 @@
   },
   "%s removed the room topic for %s.": {
     "s4": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
@@ -61178,7 +61314,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s renamed this user from %s to %s.",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -61360,30 +61495,9 @@
       "You do not have permission to disable or enable users."
     ]
   },
-  "Either specify a list of users to update, or use `%s` to update all users.": {
-    "s13": [
-      "Either specify a list of files to update, or use `%s` to update all files.",
-      "Either specify a list of users to update, or use `%s` to update all users."
-    ],
-    "s11": [
-      "Either specify a list of files to compact, or use `%s` to compact all files.",
-      "Either specify a list of files to migrate, or use `%s` to migrate all files.",
-      "Either specify a list of users to update, or use `%s` to update all users."
-    ],
-    "s10": [
-      "Either specify a list of files to affect, or use \"--all\" to affect all files.",
-      "Either specify a list of files to cycle, or use --all to cycle all files.",
-      "Either specify a list of files to encode, or use --all to encode all files.",
-      "Either specify a list of users to update, or use `%s` to update all users."
-    ]
-  },
   "Specify either a list of users or `%s`, but not both.": {
     "s9": [
       "Specify either a list of objects to affect or \"--all\", but not both.",
-      "Specify either a list of users or `%s`, but not both."
-    ],
-    "s10": [
-      "Specify either a list of files or `%s`, but not both.",
       "Specify either a list of users or `%s`, but not both."
     ]
   },
@@ -61853,6 +61967,7 @@
       "Disable the export.",
       "Disable the import.",
       "Disable the lock log.",
+      "Disable the rule.",
       "Disable the user."
     ],
     "s3": [
@@ -61973,7 +62088,6 @@
     "s7": [
       "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".",
       "%s changed the billing name for this account from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the name for this file from \"%s\" to \"%s\".",
       "%s updated the title for this countdown from %s to %s."
@@ -62008,7 +62122,6 @@
     "s7": [
       "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".",
       "%s changed the name of %s from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the name for %s from %s to %s.",
       "%s updated the name of %s from \"%s\" to \"%s\".",
@@ -62204,14 +62317,6 @@
       "You successfully uploaded a file."
     ]
   },
-  "Update all files.": {
-    "s2": [
-      "Affect all files.",
-      "Compact all files.",
-      "Migrate all files.",
-      "Update all files."
-    ]
-  },
   "Show what would be updated.": {
     "s4": [
       "Show what would be compacted.",
@@ -62225,20 +62330,6 @@
       "Rebuild image dimension information."
     ]
   },
-  "Either specify a list of files to update, or use `%s` to update all files.": {
-    "s13": [
-      "Either specify a list of files to compact, or use `%s` to compact all files.",
-      "Either specify a list of files to migrate, or use `%s` to migrate all files.",
-      "Either specify a list of files to update, or use `%s` to update all files.",
-      "Either specify a list of users to update, or use `%s` to update all users."
-    ],
-    "s12": [
-      "Either specify a list of files to affect, or use \"--all\" to affect all files.",
-      "Either specify a list of files to cycle, or use --all to cycle all files.",
-      "Either specify a list of files to encode, or use --all to encode all files.",
-      "Either specify a list of files to update, or use `%s` to update all files."
-    ]
-  },
   "%s: Updating Mime type: '%s' -> '%s'.": {
     "s6": [
       "%s: Updating Mime type: '%s' -> '%s'.",
@@ -62249,32 +62340,6 @@
     "s12": [
       "Do not migrate data for files which are larger than a given filesize.",
       "Do not migrate data for files which are smaller than a given filesize."
-    ]
-  },
-  "Migrate all files.": {
-    "s2": [
-      "Affect all files.",
-      "Compact all files.",
-      "Migrate all files.",
-      "Migrate all hunks.",
-      "Update all files."
-    ]
-  },
-  "Either specify a list of files to migrate, or use `%s` to migrate all files.": {
-    "s11": [
-      "Either specify a list of files to migrate, or use `%s` to migrate all files.",
-      "Either specify a list of users to update, or use `%s` to update all users."
-    ],
-    "s13": [
-      "Either specify a list of files to compact, or use `%s` to compact all files.",
-      "Either specify a list of files to migrate, or use `%s` to migrate all files.",
-      "Either specify a list of files to update, or use `%s` to update all files."
-    ],
-    "s12": [
-      "Either specify a list of files to affect, or use \"--all\" to affect all files.",
-      "Either specify a list of files to cycle, or use --all to cycle all files.",
-      "Either specify a list of files to encode, or use --all to encode all files.",
-      "Either specify a list of files to migrate, or use `%s` to migrate all files."
     ]
   },
   "%s: Uses unknown storage engine \"%s\".": {
@@ -62317,23 +62382,6 @@
       "This was a dry run, so no real migrations were performed."
     ]
   },
-  "Either specify a list of files to encode, or use --all to encode all files.": {
-    "s10": [
-      "Either specify a list of files to encode, or use --all to encode all files.",
-      "Either specify a list of users to update, or use `%s` to update all users."
-    ],
-    "s12": [
-      "Either specify a list of files to affect, or use \"--all\" to affect all files.",
-      "Either specify a list of files to compact, or use `%s` to compact all files.",
-      "Either specify a list of files to encode, or use --all to encode all files.",
-      "Either specify a list of files to migrate, or use `%s` to migrate all files.",
-      "Either specify a list of files to update, or use `%s` to update all files."
-    ],
-    "s13": [
-      "Either specify a list of files to cycle, or use --all to cycle all files.",
-      "Either specify a list of files to encode, or use --all to encode all files."
-    ]
-  },
   "Storage format \"%s\" is not valid. Available formats are: %s.": {
     "s6": [
       "Autoreview setting \"%s\" is not valid. Valid settings are: %s.",
@@ -62356,23 +62404,9 @@
       "%s changed the visibility from \"%s\" to \"%s\".",
       "%s changed this URI from \"%s\" to \"%s\".",
       "%s renamed this application from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s: (%s) Migrating from \"%s\" to \"%s\"...",
       "%s: Changing encoding from \"%s\" to \"%s\"."
-    ]
-  },
-  "Either specify a list of files to cycle, or use --all to cycle all files.": {
-    "s10": [
-      "Either specify a list of files to cycle, or use --all to cycle all files.",
-      "Either specify a list of users to update, or use `%s` to update all users."
-    ],
-    "s12": [
-      "Either specify a list of files to affect, or use \"--all\" to affect all files.",
-      "Either specify a list of files to compact, or use `%s` to compact all files.",
-      "Either specify a list of files to cycle, or use --all to cycle all files.",
-      "Either specify a list of files to migrate, or use `%s` to migrate all files.",
-      "Either specify a list of files to update, or use `%s` to update all files."
     ]
   },
   "%s: Stored as chunks, declining to cycle directly.": {
@@ -62404,18 +62438,6 @@
       "No object relationship of type \"%s\" exists."
     ]
   },
-  "Either specify a list of files to compact, or use `%s` to compact all files.": {
-    "s11": [
-      "Either specify a list of files to compact, or use `%s` to compact all files.",
-      "Either specify a list of users to update, or use `%s` to update all users."
-    ],
-    "s12": [
-      "Either specify a list of files to affect, or use \"--all\" to affect all files.",
-      "Either specify a list of files to compact, or use `%s` to compact all files.",
-      "Either specify a list of files to cycle, or use --all to cycle all files.",
-      "Either specify a list of files to encode, or use --all to encode all files."
-    ]
-  },
   "%s: Compacting storage with %s.": {
     "s4": [
       "%s: Compacting storage with %s.",
@@ -62426,12 +62448,6 @@
     "s4": [
       "No storage engines are available.",
       "No valid storage engines are available!"
-    ]
-  },
-  "Specify either a list of files or `%s`, but not both.": {
-    "s9": [
-      "Specify either a list of files or `%s`, but not both.",
-      "Specify either a list of objects to affect or \"--all\", but not both."
     ]
   },
   "Begin printing at a specific offset.": {
@@ -62454,20 +62470,6 @@
     "s9": [
       "DANGEROUS. Strip integrity hashes from files. This makes files vulnerable to corruption or tampering.",
       "Stripping integrity hashes is dangerous and makes files vulnerable to corruption or tampering."
-    ]
-  },
-  "Either specify a list of files to affect, or use \"--all\" to affect all files.": {
-    "s10": [
-      "Either specify a list of files to affect, or use \"--all\" to affect all files.",
-      "Either specify a list of users to update, or use `%s` to update all users."
-    ],
-    "s12": [
-      "Either specify a list of files to affect, or use \"--all\" to affect all files.",
-      "Either specify a list of files to compact, or use `%s` to compact all files.",
-      "Either specify a list of files to cycle, or use --all to cycle all files.",
-      "Either specify a list of files to encode, or use --all to encode all files.",
-      "Either specify a list of files to migrate, or use `%s` to migrate all files.",
-      "Either specify a list of files to update, or use `%s` to update all files."
     ]
   },
   "Stripped integrity hash for \"%s\".": {
@@ -62851,7 +62853,6 @@
   "No '%s' specified!": {
     "s2": [
       "No '%s' specified!",
-      "No file '%s' exists!",
       "No implementation is specified!"
     ]
   },
@@ -63134,6 +63135,7 @@
       "%s renamed this portal from %s to %s.",
       "%s renamed this panel from %s to %s.",
       "%s renamed this dashboard from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this queue from %s to %s.",
       "%s renamed this source from %s to %s.",
       "%s reassigned this item from %s to %s.",
@@ -63266,7 +63268,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s renamed this package from %s to %s.",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -63293,6 +63294,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -63907,7 +63909,8 @@
   "%s changed the blog for this post.": {
     "s4": [
       "%s changed the blog for this post.",
-      "%s changed the default value for field \"%s\".",
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
       "%s changed the panels on this dashboard.",
@@ -63951,7 +63954,6 @@
     "s4": [
       "%s changed the alias from %s to %s.",
       "%s changed the blog for post %s.",
-      "%s changed the default value for field \"%s\".",
       "%s changed the edit policy for %s.",
       "%s changed the header image for this blog.",
       "%s changed the header image for this post.",
@@ -63972,6 +63974,8 @@
     "s5": [
       "%s changed the blog for post %s.",
       "%s changed the blog for this post.",
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the header image for blog %s.",
       "%s changed the profile image for blog %s."
     ],
@@ -63984,7 +63988,6 @@
     "s4": [
       "%s changed this URI from \"%s\" to \"%s\".",
       "%s renamed this application from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s set %s blog's full domain to %s.",
       "%s set %s blog's parent domain to %s.",
@@ -64174,14 +64177,16 @@
     ]
   },
   "%s changed the header image for blog %s.": {
+    "s5": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
+      "%s changed the header image for blog %s.",
+      "%s changed the profile image for this blog."
+    ],
     "s6": [
       "%s changed the header image for blog %s.",
       "%s changed the header image for this blog.",
       "%s changed the header image for this post."
-    ],
-    "s5": [
-      "%s changed the header image for blog %s.",
-      "%s changed the profile image for this blog."
     ],
     "s7": [
       "%s changed the header image for blog %s.",
@@ -64193,7 +64198,6 @@
     "s4": [
       "%s changed this URI from \"%s\" to \"%s\".",
       "%s renamed this application from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s set the \"%s\" value to \"%s\".",
       "%s set this blog's full domain to %s.",
@@ -64415,6 +64419,7 @@
       "%s changed the status of subtask %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the trigger for this column from %s to %s.",
       "%s lowered the priority of %s from %s to %s.",
@@ -64524,7 +64529,6 @@
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this blog from %s to %s.",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s revoked this badge from %s recipient(s): %s.",
       "%s updated %s flavor text from %s to %s.",
@@ -64550,6 +64554,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -64624,6 +64629,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -64710,6 +64716,8 @@
   },
   "%s changed the profile image for blog %s.": {
     "s5": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the header image for this blog.",
       "%s changed the header image for this post.",
       "%s changed the profile image for blog %s."
@@ -64911,6 +64919,7 @@
       "Dashboards must have a name.",
       "Events must have a name.",
       "Files must have a name.",
+      "Forms must have a name.",
       "Image macros must have a file.",
       "Initiatives must have a name.",
       "Initiatives must have a payable merchant.",
@@ -64992,6 +65001,7 @@
       "%s changed the status of subtask %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the trigger for this column from %s to %s.",
       "%s lowered the priority of %s from %s to %s.",
@@ -65118,6 +65128,7 @@
       "%s changed the status of subtask %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the trigger for this column from %s to %s.",
       "%s lowered the priority of %s from %s to %s.",
@@ -65195,6 +65206,8 @@
   },
   "%s updated the post content for %s.": {
     "s4": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
@@ -65241,6 +65254,12 @@
     ]
   },
   "%s changed the header image for post %s.": {
+    "s5": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
+      "%s changed the header image for post %s.",
+      "%s changed the profile image for this blog."
+    ],
     "s6": [
       "%s changed the header image for post %s.",
       "%s changed the header image for this blog.",
@@ -65250,10 +65269,6 @@
     "s7": [
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s."
-    ],
-    "s5": [
-      "%s changed the header image for post %s.",
-      "%s changed the profile image for this blog."
     ]
   },
   "Create or edit blog posts in Phame.": {
@@ -65983,7 +65998,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -66057,7 +66071,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -66196,7 +66209,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -66304,6 +66316,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the touch limit for this repository from %s paths to %s paths.",
       "%s updated the title for this countdown from %s to %s."
@@ -66326,7 +66339,6 @@
     "s6": [
       "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".",
       "%s changed the URI for this webhook from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the countdown end for %s from %s to %s.",
       "%s updated the name for this file from \"%s\" to \"%s\".",
@@ -66402,6 +66414,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s lowered the priority of %s from %s to %s.",
       "%s raised the priority of %s from %s to %s.",
@@ -66438,6 +66451,7 @@
       "Documents must have a title.",
       "Events must have a name.",
       "Files must have a name.",
+      "Forms must have a name.",
       "Image macros must have a file.",
       "Initiatives must have a name.",
       "Initiatives must have a payable merchant.",
@@ -66539,7 +66553,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s renamed this webhook from %s to %s.",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -66566,6 +66579,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -66628,6 +66642,7 @@
       "Dashboards must have a name.",
       "Events must have a name.",
       "Files must have a name.",
+      "Forms must have a name.",
       "Initiatives must have a name.",
       "Macros must have a name.",
       "Merchants must have a name.",
@@ -66716,7 +66731,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s renamed this rule from %s to %s.",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -66840,6 +66854,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -66949,6 +66964,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -67161,6 +67177,30 @@
       "You do not have permission to view this object."
     ]
   },
+  "Apply changes to this rule.": {
+    "s3": [
+      "%s planned changes to this revision.",
+      "%s requested changes to this revision.",
+      "Apply changes to this rule."
+    ]
+  },
+  "Disable the rule.": {
+    "s2": [
+      "Disable the export.",
+      "Disable the import.",
+      "Disable the lock log.",
+      "Disable the rule.",
+      "Disable the user.",
+      "Enable the rule."
+    ]
+  },
+  "Enable the rule.": {
+    "s2": [
+      "Disable the rule.",
+      "Enable the lock log.",
+      "Enable the rule."
+    ]
+  },
   "Call a webhook.": {
     "s2": [
       "Call a Conduit method..",
@@ -67180,6 +67220,7 @@
       "Specify a message to send with \"--message\".",
       "Specify a path to look up with `%s`.",
       "Specify a public key to trust with --id.",
+      "Specify a rule to edit with \"--rule <id|monogram>\".",
       "Specify a user to notify with \"--user\".",
       "Specify a webhook to call with \"--id\"."
     ]
@@ -67921,6 +67962,12 @@
       "Not all conditions matched."
     ]
   },
+  "Unable to pop profiler stack: profiler stack is empty.": {
+    "s6": [
+      "Unable to pop profiler stack: profiler stack is empty.",
+      "Unable to pop working directory, directory stack is empty."
+    ]
+  },
   "This engine is used to edit webhooks.": {
     "s5": [
       "This engine is used to edit webhooks.",
@@ -68410,6 +68457,7 @@
       "Specify a method to call with \"--method\".",
       "Specify a path to look up with `%s`.",
       "Specify a public key to trust with --id.",
+      "Specify a rule to edit with \"--rule <id|monogram>\".",
       "Specify a user to notify with \"--user\".",
       "Specify a webhook to call with \"--id\"."
     ]
@@ -68437,6 +68485,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -68501,6 +68550,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -68664,6 +68714,8 @@
       "%s updated the test plan for %s."
     ],
     "s4": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
@@ -68744,6 +68796,7 @@
       "%s changed the status of subtask %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the task status from %s to %s by committing %s.",
       "%s changed the task status from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
@@ -68837,6 +68890,7 @@
       "%s changed the status of %s from %s to %s by committing %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the trigger for this column from %s to %s."
     ],
@@ -69014,7 +69068,6 @@
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this badge from %s to %s.",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s updated %s flavor text from %s to %s.",
       "%s updated %s invoice email from %s to %s.",
@@ -69082,6 +69135,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -69207,6 +69261,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -69308,6 +69363,7 @@
       "%s changed the start date for %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s lowered the priority of this task from %s to %s.",
       "%s raised the priority of this task from %s to %s.",
@@ -69405,6 +69461,7 @@
       "%s renamed this document from %s to %s.",
       "%s renamed this event from %s to %s.",
       "%s renamed this export from %s to %s.",
+      "%s renamed this form from %s to %s.",
       "%s renamed this import from %s to %s.",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this macro from %s to %s.",
@@ -69714,7 +69771,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -70455,7 +70511,6 @@
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this blueprint from %s to %s.",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s revoked this badge from %s recipient(s): %s.",
       "%s updated %s flavor text from %s to %s.",
@@ -70665,8 +70720,8 @@
       "%s activated %s.",
       "Added %s project(s): %s.",
       "Removed %s project(s): %s.",
-      "%s edited this %s.",
       "%s enabled this form.",
+      "%s edited this %s.",
       "%s committed %s.",
       "%s added subscribers: %s.",
       "%s removed subscribers: %s.",
@@ -71425,7 +71480,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -71616,6 +71670,7 @@
       "%s changed the status of subtask %s from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the task status from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the trigger for this column from %s to %s.",
@@ -71732,6 +71787,7 @@
       "%s changed the name of this version from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s lowered the priority of this task from %s to %s.",
       "%s raised the priority of this task from %s to %s.",
@@ -71782,17 +71838,6 @@
       "%s raised the priority of this task from %s to %s.",
       "%s updated the title for this countdown from %s to %s."
     ],
-    "s9": [
-      "%s changed the host of this event from %s to %s.",
-      "%s changed the name of this package from %s to %s.",
-      "%s changed the name of this publisher from %s to %s.",
-      "%s changed the name of this version from %s to %s.",
-      "%s changed the push policy of this repository from %s to %s.",
-      "%s changed the short name of this repository from %s to %s.",
-      "%s changed the status of this item from %s to %s.",
-      "%s changed the status of this provider from %s to %s.",
-      "%s changed the title of this paste from %s to %s."
-    ],
     "s7": [
       "%s changed permanent refs for this repository from %s to %s.",
       "%s changed the badge icon for %s from %s to %s.",
@@ -71801,7 +71846,6 @@
       "%s changed the point value for %s from %s to %s.",
       "%s changed the start date for %s from %s to %s.",
       "%s changed the status of %s from %s to %s by committing %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s changed the title of this paste from %s to %s."
     ],
@@ -71847,7 +71891,6 @@
       "%s changed the staging area for this repository from %s to %s.",
       "%s changed the start date for this event from %s to %s.",
       "%s changed the status of subtask %s from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s changed the title of this paste from untitled to %s.",
       "%s changed the trigger for this column from %s to %s.",
@@ -71865,6 +71908,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from untitled to %s."
     ],
     "s6": [
@@ -71917,7 +71961,6 @@
       "%s changed the staging area for this repository from %s to %s.",
       "%s changed the start date for this event from %s to %s.",
       "%s changed the status of subtask %s from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s changed the title of this paste from %s to untitled.",
       "%s changed the trigger for this column from %s to %s.",
@@ -71935,6 +71978,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to untitled."
     ],
     "s6": [
@@ -72019,6 +72063,7 @@
       "%s changed the name of this version from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to untitled.",
       "%s changed the title of this paste from untitled to %s.",
       "%s lowered the priority of this task from %s to %s.",
@@ -72406,7 +72451,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -73050,7 +73094,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s renamed this network from %s to %s.",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -73172,6 +73215,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the touch limit for this repository from %s paths to %s paths.",
       "%s updated the title for this countdown from %s to %s."
@@ -73194,7 +73238,6 @@
     "s6": [
       "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".",
       "%s changed the interface for this binding from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the countdown end for %s from %s to %s.",
       "%s updated the name for this file from \"%s\" to \"%s\".",
@@ -73254,6 +73297,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the touch limit for this repository from %s paths to %s paths.",
       "%s updated the title for this countdown from %s to %s."
@@ -73276,7 +73320,6 @@
     "s6": [
       "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".",
       "%s changed the port for this interface from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the countdown end for %s from %s to %s.",
       "%s updated the name for this file from \"%s\" to \"%s\".",
@@ -73328,7 +73371,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s renamed this service from %s to %s.",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -73404,6 +73446,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the touch limit for this repository from %s paths to %s paths.",
       "%s updated the title for this countdown from %s to %s."
@@ -73426,7 +73469,6 @@
     "s6": [
       "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".",
       "%s changed the device for this interface from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the countdown end for %s from %s to %s.",
       "%s updated the name for this file from \"%s\" to \"%s\".",
@@ -73449,6 +73491,7 @@
       "Documents must have a title.",
       "Events must have a name.",
       "Files must have a name.",
+      "Forms must have a name.",
       "Image macros must have a file.",
       "Initiatives must have a name.",
       "Initiatives must have a payable merchant.",
@@ -73539,7 +73582,6 @@
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
       "%s renamed this device from %s to %s.",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s revoked this badge from %s recipient(s): %s.",
       "%s updated %s flavor text from %s to %s.",
@@ -73568,6 +73610,7 @@
       "Documents must have a title.",
       "Events must have a name.",
       "Files must have a name.",
+      "Forms must have a name.",
       "Image macros must have a file.",
       "Initiatives must have a name.",
       "Initiatives must have a payable merchant.",
@@ -73658,7 +73701,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s renamed this namespace from %s to %s.",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -73735,51 +73777,51 @@
       "%s updated the test plan for %s."
     ],
     "s3": [
-      "%s updated the property %s.",
-      "%s updated this revision to %s.",
-      "%s updated the document signature type.",
-      "%s updated the document preamble.",
-      "%s updated the document text.",
-      "%s updated the event description.",
-      "%s updated the import URI.",
-      "%s updated the account billing address.",
-      "%s updated the merchant contact info.",
-      "%s updated the merchant invoice footer.",
-      "%s updated the merchant description.",
-      "%s set the description of %s.",
+      "%s archived the blog %s.",
+      "%s changed the image for %s.",
+      "%s changed the visibility for %s.",
+      "%s closed the audit of %s.",
+      "%s disabled the audio for %s.",
+      "%s disabled the badge %s.",
+      "%s edited the content of %s.",
       "%s edited the description of %s.",
-      "%s updated the countdown description.",
-      "%s updated the task description.",
-      "%s updated the enroll message.",
-      "%s updated the message text.",
-      "%s updated the \"%s\" value.",
-      "%s updated the space description.",
-      "%s updated images of %s.",
+      "%s enabled the badge %s.",
+      "%s published the blog %s.",
+      "%s removed the image for %s.",
+      "%s set the description of %s.",
+      "%s set the subtitle for %s.",
+      "%s updated %s, added %d: %s.",
+      "%s updated %s, removed %s: %s.",
       "%s updated image descriptions of %s.",
       "%s updated image sequence of %s.",
-      "%s updated the mock's description.",
-      "%s edited the content of %s.",
-      "%s updated the answer details.",
-      "%s updated the question details.",
-      "%s updated the answer wiki.",
-      "%s removed the image for %s.",
-      "%s changed the visibility for %s.",
+      "%s updated images of %s.",
       "%s updated subscribers of %s.",
-      "%s closed the audit of %s.",
-      "%s changed the image for %s.",
-      "%s disabled the audio for %s.",
-      "%s updated the room image.",
-      "%s set the subtitle for %s.",
-      "%s published the blog %s.",
-      "%s archived the blog %s.",
-      "%s updated the post content.",
+      "%s updated the \"%s\" value.",
+      "%s updated the account billing address.",
+      "%s updated the answer details.",
+      "%s updated the answer wiki.",
       "%s updated the badge description.",
-      "%s disabled the badge %s.",
-      "%s enabled the badge %s.",
+      "%s updated the countdown description.",
+      "%s updated the document preamble.",
+      "%s updated the document signature type.",
+      "%s updated the document text.",
+      "%s updated the enroll message.",
+      "%s updated the event description.",
+      "%s updated the import URI.",
       "%s updated the initiative description.",
       "%s updated the initiative risks/challenges.",
-      "%s updated %s, added %d: %s.",
-      "%s updated %s, removed %s: %s."
+      "%s updated the merchant contact info.",
+      "%s updated the merchant description.",
+      "%s updated the merchant invoice footer.",
+      "%s updated the message text.",
+      "%s updated the mock's description.",
+      "%s updated the post content.",
+      "%s updated the property %s.",
+      "%s updated the question details.",
+      "%s updated the room image.",
+      "%s updated the space description.",
+      "%s updated the task description.",
+      "%s updated this revision to %s."
     ]
   },
   "%s removed the property %s.": {
@@ -73890,6 +73932,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the touch limit for this repository from %s paths to %s paths.",
       "%s updated the title for this countdown from %s to %s."
@@ -73912,7 +73955,6 @@
     "s6": [
       "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".",
       "%s changed the address for this interface from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the countdown end for %s from %s to %s.",
       "%s updated the name for this file from \"%s\" to \"%s\".",
@@ -73970,6 +74012,7 @@
       "%s changed the short name of this repository from %s to %s.",
       "%s changed the status of this item from %s to %s.",
       "%s changed the status of this provider from %s to %s.",
+      "%s changed the subtype of this form from %s to %s.",
       "%s changed the title of this paste from %s to %s.",
       "%s changed the touch limit for this repository from %s paths to %s paths.",
       "%s updated the title for this countdown from %s to %s."
@@ -73992,7 +74035,6 @@
     "s6": [
       "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".",
       "%s changed the network for this interface from %s to %s.",
-      "%s changed the subtype of this form from \"%s\" to \"%s\".",
       "%s changed the subtype of this task from \"%s\" to \"%s\".",
       "%s updated the countdown end for %s from %s to %s.",
       "%s updated the name for this file from \"%s\" to \"%s\".",
@@ -74015,6 +74057,7 @@
       "Documents must have a title.",
       "Events must have a name.",
       "Files must have a name.",
+      "Forms must have a name.",
       "Image macros must have a file.",
       "Initiatives must have a name.",
       "Initiatives must have a payable merchant.",
@@ -75397,7 +75440,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -75740,6 +75782,8 @@
       "%s updated the test plan for %s."
     ],
     "s4": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
@@ -75915,6 +75959,8 @@
       "%s updated the test plan for %s."
     ],
     "s4": [
+      "%s changed the default value for field %s.",
+      "%s changed the default values for field %s.",
       "%s changed the edit policy for %s.",
       "%s changed the header image for blog %s.",
       "%s changed the header image for post %s.",
@@ -75992,7 +76038,6 @@
       "%s created this document.",
       "%s created this event.",
       "%s created this export.",
-      "%s created this form configuration.",
       "%s created this identity.",
       "%s created this import.",
       "%s created this initiative.",
@@ -76061,7 +76106,6 @@
       "%s changed tracked branches from %s to %s.",
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this build plan from \"%s\" to \"%s\".",
-      "%s renamed this form from \"%s\" to \"%s\".",
       "%s renamed this initiative from %s to %s.",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s revoked this badge from %s recipient(s): %s.",
@@ -76112,6 +76156,7 @@
       "Dashboards must have a name.",
       "Events must have a name.",
       "Files must have a name.",
+      "Forms must have a name.",
       "Initiatives must have a name.",
       "Initiatives must have a payable merchant.",
       "Macros must have a name.",
@@ -77154,71 +77199,71 @@
       "%s removed %s as the repository for %s."
     ],
     "s3": [
-      "%s added %d %s hashtag(s): %s.",
-      "%s added %s account manager(s): %s.",
-      "%s added %s auditor(s): %s.",
-      "%s added %s automation blueprint(s): %s.",
+      "%s removed %s as %s.",
+      "%s held %s as a draft.",
+      "%s added %s reviewer(s): %s.",
       "%s added %s blocking reviewer(s): %s.",
+      "%s removed %d JIRA issue(s): %s.",
       "%s added %s child revision(s): %s.",
       "%s added %s commit(s): %s.",
-      "%s added %s contributor(s): %s.",
-      "%s added %s edge(s): %s.",
-      "%s added %s file(s): %s.",
-      "%s added %s member(s): %s.",
-      "%s added %s merchant manager(s): %s.",
-      "%s added %s mock(s): %s.",
-      "%s added %s owner(s): %s.",
-      "%s added %s parent revision(s): %s.",
-      "%s added %s parent task(s): %s.",
-      "%s added %s project(s): %s.",
-      "%s added %s reverted change(s): %s.",
-      "%s added %s reverting change(s): %s.",
-      "%s added %s reviewer(s): %s.",
-      "%s added %s revision(s): %s.",
-      "%s added %s subscriber(s): %s.",
-      "%s added %s subtask(s): %s.",
       "%s added %s task(s): %s.",
-      "%s added %s unsubscriber(s): %s.",
-      "%s added %s watcher(s): %s.",
+      "%s added %s parent revision(s): %s.",
+      "%s closed %s by committing %s.",
+      "%s added %s automation blueprint(s): %s.",
+      "%s invited %s attendee(s): %s.",
+      "%s uninvited %s attendee(s): %s.",
+      "%s added %s merchant manager(s): %s.",
+      "%s added %s account manager(s): %s.",
+      "%s merged %s task(s): %s.",
+      "%s closed this task as %s.",
+      "%s reopened this task as %s.",
+      "%s closed %s as a duplicate.",
+      "%s reopened %s as \"%s\".",
+      "%s merged task %s into %s.",
+      "%s triaged %s as %s priority.",
       "%s assigned %s to %s.",
       "%s attached %s file(s): %s.",
-      "%s backed %s with %s.",
-      "%s closed %s as a duplicate.",
+      "%s detached %s file(s): %s.",
+      "%s added %s subtask(s): %s.",
+      "%s added %s mock(s): %s.",
+      "%s added %s revision(s): %s.",
+      "%s added %s parent task(s): %s.",
+      "%s replaced %s with %s.",
+      "%s removed %d image(s): %s.",
+      "%s moved %s to %s.",
+      "%s completed building %s for %s.",
+      "%s added %s auditor(s): %s.",
+      "%s added %s reverting change(s): %s.",
+      "%s added %s reverted change(s): %s.",
+      "%s closed %s as resolved.",
       "%s closed %s as invalid.",
       "%s closed %s as obsolete.",
-      "%s closed %s as resolved.",
-      "%s closed %s by committing %s.",
-      "%s closed this task as %s.",
-      "%s completed building %s for %s.",
-      "%s detached %s file(s): %s.",
-      "%s edited %s on %s.",
-      "%s empowered %s as an administrator.",
-      "%s held %s as a draft.",
-      "%s invited %s attendee(s): %s.",
-      "%s marked %s as a draft.",
-      "%s marked %s as archived.",
-      "%s marked %s as hidden.",
       "%s marked %s as visible.",
-      "%s merged %s task(s): %s.",
-      "%s merged task %s into %s.",
-      "%s moved %s to %s.",
-      "%s refunded %s to %s.",
-      "%s removed %d JIRA issue(s): %s.",
-      "%s removed %d image(s): %s.",
-      "%s removed %d participant(s): %s.",
+      "%s marked %s as hidden.",
+      "%s removed the image for %s.",
       "%s removed %d project hashtag(s): %s.",
+      "%s added %d %s hashtag(s): %s.",
+      "%s added %s project(s): %s.",
+      "%s added %s member(s): %s.",
       "%s removed %d project member(s): %s.",
       "%s removed %d subscriber(s): %s.",
-      "%s removed %s as %s.",
+      "%s added %s subscriber(s): %s.",
+      "%s added %s watcher(s): %s.",
+      "%s added %s contributor(s): %s.",
+      "%s added %s unsubscriber(s): %s.",
+      "%s added %s file(s): %s.",
       "%s removed auditors from %s: %s.",
-      "%s removed the image for %s.",
+      "%s removed %d participant(s): %s.",
+      "%s empowered %s as an administrator.",
+      "%s added %s owner(s): %s.",
+      "%s marked %s as a draft.",
+      "%s marked %s as archived.",
       "%s removed the property %s.",
-      "%s reopened %s as \"%s\".",
-      "%s reopened this task as %s.",
-      "%s replaced %s with %s.",
+      "%s refunded %s to %s.",
+      "%s backed %s with %s.",
       "%s set %s to %s.",
-      "%s triaged %s as %s priority.",
-      "%s uninvited %s attendee(s): %s."
+      "%s edited %s on %s.",
+      "%s added %s edge(s): %s."
     ],
     "s4": [
       "%s closed %s as %s.",
@@ -77717,6 +77762,7 @@
       "Specify a message to send with \"--message\".",
       "Specify a method to call with \"--method\".",
       "Specify a public key to trust with --id.",
+      "Specify a rule to edit with \"--rule <id|monogram>\".",
       "Specify a user to notify with \"--user\".",
       "Specify a webhook to call with \"--id\"."
     ]

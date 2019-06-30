@@ -41,7 +41,10 @@ background | 背景|后台
 badge | 徽章
 byte | 字节
 collation | 字符序
+colon | 冒号
+comma | 逗号
 config | 配置
+consecutive | 连续的
 control | 控制|控件
 creation | 创建
 daemon | 守护程序
@@ -52,6 +55,7 @@ delete | 删除
 dependency | 依赖
 determine | 确定
 dictionary | 字典
+digit | 数字
 dimension | 尺寸
 dump | 转储
 editor | 编辑器
@@ -59,6 +63,8 @@ effect | 效果|影响
 email | 邮件
 enable | 启用
 event | 事件
+exact | 精确
+exactly | 准确
 exit | 退出
 fetch | 抓取
 footer | 页脚
@@ -69,7 +75,9 @@ guide | 指南
 haiku | 俳句
 hashtag | 唯一标签
 header | 标头|页头
+home page | 首页
 host | 主办者|主机|托管|“Host”
+hyphen | 连字号
 implementation | 实现
 include | 包含
 inherit | 继承
@@ -84,9 +92,13 @@ job | 作业
 keyboard | 键盘
 keyboard shortcut | 键盘快捷键
 kind | 种类
+latin | 拉丁
 launch | 启动
 length | 长度
+letter | 字母
 link | 链接|关联
+longer than | 长于
+lowercase | 小写
 maximum | 最大
 membership | 成员身份
 merge | 合并
@@ -94,6 +106,7 @@ minimum | 最小
 monogram | 字母组合
 multi-factor | 多因素
 named | 命名|名为
+namespace | 名称空间
 need | 需要
 notification | 通知
 observe | 观察
@@ -148,9 +161,11 @@ trigger | 触发|触发器
 type | 类型|键入
 unavailable | 不可用
 underlying | 底层
+underscore | 下划线
 unnamed | 未命名的
 unreachable | 不可访问
 update | 更新
+uppercase | 大写
 webserver | Web 服务器
 worker | 工作者
 working copy | 工作副本
