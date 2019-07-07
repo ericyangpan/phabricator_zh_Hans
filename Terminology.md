@@ -21,6 +21,7 @@ Remarkup | Remarkup
 UI | 用户界面
 URI | URI
 VCS | 版本控制系统
+Webhook | Webhook
 \n | \n
 account | 帐户
 action | 操作
@@ -28,6 +29,7 @@ activation | 激活
 allow | 允许
 ancestor | 祖先
 approve | 批准
+argument | 参数
 artifact | 工件
 at least one | 至少一
 attempting | 尝试
@@ -39,6 +41,7 @@ award | 授予|奖励
 backer | 支持者
 background | 背景|后台
 badge | 徽章
+blame | 追溯
 byte | 字节
 collation | 字符序
 colon | 冒号
@@ -47,6 +50,7 @@ config | 配置
 consecutive | 连续的
 control | 控制|控件
 creation | 创建
+cursor | 游标
 daemon | 守护程序
 datasource | 数据源
 default | 默认
@@ -57,6 +61,7 @@ determine | 确定
 dictionary | 字典
 digit | 数字
 dimension | 尺寸
+driver | 驱动
 dump | 转储
 editor | 编辑器
 effect | 效果|影响
@@ -66,8 +71,10 @@ event | 事件
 exact | 精确
 exactly | 准确
 exit | 退出
-fetch | 抓取
+factor | 因素
+fetch | 获取
 footer | 页脚
+foreground | 前台
 forever | 永远|永久
 full domain | 完整域名
 graph | 图表
@@ -93,10 +100,11 @@ keyboard | 键盘
 keyboard shortcut | 键盘快捷键
 kind | 种类
 latin | 拉丁
-launch | 启动
+launch | 启动|发动
 length | 长度
 letter | 字母
 link | 链接|关联
+linked | 关联
 longer than | 长于
 lowercase | 小写
 maximum | 最大
@@ -107,14 +115,18 @@ monogram | 字母组合
 multi-factor | 多因素
 named | 命名|名为
 namespace | 名称空间
+native driver | 原生驱动
 need | 需要
+nonempty | 非空
 notification | 通知
 observe | 观察
 open status | 开放状态
+optional | 可选
 output | 输出
 overwrite | 覆盖
 pane | 面板
 parent task | 父任务
+payment method | 支付方式
 permanent | 永久
 permission | 权限
 permitted | 允许
@@ -123,6 +135,8 @@ policy | 策略
 portal | 门户
 post | 文章|发送|发布
 preference | 偏好
+primitive | 原始
+print | 打印
 priority | 优先级
 profile | 档案|分析
 publisher | 发布者
@@ -156,7 +170,10 @@ start | 开始|启动
 subclass | 子类
 tab | 选项卡
 template | 模板
+timeout | 超时
 token | 令牌|符记|符号|语素
+too many | 太多
+transaction | 交易
 trigger | 触发|触发器
 type | 类型|键入
 unavailable | 不可用
@@ -164,6 +181,7 @@ underlying | 底层
 underscore | 下划线
 unnamed | 未命名的
 unreachable | 不可访问
+unsafe | 不安全的
 update | 更新
 uppercase | 大写
 webserver | Web 服务器
