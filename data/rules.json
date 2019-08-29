@@ -32,9 +32,10 @@
     ";": ["<script>alert(1);</script>"],
     "[^.]\\.(?!\\w|\\d|\\.|%|\\*|\")": [
       "$ ./bin/drydock release-lease --id %d",
-      "US East (N. Virginia, Older default endpoint)"
+      "US East (N. Virginia, Older default endpoint)",
+      "The custom domain should contain at least one dot (.) because some browsers fail to set cookies on domains without a dot. Instead, use a normal looking domain name like \"%s\"."
     ],
     "<.+>": ["<DEAD> %s"],
-    "\\((?!s)(?!S).*?\\)": ["<script>alert(1);</script>"]
+    "\\((?!s)(?!S).*?\\)": ["<script>alert(1);</script>", "(null)"]
   }
 }

@@ -129,12 +129,6 @@
       "View as Remarkup"
     ]
   },
-  "View Email Body": {
-    "s2": [
-      "View Email Body",
-      "Welcome Email Body"
-    ]
-  },
   "No time specified.": {
     "s2": [
       "No herald adapter specified.",
@@ -327,6 +321,7 @@
       "Type a dashboard name...",
       "Type a document name...",
       "Type a form name...",
+      "Type a log type name...",
       "Type a macro name...",
       "Type a package name...",
       "Type a panel name...",
@@ -398,6 +393,7 @@
     "s3": [
       "Type a Herald rule name...",
       "Type a build plan name...",
+      "Type a log type name...",
       "Type a project subtype name...",
       "Type a revision status name...",
       "Type a service type name...",
@@ -1555,6 +1551,10 @@
     "s8": [
       "You can not plan changes to a draft revision.",
       "You can not request changes to a draft revision."
+    ],
+    "s5": [
+      "You can not move tasks to a hidden column.",
+      "You can not plan changes to a draft revision."
     ]
   },
   "%s planned changes to this revision.": {
@@ -2206,6 +2206,12 @@
     "s14": [
       "You can not raise a concern with this commit because you are the commit author. You can only raise concerns with commits you did not author.",
       "You can not request changes to this revision because you are the revision author. You can only request changes to revisions you do not own."
+    ]
+  },
+  "You can not request changes to a draft revision.": {
+    "s5": [
+      "You can not move tasks to a hidden column.",
+      "You can not request changes to a draft revision."
     ]
   },
   "You can not request changes to this revision because you have already requested changes.": {
@@ -3149,6 +3155,7 @@
       "Read information about files.",
       "Read information about packages.",
       "Read information about pastes.",
+      "Read information about polls.",
       "Read information about portals.",
       "Read information about projects.",
       "Read information about publishers.",
@@ -3212,6 +3219,7 @@
   },
   "Replaced by '%s'.": {
     "s2": [
+      "Replaced by \"slowvote.poll.search\".",
       "Replaced by '%s'.",
       "Replaced by 'phid.query'."
     ]
@@ -7770,6 +7778,7 @@
       "The PID of the server process.",
       "The URI of the staging repository.",
       "The address of the interface.",
+      "The author of the poll.",
       "The description of the countdown.",
       "The display name of the column.",
       "The end date of the countdown.",
@@ -7784,6 +7793,7 @@
       "The name of the namespace.",
       "The name of the network.",
       "The name of the package.",
+      "The name of the poll.",
       "The name of the project.",
       "The name of the publisher.",
       "The name of the service.",
@@ -7835,6 +7845,7 @@
       "The PID of the server process.",
       "The URI of the staging repository.",
       "The address of the interface.",
+      "The author of the poll.",
       "The description of the countdown.",
       "The display name of the column.",
       "The end date of the countdown.",
@@ -7849,6 +7860,7 @@
       "The name of the namespace.",
       "The name of the network.",
       "The name of the package.",
+      "The name of the poll.",
       "The name of the project.",
       "The name of the publisher.",
       "The name of the service.",
@@ -10536,6 +10548,7 @@
   },
   "Push Log %d": {
     "s2": [
+      "Activity Log %d",
       "Build Log %d",
       "Push Event %d",
       "Push Log %d",
@@ -10923,6 +10936,12 @@
     "s3": [
       "List repository local paths.",
       "Move repository local paths."
+    ]
+  },
+  "There are no repositories.": {
+    "s3": [
+      "There are no repositories.",
+      "There are no running daemons."
     ]
   },
   "Specify one or more repositories to pull.": {
@@ -12190,8 +12209,7 @@
   "Please choose a valid date.": {
     "s3": [
       "Please choose a valid date.",
-      "You must choose a valid panel.",
-      "You must choose a valid project."
+      "You must choose a valid panel."
     ]
   },
   "You can not stop tracking time at a future time. Enter the current time, or a time in the past.": {
@@ -13019,6 +13037,7 @@
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -13535,6 +13554,7 @@
       "The PID of the server process.",
       "The URI of the staging repository.",
       "The address of the interface.",
+      "The author of the poll.",
       "The description of the countdown.",
       "The display name of the column.",
       "The end date of the countdown.",
@@ -13549,6 +13569,7 @@
       "The name of the namespace.",
       "The name of the network.",
       "The name of the package.",
+      "The name of the poll.",
       "The name of the project.",
       "The name of the publisher.",
       "The name of the service.",
@@ -15630,6 +15651,7 @@
       "The PID of the server process.",
       "The URI of the staging repository.",
       "The address of the interface.",
+      "The author of the poll.",
       "The description of the countdown.",
       "The end date of the countdown.",
       "The id of the OAuth client.",
@@ -15659,6 +15681,7 @@
       "The name of the namespace.",
       "The name of the network.",
       "The name of the package.",
+      "The name of the poll.",
       "The name of the project.",
       "The name of the publisher.",
       "The name of the service.",
@@ -19162,8 +19185,7 @@
       "You must choose a payment method.",
       "You must choose a source type.",
       "You must choose a user to exempt.",
-      "You must choose a valid panel.",
-      "You must choose a valid project."
+      "You must choose a valid panel."
     ],
     "s5": [
       "You must choose a payment method.",
@@ -20125,6 +20147,91 @@
       "The user who uploaded a file can always view and edit it."
     ]
   },
+  "The name of the poll.": {
+    "s3": [
+      "The ID of the current build.",
+      "The PID of the server process.",
+      "The URI of the staging repository.",
+      "The address of the interface.",
+      "The description of the countdown.",
+      "The end date of the countdown.",
+      "The id of the OAuth client.",
+      "The name of the poll.",
+      "The name of this blueprint.",
+      "The name of this build plan.",
+      "The name of this build.",
+      "The port number of the interface.",
+      "The preamble of the document.",
+      "The summary of the revision.",
+      "The title of the countdown.",
+      "The title of the paste.",
+      "The title of the revision.",
+      "The title of the task.",
+      "The unique key of the package.",
+      "The unique key of the publisher."
+    ],
+    "s4": [
+      "The author of the poll.",
+      "The display name of the column.",
+      "The name of the OAuth application.",
+      "The name of the badge.",
+      "The name of the blog.",
+      "The name of the build target.",
+      "The name of the device.",
+      "The name of the event.",
+      "The name of the file.",
+      "The name of the namespace.",
+      "The name of the network.",
+      "The name of the package.",
+      "The name of the poll.",
+      "The name of the project.",
+      "The name of the publisher.",
+      "The name of the service.",
+      "The name of the token.",
+      "The name of the version."
+    ]
+  },
+  "The author of the poll.": {
+    "s3": [
+      "The ID of the current build.",
+      "The PID of the server process.",
+      "The URI of the staging repository.",
+      "The address of the interface.",
+      "The author of the poll.",
+      "The description of the countdown.",
+      "The display name of the column.",
+      "The end date of the countdown.",
+      "The id of the OAuth client.",
+      "The name of the OAuth application.",
+      "The name of the badge.",
+      "The name of the blog.",
+      "The name of the build target.",
+      "The name of the device.",
+      "The name of the event.",
+      "The name of the file.",
+      "The name of the namespace.",
+      "The name of the network.",
+      "The name of the package.",
+      "The name of the project.",
+      "The name of the publisher.",
+      "The name of the service.",
+      "The name of the token.",
+      "The name of the version.",
+      "The port number of the interface.",
+      "The preamble of the document.",
+      "The summary of the revision.",
+      "The title of the countdown.",
+      "The title of the paste.",
+      "The title of the revision.",
+      "The title of the task.",
+      "The unique key of the package.",
+      "The unique key of the publisher."
+    ],
+    "s4": [
+      "The author of the poll.",
+      "The name of the poll."
+    ]
+  },
   "You must offer at least one response.": {
     "s5": [
       "You must launch at least one daemon.",
@@ -20680,6 +20787,7 @@
       "You do not have permission to join this object.",
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
+      "You do not have permission to restart this build.",
       "You do not have permission to see this panel.",
       "You do not have permission to view this log event.",
       "You do not have permission to view this object."
@@ -20783,7 +20891,7 @@
     "s4": [
       "There are no API tokens to terminate.",
       "There are no matching factors to strip.",
-      "There are no running daemons to reload.",
+      "There are no running daemon processes to reload.",
       "There are no snapshots available to promote."
     ],
     "s5": [
@@ -21327,6 +21435,7 @@
       "The PID of the server process.",
       "The URI of the staging repository.",
       "The address of the interface.",
+      "The author of the poll.",
       "The display name of the column.",
       "The id of the OAuth client.",
       "The name of the OAuth application.",
@@ -21339,6 +21448,7 @@
       "The name of the namespace.",
       "The name of the network.",
       "The name of the package.",
+      "The name of the poll.",
       "The name of the project.",
       "The name of the publisher.",
       "The name of the service.",
@@ -21369,6 +21479,7 @@
       "The PID of the server process.",
       "The URI of the staging repository.",
       "The address of the interface.",
+      "The author of the poll.",
       "The description of the countdown.",
       "The display name of the column.",
       "The id of the OAuth client.",
@@ -21382,6 +21493,7 @@
       "The name of the namespace.",
       "The name of the network.",
       "The name of the package.",
+      "The name of the poll.",
       "The name of the project.",
       "The name of the publisher.",
       "The name of the service.",
@@ -21616,6 +21728,7 @@
       "Type a Herald rule name...",
       "Type a build plan name...",
       "Type a build status name...",
+      "Type a log type name...",
       "Type a project subtype name...",
       "Type a revision status name...",
       "Type a service type name...",
@@ -21633,6 +21746,7 @@
       "Type a Herald rule name...",
       "Type a build plan name...",
       "Type a build status name...",
+      "Type a log type name...",
       "Type a revision status name...",
       "Type a service type name...",
       "Type a task subtype name...",
@@ -21657,6 +21771,7 @@
     "s3": [
       "Type a Herald rule name...",
       "Type a build plan name...",
+      "Type a log type name...",
       "Type a project subtype name...",
       "Type a service type name...",
       "Type a task status name...",
@@ -24156,17 +24271,17 @@
       "Story Points"
     ]
   },
+  "Configuring Custom Fields": {
+    "s2": [
+      "Configuring Custom Fields",
+      "Support for Custom Fields"
+    ]
+  },
   "Custom Maniphest fields.": {
     "s2": [
       "Custom Maniphest fields.",
       "Custom Owners fields.",
       "Custom Projects fields."
-    ]
-  },
-  "Array of custom fields for Maniphest tasks. For details on adding custom fields to Maniphest, see \"Configuring Custom Fields\" in the documentation.": {
-    "s18": [
-      "Array of custom fields for Maniphest tasks. For details on adding custom fields to Maniphest, see \"Configuring Custom Fields\" in the documentation.",
-      "Map of custom fields for Owners packages. For details on adding custom fields to Owners, see \"Configuring Custom Fields\" in the documentation."
     ]
   },
   "Select and reorder task fields.": {
@@ -24262,6 +24377,7 @@
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -26073,6 +26189,7 @@
       "The PID of the server process.",
       "The URI of the staging repository.",
       "The address of the interface.",
+      "The author of the poll.",
       "The description of the countdown.",
       "The display name of the column.",
       "The end date of the countdown.",
@@ -26087,6 +26204,7 @@
       "The name of the namespace.",
       "The name of the network.",
       "The name of the package.",
+      "The name of the poll.",
       "The name of the project.",
       "The name of the publisher.",
       "The name of the service.",
@@ -27533,12 +27651,6 @@
       "Options relating to object visibility."
     ]
   },
-  "Directory that phd should use to track running daemons.": {
-    "s5": [
-      "Directory that phd should use to track running daemons.",
-      "Directory that the daemons should use to store log files."
-    ]
-  },
   "Launch daemons in 'verbose' mode by default.": {
     "s6": [
       "Launch daemons in 'trace' mode by default.",
@@ -28296,7 +28408,6 @@
   },
   "To rebuild the index, run this command:": {
     "s4": [
-      "To permanently destroy this user, run this command:",
       "To rebuild the index, run this command:",
       "To silence this edit, run this command:"
     ]
@@ -28331,6 +28442,7 @@
   },
   "Missing '%s' Extension": {
     "s2": [
+      "Missing \"zip\" Extension",
       "Missing '%s' Binary",
       "Missing '%s' Extension"
     ]
@@ -28484,6 +28596,12 @@
       "The PATH component '%s' (which resolves as the absolute path '%s') is not usable because it is not traversable (its '%s' permission bit is not set)."
     ]
   },
+  "Missing \"zip\" Extension": {
+    "s2": [
+      "Missing \"zip\" Extension",
+      "Missing '%s' Extension"
+    ]
+  },
   "MySQL InnoDB Engine Not Available": {
     "s3": [
       "MySQL InnoDB Engine Not Available",
@@ -28518,6 +28636,12 @@
     "s29": [
       "The '%s' binary could not be found. Set the webserver's %s environmental variable to include the directory where it resides, or add that directory to '%s' in the Phabricator configuration.",
       "The '%s' binary could not be found. Symlink it into '%s', or set the webserver's %s environmental variable to include the directory where it resides, or add that directory to '%s' in the Phabricator configuration."
+    ]
+  },
+  "Missing '%s' Binary": {
+    "s2": [
+      "Missing '%s' Binary",
+      "Missing '%s' Extension"
     ]
   },
   "PHP Timezone": {
@@ -29740,6 +29864,7 @@
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -30533,6 +30658,13 @@
       "No public key exists with ID \"%s\"."
     ]
   },
+  "Mail Body: Welcome": {
+    "s2": [
+      "Mail Body: Email Login",
+      "Mail Body: Set Password",
+      "Mail Body: Welcome"
+    ]
+  },
   "Duo Username: %s": {
     "s2": [
       "Duo Username: %s",
@@ -31222,6 +31354,18 @@
       "Edit MFA Provider"
     ]
   },
+  "Allow Account Linking": {
+    "s2": [
+      "Allow Account Linking",
+      "Allow Account Unlinking"
+    ]
+  },
+  "Trust Email Addresses": {
+    "s2": [
+      "Browse Email Addresses",
+      "Trust Email Addresses"
+    ]
+  },
   "Edit Existing Provider": {
     "s2": [
       "Edit Auth Provider",
@@ -31253,12 +31397,6 @@
     "s2": [
       "Allow Linking Accounts",
       "Allow Unlinking Accounts"
-    ]
-  },
-  "Trust Email Addresses": {
-    "s2": [
-      "Browse Email Addresses",
-      "Trust Email Addresses"
     ]
   },
   "The account you are attempting to link is already linked to your account.": {
@@ -31391,6 +31529,12 @@
     "s2": [
       "Edit Auth Message",
       "Edit Message"
+    ]
+  },
+  "Customize Message": {
+    "s2": [
+      "Customize Enroll Message",
+      "Customize Message"
     ]
   },
   "This account is not linkable.": {
@@ -31768,7 +31912,7 @@
     ],
     "s4": [
       "There are no matching sessions to terminate.",
-      "There are no running daemons to reload.",
+      "There are no running daemon processes to reload.",
       "There are no snapshots available to promote."
     ]
   },
@@ -31794,7 +31938,7 @@
   "There are no matching tokens to revoke.": {
     "s4": [
       "There are no matching tokens to revoke.",
-      "There are no running daemons to reload.",
+      "There are no running daemon processes to reload.",
       "There are no snapshots available to promote."
     ]
   },
@@ -31822,12 +31966,6 @@
       "No Password Set"
     ]
   },
-  "[Phabricator] Account Password Link": {
-    "s3": [
-      "[Phabricator] Account Login Link",
-      "[Phabricator] Account Password Link"
-    ]
-  },
   "An email has been sent containing a link you can use to log in to your account.": {
     "s14": [
       "An email has been sent containing a link you can use to log in to your account.",
@@ -31852,22 +31990,6 @@
       "Verify Email Address"
     ]
   },
-  "You can use this link to set a password on your account:\n\n  %s\n": {
-    "s9": [
-      "You can use this link to set a password on your account:\n\n  %s\n",
-      "You can use this login link to regain access to your Phabricator account:\n\n  %s\n"
-    ]
-  },
-  "You can use this link to reset your Phabricator password:\n\n  %s\n": {
-    "s8": [
-      "You can use this link to reset your Phabricator password:\n\n  %s\n",
-      "You can use this link to set a password on your account:\n\n  %s\n"
-    ],
-    "s10": [
-      "You can use this link to reset your Phabricator password:\n\n  %s\n",
-      "You can use this login link to regain access to your Phabricator account:\n\n  %s\n"
-    ]
-  },
   "You have failed to verify multi-factor authentication too often in a short period of time.": {
     "s11": [
       "You have failed to verify multi-factor authentication too often in a short period of time.",
@@ -31882,6 +32004,17 @@
     "s9": [
       "You have failed to enter the correct account password too often in a short period of time.",
       "You have failed too many attempts to synchronize new multi-factor authentication methods in a short period of time."
+    ]
+  },
+  "You have made too many account recovery requests in a short period of time.": {
+    "s9": [
+      "You are making too many attempts to add payment methods in a short period of time.",
+      "You have made too many account recovery requests in a short period of time."
+    ],
+    "s8": [
+      "You have failed to verify multi-factor authentication too often in a short period of time.",
+      "You have made too many account recovery requests in a short period of time.",
+      "Your remote address has made too many login attempts in a short period of time."
     ]
   },
   "Generate Keypair": {
@@ -31964,8 +32097,7 @@
       "You must choose a room.",
       "You must choose a source type.",
       "You must choose a user to exempt.",
-      "You must choose a valid panel.",
-      "You must choose a valid project."
+      "You must choose a valid panel."
     ]
   },
   "Already Accepted": {
@@ -32163,6 +32295,18 @@
     "s2": [
       "Auth Providers",
       "No Auth Providers"
+    ]
+  },
+  "Config Locked": {
+    "s2": [
+      "Authentication Config Locked",
+      "Config Locked"
+    ]
+  },
+  "Authentication provider configuration is locked, and can not be changed without being unlocked.": {
+    "s13": [
+      "Authentication provider configuration is locked, and can not be changed without being unlocked.",
+      "Authentication provider configuration is locked, and can not be changed without being unlocked. See the configuration setting %s for details."
     ]
   },
   "%s created this MFA provider.": {
@@ -33664,6 +33808,7 @@
       "You do not have permission to pause any builds.",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -33845,6 +33990,7 @@
       "You do not have permission to manage sources.",
       "You do not have permission to pause any builds.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view this object."
@@ -33922,6 +34068,7 @@
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -36709,7 +36856,6 @@
       "You must choose a payment method.",
       "You must choose a user to exempt.",
       "You must choose a valid panel.",
-      "You must choose a valid project.",
       "You must select a valid provider type."
     ],
     "s5": [
@@ -38523,6 +38669,7 @@
       "Read information about files.",
       "Read information about packages.",
       "Read information about pastes.",
+      "Read information about polls.",
       "Read information about portals.",
       "Read information about projects.",
       "Read information about publishers.",
@@ -38683,6 +38830,7 @@
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -39579,6 +39727,18 @@
       "This file (\"%s\") does not exist or could not be loaded."
     ]
   },
+  "To permanently destroy this repository, run this command from the command line:": {
+    "s11": [
+      "To permanently destroy this repository, run this command from the command line:",
+      "To permanently destroy this user, run this command from the command line:"
+    ]
+  },
+  "Repositories can not be permanently destroyed from the web interface. See %s in the documentation for more information.": {
+    "s17": [
+      "Repositories can not be permanently destroyed from the web interface. See %s in the documentation for more information.",
+      "Users can not be permanently destroyed from the web interface. See %s in the documentation for more information."
+    ]
+  },
   "Pull Logs": {
     "s2": [
       "All Pull Logs",
@@ -39746,6 +39906,7 @@
       "You do not have permission to interact with this object.",
       "You do not have permission to join this object.",
       "You do not have permission to push to this repository (\"%s\").",
+      "You do not have permission to restart this build.",
       "You do not have permission to see this panel.",
       "You do not have permission to view this log event.",
       "You do not have permission to view this object."
@@ -42420,6 +42581,7 @@
     "s3": [
       "Type a Herald rule name...",
       "Type a build status name...",
+      "Type a log type name...",
       "Type a project subtype name...",
       "Type a service type name...",
       "Type a task priority name...",
@@ -42448,6 +42610,7 @@
     "s3": [
       "Type a Herald rule name...",
       "Type a build plan name...",
+      "Type a log type name...",
       "Type a project subtype name...",
       "Type a revision status name...",
       "Type a service type name...",
@@ -42624,6 +42787,7 @@
   },
   "Build Log %d": {
     "s2": [
+      "Activity Log %d",
       "Build Artifact %d",
       "Build Log %d",
       "Build Target %d",
@@ -42932,12 +43096,6 @@
     "s4": [
       "Retain data for the specified number of days.",
       "Sleep for a specified number of seconds."
-    ]
-  },
-  "Abort Older Builds": {
-    "s2": [
-      "Abort All Builds",
-      "Abort Older Builds"
     ]
   },
   "Commit %s": {
@@ -43519,6 +43677,7 @@
       "The name of the namespace.",
       "The name of the network.",
       "The name of the package.",
+      "The name of the poll.",
       "The name of the project.",
       "The name of the publisher.",
       "The name of the service.",
@@ -43573,6 +43732,95 @@
       "Show More Below"
     ]
   },
+  "Unable to Restart Builds": {
+    "s3": [
+      "Unable to Abort Builds",
+      "Unable to Pause Builds",
+      "Unable to Restart Builds",
+      "Unable to Resume Builds"
+    ]
+  },
+  "Will Restart": {
+    "s2": [
+      "Will Not Restart",
+      "Will Restart"
+    ]
+  },
+  "You do not have permission to restart this build.": {
+    "s6": [
+      "%s target(s) do not have permission to see this object: %s.",
+      "You do not have authorization to call this method.",
+      "You do not have permission to abort any builds.",
+      "You do not have permission to browse the user directory.",
+      "You do not have permission to bulk edit tasks.",
+      "You do not have permission to create Almanac devices.",
+      "You do not have permission to create Almanac namespaces.",
+      "You do not have permission to create Almanac networks.",
+      "You do not have permission to create Almanac services.",
+      "You do not have permission to create Drydock blueprints.",
+      "You do not have permission to create Fund initiatives.",
+      "You do not have permission to create Harbormaster build plans.",
+      "You do not have permission to create OAuth applications.",
+      "You do not have permission to create Phortune merchant accounts.",
+      "You do not have permission to create a Phurl URL.",
+      "You do not have permission to create a blog.",
+      "You do not have permission to create new cluster services.",
+      "You do not have permission to create new documents.",
+      "You do not have permission to create new projects.",
+      "You do not have permission to create new repositories.",
+      "You do not have permission to create or manage global rules.",
+      "You do not have permission to create these objects.",
+      "You do not have permission to disable or enable users.",
+      "You do not have permission to lock project membership.",
+      "You do not have permission to manage Almanac cluster services.",
+      "You do not have permission to manage authentication providers.",
+      "You do not have permission to manage cluster services.",
+      "You do not have permission to manage global Herald rules.",
+      "You do not have permission to manage image macros.",
+      "You do not have permission to pause any builds.",
+      "You do not have permission to restart this build.",
+      "You do not have permission to resume any builds.",
+      "You do not have permission to view the configured credential."
+    ],
+    "s7": [
+      "You do not have permission to access this repository.",
+      "You do not have permission to configure forms for this application.",
+      "You do not have permission to edit this object.",
+      "You do not have permission to interact with this object.",
+      "You do not have permission to join this object.",
+      "You do not have permission to push to this repository (\"%s\").",
+      "You do not have permission to push to this repository.",
+      "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
+      "You do not have permission to see this panel.",
+      "You do not have permission to view this log event.",
+      "You do not have permission to view this object."
+    ],
+    "s5": [
+      "%s (You do not have permission to view policy details.)",
+      "You do not have permission to restart this build.",
+      "You do not have privileges to access the requested page."
+    ]
+  },
+  "Will Not Restart": {
+    "s2": [
+      "Can Not Restart Autobuild",
+      "Will Not Restart"
+    ]
+  },
+  "You only have permission to restart some builds.": {
+    "s5": [
+      "You do not have permission to abort any builds.",
+      "You do not have permission to pause any builds.",
+      "You do not have permission to restart this build.",
+      "You do not have permission to resume any builds.",
+      "You only have permission to restart some builds."
+    ],
+    "s6": [
+      "You do not have permission to restart any builds.",
+      "You only have permission to restart some builds."
+    ]
+  },
   "Really restart builds?": {
     "s2": [
       "Really abort builds?",
@@ -43580,20 +43828,6 @@
       "Really restart build?",
       "Really restart builds?",
       "Really resume builds?"
-    ]
-  },
-  "Restart Builds": {
-    "s2": [
-      "Restart All Builds",
-      "Restart Builds"
-    ]
-  },
-  "Unable to Restart Builds": {
-    "s3": [
-      "Unable to Abort Builds",
-      "Unable to Pause Builds",
-      "Unable to Restart Builds",
-      "Unable to Resume Builds"
     ]
   },
   "You do not have permission to restart any builds.": {
@@ -43643,6 +43877,10 @@
       "You do not have permission to restart any builds.",
       "You do not have privileges to access the requested page."
     ],
+    "s7": [
+      "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build."
+    ],
     "s8": [
       "You do not have permission to abort any builds.",
       "You do not have permission to pause any builds.",
@@ -43671,12 +43909,6 @@
     "s16": [
       "If you pause all builds, work will halt once the current steps complete. You can resume the builds later.",
       "If you pause this build, work will halt once the current steps complete. You can resume the build later."
-    ]
-  },
-  "Pause Builds": {
-    "s2": [
-      "Pause All Builds",
-      "Pause Builds"
     ]
   },
   "Unable to Pause Builds": {
@@ -43724,6 +43956,7 @@
       "You do not have permission to pause any builds.",
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
+      "You do not have permission to restart this build.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
       "You do not have permission to view this log event.",
@@ -43753,7 +43986,6 @@
   },
   "Abort Builds": {
     "s2": [
-      "Abort All Builds",
       "Abort Builds",
       "Abort Older Builds"
     ]
@@ -43803,6 +44035,7 @@
       "You do not have permission to manage image macros.",
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
+      "You do not have permission to restart this build.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
       "You do not have permission to view this log event.",
@@ -43828,12 +44061,6 @@
     "s6": [
       "Work will continue on all builds. Really resume?",
       "Work will continue on the build. Really resume?"
-    ]
-  },
-  "Resume Builds": {
-    "s2": [
-      "Resume All Builds",
-      "Resume Builds"
     ]
   },
   "Unable to Resume Builds": {
@@ -43880,6 +44107,7 @@
       "You do not have permission to manage image macros.",
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -43899,25 +44127,6 @@
       "Build Plans",
       "Harbormaster Build Plans",
       "Manage Build Plans"
-    ]
-  },
-  "Restart All Builds": {
-    "s2": [
-      "Abort All Builds",
-      "Pause All Builds",
-      "Restart All Builds",
-      "Resume All Builds",
-      "View All Builds"
-    ]
-  },
-  "Abort All Builds": {
-    "s2": [
-      "Abort All Builds",
-      "Abort Older Builds",
-      "Pause All Builds",
-      "Restart All Builds",
-      "Resume All Builds",
-      "View All Builds"
     ]
   },
   "Target %d": {
@@ -44137,12 +44346,6 @@
       "Really resume build?"
     ]
   },
-  "Progress on this build will be discarded and the build will restart. Side effects of the build will occur again. Really restart build?": {
-    "s16": [
-      "Progress on all builds will be discarded, and all builds will restart. Side effects of the builds will occur again. Really restart all builds?",
-      "Progress on this build will be discarded and the build will restart. Side effects of the build will occur again. Really restart build?"
-    ]
-  },
   "Really abort build?": {
     "s2": [
       "Really abort build?",
@@ -44244,21 +44447,6 @@
     "s2": [
       "Missing Dependency",
       "Missing Javelin Dependency"
-    ]
-  },
-  "View All Builds": {
-    "s2": [
-      "Abort All Builds",
-      "Pause All Builds",
-      "Restart All Builds",
-      "Resume All Builds",
-      "View All Builds",
-      "View All Charges",
-      "View All Invoices",
-      "View All Merchants",
-      "View All Orders",
-      "View All Results",
-      "View All Rules"
     ]
   },
   "No active Herald rules trigger this build.": {
@@ -44381,11 +44569,7 @@
   },
   "All Builds": {
     "s2": [
-      "Abort All Builds",
       "All Builds",
-      "Pause All Builds",
-      "Restart All Builds",
-      "Resume All Builds",
       "View All Builds"
     ]
   },
@@ -44779,6 +44963,7 @@
   "Browse Document Types": {
     "s2": [
       "Browse Document Types",
+      "Browse Log Types",
       "Browse Rule Types",
       "Browse Service Types"
     ]
@@ -44894,7 +45079,6 @@
       "You must choose a source type.",
       "You must choose a user to exempt.",
       "You must choose a valid panel.",
-      "You must choose a valid project.",
       "You must select a dashboard.",
       "You must select a valid dashboard."
     ],
@@ -44965,7 +45149,6 @@
       "You must choose a room.",
       "You must choose a source type.",
       "You must choose a valid panel.",
-      "You must choose a valid project.",
       "You must choose an application.",
       "You must enter an LDAP password.",
       "You must enter an LDAP username.",
@@ -44990,8 +45173,7 @@
       "You must choose a payment method.",
       "You must choose a source type.",
       "You must choose a user to exempt.",
-      "You must choose a valid panel.",
-      "You must choose a valid project."
+      "You must choose a valid panel."
     ],
     "s5": [
       "You must choose a label name.",
@@ -45013,8 +45195,7 @@
       "You must choose a payment method.",
       "You must choose a source type.",
       "You must choose a user to exempt.",
-      "You must choose a valid panel.",
-      "You must choose a valid project."
+      "You must choose a valid panel."
     ],
     "s5": [
       "You must choose a URI to link to.",
@@ -45039,22 +45220,6 @@
     ]
   },
   "You must choose a project.": {
-    "s4": [
-      "You must choose a blueprint type.",
-      "You must choose a credential type.",
-      "You must choose a dashboard.",
-      "You must choose a file to upload.",
-      "You must choose a form.",
-      "You must choose a label name.",
-      "You must choose a link name.",
-      "You must choose a password.",
-      "You must choose a payment method.",
-      "You must choose a project.",
-      "You must choose a room.",
-      "You must choose a source type.",
-      "You must choose a user to exempt.",
-      "You must choose a valid panel."
-    ],
     "s3": [
       "You must ask a poll question.",
       "You must choose a project.",
@@ -45065,10 +45230,6 @@
       "You must select a valid panel.",
       "You must specify a name.",
       "You must specify a title."
-    ],
-    "s5": [
-      "You must choose a project.",
-      "You must choose a valid project."
     ]
   },
   "Project \"%s\" is not a valid project which you have permission to see.": {
@@ -45437,6 +45598,7 @@
       "You do not have permission to pause any builds.",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -45506,7 +45668,7 @@
       "There are no matching factors to strip.",
       "There are no matching sessions to terminate.",
       "There are no matching tokens to revoke.",
-      "There are no running daemons to reload.",
+      "There are no running daemon processes to reload.",
       "There are no snapshots available to promote."
     ]
   },
@@ -45590,7 +45752,6 @@
       "You must choose a room.",
       "You must choose a source type.",
       "You must choose a valid panel.",
-      "You must choose a valid project.",
       "You must provide a %s level.",
       "You must select a dashboard.",
       "You must select a valid dashboard.",
@@ -45942,6 +46103,7 @@
       "Type a dashboard name...",
       "Type a document name...",
       "Type a form name...",
+      "Type a log type name...",
       "Type a macro name...",
       "Type a package name...",
       "Type a panel name...",
@@ -46064,6 +46226,7 @@
       "Type a Herald rule name...",
       "Type a build plan name...",
       "Type a build status name...",
+      "Type a log type name...",
       "Type a project name or function...",
       "Type a project subtype name...",
       "Type a revision status name...",
@@ -47789,6 +47952,7 @@
       "Read information about files.",
       "Read information about packages.",
       "Read information about pastes.",
+      "Read information about polls.",
       "Read information about portals.",
       "Read information about projects.",
       "Read information about publishers.",
@@ -47858,6 +48022,7 @@
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -49090,6 +49255,7 @@
       "The PID of the server process.",
       "The URI of the staging repository.",
       "The address of the interface.",
+      "The author of the poll.",
       "The description of the countdown.",
       "The end date of the countdown.",
       "The id of the OAuth client.",
@@ -49195,6 +49361,98 @@
       "You can not add subprojects to this project."
     ]
   },
+  "No Movable Tasks": {
+    "s2": [
+      "No Editable Tasks",
+      "No Movable Tasks"
+    ]
+  },
+  "The selected column contains no visible tasks which you have permission to move.": {
+    "s12": [
+      "The selected column contains no visible tasks which you have permission to edit.",
+      "The selected column contains no visible tasks which you have permission to move."
+    ]
+  },
+  "Choose a project to move tasks to.": {
+    "s7": [
+      "Choose a project to move tasks to.",
+      "Choose a valid project to move tasks to."
+    ],
+    "s6": [
+      "Choose a column to move tasks to.",
+      "Choose a project to move tasks to."
+    ],
+    "s4": [
+      "Choose a project to import columns from:",
+      "Choose a project to move tasks to."
+    ]
+  },
+  "Choose a column to move tasks to.": {
+    "s6": [
+      "Choose a column to move tasks to.",
+      "Choose a project to move tasks to.",
+      "Choose a valid project to move tasks to."
+    ]
+  },
+  "You can not move tasks to a hidden column.": {
+    "s5": [
+      "You can not move tasks to a hidden column.",
+      "You can not plan changes to a draft revision.",
+      "You can not request changes to a draft revision."
+    ],
+    "s6": [
+      "You can not move tasks from a column to itself.",
+      "You can not move tasks to a hidden column."
+    ]
+  },
+  "Move Tasks to Column": {
+    "s3": [
+      "Move Tasks to Column",
+      "Move Tasks to Column...",
+      "Move Tasks to Project",
+      "Move Tasks to Project..."
+    ]
+  },
+  "Hidden Columns": {
+    "s2": [
+      "Hidden Columns",
+      "Hide Hidden Columns",
+      "Show Hidden Columns"
+    ]
+  },
+  "Move to Column": {
+    "s2": [
+      "Move Tasks to Column...",
+      "Move Tasks to Project",
+      "Move Tasks to Project...",
+      "Move to Column",
+      "Move to Project",
+      "Move to column %s.",
+      "Move to milestone %s."
+    ],
+    "s3": [
+      "Move Tasks to Column",
+      "Move to Column"
+    ]
+  },
+  "Move to Project": {
+    "s2": [
+      "Add to Project",
+      "Add to Project Menu",
+      "Convert to Parent Project",
+      "Move Tasks to Column",
+      "Move Tasks to Column...",
+      "Move Tasks to Project...",
+      "Move to Column",
+      "Move to Project",
+      "Move to column %s.",
+      "Move to milestone %s."
+    ],
+    "s3": [
+      "Move Tasks to Project",
+      "Move to Project"
+    ]
+  },
   "This project does not support editing membership.": {
     "s4": [
       "This call does not support any attachments.",
@@ -49213,7 +49471,8 @@
   "Choose a project to import columns from:": {
     "s4": [
       "Choose a project to import columns from:",
-      "Choose a project to move tasks to."
+      "Choose a project to move tasks to.",
+      "Choose a valid project to move tasks to."
     ]
   },
   "New Rule": {
@@ -49467,71 +49726,6 @@
       "Members of the parent project are members of this project."
     ]
   },
-  "No Editable Tasks": {
-    "s2": [
-      "No Editable Tasks",
-      "No Movable Tasks"
-    ]
-  },
-  "The selected column contains no visible tasks which you have permission to edit.": {
-    "s12": [
-      "The selected column contains no visible tasks which you have permission to edit.",
-      "The selected column contains no visible tasks which you have permission to move."
-    ]
-  },
-  "Choose a project to move tasks to.": {
-    "s6": [
-      "Choose a column to move tasks to.",
-      "Choose a project to move tasks to."
-    ]
-  },
-  "You must choose a valid project.": {
-    "s4": [
-      "You must choose a blueprint type.",
-      "You must choose a credential type.",
-      "You must choose a file to upload.",
-      "You must choose a label name.",
-      "You must choose a link name.",
-      "You must choose a payment method.",
-      "You must choose a source type.",
-      "You must choose a user to exempt.",
-      "You must choose a valid project.",
-      "You must select a valid dashboard.",
-      "You must select a valid panel.",
-      "You must select a valid provider type."
-    ],
-    "s5": [
-      "You must choose a valid panel.",
-      "You must choose a valid project."
-    ]
-  },
-  "Move to Column": {
-    "s2": [
-      "Move Tasks to Column...",
-      "Move to Column",
-      "Move to Project",
-      "Move to column %s.",
-      "Move to milestone %s."
-    ]
-  },
-  "Choose a column on the %s workboard to move tasks to:": {
-    "s9": [
-      "Choose a column on the %s workboard to move tasks to:",
-      "Choose a valid column on the target workboard to move tasks to."
-    ]
-  },
-  "Move to Project": {
-    "s2": [
-      "Add to Project",
-      "Add to Project Menu",
-      "Convert to Parent Project",
-      "Move Tasks to Column...",
-      "Move to Column",
-      "Move to Project",
-      "Move to column %s.",
-      "Move to milestone %s."
-    ]
-  },
   "Save as Default": {
     "s2": [
       "Save as Default",
@@ -49550,20 +49744,6 @@
       "Bulk Edit Selected »",
       "Bulk Edit Tasks...",
       "Can Bulk Edit Tasks"
-    ]
-  },
-  "View as Query": {
-    "s2": [
-      "View as Audio",
-      "View as Hexdump",
-      "View as Image",
-      "View as JSON",
-      "View as Jupyter Notebook",
-      "View as PDF",
-      "View as Query",
-      "View as Remarkup",
-      "View as Source",
-      "View as Video"
     ]
   },
   "This project does not have any members.": {
@@ -50330,6 +50510,7 @@
       "Add to Portal Menu",
       "Add to Project",
       "Convert to Parent Project",
+      "Move Tasks to Project",
       "Move to Project"
     ],
     "s3": [
@@ -51323,7 +51504,6 @@
   },
   "You must select a valid panel.": {
     "s4": [
-      "You must choose a valid project.",
       "You must select a comment to edit.",
       "You must select a comment to hide.",
       "You must select a file to upload.",
@@ -51418,7 +51598,6 @@
       "You must choose a room.",
       "You must choose a source type.",
       "You must choose a valid panel.",
-      "You must choose a valid project.",
       "You must provide a %s level.",
       "You must select a dashboard.",
       "You must specify a name.",
@@ -51432,7 +51611,6 @@
   "You must select a valid dashboard.": {
     "s4": [
       "You must choose a valid panel.",
-      "You must choose a valid project.",
       "You must select a comment to edit.",
       "You must select a comment to hide.",
       "You must select a file to upload.",
@@ -51505,7 +51683,6 @@
     ],
     "s5": [
       "You must choose a valid panel.",
-      "You must choose a valid project.",
       "You must select a valid panel."
     ]
   },
@@ -51605,6 +51782,7 @@
       "You do not have permission to join this object.",
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
+      "You do not have permission to restart this build.",
       "You do not have permission to see this panel.",
       "You do not have permission to view this log event.",
       "You do not have permission to view this object."
@@ -51918,16 +52096,6 @@
       "Bulk Edit Tasks..."
     ]
   },
-  "To silence this edit, run this command:": {
-    "s4": [
-      "To rebuild the index, run this command:",
-      "To silence this edit, run this command:"
-    ],
-    "s5": [
-      "To permanently destroy this user, run this command:",
-      "To silence this edit, run this command:"
-    ]
-  },
   "Output path already exists. Use \"--overwrite\" to overwrite it.": {
     "s5": [
       "Output file \"%s\" already exists. Use \"--overwrite\" to overwrite.",
@@ -51979,6 +52147,7 @@
   },
   "Type an object type name...": {
     "s3": [
+      "Type a log type name...",
       "Type a service type name...",
       "Type an object type name..."
     ]
@@ -52536,6 +52705,7 @@
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -56318,6 +56488,7 @@
       "You do not have permission to pause any builds.",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -56507,7 +56678,6 @@
       "You must choose a source type.",
       "You must choose a user to exempt.",
       "You must choose a valid panel.",
-      "You must choose a valid project.",
       "You must select a valid provider type."
     ]
   },
@@ -58049,6 +58219,7 @@
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -58325,16 +58496,15 @@
       "ERROR: The PHP function %s is disabled. You must enable it to run daemons on this machine.\n"
     ]
   },
-  "There are no running Phabricator daemons.": {
-    "s4": [
-      "There are no running Phabricator daemons.",
-      "There are no running daemons to reload."
-    ]
-  },
-  "No daemons to kill.": {
+  "There are no running daemons.": {
     "s3": [
-      "No daemons to kill.",
-      "No daemons to reload."
+      "There are no configured multi-factor providers.",
+      "There are no running daemons.",
+      "There are no upcoming event triggers."
+    ],
+    "s4": [
+      "There are no running daemon processes.",
+      "There are no running daemons."
     ]
   },
   "Reloading process %d...": {
@@ -58399,16 +58569,22 @@
       "This build log is already open!"
     ]
   },
-  "Show status of running daemons.": {
-    "s3": [
-      "Show a list of available daemons.",
-      "Show status of running daemons."
+  "Show daemon processes on this host.": {
+    "s5": [
+      "Show daemon processes on this host.",
+      "Stop daemon processes on this host."
     ]
   },
-  "Ignore running processes that look like daemons but do not have corresponding PID files.": {
-    "s13": [
-      "Also stop running processes that look like daemons but do not have corresponding PID files.",
-      "Ignore running processes that look like daemons but do not have corresponding PID files."
+  "There are no running daemon processes.": {
+    "s5": [
+      "There are no running daemon processes to reload.",
+      "There are no running daemon processes."
+    ]
+  },
+  "Deprecated. Has no effect.": {
+    "s3": [
+      "Deprecated. Has no effect.",
+      "Obsolete. Has no effect."
     ]
   },
   "Start __daemon__ in the foreground and print large volumes of diagnostic information to the console.": {
@@ -59441,6 +59617,7 @@
       "Read information about files.",
       "Read information about packages.",
       "Read information about pastes.",
+      "Read information about polls.",
       "Read information about portals.",
       "Read information about projects.",
       "Read information about publishers.",
@@ -59485,6 +59662,7 @@
       "You do not have permission to pause any builds.",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -59556,6 +59734,7 @@
       "The PID of the server process.",
       "The URI of the staging repository.",
       "The address of the interface.",
+      "The author of the poll.",
       "The description of the countdown.",
       "The end date of the countdown.",
       "The id of the OAuth client.",
@@ -59638,6 +59817,7 @@
       "The PID of the server process.",
       "The URI of the staging repository.",
       "The address of the interface.",
+      "The author of the poll.",
       "The description of the countdown.",
       "The end date of the countdown.",
       "The id of the OAuth client.",
@@ -59666,6 +59846,7 @@
       "The name of the namespace.",
       "The name of the network.",
       "The name of the package.",
+      "The name of the poll.",
       "The name of the project.",
       "The name of the publisher.",
       "The name of the service.",
@@ -59741,6 +59922,7 @@
       "The PID of the server process.",
       "The URI of the staging repository.",
       "The address of the interface.",
+      "The author of the poll.",
       "The description of the countdown.",
       "The end date of the countdown.",
       "The id of the OAuth client.",
@@ -59769,6 +59951,7 @@
       "The name of the namespace.",
       "The name of the network.",
       "The name of the package.",
+      "The name of the poll.",
       "The name of the project.",
       "The name of the publisher.",
       "The name of the service.",
@@ -60740,7 +60923,6 @@
       "You must choose a room.",
       "You must choose a source type.",
       "You must choose a valid panel.",
-      "You must choose a valid project.",
       "You must provide a %s level.",
       "You must select a dashboard.",
       "You must select a valid dashboard.",
@@ -61082,10 +61264,23 @@
       "Type a webhook name..."
     ]
   },
-  "Mailing List": {
-    "s2": [
-      "Add/Remove Mailing List",
-      "Mailing List"
+  "Type a log type name...": {
+    "s3": [
+      "Type a Herald rule name...",
+      "Type a build plan name...",
+      "Type a build status name...",
+      "Type a log type name...",
+      "Type a project subtype name...",
+      "Type a revision status name...",
+      "Type a task priority name...",
+      "Type a task status name...",
+      "Type a task subtype name...",
+      "Type a user or project name...",
+      "Type an object type name..."
+    ],
+    "s4": [
+      "Type a log type name...",
+      "Type a service type name..."
     ]
   },
   "Browse No Owner": {
@@ -61363,6 +61558,28 @@
       "After you set up your account, you can log in to Phabricator in the future by going here:"
     ]
   },
+  "[Phabricator] Account Password Link": {
+    "s3": [
+      "[Phabricator] Account Login Link",
+      "[Phabricator] Account Password Link"
+    ]
+  },
+  "You can use this link to set a password on your account:\n\n  %s\n": {
+    "s9": [
+      "You can use this link to set a password on your account:\n\n  %s\n",
+      "You can use this login link to regain access to your Phabricator account:\n\n  %s\n"
+    ]
+  },
+  "You can use this link to reset your Phabricator password:\n\n  %s\n": {
+    "s8": [
+      "You can use this link to reset your Phabricator password:\n\n  %s\n",
+      "You can use this link to set a password on your account:\n\n  %s\n"
+    ],
+    "s10": [
+      "You can use this link to reset your Phabricator password:\n\n  %s\n",
+      "You can use this login link to regain access to your Phabricator account:\n\n  %s\n"
+    ]
+  },
   "Old Username: %s": {
     "s2": [
       "Duo Username: %s",
@@ -61460,6 +61677,7 @@
       "You do not have permission to pause any builds.",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -61523,35 +61741,12 @@
       "Sound (\"%s\") is not a valid sound."
     ]
   },
-  "Add/Remove Mailing List": {
+  "Activity Log %d": {
     "s2": [
-      "Add/Remove Mailing List",
-      "Create Mailing List User",
-      "Create New Mailing List"
-    ]
-  },
-  "Delete User": {
-    "s2": [
-      "Delete User",
-      "Permanently Delete User"
-    ]
-  },
-  "Conduit: Read Certificate": {
-    "s3": [
-      "Conduit: Read Certificate",
-      "Conduit: Read Certificate Failure"
-    ]
-  },
-  "Email: Add Address": {
-    "s2": [
-      "Email: Add Address",
-      "Email: Remove Address"
-    ]
-  },
-  "Multi-Factor: Add Factor": {
-    "s2": [
-      "Multi-Factor: Add Factor",
-      "Multi-Factor: Remove Factor"
+      "Activity Log %d",
+      "Activity Log ID: #%d",
+      "Build Log %d",
+      "Push Log %d"
     ]
   },
   "The user's username.": {
@@ -61572,18 +61767,6 @@
     "s5": [
       "This authorization has already been approved.",
       "This user has already been approved."
-    ]
-  },
-  "It is generally safe to delete newly created users (and test users and so on), but less safe to delete established users. If possible, disable them instead.": {
-    "s19": [
-      "It is generally safe to delete newly created users (and test users and so on), but less safe to delete established users. If possible, disable them instead.",
-      "It is generally safe to rename newly created users (and test users and so on), but less safe to rename established users and unsafe to reissue a username."
-    ]
-  },
-  "You can not delete your own account.": {
-    "s6": [
-      "You can not delete your own account.",
-      "You can not enable or disable your own account."
     ]
   },
   "Edit Profile": {
@@ -61690,6 +61873,25 @@
     "s3": [
       "Awarded by %s",
       "Awarded by %s on %s"
+    ]
+  },
+  "Email: Remove Address": {
+    "s2": [
+      "Email: Add Address",
+      "Email: Remove Address",
+      "Email: Verify Address"
+    ]
+  },
+  "Conduit: Read Certificate": {
+    "s3": [
+      "Conduit: Read Certificate",
+      "Conduit: Read Certificate Failure"
+    ]
+  },
+  "Multi-Factor: Add Factor": {
+    "s2": [
+      "Multi-Factor: Add Factor",
+      "Multi-Factor: Remove Factor"
     ]
   },
   "Account Activity": {
@@ -62556,6 +62758,20 @@
       "This Jupyter notebook does not specify any notebook cells."
     ]
   },
+  "View as Image": {
+    "s2": [
+      "View Tasks as Query",
+      "View as Audio",
+      "View as Hexdump",
+      "View as Image",
+      "View as JSON",
+      "View as Jupyter Notebook",
+      "View as PDF",
+      "View as Remarkup",
+      "View as Source",
+      "View as Video"
+    ]
+  },
   "This file is larger than %s, so syntax highlighting was skipped.": {
     "s9": [
       "This file is larger than %s, so syntax highlighting is disabled by default.",
@@ -62600,6 +62816,7 @@
       "The PID of the server process.",
       "The URI of the staging repository.",
       "The address of the interface.",
+      "The author of the poll.",
       "The description of the countdown.",
       "The end date of the countdown.",
       "The id of the OAuth client.",
@@ -65329,6 +65546,7 @@
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -65365,6 +65583,7 @@
       "The PID of the server process.",
       "The URI of the staging repository.",
       "The address of the interface.",
+      "The author of the poll.",
       "The description of the countdown.",
       "The end date of the countdown.",
       "The id of the OAuth client.",
@@ -66272,6 +66491,7 @@
       "Type a Herald rule name...",
       "Type a build plan name...",
       "Type a build status name...",
+      "Type a log type name...",
       "Type a project subtype name...",
       "Type a revision status name...",
       "Type a service type name...",
@@ -67170,6 +67390,7 @@
       "You do not have permission to pause any builds.",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -68316,6 +68537,7 @@
       "The PID of the server process.",
       "The URI of the staging repository.",
       "The address of the interface.",
+      "The author of the poll.",
       "The description of the countdown.",
       "The end date of the countdown.",
       "The id of the OAuth client.",
@@ -68387,12 +68609,6 @@
       "No such resource \"%s\"!",
       "No such token \"%s\"!",
       "No such user \"%s\"!"
-    ]
-  },
-  "Stop, then start the notification server.": {
-    "s4": [
-      "Stop, then start the notification server.",
-      "Stop, then start the standard daemon loadout."
     ]
   },
   "Configuration file does not specify any administrative servers. This service will be unable to receive messages. You must specify at least one server with type \"%s\".": {
@@ -69602,6 +69818,7 @@
       "You do not have permission to pause any builds.",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -69617,6 +69834,7 @@
       "The PID of the server process.",
       "The URI of the staging repository.",
       "The address of the interface.",
+      "The author of the poll.",
       "The description of the countdown.",
       "The end date of the countdown.",
       "The id of the OAuth client.",
@@ -70860,6 +71078,7 @@
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -71231,6 +71450,7 @@
       "The name of the namespace.",
       "The name of the network.",
       "The name of the package.",
+      "The name of the poll.",
       "The name of the project.",
       "The name of the publisher.",
       "The name of the service.",
@@ -71327,7 +71547,6 @@
       "You must choose a payment method.",
       "You must choose a user to exempt.",
       "You must choose a valid panel.",
-      "You must choose a valid project.",
       "You must select a valid provider type."
     ]
   },
@@ -71604,7 +71823,8 @@
       "Unable to load lease (\"%s\").",
       "Unable to load object \"%s\".",
       "Unable to load provider for charge!",
-      "Unable to load transactions: %s."
+      "Unable to load transactions: %s.",
+      "Unable to stop PID %d (\"%s\")."
     ],
     "s4": [
       "Unable to load Duo API credential (\"%s\").",
@@ -72280,6 +72500,7 @@
       "The PID of the server process.",
       "The URI of the staging repository.",
       "The address of the interface.",
+      "The author of the poll.",
       "The description of the countdown.",
       "The display name of the column.",
       "The end date of the countdown.",
@@ -72294,6 +72515,7 @@
       "The name of the namespace.",
       "The name of the network.",
       "The name of the package.",
+      "The name of the poll.",
       "The name of the project.",
       "The name of the publisher.",
       "The name of the service.",
@@ -72646,6 +72868,7 @@
       "You do not have permission to configure forms for this application.",
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
+      "You do not have permission to restart this build.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
       "You do not have permission to view this object."
@@ -72705,6 +72928,7 @@
       "You do not have permission to join this object.",
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
+      "You do not have permission to restart this build.",
       "You do not have permission to see this panel.",
       "You do not have permission to view this log event."
     ],
@@ -72763,6 +72987,7 @@
       "You do not have permission to edit this object.",
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
+      "You do not have permission to restart this build.",
       "You do not have permission to see this panel.",
       "You do not have permission to view this log event."
     ],
@@ -72980,6 +73205,7 @@
       "Type a dashboard name...",
       "Type a document name...",
       "Type a form name...",
+      "Type a log type name...",
       "Type a macro name...",
       "Type a package name...",
       "Type a panel name...",
@@ -74317,6 +74543,7 @@
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -74400,6 +74627,7 @@
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -74460,6 +74688,7 @@
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -74511,6 +74740,7 @@
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -74627,6 +74857,7 @@
       "The PID of the server process.",
       "The URI of the staging repository.",
       "The address of the interface.",
+      "The author of the poll.",
       "The description of the countdown.",
       "The display name of the column.",
       "The end date of the countdown.",
@@ -74641,6 +74872,7 @@
       "The name of the namespace.",
       "The name of the network.",
       "The name of the package.",
+      "The name of the poll.",
       "The name of the project.",
       "The name of the publisher.",
       "The name of the service.",
@@ -74666,6 +74898,7 @@
       "The PID of the server process.",
       "The URI of the staging repository.",
       "The address of the interface.",
+      "The author of the poll.",
       "The description of the countdown.",
       "The end date of the countdown.",
       "The id of the OAuth client.",
@@ -74690,6 +74923,7 @@
       "The PID of the server process.",
       "The URI of the staging repository.",
       "The address of the interface.",
+      "The author of the poll.",
       "The description of the countdown.",
       "The end date of the countdown.",
       "The id of the OAuth client.",
@@ -74714,6 +74948,7 @@
       "The PID of the server process.",
       "The URI of the staging repository.",
       "The address of the interface.",
+      "The author of the poll.",
       "The description of the countdown.",
       "The end date of the countdown.",
       "The id of the OAuth client.",
@@ -74754,6 +74989,7 @@
       "The PID of the server process.",
       "The URI of the staging repository.",
       "The address of the interface.",
+      "The author of the poll.",
       "The description of the countdown.",
       "The end date of the countdown.",
       "The id of the OAuth client.",
@@ -74795,7 +75031,8 @@
       "You do not have permission to create spaces.",
       "You do not have permission to create users.",
       "You do not have permission to create webhooks.",
-      "You have permission to create cluster services."
+      "You have permission to create cluster services.",
+      "You only have permission to restart some builds."
     ],
     "s6": [
       "You do not have permission to create Almanac services.",
@@ -75268,6 +75505,7 @@
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -76286,6 +76524,7 @@
       "You do not have permission to push to this repository (\"%s\").",
       "You do not have permission to push to this repository.",
       "You do not have permission to restart any builds.",
+      "You do not have permission to restart this build.",
       "You do not have permission to resume any builds.",
       "You do not have permission to see this panel.",
       "You do not have permission to view the configured credential.",
@@ -76632,6 +76871,12 @@
     "s4": [
       "No custom field key specified.",
       "No custom field role specified."
+    ]
+  },
+  "Custom Fields": {
+    "s2": [
+      "Configuring Custom Fields",
+      "Custom Fields"
     ]
   },
   "%s updated this object.": {
@@ -78257,6 +78502,7 @@
       "You do not have permission to manage cluster services.",
       "You do not have permission to manage image macros.",
       "You do not have permission to manage sources.",
+      "You do not have permission to restart this build.",
       "You do not have permission to see this panel.",
       "You do not have permission to view this object."
     ],

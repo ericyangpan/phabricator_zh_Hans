@@ -27,6 +27,7 @@ account | 帐户
 action | 操作
 activation | 激活
 allow | 允许
+alphanumeric | 字母数字
 ancestor | 祖先
 approve | 批准
 argument | 参数
@@ -46,6 +47,9 @@ byte | 字节
 collation | 字符序
 colon | 冒号
 comma | 逗号
+compatibility | 兼容性
+component | 组件
+compression | 压缩
 config | 配置
 consecutive | 连续的
 control | 控制|控件
@@ -107,6 +111,8 @@ link | 链接|关联
 linked | 关联
 longer than | 长于
 lowercase | 小写
+mailer | 邮件程序
+manually | 手动
 maximum | 最大
 membership | 成员身份
 merge | 合并
@@ -119,19 +125,24 @@ native driver | 原生驱动
 need | 需要
 nonempty | 非空
 notification | 通知
+numeric | 数字
 observe | 观察
 open status | 开放状态
 optional | 可选
 output | 输出
 overwrite | 覆盖
 pane | 面板
+parent domain | 父域名
 parent task | 父任务
 payment method | 支付方式
 permanent | 永久
 permission | 权限
 permitted | 允许
+phone | 手机
 play | 播放
+point value | 点数值
 policy | 策略
+pool | 池
 portal | 门户
 post | 文章|发送|发布
 preference | 偏好
@@ -145,7 +156,8 @@ push | 推送
 reachable | 可访问
 real name | 真实姓名
 receiver | 接收人
-recipient | 收件人|接受者
+recipient | 收件人|获得者
+reload | 重新加载
 remove | 移除
 renamed | 重命名
 repository | 仓库
@@ -180,9 +192,11 @@ unavailable | 不可用
 underlying | 底层
 underscore | 下划线
 unnamed | 未命名的
+unpaid | 未支付的
 unreachable | 不可访问
 unsafe | 不安全的
 update | 更新
+uploaded | 上传
 uppercase | 大写
 webserver | Web 服务器
 worker | 工作者

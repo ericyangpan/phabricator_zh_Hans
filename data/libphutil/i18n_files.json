@@ -229,9 +229,9 @@
     "parser/argument/exception/PhutilArgumentUsageException.php": "8ce55fe9b23191571f1998e2fdc1d82c",
     "parser/PhutilJSONParser.php": "86a3a90b000607164670feb4c756e62f",
     "parser/PhutilBugtraqParser.php": "f472a9f53d63ebfc76bf08a13956d2bc",
-    "parser/html/PhutilHTMLParser.php": "8f4a6314df2588ad8db79575cec78f2f",
-    "parser/html/PhutilDOMNode.php": "6e9ae5c8da664f626295e9aa17603f0b",
-    "parser/html/__tests__/PhutilHTMLParserTestCase.php": "f9ab07b8b93ba368e8513f9ef1f466eb",
+    "parser/html/PhutilHTMLParser.php": "d4f13a0c4de56d98c3932d4c64de702c",
+    "parser/html/PhutilDOMNode.php": "9ef40969c4aba9e2ba7c835f0ac2f497",
+    "parser/html/__tests__/PhutilHTMLParserTestCase.php": "7901f764f8af75754b514de128fd2953",
     "parser/PhutilURI.php": "5e6dfc2ac962040301d0a277d50b2d7e",
     "parser/PhutilTypeSpec.php": "66c122890997d97cca748a4f232a31d0",
     "parser/generator/exception/PhutilUnreachableRuleParserGeneratorException.php": "fc3fc456f909a0550bf59246527ceee8",
@@ -326,7 +326,7 @@
     "markup/engine/remarkup/blockrule/PhutilRemarkupNoteBlockRule.php": "22bec25e10a1955b6276948cdde85b92",
     "markup/engine/remarkup/blockrule/PhutilRemarkupCodeBlockRule.php": "259df7fee512ab590ee852c89d267663",
     "markup/engine/remarkup/blockrule/PhutilRemarkupTestInterpreterRule.php": "df1a0b0400e2ca92fd4f43ed745806c3",
-    "markup/engine/remarkup/blockrule/PhutilRemarkupTableBlockRule.php": "97c939f60ce609ed3868cf6914da6981",
+    "markup/engine/remarkup/blockrule/PhutilRemarkupTableBlockRule.php": "b62a2b4a5d19ef9479d89b810292c4d4",
     "markup/engine/remarkup/blockrule/PhutilRemarkupDefaultBlockRule.php": "94d82d16fec1e302ef5d439785b9eb6f",
     "markup/engine/remarkup/blockrule/PhutilRemarkupSimpleTableBlockRule.php": "992598a65c86257a50d8b73cb46127de",
     "markup/engine/remarkup/blockrule/PhutilRemarkupHeaderBlockRule.php": "bc27ea4c857c2f6aca029bb8523fa005",
@@ -517,25 +517,7 @@
     "console/PhutilInteractiveEditor.php": "243e7b1536bc3b5df4cc49db4fb87c59"
   },
   "strings": {
-    "abcb484d09af411d993c910aa50785e8": [
-      {
-        "string": "argv: %s",
-        "file": "/filesystem/__tests__/PhutilProcessRefTestCase.php",
-        "line": 55,
-        "types": [
-          null
-        ]
-      }
-    ],
-    "05157dc20e1b7346380a151bc7962b3e": [
-      {
-        "string": "Querying system processes is not currently supported on Windows.",
-        "file": "/filesystem/PhutilProcessQuery.php",
-        "line": 23,
-        "types": []
-      }
-    ],
-    "f9ab07b8b93ba368e8513f9ef1f466eb": [
+    "7901f764f8af75754b514de128fd2953": [
       {
         "string": "Expected \"~~~~~~~~~~\" delimiter in test \"%s\".",
         "file": "/parser/html/__tests__/PhutilHTMLParserTestCase.php",
@@ -551,222 +533,12 @@
         "types": [
           null
         ]
-      }
-    ],
-    "0ea6be8965a75e8ad7e6a0d909624e71": [
-      {
-        "string": "Process is being awakened from hibernation.",
-        "file": "/daemon/PhutilDaemonHandle.php",
-        "line": 125,
-        "types": []
       },
       {
-        "string": "Process exited with error %s.",
-        "file": "/daemon/PhutilDaemonHandle.php",
-        "line": 180,
+        "string": "Child selection of: %s.",
+        "file": "/parser/html/__tests__/PhutilHTMLParserTestCase.php",
+        "line": 101,
         "types": [
-          null
-        ]
-      },
-      {
-        "string": "Process exited normally.",
-        "file": "/daemon/PhutilDaemonHandle.php",
-        "line": 182,
-        "types": []
-      },
-      {
-        "string": "Hang detected. Restarting process.",
-        "file": "/daemon/PhutilDaemonHandle.php",
-        "line": 213,
-        "types": []
-      },
-      {
-        "string": "Waiting %s second(s) to restart process.",
-        "file": "/daemon/PhutilDaemonHandle.php",
-        "line": 230,
-        "types": [
-          "number"
-        ]
-      },
-      {
-        "string": "Starting process.",
-        "file": "/daemon/PhutilDaemonHandle.php",
-        "line": 341,
-        "types": []
-      },
-      {
-        "string": "Process is preparing to hibernate for %s second(s).",
-        "file": "/daemon/PhutilDaemonHandle.php",
-        "line": 400,
-        "types": [
-          "number"
-        ]
-      },
-      {
-        "string": "<Malformed> %s",
-        "file": "/daemon/PhutilDaemonHandle.php",
-        "line": 406,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Reloading in response to signal %d (%s).",
-        "file": "/daemon/PhutilDaemonHandle.php",
-        "line": 423,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Reloading in response to signal %d.",
-        "file": "/daemon/PhutilDaemonHandle.php",
-        "line": 428,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Graceful shutdown in response to signal %d (%s).",
-        "file": "/daemon/PhutilDaemonHandle.php",
-        "line": 453,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Graceful shutdown in response to signal %d.",
-        "file": "/daemon/PhutilDaemonHandle.php",
-        "line": 458,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Shutting down in response to signal %s (%s).",
-        "file": "/daemon/PhutilDaemonHandle.php",
-        "line": 474,
-        "types": [
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Shutting down in response to signal %s.",
-        "file": "/daemon/PhutilDaemonHandle.php",
-        "line": 478,
-        "types": [
-          null
-        ]
-      }
-    ],
-    "5b90b28be8c58fe15f34d02bf401225f": [
-      {
-        "string": "daemon overseer",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 39,
-        "types": []
-      },
-      {
-        "string": "Enable debug memory tracing.",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 50,
-        "types": []
-      },
-      {
-        "string": "Enable verbose activity logging.",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 54,
-        "types": []
-      },
-      {
-        "string": "Optional process label. Makes \"%s\" nicer, no behavioral effects.",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 61,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Reading daemon configuration from stdin...",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 92,
-        "types": []
-      },
-      {
-        "string": "You may not instantiate more than one Overseer per process.",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 105,
-        "types": []
-      },
-      {
-        "string": "You must specify at least one daemon to start!",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 114,
-        "types": []
-      },
-      {
-        "string": "Unable to fork!",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 133,
-        "types": []
-      },
-      {
-        "string": "Failed to create new process session!",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 140,
-        "types": []
-      },
-      {
-        "string": "Started new daemon overseer (with PID \"%s\").",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 147,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Overseer Memory Usage: %s KB",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 255,
-        "types": [
-          "number"
-        ]
-      },
-      {
-        "string": "Overseer (\"%d\") received signal %d (\"%s\").",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 302,
-        "types": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "string": "Signal handler called with unknown signal type (\"%d\")!",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 336,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Reloading daemons (triggered by overseer module \"%s\").",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 366,
-        "types": [
-          null
-        ]
-      },
-      {
-        "string": "Waking pool \"%s\" (triggered by overseer module \"%s\").",
-        "file": "/daemon/PhutilDaemonOverseer.php",
-        "line": 388,
-        "types": [
-          null,
           null
         ]
       }
@@ -3849,6 +3621,16 @@
         "types": []
       }
     ],
+    "abcb484d09af411d993c910aa50785e8": [
+      {
+        "string": "argv: %s",
+        "file": "/filesystem/__tests__/PhutilProcessRefTestCase.php",
+        "line": 55,
+        "types": [
+          null
+        ]
+      }
+    ],
     "2426f04cd397f42a19fce741be9c7585": [
       {
         "string": "Basic Checksums",
@@ -4033,6 +3815,14 @@
         "types": [
           null
         ]
+      }
+    ],
+    "05157dc20e1b7346380a151bc7962b3e": [
+      {
+        "string": "Querying system processes is not currently supported on Windows.",
+        "file": "/filesystem/PhutilProcessQuery.php",
+        "line": 23,
+        "types": []
       }
     ],
     "42671efd7fd951313dc4419fa7c3e0ec": [
@@ -6262,6 +6052,224 @@
         "file": "/daemon/torture/PhutilHighIntensityIntervalDaemon.php",
         "line": 17,
         "types": []
+      }
+    ],
+    "0ea6be8965a75e8ad7e6a0d909624e71": [
+      {
+        "string": "Process is being awakened from hibernation.",
+        "file": "/daemon/PhutilDaemonHandle.php",
+        "line": 125,
+        "types": []
+      },
+      {
+        "string": "Process exited with error %s.",
+        "file": "/daemon/PhutilDaemonHandle.php",
+        "line": 180,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Process exited normally.",
+        "file": "/daemon/PhutilDaemonHandle.php",
+        "line": 182,
+        "types": []
+      },
+      {
+        "string": "Hang detected. Restarting process.",
+        "file": "/daemon/PhutilDaemonHandle.php",
+        "line": 213,
+        "types": []
+      },
+      {
+        "string": "Waiting %s second(s) to restart process.",
+        "file": "/daemon/PhutilDaemonHandle.php",
+        "line": 230,
+        "types": [
+          "number"
+        ]
+      },
+      {
+        "string": "Starting process.",
+        "file": "/daemon/PhutilDaemonHandle.php",
+        "line": 341,
+        "types": []
+      },
+      {
+        "string": "Process is preparing to hibernate for %s second(s).",
+        "file": "/daemon/PhutilDaemonHandle.php",
+        "line": 400,
+        "types": [
+          "number"
+        ]
+      },
+      {
+        "string": "<Malformed> %s",
+        "file": "/daemon/PhutilDaemonHandle.php",
+        "line": 406,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Reloading in response to signal %d (%s).",
+        "file": "/daemon/PhutilDaemonHandle.php",
+        "line": 423,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Reloading in response to signal %d.",
+        "file": "/daemon/PhutilDaemonHandle.php",
+        "line": 428,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Graceful shutdown in response to signal %d (%s).",
+        "file": "/daemon/PhutilDaemonHandle.php",
+        "line": 453,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Graceful shutdown in response to signal %d.",
+        "file": "/daemon/PhutilDaemonHandle.php",
+        "line": 458,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Shutting down in response to signal %s (%s).",
+        "file": "/daemon/PhutilDaemonHandle.php",
+        "line": 474,
+        "types": [
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Shutting down in response to signal %s.",
+        "file": "/daemon/PhutilDaemonHandle.php",
+        "line": 478,
+        "types": [
+          null
+        ]
+      }
+    ],
+    "5b90b28be8c58fe15f34d02bf401225f": [
+      {
+        "string": "daemon overseer",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 39,
+        "types": []
+      },
+      {
+        "string": "Enable debug memory tracing.",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 50,
+        "types": []
+      },
+      {
+        "string": "Enable verbose activity logging.",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 54,
+        "types": []
+      },
+      {
+        "string": "Optional process label. Makes \"%s\" nicer, no behavioral effects.",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 61,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Reading daemon configuration from stdin...",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 92,
+        "types": []
+      },
+      {
+        "string": "You may not instantiate more than one Overseer per process.",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 105,
+        "types": []
+      },
+      {
+        "string": "You must specify at least one daemon to start!",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 114,
+        "types": []
+      },
+      {
+        "string": "Unable to fork!",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 133,
+        "types": []
+      },
+      {
+        "string": "Failed to create new process session!",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 140,
+        "types": []
+      },
+      {
+        "string": "Started new daemon overseer (with PID \"%s\").",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 147,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Overseer Memory Usage: %s KB",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 255,
+        "types": [
+          "number"
+        ]
+      },
+      {
+        "string": "Overseer (\"%d\") received signal %d (\"%s\").",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 302,
+        "types": [
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "string": "Signal handler called with unknown signal type (\"%d\")!",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 336,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Reloading daemons (triggered by overseer module \"%s\").",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 366,
+        "types": [
+          null
+        ]
+      },
+      {
+        "string": "Waking pool \"%s\" (triggered by overseer module \"%s\").",
+        "file": "/daemon/PhutilDaemonOverseer.php",
+        "line": 388,
+        "types": [
+          null,
+          null
+        ]
       }
     ],
     "abda94c4537205015120e12f4a20473f": [
