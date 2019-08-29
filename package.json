@@ -6,13 +6,16 @@
   "repository": "https://github.com/arielyang/phabricator_zh_Hans",
   "scripts": {
     "start": "node index.js",
+    "compile": "./bin/compile",
+    "update": "./bin/update",
+    "discover": "./bin/discover",
     "copy_lib": "cp node_modules/vue/dist/vue.min.js public/js ; cp node_modules/whatwg-fetch/dist/fetch.umd.js public/js ; cp node_modules/pluralize/pluralize.js public/js"
   },
   "bin": {
     "compile": "bin/compile",
     "sortjson": "bin/sortjson"
   },
-  "author": "Ariel Yang",
+  "author": "Ariel Yang <arielyang@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
