@@ -38,6 +38,10 @@ echo "* Generate terminology.json *"
 
 bin/discover terminology
 
+echo "* Generate units.json *"
+
+bin/discover unit
+
 echo "* Generate similars.json *"
 
 bin/discover similar
