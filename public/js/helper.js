@@ -12,7 +12,7 @@ function dbcsByteLength(str) {
   return str.length + (m ? m.length / 2 : 0)
 }
 
-function toPascalCase (str) {
+function toPascalCase(str) {
   if (str.length < 2) return str
 
   // The string is not a phrase(not including space) but a word.
@@ -92,7 +92,7 @@ function sortByKey(array, key, sortValueFunc) {
 }
 
 function sortByPercent(array) {
-  return sortByKey(array, 'percent', value => -parseInt(value.substr(0, value.length - 1)) )
+  return sortByKey(array, 'percent', value => -parseInt(value.substr(0, value.length - 1)))
 }
 
 function objectToItems(obj) {
@@ -118,7 +118,7 @@ function computePercent(dividend, divisor) {
   } else if (Number.isNaN(percent)) {
     return '---'
   }
-  
+
   return percent.toPrecision(2) + '%'
 }
 
@@ -168,4 +168,43 @@ function setTextBoxUpdatedStyle(textBox) {
 function setTextBoxChangedStyle(textBox) {
   textBox.classList.remove('updated')
   textBox.classList.add('changed')
+}
+
+function isSimilar(translation, suggesstion) {
+  if (!translation || !suggesstion) {
+    return false
+  }
+
+  const translationString = translation.replace(/ \/ /g, '/')
+  const suggesstionString = suggesstion
+
+  const lengthT = translationString.length
+  const lengthS = suggesstionString.length
+
+  let t = 0
+  let s = 0
+
+  while (t < lengthT && s < lengthS) {
+    const charT = translationString[t]
+    const charS = suggesstionString[s]
+
+    if (charT == charS) {
+      t++
+      s++
+    } else {
+      if (charT == "的" || charT == "了") {
+        t++
+        continue
+      }
+
+      if (charS == "的" || charS == "了") {
+        s++
+        continue
+      }
+
+      return false
+    }
+  }
+
+  return true
 }

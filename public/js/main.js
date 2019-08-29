@@ -78,7 +78,10 @@ const vm = new Vue({
       forEachTextBoxes('dialogList', textBox => resetTextBoxStyle(textBox))
     },
     addRow() {
-      const key = this.section === 'dictionary' ? this.dialog.newKey.toLowerCase() : this.dialog.newKey
+      const key =
+        this.section === 'dictionary'
+          ? this.dialog.newKey.toLowerCase()
+          : this.dialog.newKey
       const value = this.dialog.newValue
 
       if (key === '') return
@@ -125,7 +128,8 @@ const vm = new Vue({
       saveAllTranslationValuesInternal()
         .then(() => {
           forEachTextBoxes('translationList', textBox => {
-            if (!textBox.classList.contains('changed') || textBox.value === '') return
+            if (!textBox.classList.contains('changed') || textBox.value === '')
+              return
 
             setTextBoxUpdatedStyle(textBox)
 
@@ -169,14 +173,20 @@ const vm = new Vue({
       .then(response => response.json())
       .then(data => {
         globalData = data
-        maxSimilarPageCount = Math.ceil(globalData.similars.length / SIMILAR_PAGE_SIZE)
+        maxSimilarPageCount = Math.ceil(
+          globalData.similars.length / SIMILAR_PAGE_SIZE
+        )
 
-        setGlobalDictionary(globalData.translations, globalData.dictionary, globalData.terminology)
+        setGlobalDictionary(
+          globalData.translations,
+          globalData.dictionary,
+          globalData.terminology
+        )
 
-        let {
-          totalPercent,
-          items
-        } = getCategories(globalData.categories, globalData.translations)
+        let { totalPercent, items } = getCategories(
+          globalData.categories,
+          globalData.translations
+        )
 
         this.category.totalPercent = totalPercent
         this.category.items = IS_SORT_BY_PERCENT ? sortByPercent(items) : items
@@ -261,17 +271,27 @@ function inputInternal(event, section) {
 function processValueKeyInternal(event, section) {
   switch (event.key) {
     case 'ArrowDown':
-      if (event.target.tagName === 'INPUT' && event.target.parentElement.parentElement.nextSibling) {
+      if (
+        event.target.tagName === 'INPUT' &&
+        event.target.parentElement.parentElement.nextSibling
+      ) {
         event.target.parentElement.parentElement.nextSibling.children[1].firstElementChild.focus()
       }
       break
     case 'ArrowUp':
-      if (event.target.tagName === 'INPUT' && event.target.parentElement.parentElement.previousSibling) {
+      if (
+        event.target.tagName === 'INPUT' &&
+        event.target.parentElement.parentElement.previousSibling
+      ) {
         event.target.parentElement.parentElement.previousSibling.children[1].firstElementChild.focus()
       }
       break
     case 'Enter':
-      if (event.target.tagName === 'INPUT' || isMac() && event.metaKey || event.ctrlKey) {
+      if (
+        event.target.tagName === 'INPUT' ||
+        (isMac() && event.metaKey) ||
+        event.ctrlKey
+      ) {
         const ctx = getRowContext(event.target)
         const isTranslation = section === 'translations'
 
@@ -279,12 +299,16 @@ function processValueKeyInternal(event, section) {
 
         if (isTranslation && ctx.value === '') {
           promise = deleteItem(section, ctx.key)
+        } else {
+          ctx.value = ctx.value.replace(/％(\d\$)*(s|d)/g, '%$1$2')
 
-        } else if (ctx.value !== globalData[section][ctx.key]) {
-          promise = saveItem(section, ctx.key, ctx.value)
+          if (ctx.value !== globalData[section][ctx.key]) {
+            promise = saveItem(section, ctx.key, ctx.value)
+          }
         }
 
-        promise.then(() => {
+        promise
+          .then(() => {
             setTextBoxUpdatedStyle(ctx.valueTextBox)
 
             if (isTranslation) {
@@ -314,7 +338,7 @@ function updateStatusNode(textBox) {
 }
 
 function setGlobalDictionary(translations, dictionary, terminology) {
-  function setGlobalDictionaryInternal(obj, section) {
+  function setGlobalDictionaryInternal(obj) {
     for (let key in obj) {
       if (obj[key].indexOf('|') > 0) continue
 
@@ -332,8 +356,8 @@ function setGlobalDictionary(translations, dictionary, terminology) {
     }
   }
 
-  setGlobalDictionaryInternal(dictionary, 'dictionary')
-  setGlobalDictionaryInternal(terminology, 'terminology')
+  setGlobalDictionaryInternal(dictionary)
+  setGlobalDictionaryInternal(terminology)
 }
 
 function getCategories(categories, translations) {
@@ -342,7 +366,10 @@ function getCategories(categories, translations) {
   let totalTranslatedItemCount = 0
 
   for (let category in categories) {
-    const isPrototype = globalData.prototypeApplications.indexOf(category.replace('applications/', '')) !== -1
+    const isPrototype =
+      globalData.prototypeApplications.indexOf(
+        category.replace('applications/', '')
+      ) !== -1
 
     // Ignore prototype application category.
     if (IGNORE_PROTOTYPE && isPrototype) continue
@@ -392,14 +419,9 @@ function searchInternal(options) {
   let promise
 
   if (options.similarPageNumber !== 0) {
-    promise = searchSimilar(
-      options.similarPageNumber
-    )
+    promise = searchSimilar(options.similarPageNumber)
   } else if (options.category !== DEFAULT_CATEGORY) {
-    promise = searchCategory(
-      options.category,
-      options.filterLength
-    )
+    promise = searchCategory(options.category, options.filterLength)
   } else {
     promise = searchText(
       options.text,
@@ -430,7 +452,12 @@ function searchText(text, isWord, type, filterLength) {
   }
 
   const escapedText = type === 'regex' ? text : escapeRegExp(text)
-  const regexSearch = isWord ? new RegExp(`^(${pluralize(escapedText, 1)}|${pluralize(escapedText)})$`, 'i') : new RegExp(escapedText, 'i')
+  const regexSearch = isWord
+    ? new RegExp(
+        `^(${pluralize(escapedText, 1)}|${pluralize(escapedText)})$`,
+        'i'
+      )
+    : new RegExp(escapedText, 'i')
   const results = []
   const resultIndexes = {}
   let resultIndex = 0
@@ -439,7 +466,11 @@ function searchText(text, isWord, type, filterLength) {
 
   for (let category in globalData.categories) {
     for (let key in globalData.categories[category]) {
-      if (!regexSearch.test(key) && !regexSearch.test(globalData.translations[key])) continue
+      if (
+        !regexSearch.test(key) &&
+        !regexSearch.test(globalData.translations[key])
+      )
+        continue
 
       totalResultCount++
 
@@ -454,7 +485,7 @@ function searchText(text, isWord, type, filterLength) {
 
         const item = {
           key: encodeHTML(key).replace(regexSearch, '<span>$&</span>'),
-          value: globalData.translations[key],
+          value: globalData.translations[key] || '',
           suggestion: isWord ? '' : getSuggestion(key),
           category: category
         }
@@ -488,7 +519,7 @@ function searchCategory(category, filterLength) {
 
     const item = {
       key: encodeHTML(key),
-      value: globalData.translations[key],
+      value: globalData.translations[key] || '',
       suggestion: getSuggestion(key)
     }
 
@@ -520,7 +551,7 @@ function searchSimilar(pageNumber) {
       const key = globalData.similars[i][j]
       const item = {
         key: diff[key],
-        value: globalData.translations[key],
+        value: globalData.translations[key] || '',
         highlight: i % 2 === 1,
         suggestion: getSuggestion(key)
       }
@@ -545,40 +576,42 @@ function searchSimilar(pageNumber) {
 }
 
 function deleteItem(section, key) {
-  const items = [{
-    key: key,
-    value: null
-  }]
+  const items = [
+    {
+      key: key,
+      value: null
+    }
+  ]
 
-  return saveToServer('Delete', section, key, items)
-    .then(() => {
-      delete globalData[section][key]
+  return saveToServer('Delete', section, key, items).then(() => {
+    delete globalData[section][key]
 
-      if (globalData.translations[key] === undefined) {
-        delete globalDictionary[key]
-        delete globalPhrases[key]
-      }
-    })
+    if (globalData.translations[key] === undefined) {
+      delete globalDictionary[key]
+      delete globalPhrases[key]
+    }
+  })
 }
 
 function saveItem(section, key, value) {
-  const items = [{
-    key: key,
-    value: value
-  }]
+  const items = [
+    {
+      key: key,
+      value: value
+    }
+  ]
 
-  return saveToServer('Save', section, key, items)
-    .then(() => {
-      globalData[section][key] = value
+  return saveToServer('Save', section, key, items).then(() => {
+    globalData[section][key] = value
 
-      if (section === 'translations' || section === 'dictionary') {
-        if (regexWholeWord.test(key)) {
-          globalDictionary[key] = value
-        } else if (section === 'dictionary') {
-          globalPhrases[key] = value
-        }
+    if (section === 'translations' || section === 'dictionary') {
+      if (regexWholeWord.test(key)) {
+        globalDictionary[key] = value
+      } else if (section === 'dictionary') {
+        globalPhrases[key] = value
       }
-    })
+    }
+  })
 }
 
 function saveAllTranslationValuesInternal() {
@@ -587,7 +620,8 @@ function saveAllTranslationValuesInternal() {
   forEachTextBoxes('translationList', textBox => {
     if (!textBox.classList.contains('changed') || textBox.value === '') return
 
-    const key = textBox.parentElement.parentElement.firstElementChild.textContent
+    const key =
+      textBox.parentElement.parentElement.firstElementChild.textContent
 
     items.push({
       key: key,
@@ -595,16 +629,15 @@ function saveAllTranslationValuesInternal() {
     })
   })
 
-  return saveToServer('Save', 'translations', 'all', items)
-    .then(() => {
-      items.forEach(item => {
-        globalData.translations[item.key] = item.value
+  return saveToServer('Save', 'translations', 'all', items).then(() => {
+    items.forEach(item => {
+      globalData.translations[item.key] = item.value
 
-        if (regexWholeWord.test(item.key)) {
-          globalDictionary[item.key] = item.value
-        }
-      })
+      if (regexWholeWord.test(item.key)) {
+        globalDictionary[item.key] = item.value
+      }
     })
+  })
 }
 
 function getSuggestion(str) {
@@ -628,28 +661,38 @@ function getSuggestion(str) {
 
   // Replace translations and dictionaries.
   for (let match of matches) {
-    const regexMatch = new RegExp(`[ \\W]{1}${escapeRegExp(match)}[ \\W]{1}`, 'i')
+    const regexMatch = new RegExp(
+      `[ \\W]{1}${escapeRegExp(match)}[ \\W]{1}`,
+      'i'
+    )
     const word = match.match(regexWord)[0]
 
     if (str.match(regexMatch) === null) continue
 
     const fragment = str.match(regexMatch)[0]
-    const value = getValueByKey(globalDictionary, word)
+    let value = getValueByKey(globalDictionary, word)
 
-    const target = (((value) => {
+    // Hacked translation of "Type".
+    if (word === 'Type') {
+      value = '键入'
+    }
+
+    const target = (value => {
       if (value === undefined) return fragment
       if (word === match) return fragment.replace(word, value)
-      if (match.endsWith('\'s')) return value + '的'
+      if (match.endsWith("'s")) return value + '的'
 
       return value
-    })(value))
+    })(value)
 
     if (target !== undefined) {
       str = str.replace(regexMatch, target)
     }
   }
 
-  str = str.replace('  ', ' ')
+  str = str.replace('  ', ' ').trim()
+  // Remove tailing 's'
+  str = str.replace(/([\u4e00-\u9fa5])s */g, '$1')
 
   const results = []
 
@@ -657,17 +700,25 @@ function getSuggestion(str) {
 
   // Remove spaces between Chinese characters.
   for (let i = 1; i < str.length; i++) {
-    if (str[i] === ' ' &&
+    if (
+      str[i] === ' ' &&
       regexChineseChar.test(str[i - 1]) &&
       i + 1 < str.length &&
-      regexChineseChar.test(str[i + 1])) {
+      regexChineseChar.test(str[i + 1])
+    ) {
       continue
     } else {
       results.push(str[i])
     }
   }
 
-  return toChinesePunctuation(results.join('').trim()).replace(/↵/g, '<i>↵</i><br/>')
+  // Convert to Chinese punctuation.
+  let resultContent = toChinesePunctuation(results.join('').trim())
+
+  // Highlight carriage return char.
+  resultContent = resultContent.replace(/↵/g, '<i>↵</i><br/>')
+
+  return resultContent
 }
 
 function refreshTranslation(key, translation) {
@@ -675,8 +726,10 @@ function refreshTranslation(key, translation) {
     forEachElements('translationList', 'tr', (element, i) => {
       if (i === 0) return
 
-      if (element.firstElementChild.textContent === key &&
-        element.children[1].firstElementChild.value !== translation) {
+      if (
+        element.firstElementChild.textContent === key &&
+        element.children[1].firstElementChild.value !== translation
+      ) {
         element.children[1].firstElementChild.value = translation
 
         setTextBoxUpdatedStyle(element.children[1].firstElementChild)
@@ -692,17 +745,30 @@ function refreshSuggestion() {
 
       const key = element.firstElementChild.textContent
 
-      element.children[3].innerHTML = getSuggestion(key)
+      const suggestion = getSuggestion(key)
+      const translation = globalData.translations[key] || ''
+
+      element.children[3].innerHTML = suggestion
+      element.children[3].style.color =
+        suggestion == translation
+          ? 'brown'
+          : isSimilar(translation, suggestion)
+          ? 'orange'
+          : 'black'
     })
   })
 }
 
 function setTextareaRowCount(item) {
-  const keyRowCount = Math.ceil(decodeHTML(item.key).length / DEFAULT_FILTER_LENGTH)
+  const keyRowCount = Math.ceil(
+    decodeHTML(item.key).length / DEFAULT_FILTER_LENGTH
+  )
   let rowCount
 
   if (item.value !== undefined) {
-    const valueRowCount = Math.ceil(dbcsByteLength(item.value) / DEFAULT_FILTER_LENGTH - 2)
+    const valueRowCount = Math.ceil(
+      dbcsByteLength(item.value) / DEFAULT_FILTER_LENGTH - 2
+    )
 
     rowCount = Math.max(keyRowCount, valueRowCount)
   } else {
@@ -720,13 +786,23 @@ function setLocationHash(options) {
   const type = options.type || 'text'
   const text = encodeURI(options.text || '')
 
-  window.location.hash = `#${options.category}|${options.isWord ? 'word' : 'any'}|${type}|${options.filterLength}|${options.similarPageNumber}|${text}`
+  window.location.hash = `#${options.category}|${
+    options.isWord ? 'word' : 'any'
+  }|${type}|${options.filterLength}|${options.similarPageNumber}|${text}`
 }
 
 function parseLocationHash() {
   const hash = decodeURI(window.location.hash)
   const regex = /^#(all|.+)\|(any|word)\|(text|regex)\|(\d+)\|(\d+)\|(.*)$/g
-  const matches = regex.exec(hash) || [null, DEFAULT_CATEGORY, 'any', 'text', DEFAULT_FILTER_LENGTH, 0, '']
+  const matches = regex.exec(hash) || [
+    null,
+    DEFAULT_CATEGORY,
+    'any',
+    'text',
+    DEFAULT_FILTER_LENGTH,
+    0,
+    ''
+  ]
 
   return {
     category: matches[1],
@@ -747,12 +823,16 @@ function getRowContext(target) {
   let suggestion = null
 
   // Target is text box.
-  if ((target.tagName === 'INPUT' && target.getAttribute('type') === 'text') || target.tagName === 'TEXTAREA') {
+  if (
+    (target.tagName === 'INPUT' && target.getAttribute('type') === 'text') ||
+    target.tagName === 'TEXTAREA'
+  ) {
     valueTextBox = target
     value = target.value
     // Target is action links.
   } else if (target.textContent !== '✕') {
-    valueTextBox = target.parentElement.parentElement.children[1].firstElementChild
+    valueTextBox =
+      target.parentElement.parentElement.children[1].firstElementChild
     suggestion = target.parentElement.parentElement.children[3].textContent
   }
 
@@ -777,27 +857,27 @@ function saveToServer(action, section, key, items) {
   })
 
   return fetch('/save/' + section, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(savedItems)
-    })
-    .then(response => {
-      if (response.status >= 200 && response.status < 300) {
-        return response
-      } else {
-        const error = new Error(response.statusText)
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(savedItems)
+  }).then(response => {
+    if (response.status >= 200 && response.status < 300) {
+      return response
+    } else {
+      const error = new Error(response.statusText)
 
-        error['response'] = response
+      error['response'] = response
 
-        throw error
-      }
-    })
+      throw error
+    }
+  })
 }
 
 function getDiff(items) {
-  if (!items || items.length === 0) throw new Error('Parameter "items" can not be null or empty.')
+  if (!items || items.length === 0)
+    throw new Error('Parameter "items" can not be null or empty.')
 
   const diffResult = {}
 
@@ -837,13 +917,11 @@ function getDiff(items) {
       let isFound = false
 
       for (let k = indexArray[j]; k < item.length; k++) {
-
         if (
           word.toLowerCase() === item[k].toLowerCase() ||
-          (
-            word[word.length - 1] === '.' &&
-            word.substr(0, word.length - 1).toLowerCase() === item[k].toLowerCase()
-          )
+          (word[word.length - 1] === '.' &&
+            word.substr(0, word.length - 1).toLowerCase() ===
+              item[k].toLowerCase())
         ) {
           isFound = true
           tempIndexArray[j] = k + 1

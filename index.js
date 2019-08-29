@@ -6,7 +6,10 @@ const app = express()
 
 const sectionPaths = {
   dictionary: 'data/dictionary.json',
-  i18nFiles: ['data/phabricator/i18n_files.json', 'data/libphutil/i18n_files.json'],
+  i18nFiles: [
+    'data/phabricator/i18n_files.json',
+    'data/libphutil/i18n_files.json'
+  ],
   prototypeApplications: 'data/prototype_applications.json',
   terminology: 'data/terminology.json',
   translations: 'data/translations.json',
@@ -28,12 +31,19 @@ app.get('/data', (req, res) => {
   // Load all data.
   for (let section in sectionPaths) {
     if (section === 'i18nFiles') {
-      const phabricatori18nFiles = jsonfile.readFileSync(sectionPaths[section][0])
+      const phabricatori18nFiles = jsonfile.readFileSync(
+        sectionPaths[section][0]
+      )
       const libphutili18nFiles = jsonfile.readFileSync(sectionPaths[section][1])
 
-      data.categories = sortKeys(getCategories(phabricatori18nFiles, libphutili18nFiles))
+      data.categories = sortKeys(
+        getCategories(phabricatori18nFiles, libphutili18nFiles)
+      )
     } else if (section === 'similars') {
-      data[section] = getSimilars(jsonfile.readFileSync(sectionPaths[section]), data.translations)
+      data[section] = getSimilars(
+        jsonfile.readFileSync(sectionPaths[section]),
+        data.translations
+      )
     } else {
       data[section] = sortKeys(jsonfile.readFileSync(sectionPaths[section]))
     }
@@ -55,7 +65,9 @@ app.post('/save/:section', (req, res) => {
 
   req.body.forEach(item => {
     const key = /\n/g.test(item.key) ? item.key : item.key.trim()
-    const value = /\n/g.test(item.value) ? item.value : item.value && item.value.trim()
+    const value = /\n/g.test(item.value)
+      ? item.value
+      : item.value && item.value.trim()
 
     if (value !== null) {
       sourceData[key] = value
@@ -72,7 +84,11 @@ app.post('/save/:section', (req, res) => {
     spaces: 2
   })
 
-  console.log((req.body.length === 1 && req.body[0].value === null) ? `Delete ${section}:` : `Save to ${section}:`)
+  console.log(
+    req.body.length === 1 && req.body[0].value === null
+      ? `Delete ${section}:`
+      : `Save to ${section}:`
+  )
   console.log(req.body)
 
   res.send('OK')
@@ -101,9 +117,11 @@ function buildCategories(categories, i18nFiles, prefix) {
     const pathFragments = file.split('/')
 
     // Group category by applications.
-    const category = prefix + (pathFragments[0] === 'applications' ?
-      pathFragments[0] + '/' + pathFragments[1] :
-      pathFragments[0])
+    const category =
+      prefix +
+      (pathFragments[0] === 'applications'
+        ? pathFragments[0] + '/' + pathFragments[1]
+        : pathFragments[0])
 
     // Init empty category.
     if (categories[category] === undefined) {
