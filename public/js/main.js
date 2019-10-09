@@ -307,20 +307,22 @@ function processValueKeyInternal(event, section) {
           }
         }
 
-        promise
-          .then(() => {
-            setTextBoxUpdatedStyle(ctx.valueTextBox)
+        if (promise) {
+          promise
+            .then(() => {
+              setTextBoxUpdatedStyle(ctx.valueTextBox)
 
-            if (isTranslation) {
-              updateStatusNode(ctx.valueTextBox)
-              refreshTranslation(ctx.key, ctx.value)
-            }
+              if (isTranslation) {
+                updateStatusNode(ctx.valueTextBox)
+                refreshTranslation(ctx.key, ctx.value)
+              }
 
-            refreshSuggestion()
-          })
-          .catch(error => {
-            console.error(error)
-          })
+              refreshSuggestion()
+            })
+            .catch(error => {
+              console.error(error)
+            })
+        }
       }
 
       break
@@ -340,7 +342,7 @@ function updateStatusNode(textBox) {
 function setGlobalDictionary(translations, dictionary, terminology) {
   function setGlobalDictionaryInternal(obj) {
     for (let key in obj) {
-      if (obj[key].indexOf('|') > 0) continue
+      if (obj[key].indexOf('|') >= 0) continue
 
       if (regexWholeWord.test(key)) {
         globalDictionary[key] = obj[key]
