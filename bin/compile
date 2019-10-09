@@ -2,6 +2,7 @@
 
 const child_process = require('child_process')
 const crypto = require('crypto')
+const path = require('path')
 const ejs = require('ejs')
 const fs = require('fs')
 const jsonfile = require('jsonfile')
@@ -33,8 +34,14 @@ let translationsData = jsonfile.readFileSync(translationsPath)
 console.log('-'.repeat(30))
 
 const gitInfo = {
-  phabricator: getGitInfo('../phabricator'),
-  libphutil: getGitInfo('../libphutil')
+  phabricator: getGitInfo(
+    '../phabricator',
+    'https://secure.phabricator.com/source/phabricator.git'
+  ),
+  libphutil: getGitInfo(
+    '../libphutil',
+    'https://secure.phabricator.com/source/libphutil.git'
+  )
 }
 
 // Check rules.
@@ -142,9 +149,9 @@ function computeTranslationSummary(translations) {
 
     // Group category by applications.
     const category =
-      pathFragments[0] === 'applications' ?
-      pathFragments[0] + '/' + pathFragments[1] :
-      pathFragments[0]
+      pathFragments[0] === 'applications'
+        ? pathFragments[0] + '/' + pathFragments[1]
+        : pathFragments[0]
 
     // Init empty category.
     if (categories[category] === undefined) {
@@ -356,22 +363,18 @@ function computeFileHash(path) {
   return sha1.digest('hex')
 }
 
-function getGitInfo(path) {
-  console.log(`Switch branch of ${path} to stable.`)
+function getGitInfo(repoPath, repoURL) {
+  console.log(`Switch branch of ${path.resolve(repoPath)} to stable.`)
 
-  const branch = child_process.execSync('git rev-parse --abbrev-ref HEAD', {
-    cwd: path
-  }).toString()
+  cloneGitRepository(repoPath, repoURL)
 
-  if (branch !== 'stable') {
-    child_process.execSync(`git checkout stable`, {
-      cwd: path
-    })
-  }
+  child_process.execSync(`git checkout stable`, {
+    cwd: repoPath
+  })
 
   const stdout = child_process
     .execSync('git log -1 --pretty=format:"%h %H %s"', {
-      cwd: path
+      cwd: repoPath
     })
     .toString()
 
@@ -387,4 +390,12 @@ function getGitInfo(path) {
   console.log(`Commit[${gitInfo.abbrCommitHash}]: ${gitInfo.subject}`)
 
   return gitInfo
+}
+
+function cloneGitRepository(repoPath, repoURL) {
+  if (!fs.existsSync(repoPath)) {
+    child_process.execSync(`git clone -b stable ${repoURL}`, {
+      cwd: path.join('..')
+    })
+  }
 }
