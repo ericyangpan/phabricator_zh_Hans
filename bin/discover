@@ -9,14 +9,14 @@ const similarsPath = 'data/discover/similars.json'
 const allPath = 'data/discover/strings.json'
 const terminologyPath = 'data/discover/terminology.json'
 const unitsPath = 'data/discover/units.json'
-const libphutili18nFilesPath = 'data/libphutil/i18n_files.json'
+// const libphutili18nFilesPath = 'data/libphutil/i18n_files.json'
 const phabricatori18nFilesPath = 'data/phabricator/i18n_files.json'
 const translationsPath = 'data/translations.json'
 
 const DISCOVER_TEST_CASE = false
 
 const obsoletedData = jsonfile.readFileSync(obsoletedPath)
-const libphutili18nFilesData = jsonfile.readFileSync(libphutili18nFilesPath)
+// const libphutili18nFilesData = jsonfile.readFileSync(libphutili18nFilesPath)
 const phabricatori18nFilesData = jsonfile.readFileSync(phabricatori18nFilesPath)
 const translationsData = sortKeys(jsonfile.readFileSync(translationsPath))
 
@@ -30,35 +30,35 @@ switch (option) {
 
     findAllItems()
 
-    break;
+    break
 
   case 'similar':
     console.log('Find similar items. See "data/discover/similars.json".')
 
     findSimilarItems()
 
-    break;
+    break
 
   case 'obsoleted':
     console.log('Find obsoleted items. See "data/discover/obsoleted.json".')
 
     findObsoletedItems()
 
-    break;
+    break
 
   case 'terminology':
     console.log('Find terminologies. See "data/discover/terminology.json".')
 
     findTerminologies()
 
-    break;
+    break
 
   case 'unit':
     console.log('Find unit. See "data/discover/units.json".')
 
     findUnitItems()
 
-    break;
+    break
 
   default:
     console.log('Invalid option. Input one of following options:\n')
@@ -68,7 +68,7 @@ switch (option) {
     console.log('bin/discover terminology')
     console.log('bin/discover unit')
 
-    break;
+    break
 }
 
 console.log('')
@@ -127,7 +127,7 @@ function findUnitItems() {
 
 function getAllStrings() {
   const resultStrings = {}
-  const func = item => resultStrings[item.string] = ''
+  const func = item => (resultStrings[item.string] = '')
 
   forEachi18nFilesData(phabricatori18nFilesData, func)
   // forEachi18nFilesData(libphutili18nFilesData, func)
@@ -174,7 +174,7 @@ function getSimilarStrings() {
 
       const distance = wordLevenshtein.get(str0, str1)
 
-      if ((length1 - distance) > length0 / 2 && distance <= (length0 + 1) / 2) {
+      if (length1 - distance > length0 / 2 && distance <= (length0 + 1) / 2) {
         const category = 's' + (length1 - distance)
 
         if (resultStrings[str0][category] === undefined) {
@@ -186,12 +186,7 @@ function getSimilarStrings() {
       }
     }
 
-    const percent = Math.ceil(100 * count / allStringsLength)
-
-    // if (percent === 2) {
-    //   console.log('return')
-    //   return resultStrings
-    // }
+    const percent = Math.ceil((100 * count) / allStringsLength)
 
     if (percent !== lastPercent) {
       console.log(percent + '%')
@@ -216,10 +211,16 @@ function cleanupDuplicatedSimilarStrings(similars) {
 
       for (let sameSize0 in similars[str0]) {
         for (let sameSize1 in similars[str1]) {
-          if (similars[str0][sameSize0].length !== similars[str1][sameSize1].length) continue
+          if (
+            similars[str0][sameSize0].length !==
+            similars[str1][sameSize1].length
+          )
+            continue
 
-          if (JSON.stringify(similars[str0][sameSize0].sort()) ===
-            JSON.stringify(similars[str1][sameSize1].sort())) {
+          if (
+            JSON.stringify(similars[str0][sameSize0].sort()) ===
+            JSON.stringify(similars[str1][sameSize1].sort())
+          ) {
             delete similars[str1][sameSize1]
 
             if (Object.keys(similars[str1]).length === 0) {
@@ -255,7 +256,8 @@ function getTerminologies() {
     let regexTranslationString
 
     if (words[word].endsWith('的')) {
-      regexTranslationString = words[word] + '|' + words[word].substr(0, words[word].length - 1)
+      regexTranslationString =
+        words[word] + '|' + words[word].substr(0, words[word].length - 1)
     } else {
       regexTranslationString = words[word]
     }
