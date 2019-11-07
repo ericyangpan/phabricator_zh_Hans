@@ -46,7 +46,7 @@ function toChinesePunctuation(text) {
 }
 
 function escapeRegExp(text) {
-  return (text + '').replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&")
+  return (text + '').replace(/[.?*+^$[\]\\(){}|-]/g, '\\$&')
 }
 
 function encodeHTML(text) {
@@ -62,7 +62,9 @@ function decodeHTML(html) {
 }
 
 function forEachElements(containerId, tagName, func) {
-  const elements = document.getElementById(containerId).getElementsByTagName(tagName)
+  const elements = document
+    .getElementById(containerId)
+    .getElementsByTagName(tagName)
 
   for (let i = 0; i < elements.length; i++) {
     func(elements[i], i)
@@ -92,7 +94,11 @@ function sortByKey(array, key, sortValueFunc) {
 }
 
 function sortByPercent(array) {
-  return sortByKey(array, 'percent', value => -parseInt(value.substr(0, value.length - 1)))
+  return sortByKey(
+    array,
+    'percent',
+    value => -parseInt(value.substr(0, value.length - 1))
+  )
 }
 
 function objectToItems(obj) {
@@ -109,7 +115,7 @@ function objectToItems(obj) {
 }
 
 function computePercent(dividend, divisor) {
-  const percent = dividend / divisor * 100
+  const percent = (dividend / divisor) * 100
 
   if (percent === 100) {
     return '100%'
@@ -192,12 +198,12 @@ function isSimilar(translation, suggesstion) {
       t++
       s++
     } else {
-      if (charT == "的" || charT == "了") {
+      if (charT == '的' || charT == '了') {
         t++
         continue
       }
 
-      if (charS == "的" || charS == "了") {
+      if (charS == '的' || charS == '了') {
         s++
         continue
       }
