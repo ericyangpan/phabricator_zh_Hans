@@ -64,7 +64,7 @@ app.post('/save/:section', (req, res) => {
   let sourceData = jsonfile.readFileSync(sectionPaths[section])
 
   req.body.forEach(item => {
-    const key = /\n/g.test(item.key) ? item.key : item.key.trim()
+    const key = item.key
     const value = /\n/g.test(item.value)
       ? item.value
       : item.value && item.value.trim()
