@@ -157,7 +157,7 @@
   },
   "All": {
     "translation": "所有的",
-    "yes": 234,
+    "yes": 235,
     "no": 13,
     "kvp": {
       "%s - %s, All Day": "%s - %s，全天",
@@ -238,7 +238,7 @@
   },
   "Always": {
     "translation": "总是",
-    "yes": 38,
+    "yes": 37,
     "no": 3,
     "kvp": {
       "A moderator can always view the answers.": "主持人可以随时查看答案。",
@@ -259,7 +259,7 @@
   "Any": {
     "translation": "任意",
     "yes": 33,
-    "no": 93,
+    "no": 92,
     "kvp": {
       "Add one or more subscribers to the object. You can add users by providing their usernames, or add projects by adding their hashtags. For example, use `%s` to add the user `alincoln` and the project with hashtag `#ios` as subscribers.\n\nSubscribers which are invalid or unrecognized will be ignored. This command has no effect if you do not specify any subscribers.\n\nUsers who are CC'd on the email itself are also automatically subscribed if Phabricator knows which accounts are linked to their email addresses.": "向对象添加一个或多个订阅者。你可以通过提供用户名来添加用户，或者通过添加唯一标签来添加项目。例如，使用`%s`将用户`alincoln`和标签`#ios`添加为订阅者。\n\n无效或无法识别的订阅者将被忽略。如果你未指定任何订阅者则此命令没有效果。\n\n如果 Phabricator 知道哪些帐户关联到他们的邮件地址那么在电子邮件本身上被 CC 的用户也会自动订阅。",
       "After configuring Phabricator to process inbound mail, you can interact with objects (like tasks and revisions) over email. For information on configuring Phabricator, see **[[ %s | Configuring Inbound Email ]]**.\n\nIn most cases, you can reply to email you receive from Phabricator to leave comments. You can also use **mail commands** to take a greater range of actions (like claiming a task or requesting changes to a revision) without needing to log in to the web UI.\n\nMail commands are keywords which start with an exclamation point, like `!claim`. Some commands may take parameters, like `!assign alincoln`.\n\nTo use mail commands, write one command per line at the beginning or end of your mail message. For example, you could write this in a reply to task email to claim the task:\n\n```\n!claim\n\nI'll take care of this.\n```\n\n\nWhen Phabricator receives your mail, it will process any commands first, then post the remaining message body as a comment. You can execute multiple commands at once:\n\n```\n!assign alincoln\n!close\n\nI just talked to @alincoln, and he showed me that he fixed this.\n```\n": "配置 Phabricator 处理入站邮件后，你可以通过邮件与对象（如任务和修订）进行交互。有关配置 Phabricator 的信息，请查看 **[[ %s | Configuring Inbound Email ]]**。\n\n在大多数情况下，你可以回复从 Phabricator 收到的邮件来发表评论。你还可以使用**邮件命令**来执行更大范围的操作（例如声明任务或请求修订变更）而无需登录 Web 用户界面。\n\n邮件命令是以感叹号开始的关键字，如`!claim`。有些命令可能会携带参数，如`!assign alincoln`。\n\n要使用邮件命令，在邮件开头或结尾处每行写一个命令。例如，你可以在一个回复任务邮件里写这个来声明任务：\n\n```\n!claim\n\n我会照顾好这个。\n```\n\n\n当 Phabricator 收到你的邮件时，它将首先处理所有命令，然后将剩余的邮件正文作为评论发布。你可以一次执行多个命令：\n\n```\n!assign alincoln\n!close\n\n我刚和 @alincoln 谈过并且他给我看他修好了这个。\n```\n",
@@ -315,7 +315,6 @@
       "This lease does not list any usable blueprints.": "此租约未在任何可用的蓝图中列出。",
       "This project does not have any members.": "此项目没有任何成员。",
       "This project does not have any watchers.": "此项目没有任何观察者。",
-      "This providers does not require any special configuration.": "此提供者不需要任何特殊配置。",
       "This push didn't push any new commits.": "此推送没有推送任何新的提交。",
       "This repository does not have any commits yet.": "这个仓库还没有任何提交。",
       "This service has not been bound to any device interfaces yet.": "此服务还未被绑定到任何设备接口。",
@@ -572,7 +571,7 @@
   },
   "Build": {
     "translation": "构建",
-    "yes": 262,
+    "yes": 263,
     "no": 1,
     "kvp": {
       "Build self esteem through gamification.": "通过游戏化的方式建立自我尊重。"
@@ -670,7 +669,7 @@
   },
   "Change": {
     "translation": "变更",
-    "yes": 448,
+    "yes": 446,
     "no": 3,
     "kvp": {
       "Change the database namespace of a .sql dump file.": "更改 .sql 转储文件的数据库名称空间。",
@@ -689,7 +688,7 @@
   "Closed": {
     "translation": "已关闭",
     "yes": 16,
-    "no": 47,
+    "no": 46,
     "kvp": {
       "%s closed %s as %s by committing %s.": "%1$s 通过提交 %4$s 将 %2$s 作为 %3$s 关闭了。",
       "%s closed %s as %s.": "%s 将 %s 作为 %s 关闭了。",
@@ -735,7 +734,6 @@
       "Find results with any closed status.": "查找任何关闭状态的结果。",
       "Search for tasks closed by certain users.": "搜索被某些用户关闭的任务。",
       "Select any closed status.": "选择任意关闭的状态。",
-      "Tasks Closed / Reopened": "关闭的 / 重新打开的任务",
       "This function includes results which have any closed status.": "这个函数包含有任意关闭状态的结果。",
       "User who closed the task, if the task is closed.": "关闭任务的用户，如果任务被关闭了。"
     }
@@ -761,7 +759,7 @@
   },
   "Cluster": {
     "translation": "群集",
-    "yes": 56,
+    "yes": 54,
     "no": 2,
     "kvp": {
       "Cluster repository service in Almanac to move repositories into.": "用来移动仓库进入的 Almanac 中的集群仓库服务。",
@@ -824,7 +822,7 @@
   },
   "Complete": {
     "translation": "完成",
-    "yes": 38,
+    "yes": 39,
     "no": 4,
     "kvp": {
       "Client closed connection before sending a complete protocol frame.": "客户端在发送一个完整的协议帧之前关闭了连接。",
@@ -931,7 +929,7 @@
   },
   "DETAILS": {
     "translation": "详情",
-    "yes": 52,
+    "yes": 51,
     "no": 1,
     "kvp": {
       "No further details are available.": "没有进一步的细节可用。"
@@ -996,7 +994,7 @@
   },
   "Details": {
     "translation": "详情",
-    "yes": 52,
+    "yes": 51,
     "no": 1,
     "kvp": {
       "No further details are available.": "没有进一步的细节可用。"
@@ -1283,7 +1281,7 @@
   },
   "FAIL": {
     "translation": "失败",
-    "yes": 134,
+    "yes": 133,
     "no": 1,
     "kvp": {
       "The custom domain should contain at least one dot (.) because some browsers fail to set cookies on domains without a dot. Instead, use a normal looking domain name like \"%s\".": "自定义域名应该包含至少一个点（.）因为某些浏览器无法在没有点的域名上设置 Cookie。相反的，请使用一个像“%s”的普通域名。"
@@ -1291,7 +1289,7 @@
   },
   "FAILED": {
     "translation": "失败的",
-    "yes": 111,
+    "yes": 110,
     "no": 3,
     "kvp": {
       "Failed to load commit during transaction finalization!": "无法在交易完成期间加载提交！",
@@ -1301,7 +1299,7 @@
   },
   "Failed": {
     "translation": "失败的",
-    "yes": 111,
+    "yes": 110,
     "no": 3,
     "kvp": {
       "Failed to load commit during transaction finalization!": "无法在交易完成期间加载提交！",
@@ -1399,18 +1397,10 @@
       "only the first time this rule matches:": "仅在此规则第一次匹配时："
     }
   },
-  "Focus": {
-    "translation": "聚焦",
-    "yes": 1,
-    "no": 1,
-    "kvp": {
-      "Give keyboard focus to the search box.": "把键盘焦点给到搜索框。"
-    }
-  },
   "From": {
     "translation": "来自",
     "yes": 33,
-    "no": 335,
+    "no": 329,
     "kvp": {
       "%s adjusted autoreview from %s to %s.": "%s 把自动评审从 %s 调整为了 %s。",
       "%s adjusted package dominion rules from %s to %s.": "%s 把包支配规则从 %s 调整为了 %s。",
@@ -1419,8 +1409,6 @@
       "%s changed hook status from %s to %s.": "%s 把勾子状态从 %s 变更为了 %s。",
       "%s changed indexed languages from %s to %s.": "%s 把索引语言从 %s 变更为了 %s。",
       "%s changed symbol sources from %s to %s.": "%s 把符号来源从 %s 变更为了 %s。",
-      "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".": "%1$s 把应用 %3$s 的“%2$s”策略从“%4$s”变更为了“%5$s”。",
-      "%s changed the \"%s\" policy from \"%s\" to \"%s\".": "%s 把“%s”策略从“%s”变更为了“%s”。",
       "%s changed the \"%s\" value from \"%s\" to \"%s\".": "%s 将“%s”值从“%s”变更为了“%s”。",
       "%s changed the \"Import Only\" path from %s to %s.": "%s 把“仅导入”路径从 %s 变更为了 %s。",
       "%s changed the %s behavior for this plan from %s to %s.": "%s 把此计划的 %s 行为从 %s 变更为了 %s。",
@@ -1514,7 +1502,6 @@
       "%s moved %s from %s to %s on the %s board.": "%1$s 把 %5$s 工作板上的 %2$s 从 %3$s 移动到了 %4$s。",
       "%s moved storage for this repository from %s to %s.": "%s 把此仓库的存储从 %s 移动到了 %s。",
       "%s moved storage for this repository from %s to local.": "%s 把此仓库的存储从 %s 移动到了本地。",
-      "%s moved this document from %s": "%s 把此文档从 %s 移动来了",
       "%s moved this task from %s to %s on the %s board.": "%1$s 在 %4$s 工作板上把此任务从 %2$s 移动到了 %3$s。",
       "%s raised the priority of %s from %s to %s.": "%s 把 %s 的优先级从 %s 提升到了 %s。",
       "%s raised the priority of this task from %s to %s.": "%s 把此任务的优先级从 %s 提升到了 %s。",
@@ -1678,7 +1665,6 @@
       "Remove %s from this room?": "从这个房间移除 %s？",
       "Remove multi-factor authentication from an account.": "从一个帐户中移除多因素认证。",
       "Remove panel %s from dashboard %s?": "从仪表板 %s 中移除面板 %s？",
-      "Remove the payment method \"%s\" from your account?": "从你的帐户移除支付方式“%s”？",
       "Removing a comment prevents anyone (including you) from reading it. Removing a comment also hides the comment's edit history and prevents it from being edited.": "移除评论阻止任何人（包括你）阅读它。移除评论还会隐藏评论的编辑历史记录并阻止其被编辑。",
       "Require administrators to unlock the authentication provider configuration from the CLI before it can be edited.": "需要管理员在认证提供者配置可以被编辑前从 CLI 解锁。",
       "Resign from a revision.": "从此修订退出。",
@@ -1712,8 +1698,6 @@
       "This directory was copied from %s.": "此目录是从 %s 拷贝来的。",
       "This directory was moved from %s.": "此目录是从 %s 移动来的。",
       "This document was converted from %s to UTF8 for display.": "此文档从 %s 被转换为 UTF8 以便显示。",
-      "This document was moved from %s.": "此文档是从 %s 移动来的。",
-      "This document was moved from elsewhere.": "这个文档是从其他地方移动来的。",
       "This file was converted from %s for display.": "此文件从 %s 被转换以便显示。",
       "This file was copied from %s.": "从 %s 拷贝了此文件。",
       "This file was moved from %s.": "从 %s 移动了此文件。",
@@ -1895,7 +1879,7 @@
   },
   "Image": {
     "translation": "图片",
-    "yes": 119,
+    "yes": 115,
     "no": 4,
     "kvp": {
       "Can not create an image with nonpositive dimensions.": "无法创建具有非正向尺寸的图像。",
@@ -2004,7 +1988,7 @@
   },
   "Item": {
     "translation": "条目",
-    "yes": 51,
+    "yes": 50,
     "no": 6,
     "kvp": {
       "Edit Profile Menu Item Configurations": "编辑档案菜单项配置",
@@ -2017,7 +2001,7 @@
   },
   "Items": {
     "translation": "条目",
-    "yes": 17,
+    "yes": 16,
     "no": 2,
     "kvp": {
       "Profile menu items can not be generated without an object context.": "没有对象上下文无法生成档案菜单项。",
@@ -2237,7 +2221,7 @@
   "Members Of": {
     "translation": "成员来自于",
     "yes": 1,
-    "no": 15,
+    "no": 14,
     "kvp": {
       "Creating a project's first subproject **moves all members** to become members of the subproject instead.\n\nSee [[ %s | Projects User Guide ]] in the documentation for details. This process can not be undone.": "创建项目的第一个子项目**移动所有成员**成为子项目的成员。\n\n参阅文档中的[[ %s | 项目用户指南 ]]了解详情。此过程无法撤消。",
       "Find results for members of a project.": "查找项目成员的结果。",
@@ -2246,7 +2230,6 @@
       "Members of a project can always view it.": "项目的成员总是可以查看它。",
       "Members of all subprojects are members of this project.": "所有子项目的成员就是此项目的成员。",
       "Members of an account can always view and edit it.": "帐户的成员可以总是查看和编辑它。",
-      "Members of an account can always view and edit its payment methods.": "帐户的成员可以总是查看和编辑它的支付方式。",
       "Members of the parent project are members of this project.": "父项目的成员就是这个项目的成员。",
       "Members of the project \"%s\" can take this action.": "项目“%s”的成员可以执行此操作。",
       "When mail is sent to members of this project, you will no longer receive a copy.": "当邮件被发送给这个项目的成员时，你将不再收到副本。",
@@ -2295,23 +2278,11 @@
       "No routing rules applied when delivering this message to you.": "当向你投递此邮件时，未应用任何路由规则。"
     }
   },
-  "Method": {
-    "translation": "方法",
-    "yes": 79,
-    "no": 4,
-    "kvp": {
-      "Choose a payment method to add:": "选择一个要添加的支付方式：",
-      "No Autopay Method Configured": "没有配置自动支付方式",
-      "Payment method has been successfully added.": "支付方式已经被成功添加。",
-      "Remove the payment method \"%s\" from your account?": "从你的帐户移除支付方式“%s”？"
-    }
-  },
   "Methods": {
     "translation": "方法",
     "yes": 18,
-    "no": 2,
+    "no": 1,
     "kvp": {
-      "No payment methods associated with this account.": "没有与此帐户相关联的支付方式。",
       "No payment methods configured.": "没有配置支付方式。"
     }
   },
@@ -2404,7 +2375,7 @@
   },
   "New": {
     "translation": "新的",
-    "yes": 360,
+    "yes": 359,
     "no": 1,
     "kvp": {
       "You can find more information about this new identity mapping here: %s": "你可以查找更多关于此身份映射的信息于此：%s"
@@ -2451,7 +2422,7 @@
   "No": {
     "translation": "否",
     "yes": 5,
-    "no": 562,
+    "no": 560,
     "kvp": {
       "%s Action(s) Have No Effect": "%s 个操作没有影响",
       "%s Action(s) With No Effect": "%s 个操作无影响",
@@ -2534,7 +2505,6 @@
       "No Authentication Providers Configured": "没有配置认证提供者",
       "No Authorizations": "无授权",
       "No Automatic Updates": "无自动更新",
-      "No Autopay Method Configured": "没有配置自动支付方式",
       "No Autoreview": "无自动评审",
       "No Background": "无背景",
       "No Base URI": "无基础 URI",
@@ -2757,7 +2727,6 @@
       "No parent site": "无父站点",
       "No parent/ancestor paths specified.": "未指定父/祖先路径。",
       "No pastes found.": "未找到粘贴。",
-      "No payment methods associated with this account.": "没有与此帐户相关联的支付方式。",
       "No payment methods configured.": "没有配置支付方式。",
       "No performance sampling.": "无性能取样。",
       "No polls found.": "未找到投票。",
@@ -3242,7 +3211,7 @@
   },
   "Only": {
     "translation": "仅",
-    "yes": 38,
+    "yes": 39,
     "no": 136,
     "kvp": {
       "A personal rule can only be edited by its owner.": "个人规则只能被它的所有者编辑。",
@@ -3354,7 +3323,6 @@
       "This is very unusual and will leave you without any content on the Phabricator home page. You should only do this if you are certain you know what you are doing.": "这非常不寻常并且会让 Phabricator 的首页没有任何内容。你应该只在你非常确信你知道你在做什么的情况下才做。",
       "This query took too long, so only some results are shown. %s": "此查询花了太长时间，所以只显示了一些结果。%s",
       "This server only supports these image formats: %s.": "服务器只支持这些图片格式：%s。",
-      "Too many arguments: expected only a key when using \"--stdin\".": "太多参数：当使用“--stdin”时预期只有一个键。",
       "Two different colors (\"%s\", \"%s\") are marked as the default color. Only one color may be marked as the default.": "两个不同的颜色（“%s”，“%s”）被标记为默认颜色。只有一个颜色可以被标记为默认。",
       "Two different icons (\"%s\", \"%s\") are marked as the default icon. Only one icon may be marked as the default.": "两个不同的图标（“%s”，“%s”）被标记为默认图标。只有一个图标可以被标记为默认。",
       "Two different icons (\"%s\", \"%s\") are marked with special attribute \"%s\". Only one icon may be marked with this attribute.": "两个不同的图标（“%s”，“%s”）用特殊属性“%s”做了标记。只有一个图标可以被标记为这个属性。",
@@ -3380,12 +3348,13 @@
       "You can only recover the username for one account.": "你只能恢复一个帐户的用户名。",
       "You can only trust keys associated with Almanac devices.": "你只能信任和 Almanac 设备关联的密钥。",
       "You can only verify one address at a time.": "你一次只可验证一个地址。",
-      "You do not have permission to edit the selected object. You can only install dashboards on objects you can edit.": "你没有编辑选定对象的权限。你只可在你可以编辑的对象上安装仪表板。"
+      "You do not have permission to edit the selected object. You can only install dashboards on objects you can edit.": "你没有编辑选定对象的权限。你只可在你可以编辑的对象上安装仪表板。",
+      "You only have permission to restart some builds.": "你只有重启一些构建的权限。"
     }
   },
   "Open": {
     "translation": "打开的",
-    "yes": 65,
+    "yes": 64,
     "no": 28,
     "kvp": {
       "%s Open Pull Request(s)": "%s 条开放的拉取请求",
@@ -3705,7 +3674,7 @@
   },
   "Profile": {
     "translation": "档案",
-    "yes": 41,
+    "yes": 37,
     "no": 2,
     "kvp": {
       "Automatically profile some percentage of pages.": "自动分析一些百分比的页面。",
@@ -3845,7 +3814,7 @@
   },
   "Received": {
     "translation": "接收的",
-    "yes": 9,
+    "yes": 7,
     "no": 4,
     "kvp": {
       "Content received via fax (telefacsimile).": "通过传真（电话传真）收到的内容。",
@@ -4149,7 +4118,7 @@
   },
   "Select": {
     "translation": "选择",
-    "yes": 92,
+    "yes": 91,
     "no": 1,
     "kvp": {
       "Can not build empty SELECT clause!": "无法构建空的 SELECT 从句！"
@@ -4490,11 +4459,8 @@
   "To": {
     "translation": "送到",
     "yes": 15,
-    "no": 1621,
+    "no": 1617,
     "kvp": {
-      "# Fetch received by \"%s\", forwarding to cluster host.\n": "# 获取被“%s”接收，转发到群集主机。\n",
-      "# Push received by \"%s\", forwarding to cluster host.\n": "# 推送被“%s”接收，转发到群集主机。\n",
-      "%s (You do not have permission to view policy details.)": "%s（你没有查看策略详情权限。）",
       "%s added %s account manager(s) to %s: %s.": "%s 把 %s 位帐户管理员添加到了 %s：%s。",
       "%s added %s commit(s) to %s: %s.": "%s 添加了 %s 个提交到 %s：%s。",
       "%s added %s edge(s) to %s: %s.": "%s 添加了 %s 个边缘到 %s：%s。",
@@ -4534,8 +4500,6 @@
       "%s changed hook status from %s to %s.": "%s 把勾子状态从 %s 变更为了 %s。",
       "%s changed indexed languages from %s to %s.": "%s 把索引语言从 %s 变更为了 %s。",
       "%s changed symbol sources from %s to %s.": "%s 把符号来源从 %s 变更为了 %s。",
-      "%s changed the \"%s\" policy for application %s from \"%s\" to \"%s\".": "%1$s 把应用 %3$s 的“%2$s”策略从“%4$s”变更为了“%5$s”。",
-      "%s changed the \"%s\" policy from \"%s\" to \"%s\".": "%s 把“%s”策略从“%s”变更为了“%s”。",
       "%s changed the \"%s\" value from \"%s\" to \"%s\".": "%s 将“%s”值从“%s”变更为了“%s”。",
       "%s changed the \"Import Only\" path from %s to %s.": "%s 把“仅导入”路径从 %s 变更为了 %s。",
       "%s changed the %s behavior for this plan from %s to %s.": "%s 把此计划的 %s 行为从 %s 变更为了 %s。",
@@ -4763,6 +4727,8 @@
       "%s set this project's color to %s.": "%s 将此项目的颜色设置为 %s。",
       "%s set this project's icon to %s.": "%s 将此项目的图标设置为 %s。",
       "%s set this project's image to %s.": "%s 将此项目的图片设置为 %s。",
+      "%s set this repository to fetch all refs.": "%s 设置此仓库以获取所有引用。",
+      "%s set this repository to fetch refs: %s.": "%s 设置此仓库以获取引用：%s。",
       "%s set this repository to track all branches.": "%s 把此仓库设置为了跟踪所有分支。",
       "%s set this repository to track branches: %s.": "%s 把此仓库设置为了跟踪分支：%s。",
       "%s set this revision to automatically submit once builds complete.": "%s 设置此修订为一旦构建完成自动提交。",
@@ -4928,6 +4894,7 @@
       "Are you sure you want to close the poll?": "你确定要关闭这个投票吗？",
       "Are you sure you want to delete this address? You will no longer be able to use it to login.": "你确定要删除这个地址吗？你将不能再使用它登录。",
       "Are you sure you want to delete this email address?": "你确定要删除这个邮件地址吗？",
+      "Are you sure you want to delete this step? This can't be undone!": "你确定要删除此步骤吗？这无法被撤消！",
       "Are you sure you want to generate piles of garbage?": "你确定要生成一堆垃圾吗？",
       "Are you sure you want to hide this column? It will no longer appear on the workboard.": "你确定你要隐藏这个列吗？它将不再显示在工作板上。",
       "Are you sure you want to leave this room?": "你确定要离开房间吗？",
@@ -5015,7 +4982,6 @@
       "Choose a panel to add to this dashboard:": "选择一个面板到添加到这个仪表板：",
       "Choose a parent project to create a new milestone for.": "选择一个父项目来创建一个新里程碑。",
       "Choose a parent project to create a subproject beneath.": "选择一个父项目在其下创建一个子项目。",
-      "Choose a payment method to add:": "选择一个要添加的支付方式：",
       "Choose a project to import columns from:": "选择从一个项目中导入列：",
       "Choose a project to move tasks to.": "选择要将任务移动到的一个项目。",
       "Choose a syntax highlighting to use.": "选择要使用的语法高亮。",
@@ -5161,7 +5127,6 @@
       "Failed to load revision from transaction finalization.": "无法从交易完成加载修订。",
       "Failed to load saved query (\"%s\").": "加载保存的查询（“%s”）失败。",
       "Failed to load subscription with PHID \"%s\".": "PHID“%s”的订阅加载失败。",
-      "Failed to look up tag '%s'!": "查找标签‘%s’失败！",
       "Failed to make some schema adjustments, detailed above.": "进行模式调整失败，如上所述。",
       "Failed to open file \"%s\" for writing.": "打开文件“%s”写入失败。",
       "Failed to open output file \"%s\" for writing.": "打开输出文件“%s”写入失败。",
@@ -5492,7 +5457,6 @@
       "Specify a commit and a revision to attach it to.": "指定一个提交和一个修订附加它到。",
       "Specify a commit to look up with `%s`.": "用 `%s` 指定一个提交来查找。",
       "Specify a commit to look up.": "指定要查找的提交。",
-      "Specify a configuration key and a value to set it to.": "指定一个配置键和一个值以将其设置为。",
       "Specify a configuration key to delete.": "指定一个配置键删除。",
       "Specify a configuration key to get.": "指定一个配置键获取。",
       "Specify a file to print, like \"%s\".": "指定一个文件打印，像“%s”。",
@@ -5506,7 +5470,6 @@
       "Specify a revision to rebuild changesets for with \"--revision\".": "用“--revision”指定一个修订来重建变更集。",
       "Specify a story key to republish.": "指定一个报道键重新发布。",
       "Specify a user to notify with \"--user\".": "使用“--user”指定一位用户来通知。",
-      "Specify a value to set the key '%s' to.": "指定一个值以将键‘%s’设置为。",
       "Specify a webhook to call with \"--id\".": "用“--id”来指定一个要调用的 Webhook。",
       "Specify an activity to mark as completed.": "指定一个活动标记为完成。",
       "Specify at least one import ID to reload.": "指定至少一个导入 ID 以重新加载。",
@@ -5926,7 +5889,6 @@
       "Users invited to this event can take this action.": "被邀请到这个事件的用户可以执行此操作。",
       "Users must be able to see a build target to view its build log.": "用户必须能够看到构建目标以便查看它的构建日志。",
       "Users must be able to see a build to view its build targets.": "用户必须能够看到构建以便查看它的构建目标。",
-      "Users must be able to see a buildable to see its artifacts.": "用户必须能够看到可构建项以便看到它的工件。",
       "Users must be able to see a project to see its board.": "用户必须能够看到项目以便看到它的工作板。",
       "Users who are invited to an event can always view it.": "被邀请到事件的用户总是可以查看它。",
       "Verify this email address (%s) and attach it to your account (%s)?": "验证这个邮件地址（%s）并把它附加到你的帐户（%s）？",
@@ -6044,6 +6006,7 @@
       "You do not have permission to manage sources.": "你没有管理来源的权限。",
       "You do not have permission to pause any builds.": "你没有暂停任何构建的权限。",
       "You do not have permission to restart any builds.": "你没有重启任何构建的权限。",
+      "You do not have permission to restart this build.": "你没有重启此构建的权限。",
       "You do not have permission to resume any builds.": "你没有恢复任何构建的权限。",
       "You do not have permission to see this panel.": "你没有查看此面板的权限。",
       "You do not have permission to view the configured credential.": "你没有的查看配置凭据权限。",
@@ -6071,6 +6034,7 @@
       "You must log in to access repositories.": "你必须登录才能访问仓库。",
       "You must log in to access this repository.": "你必须登录才能访问这个仓库。",
       "You must log in to take this action.": "你必须登录才能执行这个操作。",
+      "You must openBuildLog() before you can append() content to the log.": "在你可以把内容 append() 到日志之前必须 openBuildLog()。",
       "You must pass the user to %s.": "你必须传递用户到 %s。",
       "You must provide content to create a paste.": "你必须提供创建粘贴的内容。",
       "You must provide two different commits to compare.": "你必须提供两个不同的提交以比较。",
@@ -6100,6 +6064,7 @@
       "You must start the Phabricator daemons to send email, rebuild search indexes, and do other background processing.": "你必须启动 Phabricator 守护程序来发送邮件，重建搜索索引和进行其它后台处理。",
       "You must use %s to query edges.": "你必须使用 %s 来查询边缘。",
       "You must vote to see the results.": "你必须通过投票才能看到结果。",
+      "You only have permission to restart some builds.": "你只有重启一些构建的权限。",
       "You responded to this challenge correctly.": "你正确的回应了此挑战。",
       "You will be able to rejoin the room later.": "随后你将能够重新加入房间。",
       "You will be prompted to provide MFA when you submit.": "当你提交的时候将被提示提供 MFA。",
@@ -6378,10 +6343,9 @@
   },
   "Up": {
     "translation": "上",
-    "yes": 68,
-    "no": 15,
+    "yes": 67,
+    "no": 14,
     "kvp": {
-      "Failed to look up tag '%s'!": "查找标签‘%s’失败！",
       "If you are here for code review, let's set up your first repository.": "如果你在这里进行代码评审，让我们建立你的第一个仓库。",
       "Look up objects by name.": "按名称查找对象。",
       "Recaptcha private key, obtained by signing up for Recaptcha.": "reCaptcha 私钥，通过注册 reCaptcha 获取。",
@@ -6560,7 +6524,7 @@
   },
   "VALID": {
     "translation": "有效的",
-    "yes": 130,
+    "yes": 128,
     "no": 1,
     "kvp": {
       "File PHID \"%s\" is not valid or not visible.": "文件 PHID“%s”是无效的或不可见的。"
@@ -6586,9 +6550,8 @@
   "View": {
     "translation": "视图",
     "yes": 22,
-    "no": 147,
+    "no": 145,
     "kvp": {
-      "%s (You do not have permission to view policy details.)": "%s（你没有查看策略详情权限。）",
       "A merchant's members an always view and edit it.": "一个商家的成员可以总是查看和编辑它。",
       "A mock's owner can always view and edit it.": "Mock 的所有者可以总是查看和编辑它。",
       "A moderator can always view the answers.": "主持人可以随时查看答案。",
@@ -6624,7 +6587,6 @@
       "Mark this form as an edit form? Users who can view it will be able to use it to edit objects.": "标记这个表单为一个编辑表单？可以查看它的用户能够使用它编辑对象。",
       "Members of a project can always view it.": "项目的成员总是可以查看它。",
       "Members of an account can always view and edit it.": "帐户的成员可以总是查看和编辑它。",
-      "Members of an account can always view and edit its payment methods.": "帐户的成员可以总是查看和编辑它的支付方式。",
       "Owners of a package may always view it.": "包的所有者总是可以查看它。",
       "Owners of an item can always view it.": "条目的所有者总是可以查看它。",
       "Participants in a room can always view it.": "房间的参与者总是可以查看它。",
@@ -6801,10 +6763,9 @@
   },
   "When": {
     "translation": "当",
-    "yes": 54,
-    "no": 26,
+    "yes": 53,
+    "no": 25,
     "kvp": {
-      "Be careful when renaming users!": "重命名用户时要小心！",
       "Change when the event repeats until.": "变更事件重复直到何时。",
       "Date when the countdown ends.": "倒计时结束的日期。",
       "Default address used when generating mail.": "生成邮件时使用的默认地址。",
@@ -6922,7 +6883,7 @@
   },
   "is": {
     "translation": "是",
-    "yes": 435,
+    "yes": 430,
     "no": 395,
     "kvp": {
       "%s is already archived, and can not be cancelled.": "%s 已经归档，不能取消。",
@@ -7334,8 +7295,8 @@
   },
   "is not": {
     "translation": "不是",
-    "yes": 110,
-    "no": 127,
+    "yes": 109,
+    "no": 126,
     "kvp": {
       "%s is not available; unable to read deflated data!": "%s 不可用；无法读取压缩的数据！",
       "'%s' binary not found or Imagemagick is not installed.": "‘%s’二进制文件未找到或 ImageMagick 未安装。",
@@ -7382,7 +7343,6 @@
       "Mailer cluster configuration is not valid: it should be a list of mailer configurations.": "邮件程序集群配置无效：应该是一个邮件寄送者配置列表。",
       "Message recipient is not deliverable.": "消息收件人无法送达。",
       "Method '%s' belongs to application '%s', which is not installed.": "方法‘%s’属于应用‘%s’，未安装。",
-      "MySQL is not in strict mode (on host \"%s\"), but using strict mode is strongly encouraged.": "MySQL 不在严格模式下（在主机“%s”上），但是强烈建议使用严格模式。",
       "OPcache is not configured ideally for production.": "OPCache 没有为生产环境进行理想的配置。",
       "OPcache is not configured properly for development.": "OPCache 没有为开发环境进行正确的配置。",
       "Package key \"%s\" is not valid: package keys are required.": "包的键“%s”无效：包的键是必填的。",
@@ -7508,7 +7468,7 @@
   },
   "or": {
     "translation": "或",
-    "yes": 368,
+    "yes": 367,
     "no": 2,
     "kvp": {
       "Determines whether or not YouTube videos get embedded.": "确定 YouTube 视频是否嵌入。",
