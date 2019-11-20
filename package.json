@@ -8,8 +8,12 @@
     "start": "node index.js",
     "compile": "./bin/compile",
     "update": "./bin/update",
-    "discover": "./bin/discover",
-    "copy_lib": "cp node_modules/vue/dist/vue.min.js public/js ; cp node_modules/whatwg-fetch/dist/fetch.umd.js public/js ; cp node_modules/pluralize/pluralize.js public/js"
+    "discover-all": "./bin/discover all",
+    "discover-similar": "./bin/discover all",
+    "discover-obsoleted": "./bin/discover obsoleted",
+    "discover-terminology": "./bin/discover terminology",
+    "discover-unit": "./bin/discover unit",
+    "copy-lib": "cp node_modules/vue/dist/vue.min.js public/js ; cp node_modules/whatwg-fetch/dist/fetch.umd.js public/js ; cp node_modules/pluralize/pluralize.js public/js"
   },
   "bin": {
     "compile": "bin/compile",
