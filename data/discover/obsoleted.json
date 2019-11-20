@@ -1034,5 +1034,11 @@
   "You can not query charges for an account you are not a member of.": "你不能查询你不为成员的帐户的付款。",
   "You can not query orders for a merchant you do not control.": "你不能查询你不控制的商家的订单。",
   "You can not query orders for an account you are not a member of.": "你不能查询你不为成员的帐户的订单。",
-  "You must select a valid default payment method.": "你必须选择一个有效的默认支付方式。"
+  "You must select a valid default payment method.": "你必须选择一个有效的默认支付方式。",
+  "Expected to find a git repository at '%s', but did not.": "预期在‘%s’找到一个 Git 仓库，但没有。",
+  "Incorrect": "不正确的",
+  "This object has a different policy (\"%s\") than the default policy for similar objects (which is \"%s\").": "此对象有和相似对象的默认策略（“%s”）不同的策略（“%s”）。",
+  "This object has a less restrictive policy (\"%s\") than the default policy for similar objects (which is \"%s\").": "此对象有比相似对象的默认策略（“%s”）更少限制性的策略（“%s”）。",
+  "This object has a more restrictive policy (\"%s\") than the default policy for similar objects (which is \"%s\").": "此对象有比相似对象的默认策略（“%s”）更多限制性的策略（“%s”）。",
+  "do not include": "不包含"
 }

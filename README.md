@@ -1,12 +1,14 @@
 # Phabricator 简体中文翻译（汉化）和工具
 
+![Screen Shot](screenshot.png)
+
 ## 目录
 
 * [翻译进度](#翻译进度)
 * [启动翻译工具](#启动翻译工具)
 * [编译翻译文件和 README 文件](#编译翻译文件和-readme-文件)
 * [本地化 Phabricator](#本地化-phabricator)
-* [提取 Phabricator 国际化字典资源](#提取-phabricator-国际化字典资源)
+* [提取最新 Phabricator 国际化字典资源](#提取最新-phabricator-国际化字典资源)
 * [翻译指南](#翻译指南)
 * [附录](#附录)
   * [翻译规则列表](Rules.md)
@@ -15,15 +17,15 @@
 
 ## 翻译进度
 
-当前翻译的 Phabricator 版本：[[7585b1212b](https://secure.phabricator.com/rP7585b1212b90467088092cc89debdf832ac2a221)]`(stable) Promote 2019 Week 44`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：7955c216fb68f4b7664627d97fc15ecd44ebefca。
+当前翻译的 Phabricator 版本：[[c11506bdf9](https://secure.phabricator.com/rPc11506bdf9298a0dc71f19f6f60e2bd42ff158ab)]`(stable) Promote 2019 Week 46`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：9cce11b4d5a0f85dd4164068d558fd35487ff73a。
 
-当前翻译的 libphutil 版本：[[1750586](https://secure.phabricator.com/rPHU1750586fdc50a6cd98adba4aa2f5a7649bd91dbe)]`(stable) Promote 2019 Week 39`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：7955c216fb68f4b7664627d97fc15ecd44ebefca。
+当前翻译的 libphutil 版本：[[1750586](https://secure.phabricator.com/rPHU1750586fdc50a6cd98adba4aa2f5a7649bd91dbe)]`(stable) Promote 2019 Week 39`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：9cce11b4d5a0f85dd4164068d558fd35487ff73a。
 
-当前总词条数量：16375 条，不包含原型应用的总词条数量：13914 条。
+当前总词条数量：16386 条，不包含原型应用的总词条数量：13925 条。
 
 当前整体翻译进度百分比：79%。
 
-当前短词条翻译进度百分比：89%。注：短词条为长度小于 66 个字符的词条。
+当前短词条翻译进度百分比：90%。注：短词条为长度小于 66 个字符的词条。
 
 当前不包含原型应用的翻译进度百分比：92%。
 
@@ -34,11 +36,11 @@ applications/almanac | 93% | ========= | 86% | ========
 applications/aphlict | **100%** | ✓✓✓✓✓✓✓✓ | 76% | =======
 applications/arcanist | --- |  | --- | 
 applications/audit | 89% | ======== | 81% | ========
-applications/auth | 93% | ========= | 70% | =======
+applications/auth | 96% | ========= | 72% | =======
 applications/badges | 92% | ========= | 91% | =========
 applications/base | 92% | ========= | 93% | =========
 applications/cache | **100%** | ✓✓✓✓✓✓✓✓ | 80% | ========
-applications/calendar `原型` | 91% | ========= | 84% | ========
+applications/calendar `原型` | 91% | ========= | 85% | ========
 applications/celerity | 93% | ========= | 83% | ========
 applications/chatlog `原型` | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/conduit | 99% | ========= | 87% | ========
@@ -47,13 +49,13 @@ applications/conpherence | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓�
 applications/console | 91% | ========= | 88% | ========
 applications/countdown | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/daemon | 94% | ========= | 82% | ========
-applications/dashboard | **100%** | ✓✓✓✓✓✓✓✓ | 91% | =========
-applications/differential | 90% | ======== | 83% | ========
+applications/dashboard | 99% | ========= | 91% | =========
+applications/differential | 90% | ========= | 83% | ========
 applications/diffusion | 89% | ======== | 76% | =======
 applications/diviner | 75% | ======= | 71% | =======
 applications/doorkeeper | 95% | ========= | 80% | ========
 applications/draft | --- |  | --- | 
-applications/drydock | 84% | ======== | 71% | =======
+applications/drydock | 84% | ======== | 72% | =======
 applications/fact `原型` | 56% | ===== | 43% | ====
 applications/favorites | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/feed | 98% | ========= | 92% | =========
@@ -74,10 +76,10 @@ applications/metamta | 91% | ========= | 81% | ========
 applications/multimeter `原型` | 88% | ======== | 88% | ========
 applications/notification | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/nuance `原型` | 86% | ======== | 82% | ========
-applications/oauthserver `原型` | 90% | ========= | 76% | =======
-applications/owners | 87% | ======== | 82% | ========
+applications/oauthserver `原型` | 91% | ========= | 77% | =======
+applications/owners | 88% | ======== | 82% | ========
 applications/packages `原型` | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/passphrase | 95% | ========= | 87% | ========
+applications/passphrase | 95% | ========= | 89% | ========
 applications/paste | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/people | 95% | ========= | 86% | ========
 applications/phame | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
@@ -90,43 +92,43 @@ applications/phragment `原型` | 80% | ======== | 76% | =======
 applications/phrequent `原型` | 93% | ========= | 94% | =========
 applications/phriction | 96% | ========= | 95% | =========
 applications/phurl `原型` | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/policy | 98% | ========= | 86% | ========
+applications/policy | 98% | ========= | 85% | ========
 applications/ponder | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/project | 94% | ========= | 86% | ========
 applications/releeph `原型` | 70% | ====== | 64% | ======
 applications/remarkup | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/repository | 83% | ======== | 73% | =======
-applications/search | 97% | ========= | 86% | ========
+applications/repository | 82% | ======== | 72% | =======
+applications/search | 96% | ========= | 86% | ========
 applications/settings | 99% | ========= | 94% | =========
 applications/slowvote | 95% | ========= | 95% | =========
 applications/spaces | 98% | ========= | 88% | ========
 applications/subscriptions | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/support | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/system | 86% | ======== | 63% | ======
+applications/system | 81% | ======== | 61% | ======
 applications/tokens | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/transactions | 95% | ========= | 81% | ========
 applications/typeahead | 98% | ========= | 92% | =========
 applications/uiexample `原型` | 98% | ========= | 97% | =========
 applications/xhprof | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-infrastructure | 79% | ======= | 63% | ======
+infrastructure | 80% | ======= | 63% | ======
 view | **100%** | ✓✓✓✓✓✓✓✓ | 98% | =========
 
 ## 启动翻译工具
 
-在当前项目目录，执行如下命令：
+在当前项目目录执行如下命令：
 
 ```sh
 $ npm start
 ```
 
-然后启动浏览器（建议 Chrome 或者 Safari），打开网址 http://localhost:3000 来启动翻译工具。
+然后启动浏览器（支持 Chrome 或者 Safari），打开网址 http://localhost:3000 来访问翻译工具。
 
 ## 编译翻译文件和 README 文件
 
-在当前项目目录，执行如下命令：
+在当前项目目录执行如下命令：
 
 ```sh
-$ ./bin/compile
+$ npm run compile
 ```
 
 然后你将得到五份文件：
@@ -139,13 +141,21 @@ $ ./bin/compile
 
 ## 本地化 Phabricator
 
-将 `dist/PhabricatorSimplifiedChineseTranslation.php` 文件拷贝到 Phabricator 项目的 `phabricator/src/extensions` 目录中即可。
+将 `dist/<version>/PhabricatorSimplifiedChineseTranslation.php` 文件拷贝到 Phabricator 项目的 `phabricator/src/extensions` 目录中即可。<version> 形如："(stable) Promote 2019 Week 44"
 
 然后调整个人设置，进入 `Personal Settings` 的 `Account`，在 `Translation` 选项中选择 `Chinese (Simplified)`，保存后界面即切换为简体中文。
 
-## 提取 Phabricator 国际化字典资源
+## 提取最新 Phabricator 国际化字典资源
 
-当 Phabricator 项目更新时，会出现新的词条，这时需要提取新的国际化字典资源，方法如下：
+当 Phabricator 项目更新时，会出现新的词条，这时需要提取新的国际化字典资源。
+
+如果您的 Phabricator 项目和本项目处于同级目录，可以直接在当前项目目录执行如下命令：
+
+```sh
+$ npm run update
+```
+
+您也可以手动进行如下操作：
 
 首先拉取最新的 Phabricator 和 libphutil 源码。在 **Phabricator** 项目路径，执行如下命令：
 
@@ -158,11 +168,7 @@ $ ./bin/i18n extract ../libphutil
 
 然后你将在 libphutil 项目的 `/src/.cache/` 目录中找到 `i18n_files.json` 文件，拷贝 `i18n_files.json` 文件到本项目的 `data/libphutil` 目录。
 
-如果您的 Phabricator 项目和本项目处于同级目录，可以直接在本项目路径下执行以下命令来完成提取和更新国际化字典的工作：
 
-```sh
-$ ./bin/update
-```
 
 ## 翻译指南
 

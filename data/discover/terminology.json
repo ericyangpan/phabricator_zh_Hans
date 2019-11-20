@@ -193,6 +193,14 @@
       "Choose a build log to rebuild with \"--id\", or rebuild all logs with \"--all\".": "用“--id”选择一个构建日志来重建，或用“--all”重建所有的日志。"
     }
   },
+  "Allow Registration": {
+    "translation": "允许注册",
+    "yes": 3,
+    "no": 1,
+    "kvp": {
+      "Only allow registration from particular domains.": "只允许从特定的域名注册。"
+    }
+  },
   "Almanac Bindings": {
     "translation": "Almanac 绑定",
     "yes": 3,
@@ -436,7 +444,7 @@
   },
   "Attached": {
     "translation": "附加的",
-    "yes": 15,
+    "yes": 16,
     "no": 1,
     "kvp": {
       "Posts must be attached to a blog.": "文章必须附属于一个博客。"
@@ -555,7 +563,7 @@
   },
   "Body": {
     "translation": "正文",
-    "yes": 27,
+    "yes": 30,
     "no": 1,
     "kvp": {
       "Reading message body from stdin...": "正在从 stdin 读取消息体…"
@@ -669,7 +677,7 @@
   },
   "Change": {
     "translation": "变更",
-    "yes": 446,
+    "yes": 449,
     "no": 3,
     "kvp": {
       "Change the database namespace of a .sql dump file.": "更改 .sql 转储文件的数据库名称空间。",
@@ -964,6 +972,25 @@
       "The user declined to authorize this application.": "用户拒绝授权此应用。"
     }
   },
+  "Deleted": {
+    "translation": "删除了",
+    "yes": 14,
+    "no": 12,
+    "kvp": {
+      "A deleted document can not be moved.": "删除的文档不能被移动。",
+      "Active tasks can not be deleted directly. Use %s to move tasks to the archive.": "活跃的任务无法直接被删除。使用 %s 将任务移动到归档。",
+      "An already deleted document can not be deleted.": "已经被删除的文档不能被删除。",
+      "Deleted Event": "删除事件",
+      "Deleted after being copied to multiple locations:": "在被拷贝到多个位置后删除：",
+      "Show old methods which will be deleted in a future version of Phabricator.": "显示将在一个未来的 Phabricator 版本被删除的旧方法。",
+      "This binary file was deleted after being copied to %s.": "被拷贝到 %s 后该二进制文件被删除。",
+      "This build step has since been deleted on the build plan.  Some information may be omitted.": "此构建步骤已经此后在构建计划中删除。一些信息可能会被省略。",
+      "This directory was deleted after being copied to %s.": "被拷贝到 %s 后该目录被删除。",
+      "This image was deleted after being copied to %s.": "被拷贝到 %s 后该图片被删除。",
+      "This submodule was deleted after being copied to %s.": "被拷贝到 %s 后该子模块被删除。",
+      "This symlink was deleted after being copied to %s.": "被拷贝到 %s 后该符号链接被删除。"
+    }
+  },
   "Delivered": {
     "translation": "已送达",
     "yes": 2,
@@ -1050,7 +1077,7 @@
   },
   "ERROR": {
     "translation": "错误",
-    "yes": 54,
+    "yes": 55,
     "no": 8,
     "kvp": {
       "Error Adding Payment Method": "添加支付方式出错",
@@ -1163,7 +1190,7 @@
   },
   "Enabled": {
     "translation": "已启用",
-    "yes": 7,
+    "yes": 8,
     "no": 32,
     "kvp": {
       "%s enabled %s.": "%s 启用了 %s。",
@@ -1239,7 +1266,7 @@
   },
   "Error": {
     "translation": "错误",
-    "yes": 54,
+    "yes": 55,
     "no": 8,
     "kvp": {
       "Error Adding Payment Method": "添加支付方式出错",
@@ -1281,7 +1308,7 @@
   },
   "FAIL": {
     "translation": "失败",
-    "yes": 133,
+    "yes": 142,
     "no": 1,
     "kvp": {
       "The custom domain should contain at least one dot (.) because some browsers fail to set cookies on domains without a dot. Instead, use a normal looking domain name like \"%s\".": "自定义域名应该包含至少一个点（.）因为某些浏览器无法在没有点的域名上设置 Cookie。相反的，请使用一个像“%s”的普通域名。"
@@ -1289,7 +1316,7 @@
   },
   "FAILED": {
     "translation": "失败的",
-    "yes": 110,
+    "yes": 119,
     "no": 3,
     "kvp": {
       "Failed to load commit during transaction finalization!": "无法在交易完成期间加载提交！",
@@ -1299,7 +1326,7 @@
   },
   "Failed": {
     "translation": "失败的",
-    "yes": 110,
+    "yes": 119,
     "no": 3,
     "kvp": {
       "Failed to load commit during transaction finalization!": "无法在交易完成期间加载提交！",
@@ -1358,11 +1385,10 @@
   "Find": {
     "translation": "查找",
     "yes": 63,
-    "no": 20,
+    "no": 19,
     "kvp": {
       "Can not generate keys: unable to find \"%s\" in PATH!": "无法生成密钥：在 PATH 中无法找到“%s”！",
       "Could not find any garbage to collect.": "无法找到任何垃圾来回收。",
-      "Expected to find a git repository at '%s', but did not.": "预期在‘%s’找到一个 Git 仓库，但没有。",
       "Find out information about build logs.": "找出有关构建日志的信息。",
       "Find out information about buildables.": "找出有关可构建项的信息。",
       "Find out information about builds.": "找出有关构建的信息。",
@@ -1399,8 +1425,8 @@
   },
   "From": {
     "translation": "来自",
-    "yes": 33,
-    "no": 329,
+    "yes": 34,
+    "no": 331,
     "kvp": {
       "%s adjusted autoreview from %s to %s.": "%s 把自动评审从 %s 调整为了 %s。",
       "%s adjusted package dominion rules from %s to %s.": "%s 把包支配规则从 %s 调整为了 %s。",
@@ -1412,6 +1438,8 @@
       "%s changed the \"%s\" value from \"%s\" to \"%s\".": "%s 将“%s”值从“%s”变更为了“%s”。",
       "%s changed the \"Import Only\" path from %s to %s.": "%s 把“仅导入”路径从 %s 变更为了 %s。",
       "%s changed the %s behavior for this plan from %s to %s.": "%s 把此计划的 %s 行为从 %s 变更为了 %s。",
+      "%s changed the %s policy for application %s from %s to %s.": "%1$s 把应用 %3$s 的 %2$s 策略从 %4$s 变更为了 %5$s。",
+      "%s changed the %s policy from %s to %s.": "%s 把 %s 策略从 %s 变更为了 %s。",
       "%s changed the URI for %s from %s to %s.": "%s 把 %s 的 URI 从 %s 变更为了 %s。",
       "%s changed the URI for this webhook from %s to %s.": "%s 把此 Webhook 的 URI 从 %s 变更为了 %s。",
       "%s changed the address for this interface from %s to %s.": "%s 把此接口的地址从 %s 变更为了 %s。",
@@ -2138,7 +2166,7 @@
   },
   "Lock": {
     "translation": "锁定",
-    "yes": 64,
+    "yes": 65,
     "no": 7,
     "kvp": {
       "Acquired read lock after %s second(s).": "在 %s 秒后获取读锁。",
@@ -2152,7 +2180,7 @@
   },
   "Locked": {
     "translation": "已锁定",
-    "yes": 8,
+    "yes": 9,
     "no": 15,
     "kvp": {
       "%s changed locked and hidden fields.": "%s 变更了锁定和隐藏的字段。",
@@ -2201,7 +2229,7 @@
   },
   "MODIFIED": {
     "translation": "已修改",
-    "yes": 4,
+    "yes": 2,
     "no": 4,
     "kvp": {
       "Found %s modified file(s) (of %s total).": "找到 %s 个修改过的文件（总计 %s）。",
@@ -2295,12 +2323,11 @@
     }
   },
   "Modified": {
-    "translation": "已修改",
-    "yes": 4,
-    "no": 4,
+    "translation": "修改了",
+    "yes": 3,
+    "no": 3,
     "kvp": {
       "Found %s modified file(s) (of %s total).": "找到 %s 个修改过的文件（总计 %s）。",
-      "Modified object policies.": "修改了对象策略。",
       "Path not modified in any ancestor commit.": "在任何祖先提交里都未被修改的路径。",
       "Received a 304 Not Modified from GitHub, no new events.": "从 GitHub 接收到一个 304 未修改，无新事件。"
     }
@@ -3211,7 +3238,7 @@
   },
   "Only": {
     "translation": "仅",
-    "yes": 39,
+    "yes": 40,
     "no": 136,
     "kvp": {
       "A personal rule can only be edited by its owner.": "个人规则只能被它的所有者编辑。",
@@ -3628,7 +3655,7 @@
   },
   "Post": {
     "translation": "文章",
-    "yes": 90,
+    "yes": 92,
     "no": 7,
     "kvp": {
       "After configuring Phabricator to process inbound mail, you can interact with objects (like tasks and revisions) over email. For information on configuring Phabricator, see **[[ %s | Configuring Inbound Email ]]**.\n\nIn most cases, you can reply to email you receive from Phabricator to leave comments. You can also use **mail commands** to take a greater range of actions (like claiming a task or requesting changes to a revision) without needing to log in to the web UI.\n\nMail commands are keywords which start with an exclamation point, like `!claim`. Some commands may take parameters, like `!assign alincoln`.\n\nTo use mail commands, write one command per line at the beginning or end of your mail message. For example, you could write this in a reply to task email to claim the task:\n\n```\n!claim\n\nI'll take care of this.\n```\n\n\nWhen Phabricator receives your mail, it will process any commands first, then post the remaining message body as a comment. You can execute multiple commands at once:\n\n```\n!assign alincoln\n!close\n\nI just talked to @alincoln, and he showed me that he fixed this.\n```\n": "配置 Phabricator 处理入站邮件后，你可以通过邮件与对象（如任务和修订）进行交互。有关配置 Phabricator 的信息，请查看 **[[ %s | Configuring Inbound Email ]]**。\n\n在大多数情况下，你可以回复从 Phabricator 收到的邮件来发表评论。你还可以使用**邮件命令**来执行更大范围的操作（例如声明任务或请求修订变更）而无需登录 Web 用户界面。\n\n邮件命令是以感叹号开始的关键字，如`!claim`。有些命令可能会携带参数，如`!assign alincoln`。\n\n要使用邮件命令，在邮件开头或结尾处每行写一个命令。例如，你可以在一个回复任务邮件里写这个来声明任务：\n\n```\n!claim\n\n我会照顾好这个。\n```\n\n\n当 Phabricator 收到你的邮件时，它将首先处理所有命令，然后将剩余的邮件正文作为评论发布。你可以一次执行多个命令：\n\n```\n!assign alincoln\n!close\n\n我刚和 @alincoln 谈过并且他给我看他修好了这个。\n```\n",
@@ -3651,11 +3678,12 @@
   "Previous": {
     "translation": "上一个",
     "yes": 10,
-    "no": 3,
+    "no": 4,
     "kvp": {
       "Edit this event and all events in the series which occur on or after %s. This will overwrite previous edits!": "编辑此事件和所有这个系列里发生在 %s 或之后的事件。这将覆盖之前的编辑！",
       "Previous Day": "前一天",
-      "Previous Month": "前一月"
+      "Previous Month": "前一月",
+      "View on previous revision": "查看以前的修订"
     }
   },
   "Primary": {
@@ -3951,7 +3979,7 @@
   },
   "Required": {
     "translation": "必填的",
-    "yes": 60,
+    "yes": 61,
     "no": 19,
     "kvp": {
       "%s added %s required legal document(s) to %s: %s.": "%s 把 %s 位必需的法律文档添加到了 %s：%s。",
@@ -4035,8 +4063,8 @@
     "kvp": {
       "Another user made changes to this document after you began editing it. Do you want to overwrite their changes? (If you choose to overwrite their changes, you should review the document edit history to see what you overwrote, and then make another edit to merge the changes if necessary.)": "另一位用户在你开始编辑后对其进行了变更。你想覆盖他们的变化吗？（如果你选择覆盖他们的更改，你应该检查文档编辑历史记录以查看所覆盖的内容，并且随后进行其他编辑以在必要时合并更改。）",
       "Review Recent Activity": "查看最近的活动",
-      "Review the documentation describing how to import or observe an existing repository.": "检查描述如何导入或者观察一个已存在仓库的文档。",
-      "Review the repository operation queue.": "检查仓库操作队列。",
+      "Review the documentation describing how to import or observe an existing repository.": "查看描述如何导入或者观察一个已存在仓库的文档。",
+      "Review the repository operation queue.": "查看仓库操作队列。",
       "Typeahead functions are an advanced feature which allow you to build more powerful queries. This document explains functions available for the selected control.\n\nFor general help with search, see the [[ %s | Search User Guide ]] in the documentation.\n\nNote that different controls support //different// functions (depending on what the control is doing), so these specific functions may not work everywhere. You can always check the help for a control to review which functions are available for that control.": "键入提示功能是一种允许你构建更强大查询的高级功能。本文档解释了所选控件的可用功能。\n\n有关搜索的一般帮助，请参阅[[%s | 搜索用户指南]]。\n\n请注意不同的控件支持//不同的//函数（取决于控件做什么），所以这些特定的功能可能不能在任意的地方工作。你可以随时检查控件的帮助以查看该控件可用的功能。"
     }
   },
@@ -4459,7 +4487,7 @@
   "To": {
     "translation": "送到",
     "yes": 15,
-    "no": 1617,
+    "no": 1626,
     "kvp": {
       "%s added %s account manager(s) to %s: %s.": "%s 把 %s 位帐户管理员添加到了 %s：%s。",
       "%s added %s commit(s) to %s: %s.": "%s 添加了 %s 个提交到 %s：%s。",
@@ -4503,6 +4531,8 @@
       "%s changed the \"%s\" value from \"%s\" to \"%s\".": "%s 将“%s”值从“%s”变更为了“%s”。",
       "%s changed the \"Import Only\" path from %s to %s.": "%s 把“仅导入”路径从 %s 变更为了 %s。",
       "%s changed the %s behavior for this plan from %s to %s.": "%s 把此计划的 %s 行为从 %s 变更为了 %s。",
+      "%s changed the %s policy for application %s from %s to %s.": "%1$s 把应用 %3$s 的 %2$s 策略从 %4$s 变更为了 %5$s。",
+      "%s changed the %s policy from %s to %s.": "%s 把 %s 策略从 %s 变更为了 %s。",
       "%s changed the %s to \"%s\"": "%s 把 %s 变更为了“%s”",
       "%s changed the URI for %s from %s to %s.": "%s 把 %s 的 URI 从 %s 变更为了 %s。",
       "%s changed the URI for this webhook from %s to %s.": "%s 把此 Webhook 的 URI 从 %s 变更为了 %s。",
@@ -5090,18 +5120,22 @@
       "Expected condition value to be an array.": "预期条件值为数组。",
       "Expected four elements in icon emblem list. To omit an emblem, pass \"null\".": "预期图标徽标列表中的四个元素。要省略一个徽标，传递“null”。",
       "Expected task data to be a dictionary.": "预期任务数据为字典。",
-      "Expected to find a git repository at '%s', but did not.": "预期在‘%s’找到一个 Git 仓库，但没有。",
       "Export data to a flat file (JSON, CSV, Excel, etc).": "导出数据到一个平面文件（JSON、CSV、Excel、etc）。",
       "Exported data to \"%s\".": "导出数据到“%s”。",
       "Failed to %s!": "%s 失败！",
       "Failed to JSON decode response.": "JSON 解码响应失败。",
       "Failed to JSON decode rule data!": "JSON 解码规则数据失败！",
+      "Failed to adjust SORT columns!": "调整 SORT 列失败！",
       "Failed to base64 encode value for key \"%s\".": "Base64 编码键“%s”的值失败。",
       "Failed to base64_decode() value for key \"%s\".": "base64_decode() 键“%s”的值失败。",
+      "Failed to bind to LDAP server (as user \"%s\").": "绑定到 LDAP 服务器失败（作为用户“%s”）。",
+      "Failed to bind to LDAP server (without username).": "绑定到 LDAP 服务器失败（无用户名）。",
       "Failed to close file \"%s\".": "关闭文件“%s”失败。",
+      "Failed to decode OAuth access token response: %s": "解码 OAuth 访问令牌响应失败：%s",
       "Failed to decode rule data.": "解码规则数据失败。",
       "Failed to find an OAuth client with ID %s.": "用 ID %s 查找 OAuth 客户端失败。",
       "Failed to find an OAuth client with id %s.": "用 ID %s 查找 OAuth 客户端失败。",
+      "Failed to get LDAP entries from search result.": "获取来自搜索结果的 LDAP 条目失败。",
       "Failed to gzdeflate() log data!": "gzdeflate() 日志数据失败！",
       "Failed to imagecopyresampled() image: %s": "imagecopyresampled() 图片失败：%s",
       "Failed to imagecreatefromstring() image template data.": "imagecreatefromstring() 图像模板数据失败。",
@@ -5138,6 +5172,7 @@
       "Failed to parse line '%s'.": "解析行‘%s’失败。",
       "Failed to parse object address (\"%s\") during processing.": "在处理期间解析对象地址（“%s”）失败。",
       "Failed to parse remote branch '%s'!": "解析远程分支‘%s’失败！",
+      "Failed to poll mysqli connection!": "轮询 mysqli 连接失败！",
       "Failed to read configuration file. %s": "读取配置文件失败。%s",
       "Failed to read stdin.": "读取 stdin 失败。",
       "Failed to rebuild search index for any documents.": "为所有文档重建搜索索引失败。",
@@ -5409,7 +5444,7 @@
       "Return whether the conduit user is allowed to push.": "返回是否 Conduit 用户被允许推送。",
       "Revert the published version of this document to an older version?": "还原此文档已发布的版本到一个较旧的版本？",
       "Revert to Here": "还原到这里",
-      "Review the documentation describing how to import or observe an existing repository.": "检查描述如何导入或者观察一个已存在仓库的文档。",
+      "Review the documentation describing how to import or observe an existing repository.": "查看描述如何导入或者观察一个已存在仓库的文档。",
       "Room \"%s\" is not a valid room which you have permission to see.": "房间“%s”不是你有权限看到的有效的房间。",
       "Run \"ANALYZE TABLE\" on tables to improve performance.": "在表格上运行“ANALYZE TABLE”来提升性能。",
       "Run \"OPTIMIZE TABLE\" on tables to reclaim space.": "在表格上运行“OPTIMIZE TABLE”以收回空间。",
@@ -5743,6 +5778,7 @@
       "Unable to apply patch of type '%s'.": "无法应用类型‘%s’的补丁。",
       "Unable to build resource interface of type \"%s\".": "无法构建类型“%s”的资源接口。",
       "Unable to compute HMAC-SHA256 digest of message.": "无法计算消息的 HMAC-SHA256 摘要。",
+      "Unable to connect to LDAP server (%s:%d).": "无法连接到 LDAP 服务器（%s：%d）。",
       "Unable to connect to payment provider:": "无法连接到支付提供者：",
       "Unable to construct a date value from value of type \"%s\".": "从类型“%s”的值中无法构建出日期值。",
       "Unable to continue tracing the history of this file because this commit created the file.": "因为此提交创建了此文件所以无法继续跟踪该文件的历史记录。",
@@ -5817,6 +5853,7 @@
       "Unable to parse entry!": "无法解析条目！",
       "Unable to parse filesize limit: %s": "无法解析文件尺寸限制：%s",
       "Unable to parse time \"%s\".": "无法解析时间“%s”。",
+      "Unable to pop working directory, directory stack is empty.": "无法弹出工作目录，目录堆栈是空的。",
       "Unable to post message: this is not an admin server!": "无法发送消息：这不是管理服务器！",
       "Unable to refresh token!": "无法刷新令牌！",
       "Unable to refund charge; no Stripe chargeID!": "无法退款；无 Stripe chargeID！",
@@ -6082,7 +6119,7 @@
   },
   "Token": {
     "translation": "令牌",
-    "yes": 74,
+    "yes": 76,
     "no": 10,
     "kvp": {
       "A token inherits the policies of the object it is awarded to.": "符记继承其被授予的对象的策略。",
@@ -6550,7 +6587,7 @@
   "View": {
     "translation": "视图",
     "yes": 22,
-    "no": 145,
+    "no": 147,
     "kvp": {
       "A merchant's members an always view and edit it.": "一个商家的成员可以总是查看和编辑它。",
       "A mock's owner can always view and edit it.": "Mock 的所有者可以总是查看和编辑它。",
@@ -6693,6 +6730,8 @@
       "View in Buildkite": "在 Buildkite 中查看",
       "View in CircleCI": "在 CircleCI 中查看",
       "View in Conpherence": "在 Conpherence 中查看",
+      "View on forward revision": "查看前向的修订",
+      "View on previous revision": "查看以前的修订",
       "You do not have permission to view the configured credential.": "你没有的查看配置凭据权限。",
       "You do not have permission to view this log event.": "你没有查看这个日志事件的权限。",
       "You do not have permission to view this object.": "你没有查看此对象的权限。",
@@ -6834,7 +6873,7 @@
   },
   "Working": {
     "translation": "工作",
-    "yes": 25,
+    "yes": 26,
     "no": 1,
     "kvp": {
       "Working From Home": "在家办公"
@@ -6875,7 +6914,7 @@
   },
   "here": {
     "translation": "这里",
-    "yes": 24,
+    "yes": 23,
     "no": 1,
     "kvp": {
       "You can adjust **Application Settings** here to customize when you are emailed and notified.\n\n| Setting | Effect\n| ------- | -------\n| Email | You will receive an email and a notification, but the notification will be marked \"read\".\n| Notify | You will receive an unread notification only.\n| Ignore | You will receive nothing.\n\n\nIf an update makes several changes (like adding CCs to a task, closing it, and adding a comment) you will receive the strongest notification any of the changes is configured to deliver.\n\nThese preferences **only** apply to objects you are connected to (for example, Revisions where you are a reviewer or tasks you are CC'd on). To receive email alerts when other objects are created, configure [[ /herald/ | Herald Rules ]].": "你可以在此处调整**应用设置**以自定义你何时被电子邮件和通知。\n\n| 设置 | 效果\n| ------- | -------\n| 邮件 | 你将收到一封邮件和一条通知，但是通知将被标记为“已读”。\n| 通知 | 你将只收到一条未读通知。\n| 忽略 | 你将什么都收不到。\n\n\n如果更新进行了多项变更（例如将 CC 添加到任务，关闭它并添加注释）你将收到任何变更都配置为投递的最强通知。\n\n这些偏好**仅**应用于你所连接的对象（例如，你是评审人的修订或 CC 你的任务）。要在其他对象创建时接收邮件告警，请配置 [[ /herald/ | Herald 规则 ]]。"
@@ -6883,8 +6922,8 @@
   },
   "is": {
     "translation": "是",
-    "yes": 430,
-    "no": 395,
+    "yes": 433,
+    "no": 392,
     "kvp": {
       "%s is already archived, and can not be cancelled.": "%s 已经归档，不能取消。",
       "%s is already in the active task queue.": "%s 已经在活跃的任务队列中。",
@@ -7206,9 +7245,6 @@
       "This method is frozen and will eventually be deprecated. New code should use \"transaction.search\" instead.": "这个方法已被冻结并最终将被弃用。新的代码应该使用“transaction.search”替代。",
       "This method is frozen and will eventually be deprecated. New code should use \"user.search\" instead.": "这个方法已被冻结并最终将被弃用。新的代码应该使用“user.search”替代。",
       "This method is not documented.": "这个方法没有文档描述。",
-      "This object has a different policy (\"%s\") than the default policy for similar objects (which is \"%s\").": "此对象有和相似对象的默认策略（“%s”）不同的策略（“%s”）。",
-      "This object has a less restrictive policy (\"%s\") than the default policy for similar objects (which is \"%s\").": "此对象有比相似对象的默认策略（“%s”）更少限制性的策略（“%s”）。",
-      "This object has a more restrictive policy (\"%s\") than the default policy for similar objects (which is \"%s\").": "此对象有比相似对象的默认策略（“%s”）更多限制性的策略（“%s”）。",
       "This object is already in that space.": "此对象已经在那个空间。",
       "This object is in a space you do not have permission to access.": "此对象在你没有访问权限的空间中。",
       "This object is locked. Edit it anyway?": "此对象被锁定了。无论如何都要编辑它？",
@@ -7295,7 +7331,7 @@
   },
   "is not": {
     "translation": "不是",
-    "yes": 109,
+    "yes": 110,
     "no": 126,
     "kvp": {
       "%s is not available; unable to read deflated data!": "%s 不可用；无法读取压缩的数据！",
@@ -7468,7 +7504,7 @@
   },
   "or": {
     "translation": "或",
-    "yes": 367,
+    "yes": 368,
     "no": 2,
     "kvp": {
       "Determines whether or not YouTube videos get embedded.": "确定 YouTube 视频是否嵌入。",

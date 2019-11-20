@@ -20,12 +20,6 @@ const rulesPath = 'data/rules.json'
 const terminologyPath = 'data/terminology.json'
 const translationsPath = 'data/translations.json'
 
-// Initialize output file paths.
-const readmeFilePath = 'README.md'
-const rulesFilePath = 'Rules.md'
-const terminologyFilePath = 'Terminology.md'
-const translationsFilePath = 'dist/PhabricatorSimplifiedChineseTranslation.php'
-
 // Load data.
 const rulesData = jsonfile.readFileSync(rulesPath)
 const terminologyData = jsonfile.readFileSync(terminologyPath)
@@ -43,6 +37,12 @@ const gitInfo = {
     'https://secure.phabricator.com/source/libphutil.git'
   )
 }
+
+// Initialize output file paths.
+const readmeFilePath = 'README.md'
+const rulesFilePath = 'Rules.md'
+const terminologyFilePath = 'Terminology.md'
+const translationsFilePath = `dist/${gitInfo.phabricator.subject}/PhabricatorSimplifiedChineseTranslation.php`
 
 // Check rules.
 const hasError = rules.check(translationsData, error => {
@@ -76,6 +76,9 @@ writeTemplateFile(rulesFilePath, {
 writeTemplateFile(terminologyFilePath, {
   terminology: terminologyData
 })
+
+createVersionDirectory(gitInfo.phabricator.subject)
+
 writeTemplateFile(translationsFilePath, {
   translations: translationsData
 })
@@ -291,7 +294,8 @@ function writeTemplateFile(filePath, data) {
     }
   }
 
-  const templatePath = `templates/${filePath}.ejs`
+  const templateFilename = path.basename(filePath)
+  const templatePath = `templates/${templateFilename}.ejs`
 
   // Load template file.
   const template = fs.readFileSync(templatePath).toString()
@@ -398,4 +402,15 @@ function cloneGitRepository(repoPath, repoURL) {
       cwd: path.join('..')
     })
   }
+}
+
+// Create version directory under "./dist".
+function createVersionDirectory(dir) {
+  const dirPath = path.join('./dist', dir)
+
+  if (fs.existsSync(dirPath)) {
+    return
+  }
+
+  fs.mkdirSync(dirPath)
 }

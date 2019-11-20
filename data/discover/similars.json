@@ -3754,7 +3754,8 @@
     ],
     "s4": [
       "API token \"%s\" is not valid.",
-      "Commit \"%s\" is not valid."
+      "Commit \"%s\" is not valid.",
+      "Pattern \"%s\" is not valid."
     ]
   },
   "Specify a hunk to migrate with \"--id\", or migrate all hunks with \"--all\".": {
@@ -8120,6 +8121,7 @@
   "Another user already has this email.": {
     "s4": [
       "Another user already has that username.",
+      "Another user already has the username \"%s\".",
       "Another user already has this email."
     ],
     "s5": [
@@ -12189,10 +12191,20 @@
       "Installing commit hook to \"%s\"..."
     ]
   },
-  "Expected to find a git repository at '%s', but there is an empty directory there. Remove the directory: the daemon will run '%s' for you.": {
-    "s16": [
-      "Expected to find a git repository at '%s', but there is a file there instead. Remove it and let the daemon clone a repository for you.",
-      "Expected to find a git repository at '%s', but there is an empty directory there. Remove the directory: the daemon will run '%s' for you."
+  "Expected to find a Git repository at \"%s\", but there is an empty directory there. Remove the directory. A daemon will construct the working copy for you.": {
+    "s23": [
+      "Expected to find a Git repository at \"%s\", but there is a non-repository directory (with other stuff in it) there. Move or remove this directory. A daemon will construct the working copy for you.",
+      "Expected to find a Git repository at \"%s\", but there is an empty directory there. Remove the directory. A daemon will construct the working copy for you."
+    ],
+    "s20": [
+      "Expected to find a Git repository at \"%s\", but there is a file there instead. Move or remove this file. A daemon will construct the working copy for you.",
+      "Expected to find a Git repository at \"%s\", but there is an empty directory there. Remove the directory. A daemon will construct the working copy for you."
+    ]
+  },
+  "Expected to find a Git repository at \"%s\", but there is a file there instead. Move or remove this file. A daemon will construct the working copy for you.": {
+    "s25": [
+      "Expected to find a Git repository at \"%s\", but there is a file there instead. Move or remove this file. A daemon will construct the working copy for you.",
+      "Expected to find a Git repository at \"%s\", but there is a non-repository directory (with other stuff in it) there. Move or remove this directory. A daemon will construct the working copy for you."
     ]
   },
   "Ref %s \"%s\" still points at %s.": {
@@ -27056,23 +27068,6 @@
       "%s updated the invite list for %s, invited %s: %s; uninvited %s: %s."
     ]
   },
-  "The owner of a task can always view and edit it.": {
-    "s9": [
-      "The author of a blog post can always view and edit it.",
-      "The author of a document can always view and edit it.",
-      "The author of a paste can always view and edit it.",
-      "The author of a poll can always view and edit it.",
-      "The owner of a task can always view and edit it.",
-      "The owner of an initiative can always view and edit it."
-    ],
-    "s8": [
-      "The author of an answer can always view and edit it.",
-      "The host of an event can always view and edit it.",
-      "The owner of a task can always view and edit it.",
-      "The user who asked a question can always view and edit it.",
-      "The user who uploaded a file can always view and edit it."
-    ]
-  },
   "The title of the task.": {
     "s3": [
       "Change the priority of the task.",
@@ -28309,6 +28304,23 @@
       "List of parent task PHIDs.",
       "List of related VCS references.",
       "List of related commit PHIDs."
+    ]
+  },
+  "The owner of a task can always view and edit it.": {
+    "s9": [
+      "The author of a blog post can always view and edit it.",
+      "The author of a document can always view and edit it.",
+      "The author of a paste can always view and edit it.",
+      "The author of a poll can always view and edit it.",
+      "The owner of a task can always view and edit it.",
+      "The owner of an initiative can always view and edit it."
+    ],
+    "s8": [
+      "The author of an answer can always view and edit it.",
+      "The host of an event can always view and edit it.",
+      "The owner of a task can always view and edit it.",
+      "The user who asked a question can always view and edit it.",
+      "The user who uploaded a file can always view and edit it."
     ]
   },
   "%s Day(s)": {
@@ -30650,6 +30662,7 @@
       "Credential (\"%s\") is not valid.",
       "Empty withOwners() constraint is not valid.",
       "Export format (\"%s\") is not enabled.",
+      "Pattern \"%s\" is not valid.",
       "Provided \"%s\" (\"%s\") is not recognized.",
       "Ruleset specification is not valid. %s"
     ]
@@ -32742,6 +32755,10 @@
       "Another user already has that email.",
       "Another user already has that username.",
       "Another user already has this email."
+    ],
+    "s4": [
+      "Another user already has that email.",
+      "Another user already has the username \"%s\"."
     ]
   },
   "External Account": {
@@ -32951,6 +32968,34 @@
     "s3": [
       "No commit ID was provided.",
       "No public key was provided."
+    ]
+  },
+  "Pattern \"%s\" is not valid.": {
+    "s3": [
+      "Action \"%s\" is not forbidden!",
+      "Application \"%s\" is not installed!",
+      "Badge quality is not valid.",
+      "Conduit client \"%s\" is not known.",
+      "Credential (\"%s\") is not valid.",
+      "Empty withOwners() constraint is not valid.",
+      "Lease \"%s\" is not releasable.",
+      "Object \"%s\" is not a buildable!",
+      "Pattern \"%s\" is not valid.",
+      "Provided \"%s\" (\"%s\") is not recognized.",
+      "Resource \"%s\" is not releasable.",
+      "Ruleset specification is not valid. %s"
+    ]
+  },
+  "This private key requires a passphrase, but the wrong passphrase was provided. Check that you supplied the correct key and passphrase.": {
+    "s16": [
+      "This private key requires a passphrase, but no passphrase was provided. Check that you supplied the correct key, or provide the passphrase.",
+      "This private key requires a passphrase, but the wrong passphrase was provided. Check that you supplied the correct key and passphrase."
+    ]
+  },
+  "This private key could not be opened. This might mean that the key requires a passphrase, or might mean that the key is not formatted correctly. Check that you have supplied the complete text of a valid private key and the correct passphrase.": {
+    "s33": [
+      "This private key could not be opened with the provided passphrase. This might mean that the passphrase is wrong or that the key is not formatted correctly. Check that you have supplied the complete text of a valid private key and the correct passphrase.",
+      "This private key could not be opened. This might mean that the key requires a passphrase, or might mean that the key is not formatted correctly. Check that you have supplied the complete text of a valid private key and the correct passphrase."
     ]
   },
   "Invite has invalid author PHID (\"%s\").": {
@@ -46588,6 +46633,7 @@
       "Conduit client \"%s\" is not known.",
       "Lease \"%s\" is not releasable.",
       "Object \"%s\" is not a buildable!",
+      "Pattern \"%s\" is not valid.",
       "Provided \"%s\" (\"%s\") is not recognized.",
       "Resource \"%s\" is not releasable."
     ]
@@ -68840,13 +68886,15 @@
   "include all of": {
     "s2": [
       "include all of",
-      "include any of"
+      "include any of",
+      "include none of"
     ]
   },
   "include any of": {
     "s2": [
       "include all of",
       "include any of",
+      "include none of",
       "is any of",
       "is not any of"
     ]
@@ -70961,6 +71009,7 @@
       "Commit \"%s\" is not valid.",
       "Credential (\"%s\") is not valid.",
       "Empty withOwners() constraint is not valid.",
+      "Pattern \"%s\" is not valid.",
       "Ruleset specification is not valid. %s"
     ]
   },
@@ -72535,6 +72584,7 @@
       "Commit \"%s\" is not valid.",
       "Conduit client \"%s\" is not known.",
       "Object \"%s\" is not a buildable!",
+      "Pattern \"%s\" is not valid.",
       "Provided \"%s\" (\"%s\") is not recognized.",
       "Resource \"%s\" could not be reclaimed.",
       "Resource \"%s\" does not exist.",
@@ -72742,6 +72792,7 @@
       "Lease \"%s\" does not exist.",
       "Lease \"%s\" is not releasable.",
       "Object \"%s\" is not a buildable!",
+      "Pattern \"%s\" is not valid.",
       "Provided \"%s\" (\"%s\") is not recognized."
     ]
   },
@@ -74487,19 +74538,6 @@
       "Edit User: %s",
       "Exact User: %s",
       "Only User: %s"
-    ]
-  },
-  "This object has a less restrictive policy (\"%s\") than the default policy for similar objects (which is \"%s\").": {
-    "s17": [
-      "This object has a less restrictive policy (\"%s\") than the default policy for similar objects (which is \"%s\").",
-      "This object has a more restrictive policy (\"%s\") than the default policy for similar objects (which is \"%s\")."
-    ]
-  },
-  "This object has a different policy (\"%s\") than the default policy for similar objects (which is \"%s\").": {
-    "s16": [
-      "This object has a different policy (\"%s\") than the default policy for similar objects (which is \"%s\").",
-      "This object has a less restrictive policy (\"%s\") than the default policy for similar objects (which is \"%s\").",
-      "This object has a more restrictive policy (\"%s\") than the default policy for similar objects (which is \"%s\")."
     ]
   },
   "Invalid action '%s'!": {
