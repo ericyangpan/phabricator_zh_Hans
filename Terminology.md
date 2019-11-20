@@ -77,6 +77,7 @@ exactly | 准确
 exit | 退出
 factor | 因素
 fetch | 获取
+flag | 标志
 footer | 页脚
 foreground | 前台
 forever | 永远|永久

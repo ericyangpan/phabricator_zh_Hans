@@ -40,7 +40,7 @@ applications/auth | 96% | ========= | 72% | =======
 applications/badges | 92% | ========= | 91% | =========
 applications/base | 92% | ========= | 93% | =========
 applications/cache | **100%** | ✓✓✓✓✓✓✓✓ | 80% | ========
-applications/calendar `原型` | 91% | ========= | 85% | ========
+applications/calendar `原型` | 92% | ========= | 85% | ========
 applications/celerity | 93% | ========= | 83% | ========
 applications/chatlog `原型` | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/conduit | 99% | ========= | 87% | ========
@@ -51,23 +51,23 @@ applications/countdown | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓
 applications/daemon | 94% | ========= | 82% | ========
 applications/dashboard | 99% | ========= | 91% | =========
 applications/differential | 90% | ========= | 83% | ========
-applications/diffusion | 89% | ======== | 76% | =======
+applications/diffusion | 89% | ======== | 77% | =======
 applications/diviner | 75% | ======= | 71% | =======
 applications/doorkeeper | 95% | ========= | 80% | ========
 applications/draft | --- |  | --- | 
 applications/drydock | 84% | ======== | 72% | =======
-applications/fact `原型` | 56% | ===== | 43% | ====
+applications/fact `原型` | 58% | ===== | 44% | ====
 applications/favorites | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/feed | 98% | ========= | 92% | =========
 applications/files | 84% | ======== | 74% | =======
-applications/flag | 85% | ======== | 85% | ========
+applications/flag | 98% | ========= | 98% | =========
 applications/fund `原型` | 98% | ========= | 94% | =========
 applications/guides | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/harbormaster | 89% | ======== | 77% | =======
+applications/harbormaster | 89% | ======== | 78% | =======
 applications/help | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/herald | 87% | ======== | 79% | =======
+applications/herald | 88% | ======== | 80% | ========
 applications/home | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/legalpad | 95% | ========= | 90% | =========
+applications/legalpad | 95% | ========= | 91% | =========
 applications/lipsum | **100%** | ✓✓✓✓✓✓✓✓ | 76% | =======
 applications/macro | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/maniphest | 98% | ========= | 91% | =========
@@ -81,26 +81,26 @@ applications/owners | 88% | ======== | 82% | ========
 applications/packages `原型` | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/passphrase | 95% | ========= | 89% | ========
 applications/paste | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/people | 95% | ========= | 86% | ========
+applications/people | 96% | ========= | 87% | ========
 applications/phame | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/phid | **100%** | ✓✓✓✓✓✓✓✓ | 78% | =======
 applications/phlux `原型` | 96% | ========= | 96% | =========
 applications/pholio | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/phortune `原型` | 66% | ====== | 58% | =====
+applications/phortune `原型` | 73% | ======= | 64% | ======
 applications/phpast | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/phragment `原型` | 80% | ======== | 76% | =======
 applications/phrequent `原型` | 93% | ========= | 94% | =========
 applications/phriction | 96% | ========= | 95% | =========
 applications/phurl `原型` | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/policy | 98% | ========= | 85% | ========
+applications/policy | 99% | ========= | 86% | ========
 applications/ponder | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/project | 94% | ========= | 86% | ========
 applications/releeph `原型` | 70% | ====== | 64% | ======
 applications/remarkup | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/repository | 82% | ======== | 72% | =======
+applications/repository | 83% | ======== | 73% | =======
 applications/search | 96% | ========= | 86% | ========
 applications/settings | 99% | ========= | 94% | =========
-applications/slowvote | 95% | ========= | 95% | =========
+applications/slowvote | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/spaces | 98% | ========= | 88% | ========
 applications/subscriptions | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/support | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
