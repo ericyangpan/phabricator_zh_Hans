@@ -134,6 +134,11 @@ function buildCategories(categories, i18nFiles, prefix) {
 
     // Set strings to cateogries.
     strings.forEach(item => {
+      // Filter some empty strings. They are pht('') in PHP code.
+      if (item.string === '') {
+        return
+      }
+
       categories[category][item.string] = ''
     })
   }
