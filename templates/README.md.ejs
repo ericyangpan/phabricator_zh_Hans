@@ -4,6 +4,7 @@
 
 ## 目录
 
+* [下载地址](#下载地址)
 * [翻译进度](#翻译进度)
 * [启动翻译工具](#启动翻译工具)
 * [编译翻译文件和 README 文件](#编译翻译文件和-readme-文件)
@@ -15,11 +16,17 @@
   * [术语表](Terminology.md)
   * [Phabricator 官方国际化文档](https://secure.phabricator.com/book/phabcontrib/article/internationalization/)
 
+## 下载地址
+
+最新版本：[<%- gitInfo.phabricator.subject%>/PhabricatorSimplifiedChineseTranslation.php](<%- encodeURI(gitInfo.phabricator.subject) %>/PhabricatorSimplifiedChineseTranslation.php)
+
+[历史版本列表](dist)
+
 ## 翻译进度
 
-当前翻译的 Phabricator 版本：[[<%- gitInfo.phabricator.abbrCommitHash%>](https://secure.phabricator.com/rP<%- gitInfo.phabricator.commitHash%>)]`<%- gitInfo.phabricator.subject%>`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：<%- i18nFileHash %>。
+当前翻译的 Phabricator 版本：[[<%- gitInfo.phabricator.abbrCommitHash%>](https://secure.phabricator.com/rP<%- gitInfo.phabricator.commitHash%>)]`<%- gitInfo.phabricator.subject %>`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：<%- phabricatori18nFileHash %>。
 
-当前翻译的 libphutil 版本：[[<%- gitInfo.libphutil.abbrCommitHash%>](https://secure.phabricator.com/rPHU<%- gitInfo.libphutil.commitHash%>)]`<%- gitInfo.libphutil.subject%>`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：<%- i18nFileHash %>。
+当前翻译的 libphutil 版本：[[<%- gitInfo.libphutil.abbrCommitHash%>](https://secure.phabricator.com/rPHU<%- gitInfo.libphutil.commitHash%>)]`<%- gitInfo.libphutil.subject %>`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：<%- libphutili18nFileHash %>。
 
 当前总词条数量：<%- totalCount %> 条，不包含原型应用的总词条数量：<%- totalCountWithoutPrototype %> 条。
 
@@ -53,11 +60,11 @@ $ npm run compile
 
 然后你将得到五份文件：
 
-1. Phabricator 简体中文翻译文件：`dist/PhabricatorSimplifiedChineseTranslation.php`；
-2. 重新排序后的翻译数据文件：`data/translations.json`；
-3. 包含最新摘要信息的 README 文件：`README.md`；
-4. 翻译规则列表文件：`Rules.md`；
-5. 术语表文件：`Terminology.md`。
+1. Phabricator 简体中文翻译文件：`dist/<version>/PhabricatorSimplifiedChineseTranslation.php`；
+2. 重新排序后的翻译数据文件：[`data/translations.json`](data/translations.json)；
+3. 包含最新摘要信息的 README 文件：[`README.md`](README.md)；
+4. 翻译规则列表文件：[`Rules.md`](Rules.md)；
+5. 术语表文件：[`Terminology.md`](Terminology.md)。
 
 ## 本地化 Phabricator
 
