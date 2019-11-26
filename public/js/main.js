@@ -492,7 +492,7 @@ function searchText(text, isWord, type, filterLength) {
           category: category
         }
 
-        item.highlight = item.value !== undefined
+        item.highlight = item.value !== ''
 
         setTextareaRowCount(item)
 
@@ -525,7 +525,7 @@ function searchCategory(category, filterLength) {
       suggestion: getSuggestion(key)
     }
 
-    item.highlight = item.value !== undefined
+    item.highlight = item.value !== ''
 
     setTextareaRowCount(item)
 
