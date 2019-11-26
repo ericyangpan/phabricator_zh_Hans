@@ -11,3 +11,10 @@
 -- | -----------
 <% for (let key in rules.items) { %><%- this.escapeRule(key) %> | <%- this.escapeRule(rules.items[key]) %>
 <% } %>
+
+**正则表达式规则例外列表**
+
+词 | 翻译
+-- | -----------
+<% for (let key in rules.exceptions) { %><% for (let item of rules.exceptions[key]) { %><%- this.escapeRule(key) %> | <%= item %>
+<% } %><% } %>
