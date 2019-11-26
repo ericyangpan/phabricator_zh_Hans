@@ -3,7 +3,7 @@
     "%[sd]": "%(\\d\\$)?[sd]",
     "!": "(?! )！(?! )|“!|!\\w+",
     ",(?! and)(?! or)": "(?! )(，|、)(?! )(?!并且)(?!或者)|\\d,\\d",
-    ":": "(?! )：(?! )|://|：\\n|NOTE:|WARNING:|IMPORTANT:|\\d:\\d|To:|Cc:|Re:",
+    ":": "(?! )：(?! )|[a-z]:[a-z]|://|：\\n|NOTE:|WARNING:|IMPORTANT:|To:|Cc:|Re:|From:|\\d:\\d",
     ";": "(?! )；(?! )",
     "\\?": "(?! )？(?! )",
     "\\.{3}": "(?! )…(?! )",
@@ -23,12 +23,7 @@
       "user=%s, should_verify=%s",
       "user=%s, verified=%s, primary=%s, should_verify=%s"
     ],
-    ":": [
-      "Add \"Re:\" Prefix",
-      "Malformed password hash, expected \"name:hash\".",
-      "UTC%+d:%02d",
-      "If true, email addresses must be verified (by clicking a link in an email) before a user can login. By default, verification is optional unless @{config:auth.email-domains} is nonempty."
-    ],
+    ":": ["UTC%+d:%02d"],
     ";": ["<script>alert(1);</script>"],
     "[^.]\\.(?!\\w|\\d|\\.|%|\\*|\")": [
       "$ ./bin/drydock release-lease --id %d",
