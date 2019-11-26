@@ -18,7 +18,7 @@
 
 ## 下载地址
 
-最新版本：[(stable) Promote 2019 Week 47/PhabricatorSimplifiedChineseTranslation.php]((stable)%20Promote%202019%20Week%2047/PhabricatorSimplifiedChineseTranslation.php)
+最新版本：[dist/(stable) Promote 2019 Week 47/PhabricatorSimplifiedChineseTranslation.php](dist/(stable)%20Promote%202019%20Week%2047/PhabricatorSimplifiedChineseTranslation.php)
 
 [历史版本列表](dist)
 
@@ -140,7 +140,7 @@ $ npm run compile
 
 然后你将得到五份文件：
 
-1. Phabricator 简体中文翻译文件：`dist/<version>/PhabricatorSimplifiedChineseTranslation.php`；
+1. Phabricator 简体中文翻译文件：[`dist/<version>/PhabricatorSimplifiedChineseTranslation.php`](dist/(stable)%20Promote%202019%20Week%2047/PhabricatorSimplifiedChineseTranslation.php)；
 2. 重新排序后的翻译数据文件：[`data/translations.json`](data/translations.json)；
 3. 包含最新摘要信息的 README 文件：[`README.md`](README.md)；
 4. 翻译规则列表文件：[`Rules.md`](Rules.md)；
@@ -148,7 +148,7 @@ $ npm run compile
 
 ## 本地化 Phabricator
 
-将 `dist/<version>/PhabricatorSimplifiedChineseTranslation.php` 文件拷贝到 Phabricator 项目的 `phabricator/src/extensions` 目录中即可。`<version>` 形如："(stable) Promote 2019 Week 44"
+将 `dist/<version>/PhabricatorSimplifiedChineseTranslation.php` 文件拷贝到 Phabricator 项目的 `phabricator/src/extensions` 目录中即可。`<version>` 形如："(stable) Promote 2019 Week 46"
 
 然后调整个人设置，进入 `Personal Settings` 的 `Account`，在 `Translation` 选项中选择 `Chinese (Simplified)`，保存后界面即切换为简体中文。
 
