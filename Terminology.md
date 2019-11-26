@@ -44,6 +44,7 @@ background | 背景|后台
 badge | 徽章
 blame | 追溯
 byte | 字节
+cat | 猫|cat
 collation | 字符序
 colon | 冒号
 comma | 逗号
@@ -72,6 +73,7 @@ effect | 效果|影响
 email | 邮件
 enable | 启用
 event | 事件
+every | 每
 exact | 精确
 exactly | 准确
 exit | 退出
@@ -119,6 +121,7 @@ membership | 成员身份
 merge | 合并
 minimum | 最小
 monogram | 字母组合
+month | 月
 multi-factor | 多因素
 named | 命名|名为
 namespace | 名称空间
@@ -199,9 +202,13 @@ unsafe | 不安全的
 update | 更新
 uploaded | 上传
 uppercase | 大写
+very | 非常
 webserver | Web 服务器
+week | 周
 worker | 工作者
 working copy | 工作副本
+year | 年
+yearly | 每年
 you | 你
 « | «
 » | »

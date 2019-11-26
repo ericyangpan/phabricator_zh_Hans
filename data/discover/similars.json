@@ -253,6 +253,7 @@
       "Edit User: %s",
       "Exact User: %s",
       "Exact User: Invalid User",
+      "Matches User: %s",
       "Only User: %s"
     ]
   },
@@ -3803,6 +3804,13 @@
       "No object exists with ID \"%s\".",
       "No public key exists with ID \"%s\".",
       "No source exists with ID \"%s\"."
+    ]
+  },
+  "Rebuild changesets for a revision.": {
+    "s3": [
+      "Rebuild changesets for a revision.",
+      "Rebuild identities for a commit.",
+      "Rebuild identities for a user."
     ]
   },
   "Specify a revision to rebuild changesets for with \"--revision\".": {
@@ -10845,6 +10853,107 @@
     "s3": [
       "Updated common ngrams for \"%s\".",
       "Updated hint for \"%s\"."
+    ]
+  },
+  "Rebuild identities in a repository.": {
+    "s3": [
+      "Rebuild identities for a commit.",
+      "Rebuild identities for a user.",
+      "Rebuild identities in a repository."
+    ]
+  },
+  "Rebuild identities for a commit.": {
+    "s3": [
+      "Rebuild changesets for a revision.",
+      "Rebuild identities for a commit.",
+      "Rebuild identities for an email address.",
+      "Rebuild identities in a repository."
+    ],
+    "s4": [
+      "Rebuild identities for a commit.",
+      "Rebuild identities for a raw commit string.",
+      "Rebuild identities for a user."
+    ]
+  },
+  "Rebuild identities for a user.": {
+    "s3": [
+      "Rebuild changesets for a revision.",
+      "Rebuild identities for a user.",
+      "Rebuild identities for an email address.",
+      "Rebuild identities in a repository.",
+      "Refresh tokens for a given user.",
+      "Retrieve certificate information for a user."
+    ]
+  },
+  "Flags \"--all-repositories\" and \"--repository\" are not compatible.": {
+    "s5": [
+      "Flags \"--all-identities\" and \"--raw\" are not compatible.",
+      "Flags \"--all-repositories\" and \"--repository\" are not compatible."
+    ]
+  },
+  "This is a dry run, so no changes will be written.": {
+    "s10": [
+      "This is a dry run, so no changes will be made.",
+      "This is a dry run, so no changes will be written."
+    ],
+    "s6": [
+      "This is a dry run, so no changes will be written.",
+      "This was a dry run, so no actions were actually taken.",
+      "This was a dry run, so no real migrations were performed."
+    ]
+  },
+  "Rebuilt identities for \"%s\".": {
+    "s3": [
+      "Rebuilding identities for user \"%s\".",
+      "Rebuilt identities for \"%s\"."
+    ]
+  },
+  "No changes for commit \"%s\".": {
+    "s3": [
+      "No changes for commit \"%s\".",
+      "No synchronization changes for \"%s\"."
+    ]
+  },
+  "Rebuilding identities for user \"%s\".": {
+    "s4": [
+      "Rebuilding identities for email address \"%s\".",
+      "Rebuilding identities for user \"%s\"."
+    ]
+  },
+  "Rebuilding identities for email address \"%s\".": {
+    "s5": [
+      "Found no identities for email address \"%s\".",
+      "Rebuilding identities for email address \"%s\"."
+    ]
+  },
+  "(Dry Run) Would update detected user from \"%s\" to \"%s\".": {
+    "s9": [
+      "(Dry Run) Would update assigned user from \"%s\" to \"%s\".",
+      "(Dry Run) Would update detected user from \"%s\" to \"%s\"."
+    ]
+  },
+  "Detected user updated from \"%s\" to \"%s\".": {
+    "s6": [
+      "Assigned user updated from \"%s\" to \"%s\".",
+      "Detected user updated from \"%s\" to \"%s\"."
+    ],
+    "s4": [
+      "%s changed the visibility from \"%s\" to \"%s\".",
+      "%s changed this URI from \"%s\" to \"%s\".",
+      "%s renamed this application from \"%s\" to \"%s\".",
+      "%s renamed this key from \"%s\" to \"%s\".",
+      "%s: Changing encoding from \"%s\" to \"%s\".",
+      "Detected user updated from \"%s\" to \"%s\"."
+    ]
+  },
+  "Assigned user updated from \"%s\" to \"%s\".": {
+    "s4": [
+      "%s changed the visibility from \"%s\" to \"%s\".",
+      "%s changed this URI from \"%s\" to \"%s\".",
+      "%s renamed this application from \"%s\" to \"%s\".",
+      "%s renamed this key from \"%s\" to \"%s\".",
+      "%s: Changing encoding from \"%s\" to \"%s\".",
+      "Assigned user updated from \"%s\" to \"%s\"."
     ]
   },
   "Specify one or more repositories to update refs for.": {
@@ -31463,6 +31572,10 @@
     "s5": [
       "Show factors, but do not strip them.",
       "Show planned writes but do not perform them."
+    ],
+    "s4": [
+      "Show changes, but do not make any changes.",
+      "Show factors, but do not strip them."
     ]
   },
   "Specify either specific users with %s, or all users with %s, but not both.": {
@@ -42032,33 +42145,10 @@
       "Failed to parse `%s` output: %s"
     ]
   },
-  "Search for identities by assignee.": {
-    "s3": [
-      "Search for Phurl URLs by alias.",
-      "Search for actions by remote address.",
-      "Search for activity by specific users.",
-      "Search for badges by name substring.",
-      "Search for blueprints by name substring.",
-      "Search for builds by buildable status.",
-      "Search for devices by name substring.",
-      "Search for files by name substring.",
-      "Search for identities by assignee.",
-      "Search for namespaces by name substring.",
-      "Search for networks by name substring.",
-      "Search for packages by included repositories.",
-      "Search for packages by name substring.",
-      "Search for packages by name substrings.",
-      "Search for packages by publisher.",
-      "Search for publishers by name substring.",
-      "Search for repositories by clone/checkout URI.",
-      "Search for services by name substring.",
-      "Search for sources by name substring.",
-      "Search for versions by name substring.",
-      "Search for versions by package."
-    ],
+  "Search for identities by effective user.": {
     "s4": [
-      "Search for identities by assignee.",
-      "Search for identities by substring."
+      "Search for identities by effective user.",
+      "Search for identities by explicit assignee."
     ]
   },
   "Search for identities by substring.": {
@@ -42080,7 +42170,8 @@
       "Search for blueprints by name substring.",
       "Search for devices by name substring.",
       "Search for files by name substring.",
-      "Search for identities by assignee.",
+      "Search for identities by effective user.",
+      "Search for identities by explicit assignee.",
       "Search for identities by substring.",
       "Search for namespaces by name substring.",
       "Search for networks by name substring.",
@@ -42091,10 +42182,18 @@
       "Search for versions by name substring."
     ]
   },
-  "Show Only Assigned Identities": {
-    "s3": [
-      "Show Only Assigned Identities",
-      "Show Only Unassigned Identities"
+  "Show Identities With Matching Users": {
+    "s4": [
+      "Show Identities With Matching Users",
+      "Show Identities Without Matching Users"
+    ]
+  },
+  "Matches User: %s": {
+    "s2": [
+      "Edit User: %s",
+      "Exact User: %s",
+      "Matches User: %s",
+      "Only User: %s"
     ]
   },
   "Audit Required": {
@@ -44213,6 +44312,7 @@
   },
   "Rebuild all logs.": {
     "s2": [
+      "Rebuild all currently-known identities.",
       "Rebuild all logs.",
       "Show all logs."
     ]
@@ -45403,6 +45503,12 @@
     "s4": [
       "This credential has no associated secret.",
       "This target has no associated artifacts."
+    ]
+  },
+  "Show all logs.": {
+    "s2": [
+      "Rebuild all logs.",
+      "Show all logs."
     ]
   },
   "Manage Build Plans": {
@@ -51218,7 +51324,6 @@
       "Show Only Active Triggers",
       "Show Only Administrators",
       "Show Only Archived Projects",
-      "Show Only Assigned Identities",
       "Show Only Automated Builds",
       "Show Only Bots",
       "Show Only Create Forms",
@@ -51235,7 +51340,6 @@
       "Show Only Milestones",
       "Show Only Root Projects",
       "Show Only Unapproved Users",
-      "Show Only Unassigned Identities",
       "Show Only Unpublished Commits",
       "Show Only Unreachable Commits"
     ]
@@ -61399,7 +61503,8 @@
       "Search for builds by buildable status.",
       "Search for devices by name substring.",
       "Search for files by name substring.",
-      "Search for identities by assignee.",
+      "Search for identities by effective user.",
+      "Search for identities by explicit assignee.",
       "Search for identities by substring.",
       "Search for namespaces by name substring.",
       "Search for networks by name substring.",
@@ -61436,7 +61541,8 @@
       "Search for builds by buildable status.",
       "Search for devices by name substring.",
       "Search for files by name substring.",
-      "Search for identities by assignee.",
+      "Search for identities by effective user.",
+      "Search for identities by explicit assignee.",
       "Search for identities by substring.",
       "Search for namespaces by name substring.",
       "Search for networks by name substring.",
@@ -62864,6 +62970,13 @@
       "Re-enable specified users (admin only)."
     ]
   },
+  "User Email": {
+    "s2": [
+      "Unverified User Email",
+      "User Email",
+      "Verified User Email"
+    ]
+  },
   "Short blurb about the user.": {
     "s3": [
       "Retrieve information about the logged-in user.",
@@ -63350,6 +63463,7 @@
   "User has already been created!": {
     "s3": [
       "Chunk has already been uploaded.",
+      "Identity \"%s\" has already been rebuilt.",
       "Lease has already been destroyed!",
       "Lease has already been released!",
       "Parent hash has already been computed!",
@@ -63378,6 +63492,7 @@
       "Chunk has already been uploaded.",
       "Email has already been created!",
       "Email has not been created yet!",
+      "Identity \"%s\" has already been rebuilt.",
       "Lease has already been destroyed!",
       "Lease has already been released!",
       "Parent hash has already been computed!",
@@ -63489,6 +63604,7 @@
       "Edit Version: %s",
       "Edit Webhook: %s",
       "Exact User: %s",
+      "Matches User: %s",
       "Only User: %s"
     ]
   },
@@ -63748,6 +63864,7 @@
     "s3": [
       "Chunk has already been uploaded.",
       "Email has already been created!",
+      "Identity \"%s\" has already been rebuilt.",
       "Lease has already been destroyed!",
       "Lease has already been released!",
       "Parent hash has already been computed!",
@@ -63908,6 +64025,7 @@
   "This was a dry run, so no real migrations were performed.": {
     "s6": [
       "This is a dry run, so no changes will be made.",
+      "This is a dry run, so no changes will be written.",
       "This was a dry run, so no real migrations were performed."
     ],
     "s7": [
@@ -63939,7 +64057,9 @@
       "%s renamed this application from \"%s\" to \"%s\".",
       "%s renamed this key from \"%s\" to \"%s\".",
       "%s: (%s) Migrating from \"%s\" to \"%s\"...",
-      "%s: Changing encoding from \"%s\" to \"%s\"."
+      "%s: Changing encoding from \"%s\" to \"%s\".",
+      "Assigned user updated from \"%s\" to \"%s\".",
+      "Detected user updated from \"%s\" to \"%s\"."
     ]
   },
   "%s: Stored as chunks, declining to cycle directly.": {
@@ -69213,6 +69333,7 @@
   "This was a dry run, so no actions were taken.": {
     "s6": [
       "This is a dry run, so no changes will be made.",
+      "This is a dry run, so no changes will be written.",
       "This was a dry run, so no actions were taken."
     ],
     "s8": [
@@ -69538,6 +69659,7 @@
   "This was a dry run, so no actions were actually taken.": {
     "s6": [
       "This is a dry run, so no changes will be made.",
+      "This is a dry run, so no changes will be written.",
       "This was a dry run, so no actions were actually taken."
     ]
   },
@@ -72618,6 +72740,7 @@
     "s3": [
       "Chunk has already been uploaded.",
       "Email has already been created!",
+      "Identity \"%s\" has already been rebuilt.",
       "Lease has already been released!",
       "Parent hash has already been computed!",
       "This authorization has already been approved.",
@@ -72637,6 +72760,7 @@
     "s3": [
       "Chunk has already been uploaded.",
       "Email has already been created!",
+      "Identity \"%s\" has already been rebuilt.",
       "Lease has already been destroyed!",
       "Parent hash has already been computed!",
       "This authorization has already been approved.",
@@ -74531,13 +74655,6 @@
     "s4": [
       "By default, no one can take this action.",
       "Logged in users can take this action."
-    ]
-  },
-  "Only User: %s": {
-    "s2": [
-      "Edit User: %s",
-      "Exact User: %s",
-      "Only User: %s"
     ]
   },
   "Invalid action '%s'!": {

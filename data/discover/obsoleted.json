@@ -1040,5 +1040,10 @@
   "This object has a different policy (\"%s\") than the default policy for similar objects (which is \"%s\").": "此对象有和相似对象的默认策略（“%s”）不同的策略（“%s”）。",
   "This object has a less restrictive policy (\"%s\") than the default policy for similar objects (which is \"%s\").": "此对象有比相似对象的默认策略（“%s”）更少限制性的策略（“%s”）。",
   "This object has a more restrictive policy (\"%s\") than the default policy for similar objects (which is \"%s\").": "此对象有比相似对象的默认策略（“%s”）更多限制性的策略（“%s”）。",
-  "do not include": "不包含"
+  "do not include": "不包含",
+  "Manually Set User": "手动设置用户",
+  "Search for identities by assignee.": "按受托人搜索身份。",
+  "Show Only Assigned Identities": "只显示已分配的身份",
+  "Show Only Unassigned Identities": "只显示未分配的身份",
+  "Specify --all or a list of repositories, but not both.": "指定 --all 或仓库的列表，但不能两者都指定。"
 }

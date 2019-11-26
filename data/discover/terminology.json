@@ -80,7 +80,7 @@
   },
   "Accepted": {
     "translation": "已接受",
-    "yes": 4,
+    "yes": 5,
     "no": 17,
     "kvp": {
       "%s accepted %s.": "%s 接受了 %s。",
@@ -138,7 +138,7 @@
   },
   "Admin": {
     "translation": "管理员",
-    "yes": 40,
+    "yes": 44,
     "no": 4,
     "kvp": {
       "Admin Server": "管理服务器",
@@ -149,7 +149,7 @@
   },
   "Advanced": {
     "translation": "高级",
-    "yes": 7,
+    "yes": 8,
     "no": 1,
     "kvp": {
       "Resolve issues with frozen cluster repositories. Very advanced and dangerous.": "解决冻结群集仓库问题。非常高等级和危险。"
@@ -157,7 +157,7 @@
   },
   "All": {
     "translation": "所有的",
-    "yes": 235,
+    "yes": 239,
     "no": 13,
     "kvp": {
       "%s - %s, All Day": "%s - %s，全天",
@@ -223,7 +223,7 @@
     "yes": 1,
     "no": 1,
     "kvp": {
-      "Already marked with %s flag.": "已经用 %s 做标记。"
+      "Already marked with %s flag.": "已经用 %s 标志做标记。"
     }
   },
   "Already Registered": {
@@ -267,7 +267,7 @@
   "Any": {
     "translation": "任意",
     "yes": 33,
-    "no": 92,
+    "no": 94,
     "kvp": {
       "Add one or more subscribers to the object. You can add users by providing their usernames, or add projects by adding their hashtags. For example, use `%s` to add the user `alincoln` and the project with hashtag `#ios` as subscribers.\n\nSubscribers which are invalid or unrecognized will be ignored. This command has no effect if you do not specify any subscribers.\n\nUsers who are CC'd on the email itself are also automatically subscribed if Phabricator knows which accounts are linked to their email addresses.": "向对象添加一个或多个订阅者。你可以通过提供用户名来添加用户，或者通过添加唯一标签来添加项目。例如，使用`%s`将用户`alincoln`和标签`#ios`添加为订阅者。\n\n无效或无法识别的订阅者将被忽略。如果你未指定任何订阅者则此命令没有效果。\n\n如果 Phabricator 知道哪些帐户关联到他们的邮件地址那么在电子邮件本身上被 CC 的用户也会自动订阅。",
       "After configuring Phabricator to process inbound mail, you can interact with objects (like tasks and revisions) over email. For information on configuring Phabricator, see **[[ %s | Configuring Inbound Email ]]**.\n\nIn most cases, you can reply to email you receive from Phabricator to leave comments. You can also use **mail commands** to take a greater range of actions (like claiming a task or requesting changes to a revision) without needing to log in to the web UI.\n\nMail commands are keywords which start with an exclamation point, like `!claim`. Some commands may take parameters, like `!assign alincoln`.\n\nTo use mail commands, write one command per line at the beginning or end of your mail message. For example, you could write this in a reply to task email to claim the task:\n\n```\n!claim\n\nI'll take care of this.\n```\n\n\nWhen Phabricator receives your mail, it will process any commands first, then post the remaining message body as a comment. You can execute multiple commands at once:\n\n```\n!assign alincoln\n!close\n\nI just talked to @alincoln, and he showed me that he fixed this.\n```\n": "配置 Phabricator 处理入站邮件后，你可以通过邮件与对象（如任务和修订）进行交互。有关配置 Phabricator 的信息，请查看 **[[ %s | Configuring Inbound Email ]]**。\n\n在大多数情况下，你可以回复从 Phabricator 收到的邮件来发表评论。你还可以使用**邮件命令**来执行更大范围的操作（例如声明任务或请求修订变更）而无需登录 Web 用户界面。\n\n邮件命令是以感叹号开始的关键字，如`!claim`。有些命令可能会携带参数，如`!assign alincoln`。\n\n要使用邮件命令，在邮件开头或结尾处每行写一个命令。例如，你可以在一个回复任务邮件里写这个来声明任务：\n\n```\n!claim\n\n我会照顾好这个。\n```\n\n\n当 Phabricator 收到你的邮件时，它将首先处理所有命令，然后将剩余的邮件正文作为评论发布。你可以一次执行多个命令：\n\n```\n!assign alincoln\n!close\n\n我刚和 @alincoln 谈过并且他给我看他修好了这个。\n```\n",
@@ -299,6 +299,7 @@
       "No one has written any blog posts yet.": "还无人写过任何博客文章。",
       "None of these policy rules have any effect.": "这些策略规则不会有任何影响。",
       "Not Tagged With Any Projects": "没有用任何项目做标记",
+      "Not marked with any flag.": "未用任何标记标志。",
       "Note: Changing your primary email address will invalidate any outstanding password reset links.": "备注：变更你的主要的邮件地址将使任何未完成的密码重置链接失效。",
       "Note: Removing an email address from your account will invalidate any outstanding password reset links.": "备注：从你的帐户移除一个邮件地址将使任何未完成的密码重置链接失效。",
       "Notification server configuration is invalid: it does not specify any enabled servers with type \"admin\". Notifications require at least one active \"admin\" server.": "通知服务器配置无效：它没有指定任何类型为“管理员”的已启用服务器。通知需要至少一个活跃的“管理员”服务器。",
@@ -332,6 +333,7 @@
       "Type \"not tagged with any projects\"...": "键入“未用任何项目打标签”…",
       "Unable to Reach Any Database": "无法联络任何数据库",
       "Unable to allocate any binding as a resource.": "无法将任何绑定分配为资源。",
+      "Unable to find any Asana user with valid credentials to pull an OAuth token out of.": "无法找到具有有效凭据的任何 Asana 用户以拉取出 OAuth 令牌。",
       "Unable to find any object with the specified name (\"%s\").": "无法以指定名称（“%s”）找到任何对象。",
       "Unable to upload file: the server is not configured with any writable storage engines.": "无法上传文件：服务器没有配置任何可写的存储引擎。",
       "User does not belong to any projects.": "用户不属于任何项目。",
@@ -579,7 +581,7 @@
   },
   "Build": {
     "translation": "构建",
-    "yes": 263,
+    "yes": 264,
     "no": 1,
     "kvp": {
       "Build self esteem through gamification.": "通过游戏化的方式建立自我尊重。"
@@ -606,13 +608,14 @@
   "CANCELLED": {
     "translation": "已取消",
     "yes": 3,
-    "no": 5,
+    "no": 6,
     "kvp": {
       "%s cancelled %s.": "%s 取消了 %s。",
       "%s cancelled this event.": "%s 取消了此事件。",
       "Both Cancelled and Active Events": "取消的和活跃的事件都包括",
       "Cancelled Events": "取消的事件",
-      "Cancelled Events Only": "仅取消的事件"
+      "Cancelled Events Only": "仅取消的事件",
+      "User cancelled operation.": "用户取消了操作。"
     }
   },
   "Can Edit": {
@@ -667,7 +670,7 @@
     "kvp": {
       "Any user who can view the plan can run it manually.": "任何可以查看计划的用户可以手动运行它。",
       "Controls who can view the object.": "控制谁可以查看对象。",
-      "Flags are private. Only you can view or edit your flags.": "标记是私有的。只有你可以查看或者编辑标记。",
+      "Flags are private. Only you can view or edit your flags.": "标志是私有的。只有你可以查看或者编辑标志。",
       "Imported events can only be viewed by users who can view the import source.": "导入的事件只能被可以查看导入来源的用户查看。",
       "Mail received! You can view details by running this command:": "邮件已接收！你可以通过运行这个命令查看详情：",
       "Mail sent! You can view details by running this command:": "邮件已发送！你可以通过运行这个命令查看详情：",
@@ -677,7 +680,7 @@
   },
   "Change": {
     "translation": "变更",
-    "yes": 449,
+    "yes": 454,
     "no": 3,
     "kvp": {
       "Change the database namespace of a .sql dump file.": "更改 .sql 转储文件的数据库名称空间。",
@@ -795,7 +798,7 @@
   },
   "Color": {
     "translation": "颜色",
-    "yes": 32,
+    "yes": 33,
     "no": 1,
     "kvp": {
       "Color Palette": "调色板"
@@ -865,11 +868,19 @@
   },
   "Constant": {
     "translation": "常量",
-    "yes": 17,
+    "yes": 19,
     "no": 2,
     "kvp": {
       "Constant identifying the garbage collector to run.": "持续识别运行的垃圾回收器。",
       "Constant identifying the garbage collector.": "持续识别垃圾回收器。"
+    }
+  },
+  "Contact Number": {
+    "translation": "联系号码",
+    "yes": 32,
+    "no": 1,
+    "kvp": {
+      "Status (\"%s\") is not a valid contact number status. Valid status constants are: %s.": "状态（“%s”）不是有效的联系人号码状态。有效的状态常量是：%s。"
     }
   },
   "Cost": {
@@ -937,7 +948,7 @@
   },
   "DETAILS": {
     "translation": "详情",
-    "yes": 51,
+    "yes": 53,
     "no": 1,
     "kvp": {
       "No further details are available.": "没有进一步的细节可用。"
@@ -1004,7 +1015,7 @@
   },
   "Delivery": {
     "translation": "投递",
-    "yes": 8,
+    "yes": 9,
     "no": 1,
     "kvp": {
       "This is an older message that predates recording delivery information, so none is available.": "这是早于记录传递信息的较早的消息，因此没有可用的消息。"
@@ -1021,7 +1032,7 @@
   },
   "Details": {
     "translation": "详情",
-    "yes": 51,
+    "yes": 53,
     "no": 1,
     "kvp": {
       "No further details are available.": "没有进一步的细节可用。"
@@ -1077,7 +1088,7 @@
   },
   "ERROR": {
     "translation": "错误",
-    "yes": 55,
+    "yes": 57,
     "no": 8,
     "kvp": {
       "Error Adding Payment Method": "添加支付方式出错",
@@ -1266,7 +1277,7 @@
   },
   "Error": {
     "translation": "错误",
-    "yes": 55,
+    "yes": 57,
     "no": 8,
     "kvp": {
       "Error Adding Payment Method": "添加支付方式出错",
@@ -1384,8 +1395,8 @@
   },
   "Find": {
     "translation": "查找",
-    "yes": 63,
-    "no": 19,
+    "yes": 65,
+    "no": 23,
     "kvp": {
       "Can not generate keys: unable to find \"%s\" in PATH!": "无法生成密钥：在 PATH 中无法找到“%s”！",
       "Could not find any garbage to collect.": "无法找到任何垃圾来回收。",
@@ -1394,15 +1405,19 @@
       "Find out information about builds.": "找出有关构建的信息。",
       "If those commands don't work, try Google. The process of installing PHP extensions is not specific to Phabricator, and any instructions you can find for installing them on your system should work. On Mac OS X, you might want to try Homebrew.": "如果这些命令不起作用，请尝试 Google。安装 PHP 扩展的过程不是 Phabricator 所特有的，并且你能找到的你系统上的任何安装它们的操作说明都应该可以正常工作。在 Mac OS X 上，你可能需要尝试 Homebrew。",
       "Phabricator has been successfully installed. These next guides will take you through configuration and new user orientation. These steps are optional, and you can go through them in any order. If you want to get back to this guide later on, you can find it in {icon globe} **Applications** under {icon map-o} **Guides**.": "Phabricator 已经被成功安装。下面的这些指南将带你通过配置和新用户指引。这些步骤是可选的，并且你可以以任意顺序通过它们。如果你想稍后再回到这个指南，你可以在 {icon globe} **应用** 的 {icon map-o} **指南** 下找到它。",
+      "The configured PATH includes a component which is not usable. Phabricator will be unable to find or execute binaries located here:\n\n%s\n\nThe user that the webserver runs as must be able to read all the directories in PATH in order to make use of them.": "配置的 PATH 包含一个不可用的组件。Phabricator 将无法找到或执行位于以下位置的二进制程序：\n\n%s\n\n运行 Web 服务器的用户必须能够读取 PATH 中的所有目录才能使用它们。",
       "This page raised PHP errors. Find them in DarkConsole or the error log.": "此页面引发了 PHP 错误。在 DarkConsole 或错误日志中找到它们。",
       "Try as you might, you find you can not disable your own account.": "尽力尝试，你会发现你不能禁用你自己的帐户。",
       "Unable to find 'sudo'!": "无法找到‘sudo’！",
       "Unable to find LDAP account!": "无法找到 LDAP 帐户！",
       "Unable to find `%s` in %s!": "无法在 %2$s 中找到 `%s`！",
+      "Unable to find any Asana user with valid credentials to pull an OAuth token out of.": "无法找到具有有效凭据的任何 Asana 用户以拉取出 OAuth 令牌。",
       "Unable to find any object with the specified name (\"%s\").": "无法以指定名称（“%s”）找到任何对象。",
       "Unable to find fetch!": "无法找到获取！",
       "Unable to find lines.": "无法找到行。",
       "Unable to find the specified documentation. You may have followed a bad or outdated link.": "无法找到指定的文档。你可能遇到了一个错误的或者过期的链接。",
+      "Unable to find this binary in the webserver's PATH. You may need to configure %s.": "无法在 Web 服务器的 PATH 下找到此二进制程序。你可能需要配置 %s。",
+      "Unable to find transaction query for object of class \"%s\".": "无法找到类“%s”的对象的交易查询。",
       "We didn't find a \"%s\" field in the commit message.": "我们在提交消息中未找到“%s”字段。",
       "You can find more information about configuring OPcache in the %s.": "你可以在 %s 中找到更多关于配置 OPcache 的信息。",
       "cat -A can find mice hiding in files.": "cat -A 可以找到隐藏在文件中的老鼠。"
@@ -1416,17 +1431,25 @@
       "First Order": "第一秩序",
       "Show First %d Line(s)": "显示前 %d 行",
       "The first cats evolved in swamps about 65 years ago.": "大约 65 年前第一只猫在沼泽中进化。",
-      "The first cats evolved on the savannah about 8,000 years ago.": "大约 8000 年前，第一批猫在大草原上进化。",
+      "The first cats evolved on the savannah about 8,000 years ago.": "大约 8,000 年前第一批猫在大草原上进化。",
       "This commit merges a very large number of changes. Only the first %s are shown.": "此提交合并了一个非常大量的变更。只有前 %s 被显示。",
       "This commit merges more than %d changes. Only the first %d are shown.\n": "此提交合并了超过 %d 的变更。只有前 %s 被显示。\n",
       "To log in to your account for the first time, follow this link:": "要第一次登录到你的帐户，跟随此链接：",
       "only the first time this rule matches:": "仅在此规则第一次匹配时："
     }
   },
+  "Form": {
+    "translation": "表单",
+    "yes": 127,
+    "no": 1,
+    "kvp": {
+      "Document path \"%s\" is not a valid path. The normalized form of this path is \"%s\".": "文档路径“%s”不是有效路径。此路径的规范化形式为“%s”。"
+    }
+  },
   "From": {
     "translation": "来自",
     "yes": 34,
-    "no": 331,
+    "no": 333,
     "kvp": {
       "%s adjusted autoreview from %s to %s.": "%s 把自动评审从 %s 调整为了 %s。",
       "%s adjusted package dominion rules from %s to %s.": "%s 把包支配规则从 %s 调整为了 %s。",
@@ -1578,6 +1601,7 @@
       "%s renamed this network from %s to %s.": "%s 把此网络从 %s 重命名为了 %s。",
       "%s renamed this package from %s to %s.": "%s 把此包从 %s 重命名为了 %s。",
       "%s renamed this panel from %s to %s.": "%s 把此面板从“%s”重命名为了“%s”。",
+      "%s renamed this payment method from %s to %s.": "%s 把此支付方式从 %s 重命名为了 %s。",
       "%s renamed this portal from %s to %s.": "%s 将此门户从 %s 重命名为 %s。",
       "%s renamed this project from %s to %s.": "%s 把此项目从 %s 重命名为了 %s。",
       "%s renamed this provider from %s to %s.": "%s 把此提供者从“%s”重命名为了“%s”。",
@@ -1634,6 +1658,7 @@
       "%s updated the title for this countdown from %s to %s.": "%s 把倒计时的标题从 %s 更新为了  %s。",
       "%s updated this project's image from %s to %s.": "%s 把此项目的图片从 %s 更新为了 %s。",
       "%s upgraded the hash algorithm for this password from \"%s\" to \"%s\".": "%s 把此密码的哈希算法从“%s”升级到了“%s”。",
+      "%s was freed from its lease.": "%s 从它租约释放。",
       "<Response body omitted from Mercurial error message.>": "<Mercurial 错误消息中缺失了响应正文。>",
       "A build inherits policies from its buildable.": "构建从它的可构建项继承策略。",
       "A buildable inherits policies from the underlying object.": "可构建项从底层对象继承策略。",
@@ -1791,7 +1816,7 @@
   },
   "Function": {
     "translation": "函数",
-    "yes": 30,
+    "yes": 31,
     "no": 1,
     "kvp": {
       "Unmark this form as a create form? It will still function properly, but no longer be reachable directly from the application \"Create\" menu.": "取消标记这个表单为一个创建表单？它将仍然能够正常使用，但从应用“创建”菜单中不再直接可访问到。"
@@ -2087,11 +2112,19 @@
   },
   "Lease": {
     "translation": "租约",
-    "yes": 66,
+    "yes": 70,
     "no": 2,
     "kvp": {
       "Allows Drydock to lease existing hosts defined in an Almanac service pool.": "允许 Drydock 租赁定义在 Almanac 服务池中的现存主机。",
       "Lease a resource.": "租用一个资源。"
+    }
+  },
+  "Lease Activated": {
+    "translation": "租约已激活",
+    "yes": 2,
+    "no": 1,
+    "kvp": {
+      "Lease activated in %sms.": "租约在 %s 毫秒内被激活。"
     }
   },
   "Left": {
@@ -2137,7 +2170,7 @@
   },
   "Link": {
     "translation": "链接",
-    "yes": 48,
+    "yes": 49,
     "no": 5,
     "kvp": {
       "Link %s Account": "关联 %s 帐户",
@@ -2218,7 +2251,7 @@
   },
   "MESSAGE": {
     "translation": "消息",
-    "yes": 116,
+    "yes": 118,
     "no": 4,
     "kvp": {
       "(This is a placeholder plaintext email body for a test message sent with %s.)": "（这是与 %s 一起发送的测试邮件的占位符明文电子邮件正文。）",
@@ -2230,8 +2263,10 @@
   "MODIFIED": {
     "translation": "已修改",
     "yes": 2,
-    "no": 4,
+    "no": 6,
     "kvp": {
+      "Find revisions modified at or after a particular time.": "查找在特定时间或之后修改的修订。",
+      "Find revisions modified at or before a particular time.": "查找在特定时间或之前修改的修订。",
       "Found %s modified file(s) (of %s total).": "找到 %s 个修改过的文件（总计 %s）。",
       "Modified object policies.": "修改了对象策略。",
       "Path not modified in any ancestor commit.": "在任何祖先提交里都未被修改的路径。",
@@ -2240,7 +2275,7 @@
   },
   "Manual": {
     "translation": "手动",
-    "yes": 19,
+    "yes": 18,
     "no": 1,
     "kvp": {
       "Manual at php.net": "在 PHP.net 的手册"
@@ -2297,13 +2332,27 @@
   },
   "Message": {
     "translation": "消息",
-    "yes": 116,
+    "yes": 118,
     "no": 4,
     "kvp": {
       "(This is a placeholder plaintext email body for a test message sent with %s.)": "（这是与 %s 一起发送的测试邮件的占位符明文电子邮件正文。）",
       "After configuring Phabricator to process inbound mail, you can interact with objects (like tasks and revisions) over email. For information on configuring Phabricator, see **[[ %s | Configuring Inbound Email ]]**.\n\nIn most cases, you can reply to email you receive from Phabricator to leave comments. You can also use **mail commands** to take a greater range of actions (like claiming a task or requesting changes to a revision) without needing to log in to the web UI.\n\nMail commands are keywords which start with an exclamation point, like `!claim`. Some commands may take parameters, like `!assign alincoln`.\n\nTo use mail commands, write one command per line at the beginning or end of your mail message. For example, you could write this in a reply to task email to claim the task:\n\n```\n!claim\n\nI'll take care of this.\n```\n\n\nWhen Phabricator receives your mail, it will process any commands first, then post the remaining message body as a comment. You can execute multiple commands at once:\n\n```\n!assign alincoln\n!close\n\nI just talked to @alincoln, and he showed me that he fixed this.\n```\n": "配置 Phabricator 处理入站邮件后，你可以通过邮件与对象（如任务和修订）进行交互。有关配置 Phabricator 的信息，请查看 **[[ %s | Configuring Inbound Email ]]**。\n\n在大多数情况下，你可以回复从 Phabricator 收到的邮件来发表评论。你还可以使用**邮件命令**来执行更大范围的操作（例如声明任务或请求修订变更）而无需登录 Web 用户界面。\n\n邮件命令是以感叹号开始的关键字，如`!claim`。有些命令可能会携带参数，如`!assign alincoln`。\n\n要使用邮件命令，在邮件开头或结尾处每行写一个命令。例如，你可以在一个回复任务邮件里写这个来声明任务：\n\n```\n!claim\n\n我会照顾好这个。\n```\n\n\n当 Phabricator 收到你的邮件时，它将首先处理所有命令，然后将剩余的邮件正文作为评论发布。你可以一次执行多个命令：\n\n```\n!assign alincoln\n!close\n\n我刚和 @alincoln 谈过并且他给我看他修好了这个。\n```\n",
       "Enter the code from the text message which was sent to your primary contact number.": "输入发送到你主要联系人号码短信中的代码。",
       "No routing rules applied when delivering this message to you.": "当向你投递此邮件时，未应用任何路由规则。"
+    }
+  },
+  "Method": {
+    "translation": "方法",
+    "yes": 80,
+    "no": 7,
+    "kvp": {
+      "%s changed the automatic payment method for this subscription.": "%s 变更了此订阅的自动支付方式。",
+      "%s configured an automatic payment method for this subscription.": "%s 为此订阅配置了一个自动支付方式。",
+      "%s removed the name of this payment method (was: %s).": "%s 移除了此支付方式的名称（曾为：%s）。",
+      "%s renamed this payment method from %s to %s.": "%s 把此支付方式从 %s 重命名为了 %s。",
+      "%s set the name of this payment method to %s.": "%s 把此支付方式的名称设置为了 %s。",
+      "Payment Method %d": "支付方式 %d",
+      "Payment Method Details": "支付方式详情"
     }
   },
   "Methods": {
@@ -2316,7 +2365,7 @@
   },
   "Missing": {
     "translation": "缺失",
-    "yes": 26,
+    "yes": 28,
     "no": 1,
     "kvp": {
       "Merge identical files to share the same storage. In some cases, this can repair files with missing data.": "合并相同的文件以共享相同的存储。在某些情况下，这可以修复丢失数据的文件。"
@@ -2325,8 +2374,10 @@
   "Modified": {
     "translation": "修改了",
     "yes": 3,
-    "no": 3,
+    "no": 5,
     "kvp": {
+      "Find revisions modified at or after a particular time.": "查找在特定时间或之后修改的修订。",
+      "Find revisions modified at or before a particular time.": "查找在特定时间或之前修改的修订。",
       "Found %s modified file(s) (of %s total).": "找到 %s 个修改过的文件（总计 %s）。",
       "Path not modified in any ancestor commit.": "在任何祖先提交里都未被修改的路径。",
       "Received a 304 Not Modified from GitHub, no new events.": "从 GitHub 接收到一个 304 未修改，无新事件。"
@@ -2375,7 +2426,7 @@
   },
   "Name": {
     "translation": "名称",
-    "yes": 374,
+    "yes": 379,
     "no": 8,
     "kvp": {
       "Always require real name for user profiles.": "用户档案总是需要真实姓名。",
@@ -2449,7 +2500,7 @@
   "No": {
     "translation": "否",
     "yes": 5,
-    "no": 560,
+    "no": 566,
     "kvp": {
       "%s Action(s) Have No Effect": "%s 个操作没有影响",
       "%s Action(s) With No Effect": "%s 个操作无影响",
@@ -2469,7 +2520,7 @@
       "Are you sure you want to hide this column? It will no longer appear on the workboard.": "你确定你要隐藏这个列吗？它将不再显示在工作板上。",
       "Article has no %s!": "文章无 %s！",
       "Authenticating users based on \"Reply-To\" is no longer supported.": "基于“Reply-To”认证用户已经不再被支持。",
-      "Blueprint names can be no longer than %s characters.": "蓝图名称不能长于 %d 个字符。",
+      "Blueprint names can be no longer than %s characters.": "蓝图名称不能长于 %s 个字符。",
       "Browse No Owner": "浏览没有所有者",
       "Browse No Reviewers": "浏览无评审人",
       "Browse No Value": "浏览无值",
@@ -2496,7 +2547,7 @@
       "File \"%s\" has no stored integrity hash.": "文件“%s”无存储的完整哈希。",
       "Find results which have no reviewers.": "查找没有评审人的结果。",
       "Find results with no value.": "查找没有值的结果。",
-      "Flag \"--overwrite\" has no effect when outputting to stdout.": "当输出到 stdout 时标记“--overwrite”无效果。",
+      "Flag \"--overwrite\" has no effect when outputting to stdout.": "当输出到 stdout 时标志“--overwrite”无效果。",
       "Found no adjustments for schemata.": "未找到模式需要的调整。",
       "Found no background template resource for dimensions %dx%d.": "找不到尺寸为 %dx%d 的背景模板资源。",
       "Found no records of processes acquiring or releasing this lock.": "找不到进程获取或释放此锁的记录。",
@@ -2637,6 +2688,7 @@
       "No application emails created yet.": "还没有应用邮件被创建。",
       "No application handled this mail. This mail was sent to a reserved recipient (\"%s\") so bounces are suppressed.": "无应用处理此邮件。此邮件被发送到一个被保留的收件人（“%s”）所以退回被抑制了。",
       "No application!": "没有应用！",
+      "No artifacts found.": "未找到工件。",
       "No attachments.": "无附件。",
       "No audits match the query.": "无审计匹配这个查询。",
       "No authorized blueprints.": "无授权的蓝图。",
@@ -2656,6 +2708,7 @@
       "No builds to restart.": "没有要重启的构建。",
       "No charges found.": "未找到付款。",
       "No clients found.": "未找到客户端。",
+      "No column ordering exists with key \"%s\".": "无键为“%s”的列排序存在。",
       "No commit \"%s\" in this repository.": "在此仓库中没有提交“%s”。",
       "No commit ID was provided.": "没有提供提交 ID。",
       "No commit exists with identifier \"%s\".": "无标识符为“%s”的提交存在。",
@@ -2666,6 +2719,7 @@
       "No commits in this package.": "在这个包里无提交。",
       "No conditions matched.": "无条件匹配。",
       "No config value specified for key '%s'.": "未指定键‘%s’的配置值。",
+      "No configuration source set!": "无配置来源设置！",
       "No configured mail receiver can accept mail to '%s'.": "无配置的邮件接收人可以接受到‘%s’的邮件。",
       "No configured mailers support outbound messages of type \"%s\".": "无配置的邮件程序支持类型“%s”的出站消息。",
       "No configured mailers support sending outbound mail.": "无配置的邮件程序支持发送出站消息。",
@@ -2698,7 +2752,7 @@
       "No file transform with key \"%s\" exists.": "没有键为“%s”的文件转换存在。",
       "No file was uploaded!": "无文件被上传！",
       "No file was uploaded.": "无文件被上传。",
-      "No flags found.": "未找到标记。",
+      "No flags found.": "未找到标志。",
       "No further details are available.": "没有进一步的细节可用。",
       "No further details for this question.": "没有此问题的进一步详情了。",
       "No herald adapter specified.": "未指定 Herald 适配器。",
@@ -2723,7 +2777,7 @@
       "No mailers are configured.": "未配置邮件程序。",
       "No matching SSH keys.": "无匹配的 SSH 密钥。",
       "No matching calls in log.": "在日志中无匹配的调用。",
-      "No matching flags.": "无匹配的标记。",
+      "No matching flags.": "无匹配的标志。",
       "No matching lock logs.": "无匹配的锁日志。",
       "No matching operations.": "无匹配的操作。",
       "No matching repositories.": "无匹配的仓库。",
@@ -2892,6 +2946,7 @@
       "Remove %s as an administrator? They will no longer be able to perform administrative functions on this Phabricator install.": "移除 %s 作为管理员？他们将不再能够在此 Phabricator 安装上执行管理功能。",
       "Repository %s is no longer pullable; skipping.": "仓库 %s 不再可拉取；跳过。",
       "Rule failed automatically because it has no conditions.": "规则自动失败因为它没有条件。",
+      "Rule names can be no longer than %s characters.": "规则名称不能长于 %s 个字符。",
       "Search engine has no blueprint, resource, lease, or operation.": "搜索引擎没有蓝图、资源、租约或操作。",
       "Select results with no owner.": "选择没有所有者的结果。",
       "Select results with no reviewers.": "选择无评审人的结果。",
@@ -2906,6 +2961,7 @@
       "Story object has no corresponding external JIRA objects.": "故事对象没有相应的外部 JIRA 对象。",
       "Task has no object PHID!": "任务没有对象 PHID！",
       "Tell No One": "不告诉人",
+      "The address can be no longer than %s characters.": "地址不能长于 %s 个字符。",
       "The alias can be no longer than %d characters.": "别名不能长于 %d 个字符。",
       "The billing name can be no longer than %s characters.": "开票名称不能长于 %s 个字符。",
       "The callsign \"%s\" is not a valid repository callsign. Callsigns must be no more than 32 bytes long.": "呼号“%s”不是一个有效的仓库呼号。呼号必需不能大于 32 字节长。",
@@ -2931,6 +2987,7 @@
       "There are no registered session engine extensions.": "没有注册的会话引擎扩展。",
       "There are no repositories.": "这里没有仓库。",
       "There are no running daemon processes to reload.": "没有正在运行的守护程序进程要重新加载。",
+      "There are no running daemons.": "没有运行中的守护程序。",
       "There are no upcoming event triggers.": "没有即将发生的事件触发器。",
       "There is no account associated with that email address.": "没有帐户关联那个邮件地址。",
       "There is no active query yet.": "还没有活跃的查询。",
@@ -2985,8 +3042,8 @@
       "Upgrading partial session of user with no session!": "正在升级无会话的用户为局部会话！",
       "User has no primary email address!": "用户有没主邮件地址！",
       "Usernames must contain only numbers, letters, period, underscore, and hyphen, and can not end with a period. They must have no more than %d characters.": "用户名必须仅包含数字、字母、句号、下划线和连字号，并且不能以一个句号结尾。它们必须有不超过 %d 个字符。",
-      "Webhook URIs can be no longer than %s characters.": "Webhook URIs 不能长于 %d 个字符。",
-      "Webhook names can be no longer than %s characters.": "Webhook 不能长于 %d 个字符。",
+      "Webhook URIs can be no longer than %s characters.": "Webhook URI 不能长于 %s 个字符。",
+      "Webhook names can be no longer than %s characters.": "Webhook 不能长于 %s 个字符。",
       "When mail is sent to members of this project, you will no longer receive a copy.": "当邮件被发送给这个项目的成员时，你将不再收到副本。",
       "Worker has no job ID.": "工作者没有作业 ID。",
       "Worker has no task ID.": "工作者没有任务 ID。",
@@ -3169,6 +3226,14 @@
       "Use Normal HTTP Redirects": "使用常规的 HTTP 重定向"
     }
   },
+  "Not Activated": {
+    "translation": "未被激活",
+    "yes": 1,
+    "no": 1,
+    "kvp": {
+      "Not Activated Yet": "还未激活的"
+    }
+  },
   "Not Configured": {
     "translation": "没有配置",
     "yes": 5,
@@ -3210,7 +3275,7 @@
   },
   "Number": {
     "translation": "号码",
-    "yes": 42,
+    "yes": 43,
     "no": 12,
     "kvp": {
       "Estimated number of hours this will take.": "估算需要的小时数。",
@@ -3239,7 +3304,7 @@
   "Only": {
     "translation": "仅",
     "yes": 40,
-    "no": 136,
+    "no": 134,
     "kvp": {
       "A personal rule can only be edited by its owner.": "个人规则只能被它的所有者编辑。",
       "A session is visible only to its owner.": "一个会话只对其所有者可见。",
@@ -3256,7 +3321,7 @@
       "Edit only the event which occurs at %s.": "只编辑发生在 %s 的事件。",
       "External accounts can only be edited by the account owner.": "只有帐户所有者才能编辑外部帐户。",
       "Find results with only the specified tags.": "查找只有指定标签的结果。",
-      "Flags are private. Only you can view or edit your flags.": "标记是私有的。只有你可以查看或者编辑标记。",
+      "Flags are private. Only you can view or edit your flags.": "标志是私有的。只有你可以查看或者编辑标志。",
       "If you archive this post, it will only be visible to users who can edit %s.": "如果你归档此文章，它将只对可以编辑 %s 的用户可见。",
       "Imported events can only be viewed by users who can view the import source.": "导入的事件只能被可以查看导入来源的用户查看。",
       "In this poll, you may only vote for one option.": "在此投票中，你只可以投一个选项。",
@@ -3305,7 +3370,6 @@
       "Show Only Active Spaces": "只显示活跃的空间",
       "Show Only Administrators": "只显示管理员",
       "Show Only Archived Projects": "只显示已归档的项目",
-      "Show Only Assigned Identities": "只显示已分配的身份",
       "Show Only Automated Builds": "只显示自动的构建",
       "Show Only Bots": "只显示机器人",
       "Show Only Create Forms": "只显示创建表单",
@@ -3325,7 +3389,6 @@
       "Show Only Tasks Without Open Parents": "只显示无开放父任务的任务",
       "Show Only Tasks Without Open Subtasks": "只显示无开放子任务的任务",
       "Show Only Unapproved Users": "只显示未批准的用户",
-      "Show Only Unassigned Identities": "只显示未分配的身份",
       "Show Only Unreachable Commits": "只显示不可访问的提交",
       "Show Only Users With MFA": "只显示有多因素认证的用户",
       "Show only polls I've voted in.": "只显示我投过的投票。",
@@ -3334,8 +3397,8 @@
       "Show only upcoming events.": "只显示即将发生的事件。",
       "Story contains only the title of the story": "报道只包含报道的标题",
       "Tasks with edits locked may only be edited by their owner.": "锁定编辑的任务只能由其所有者编辑。",
-      "The \"--compress\" flag can only be used alongside \"--output\".": "“--compress”标记只能用来与“--output”一起使用。",
-      "The \"--overwrite\" flag can only be used alongside \"--output\".": "“--overwrite”标记只能用来与“--output”一起使用。",
+      "The \"--compress\" flag can only be used alongside \"--output\".": "“--compress”标志只能用来与“--output”一起使用。",
+      "The \"--overwrite\" flag can only be used alongside \"--output\".": "“--overwrite”标志只能用来与“--output”一起使用。",
       "The alias you provided (%s) may only contain letters and numbers.": "你提供的别名（%s）只可以包含字母和数字。",
       "The callsign \"%s\" is not a valid repository callsign. Callsigns may only contain UPPERCASE letters.": "呼号“%s”不是一个有效的仓库呼号。呼号只可以包含大写字母。",
       "The name \"%s\" is not a valid repository short name. Repository short names may only contain letters, numbers, periods, hyphens and underscores.": "名称“%s”不是有效的仓库短名称。仓库短名称只可以包含字母、数字、句号、连字号和下划线。",
@@ -3432,8 +3495,8 @@
   },
   "Order": {
     "translation": "排序",
-    "yes": 16,
-    "no": 22,
+    "yes": 17,
+    "no": 23,
     "kvp": {
       "%s changed the order in which this form appears in the \"Create\" menu.": "%s 变更了此表单在“创建”菜单中出现的顺序。",
       "%s changed the order in which this form appears in the \"Edit\" menu.": "%s 变更了此表单在“编辑”菜单中出现的顺序。",
@@ -3448,6 +3511,7 @@
       "Package \"%s\" is invalid: the package must exist and you must have permission to edit it in order to create a new package.": "包“%s”无效：包必须存在并且你必须有权限编辑它以便创建新的包。",
       "Payment for this order was completed.": "该订单的支付已完成。",
       "Publisher \"%s\" is invalid: the publisher must exist and you must have permission to edit it in order to create a new package.": "发布者“%s”无效：发布者必须存在并且你必须有权限编辑它以便创建新的包。",
+      "The configured PATH includes a component which is not usable. Phabricator will be unable to find or execute binaries located here:\n\n%s\n\nThe user that the webserver runs as must be able to read all the directories in PATH in order to make use of them.": "配置的 PATH 包含一个不可用的组件。Phabricator 将无法找到或执行位于以下位置的二进制程序：\n\n%s\n\n运行 Web 服务器的用户必须能够读取 PATH 中的所有目录才能使用它们。",
       "This order does not need manual review, so you can not accept it.": "此订单不需要手动评审，所以你不能接受它。",
       "This order was cancelled.": "此订单已取消。",
       "This order was created.": "此订单已创建。",
@@ -3568,6 +3632,14 @@
       "Change the parents of this task.": "变更此任务的父任务。"
     }
   },
+  "Partial": {
+    "translation": "部分",
+    "yes": 8,
+    "no": 1,
+    "kvp": {
+      "Upgrading partial session of user with no session!": "正在升级无会话的用户为局部会话！"
+    }
+  },
   "Passed": {
     "translation": "已通过",
     "yes": 3,
@@ -3584,6 +3656,14 @@
     "kvp": {
       "Passphrase Credential": "Passphrase 凭据",
       "Passphrase Credentials": "Passphrase 凭据"
+    }
+  },
+  "Path": {
+    "translation": "路径",
+    "yes": 88,
+    "no": 1,
+    "kvp": {
+      "The configured PATH includes a component which is not usable. Phabricator will be unable to find or execute binaries located here:\n\n%s\n\nThe user that the webserver runs as must be able to read all the directories in PATH in order to make use of them.": "配置的 PATH 包含一个不可用的组件。Phabricator 将无法找到或执行位于以下位置的二进制程序：\n\n%s\n\n运行 Web 服务器的用户必须能够读取 PATH 中的所有目录才能使用它们。"
     }
   },
   "Pending": {
@@ -3703,9 +3783,10 @@
   "Profile": {
     "translation": "档案",
     "yes": 37,
-    "no": 2,
+    "no": 3,
     "kvp": {
       "Automatically profile some percentage of pages.": "自动分析一些百分比的页面。",
+      "Profile 0.1%% of all requests": "分析所有请求的 0.1%%",
       "Profile every request (slow)": "分析每一个请求（慢）"
     }
   },
@@ -3789,7 +3870,7 @@
   },
   "RELEASE": {
     "translation": "发布",
-    "yes": 12,
+    "yes": 13,
     "no": 8,
     "kvp": {
       "CRITICAL. Failed to release cluster write lock!": "危险。释放群集写入锁定失败！",
@@ -3899,7 +3980,7 @@
   },
   "Release": {
     "translation": "发布",
-    "yes": 12,
+    "yes": 13,
     "no": 8,
     "kvp": {
       "CRITICAL. Failed to release cluster write lock!": "危险。释放群集写入锁定失败！",
@@ -3914,7 +3995,7 @@
   },
   "Released": {
     "translation": "已发布的",
-    "yes": 3,
+    "yes": 4,
     "no": 3,
     "kvp": {
       "Leases can not be released after they are destroyed.": "租约在被销毁后不能被释放。",
@@ -4099,7 +4180,7 @@
   },
   "Running": {
     "translation": "运行中",
-    "yes": 7,
+    "yes": 8,
     "no": 11,
     "kvp": {
       "After running this command, reload this page to see the new setting.": "运行此命令后，重新加载此页面以查看新设置。",
@@ -4146,7 +4227,7 @@
   },
   "Select": {
     "translation": "选择",
-    "yes": 91,
+    "yes": 93,
     "no": 1,
     "kvp": {
       "Can not build empty SELECT clause!": "无法构建空的 SELECT 从句！"
@@ -4279,7 +4360,7 @@
   },
   "Size": {
     "translation": "大小",
-    "yes": 11,
+    "yes": 12,
     "no": 2,
     "kvp": {
       "%s: File size (%s) is larger than maximum size (%s).": "%s：文件尺寸（%s）必须大于最大尺寸（%s）。",
@@ -4288,7 +4369,7 @@
   },
   "Source": {
     "translation": "来源",
-    "yes": 81,
+    "yes": 82,
     "no": 7,
     "kvp": {
       "Database source is not configured properly": "数据库源没有被正确配置",
@@ -4311,7 +4392,7 @@
   "Start": {
     "translation": "开始",
     "yes": 42,
-    "no": 14,
+    "no": 15,
     "kvp": {
       "(To start the server, run this command.)\n%s": "（要启动服务器，运行这个命令。）\n%s",
       "No `%s` or `%s` binary was found in %s. You must install Node.js to start the Aphlict server.": "没有在 %3$s 里找到二进制文件 `%1$s` 或 `%2$s`。你必须安装 Node.js 以启动 Aphlict 服务器。",
@@ -4324,6 +4405,7 @@
       "Start the notifications server.": "启动通知服务器。",
       "Start tracking time on an object by pushing it on the tracking stack.": "通过向堆栈中压入对象来启动跟踪它的时间。",
       "Stop, then start the notification server.": "停止，然后启动通知服务器。",
+      "Unable to start TLS connection when connecting to LDAP.": "当连接到 LDAP 时无法启动 TLS 连接。",
       "Unable to start notifications server because it is already running. Use `%s` to restart it.": "因为通知服务器已经在运行所以不能启动它。使用 `%s` 来重启它。",
       "Use %s to start daemons. See %s.": "使用 %s 来启动守护程序。请看 %s。",
       "You must start the Phabricator daemons to send email, rebuild search indexes, and do other background processing.": "你必须启动 Phabricator 守护程序来发送邮件，重建搜索索引和进行其它后台处理。"
@@ -4389,7 +4471,7 @@
   },
   "Subject": {
     "translation": "主题",
-    "yes": 8,
+    "yes": 9,
     "no": 5,
     "kvp": {
       "All Harbormaster APIs are new and subject to change.": "所有的 Harbormaster API 都是新的并随时会变化。",
@@ -4412,7 +4494,7 @@
   },
   "Table": {
     "translation": "表格",
-    "yes": 18,
+    "yes": 19,
     "no": 4,
     "kvp": {
       "Jump to the table of contents.": "跳转到目录。",
@@ -4465,7 +4547,7 @@
   },
   "Time": {
     "translation": "时间",
-    "yes": 71,
+    "yes": 73,
     "no": 5,
     "kvp": {
       "If you leave high security, you will need to authenticate again the next time you try to take a high security action.": "如果你离开了高安全，下次你试图执行高安全操作时你将需要再次进行认证。",
@@ -4487,7 +4569,7 @@
   "To": {
     "translation": "送到",
     "yes": 15,
-    "no": 1626,
+    "no": 1645,
     "kvp": {
       "%s added %s account manager(s) to %s: %s.": "%s 把 %s 位帐户管理员添加到了 %s：%s。",
       "%s added %s commit(s) to %s: %s.": "%s 添加了 %s 个提交到 %s：%s。",
@@ -4593,6 +4675,7 @@
       "%s changed the staging area for this repository from %s to %s.": "%s 把此仓库的暂存区从 %s 变更为了 %s。",
       "%s changed the start date for %s from %s to %s.": "%s 把 %s 的开始日期从 %s 变更为了 %s。",
       "%s changed the start date for this event from %s to %s.": "%s 把此事件的开始日期从 %s 变更为了 %s。",
+      "%s changed the status for this address to %s.": "%s 把此地址的状态变更为了 %s。",
       "%s changed the status of %s from %s to %s by committing %s.": "%1$s 通过提交 %5$s 把 %2$s 的状态从 %3$s 变更为了 %4$s。",
       "%s changed the status of %s from %s to %s.": "%s 把 %s 的状态从 %s 变更为了 %s。",
       "%s changed the status of %s, a subtask of %s, from %s to %s.": "%s 把 %s 的状态，%s 的子任务，从 %s 变更为了 %s。",
@@ -4678,6 +4761,7 @@
       "%s renamed this network from %s to %s.": "%s 把此网络从 %s 重命名为了 %s。",
       "%s renamed this package from %s to %s.": "%s 把此包从 %s 重命名为了 %s。",
       "%s renamed this panel from %s to %s.": "%s 把此面板从“%s”重命名为了“%s”。",
+      "%s renamed this payment method from %s to %s.": "%s 把此支付方式从 %s 重命名为了 %s。",
       "%s renamed this portal from %s to %s.": "%s 将此门户从 %s 重命名为 %s。",
       "%s renamed this project from %s to %s.": "%s 把此项目从 %s 重命名为了 %s。",
       "%s renamed this provider from %s to %s.": "%s 把此提供者从“%s”重命名为了“%s”。",
@@ -4734,6 +4818,7 @@
       "%s set the invoice email for %s to %s.": "%s 把 %s 的发票邮件设置为了 %s。",
       "%s set the invoice email to %s.": "%s 将发票邮件设置为了 %s。",
       "%s set the merchant receiving funds from this initiative to %s.": "%s 把此商家从这个倡议收到的资金设置为了 %s。",
+      "%s set the name of this payment method to %s.": "%s 把此支付方式的名称设置为了 %s。",
       "%s set the point limit for this column to %s.": "%s 把此列的点数限制设置为了 %s。",
       "%s set the point value for %s to %s.": "%s 把 %s 的点数值设置为了 %s。",
       "%s set the point value for this task to %s.": "%s 把此任务的点数值设置为了 %s。",
@@ -4987,6 +5072,7 @@
       "CHANGES TO TASK DESCRIPTION": "任务描述的变更",
       "CHANGES TO TEST PLAN": "测试计划的变更",
       "CRITICAL. Failed to release cluster write lock!": "危险。释放群集写入锁定失败！",
+      "Call to method newQueryObject() did not return an object of class \"%s\".": "调用方法 newQueryObject() 未返回一个类“%s”的对象。",
       "Calls to External Services": "对外部服务的调用",
       "Can Not Connect to MySQL": "无法连接到 MySQL",
       "Can not generate keys: unable to find \"%s\" in PATH!": "无法生成密钥：在 PATH 中无法找到“%s”！",
@@ -5029,7 +5115,7 @@
       "Click \"Save Preference\" to persist these changes.": "点击“保存偏好”以持久化这些变更。",
       "Click here, or drag and drop images to add them to the mock.": "点击这里，或通过拖放图片把它们添加到这个 Mock。",
       "Cluster repository service in Almanac to move repositories into.": "用来移动仓库进入的 Almanac 中的集群仓库服务。",
-      "Collectors with custom policies are highlighted. Use %s to change retention policies.": "具有自定义策略回收器是高亮的。使用 %s 变更保留策略。",
+      "Collectors with custom policies are highlighted. Use %s to change retention policies.": "具有自定义策略的回收器是高亮的。使用 %s 变更保留策略。",
       "Command to execute.": "要执行的命令。",
       "Comment to add, formatted as remarkup.": "要添加的评论，以 Remarkup 格式化。",
       "Commit message field \"%s\" was expected to render a string or null value, but rendered a \"%s\" instead.": "提交消息字段“%s”预期渲染一个字符串或空值，但是却渲染了“%s”。",
@@ -5201,7 +5287,7 @@
       "Find calls to stable, unstable, or deprecated methods.": "查找对稳定的、不稳定的或已弃用的方法的调用。",
       "Find diffs attached to a particular revision.": "查找附加到一个特定修订的差异。",
       "Find results which are assigned to anyone.": "查找被分配给任何人的结果。",
-      "Flag \"--overwrite\" has no effect when outputting to stdout.": "当输出到 stdout 时标记“--overwrite”无效果。",
+      "Flag \"--overwrite\" has no effect when outputting to stdout.": "当输出到 stdout 时标志“--overwrite”无效果。",
       "For custom domains to work, the blog must have a view policy of public. This blog is currently set to \"%s\".": "为了使自定义域起作用，博客必须具有公共的查看策略。此博客目前被设为“%s”。",
       "For custom domains to work, this Phabricator instance must be configured to allow the public access policy. Configure this setting %s, or ask an administrator to configure this setting. The domain can be specified later once this setting has been changed.": "为了使自定义域起作用，此 Phabricator 实例必须被配置为允许公共访问策略。配置此设置 %s，或者请求一个管理员配置此设置。一旦更改此设置域名可以在稍后被指定。",
       "Force users to connect via HTTPS instead of HTTP.": "强制用户通过 HTTPS 而不是 HTTP 连接。",
@@ -5398,10 +5484,10 @@
       "React to Phame Posts being created or updated.": "对正在创建或更新的 Phame 文章的反应。",
       "React to events being created or updated.": "对正在创建或更新的事件的反应。",
       "React to mocks being created or updated.": "对正在创建或更新的 Mock 的反应。",
-      "React to new commits appearing in tracked repositories.\nCommit rules can send email, flag commits, trigger audits, and run build plans.": "对出现在跟踪仓库中的新提交做出反应。\n提交规则可以发送邮件，标记提交，触发审计和运行构建计划。",
+      "React to new commits appearing in tracked repositories.\nCommit rules can send email, flag commits, trigger audits, and run build plans.": "对出现在跟踪仓库中的新提交做出反应。\n提交规则可以发送邮件，标志提交，触发审计和运行构建计划。",
       "React to projects being created or updated.": "对正在创建或者更新的项目的反应。",
       "React to questions being created or updated.": "对正在创建或者更新的问题的反应。",
-      "React to revisions being created or updated.\nRevision rules can send email, flag revisions, add reviewers, and run build plans.": "对正在创建或更新的修订的反应。\n修订规则可以发送邮件，标记修订，添加评审人和运行构建计划。",
+      "React to revisions being created or updated.\nRevision rules can send email, flag revisions, add reviewers, and run build plans.": "对正在创建或更新的修订的反应。\n修订规则可以发送邮件，标志修订，添加评审人和运行构建计划。",
       "React to tasks being created or updated.": "对正在创建或者更新的任务的反应。",
       "React to wiki documents being created or updated.": "对正在创建或者更新的 Wiki 文档的反应。",
       "Reading is a common way to learn about things.": "阅读是了解事情的常见方法。",
@@ -5540,6 +5626,7 @@
       "Storage is up to date. Use \"%s\" for details.": "存储是最新的。使用“%s”了解详情。",
       "Store the path on disk to an SSH private key.": "存储一个 SSH 私钥的磁盘路径。",
       "Strings for this library are already up to date.": "这个库的字符串已经是最新的了。",
+      "Subpath to selectively import.": "选择性导入的子路径。",
       "Subscribe to All Changes": "订阅所有变更",
       "Subscription to invoice.": "订阅发票。",
       "System user to run daemons as.": "运行守护程序的系统用户。",
@@ -5559,6 +5646,7 @@
       "The application search engine \"%s\" is not known to Phabricator!": "Phabricator 不知道应用搜索引擎“%s”！",
       "The best way to create a diff is to use the Arcanist command-line tool.": "创建差异的最佳方式是使用 Arcanist 命令行工具。",
       "The change you're attempting to push deletes the branch '%s'.": "你正在尝试推送的变更会删除分支‘%s’。",
+      "The configured PATH includes a component which is not usable. Phabricator will be unable to find or execute binaries located here:\n\n%s\n\nThe user that the webserver runs as must be able to read all the directories in PATH in order to make use of them.": "配置的 PATH 包含一个不可用的组件。Phabricator 将无法找到或执行位于以下位置的二进制程序：\n\n%s\n\n运行 Web 服务器的用户必须能够读取 PATH 中的所有目录才能使用它们。",
       "The credential to use when interacting with this URI.": "与这个 URI 交互时使用的凭据。",
       "The custom domain should contain at least one dot (.) because some browsers fail to set cookies on domains without a dot. Instead, use a normal looking domain name like \"%s\".": "自定义域名应该包含至少一个点（.）因为某些浏览器无法在没有点的域名上设置 Cookie。相反的，请使用一个像“%s”的普通域名。",
       "The document %s already exists. Do you want to edit it instead?": "这个文档 %s 已经存在了。你想转而编辑它吗？",
@@ -5774,6 +5862,7 @@
       "Unable to Retrieve Paths": "无法取回路径",
       "Unable to Verify Email": "无法验证邮件",
       "Unable to Verify Signature": "无法验证签名",
+      "Unable to Void Invoice": "无法取消发票",
       "Unable to allocate any binding as a resource.": "无法将任何绑定分配为资源。",
       "Unable to apply patch of type '%s'.": "无法应用类型‘%s’的补丁。",
       "Unable to build resource interface of type \"%s\".": "无法构建类型“%s”的资源接口。",
@@ -5793,10 +5882,13 @@
       "Unable to find 'sudo'!": "无法找到‘sudo’！",
       "Unable to find LDAP account!": "无法找到 LDAP 帐户！",
       "Unable to find `%s` in %s!": "无法在 %2$s 中找到 `%s`！",
+      "Unable to find any Asana user with valid credentials to pull an OAuth token out of.": "无法找到具有有效凭据的任何 Asana 用户以拉取出 OAuth 令牌。",
       "Unable to find any object with the specified name (\"%s\").": "无法以指定名称（“%s”）找到任何对象。",
       "Unable to find fetch!": "无法找到获取！",
       "Unable to find lines.": "无法找到行。",
       "Unable to find the specified documentation. You may have followed a bad or outdated link.": "无法找到指定的文档。你可能遇到了一个错误的或者过期的链接。",
+      "Unable to find this binary in the webserver's PATH. You may need to configure %s.": "无法在 Web 服务器的 PATH 下找到此二进制程序。你可能需要配置 %s。",
+      "Unable to find transaction query for object of class \"%s\".": "无法找到类“%s”的对象的交易查询。",
       "Unable to generate patch: %s": "无法生成补丁：%s",
       "Unable to get image information with getimagesize(): %s": "无法用 getimagesize() 获取图片信息：%s",
       "Unable to identify parent \"%s\"!": "无法识别父级“%s”！",
@@ -5808,9 +5900,11 @@
       "Unable to instantiate query class \"%s\": %s": "无法实例化查询类“%s”：%s",
       "Unable to load %s!": "无法加载 %s！",
       "Unable to load API token (\"%s\")!": "无法加载 API 令牌（“%s”）！",
+      "Unable to load Almanac binding (\"%s\") for resource (\"%s\").": "无法为资源（“%2$s”）加载 Almanac 绑定（“%1$s”）。",
       "Unable to load Calendar import with ID \"%s\".": "无法加载 ID“%s”的日历导入。",
       "Unable to load Content object with PHID \"%s\".": "无法用 PHID“%s”加载内容对象。",
       "Unable to load Duo API credential (\"%s\").": "无法加载 Duo API 凭据（“%s”）。",
+      "Unable to load Herald rule with ID or monogram \"%s\".": "无法用 ID 或字母组合“%s”加载 Herald 规则。",
       "Unable to load MySQL blob file '%s'!": "无法加载 MySQL 二进制大对象文件‘%s’！",
       "Unable to load an email address for this PHID.": "无法为这个 PHID 加载一个邮件地址。",
       "Unable to load build log \"%s\".": "无法加载构建日志“%s”。",
@@ -5867,6 +5961,8 @@
       "Unable to retrieve details for commit \"%s\"!": "无法检索提交“%s”的详情！",
       "Unable to select tab (\"%s\") which does not exist.": "无法选择不存在的选项卡（“%s”）。",
       "Unable to send message with unknown message type \"%s\".": "无法以未知的消息类型“%s”发送消息。",
+      "Unable to set LDAP option '%s' to value '%s'!": "无法将 LDAP 选项‘%s’设置为值‘%s’！",
+      "Unable to start TLS connection when connecting to LDAP.": "当连接到 LDAP 时无法启动 TLS 连接。",
       "Unable to start notifications server because it is already running. Use `%s` to restart it.": "因为通知服务器已经在运行所以不能启动它。使用 `%s` 来重启它。",
       "Unable to sync: failed to load object \"%s\".": "无法同步：加载对象“%s”失败。",
       "Unable to sync: no external object PHID.": "无法同步：无外部对象 PHID。",
@@ -5890,6 +5986,7 @@
       "Use \"--output <path>\" to specify an output file, or \"--output -\" to print to stdout.": "使用“--output <path>”指定一个输出文件，或“--output -”打印到 stdout。",
       "Use \"Edit Menu\" to add menu items to this portal.": "使用“编辑菜单”来添加菜单条目到这个门户。",
       "Use \"plain\" to remove encoding, or \"compress\" to compress logs.": "使用“plain”移除编码，或“compress”压缩日志。",
+      "Use %s to choose a user to reset actions for.": "使用 %s 选择要为其重置操作的用户。",
       "Use %s to comments and transactions.": "使用 %s 评论和交易。",
       "Use %s to create a control which allows users to paginate through large amounts of content.": "使用 %s 创建一个允许用户把大量内容分页的控件。",
       "Use %s to create notifications.": "使用 %s 创建通知。",
@@ -5914,8 +6011,8 @@
       "Use tabs to switch between several other panels.": "使用选项卡在其他几个面板之间切换。",
       "Use the %s panel in Settings to generate or manage API tokens.": "在设置中使用 %s 面板来生成或管理 API 令牌。",
       "Use the %s to manage installed applications.": "使用 %s 来管理已安装的应用。",
-      "Use the '%s' flag to specify one or more messages to resend.": "使用‘%s’标记指定一个或多个消息重新发送。",
-      "Use the '%s' flag to specify one or more messages to show.": "使用‘%s’标记指定一个或多个消息显示。",
+      "Use the '%s' flag to specify one or more messages to resend.": "使用‘%s’标志指定一个或多个消息重新发送。",
+      "Use the '%s' flag to specify one or more messages to show.": "使用‘%s’标志指定一个或多个消息显示。",
       "Use the button below to log in as: %s": "使用下面的按钮登录为：%s",
       "User account is not permitted to use the API.": "不允许用户帐户使用 API。",
       "User does not belong to any projects.": "用户不属于任何项目。",
@@ -5970,7 +6067,7 @@
       "You are watching this project and will receive mail about changes made to any related object.": "你正在观察此项目并将收到有关对任何相关对象所做变更的邮件。",
       "You can adjust **Application Settings** here to customize when you are emailed and notified.\n\n| Setting | Effect\n| ------- | -------\n| Email | You will receive an email and a notification, but the notification will be marked \"read\".\n| Notify | You will receive an unread notification only.\n| Ignore | You will receive nothing.\n\n\nIf an update makes several changes (like adding CCs to a task, closing it, and adding a comment) you will receive the strongest notification any of the changes is configured to deliver.\n\nThese preferences **only** apply to objects you are connected to (for example, Revisions where you are a reviewer or tasks you are CC'd on). To receive email alerts when other objects are created, configure [[ /herald/ | Herald Rules ]].": "你可以在此处调整**应用设置**以自定义你何时被电子邮件和通知。\n\n| 设置 | 效果\n| ------- | -------\n| 邮件 | 你将收到一封邮件和一条通知，但是通知将被标记为“已读”。\n| 通知 | 你将只收到一条未读通知。\n| 忽略 | 你将什么都收不到。\n\n\n如果更新进行了多项变更（例如将 CC 添加到任务，关闭它并添加注释）你将收到任何变更都配置为投递的最强通知。\n\n这些偏好**仅**应用于你所连接的对象（例如，你是评审人的修订或 CC 你的任务）。要在其他对象创建时接收邮件告警，请配置 [[ /herald/ | Herald 规则 ]]。",
       "You can choose to use either a monospaced or variable-width font in textareas in the UI. Textareas are used for editing descriptions and writing comments, among other things.": "在用户界面的文本框中你可以选择使用等宽或者变宽字体。文本框用来编辑描述，写评论和其他事情。",
-      "You can flag this %s if you want to remember to look at it later.": "你可以标记这个 %s 以便如果你想记住稍后查看。",
+      "You can flag this %s if you want to remember to look at it later.": "你可以标志此 %s 以便如果你想记住稍后查看。",
       "You can not add milestones to this project.": "你不能向这个项目添加里程碑。",
       "You can not add subprojects to this project.": "你不能向这个项目添加子项目。",
       "You can not bind a service to an invalid or restricted interface.": "你不能把一个服务绑定到一个无效或者受限的接口上。",
@@ -6046,8 +6143,9 @@
       "You do not have permission to restart this build.": "你没有重启此构建的权限。",
       "You do not have permission to resume any builds.": "你没有恢复任何构建的权限。",
       "You do not have permission to see this panel.": "你没有查看此面板的权限。",
-      "You do not have permission to view the configured credential.": "你没有的查看配置凭据权限。",
-      "You do not have permission to view this log event.": "你没有查看这个日志事件的权限。",
+      "You do not have permission to view policy details.": "你没有查看策略详情的权限。",
+      "You do not have permission to view the configured credential.": "你没有查看配置凭据的权限。",
+      "You do not have permission to view this log event.": "你没有查看此日志事件的权限。",
       "You do not have permission to view this object.": "你没有查看此对象的权限。",
       "You do not have privileges to access the requested page.": "你没有访问被请求页面的特权。",
       "You have not chosen any edits to apply.": "你没有选择任何编辑来应用。",
@@ -6059,6 +6157,9 @@
       "You haven't added any authentication factors to your account yet.": "你还没有添加任何认证因素到你的帐户里。",
       "You haven't added any contact numbers to your account.": "你没有添加任何联系号码到你的帐户。",
       "You must add at least one image to the mock.": "你必须添加至少一张图片到这个 Mock。",
+      "You must be an administrator to approve users.": "你必须是管理员才能批准用户。",
+      "You must be an administrator to create administrators.": "你必须是管理员才能创建管理员。",
+      "You must be an administrator to rename users.": "你必须是管理员才能重命名用户。",
       "You must choose a URI to link to.": "你必须选择一个要链接到的 URI。",
       "You must choose a company to add an exemption for.": "你必须选择一个为之添加豁免的公司。",
       "You must choose a device to --promote or --demote.": "你必须选择一个要 --promote 或 --demote 的设备。",
@@ -6119,7 +6220,7 @@
   },
   "Token": {
     "translation": "令牌",
-    "yes": 76,
+    "yes": 77,
     "no": 10,
     "kvp": {
       "A token inherits the policies of the object it is awarded to.": "符记继承其被授予的对象的策略。",
@@ -6188,7 +6289,7 @@
       "Herald rules will not trigger until tracking is enabled.": "在跟踪启用前 Herald 规则不会触发。",
       "No active Herald rules trigger this build.": "无活跃的 Herald 规则触发这个构建。",
       "Personal rules notify you about events. You own them, but they can only affect you. Personal rules only trigger for objects you have permission to see.": "个人规则通知你有关事件的信息。你拥有它们，但它们只能影响你。个人规则仅触发你有权限看到的对象。",
-      "React to new commits appearing in tracked repositories.\nCommit rules can send email, flag commits, trigger audits, and run build plans.": "对出现在跟踪仓库中的新提交做出反应。\n提交规则可以发送邮件，标记提交，触发审计和运行构建计划。",
+      "React to new commits appearing in tracked repositories.\nCommit rules can send email, flag commits, trigger audits, and run build plans.": "对出现在跟踪仓库中的新提交做出反应。\n提交规则可以发送邮件，标志提交，触发审计和运行构建计划。",
       "This adapter can not trigger on objects.": "此适配器不能在对象上触发。",
       "This rule can trigger for **repositories** and **projects**.": "此规则可以触发**仓库**和**项目**。",
       "This rule can trigger for **repositories** or **projects**.": "此规则可以触发**仓库**或**项目**。",
@@ -6222,7 +6323,7 @@
   },
   "Type": {
     "translation": "类型",
-    "yes": 226,
+    "yes": 230,
     "no": 75,
     "kvp": {
       "Type \"any()\"...": "键入“any()”…",
@@ -6414,7 +6515,7 @@
   "Updated": {
     "translation": "已更新",
     "yes": 7,
-    "no": 141,
+    "no": 143,
     "kvp": {
       "%s updated %s blog's full domain from %s to %s.": "%s 将 %s 博客的完整域名从 %s 更新为了 %s。",
       "%s updated %s blog's parent domain from %s to %s.": "%s 将 %s 博客的父域名从 %s 更新为了 %s。",
@@ -6446,6 +6547,7 @@
       "%s updated the OAuth application secret for this provider.": "%s 更新了这个提供者的 OAuth 应用密钥。",
       "%s updated the OAuth consumer key for this provider from \"%s\" to \"%s\".": "%s 把此提供者的 OAuth 消费者密钥从“%s”更新为了“%s”。",
       "%s updated the OAuth consumer secret for this provider.": "%s 更新了 OAuth 这个提供者的消费者密文。",
+      "%s updated the account billing address.": "%s 更新了帐户账单地址。",
       "%s updated the answer details for %s.": "%s 更新了 %s 的答案详情。",
       "%s updated the answer details.": "%s 更新了答案详情。",
       "%s updated the answer wiki for %s.": "%s 更新了 %s 的答案 Wiki。",
@@ -6492,6 +6594,7 @@
       "%s updated the invite list for %s, invited %s: %s; uninvited %s: %s.": "%s 更新了 %s 的邀请列表，邀请了 %s 个：%s；取消邀请了 %s 个：%s。",
       "%s updated the invoice email from %s to %s.": "%s 把发票邮件从 %s 更新为了  %s。",
       "%s updated the language for %s from %s to %s.": "%s 把 %s 的语言从 %s 更新为 %s。",
+      "%s updated the maintenance message for this repository.": "%s 更新了此仓库的维护消息。",
       "%s updated the merchant contact info for %s.": "%s 更新了 %s 的商家联系人信息。",
       "%s updated the merchant contact info.": "%s 更新了商家联系人信息。",
       "%s updated the merchant description for %s.": "%s 更新了 %s 的商家描述。",
@@ -6561,7 +6664,7 @@
   },
   "VALID": {
     "translation": "有效的",
-    "yes": 128,
+    "yes": 135,
     "no": 1,
     "kvp": {
       "File PHID \"%s\" is not valid or not visible.": "文件 PHID“%s”是无效的或不可见的。"
@@ -6586,13 +6689,15 @@
   },
   "View": {
     "translation": "视图",
-    "yes": 22,
-    "no": 147,
+    "yes": 23,
+    "no": 155,
     "kvp": {
       "A merchant's members an always view and edit it.": "一个商家的成员可以总是查看和编辑它。",
       "A mock's owner can always view and edit it.": "Mock 的所有者可以总是查看和编辑它。",
       "A moderator can always view the answers.": "主持人可以随时查看答案。",
       "A moderator can always view the question.": "主持人可以随时查看问题。",
+      "Account members may view and edit payment methods.": "帐户成员可以查看和编辑支付方式。",
+      "Account members may view and edit subscriptions.": "帐户成员可以查看和编辑订阅。",
       "Administrators can always view all activity.": "管理员总是可以查看所有的活动。",
       "Any user who can view the plan can run it manually.": "任何可以查看计划的用户可以手动运行它。",
       "Change the view policy of the object.": "变更对象的查看策略。",
@@ -6614,7 +6719,7 @@
       "Default view policy for newly created spaces.": "新创建空间的默认查看策略。",
       "Default view policy for newly created tasks.": "新创建任务的默认查看策略。",
       "File PHID (\"%s\") is invalid, or you do not have permission to view it.": "文件 PHID（“%s”）是无效的，或者你没有权限查看它。",
-      "Flags are private. Only you can view or edit your flags.": "标记是私有的。只有你可以查看或者编辑标记。",
+      "Flags are private. Only you can view or edit your flags.": "标志是私有的。只有你可以查看或者编辑标志。",
       "For custom domains to work, the blog must have a view policy of public. This blog is currently set to \"%s\".": "为了使自定义域起作用，博客必须具有公共的查看策略。此博客目前被设为“%s”。",
       "If a revision belongs to a repository, other users must be able to view the repository in order to view the revision.": "如果一个修订属于一个仓库，其他用户必须能够查看这个仓库以便查看此修订。",
       "Imported events can only be viewed by users who can view the import source.": "导入的事件只能被可以查看导入来源的用户查看。",
@@ -6664,7 +6769,9 @@
       "View All Orders": "查看所有订单",
       "View All Results": "查看所有结果",
       "View All Rules": "查看所有规则",
+      "View All Subscriptions": "查看所有订阅",
       "View Alternatives": "查看可替换项",
+      "View As": "查看为",
       "View As List": "以列表查看",
       "View Backers": "查看支持者",
       "View Badge": "查看徽章",
@@ -6672,6 +6779,7 @@
       "View Build": "查看构建",
       "View Chart": "查看图表",
       "View Child Fragments": "查看子片段",
+      "View Commit": "查看提交",
       "View Current Build": "查看当前的构建",
       "View Draft Version": "查看草稿版本",
       "View Edit History": "查看编辑历史",
@@ -6684,8 +6792,10 @@
       "View Full Test Results (%s)": "查看全部测试结果（%s）",
       "View Full Transcript": "查看全部记录",
       "View HMAC Key": "查看 HMAC 密钥",
+      "View Handle": "查看句柄",
       "View Herald Transcript": "查看 Herald 记录",
       "View History": "查看历史",
+      "View Hovercard": "查看悬浮卡片",
       "View Inline": "查看行内",
       "View Item": "查看条目",
       "View Live": "查看实况",
@@ -6732,19 +6842,37 @@
       "View in Conpherence": "在 Conpherence 中查看",
       "View on forward revision": "查看前向的修订",
       "View on previous revision": "查看以前的修订",
-      "You do not have permission to view the configured credential.": "你没有的查看配置凭据权限。",
-      "You do not have permission to view this log event.": "你没有查看这个日志事件的权限。",
+      "You do not have permission to view policy details.": "你没有查看策略详情的权限。",
+      "You do not have permission to view the configured credential.": "你没有查看配置凭据的权限。",
+      "You do not have permission to view this log event.": "你没有查看此日志事件的权限。",
       "You do not have permission to view this object.": "你没有查看此对象的权限。",
       "You must save a file before you can generate a view URI.": "在生成一个查看 URI 之前你必须先保存文件。"
     }
   },
   "View All": {
     "translation": "查看所有",
-    "yes": 9,
+    "yes": 10,
     "no": 2,
     "kvp": {
       "To edit a wiki document, you must also be able to view all of its ancestors.": "要编辑一个 Wiki 文档，你必须也能够查看其所有祖先。",
       "To view a wiki document, you must also be able to view all of its ancestors. The most-restrictive view policy of this document's ancestors is \"%s\".": "要查看一个 Wiki 文档，你必须也能够查看其所有祖先。此文档祖先最具限制性的查看策略是“%s”。"
+    }
+  },
+  "View As": {
+    "translation": "查看为",
+    "yes": 1,
+    "no": 10,
+    "kvp": {
+      "View As List": "以列表查看",
+      "View as Audio": "以音频查看",
+      "View as Hexdump": "以 Hexdump 查看",
+      "View as Image": "以图片查看",
+      "View as JSON": "以 JSON 查看",
+      "View as Jupyter Notebook": "以 Jupyter 笔记查看",
+      "View as PDF": "以 PDF 查看",
+      "View as Remarkup": "以 Remarkup 查看",
+      "View as Source": "以源码查看",
+      "View as Video": "以视频查看"
     }
   },
   "View Standalone": {
@@ -6773,6 +6901,15 @@
       "This post will revert to draft status and no longer be visible to other users.": "此文章将还原到草稿状态并且不再对其他人可见。"
     }
   },
+  "Voted": {
+    "translation": "已投票",
+    "yes": 1,
+    "no": 2,
+    "kvp": {
+      "Show only polls I've voted in.": "只显示我投过的投票。",
+      "Voted In": "投票"
+    }
+  },
   "WORKBOARD": {
     "translation": "工作板",
     "yes": 27,
@@ -6794,7 +6931,7 @@
   },
   "Web": {
     "translation": "Web",
-    "yes": 74,
+    "yes": 76,
     "no": 1,
     "kvp": {
       "Amazon Web Services": "亚马逊云服务"
@@ -6802,7 +6939,7 @@
   },
   "When": {
     "translation": "当",
-    "yes": 53,
+    "yes": 54,
     "no": 25,
     "kvp": {
       "Change when the event repeats until.": "变更事件重复直到何时。",
@@ -6922,8 +7059,8 @@
   },
   "is": {
     "translation": "是",
-    "yes": 433,
-    "no": 392,
+    "yes": 443,
+    "no": 399,
     "kvp": {
       "%s is already archived, and can not be cancelled.": "%s 已经归档，不能取消。",
       "%s is already in the active task queue.": "%s 已经在活跃的任务队列中。",
@@ -6946,6 +7083,7 @@
       "A session is visible only to its owner.": "一个会话只对其所有者可见。",
       "A task is moved between columns on a workboard.": "一个任务在工作板上的列之间被移动。",
       "A token inherits the policies of the object it is awarded to.": "符记继承其被授予的对象的策略。",
+      "API token \"%s\" is not valid.": "API 令牌“%s”无效。",
       "API token is not associated with a valid user.": "API 令牌未关联到一个有效的用户。",
       "Access token is invalid or expired.": "访问令牌无效或者过期。",
       "Account is already registered or linked.": "帐户已经被注册或者被关联了。",
@@ -7049,8 +7187,10 @@
       "Package key \"%s\" is not valid: package keys must not be more than %s characters long.": "包的键“%s”无效：包的键必须不超过 %s 个字符。",
       "Package name \"%s\" is not valid: package names must not be more than %s characters long.": "包名称“%s”无效：包名称必须不超过 %s 个字符。",
       "Part of the day is out of range": "日部分超出范围",
-      "Part of the month is out of range": "月部分超出范围",
+      "Part of the month is out of range": "月份部分超出范围",
+      "Patch '%s' is missing key '%s'. Every patch must have a type.": "补丁‘%s’缺失键‘%s’。每个补丁必须有一个类型。",
       "Path \"%s\" is not known to Phabricator.": "路径“%s”对 Phabricator 未知。",
+      "Pattern \"%s\" is not valid.": "模式“%s”无效。",
       "Phabricator is configured to use a notification server, but is unable to connect to it. You should resolve this issue or disable the notification server. It may be helpful to double check your configuration or restart the server using the command below.\n\n%s": "Phabricator 配置为使用通知服务器，但无法连接到它。你应该解决此问题或禁用通知服务器。使用以下命令仔细检查配置或重启服务器可能会有所帮助。\n\n%s",
       "Phabricator is hosting this repository.": "Phabricator 正在托管此仓库。",
       "Phabricator is in read-only mode (major interruption).": "Phabricator 处于只读模式（主要中断）。",
@@ -7110,6 +7250,7 @@
       "Test rules which run when another Herald rule is created or updated.": "创建或更新另一个 Herald 规则时运行的测试规则。",
       "Test rules which run when outbound mail is being prepared for delivery.": "出站邮件被准备好投递时运行的测试规则。",
       "The %s repository is not tracked.": "%s 仓库未被跟踪。",
+      "The %s repository is still importing.": "%s 仓库仍在导入中。",
       "The Almanac service for this repository is not bound to any interfaces.": "此仓库的 Almanac 服务未绑定到任何接口。",
       "The LDAP authentication provider is not enabled.": "LDAP 认证提供者未启用。",
       "The LDAP extension is not enabled.": "LDAP 扩展未启用。",
@@ -7118,6 +7259,7 @@
       "The address %s is configured to be used by the %s Application.": "地址 %s 被配置为由 %s 应用使用。",
       "The application search engine \"%s\" is not known to Phabricator!": "Phabricator 不知道应用搜索引擎“%s”！",
       "The configuration option '%s' is not set.": "配置选项‘%s’没有被设置。",
+      "The configured PATH includes a component which is not usable. Phabricator will be unable to find or execute binaries located here:\n\n%s\n\nThe user that the webserver runs as must be able to read all the directories in PATH in order to make use of them.": "配置的 PATH 包含一个不可用的组件。Phabricator 将无法找到或执行位于以下位置的二进制程序：\n\n%s\n\n运行 Web 服务器的用户必须能够读取 PATH 中的所有目录才能使用它们。",
       "The custom domain should not specify a path (hosting a Phame blog at a path is currently not supported). Instead, just provide the bare domain name (for example, \"%s\").": "自定义域名不该指定路径（当前不支持在一个路径托管 Phame 博客）。相反的，只提供裸域名（例如，“%s”）。",
       "The email address %s is now verified.": "邮件地址 %s 现在已经被验证了。",
       "The email address specified is associated with an account. Please login to that account and sign this document again.": "这个指定的邮件地址和一个帐户关联。请登录那个帐户并再次签署这个文档。",
@@ -7260,6 +7402,7 @@
       "This repository (\"%s\") is not available over SSH.": "这个仓库（“%s”）在 SSH 下不可用。",
       "This repository is inactive.": "这个仓库不活跃。",
       "This repository is not available over HTTP.": "此仓库在 HTTP 下不可用。",
+      "This repository is still importing.": "此仓库仍在导入中。",
       "This repository is still importing. History is not yet available.": "此仓库仍正在导入中。历史还不可用。",
       "This revision is already closed.": "此修订已经关闭。",
       "This revision is already landing.": "此修订已经就绪。",
@@ -7297,6 +7440,7 @@
       "When viewing a revision or commit, you can enable a sidebar showing affected files. When this option is enabled, press {nav %s} to show or hide the sidebar.": "当查看一个修订或提交时，你可以启用一个侧边栏显示受影响的文件。此选项被启用后，按 {nav %s} 来显示或隐藏侧边栏。",
       "Whitespace rendering is now handled automatically.": "现在自动处理空白渲染。",
       "Writing code is much more fun with friends!": "和朋友一起写代码有更多乐趣！",
+      "You can not disabled this address because it is already disabled.": "你不能禁用此地址因为它已被禁用。",
       "You can not edit this comment because the conversation is locked.": "你不能编辑这个评论因为会话已被锁定。",
       "You can not interact with this object because it is locked.": "你不能和此对象交互因为它已被锁定。",
       "You can not interact with this task because it is locked.": "你不能和此任务交互因为它已被锁定。",
@@ -7331,12 +7475,12 @@
   },
   "is not": {
     "translation": "不是",
-    "yes": 110,
-    "no": 126,
+    "yes": 116,
+    "no": 128,
     "kvp": {
       "%s is not available; unable to read deflated data!": "%s 不可用；无法读取压缩的数据！",
       "'%s' binary not found or Imagemagick is not installed.": "‘%s’二进制文件未找到或 ImageMagick 未安装。",
-      "API token \"%s\" is not valid.": "API 令牌“%s”是无效的。",
+      "API token \"%s\" is not valid.": "API 令牌“%s”无效。",
       "API token is not associated with a valid user.": "API 令牌未关联到一个有效的用户。",
       "Action \"%s\" is not forbidden!": "操作“%s”没有被禁止！",
       "Aphlict is not running.": "Aphlict 没有运行。",
@@ -7387,6 +7531,7 @@
       "Package name \"%s\" is not valid: package names are required.": "包名称“%s”无效：包名称是必填的。",
       "Package name \"%s\" is not valid: package names must not be more than %s characters long.": "包名称“%s”无效：包名称必须不超过 %s 个字符。",
       "Path \"%s\" is not known to Phabricator.": "路径“%s”对 Phabricator 未知。",
+      "Pattern \"%s\" is not valid.": "模式“%s”无效。",
       "Phabricator is not configured in cluster mode.": "Phabricator 未在群集模式下配置。",
       "Phabricator is not currently configured to accept inbound mail. You won't be able to interact with objects over email until inbound mail is set up.": "Phabricator 当前没有配置为接受入站邮件。入站邮件被配置好之前你将无法通过邮件和各种对象交互。",
       "Please provide a valid regular expression: %s is not valid": "请提供一个有效的正则表达式：%s 是无效的",
@@ -7418,6 +7563,7 @@
       "The LDAP extension is not enabled.": "LDAP 扩展未启用。",
       "The application search engine \"%s\" is not known to Phabricator!": "Phabricator 不知道应用搜索引擎“%s”！",
       "The configuration option '%s' is not set.": "配置选项‘%s’没有被设置。",
+      "The configured PATH includes a component which is not usable. Phabricator will be unable to find or execute binaries located here:\n\n%s\n\nThe user that the webserver runs as must be able to read all the directories in PATH in order to make use of them.": "配置的 PATH 包含一个不可用的组件。Phabricator 将无法找到或执行位于以下位置的二进制程序：\n\n%s\n\n运行 Web 服务器的用户必须能够读取 PATH 中的所有目录才能使用它们。",
       "The file you uploaded is invalid: it is not recognizable as a valid audio file.": "你上传的文件是无效的：它无法识别为有效的音频文件。",
       "The selected content type (\"%s\") is not recognized by Herald.": "选择的内容类型（“%s”）不被 Herald 识别。",
       "The selected rule type (\"%s\") is not recognized by Herald.": "选择的规则类型（“%s”）不被 Herald 识别。",
@@ -7464,7 +7610,7 @@
   },
   "message": {
     "translation": "消息",
-    "yes": 116,
+    "yes": 118,
     "no": 4,
     "kvp": {
       "(This is a placeholder plaintext email body for a test message sent with %s.)": "（这是与 %s 一起发送的测试邮件的占位符明文电子邮件正文。）",
@@ -7475,7 +7621,7 @@
   },
   "name": {
     "translation": "名称",
-    "yes": 374,
+    "yes": 379,
     "no": 8,
     "kvp": {
       "Always require real name for user profiles.": "用户档案总是需要真实姓名。",
@@ -7504,7 +7650,7 @@
   },
   "or": {
     "translation": "或",
-    "yes": 368,
+    "yes": 373,
     "no": 2,
     "kvp": {
       "Determines whether or not YouTube videos get embedded.": "确定 YouTube 视频是否嵌入。",

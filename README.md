@@ -4,6 +4,7 @@
 
 ## 目录
 
+* [下载地址](#下载地址)
 * [翻译进度](#翻译进度)
 * [启动翻译工具](#启动翻译工具)
 * [编译翻译文件和 README 文件](#编译翻译文件和-readme-文件)
@@ -15,15 +16,21 @@
   * [术语表](Terminology.md)
   * [Phabricator 官方国际化文档](https://secure.phabricator.com/book/phabcontrib/article/internationalization/)
 
+## 下载地址
+
+最新版本：[(stable) Promote 2019 Week 47/PhabricatorSimplifiedChineseTranslation.php]((stable)%20Promote%202019%20Week%2047/PhabricatorSimplifiedChineseTranslation.php)
+
+[历史版本列表](dist)
+
 ## 翻译进度
 
-当前翻译的 Phabricator 版本：[[c11506bdf9](https://secure.phabricator.com/rPc11506bdf9298a0dc71f19f6f60e2bd42ff158ab)]`(stable) Promote 2019 Week 46`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：9cce11b4d5a0f85dd4164068d558fd35487ff73a。
+当前翻译的 Phabricator 版本：[[6de53cf50c](https://secure.phabricator.com/rP6de53cf50c38264ffa8dbee729ad7e8599410bbf)]`(stable) Promote 2019 Week 47`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：e7f503724fa77152d303d293efac3f37e2fe1b76。
 
-当前翻译的 libphutil 版本：[[1750586](https://secure.phabricator.com/rPHU1750586fdc50a6cd98adba4aa2f5a7649bd91dbe)]`(stable) Promote 2019 Week 39`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：9cce11b4d5a0f85dd4164068d558fd35487ff73a。
+当前翻译的 libphutil 版本：[[1750586](https://secure.phabricator.com/rPHU1750586fdc50a6cd98adba4aa2f5a7649bd91dbe)]`(stable) Promote 2019 Week 39`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：4e3dc4b0e9e7e459341109261448017ad7646e9e。
 
-当前总词条数量：16386 条，不包含原型应用的总词条数量：13925 条。
+当前总词条数量：16428 条，不包含原型应用的总词条数量：13967 条。
 
-当前整体翻译进度百分比：80%。
+当前整体翻译进度百分比：79%。
 
 当前短词条翻译进度百分比：90%。注：短词条为长度小于 66 个字符的词条。
 
@@ -35,7 +42,7 @@ aphront | 93% | ========= | 76% | =======
 applications/almanac | 93% | ========= | 86% | ========
 applications/aphlict | **100%** | ✓✓✓✓✓✓✓✓ | 76% | =======
 applications/arcanist | --- |  | --- | 
-applications/audit | 89% | ======== | 81% | ========
+applications/audit | 90% | ======== | 82% | ========
 applications/auth | 96% | ========= | 72% | =======
 applications/badges | 92% | ========= | 91% | =========
 applications/base | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
@@ -51,7 +58,7 @@ applications/countdown | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓
 applications/daemon | 94% | ========= | 82% | ========
 applications/dashboard | 99% | ========= | 91% | =========
 applications/differential | 90% | ========= | 83% | ========
-applications/diffusion | 89% | ======== | 77% | =======
+applications/diffusion | 88% | ======== | 76% | =======
 applications/diviner | 75% | ======= | 71% | =======
 applications/doorkeeper | 95% | ========= | 82% | ========
 applications/draft | --- |  | --- | 
@@ -72,7 +79,7 @@ applications/lipsum | **100%** | ✓✓✓✓✓✓✓✓ | 76% | =======
 applications/macro | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/maniphest | 98% | ========= | 91% | =========
 applications/meta | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/metamta | 91% | ========= | 81% | ========
+applications/metamta | 92% | ========= | 81% | ========
 applications/multimeter `原型` | 88% | ======== | 88% | ========
 applications/notification | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/nuance `原型` | 86% | ======== | 82% | ========
@@ -97,7 +104,7 @@ applications/ponder | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓
 applications/project | 94% | ========= | 86% | ========
 applications/releeph `原型` | 70% | ====== | 64% | ======
 applications/remarkup | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/repository | 83% | ======== | 73% | =======
+applications/repository | 79% | ======= | 70% | ======
 applications/search | 96% | ========= | 86% | ========
 applications/settings | 99% | ========= | 94% | =========
 applications/slowvote | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
@@ -133,11 +140,11 @@ $ npm run compile
 
 然后你将得到五份文件：
 
-1. Phabricator 简体中文翻译文件：`dist/PhabricatorSimplifiedChineseTranslation.php`；
-2. 重新排序后的翻译数据文件：`data/translations.json`；
-3. 包含最新摘要信息的 README 文件：`README.md`；
-4. 翻译规则列表文件：`Rules.md`；
-5. 术语表文件：`Terminology.md`。
+1. Phabricator 简体中文翻译文件：`dist/<version>/PhabricatorSimplifiedChineseTranslation.php`；
+2. 重新排序后的翻译数据文件：[`data/translations.json`](data/translations.json)；
+3. 包含最新摘要信息的 README 文件：[`README.md`](README.md)；
+4. 翻译规则列表文件：[`Rules.md`](Rules.md)；
+5. 术语表文件：[`Terminology.md`](Terminology.md)。
 
 ## 本地化 Phabricator
 
