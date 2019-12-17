@@ -26,12 +26,14 @@ Webhook | Webhook
 account | 帐户
 action | 操作
 activation | 激活
+allocate | 分配
 allow | 允许
 alphanumeric | 字母数字
 ancestor | 祖先
 approve | 批准
 argument | 参数
 artifact | 工件
+assignment | 分配
 at least one | 至少一
 attempting | 尝试
 auditor | 审计人
@@ -56,7 +58,6 @@ consecutive | 连续的
 control | 控制|控件
 creation | 创建
 cursor | 游标
-daemon | 守护程序
 datasource | 数据源
 default | 默认
 definition | 定义
@@ -79,6 +80,7 @@ exactly | 准确
 exit | 退出
 factor | 因素
 fetch | 获取
+filename | 文件名
 flag | 标志
 footer | 页脚
 foreground | 前台
@@ -89,6 +91,7 @@ guide | 指南
 haiku | 俳句
 hashtag | 唯一标签
 header | 标头|页头
+highlight | 高亮
 home page | 首页
 host | 主办者|主机|托管|“Host”
 hyphen | 连字号
@@ -134,6 +137,7 @@ observe | 观察
 open status | 开放状态
 optional | 可选
 output | 输出
+override | 覆盖
 overwrite | 覆盖
 pane | 面板
 parent domain | 父域名
@@ -160,13 +164,15 @@ push | 推送
 reachable | 可访问
 real name | 真实姓名
 receiver | 接收人
-recipient | 收件人|获得者
+recipient | 收件人|接收者
 reload | 重新加载
 remove | 移除
 renamed | 重命名
+replace | 替换
 repository | 仓库
 retention policy | 保留策略
 revert | 还原
+root | 根
 ruleset | 规则集
 same | 相同
 save | 保存
@@ -176,9 +182,12 @@ session | 会话
 setting | 设置
 setup | 安装设置
 share | 分享|共享
+show only | 仅显示
 size | 大小|尺寸
 skipping | 跳过
+slug | 唯一标识
 snippet | 片段
+software | 软件
 sound | 声音
 specification | 规格
 specified | 指定|特定
@@ -205,6 +214,7 @@ uppercase | 大写
 very | 非常
 webserver | Web 服务器
 week | 周
+workboard | 工作板
 worker | 工作者
 working copy | 工作副本
 year | 年

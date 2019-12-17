@@ -22,8 +22,9 @@
 "\.\+" | \(\?! \)“\.\+”\(\?! \)
 '\\S\+\?' | \(\?! \)‘\\S\+\?’\(\?! \)
 \\\*\\\*\[\\S\\s\]\+\?\\\*\\\* | \\\*\\\*\[\\S\\s\]\+\?\\\*\\\*
-no \.\+ found | \^没有\\\.\+找到
+no \.\+ found\\\. | \^没有\\\.\+找到
 \^You do not have permission to | \^你没有\.\+权限
+Show Only | \^仅显示
 
 
 **正则表达式规则例外列表**
@@ -39,7 +40,10 @@ no \.\+ found | \^没有\\\.\+找到
 \[\^\.\]\\\.\(\?!\\w\|\\d\|\\\.\|%\|\\\*\|"\) | $ ./bin/drydock release-lease --id %d
 \[\^\.\]\\\.\(\?!\\w\|\\d\|\\\.\|%\|\\\*\|"\) | US East (N. Virginia, Older default endpoint)
 \[\^\.\]\\\.\(\?!\\w\|\\d\|\\\.\|%\|\\\*\|"\) | The custom domain should contain at least one dot (.) because some browsers fail to set cookies on domains without a dot. Instead, use a normal looking domain name like &#34;%s&#34;.
+\[\^\.\]\\\.\(\?!\\w\|\\d\|\\\.\|%\|\\\*\|"\) | Enter an object to test rules for, like a Diffusion commit (e.g., `rX123`) or a Differential revision (e.g., `D123`). You will be shown the results of a dry run on the object.
 <\.\+\> | &lt;DEAD&gt; %s
 \\\(\(\?!s\)\(\?!S\)\.\*\?\\\) | &lt;script&gt;alert(1);&lt;/script&gt;
 \\\(\(\?!s\)\(\?!S\)\.\*\?\\\) | (null)
+\\\(\(\?!s\)\(\?!S\)\.\*\?\\\) | constant(345)
+\\\(\(\?!s\)\(\?!S\)\.\*\?\\\) | cos(x)
 

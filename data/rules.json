@@ -13,8 +13,9 @@
     "\".+\"": "(?! )“.+”(?! )",
     "'\\S+?'": "(?! )‘\\S+?’(?! )",
     "\\*\\*[\\S\\s]+?\\*\\*": "\\*\\*[\\S\\s]+?\\*\\*",
-    "no .+ found": "^没有\\.+找到",
-    "^You do not have permission to": "^你没有.+权限"
+    "no .+ found\\.": "^没有\\.+找到",
+    "^You do not have permission to": "^你没有.+权限",
+    "Show Only": "^仅显示"
   },
   "exceptions": {
     ",(?! and)(?! or)": [
@@ -28,9 +29,15 @@
     "[^.]\\.(?!\\w|\\d|\\.|%|\\*|\")": [
       "$ ./bin/drydock release-lease --id %d",
       "US East (N. Virginia, Older default endpoint)",
-      "The custom domain should contain at least one dot (.) because some browsers fail to set cookies on domains without a dot. Instead, use a normal looking domain name like \"%s\"."
+      "The custom domain should contain at least one dot (.) because some browsers fail to set cookies on domains without a dot. Instead, use a normal looking domain name like \"%s\".",
+      "Enter an object to test rules for, like a Diffusion commit (e.g., `rX123`) or a Differential revision (e.g., `D123`). You will be shown the results of a dry run on the object."
     ],
     "<.+>": ["<DEAD> %s"],
-    "\\((?!s)(?!S).*?\\)": ["<script>alert(1);</script>", "(null)"]
+    "\\((?!s)(?!S).*?\\)": [
+      "<script>alert(1);</script>",
+      "(null)",
+      "constant(345)",
+      "cos(x)"
+    ]
   }
 }
