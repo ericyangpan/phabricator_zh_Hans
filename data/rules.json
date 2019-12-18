@@ -22,7 +22,8 @@
       "Go Juice",
       "ou=People, dc=example, dc=com",
       "user=%s, should_verify=%s",
-      "user=%s, verified=%s, primary=%s, should_verify=%s"
+      "user=%s, verified=%s, primary=%s, should_verify=%s",
+      "Port numbers must be between 1 and 65535, inclusive."
     ],
     ":": ["UTC%+d:%02d"],
     ";": ["<script>alert(1);</script>"],

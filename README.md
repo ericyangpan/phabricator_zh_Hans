@@ -34,12 +34,12 @@
 
 当前短词条翻译进度百分比：93%。注：短词条为长度小于 66 个字符的词条。
 
-当前不包含原型应用的翻译进度百分比：94%。
+当前不包含原型应用的翻译进度百分比：95%。
 
 分类 | 短词条翻译百分比 | 短词条翻译进度条 | 整体翻译百分比 | 整体翻译进度条
 --- | :-----------: | ------------- | :----------: | -----------
 aphront | 93% | ========= | 76% | =======
-applications/almanac | 97% | ========= | 89% | ========
+applications/almanac | 99% | ========= | 92% | =========
 applications/aphlict | **100%** | ✓✓✓✓✓✓✓✓ | 76% | =======
 applications/arcanist | --- |  | --- | 
 applications/audit | **100%** | ✓✓✓✓✓✓✓✓ | 91% | =========
@@ -65,7 +65,7 @@ applications/draft | --- |  | --- |
 applications/drydock | 87% | ======== | 75% | =======
 applications/fact | 83% | ======== | 63% | ======
 applications/favorites | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/feed | 98% | ========= | 92% | =========
+applications/feed | **100%** | ✓✓✓✓✓✓✓✓ | 93% | =========
 applications/files | 88% | ======== | 77% | =======
 applications/flag | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/fund `原型` | 98% | ========= | 96% | =========
@@ -74,7 +74,7 @@ applications/harbormaster | 93% | ========= | 81% | ========
 applications/help | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/herald | 91% | ========= | 83% | ========
 applications/home | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/legalpad | 96% | ========= | 91% | =========
+applications/legalpad | **100%** | ✓✓✓✓✓✓✓✓ | 95% | =========
 applications/lipsum | **100%** | ✓✓✓✓✓✓✓✓ | 76% | =======
 applications/macro | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/maniphest | 99% | ========= | 93% | =========
@@ -105,10 +105,10 @@ applications/project | **100%** | ✓✓✓✓✓✓✓✓ | 93% | =========
 applications/releeph `原型` | 72% | ======= | 67% | ======
 applications/remarkup | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/repository | 84% | ======== | 74% | =======
-applications/search | 98% | ========= | 89% | ========
+applications/search | 99% | ========= | 90% | =========
 applications/settings | 99% | ========= | 95% | =========
 applications/slowvote | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/spaces | 98% | ========= | 88% | ========
+applications/spaces | **100%** | ✓✓✓✓✓✓✓✓ | 89% | ========
 applications/subscriptions | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/support | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/system | 94% | ========= | 70% | ======

@@ -35,6 +35,7 @@ Show Only | \^仅显示
 ,\(\?! and\)\(\?! or\) | ou=People, dc=example, dc=com
 ,\(\?! and\)\(\?! or\) | user=%s, should_verify=%s
 ,\(\?! and\)\(\?! or\) | user=%s, verified=%s, primary=%s, should_verify=%s
+,\(\?! and\)\(\?! or\) | Port numbers must be between 1 and 65535, inclusive.
 : | UTC%+d:%02d
 ; | &lt;script&gt;alert(1);&lt;/script&gt;
 \[\^\.\]\\\.\(\?!\\w\|\\d\|\\\.\|%\|\\\*\|"\) | $ ./bin/drydock release-lease --id %d
