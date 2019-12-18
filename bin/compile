@@ -46,14 +46,14 @@ const terminologyFilePath = 'Terminology.md'
 const translationsFilePath = `dist/${gitInfo.phabricator.subject}/PhabricatorSimplifiedChineseTranslation.php`
 
 // Check rules.
-const hasError = rules.check(translationsData, error => {
+const passed = rules.check(translationsData, error => {
   console.log('Error: ' + error.type)
   console.log('Rule: ' + error.rule)
   console.log('Translation: ' + error.translation)
   console.log('-'.repeat(30))
 })
 
-if (hasError) {
+if (!passed) {
   console.log('-'.repeat(30))
   console.log('Rules not passed.')
 
