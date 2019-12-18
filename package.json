@@ -13,7 +13,7 @@
     "discover-obsoleted": "./bin/discover obsoleted",
     "discover-terminology": "./bin/discover terminology",
     "discover-unit": "./bin/discover unit",
-    "copy-lib": "cp node_modules/vue/dist/vue.min.js public/js ; cp node_modules/whatwg-fetch/dist/fetch.umd.js public/js ; cp node_modules/pluralize/pluralize.js public/js"
+    "copy-lib": "cp node_modules/vue/dist/vue.min.js public/js ; cp node_modules/whatwg-fetch/dist/fetch.umd.js public/js ; cp node_modules/pluralize/pluralize.js public/js ; cp node_modules/@fortawesome/fontawesome-free/css/all.min.css public/fontawesome/css/all.min.css ; cp node_modules/@fortawesome/fontawesome-free/webfonts/* public/fontawesome/webfonts/"
   },
   "bin": {
     "compile": "bin/compile",
@@ -22,6 +22,7 @@
   "author": "Ariel Yang <arielyang@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.4",

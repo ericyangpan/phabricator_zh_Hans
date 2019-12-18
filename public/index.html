@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Phabricator Translator</title>
-    <link href="css/main.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="fontawesome/css/all.min.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -19,18 +19,59 @@
           <li><a href="#" @click.prevent="showCategory">Category</a></li>
         </ul>
         <div class="navbar-form">
-          <input type="text" placeholder="Search..." size="40" v-model="searchForm.text" @keyup.enter="search">
-          <input type="checkbox" v-model="searchForm.isWord" @click="searchForm.type = searchForm.isWord ? 'text' : searchForm.type">
-          Search
-          Word
-          <input type="radio" name="searchType" value="text" checked="checked" v-model="searchForm.type"> Text
-          <input type="radio" name="searchType" value="regex" v-model="searchForm.type"> RegExp
-          <input type="text" name="filterLength" class="center" size="2" v-model.number="searchForm.filterLength"
-            @keyup.enter="search"> Length Filter
-          <button type="button" @click="saveAllTranslationValues">Save All Values</button>
+          <input
+            type="text"
+            placeholder="Search..."
+            size="40"
+            v-model="searchForm.text"
+            @keyup.enter="search"
+          />
+          <input
+            id="isEmpty"
+            type="checkbox"
+            v-model="searchForm.isEmpty"
+            @change="switchIsEmpty"
+          />
+          <label for="isEmpty">Empty</label>
+          <input
+            id="isWord"
+            type="checkbox"
+            v-model="searchForm.isWord"
+            @change="switchIsWord"
+          />
+          <label for="isWord">Word</label>
+          <input
+            id="serachTypeText"
+            type="radio"
+            name="searchType"
+            value="text"
+            checked="checked"
+            v-model="searchForm.type"
+          />
+          <label for="serachTypeText">Text</label>
+          <input
+            id="serachTypeRegexp"
+            type="radio"
+            name="searchType"
+            value="regex"
+            v-model="searchForm.type"
+          />
+          <label for="serachTypeRegexp">RegExp</label>
+          <input
+            id="filterLength"
+            type="text"
+            name="filterLength"
+            class="center"
+            size="2"
+            v-model.number="searchForm.filterLength"
+            @keyup.enter="search"
+          />
+          <label for="filterLength">Length Filter</label>
+          <button type="button" @click="saveAllTranslationValues">
+            Save All Values
+          </button>
         </div>
         <ul class="navbar-nav nav-right">
-          <li></li>
           <li>
             <a href="#" @click.prevent="loadSimilarPage(-1)">&lt;</a>
             Similar:{{ searchForm.similarPageNumber }}
@@ -38,6 +79,14 @@
           </li>
           <li><a href="#" @click.prevent="showDialog">Dictionary</a></li>
           <li><a href="#" @click.prevent="showDialog">Terminology</a></li>
+          <li>
+            <a
+              href="https://github.com/arielyang/phabricator_zh_Hans"
+              target="_blank"
+            >
+              <i class="fab fa-github" style="font-size:1.1em"></i>
+            </a>
+          </li>
         </ul>
       </div>
       <div class="sidebar" v-show="category.show">
@@ -45,12 +94,21 @@
           Total Translation Percent: {{ category.totalPercent }}
         </div>
         <ul class="category-list">
-          <li v-for="item in category.items" :class="item.isPrototype ? 'prototype' : ''">
-            <a :href="'#filter/' + item.group" @click.prevent="search" :title="item.isPrototype ? 'This is a prototype application.' : ''">{{
-              item.group }}</a>
+          <li
+            v-for="item in category.items"
+            :class="item.isPrototype ? 'prototype' : ''"
+          >
+            <a
+              :href="'#filter/' + item.group"
+              @click.prevent="search"
+              :title="item.isPrototype ? 'This is a prototype application.' : ''"
+              >{{ item.group }}</a
+            >
             <span>{{ item.percent }}</span>
             <div class="progressbar">
-              <div :style="'width:' + item.percent + (item.percent === '100%' ? ';background-color:limegreen' : '')"></div>
+              <div
+                :style="'width:' + item.percent + (item.percent === '100%' ? ';background-color:limegreen' : '')"
+              ></div>
             </div>
           </li>
         </ul>
@@ -71,12 +129,24 @@
               <tbody>
                 <tr>
                   <td>
-                    <input type="text" id="newKey" size="25" class="changed" placeholder="Type key here..."
-                      v-model.trim="dialog.newKey">
+                    <input
+                      type="text"
+                      id="newKey"
+                      size="25"
+                      class="changed"
+                      placeholder="Type key here..."
+                      v-model.trim="dialog.newKey"
+                    />
                   </td>
                   <td>
-                    <input type="text" size="25" class="changed" placeholder="Type value here..." v-model="dialog.newValue"
-                      @keyup.enter="addRow">
+                    <input
+                      type="text"
+                      size="25"
+                      class="changed"
+                      placeholder="Type value here..."
+                      v-model="dialog.newValue"
+                      @keyup.enter="addRow"
+                    />
                   </td>
                   <td>
                     <a href="#" @click.prevent="addRow">Add</a>
@@ -85,7 +155,13 @@
                 <tr v-for="item in dialog.items">
                   <td>{{ item.key }}</td>
                   <td>
-                    <input type="text" size="25" :value="item.value" @input="input" @keydown="processValueKey">
+                    <input
+                      type="text"
+                      size="25"
+                      :value="item.value"
+                      @input="input"
+                      @keydown="processValueKey"
+                    />
                   </td>
                   <td>
                     <a href="#" @click.prevent="deleteRow">✕</a>
@@ -99,27 +175,57 @@
     </div>
     <div id="translation" class="main">
       <div class="info">
-        Category: <span>{{ category }}</span> Filtered: <span>{{ filteredCount }}</span> Total:
-        <span>{{ totalCount }}</span> Percent: <span>{{ translationPercent }}</span>
+        Category: <span>{{ category }}</span> Filtered:
+        <span>{{ filteredCount }}</span> Total:
+        <span>{{ totalCount }}</span> Percent:
+        <span>{{ translationPercent }}</span>
       </div>
       <table id="translationList">
         <thead>
-          <th style="width:28%">Key</th>
-          <th style="width:28%">Value</th>
-          <th style="width:12%">Action</th>
-          <th style="width:28%">Suggestion</th>
+          <th style="width:30%">Key</th>
+          <th style="width:30%">Value</th>
+          <th style="width:6%">Actions</th>
+          <th style="width:30%">Suggestion</th>
           <th style="width:4%">Status</th>
         </thead>
         <tbody>
           <tr v-for="item in items" :class="item.highlight ? '' : 'highlight'">
-            <td v-html="item.key" :title="item.category"></td>
+            <td class="key" v-html="item.key" :title="item.category"></td>
             <td class="center">
-              <input v-if="!item.isTextarea" type="text" size="66" :value="item.value" @input="input" @keydown="processValueKey">
-              <textarea v-if="item.isTextarea" cols="66" :rows="item.textareaRowCount" @input="input" @keydown="processValueKey">{{ item.value }}</textarea>
+              <input
+                v-if="!item.isTextarea"
+                type="text"
+                size="66"
+                :value="item.value"
+                @input="input"
+                @keydown="processValueKey"
+              />
+              <textarea
+                v-if="item.isTextarea"
+                cols="66"
+                :rows="item.textareaRowCount"
+                @input="input"
+                @keydown="processValueKey"
+              >
+{{ item.value }}</textarea
+              >
             </td>
             <td class="center action">
-              <a href="#" @click.prevent="revert">Revert</a> | <a :href="'https://translate.google.com/?#en/zh-CN/' + encodeURIComponent(decodeHTML(item.key))"
-                target="_blank">Google</a> | <a href="#" @click.prevent="copy">Copy</a>
+              <a href="#" @click.prevent="revert" title="Revert"
+                ><i class="fas fa-undo-alt"></i
+              ></a>
+              |
+              <a
+                :href="'https://translate.google.com/?#en/zh-CN/' + encodeURIComponent(decodeHTML(item.key))"
+                target="translate"
+                title="Google Translate"
+              >
+                <i class="fas fa-language"></i
+              ></a>
+              |
+              <a href="#" @click.prevent="copy" title="Copy"
+                ><i class="fas fa-copy"></i
+              ></a>
             </td>
             <td class="suggesstion"></td>
             <td class="center"></td>
@@ -133,5 +239,4 @@
   <script src="js/fetch.umd.js"></script>
   <script src="js/helper.js"></script>
   <script src="js/main.js"></script>
-
 </html>

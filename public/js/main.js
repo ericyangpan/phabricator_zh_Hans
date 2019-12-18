@@ -1,21 +1,21 @@
 const IGNORE_PROTOTYPE = true
 const IS_SORT_BY_PERCENT = true
 const DEFAULT_FILTER_LENGTH = 66
-const DEFAULT_CATEGORY = 'N/A'
+const NO_CATEGORY = 'N/A'
 const SIMILAR_PAGE_SIZE = 10
 
 const regexWholeWord = /^\w+$/i
 const globalDictionary = {}
 const globalPhrases = {}
 let globalData
-let maxSimilarPageCount
 
 const vm = new Vue({
   el: '#app',
   data: {
     searchForm: {
-      category: DEFAULT_CATEGORY,
+      category: NO_CATEGORY,
       text: '',
+      isEmpty: false,
       isWord: false,
       type: 'text',
       filterLength: DEFAULT_FILTER_LENGTH,
@@ -43,20 +43,41 @@ const vm = new Vue({
     showCategory() {
       this.category.show = !this.category.show
     },
+
     search(event) {
       this.category.show = false
       this.dialog.show = false
       this.searchForm.similarPageNumber = 0
 
       if (event.target.tagName === 'A') {
+        // Search in category.
         this.searchForm.category = event.target.textContent
         this.searchForm.text = ''
       } else if (event.target.name !== 'filterLength') {
-        this.searchForm.category = DEFAULT_CATEGORY
+        // Seach text, reset category.
+        this.searchForm.category = NO_CATEGORY
       }
 
       searchInternal(this.searchForm)
     },
+
+    switchIsEmpty(event) {
+      searchInternal(this.searchForm)
+    },
+
+    switchIsWord(event) {
+      const searchTextBox = event.target.parentElement.firstElementChild
+
+      if (this.searchForm.isWord) {
+        this.searchForm.type = 'text'
+        searchTextBox.placeholder = 'Search word...'
+      } else {
+        searchTextBox.placeholder = 'Search...'
+      }
+
+      searchInternal(this.searchForm)
+    },
+
     showDialog(event) {
       const title = event.target.textContent
 
@@ -84,7 +105,9 @@ const vm = new Vue({
           : this.dialog.newKey
       const value = this.dialog.newValue
 
-      if (key === '') return
+      if (key === '') {
+        return
+      }
 
       if (globalData[this.section][key] !== undefined) {
         alert(`Duplicated item: '${key}'!`)
@@ -128,8 +151,12 @@ const vm = new Vue({
       saveAllTranslationValuesInternal()
         .then(() => {
           forEachTextBoxes('translationList', textBox => {
-            if (!textBox.classList.contains('changed') || textBox.value === '')
+            if (
+              !textBox.classList.contains('changed') ||
+              textBox.value === ''
+            ) {
               return
+            }
 
             setTextBoxUpdatedStyle(textBox)
 
@@ -154,7 +181,10 @@ const vm = new Vue({
     },
     loadSimilarPage(delta) {
       if (this.searchForm.similarPageNumber + delta === 0) return
-      if (this.searchForm.similarPageNumber + delta >= maxSimilarPageCount) {
+      if (
+        this.searchForm.similarPageNumber + delta >=
+        Math.ceil(globalData.similars.length / SIMILAR_PAGE_SIZE)
+      ) {
         if (delta < 0) {
           this.searchForm.similarPageNumber += delta
         }
@@ -173,9 +203,6 @@ const vm = new Vue({
       .then(response => response.json())
       .then(data => {
         globalData = data
-        maxSimilarPageCount = Math.ceil(
-          globalData.similars.length / SIMILAR_PAGE_SIZE
-        )
 
         setGlobalDictionary(
           globalData.translations,
@@ -183,13 +210,13 @@ const vm = new Vue({
           globalData.terminology
         )
 
-        let { totalPercent, items } = getCategories(
+        let [totalPercent, items] = getCategories(
           globalData.categories,
           globalData.translations
         )
 
         this.category.totalPercent = totalPercent
-        this.category.items = IS_SORT_BY_PERCENT ? sortByPercent(items) : items
+        this.category.items = items
 
         locationHashChanged()
 
@@ -202,7 +229,7 @@ const vmt = new Vue({
   el: '#translation',
   data: {
     section: 'translations',
-    category: DEFAULT_CATEGORY,
+    category: NO_CATEGORY,
     filteredCount: 0,
     totalCount: 0,
     items: []
@@ -216,7 +243,9 @@ const vmt = new Vue({
     copy(event) {
       const ctx = getRowContext(event.target)
 
-      if (ctx.suggestion === '') return
+      if (ctx.suggestion === '') {
+        return
+      }
 
       ctx.valueTextBox.value = ctx.suggestion.replace(/↵/g, '\n')
 
@@ -233,6 +262,7 @@ const vmt = new Vue({
         ctx.valueTextBox.value = ''
       } else {
         ctx.valueTextBox.value = globalData[this.section][ctx.key]
+
         resetTextBoxStyle(ctx.valueTextBox)
       }
     },
@@ -402,10 +432,7 @@ function getCategories(categories, translations) {
 
   const totalPercent = computePercent(totalTranslatedItemCount, totalItemCount)
 
-  return {
-    totalPercent,
-    items
-  }
+  return [totalPercent, IS_SORT_BY_PERCENT ? sortByPercent(items) : items]
 }
 
 function searchInternal(options) {
@@ -422,11 +449,16 @@ function searchInternal(options) {
 
   if (options.similarPageNumber !== 0) {
     promise = searchSimilar(options.similarPageNumber)
-  } else if (options.category !== DEFAULT_CATEGORY) {
-    promise = searchCategory(options.category, options.filterLength)
+  } else if (options.category !== NO_CATEGORY) {
+    promise = searchCategory(
+      options.category,
+      options.isEmpty,
+      options.filterLength
+    )
   } else {
     promise = searchText(
       options.text,
+      options.isEmpty,
       options.isWord,
       options.type,
       options.filterLength
@@ -443,10 +475,10 @@ function searchInternal(options) {
   })
 }
 
-function searchText(text, isWord, type, filterLength) {
+function searchText(text, isEmpty, isWord, type, filterLength) {
   if (text.length < 2) {
     return Promise.resolve({
-      category: DEFAULT_CATEGORY,
+      category: NO_CATEGORY,
       filteredCount: 0,
       totalCount: 0,
       items: []
@@ -468,6 +500,10 @@ function searchText(text, isWord, type, filterLength) {
 
   for (let category in globalData.categories) {
     for (let key in globalData.categories[category]) {
+      if (isEmpty && globalData.translations[key] !== undefined) {
+        continue
+      }
+
       if (
         !regexSearch.test(key) &&
         !regexSearch.test(globalData.translations[key])
@@ -505,19 +541,25 @@ function searchText(text, isWord, type, filterLength) {
   }
 
   return Promise.resolve({
-    category: DEFAULT_CATEGORY,
+    category: NO_CATEGORY,
     filteredCount: resultCount,
     totalCount: totalResultCount,
     items: sortByKey(results, 'key')
   })
 }
 
-function searchCategory(category, filterLength) {
+function searchCategory(category, isEmpty, filterLength) {
   const items = globalData.categories[category]
   const results = []
 
   for (let key in items) {
-    if (key.length > filterLength) continue
+    if (isEmpty && globalData.translations[key] !== undefined) {
+      continue
+    }
+
+    if (key.length > filterLength) {
+      continue
+    }
 
     const item = {
       key: encodeHTML(key),
@@ -564,13 +606,13 @@ function searchSimilar(pageNumber) {
     }
   }
 
-  vmt.category = DEFAULT_CATEGORY
+  vmt.category = NO_CATEGORY
   vmt.filteredCount = results.length
   vmt.totalCount = results.length
   vmt.items = results
 
   return Promise.resolve({
-    category: DEFAULT_CATEGORY,
+    category: NO_CATEGORY,
     filteredCount: results.length,
     totalCount: results.length,
     items: results
@@ -752,7 +794,7 @@ function refreshSuggestion() {
 
       element.children[3].innerHTML = suggestion
       element.children[3].style.color =
-        suggestion == translation
+        suggestion === translation
           ? 'brown'
           : isSimilar(translation, suggestion)
           ? 'orange'
@@ -785,40 +827,44 @@ function setTextareaRowCount(item) {
 }
 
 function setLocationHash(options) {
-  const type = options.type || 'text'
+  const isEmpty = options.isEmpty ? 'empty' : 'all'
+  const isWord = options.isWord ? 'word' : 'any'
   const text = encodeURI(options.text || '')
 
-  window.location.hash = `#${options.category}|${
-    options.isWord ? 'word' : 'any'
-  }|${type}|${options.filterLength}|${options.similarPageNumber}|${text}`
+  window.location.hash = `#${options.category}|${isEmpty}|${isWord}|${options.type}|${options.filterLength}|${options.similarPageNumber}|${text}`
 }
 
 function parseLocationHash() {
-  const hash = decodeURI(window.location.hash)
-  const regex = /^#(all|.+)\|(any|word)\|(text|regex)\|(\d+)\|(\d+)\|(.*)$/g
-  const matches = regex.exec(hash) || [
+  const defaultValues = [
     null,
-    DEFAULT_CATEGORY,
+    NO_CATEGORY,
+    'all',
     'any',
     'text',
     DEFAULT_FILTER_LENGTH,
     0,
     ''
   ]
+  const regex = /^#(all|.+)\|(all|empty)\|(any|word)\|(text|regex)\|(\d+)\|(\d+)\|(.*)$/g
+  const matches = regex.exec(decodeURI(window.location.hash)) || defaultValues
 
   return {
     category: matches[1],
-    isWord: matches[2] === 'word',
-    type: matches[3],
-    filterLength: parseInt(matches[4].toString()),
-    similarPageNumber: parseInt(matches[5].toString()),
-    text: matches[6]
+    isEmpty: matches[2] === 'empty',
+    isWord: matches[3] === 'word',
+    type: matches[4],
+    filterLength: parseInt(matches[5]),
+    similarPageNumber: parseInt(matches[6]),
+    text: matches[7]
   }
 }
 
 // Get context info about key, value, suggestion and tr element, text box element.
 function getRowContext(target) {
-  const row = target.parentElement.parentElement
+  const row =
+    target.tagName === 'I'
+      ? target.parentElement.parentElement.parentElement
+      : target.parentElement.parentElement
   const key = row.firstElementChild.textContent
   let valueTextBox = null
   let value = null
@@ -833,9 +879,8 @@ function getRowContext(target) {
     value = target.value
     // Target is action links.
   } else if (target.textContent !== '✕') {
-    valueTextBox =
-      target.parentElement.parentElement.children[1].firstElementChild
-    suggestion = target.parentElement.parentElement.children[3].textContent
+    valueTextBox = row.children[1].firstElementChild
+    suggestion = row.children[3].textContent
   }
 
   return {
@@ -878,8 +923,9 @@ function saveToServer(action, section, key, items) {
 }
 
 function getDiff(items) {
-  if (!items || items.length === 0)
+  if (!items || items.length === 0) {
     throw new Error('Parameter "items" can not be null or empty.')
+  }
 
   const diffResult = {}
 
