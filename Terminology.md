@@ -56,9 +56,11 @@ compression | 压缩
 config | 配置
 consecutive | 连续的
 control | 控制|控件
+conversion | 转化
 creation | 创建
 cursor | 游标
 datasource | 数据源
+decode | 解码
 default | 默认
 definition | 定义
 delete | 删除
@@ -100,6 +102,8 @@ include | 包含
 inherit | 继承
 inline comment | 行内评论
 input | 输入
+integrity | 完整性
+interact | 交互
 internal | 内部
 invitee | 受邀人
 invoke | 调用
@@ -198,12 +202,14 @@ template | 模板
 timeout | 超时
 token | 令牌|符记|符号|语素
 too many | 太多
+track | 跟踪
 transaction | 交易
 trigger | 触发|触发器
 type | 类型|键入
 unavailable | 不可用
 underlying | 底层
 underscore | 下划线
+unlock | 解锁
 unnamed | 未命名的
 unpaid | 未支付的
 unreachable | 不可访问

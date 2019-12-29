@@ -2,6 +2,12 @@
 
 ![Screen Shot](screenshot.png)
 
+### Phabricator 微信群
+
+二维码将定期更新，如果过期请稍后再查看。
+
+![Screen Shot](weixin.jpeg)
+
 ## 目录
 
 * [下载地址](#下载地址)
@@ -58,7 +64,7 @@ applications/countdown | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓
 applications/daemon | 99% | ========= | 87% | ========
 applications/dashboard | **100%** | ✓✓✓✓✓✓✓✓ | 91% | =========
 applications/differential | 91% | ========= | 84% | ========
-applications/diffusion | 90% | ======== | 77% | =======
+applications/diffusion | 90% | ======== | 78% | =======
 applications/diviner | 75% | ======= | 71% | =======
 applications/doorkeeper | 95% | ========= | 82% | ========
 applications/draft | --- |  | --- | 
@@ -66,13 +72,13 @@ applications/drydock | 87% | ======== | 75% | =======
 applications/fact | 83% | ======== | 63% | ======
 applications/favorites | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/feed | **100%** | ✓✓✓✓✓✓✓✓ | 93% | =========
-applications/files | 88% | ======== | 77% | =======
+applications/files | 90% | ======== | 79% | =======
 applications/flag | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/fund `原型` | 98% | ========= | 96% | =========
 applications/guides | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/harbormaster | 93% | ========= | 81% | ========
+applications/harbormaster | 93% | ========= | 82% | ========
 applications/help | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/herald | 91% | ========= | 83% | ========
+applications/herald | 92% | ========= | 83% | ========
 applications/home | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/legalpad | **100%** | ✓✓✓✓✓✓✓✓ | 95% | =========
 applications/lipsum | **100%** | ✓✓✓✓✓✓✓✓ | 76% | =======
@@ -84,7 +90,7 @@ applications/multimeter `原型` | 94% | ========= | 94% | =========
 applications/notification | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/nuance `原型` | 86% | ======== | 82% | ========
 applications/oauthserver `原型` | 93% | ========= | 79% | =======
-applications/owners | 89% | ======== | 84% | ========
+applications/owners | 90% | ======== | 84% | ========
 applications/packages `原型` | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/passphrase | **100%** | ✓✓✓✓✓✓✓✓ | 94% | =========
 applications/paste | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
@@ -104,7 +110,7 @@ applications/ponder | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓
 applications/project | **100%** | ✓✓✓✓✓✓✓✓ | 93% | =========
 applications/releeph `原型` | 72% | ======= | 67% | ======
 applications/remarkup | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-applications/repository | 84% | ======== | 74% | =======
+applications/repository | 88% | ======== | 78% | =======
 applications/search | 99% | ========= | 90% | =========
 applications/settings | 99% | ========= | 95% | =========
 applications/slowvote | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
@@ -117,7 +123,7 @@ applications/transactions | 97% | ========= | 83% | ========
 applications/typeahead | **100%** | ✓✓✓✓✓✓✓✓ | 94% | =========
 applications/uiexample `原型` | 98% | ========= | 98% | =========
 applications/xhprof | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
-infrastructure | 84% | ======== | 66% | ======
+infrastructure | 86% | ======== | 67% | ======
 view | **100%** | ✓✓✓✓✓✓✓✓ | 99% | =========
 
 ## 启动翻译工具
@@ -174,8 +180,6 @@ $ ./bin/i18n extract ../libphutil
 然后你将在 Phabricator 项目的 `/src/.cache/` 目录中找到 `i18n_files.json` 文件，拷贝 `i18n_files.json` 文件到本项目的 `data/phabricator` 目录。
 
 然后你将在 libphutil 项目的 `/src/.cache/` 目录中找到 `i18n_files.json` 文件，拷贝 `i18n_files.json` 文件到本项目的 `data/libphutil` 目录。
-
-
 
 ## 翻译指南
 
