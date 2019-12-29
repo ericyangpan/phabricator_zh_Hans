@@ -6,7 +6,7 @@
 
 二维码将定期更新，如果过期请稍后再查看。
 
-![Screen Shot](weixin.jpeg)
+<img src="wechat.jpeg" width="337" alt="WeChat Group">
 
 ## 目录
 
