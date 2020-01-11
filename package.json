@@ -8,6 +8,7 @@
     "start": "node index.js",
     "compile": "./bin/compile",
     "update": "./bin/update",
+    "crop": "./bin/crop",
     "discover-all": "./bin/discover all",
     "discover-similar": "./bin/discover all",
     "discover-obsoleted": "./bin/discover obsoleted",
@@ -31,5 +32,8 @@
     "pluralize": "^7.0.0",
     "vue": "^2.6.8",
     "whatwg-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "jimp": "^0.9.3"
   }
 }

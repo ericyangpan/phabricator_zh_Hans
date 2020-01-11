@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+const jimp = require('jimp')
+
+async function main() {
+  const filename = 'wechat.jpeg'
+  const image = await jimp.read(filename)
+
+  if (image.bitmap.width === 840 && image.bitmap.height === 980) {
+    console.log('Image is already processed.')
+
+    process.exit()
+  }
+
+  if (image.bitmap.width !== 1080 && image.bitmap.height !== 2339) {
+    console.log('Image size is not 1080x2339.')
+
+    process.exit()
+  }
+
+  await image.crop(120, 810, 840, 980)
+  await image.writeAsync(filename)
+
+  console.log('Image is cropped.')
+}
+
+main()
