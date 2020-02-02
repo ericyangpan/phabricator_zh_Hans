@@ -1045,5 +1045,6 @@
   "Search for identities by assignee.": "按受托人搜索身份。",
   "Show Only Assigned Identities": "只显示已分配的身份",
   "Show Only Unassigned Identities": "只显示未分配的身份",
-  "Specify --all or a list of repositories, but not both.": "指定 --all 或仓库的列表，但不能两者都指定。"
+  "Specify --all or a list of repositories, but not both.": "指定 --all 或仓库的列表，但不能两者都指定。",
+  "(Unknown Action \"%s\") equals": "（未知的操作“%s”）等于"
 }

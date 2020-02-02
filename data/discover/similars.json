@@ -3126,6 +3126,7 @@
       "Unsupported action \"%s\".",
       "Unsupported character set \"%s\".",
       "Unsupported collation set \"%s\".",
+      "Unsupported operator prefix \"%s\".",
       "Unsupported order \"%s\"."
     ]
   },
@@ -6617,6 +6618,7 @@
       "Unknown (\"%s\")",
       "Unknown Action (\"%s\")",
       "Unknown Effect (\"%s\")",
+      "Unknown Field (\"%s\")",
       "Unknown Hold (\"%s\")",
       "Unknown Quality (\"%s\")",
       "Unknown Reason (\"%s\")",
@@ -12141,6 +12143,7 @@
       "Unknown Action (\"%s\")",
       "Unknown Effect (\"%s\")",
       "Unknown Event Type (\"%s\")",
+      "Unknown Field (\"%s\")",
       "Unknown Hold (\"%s\")",
       "Unknown Quality (\"%s\")",
       "Unknown Reason (\"%s\")",
@@ -51296,12 +51299,25 @@
       "Removed %s subscriber(s): %s."
     ]
   },
+  "Project tags added": {
+    "s2": [
+      "Project tags added",
+      "Project tags removed"
+    ]
+  },
   "Remove projects: %s.": {
     "s2": [
       "Add projects: %s.",
       "Remove project tags: %s.",
       "Remove projects: %s.",
       "Remove subscribers: %s."
+    ]
+  },
+  "Project tags": {
+    "s2": [
+      "Project tags",
+      "Project tags added",
+      "Project tags removed"
     ]
   },
   "Add projects: %s.": {
@@ -80158,6 +80174,7 @@
       "Unsupported character set \"%s\".",
       "Unsupported collation set \"%s\".",
       "Unsupported item action \"%s\".",
+      "Unsupported operator prefix \"%s\".",
       "Unsupported order \"%s\"."
     ]
   },

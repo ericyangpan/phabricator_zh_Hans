@@ -139,6 +139,7 @@ notification | 通知
 numeric | 数字
 observe | 观察
 open status | 开放状态
+operator | 运算符
 optional | 可选
 output | 输出
 override | 覆盖
