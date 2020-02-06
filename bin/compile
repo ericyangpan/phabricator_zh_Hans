@@ -13,8 +13,7 @@ const dataHelper = require('../lib/datahelper')
 const LENGTH_OF_SHORT_ITEMS = 66
 
 // Load data.
-const rulesData = dataHelper.readFile('rules')
-const terminologyData = dataHelper.readFile('terminology')
+const obsoletedData = dataHelper.readFile('discover_obsoleted')
 const translationsData = dataHelper.readFile('translations')
 const phabricatori18nFilesData = dataHelper.readFile('phabricator_i18n_files')
 // const libphutili18nFilesData = dataHelper.readFile('libphutil_i18n_files')
@@ -32,11 +31,6 @@ const gitInfo = {
     'https://secure.phabricator.com/source/libphutil.git'
   )
 }
-
-// Initialize output file paths.
-const readmeFilePath = 'README.md'
-const rulesFilePath = 'Rules.md'
-const terminologyFilePath = 'Terminology.md'
 
 // Check rules.
 const passed = rules.check(translationsData, error => {
@@ -56,28 +50,39 @@ if (!passed) {
   console.log('Rules passed.')
 }
 
-// Write soted translations data to file.
+// Write sorted translations data to file.
 dataHelper.writeFile('translations', translationsData, true)
 
 // Write all template files.
-writeTemplateFile(readmeFilePath, computeTranslationSummary(translationsData))
-writeTemplateFile(rulesFilePath, {
-  rules: rulesData
+writeTemplateFile(
+  'README.md',
+  computeTranslationSummary(translationsData, gitInfo)
+)
+writeTemplateFile('Rules.md', {
+  rules: dataHelper.readFile('rules')
 })
-writeTemplateFile(terminologyFilePath, {
-  terminology: terminologyData
+writeTemplateFile('Terminology.md', {
+  terminology: dataHelper.readFile('terminology')
 })
+
+if (
+  !/\(stable\) Promote 20\d{2} Week \d{1,2}/.test(gitInfo.phabricator.subject)
+) {
+  console.log('Current git branch is not on a stable version, ignored.')
+
+  process.exit(0)
+}
 
 createVersionDirectory(gitInfo.phabricator.subject)
 
-const translationsFilePath = `dist/${gitInfo.phabricator.subject}/PhabricatorSimplifiedChineseTranslation.php`
+const translationPHPFilePath = `dist/${gitInfo.phabricator.subject}/PhabricatorSimplifiedChineseTranslation.php`
 
-writeTemplateFile(translationsFilePath, {
+writeTemplateFile(translationPHPFilePath, {
   translations: translationsData
 })
 
 // Run PHP Lint.
-phplint([translationsFilePath], err => {
+phplint([translationPHPFilePath], err => {
   if (err) {
     console.log(err.toString())
   } else {
@@ -86,7 +91,7 @@ phplint([translationsFilePath], err => {
   }
 })
 
-function computeTranslationSummary(translations) {
+function computeTranslationSummary(translationsData, gitInfo) {
   function buildCategory(
     previousCategory,
     categoryTranslationCount,
@@ -118,9 +123,13 @@ function computeTranslationSummary(translations) {
     )
   }
 
-  let categories = {}
-  const items = {}
+  const currentVersionTranslationData = getCurrentVersionTranslationData(
+    translationsData,
+    obsoletedData
+  )
 
+  const items = {}
+  let categories = {}
   let totalCount = 0
   let totalCountWithoutPrototype = 0
   let totalCountOfShortItems = 0
@@ -188,7 +197,7 @@ function computeTranslationSummary(translations) {
           categoryTotalCountOfShortItems++
         }
 
-        const translation = translations[item.string]
+        const translation = currentVersionTranslationData[item.string]
 
         if (translation !== undefined) {
           categoryTranslationCount++
@@ -231,7 +240,7 @@ function computeTranslationSummary(translations) {
 
   categories = sortKeys(categories)
 
-  for (let key in translations) {
+  for (let key in currentVersionTranslationData) {
     totalTranslationCount++
 
     if (key.length <= LENGTH_OF_SHORT_ITEMS) {
@@ -287,8 +296,7 @@ function writeTemplateFile(filePath, data) {
     }
   }
 
-  const templateFilename = path.basename(filePath)
-  const templatePath = `templates/${templateFilename}.ejs`
+  const templatePath = path.join('templates', path.basename(filePath) + '.ejs')
 
   // Load template file.
   const template = fs.readFileSync(templatePath).toString()
@@ -299,6 +307,18 @@ function writeTemplateFile(filePath, data) {
   })
 
   fs.writeFileSync(filePath, fileContent)
+}
+
+function getCurrentVersionTranslationData(translationsData, obsoletedData) {
+  const results = {}
+
+  for (let key in translationsData) {
+    if (!obsoletedData[key]) {
+      results[key] = translationsData[key]
+    }
+  }
+
+  return results
 }
 
 // Compute percent string.
@@ -349,16 +369,13 @@ function getGitInfo(repoPath, repoURL) {
 
   cloneGitRepository(repoPath, repoURL)
 
-  child_process.execSync(`git checkout stable`, {
-    cwd: repoPath
-  })
+  const stdoutBranch = execSync('git branch --contains', repoPath)
 
-  const stdout = child_process
-    .execSync('git log -1 --pretty=format:"%h %H %s"', {
-      cwd: repoPath
-    })
-    .toString()
+  if (/  stable/.test(stdoutBranch) && !/^\* \(HEAD/.test(stdoutBranch)) {
+    execSync(`git checkout stable`, repoPath)
+  }
 
+  const stdout = execSync('git log -1 --pretty=format:"%h %H %s"', repoPath)
   const i1 = stdout.indexOf(' ')
   const i2 = stdout.indexOf(' ', i1 + 1)
 
@@ -375,9 +392,7 @@ function getGitInfo(repoPath, repoURL) {
 
 function cloneGitRepository(repoPath, repoURL) {
   if (!fs.existsSync(repoPath)) {
-    child_process.execSync(`git clone -b stable ${repoURL}`, {
-      cwd: path.join('..')
-    })
+    execSync(`git clone -b stable ${repoURL}`, path.join('..'))
   }
 }
 
@@ -390,4 +405,12 @@ function createVersionDirectory(dir) {
   }
 
   fs.mkdirSync(dirPath)
+}
+
+function execSync(command, cwd) {
+  return child_process
+    .execSync(command, {
+      cwd: cwd
+    })
+    .toString()
 }
