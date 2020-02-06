@@ -10,7 +10,7 @@
     "update": "./bin/update",
     "crop": "./bin/crop",
     "discover-all": "./bin/discover all",
-    "discover-similar": "./bin/discover all",
+    "discover-similar": "./bin/discover similar",
     "discover-obsoleted": "./bin/discover obsoleted",
     "discover-terminology": "./bin/discover terminology",
     "discover-unit": "./bin/discover unit",
