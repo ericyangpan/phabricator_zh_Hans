@@ -399,7 +399,7 @@ function getCategories(categories, translations) {
 
   for (let category in categories) {
     const isPrototype =
-      globalData.prototypeApplications.indexOf(
+      globalData.prototype_applications.indexOf(
         category.replace('applications/', '')
       ) !== -1
 
@@ -893,7 +893,7 @@ function getRowContext(target) {
 }
 
 function saveToServer(action, section, key, items) {
-  console.log(`${action} ${section} ${key}:`)
+  console.log(`${action} ${section} '${key}':`)
   console.log(items)
 
   const savedItems = items.map(item => {

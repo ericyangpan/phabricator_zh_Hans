@@ -2,29 +2,23 @@
 
 const child_process = require('child_process')
 const crypto = require('crypto')
+const fs = require('fs')
 const path = require('path')
 const ejs = require('ejs')
-const fs = require('fs')
-const jsonfile = require('jsonfile')
 const phplint = require('phplint').lint
 const rules = require('../lib/rules')
 const sortKeys = require('../lib/sortkeys')
+const dataHelper = require('../lib/datahelper')
 
-const CALCULATE_TEST_CASE = false
 const LENGTH_OF_SHORT_ITEMS = 66
 
-// Initialize data file paths.
-const phabricatori18nFilesPath = 'data/phabricator/i18n_files.json'
-const libphutili18nFilesPath = 'data/libphutil/i18n_files.json'
-const prototypeApplicationsPath = 'data/prototype_applications.json'
-const rulesPath = 'data/rules.json'
-const terminologyPath = 'data/terminology.json'
-const translationsPath = 'data/translations.json'
-
 // Load data.
-const rulesData = jsonfile.readFileSync(rulesPath)
-const terminologyData = jsonfile.readFileSync(terminologyPath)
-let translationsData = jsonfile.readFileSync(translationsPath)
+const rulesData = dataHelper.readFile('rules')
+const terminologyData = dataHelper.readFile('terminology')
+const translationsData = dataHelper.readFile('translations')
+const phabricatori18nFilesData = dataHelper.readFile('phabricator_i18n_files')
+// const libphutili18nFilesData = dataHelper.readFile('libphutil_i18n_files')
+const prototypeApplicationsData = dataHelper.readFile('prototype_applications')
 
 console.log('-'.repeat(30))
 
@@ -43,7 +37,6 @@ const gitInfo = {
 const readmeFilePath = 'README.md'
 const rulesFilePath = 'Rules.md'
 const terminologyFilePath = 'Terminology.md'
-const translationsFilePath = `dist/${gitInfo.phabricator.subject}/PhabricatorSimplifiedChineseTranslation.php`
 
 // Check rules.
 const passed = rules.check(translationsData, error => {
@@ -63,11 +56,8 @@ if (!passed) {
   console.log('Rules passed.')
 }
 
-// Sort keys of translations object.
-translationsData = sortKeys(translationsData)
-
 // Write soted translations data to file.
-writeFile(translationsPath, translationsData)
+dataHelper.writeFile('translations', translationsData, true)
 
 // Write all template files.
 writeTemplateFile(readmeFilePath, computeTranslationSummary(translationsData))
@@ -79,6 +69,8 @@ writeTemplateFile(terminologyFilePath, {
 })
 
 createVersionDirectory(gitInfo.phabricator.subject)
+
+const translationsFilePath = `dist/${gitInfo.phabricator.subject}/PhabricatorSimplifiedChineseTranslation.php`
 
 writeTemplateFile(translationsFilePath, {
   translations: translationsData
@@ -126,14 +118,6 @@ function computeTranslationSummary(translations) {
     )
   }
 
-  const phabricatori18nFilesData = jsonfile.readFileSync(
-    phabricatori18nFilesPath
-  )
-  // const libphutili18nFilesData = jsonfile.readFileSync(libphutili18nFilesPath)
-  const prototypeApplicationsData = jsonfile.readFileSync(
-    prototypeApplicationsPath
-  )
-
   let categories = {}
   const items = {}
 
@@ -150,7 +134,7 @@ function computeTranslationSummary(translations) {
   let previousCategory = null
 
   for (let file in phabricatori18nFilesData.files) {
-    if (!CALCULATE_TEST_CASE && file.endsWith('TestCase.php')) continue
+    if (!dataHelper.INCLUDE_TEST_CASE && file.endsWith('TestCase.php')) continue
 
     const pathFragments = file.split('/')
 
@@ -256,8 +240,12 @@ function computeTranslationSummary(translations) {
   }
 
   const data = {
-    phabricatori18nFileHash: computeFileHash(phabricatori18nFilesPath),
-    libphutili18nFileHash: computeFileHash(libphutili18nFilesPath),
+    phabricatori18nFileHash: computeFileHash(
+      dataHelper.getPath('phabricator_i18n_files')
+    ),
+    libphutili18nFileHash: computeFileHash(
+      dataHelper.getPath('libphutil_i18n_files')
+    ),
     totalCount: totalCount,
     totalCountWithoutPrototype: totalCountWithoutPrototype,
     totalPercent: computePercent(totalTranslationCount, totalCount),
@@ -310,23 +298,7 @@ function writeTemplateFile(filePath, data) {
     context: ejsContext
   })
 
-  writeFile(filePath, fileContent)
-}
-
-// Write content to file.
-function writeFile(path, content) {
-  if (typeof content === 'string') {
-    // Plain text file.
-    fs.writeFileSync(path, content)
-  } else {
-    // JSON file.
-    jsonfile.writeFileSync(path, content, {
-      spaces: 2
-    })
-  }
-
-  console.log('-'.repeat(30))
-  console.log(`Writing file to "${path}".`)
+  fs.writeFileSync(filePath, fileContent)
 }
 
 // Compute percent string.

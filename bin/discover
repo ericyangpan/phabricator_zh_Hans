@@ -1,24 +1,14 @@
 #!/usr/bin/env node
 
-const jsonfile = require('jsonfile')
 const wordLevenshtein = require('../lib/wordlevenshtein')
-const sortKeys = require('../lib/sortkeys')
+const dataHelper = require('../lib/datahelper')
 
-const obsoletedPath = 'data/discover/obsoleted.json'
-const similarsPath = 'data/discover/similars.json'
-const allPath = 'data/discover/strings.json'
-const terminologyPath = 'data/discover/terminology.json'
-const unitsPath = 'data/discover/units.json'
-// const libphutili18nFilesPath = 'data/libphutil/i18n_files.json'
-const phabricatori18nFilesPath = 'data/phabricator/i18n_files.json'
-const translationsPath = 'data/translations.json'
+const REMOVE_OBSOLETED_DATA = false
 
-const DISCOVER_TEST_CASE = false
-
-const obsoletedData = jsonfile.readFileSync(obsoletedPath)
-// const libphutili18nFilesData = jsonfile.readFileSync(libphutili18nFilesPath)
-const phabricatori18nFilesData = jsonfile.readFileSync(phabricatori18nFilesPath)
-const translationsData = sortKeys(jsonfile.readFileSync(translationsPath))
+const obsoletedData = dataHelper.readFile('discover_obsoleted')
+const phabricatori18nFilesData = dataHelper.readFile('phabricator_i18n_files')
+// const libphutili18nFilesData = dataHelper.readFile('libphutil_i18n_files')
+const translationsData = dataHelper.readFile('translations')
 
 const option = process.argv[2]
 
@@ -76,9 +66,7 @@ console.log('')
 function findAllItems() {
   const resultStrings = getAllStrings()
 
-  jsonfile.writeFileSync(allPath, sortKeys(resultStrings), {
-    spaces: 2
-  })
+  dataHelper.writeFile('discover_strings', resultStrings, true)
 }
 
 function findSimilarItems() {
@@ -86,9 +74,7 @@ function findSimilarItems() {
 
   cleanupDuplicatedSimilarStrings(resultStrings)
 
-  jsonfile.writeFileSync(similarsPath, resultStrings, {
-    spaces: 2
-  })
+  dataHelper.writeFile('discover_similars', resultStrings)
 }
 
 function findObsoletedItems() {
@@ -97,32 +83,27 @@ function findObsoletedItems() {
   for (let key in translationsData) {
     if (allStrings[key] === undefined) {
       obsoletedData[key] = translationsData[key]
-      delete translationsData[key]
+
+      if (REMOVE_OBSOLETED_DATA) {
+        delete translationsData[key]
+      }
     }
   }
 
-  jsonfile.writeFileSync(obsoletedPath, obsoletedData, {
-    spaces: 2
-  })
-  jsonfile.writeFileSync(translationsPath, translationsData, {
-    spaces: 2
-  })
+  dataHelper.writeFile('discover_obsoleted', obsoletedData)
+  dataHelper.writeFile('translations', translationsData)
 }
 
 function findTerminologies() {
   const resultStrings = getTerminologies()
 
-  jsonfile.writeFileSync(terminologyPath, resultStrings, {
-    spaces: 2
-  })
+  dataHelper.writeFile('discover_terminology', resultStrings)
 }
 
 function findUnitItems() {
   const resultStrings = getUnitItems()
 
-  jsonfile.writeFileSync(unitsPath, resultStrings, {
-    spaces: 2
-  })
+  dataHelper.writeFile('discover_units', resultStrings)
 }
 
 function getAllStrings() {
@@ -139,7 +120,7 @@ function getAllStrings() {
 
 function forEachi18nFilesData(i18nFilesData, func) {
   for (let file in i18nFilesData.files) {
-    if (!DISCOVER_TEST_CASE && file.endsWith('TestCase.php')) continue
+    if (!dataHelper.INCLUDE_TEST_CASE && file.endsWith('TestCase.php')) continue
 
     const fileId = i18nFilesData.files[file]
     const strings = i18nFilesData.strings[fileId] || []

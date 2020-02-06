@@ -2,29 +2,14 @@ const bodyParser = require('body-parser')
 const express = require('express')
 const jsonfile = require('jsonfile')
 const sortKeys = require('./lib/sortkeys')
+const dataHelper = require('./lib/datahelper')
 
 const app = express()
-
-const sectionPaths = {
-  i18nFiles: [
-    'data/phabricator/i18n_files.json',
-    'data/libphutil/i18n_files.json'
-  ],
-  prototypeApplications: 'data/prototype_applications.json',
-  translations: 'data/translations.json',
-  dictionary: 'data/dictionary.json',
-  terminology: 'data/terminology.json',
-  similars: 'data/discover/similars.json'
-}
-
-// If show libphutil translation in the UI.
-const SHOW_LIBPHUTIL = false
-// If show test case translation in the UI.
-const SHOW_TEST_CASE = false
 
 app.use(bodyParser.json())
 app.use(express.static('public'))
 
+// Get all data from disk.
 app.get('/data', (req, res) => {
   console.log('Getting data.')
 
@@ -33,48 +18,35 @@ app.get('/data', (req, res) => {
   res.send(data)
 })
 
-app.post('/save/:section', (req, res) => {
-  const section = req.params.section
+// Save data to source.
+app.post('/save/:dataSourceName', (req, res) => {
+  const dataSourceName = req.params.dataSourceName
 
-  // Only support following sections to be edited.
-  if (!['dictionary', 'terminology', 'translations'].includes(section)) {
-    res.status(400).send('Invalid section parameter!')
+  // Only support following dataSourceNames to be edited.
+  if (!['dictionary', 'terminology', 'translations'].includes(dataSourceName)) {
+    res.status(400).send('Invalid dataSourceName parameter!')
 
     return
   }
 
   // Load data from file.
-  let sourceData = jsonfile.readFileSync(sectionPaths[section])
+  let sourceData = dataHelper.readFile(dataSourceName)
 
-  // Update or delete items.
-  req.body.forEach(item => {
-    // Value of item to be deleted is null, then delete it.
-    if (!item.value) {
-      delete sourceData[item.key]
-
-      return
-    }
-
-    // Trim value if key can be trimed.
-    sourceData[item.key] =
-      item.key !== item.key.trim() ? item.value : item.value.trim()
-  })
-
-  // Sort items of terminology section and dictionary section.
-  if (section === 'terminology' || section === 'dictionary') {
-    sourceData = sortKeys(sourceData)
-  }
+  updateSourceData(sourceData, req.body)
 
   // Write data to file.
-  jsonfile.writeFileSync(sectionPaths[section], sourceData, {
-    spaces: 2
-  })
+  // Sort items of terminology dataSourceName and dictionary dataSourceName.
+  dataHelper.writeFile(
+    dataSourceName,
+    sourceData,
+    ['dictionary', 'terminology'].includes(dataSourceName)
+  )
 
   // Ouput log.
   console.log(
     req.body.length === 1 && req.body[0].value === null
-      ? `Delete ${section}:`
-      : `Save to ${section}:`
+      ? `Delete ${dataSourceName}:`
+      : `Save to ${dataSourceName}:`
   )
   console.log(req.body)
 
@@ -88,41 +60,39 @@ app.listen(3000, () => {
 function loadAllData() {
   const allData = {}
 
-  for (let section in sectionPaths) {
-    switch (section) {
-      case 'i18nFiles':
-        const phabricatori18nFiles = jsonfile.readFileSync(
-          sectionPaths[section][0]
-        )
-        const libphutili18nFiles = jsonfile.readFileSync(
-          sectionPaths[section][1]
-        )
-
-        allData.categories = buildCategories(
-          phabricatori18nFiles,
-          libphutili18nFiles
-        )
-
-        break
-
-      case 'similars':
-        allData[section] = getSimilars(
-          jsonfile.readFileSync(sectionPaths[section]),
-          allData.translations
-        )
-
-        break
-
-      default:
-        allData[section] = sortKeys(
-          jsonfile.readFileSync(sectionPaths[section])
-        )
-
-        break
-    }
+  for (let dataSourceName of [
+    'prototype_applications',
+    'translations',
+    'dictionary',
+    'terminology'
+  ]) {
+    allData[dataSourceName] = dataHelper.readFile(dataSourceName, true)
   }
 
+  const phabricatori18nFiles = dataHelper.readFile('phabricator_i18n_files')
+  const libphutili18nFiles = dataHelper.readFile('libphutil_i18n_files')
+  const discoverSimilars = dataHelper.readFile('discover_similars')
+
+  allData.categories = buildCategories(phabricatori18nFiles, libphutili18nFiles)
+  allData.similars = getSimilars(discoverSimilars, allData.translations)
+
   return allData
+}
+
+// Update or delete items.
+function updateSourceData(sourceData, items) {
+  items.forEach(item => {
+    // Value of item to be deleted is null, then delete it.
+    if (!item.value) {
+      delete sourceData[item.key]
+
+      return
+    }
+
+    // Trim value if key can be trimed.
+    sourceData[item.key] =
+      item.key !== item.key.trim() ? item.value : item.value.trim()
+  })
 }
 
 function buildCategories(phabricatori18nFiles, libphutili18nFiles) {
@@ -130,7 +100,7 @@ function buildCategories(phabricatori18nFiles, libphutili18nFiles) {
 
   getCategories(categories, phabricatori18nFiles, '')
 
-  if (SHOW_LIBPHUTIL) {
+  if (dataHelper.INCLUDE_LIBPHUTIL) {
     getCategories(categories, libphutili18nFiles, '[libphutil]')
   }
 
@@ -139,7 +109,7 @@ function buildCategories(phabricatori18nFiles, libphutili18nFiles) {
 
 function getCategories(categories, i18nFiles, prefix) {
   for (let file in i18nFiles.files) {
-    if (!SHOW_TEST_CASE && file.endsWith('TestCase.php')) {
+    if (!dataHelper.INCLUDE_TEST_CASE && file.endsWith('TestCase.php')) {
       continue
     }
 
