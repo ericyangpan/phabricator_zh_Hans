@@ -47,6 +47,7 @@ badge | 徽章
 blame | 追溯
 byte | 字节
 cat | 猫|cat
+certificate | 证书
 collation | 字符序
 colon | 冒号
 comma | 逗号
@@ -59,6 +60,7 @@ control | 控制|控件
 conversion | 转化
 creation | 创建
 cursor | 游标
+customize | 自定义
 datasource | 数据源
 decode | 解码
 default | 默认
@@ -83,6 +85,7 @@ exit | 退出
 factor | 因素
 fetch | 获取
 filename | 文件名
+finish | 完成
 flag | 标志
 footer | 页脚
 foreground | 前台
@@ -91,6 +94,7 @@ full domain | 完整域名
 graph | 图表
 guide | 指南
 haiku | 俳句
+handshake | 握手
 hashtag | 唯一标签
 header | 标头|页头
 highlight | 高亮
@@ -122,10 +126,12 @@ linked | 关联
 longer than | 长于
 lowercase | 小写
 mailer | 邮件程序
+maintenance | 维护
 manually | 手动
 maximum | 最大
 membership | 成员身份
 merge | 合并
+minimize | 最小化
 minimum | 最小
 monogram | 字母组合
 month | 月
@@ -170,11 +176,13 @@ reachable | 可访问
 real name | 真实姓名
 receiver | 接收人
 recipient | 收件人|接收者
+recovery | 恢复
 reload | 重新加载
 remove | 移除
 renamed | 重命名
 replace | 替换
 repository | 仓库
+retention | 保留
 retention policy | 保留策略
 revert | 还原
 root | 根
@@ -221,6 +229,7 @@ uppercase | 大写
 very | 非常
 webserver | Web 服务器
 week | 周
+window | 窗口|Windows
 workboard | 工作板
 worker | 工作者
 working copy | 工作副本

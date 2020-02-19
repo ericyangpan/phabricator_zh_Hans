@@ -73,6 +73,7 @@
   },
   "View All Results": {
     "s2": [
+      "View All %d Subscriber(s)",
       "View All Builds",
       "View All Charges",
       "View All Invoices",
@@ -3453,12 +3454,6 @@
       "Shows the local path where the diff came from."
     ]
   },
-  "%s (branched from %s)": {
-    "s4": [
-      "%s (branched from %s on %s)",
-      "%s (branched from %s)"
-    ]
-  },
   "Lists associated tasks.": {
     "s2": [
       "Change associated tasks.",
@@ -6433,6 +6428,7 @@
   },
   "Back to Revision": {
     "s2": [
+      "Back to Content Types",
       "Back to HEAD",
       "Back to Revision"
     ]
@@ -10630,7 +10626,6 @@
       "%s / %s",
       "%s Query: %s",
       "%s and %s",
-      "%s at %s",
       "%s by %s, %s",
       "%s deleted %s (again?).",
       "%s from %s",
@@ -10641,7 +10636,6 @@
       "%s unlocked %s membership.",
       "%s vs %s",
       "%s wrote in %s",
-      "%s » %s",
       "%s ♻ %s",
       "%s: %s -> %s",
       "By %s on %s",
@@ -11217,12 +11211,10 @@
       "%s / %s",
       "%s Query: %s",
       "%s and %s",
-      "%s at %s",
       "%s from %s",
       "%s of %s",
       "%s requested %s",
       "%s vs %s",
-      "%s » %s",
       "%s ♻ %s",
       "Back %s %s",
       "Fund %s %s",
@@ -16316,7 +16308,6 @@
       "%s / %s",
       "%s Query: %s",
       "%s and %s",
-      "%s at %s",
       "%s by %s, %s",
       "%s deleted %s (again?).",
       "%s from %s",
@@ -16328,7 +16319,6 @@
       "%s unlocked %s membership.",
       "%s vs %s",
       "%s wrote in %s",
-      "%s » %s",
       "%s ♻ %s",
       "%s: %s -> %s",
       "By %s on %s",
@@ -19845,6 +19835,7 @@
   },
   "View All Charges": {
     "s2": [
+      "View All %d Subscriber(s)",
       "View All Builds",
       "View All Charges",
       "View All Invoices",
@@ -20104,9 +20095,7 @@
       "You must provide a name for this purchase."
     ],
     "s5": [
-      "You must choose a content type for this rule.",
       "You must choose a name for your build plan.",
-      "You must choose a rule type for this rule.",
       "You must choose a space for this object.",
       "You must provide a name for this purchase."
     ]
@@ -20121,8 +20110,6 @@
       "You must provide a name for this panel."
     ],
     "s5": [
-      "You must choose a content type for this rule.",
-      "You must choose a rule type for this rule.",
       "You must choose a space for this object.",
       "You must provide a cost for this purchase."
     ]
@@ -23444,87 +23431,87 @@
   },
   "%s closed %s as %s.": {
     "s3": [
-      "%s closed %s as %s.",
-      "%s held %s as a draft.",
-      "%s added %s reviewer(s): %s.",
-      "%s removed %s reviewer(s): %s.",
-      "%s added %s blocking reviewer(s): %s.",
-      "%s removed %s blocking reviewer(s): %s.",
-      "%s added %s child revision(s): %s.",
-      "%s removed %s child revision(s): %s.",
-      "%s added %s commit(s): %s.",
-      "%s removed %s commit(s): %s.",
-      "%s added %s task(s): %s.",
-      "%s removed %s task(s): %s.",
-      "%s added %s parent revision(s): %s.",
-      "%s removed %s parent revision(s): %s.",
-      "%s added %s automation blueprint(s): %s.",
-      "%s removed %s automation blueprint(s): %s.",
-      "%s invited %s attendee(s): %s.",
-      "%s uninvited %s attendee(s): %s.",
-      "%s added %s merchant manager(s): %s.",
-      "%s removed %s merchant manager(s): %s.",
+      "%s added %d %s hashtag(s): %s.",
       "%s added %s account manager(s): %s.",
-      "%s removed %s account manager(s): %s.",
-      "%s merged %s task(s): %s.",
-      "%s reopened this task as %s.",
-      "%s reopened %s as \"%s\".",
-      "%s merged task %s into %s.",
-      "%s triaged %s as %s priority.",
+      "%s added %s auditor(s): %s.",
+      "%s added %s automation blueprint(s): %s.",
+      "%s added %s blocking reviewer(s): %s.",
+      "%s added %s child revision(s): %s.",
+      "%s added %s commit(s): %s.",
+      "%s added %s contributor(s): %s.",
+      "%s added %s edge(s): %s.",
+      "%s added %s file(s): %s.",
+      "%s added %s member(s): %s.",
+      "%s added %s merchant manager(s): %s.",
+      "%s added %s mock(s): %s.",
+      "%s added %s owner(s): %s.",
+      "%s added %s parent revision(s): %s.",
+      "%s added %s parent task(s): %s.",
+      "%s added %s project(s): %s.",
+      "%s added %s reverted change(s): %s.",
+      "%s added %s reverting change(s): %s.",
+      "%s added %s reviewer(s): %s.",
+      "%s added %s revision(s): %s.",
+      "%s added %s subscriber(s): %s.",
+      "%s added %s subtask(s): %s.",
+      "%s added %s task(s): %s.",
+      "%s added %s unsubscriber(s): %s.",
+      "%s added %s watcher(s): %s.",
       "%s assigned %s to %s.",
       "%s attached %s file(s): %s.",
-      "%s detached %s file(s): %s.",
-      "%s added %s subtask(s): %s.",
-      "%s removed %s subtask(s): %s.",
-      "%s added %s mock(s): %s.",
-      "%s removed %s mock(s): %s.",
-      "%s added %s revision(s): %s.",
-      "%s removed %s revision(s): %s.",
-      "%s added %s parent task(s): %s.",
-      "%s removed %s parent task(s): %s.",
-      "%s replaced %s with %s.",
-      "%s moved %s to %s.",
-      "%s completed building %s for %s.",
-      "%s added %s auditor(s): %s.",
-      "%s removed %s auditor(s): %s.",
-      "%s added %s reverting change(s): %s.",
-      "%s removed %s reverting change(s): %s.",
-      "%s added %s reverted change(s): %s.",
-      "%s removed %s reverted change(s): %s.",
-      "%s closed this question as resolved.",
-      "%s closed this question as obsolete.",
-      "%s closed this question as invalid.",
-      "%s marked %s as visible.",
-      "%s marked %s as hidden.",
-      "%s added %d %s hashtag(s): %s.",
-      "%s removed %d %s hashtag(s): %s.",
-      "%s added %s project(s): %s.",
-      "%s removed %s project(s): %s.",
-      "%s added %s member(s): %s.",
-      "%s removed %s member(s): %s.",
-      "%s added %s subscriber(s): %s.",
-      "%s removed %s subscriber(s): %s.",
-      "%s added %s watcher(s): %s.",
-      "%s removed %s watcher(s): %s.",
-      "%s added %s contributor(s): %s.",
-      "%s removed %s contributor(s): %s.",
-      "%s added %s unsubscriber(s): %s.",
-      "%s removed %s unsubscriber(s): %s.",
-      "%s added %s file(s): %s.",
-      "%s removed %s file(s): %s.",
+      "%s backed %s with %s.",
+      "%s closed %s as %s.",
       "%s closed the audit of %s.",
+      "%s closed this question as invalid.",
+      "%s closed this question as obsolete.",
+      "%s closed this question as resolved.",
+      "%s completed building %s for %s.",
+      "%s detached %s file(s): %s.",
+      "%s edited %s on %s.",
       "%s empowered %s as an administrator.",
-      "%s added %s owner(s): %s.",
-      "%s removed %s owner(s): %s.",
+      "%s held %s as a draft.",
+      "%s invited %s attendee(s): %s.",
       "%s marked %s as a draft.",
       "%s marked %s as archived.",
+      "%s marked %s as hidden.",
+      "%s marked %s as visible.",
+      "%s merged %s task(s): %s.",
+      "%s merged task %s into %s.",
+      "%s moved %s to %s.",
       "%s refunded %s to %s.",
-      "%s backed %s with %s.",
-      "%s set %s to %s.",
+      "%s removed %d %s hashtag(s): %s.",
+      "%s removed %s account manager(s): %s.",
+      "%s removed %s auditor(s): %s.",
+      "%s removed %s automation blueprint(s): %s.",
+      "%s removed %s blocking reviewer(s): %s.",
+      "%s removed %s child revision(s): %s.",
+      "%s removed %s commit(s): %s.",
+      "%s removed %s contributor(s): %s.",
+      "%s removed %s edge(s): %s.",
+      "%s removed %s file(s): %s.",
+      "%s removed %s member(s): %s.",
+      "%s removed %s merchant manager(s): %s.",
+      "%s removed %s mock(s): %s.",
       "%s removed %s on %s.",
-      "%s edited %s on %s.",
-      "%s added %s edge(s): %s.",
-      "%s removed %s edge(s): %s."
+      "%s removed %s owner(s): %s.",
+      "%s removed %s parent revision(s): %s.",
+      "%s removed %s parent task(s): %s.",
+      "%s removed %s project(s): %s.",
+      "%s removed %s reverted change(s): %s.",
+      "%s removed %s reverting change(s): %s.",
+      "%s removed %s reviewer(s): %s.",
+      "%s removed %s revision(s): %s.",
+      "%s removed %s subscriber(s): %s.",
+      "%s removed %s subtask(s): %s.",
+      "%s removed %s task(s): %s.",
+      "%s removed %s unsubscriber(s): %s.",
+      "%s removed %s watcher(s): %s.",
+      "%s reopened %s as \"%s\".",
+      "%s reopened this task as %s.",
+      "%s replaced %s with %s.",
+      "%s set %s to %s.",
+      "%s triaged %s as %s priority.",
+      "%s uninvited %s attendee(s): %s."
     ],
     "s4": [
       "%s closed %s as %s.",
@@ -28934,6 +28921,44 @@
       "%s edited this %s."
     ]
   },
+  "View History": {
+    "s2": [
+      "View Edit History",
+      "View History"
+    ]
+  },
+  "Setup Issues": {
+    "s2": [
+      "Account Setup Issues",
+      "Resolve Setup Issues",
+      "Setup Issues",
+      "Unresolved Setup Issues"
+    ]
+  },
+  "Phabricator Version Information": {
+    "s2": [
+      "Other Version Information",
+      "Phabricator Version Information"
+    ]
+  },
+  "Not Available": {
+    "s2": [
+      "Not Available",
+      "OAuth Not Available"
+    ]
+  },
+  "No Issues": {
+    "s2": [
+      "No Issues",
+      "No Schema Issues"
+    ]
+  },
+  "Unignore this setup issue?": {
+    "s3": [
+      "Really ignore this setup issue?",
+      "Unignore this setup issue?"
+    ]
+  },
   "Not Enabled": {
     "s2": [
       "Not Enabled",
@@ -28947,7 +28972,6 @@
       "%s / %s",
       "%s Query: %s",
       "%s and %s",
-      "%s at %s",
       "%s by %s, %s",
       "%s deleted %s (again?).",
       "%s from %s",
@@ -28957,7 +28981,6 @@
       "%s unlocked %s membership.",
       "%s vs %s",
       "%s wrote in %s",
-      "%s » %s",
       "%s ♻ %s",
       "%s: %s -> %s",
       "By %s on %s",
@@ -28971,12 +28994,6 @@
     "s3": [
       "%s of %s",
       "%s of %s %s"
-    ]
-  },
-  "Cluster Database Status": {
-    "s2": [
-      "Cluster Database Status",
-      "Cluster Repository Status"
     ]
   },
   "Up to Date": {
@@ -28994,7 +29011,6 @@
       "%s Held / %sms",
       "%s Query: %s",
       "%s and %s",
-      "%s at %s",
       "%s by %s, %s",
       "%s deleted %s (again?).",
       "%s from %s",
@@ -29005,7 +29021,6 @@
       "%s unlocked %s membership.",
       "%s vs %s",
       "%s wrote in %s",
-      "%s » %s",
       "%s ♻ %s",
       "%s: %s -> %s",
       "By %s on %s",
@@ -29041,71 +29056,10 @@
       "No repository cluster services are configured."
     ]
   },
-  "Not Available": {
-    "s2": [
-      "Not Available",
-      "OAuth Not Available"
-    ]
-  },
-  "- at %s": {
-    "s2": [
-      "%s at %s",
-      "- at %s",
-      "Completed at %s",
-      "Queued at %s",
-      "Started at %s"
-    ]
-  },
-  "%s at %s": {
-    "s2": [
-      "%s %s %s",
-      "%s - %s",
-      "%s / %s",
-      "%s Query: %s",
-      "%s and %s",
-      "%s at %s",
-      "%s at version %d",
-      "%s by %s, %s",
-      "%s deleted %s (again?).",
-      "%s from %s",
-      "%s locked %s membership.",
-      "%s of %s",
-      "%s of %s %s",
-      "%s requested %s",
-      "%s unlocked %s membership.",
-      "%s vs %s",
-      "%s wrote in %s",
-      "%s » %s",
-      "%s ♻ %s",
-      "%s: %s -> %s",
-      "- at %s",
-      "By %s on %s",
-      "Completed at %s",
-      "Expires %s · %s",
-      "Queued at %s",
-      "Requested %s by %s",
-      "Started at %s",
-      "Version %s vs %s"
-    ]
-  },
   "No search servers are configured.": {
     "s3": [
       "No repository cluster services are configured.",
       "No search servers are configured."
-    ]
-  },
-  "Setup Issues": {
-    "s2": [
-      "Account Setup Issues",
-      "Resolve Setup Issues",
-      "Setup Issues",
-      "Unresolved Setup Issues"
-    ]
-  },
-  "No Issues": {
-    "s2": [
-      "No Issues",
-      "No Schema Issues"
     ]
   },
   "Really Clear Cache?": {
@@ -29118,24 +29072,6 @@
     "s2": [
       "Clear Cache",
       "Really Clear Cache"
-    ]
-  },
-  "Database Status": {
-    "s2": [
-      "Cluster Database Status",
-      "Database Status"
-    ]
-  },
-  "Unignore this setup issue?": {
-    "s3": [
-      "Really ignore this setup issue?",
-      "Unignore this setup issue?"
-    ]
-  },
-  "Repository Status": {
-    "s2": [
-      "Cluster Repository Status",
-      "Repository Status"
     ]
   },
   "Repository %s has unreplicated changes.": {
@@ -29152,6 +29088,12 @@
     "s5": [
       "Detected %s serious issue(s) with the schemata.",
       "Detected %s warning(s) with the schemata."
+    ]
+  },
+  "Database Status": {
+    "s2": [
+      "Cluster Database Status",
+      "Database Status"
     ]
   },
   "Character Set": {
@@ -29966,12 +29908,6 @@
       "Use %s to render a pager element.",
       "Use %s to render errors, warnings and notices.",
       "Use %s to render lists of objects."
-    ]
-  },
-  "View History": {
-    "s2": [
-      "View Edit History",
-      "View History"
     ]
   },
   "Use %s to render buttons.": {
@@ -33140,10 +33076,8 @@
   },
   "You must choose a password or skip this step.": {
     "s5": [
-      "You must choose a content type for this rule.",
       "You must choose a password or skip this step.",
-      "You must choose a revision or commit to build.",
-      "You must choose a rule type for this rule."
+      "You must choose a revision or commit to build."
     ]
   },
   "You must choose a password.": {
@@ -40208,7 +40142,6 @@
   "Cluster Status": {
     "s2": [
       "Cluster Database Status",
-      "Cluster Repository Status",
       "Cluster Status"
     ]
   },
@@ -41569,7 +41502,6 @@
       "%s / %s",
       "%s Query: %s",
       "%s and %s",
-      "%s at %s",
       "%s by %s, %s",
       "%s deleted %s (again?).",
       "%s from %s",
@@ -41580,7 +41512,6 @@
       "%s unlocked %s membership.",
       "%s vs %s",
       "%s wrote in %s",
-      "%s » %s",
       "%s ♻ %s",
       "%s: %s -> %s",
       "By %s on %s",
@@ -41724,12 +41655,6 @@
       "Hosted by %s on %s.",
       "Run command %s on %s.",
       "Written by %s on %s."
-    ]
-  },
-  "%s (on %s at %s)": {
-    "s3": [
-      "%s (branched from %s on %s)",
-      "%s (on %s at %s)"
     ]
   },
   "%s (on %s)": {
@@ -44914,6 +44839,12 @@
       "No details provided."
     ]
   },
+  "View Details": {
+    "s2": [
+      "View Details",
+      "View Panel Details"
+    ]
+  },
   "The ID of the current build.": {
     "s4": [
       "The ID of the current build.",
@@ -45480,6 +45411,13 @@
     "s2": [
       "View Current Build",
       "View External Build Results"
+    ]
+  },
+  "Completed at %s": {
+    "s2": [
+      "Completed at %s",
+      "Queued at %s",
+      "Started at %s"
     ]
   },
   "Waiting for %s": {
@@ -46915,6 +46853,12 @@
     "s2": [
       "Promote Snapshot to Here",
       "Revert to Here"
+    ]
+  },
+  "View Version %d": {
+    "s2": [
+      "View All %d Subscriber(s)",
+      "View Version %d"
     ]
   },
   "View Version": {
@@ -50812,12 +50756,6 @@
       "Choose a valid project to move tasks to."
     ]
   },
-  "New Rule": {
-    "s2": [
-      "New Rule",
-      "New Rule for"
-    ]
-  },
   "This column is visible because it represents an active subproject. Do you want to hide the column by archiving the subproject?": {
     "s13": [
       "This column is hidden because it represents an archived subproject. Do you want to activate the subproject so the column is visible again?",
@@ -52962,9 +52900,7 @@
       "You must provide a name for this purchase."
     ],
     "s5": [
-      "You must choose a content type for this rule.",
       "You must choose a name for your build plan.",
-      "You must choose a rule type for this rule.",
       "You must choose a space for this object.",
       "You must provide a name for this panel."
     ]
@@ -57298,11 +57234,6 @@
       "You must provide a cost for this purchase.",
       "You must provide a name for this panel.",
       "You must provide a name for this purchase."
-    ],
-    "s6": [
-      "You must choose a content type for this rule.",
-      "You must choose a rule type for this rule.",
-      "You must choose a space for this object."
     ]
   },
   "The subtype \"%s\" is not a valid subtype.": {
@@ -69218,22 +69149,6 @@
       "New Test Request"
     ]
   },
-  "You must choose a content type for this rule.": {
-    "s5": [
-      "You must choose a content type for this rule.",
-      "You must choose a password or skip this step."
-    ],
-    "s8": [
-      "You must choose a content type for this rule.",
-      "You must choose a rule type for this rule."
-    ]
-  },
-  "You must choose a rule type for this rule.": {
-    "s5": [
-      "You must choose a password or skip this step.",
-      "You must choose a rule type for this rule."
-    ]
-  },
   "Create Herald Rule": {
     "s2": [
       "Create Herald Rule",
@@ -69244,19 +69159,6 @@
     "s3": [
       "Create Herald Rule: %s",
       "Edit Herald Rule: %s"
-    ]
-  },
-  "Rule for": {
-    "s2": [
-      "New Rule for",
-      "Rule for"
-    ]
-  },
-  "Rule Type": {
-    "s2": [
-      "Invalid Rule Type",
-      "Rule Type",
-      "Wrong Rule Type"
     ]
   },
   "Create Rule": {
@@ -69291,6 +69193,13 @@
       "This rule type is not supported by the selected content type."
     ]
   },
+  "Rule Type": {
+    "s2": [
+      "Invalid Rule Type",
+      "Rule Type",
+      "Wrong Rule Type"
+    ]
+  },
   "The %s repository is still importing.": {
     "s4": [
       "The %s repository is not tracked.",
@@ -69310,7 +69219,6 @@
       "%s / %s",
       "%s Query: %s",
       "%s and %s",
-      "%s at %s",
       "%s by %s, %s",
       "%s deleted %s (again?).",
       "%s from %s",
@@ -69320,7 +69228,6 @@
       "%s unlocked %s membership.",
       "%s vs %s",
       "%s wrote in %s",
-      "%s » %s",
       "%s ♻ %s",
       "%s: %s -> %s",
       "Back %s %s",
@@ -71801,7 +71708,6 @@
       "%s / %s",
       "%s Query: %s",
       "%s and %s",
-      "%s at %s",
       "%s by %s, %s",
       "%s deleted %s (again?).",
       "%s from %s",
@@ -71812,7 +71718,6 @@
       "%s unlocked %s membership.",
       "%s vs %s",
       "%s wrote in %s",
-      "%s » %s",
       "%s ♻ %s",
       "%s: %s -> %s",
       "By %s on %s",
@@ -76772,12 +76677,6 @@
       "Defines a repository service for use in a Phabricator cluster."
     ]
   },
-  "Cluster Repository": {
-    "s2": [
-      "Cluster Repository",
-      "Cluster Repository Status"
-    ]
-  },
   "Allow New Repositories": {
     "s2": [
       "Allow New Repositories",
@@ -78953,7 +78852,6 @@
   },
   "%s removed %s on %s.": {
     "s3": [
-      "%s (branched from %s on %s)",
       "%s added %d %s hashtag(s): %s.",
       "%s added %s account manager(s): %s.",
       "%s added %s auditor(s): %s.",
@@ -79396,88 +79294,87 @@
   },
   "%s edited %s on %s.": {
     "s3": [
-      "%s edited %s on %s.",
-      "%s added %s reviewer(s): %s.",
-      "%s removed %s reviewer(s): %s.",
-      "%s added %s blocking reviewer(s): %s.",
-      "%s removed %s blocking reviewer(s): %s.",
-      "%s added %s child revision(s): %s.",
-      "%s removed %s child revision(s): %s.",
-      "%s added %s commit(s): %s.",
-      "%s removed %s commit(s): %s.",
-      "%s added %s task(s): %s.",
-      "%s removed %s task(s): %s.",
-      "%s added %s parent revision(s): %s.",
-      "%s removed %s parent revision(s): %s.",
-      "%s closed %s by committing %s.",
-      "Authored by %s on %s.",
-      "%s added %s automation blueprint(s): %s.",
-      "%s removed %s automation blueprint(s): %s.",
-      "%s invited %s attendee(s): %s.",
-      "%s uninvited %s attendee(s): %s.",
-      "Hosted by %s on %s.",
-      "%s added %s merchant manager(s): %s.",
-      "%s removed %s merchant manager(s): %s.",
+      "%s added %d %s hashtag(s): %s.",
       "%s added %s account manager(s): %s.",
-      "%s removed %s account manager(s): %s.",
-      "%s edited the description of %s.",
-      "Asked by %s on %s.",
-      "%s merged %s task(s): %s.",
-      "%s reopened subtask %s as %s.",
-      "%s closed subtask %s as %s.",
-      "%s closed %s as %s.",
-      "%s merged task %s into %s.",
+      "%s added %s auditor(s): %s.",
+      "%s added %s automation blueprint(s): %s.",
+      "%s added %s blocking reviewer(s): %s.",
+      "%s added %s child revision(s): %s.",
+      "%s added %s commit(s): %s.",
+      "%s added %s contributor(s): %s.",
+      "%s added %s edge(s): %s.",
+      "%s added %s file(s): %s.",
+      "%s added %s member(s): %s.",
+      "%s added %s merchant manager(s): %s.",
+      "%s added %s mock(s): %s.",
+      "%s added %s owner(s): %s.",
+      "%s added %s parent revision(s): %s.",
+      "%s added %s parent task(s): %s.",
+      "%s added %s project(s): %s.",
+      "%s added %s reverted change(s): %s.",
+      "%s added %s reverting change(s): %s.",
+      "%s added %s reviewer(s): %s.",
+      "%s added %s revision(s): %s.",
+      "%s added %s subscriber(s): %s.",
+      "%s added %s subtask(s): %s.",
+      "%s added %s task(s): %s.",
+      "%s added %s unsubscriber(s): %s.",
+      "%s added %s watcher(s): %s.",
       "%s assigned %s to %s.",
       "%s attached %s file(s): %s.",
-      "%s detached %s file(s): %s.",
-      "%s added %s subtask(s): %s.",
-      "%s removed %s subtask(s): %s.",
-      "%s added %s mock(s): %s.",
-      "%s removed %s mock(s): %s.",
-      "%s added %s revision(s): %s.",
-      "%s removed %s revision(s): %s.",
-      "%s added %s parent task(s): %s.",
-      "%s removed %s parent task(s): %s.",
-      "%s (branched from %s on %s)",
-      "%s replaced %s with %s.",
-      "Created by %s on %s.",
-      "%s edited the content of %s.",
-      "%s moved %s to %s.",
-      "%s completed building %s for %s.",
-      "%s added %s auditor(s): %s.",
-      "%s removed %s auditor(s): %s.",
-      "%s added %s reverting change(s): %s.",
-      "%s removed %s reverting change(s): %s.",
-      "%s added %s reverted change(s): %s.",
-      "%s removed %s reverted change(s): %s.",
-      "Run command %s on %s.",
-      "%s added %d %s hashtag(s): %s.",
-      "%s removed %d %s hashtag(s): %s.",
-      "%s added %s project(s): %s.",
-      "%s removed %s project(s): %s.",
-      "%s added %s member(s): %s.",
-      "%s removed %s member(s): %s.",
-      "%s edited edge metadata for %s.",
-      "%s added %s subscriber(s): %s.",
-      "%s removed %s subscriber(s): %s.",
-      "%s added %s watcher(s): %s.",
-      "%s removed %s watcher(s): %s.",
-      "%s added %s contributor(s): %s.",
-      "%s removed %s contributor(s): %s.",
-      "%s added %s unsubscriber(s): %s.",
-      "%s removed %s unsubscriber(s): %s.",
-      "%s added %s file(s): %s.",
-      "%s removed %s file(s): %s.",
-      "Masterfully imagined by %s on %s.",
-      "%s added %s owner(s): %s.",
-      "%s removed %s owner(s): %s.",
-      "Written by %s on %s.",
-      "%s refunded %s to %s.",
       "%s backed %s with %s.",
-      "%s set %s to %s.",
+      "%s closed %s as %s.",
+      "%s closed %s by committing %s.",
+      "%s closed subtask %s as %s.",
+      "%s completed building %s for %s.",
+      "%s detached %s file(s): %s.",
+      "%s edited %s on %s.",
+      "%s edited edge metadata for %s.",
+      "%s edited the content of %s.",
+      "%s edited the description of %s.",
+      "%s invited %s attendee(s): %s.",
+      "%s merged %s task(s): %s.",
+      "%s merged task %s into %s.",
+      "%s moved %s to %s.",
+      "%s refunded %s to %s.",
+      "%s removed %d %s hashtag(s): %s.",
+      "%s removed %s account manager(s): %s.",
       "%s removed %s as %s.",
-      "%s added %s edge(s): %s.",
-      "%s removed %s edge(s): %s."
+      "%s removed %s auditor(s): %s.",
+      "%s removed %s automation blueprint(s): %s.",
+      "%s removed %s blocking reviewer(s): %s.",
+      "%s removed %s child revision(s): %s.",
+      "%s removed %s commit(s): %s.",
+      "%s removed %s contributor(s): %s.",
+      "%s removed %s edge(s): %s.",
+      "%s removed %s file(s): %s.",
+      "%s removed %s member(s): %s.",
+      "%s removed %s merchant manager(s): %s.",
+      "%s removed %s mock(s): %s.",
+      "%s removed %s owner(s): %s.",
+      "%s removed %s parent revision(s): %s.",
+      "%s removed %s parent task(s): %s.",
+      "%s removed %s project(s): %s.",
+      "%s removed %s reverted change(s): %s.",
+      "%s removed %s reverting change(s): %s.",
+      "%s removed %s reviewer(s): %s.",
+      "%s removed %s revision(s): %s.",
+      "%s removed %s subscriber(s): %s.",
+      "%s removed %s subtask(s): %s.",
+      "%s removed %s task(s): %s.",
+      "%s removed %s unsubscriber(s): %s.",
+      "%s removed %s watcher(s): %s.",
+      "%s reopened subtask %s as %s.",
+      "%s replaced %s with %s.",
+      "%s set %s to %s.",
+      "%s uninvited %s attendee(s): %s.",
+      "Asked by %s on %s.",
+      "Authored by %s on %s.",
+      "Created by %s on %s.",
+      "Hosted by %s on %s.",
+      "Masterfully imagined by %s on %s.",
+      "Run command %s on %s.",
+      "Written by %s on %s."
     ],
     "s4": [
       "%s edited %s on %s.",
@@ -79806,7 +79703,6 @@
       "%s / %s",
       "%s Query: %s",
       "%s and %s",
-      "%s at %s",
       "%s by %s, %s",
       "%s deleted %s (again?).",
       "%s from %s",
@@ -79817,7 +79713,6 @@
       "%s unlocked %s membership.",
       "%s vs %s",
       "%s wrote in %s",
-      "%s » %s",
       "%s ♻ %s",
       "%s: %s -> %s",
       "By %s on %s",
