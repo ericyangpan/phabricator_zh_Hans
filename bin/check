@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+const axios = require('axios')
+const cheerio = require('cheerio')
+
+async function main() {
+  const response = await axios.get(
+    'https://secure.phabricator.com/source/phabricator/branches/stable/'
+  )
+  const $ = cheerio.load(response.data)
+
+  const commit = $(
+    '.phui-oi-name:first-child:contains(stable)~.phui-oi-content .phui-oi-subhead'
+  ).text()
+
+  console.log(commit, '\n')
+  console.log(
+    /\(stable\) Promote 20\d{2} Week \d{1,2}/.test(commit)
+      ? 'Matched!'
+      : 'Not found!'
+  )
+
+  process.exit(0)
+}
+
+main()

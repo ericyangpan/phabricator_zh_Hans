@@ -9,6 +9,7 @@
     "compile": "./bin/compile",
     "update": "./bin/update",
     "crop": "./bin/crop",
+    "check": "./bin/check",
     "discover-all": "./bin/discover all",
     "discover-similar": "./bin/discover similar",
     "discover-obsoleted": "./bin/discover obsoleted",
@@ -34,6 +35,8 @@
     "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
     "jimp": "^0.9.3"
   }
 }
