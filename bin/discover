@@ -192,16 +192,9 @@ function cleanupDuplicatedSimilarStrings(similars) {
 
       for (let sameSize0 in similars[str0]) {
         for (let sameSize1 in similars[str1]) {
-          if (
-            similars[str0][sameSize0].length !==
-            similars[str1][sameSize1].length
-          )
-            continue
+          if (similars[str0][sameSize0].length !== similars[str1][sameSize1].length) continue
 
-          if (
-            JSON.stringify(similars[str0][sameSize0].sort()) ===
-            JSON.stringify(similars[str1][sameSize1].sort())
-          ) {
+          if (JSON.stringify(similars[str0][sameSize0].sort()) === JSON.stringify(similars[str1][sameSize1].sort())) {
             delete similars[str1][sameSize1]
 
             if (Object.keys(similars[str1]).length === 0) {
@@ -237,8 +230,7 @@ function getTerminologies() {
     let regexTranslationString
 
     if (words[word].endsWith('的')) {
-      regexTranslationString =
-        words[word] + '|' + words[word].substr(0, words[word].length - 1)
+      regexTranslationString = words[word] + '|' + words[word].substr(0, words[word].length - 1)
     } else {
       regexTranslationString = words[word]
     }
@@ -291,10 +283,10 @@ function getUnitItems() {
       const translation = translationsData[str]
 
       if (translation) {
-        if (translation.indexOf('一') !== -1) {
-          resultStrings['type2']['no_one'][str] = translation
-        } else {
+        if (translation.includes('一')) {
           resultStrings['type2']['has_one'][str] = translation
+        } else {
+          resultStrings['type2']['no_one'][str] = translation
         }
       } else {
         resultStrings['type2']['empty'][str] = ''
