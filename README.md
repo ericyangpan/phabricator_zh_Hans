@@ -24,15 +24,15 @@
 
 ## 下载地址
 
-最新版本：[dist/(stable) Promote 2020 Week 6/PhabricatorSimplifiedChineseTranslation.php](dist/(stable)%20Promote%202020%20Week%206/PhabricatorSimplifiedChineseTranslation.php)
+最新版本：[dist/(stable) Promote 2020 Week 21/PhabricatorSimplifiedChineseTranslation.php](dist/(stable)%20Promote%202020%20Week%2021/PhabricatorSimplifiedChineseTranslation.php)
 
 [历史版本列表](dist)
 
 ## 翻译进度
 
-当前翻译的 Phabricator 版本：[[ff6f24db2b](https://secure.phabricator.com/rPff6f24db2bc016533bca9040954a218c54ca324e)]`(stable) Promote 2020 Week 6`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：fa8f89dd3cc527bf07377205a02432afd4e20831。
+当前翻译的 Phabricator 版本：[[b9d52f38dd](https://secure.phabricator.com/rPb9d52f38ddadafc5b5d768f3cc1003bba80efd05)]`(stable) Promote 2020 Week 21`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：fa8f89dd3cc527bf07377205a02432afd4e20831。
 
-当前翻译的 libphutil 版本：[[034cf7c](https://secure.phabricator.com/rPHU034cf7cc39940b935e83923dbb1bacbcfe645a85)]`(stable) Promote 2020 Week 5`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：dfc3743b5059c0bafbae433698d8b05edf45eaf7。
+当前翻译的 libphutil 版本：[[5e0d502](https://secure.phabricator.com/rPHU5e0d50227091658bef3d5ddc9cfd2e9b97dd600d)]`(stable) Promote 2020 Week 16`，文件 `data/phabricator/i18n_files.json` 的 SHA1 值：dfc3743b5059c0bafbae433698d8b05edf45eaf7。
 
 当前总词条数量：16447 条，不包含原型应用的总词条数量：14055 条。
 
@@ -87,7 +87,7 @@ applications/maniphest | 99% | ========= | 93% | =========
 applications/meta | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/metamta | 92% | ========= | 82% | ========
 applications/multimeter `原型` | 94% | ========= | 94% | =========
-applications/notification | **100%** | ✓✓✓✓✓✓✓✓ | 97% | =========
+applications/notification | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/nuance `原型` | 87% | ======== | 83% | ========
 applications/oauthserver `原型` | 93% | ========= | 79% | =======
 applications/owners | 90% | ========= | 85% | ========
@@ -115,7 +115,7 @@ applications/search | 99% | ========= | 91% | =========
 applications/settings | 99% | ========= | 95% | =========
 applications/slowvote | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/spaces | **100%** | ✓✓✓✓✓✓✓✓ | 89% | ========
-applications/subscriptions | 98% | ========= | 98% | =========
+applications/subscriptions | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/support | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
 applications/system | 94% | ========= | 70% | ======
 applications/tokens | **100%** | ✓✓✓✓✓✓✓✓ | **100%** | ✓✓✓✓✓✓✓✓
@@ -146,7 +146,7 @@ $ npm run compile
 
 然后你将得到五份文件：
 
-1. Phabricator 简体中文翻译文件：[`dist/<version>/PhabricatorSimplifiedChineseTranslation.php`](dist/(stable)%20Promote%202020%20Week%206/PhabricatorSimplifiedChineseTranslation.php)；
+1. Phabricator 简体中文翻译文件：[`dist/<version>/PhabricatorSimplifiedChineseTranslation.php`](dist/(stable)%20Promote%202020%20Week%2021/PhabricatorSimplifiedChineseTranslation.php)；
 2. 重新排序后的翻译数据文件：[`data/translations.json`](data/translations.json)；
 3. 包含最新摘要信息的 README 文件：[`README.md`](README.md)；
 4. 翻译规则列表文件：[`Rules.md`](Rules.md)；

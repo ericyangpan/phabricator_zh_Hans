@@ -4665,6 +4665,14 @@
       "The popular trivia game \"World of Warcraft\" features a race of cat people called the Khajiit.": "流行的琐事游戏“魔兽世界”由称为 Khajiit 的猫人种族主演。"
     }
   },
+  "Percentage": {
+    "translation": "百分比",
+    "yes": 1,
+    "no": 1,
+    "kvp": {
+      "Automatically profile some percentage of pages.": "自动分析部分比率的页面。"
+    }
+  },
   "Period": {
     "translation": "时期",
     "yes": 2,
@@ -4788,7 +4796,7 @@
     "yes": 41,
     "no": 3,
     "kvp": {
-      "Automatically profile some percentage of pages.": "自动分析一些百分比的页面。",
+      "Automatically profile some percentage of pages.": "自动分析部分比率的页面。",
       "Profile 0.1%% of all requests": "分析所有请求的 0.1%%",
       "Profile every request (slow)": "分析每一个请求（慢）"
     }
@@ -6885,6 +6893,7 @@
       "Set current time to %s.": "设置当前时间为 %s。",
       "Set the URI that Phurl will use to share shortened URLs.": "设置 Phurl 将用来分享缩短 URL 的 URI。",
       "Set the interface to bind.": "设置要绑定的接口。",
+      "Setting \"%s\" to be retained indefinitely.": "将“%s”设置为无限期保留。",
       "Setting retention policy for \"%s\" to %s day(s).": "将“%s”的保留策略设置为 %s 天。",
       "Setup issues to ignore.": "要忽略的安装设置问题。",
       "Should Phabricator send desktop notifications? These are sent in addition to the notifications within the Phabricator application.": "Phabricator 应该发送桌面通知吗？除了 Phabricator 应用程序中的通知之外这些也会被发送。",
@@ -7615,8 +7624,7 @@
       "Your tremendous contributions to this project will be sorely missed. Are you sure you want to leave?": "将非常怀念你对这个项目的巨大贡献。你确定要离开吗？",
       "[Phabricator] %s has invited you to join Phabricator": "[Phabricator] %s 已经邀请你加入 Phabricator",
       "[Phabricator] Welcome to Phabricator": "[Phabricator] 欢迎到 Phabricator",
-      "continue to Phabricator": "继续到 Phabricator",
-      "Setting \"%s\" to be retained indefinitely.": "将“%s”设置为无限期保留。"
+      "continue to Phabricator": "继续到 Phabricator"
     }
   },
   "Token": {
