@@ -280,7 +280,7 @@ function getUnitItems() {
   }
 
   const regexType1 = /%[sd] \w+\(s\)/i
-  const regexType2 = /a \w+/i
+  const regexType2 = /(^a| a) \w+/i
 
   for (let str in allStrings) {
     if (regexType1.test(str)) {
