@@ -343,7 +343,7 @@
   },
   "All": {
     "translation": "所有的",
-    "yes": 268,
+    "yes": 269,
     "no": 13,
     "kvp": {
       "%s - %s, All Day": "%s - %s，全天",
@@ -5730,7 +5730,7 @@
   "To": {
     "translation": "送到",
     "yes": 19,
-    "no": 1893,
+    "no": 1894,
     "kvp": {
       "# Fetch received by \"%s\", forwarding to cluster host.\n": "# 获取被“%s”接收，转发到群集主机。\n",
       "# Push received by \"%s\", forwarding to cluster host.\n": "# 推送被“%s”接收，转发到群集主机。\n",
@@ -6765,6 +6765,7 @@
       "Phabricator does not support HTTP access to Subversion repositories.": "Phabricator 不支持对 Subversion 仓库的 HTTP 访问。",
       "Phabricator has been successfully installed. These next guides will take you through configuration and new user orientation. These steps are optional, and you can go through them in any order. If you want to get back to this guide later on, you can find it in {icon globe} **Applications** under {icon map-o} **Guides**.": "Phabricator 已经被成功安装。下面的这些指南将带你通过配置和新用户指引。这些步骤是可选的，并且你可以以任意顺序通过它们。如果你想稍后再回到这个指南，你可以在 {icon globe} **应用** 的 {icon map-o} **指南** 下找到它。",
       "Phabricator is configured to authenticate users using the \"Reply-To\" header, but the reply address (\"%s\") on this message does not correspond to any known user account.": "Phabricator 没有配置使用“Reply-To”标头认证用户，但是这条消息的回复地址（“%s”）没有对应任何已知的用户帐户。",
+      "Phabricator is configured to use a notification server, but is not able to connect to it.": "Phabricator 配置为使用通知服务器，但无法连接到它。",
       "Phabricator is configured to use a notification server, but is unable to connect to it. You should resolve this issue or disable the notification server. It may be helpful to double check your configuration or restart the server using the command below.\n\n%s": "Phabricator 配置为使用通知服务器，但无法连接到它。你应该解决此问题或禁用通知服务器。使用以下命令仔细检查配置或重启服务器可能会有所帮助。\n\n%s",
       "Phabricator is not currently configured to accept inbound mail. You won't be able to interact with objects over email until inbound mail is set up.": "Phabricator 当前没有配置为接受入站邮件。入站邮件被配置好之前你将无法通过邮件和各种对象交互。",
       "Phabricator is running in silent mode; declining to mirror.": "Phabricator 正在运行于静默模式；拒绝镜像。",
@@ -8168,7 +8169,7 @@
   "View": {
     "translation": "视图",
     "yes": 23,
-    "no": 170,
+    "no": 171,
     "kvp": {
       "%s (You do not have permission to view policy details.)": "%s（你没有查看策略详情权限。）",
       "A merchant's members an always view and edit it.": "一个商家的成员可以总是查看和编辑它。",
@@ -8248,6 +8249,7 @@
       "View API Token": "查看 API 令牌",
       "View Active Keys": "查看活跃的密钥",
       "View All": "查看所有",
+      "View All %d Subscriber(s)": "查看所有 %d 位订阅者",
       "View All Builds": "查看所有构建",
       "View All Charges": "查看所有付款",
       "View All Invoices": "查看所有发票",
@@ -8344,7 +8346,7 @@
   },
   "View All": {
     "translation": "查看所有",
-    "yes": 10,
+    "yes": 11,
     "no": 4,
     "kvp": {
       "To edit a wiki document, you must also be able to view all of its ancestors.": "要编辑一个 Wiki 文档，你必须也能够查看其所有祖先。",
@@ -8596,7 +8598,7 @@
   "is": {
     "translation": "是",
     "yes": 526,
-    "no": 461,
+    "no": 462,
     "kvp": {
       "%s is already archived, and can not be cancelled.": "%s 已经归档，不能取消。",
       "%s is already archived, and can not be executed.": "%s 已经归档，不能执行。",
@@ -8745,6 +8747,7 @@
       "Patch '%s' is missing key '%s'. Every patch must have a type.": "补丁‘%s’缺失键‘%s’。每个补丁必须有一个类型。",
       "Path \"%s\" is not known to Phabricator.": "路径“%s”对 Phabricator 未知。",
       "Pattern \"%s\" is not valid.": "模式“%s”无效。",
+      "Phabricator is configured to use a notification server, but is not able to connect to it.": "Phabricator 配置为使用通知服务器，但无法连接到它。",
       "Phabricator is configured to use a notification server, but is unable to connect to it. You should resolve this issue or disable the notification server. It may be helpful to double check your configuration or restart the server using the command below.\n\n%s": "Phabricator 配置为使用通知服务器，但无法连接到它。你应该解决此问题或禁用通知服务器。使用以下命令仔细检查配置或重启服务器可能会有所帮助。\n\n%s",
       "Phabricator is hosting this repository.": "Phabricator 正在托管此仓库。",
       "Phabricator is in read-only mode (major interruption).": "Phabricator 处于只读模式（主要中断）。",
@@ -9074,7 +9077,7 @@
   "is not": {
     "translation": "不是",
     "yes": 133,
-    "no": 150,
+    "no": 151,
     "kvp": {
       "%s is not available; unable to read deflated data!": "%s 不可用；无法读取压缩的数据！",
       "'%s' binary not found or Imagemagick is not installed.": "‘%s’二进制文件未找到或 ImageMagick 未安装。",
@@ -9141,6 +9144,7 @@
       "Package name \"%s\" is not valid: package names must not be more than %s characters long.": "包名称“%s”无效：包名称必须不超过 %s 个字符。",
       "Path \"%s\" is not known to Phabricator.": "路径“%s”对 Phabricator 未知。",
       "Pattern \"%s\" is not valid.": "模式“%s”无效。",
+      "Phabricator is configured to use a notification server, but is not able to connect to it.": "Phabricator 配置为使用通知服务器，但无法连接到它。",
       "Phabricator is not configured in cluster mode.": "Phabricator 未在群集模式下配置。",
       "Phabricator is not currently configured to accept inbound mail. You won't be able to interact with objects over email until inbound mail is set up.": "Phabricator 当前没有配置为接受入站邮件。入站邮件被配置好之前你将无法通过邮件和各种对象交互。",
       "Please provide a valid regular expression: %s is not valid": "请提供一个有效的正则表达式：%s 是无效的",
