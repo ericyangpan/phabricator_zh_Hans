@@ -27,7 +27,7 @@
     "@fortawesome/fontawesome-free": "^5.11.2",
     "body-parser": "^1.18.3",
     "ejs": "^3.1.7",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "jsonfile": "^5.0.0",
     "phplint": "^2.0.1",
     "pluralize": "^7.0.0",
